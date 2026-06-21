@@ -6,6 +6,13 @@
 # Un-ignore thư mục (để git traverse vào bên trong)
 !*/
 
+# Re-ignore các thư mục không cần thiết
+.venv/
+audio/
+__pycache__/
+node_modules/
+.DS_Store
+
 # Un-ignore HTML files
 !*.html
 
