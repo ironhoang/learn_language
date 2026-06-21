@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Câu trả lời của tôi</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Câu trả lời của tôi</title>
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -174,362 +175,371 @@
       text-decoration: none; transition: all 0.15s; z-index: 100;
     }
     .home-btn:hover { background: #111827; border-color: #475569; color: #cbd5e1; }
-  </style>
+  
+    /* audio play button — injected by generate_audio.py */
+    .audio-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background: transparent;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.68rem;
+      color: #64748b;
+      vertical-align: middle;
+      margin-left: 7px;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    .audio-btn:hover { background: #1e293b; border-color: #475569; color: #94a3b8; }
+    .audio-btn.playing { border-color: #f97316; color: #f97316; }
+    @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+</style>
 </head>
 <body>
-
-<a href="../index.html" class="home-btn">← Home</a>
-
+<a class="home-btn" href="../index.html">← Home</a>
 <header>
-  <h1>Câu trả lời của Tôi</h1>
-  <div class="sub">Tiếng Trung + Tiếng Anh — click Copy để dùng ngay</div>
+<h1>Câu trả lời của Tôi</h1>
+<div class="sub">Tiếng Trung + Tiếng Anh — click Copy để dùng ngay</div>
 </header>
-
 <div class="cards">
-
-  <!-- 1 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你叫什么名字？</div>
-      <div class="q-vi">Bạn tên gì?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh1', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh1">我叫Name，英文名叫Name。你可以叫我阿铁。</div>
-          <div class="a-pinyin">Wǒ jiào Name, yīngwén míng jiào Name. Nǐ kěyǐ jiào wǒ A-Tiě.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en1', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en1">My name is Name, but my English name is Name. You can call me Name.</div>
-        </div>
-      </div>
-      <div class="a-vi">阿铁 (A-Tiě) = cách gọi thân mật kiểu Trung Quốc cho "Name"</div>
-    </div>
-  </div>
-
-  <!-- 2 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你多大了？</div>
-      <div class="q-vi">Bạn bao nhiêu tuổi?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh2', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh2">我三十九岁了。</div>
-          <div class="a-pinyin">Wǒ sānshíjiǔ suì le.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en2', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en2">I'm number years old.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">三十九 sānshíjiǔ = number</span>
-        <span class="kw">岁 suì = tuổi</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 3 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你是哪里人？你住在哪里？</div>
-      <div class="q-vi">Bạn người đâu? Bạn sống ở đâu?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh3', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh3">我是越南人，现在住在河内。不过我的老家不在河内，我的妻子和孩子住在老家，我在河内工作。</div>
-          <div class="a-pinyin">Wǒ shì Yuènán rén, xiànzài zhù zài Hénèi. Búguò wǒ de lǎojiā bú zài Hénèi, wǒ de qīzi hé háizi zhù zài lǎojiā, wǒ zài Hénèi gōngzuò.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en3', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en3">I'm Vietnamese, and I currently live in Hanoi. But my hometown isn't Hanoi — my wife and kids live in our hometown, and I work here in Hanoi.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">河内 Hénèi = Hà Nội</span>
-        <span class="kw">老家 lǎojiā = quê</span>
-        <span class="kw">妻子 qīzi = vợ</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 4 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你做什么工作？</div>
-      <div class="q-vi">Bạn làm nghề gì?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh4', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh4">我是做网页开发的，就是做网站这方面的工作。</div>
-          <div class="a-pinyin">Wǒ shì zuò wǎngyè kāifā de, jiùshì zuò wǎngzhàn zhè fāngmiàn de gōngzuò.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en4', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en4">I'm a web developer — I build and maintain websites.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">网页开发 wǎngyè kāifā = web development</span>
-        <span class="kw">网站 wǎngzhàn = website</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 5 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你有什么爱好？</div>
-      <div class="q-vi">Bạn có sở thích gì?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh5', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh5">我很喜欢学外语，特别是英语。现在也在学中文，所以才来这里练习。</div>
-          <div class="a-pinyin">Wǒ hěn xǐhuān xué wàiyǔ, tèbié shì yīngyǔ. Xiànzài yě zài xué zhōngwén, suǒyǐ cái lái zhèlǐ liànxí.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en5', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en5">I love learning foreign languages, especially English. I'm also studying Chinese now, which is why I joined here to practice.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">外语 wàiyǔ = ngoại ngữ</span>
-        <span class="kw">练习 liànxí = luyện tập</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 6 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你为什么学中文/英语？</div>
-      <div class="q-vi">Tại sao bạn học tiếng Trung/tiếng Anh?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh6', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh6">因为我觉得语言很有意思，而且我喜欢结交新朋友。学语言让我可以和更多人交流。</div>
-          <div class="a-pinyin">Yīnwèi wǒ juéde yǔyán hěn yǒuyìsi, érqiě wǒ xǐhuān jiējiāo xīn péngyǒu. Xué yǔyán ràng wǒ kěyǐ hé gèng duō rén jiāoliú.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en6', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en6">Because I find languages really fascinating, and I enjoy meeting new people. Learning a language opens up so many more conversations.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">有意思 yǒuyìsi = thú vị</span>
-        <span class="kw">交流 jiāoliú = giao tiếp</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 7 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你结婚了吗？有孩子吗？</div>
-      <div class="q-vi">Bạn kết hôn chưa? Có con chưa?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh7', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh7">结婚了，也有孩子。我太太和孩子住在老家，我在河内工作，周末或者假期才回去。</div>
-          <div class="a-pinyin">Jiéhūn le, yě yǒu háizi. Wǒ tàitai hé háizi zhù zài lǎojiā, wǒ zài Hénèi gōngzuò, zhōumò huòzhě jiàqī cái huíqù.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en7', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en7">Yes, I'm married and I have kids. My wife and children live in our hometown, and I work in Hanoi. I go back on weekends or during holidays.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">太太 tàitai = vợ</span>
-        <span class="kw">周末 zhōumò = cuối tuần</span>
-        <span class="kw">假期 jiàqī = kỳ nghỉ</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 8 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你中文/英语说得怎么样？学了多久了？</div>
-      <div class="q-vi">Trình độ của bạn thế nào? Học bao lâu rồi?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh8', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh8">我中文说得不太好，还在学习中。请多包涵！希望通过这种对话多练习。</div>
-          <div class="a-pinyin">Wǒ zhōngwén shuō de bú tài hǎo, hái zài xuéxí zhōng. Qǐng duō bāohán! Xīwàng tōngguò zhè zhǒng duìhuà duō liànxí.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en8', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en8">My English is still a work in progress! I've been studying for a while, but I really want to improve my speaking. Conversations like this help a lot.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">包涵 bāohán = thông cảm / bỏ qua lỗi</span>
-        <span class="kw">对话 duìhuà = hội thoại</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 9 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">河内是什么样的城市？</div>
-      <div class="q-vi">Hà Nội là thành phố như thế nào?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh9', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh9">河内是越南的首都，很热闹。交通有点堵，摩托车很多。但是有很多好吃的东西，比如河粉、春卷。天气有四季，冬天比较冷。</div>
-          <div class="a-pinyin">Hénèi shì Yuènán de shǒudū, hěn rènào. Jiāotōng yǒudiǎn dǔ, mótuōchē hěn duō. Dànshì yǒu hěn duō hào chī de dōngxi, bǐrú hépén, chūnjuǎn. Tiānqì yǒu sìjì, dōngtiān bǐjiào lěng.</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en9', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en9">Hanoi is the capital of Vietnam — it's very lively. Traffic can be quite heavy, with lots of motorbikes. But the food is amazing: pho, spring rolls... The weather has four seasons, and winters can get pretty cold.</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">首都 shǒudū = thủ đô</span>
-        <span class="kw">热闹 rènào = sôi động</span>
-        <span class="kw">河粉 hépén = phở</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 10 -->
-  <div class="card">
-    <div class="card-question">
-      <div class="q-label">Họ sẽ hỏi</div>
-      <div class="q-zh">你喜欢吃什么？越南有什么好吃的？</div>
-      <div class="q-vi">Bạn thích ăn gì? Việt Nam có gì ngon?</div>
-    </div>
-    <div class="card-answer">
-      <div class="lang-block zh-block">
-        <div class="lang-header zh-h">
-          <span class="lang-tag zh">中文</span>
-          <button class="copy-btn" onclick="copyId('zh10', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-zh" id="zh10">我很喜欢吃越南菜。最有名的是河粉，汤底很鲜美。还有烤肉饭、春卷、越南法棍面包，都很好吃。如果你来越南，一定要尝尝！</div>
-          <div class="a-pinyin">Wǒ hěn xǐhuān chī Yuènán cài. Zuì yǒumíng de shì hépén, tāng dǐ hěn xiānměi. Hái yǒu kǎoròu fàn, chūnjuǎn, Yuènán fǎgùn miànbāo, dōu hěn hào chī. Rúguǒ nǐ lái Yuènán, yīdìng yào chángchang!</div>
-        </div>
-      </div>
-      <div class="lang-block en-block">
-        <div class="lang-header en-h">
-          <span class="lang-tag en">English</span>
-          <button class="copy-btn" onclick="copyId('en10', this)">📋 Copy</button>
-        </div>
-        <div class="lang-body">
-          <div class="a-en" id="en10">I love Vietnamese food. The most famous dish is pho — the broth is incredibly flavorful. There's also broken rice, spring rolls, and banh mi. If you ever visit Vietnam, you absolutely have to try them!</div>
-        </div>
-      </div>
-      <div class="keywords">
-        <span class="kw">鲜美 xiānměi = ngon / đậm đà</span>
-        <span class="kw">烤肉饭 kǎoròu fàn = cơm tấm</span>
-        <span class="kw">法棍 fǎgùn = bánh mì</span>
-      </div>
-    </div>
-  </div>
-
+<!-- 1 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你叫什么名字？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_dcdedf4368a8.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Bạn tên gì?</div>
 </div>
-
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh1', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh1">我叫Name，英文名叫Name。你可以叫我阿铁。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_df65190ed3fc.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Wǒ jiào Name, yīngwén míng jiào Name. Nǐ kěyǐ jiào wǒ A-Tiě.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en1', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en1">My name is Name, but my English name is Name. You can call me Name.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_26a5006d191f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="a-vi">阿铁 (A-Tiě) = cách gọi thân mật kiểu Trung Quốc cho "Name"</div>
+</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你多大了？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ff1749b232c0.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Bạn bao nhiêu tuổi?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh2', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh2">我三十九岁了。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e34ea0568f7d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Wǒ sānshíjiǔ suì le.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en2', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en2">I'm number years old.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_622fb5fb568f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">三十九 sānshíjiǔ = number</span>
+<span class="kw">岁 suì = tuổi</span>
+</div>
+</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你是哪里人？你住在哪里？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6bb0ef771db9.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Bạn người đâu? Bạn sống ở đâu?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh3', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh3">我是越南人，现在住在河内。不过我的老家不在河内，我的妻子和孩子住在老家，我在河内工作。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77e85e8fb83f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Wǒ shì Yuènán rén, xiànzài zhù zài Hénèi. Búguò wǒ de lǎojiā bú zài Hénèi, wǒ de qīzi hé háizi zhù zài lǎojiā, wǒ zài Hénèi gōngzuò.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en3', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en3">I'm Vietnamese, and I currently live in Hanoi. But my hometown isn't Hanoi — my wife and kids live in our hometown, and I work here in Hanoi.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_015122f1c467.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">河内 Hénèi = Hà Nội</span>
+<span class="kw">老家 lǎojiā = quê</span>
+<span class="kw">妻子 qīzi = vợ</span>
+</div>
+</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你做什么工作？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a60a2342c85b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Bạn làm nghề gì?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh4', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh4">我是做网页开发的，就是做网站这方面的工作。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7346d991d637.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Wǒ shì zuò wǎngyè kāifā de, jiùshì zuò wǎngzhàn zhè fāngmiàn de gōngzuò.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en4', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en4">I'm a web developer — I build and maintain websites.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dab8e96fbccb.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">网页开发 wǎngyè kāifā = web development</span>
+<span class="kw">网站 wǎngzhàn = website</span>
+</div>
+</div>
+</div>
+<!-- 5 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你有什么爱好？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_da37bd7a9dec.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Bạn có sở thích gì?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh5', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh5">我很喜欢学外语，特别是英语。现在也在学中文，所以才来这里练习。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e12fe933f5bc.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Wǒ hěn xǐhuān xué wàiyǔ, tèbié shì yīngyǔ. Xiànzài yě zài xué zhōngwén, suǒyǐ cái lái zhèlǐ liànxí.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en5', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en5">I love learning foreign languages, especially English. I'm also studying Chinese now, which is why I joined here to practice.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_789f03a0e5da.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">外语 wàiyǔ = ngoại ngữ</span>
+<span class="kw">练习 liànxí = luyện tập</span>
+</div>
+</div>
+</div>
+<!-- 6 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你为什么学中文/英语？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d75f060efe0c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Tại sao bạn học tiếng Trung/tiếng Anh?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh6', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh6">因为我觉得语言很有意思，而且我喜欢结交新朋友。学语言让我可以和更多人交流。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_463ad54eab9a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Yīnwèi wǒ juéde yǔyán hěn yǒuyìsi, érqiě wǒ xǐhuān jiējiāo xīn péngyǒu. Xué yǔyán ràng wǒ kěyǐ hé gèng duō rén jiāoliú.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en6', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en6">Because I find languages really fascinating, and I enjoy meeting new people. Learning a language opens up so many more conversations.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_77036d933f9a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">有意思 yǒuyìsi = thú vị</span>
+<span class="kw">交流 jiāoliú = giao tiếp</span>
+</div>
+</div>
+</div>
+<!-- 7 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你结婚了吗？有孩子吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d8e37a67b4f3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Bạn kết hôn chưa? Có con chưa?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh7', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh7">结婚了，也有孩子。我太太和孩子住在老家，我在河内工作，周末或者假期才回去。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b1eca6af1414.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Jiéhūn le, yě yǒu háizi. Wǒ tàitai hé háizi zhù zài lǎojiā, wǒ zài Hénèi gōngzuò, zhōumò huòzhě jiàqī cái huíqù.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en7', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en7">Yes, I'm married and I have kids. My wife and children live in our hometown, and I work in Hanoi. I go back on weekends or during holidays.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_85e55f437533.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">太太 tàitai = vợ</span>
+<span class="kw">周末 zhōumò = cuối tuần</span>
+<span class="kw">假期 jiàqī = kỳ nghỉ</span>
+</div>
+</div>
+</div>
+<!-- 8 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你中文/英语说得怎么样？学了多久了？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5bd525cab04e.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Trình độ của bạn thế nào? Học bao lâu rồi?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh8', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh8">我中文说得不太好，还在学习中。请多包涵！希望通过这种对话多练习。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f00da5e047e3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Wǒ zhōngwén shuō de bú tài hǎo, hái zài xuéxí zhōng. Qǐng duō bāohán! Xīwàng tōngguò zhè zhǒng duìhuà duō liànxí.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en8', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en8">My English is still a work in progress! I've been studying for a while, but I really want to improve my speaking. Conversations like this help a lot.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f318f314265.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">包涵 bāohán = thông cảm / bỏ qua lỗi</span>
+<span class="kw">对话 duìhuà = hội thoại</span>
+</div>
+</div>
+</div>
+<!-- 9 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">河内是什么样的城市？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3cb0dd53f81f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Hà Nội là thành phố như thế nào?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh9', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh9">河内是越南的首都，很热闹。交通有点堵，摩托车很多。但是有很多好吃的东西，比如河粉、春卷。天气有四季，冬天比较冷。<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_124ef367a439.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Hénèi shì Yuènán de shǒudū, hěn rènào. Jiāotōng yǒudiǎn dǔ, mótuōchē hěn duō. Dànshì yǒu hěn duō hào chī de dōngxi, bǐrú hépén, chūnjuǎn. Tiānqì yǒu sìjì, dōngtiān bǐjiào lěng.</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en9', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en9">Hanoi is the capital of Vietnam — it's very lively. Traffic can be quite heavy, with lots of motorbikes. But the food is amazing: pho, spring rolls... The weather has four seasons, and winters can get pretty cold.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb78df8663b8.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">首都 shǒudū = thủ đô</span>
+<span class="kw">热闹 rènào = sôi động</span>
+<span class="kw">河粉 hépén = phở</span>
+</div>
+</div>
+</div>
+<!-- 10 -->
+<div class="card">
+<div class="card-question">
+<div class="q-label">Họ sẽ hỏi</div>
+<div class="q-zh">你喜欢吃什么？越南有什么好吃的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f7c60220097b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="q-vi">Bạn thích ăn gì? Việt Nam có gì ngon?</div>
+</div>
+<div class="card-answer">
+<div class="lang-block zh-block">
+<div class="lang-header zh-h">
+<span class="lang-tag zh">中文</span>
+<button class="copy-btn" onclick="copyId('zh10', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-zh" id="zh10">我很喜欢吃越南菜。最有名的是河粉，汤底很鲜美。还有烤肉饭、春卷、越南法棍面包，都很好吃。如果你来越南，一定要尝尝！<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_134a6fb061f8.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="a-pinyin">Wǒ hěn xǐhuān chī Yuènán cài. Zuì yǒumíng de shì hépén, tāng dǐ hěn xiānměi. Hái yǒu kǎoròu fàn, chūnjuǎn, Yuènán fǎgùn miànbāo, dōu hěn hào chī. Rúguǒ nǐ lái Yuènán, yīdìng yào chángchang!</div>
+</div>
+</div>
+<div class="lang-block en-block">
+<div class="lang-header en-h">
+<span class="lang-tag en">English</span>
+<button class="copy-btn" onclick="copyId('en10', this)">📋 Copy</button>
+</div>
+<div class="lang-body">
+<div class="a-en" id="en10">I love Vietnamese food. The most famous dish is pho — the broth is incredibly flavorful. There's also broken rice, spring rolls, and banh mi. If you ever visit Vietnam, you absolutely have to try them!<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a9afd01d35aa.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="keywords">
+<span class="kw">鲜美 xiānměi = ngon / đậm đà</span>
+<span class="kw">烤肉饭 kǎoròu fàn = cơm tấm</span>
+<span class="kw">法棍 fǎgùn = bánh mì</span>
+</div>
+</div>
+</div>
+</div>
 <script>
   function copyId(id, btn) {
     const text = document.getElementById(id).textContent;
@@ -542,6 +552,26 @@
       }, 1800);
     });
   }
+</script>
+
+<script>
+/* audio player — injected by generate_audio.py */
+(function () {
+  var active = null;
+  window.playAudio = function (btn) {
+    if (active) {
+      active.btn.classList.remove('playing');
+      active.audio.pause();
+      active.audio.currentTime = 0;
+      if (active.btn === btn) { active = null; return; }
+    }
+    var audio = new Audio(btn.dataset.src);
+    btn.classList.add('playing');
+    audio.play();
+    active = { audio: audio, btn: btn };
+    audio.onended = function () { btn.classList.remove('playing'); active = null; };
+  };
+})();
 </script>
 </body>
 </html>

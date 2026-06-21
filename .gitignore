@@ -1,0 +1,16 @@
+# Chỉ track file .html — tất cả file khác bị ignore
+
+# Ignore everything
+*
+
+# Un-ignore thư mục (để git traverse vào bên trong)
+!*/
+
+# Un-ignore HTML files
+!*.html
+
+# Un-ignore docs/
+!*.md
+
+# Un-ignore chính file này
+!.gitignore

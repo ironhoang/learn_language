@@ -3,7 +3,7 @@
 Project này là **static HTML thuần** (không cần server). Stack gồm:
 
 - **Vercel** — host toàn bộ HTML/CSS/JS
-- **Cloudflare R2** — lưu assets tĩnh (audio, ảnh) khi cần
+- **Cloudflare R2** — lưu file audio MP3 (generate bằng `scripts/generate_audio.py`)
 - **Supabase** — database/auth nếu thêm tính năng sau
 
 ---
@@ -157,28 +157,158 @@ Thêm vào HTML:
 
 ---
 
+## 4. Audio Generation (scripts/generate_audio.py)
+
+Script tự động:
+- Đọc tất cả text tiếng Trung + tiếng Anh trong 4 file episoden
+- Generate MP3 qua **edge-tts** (Microsoft TTS, miễn phí, không cần API key)
+- Upload lên Cloudflare R2
+- Inject nút 🔊 vào đúng vị trí trong HTML
+
+### Giọng TTS
+
+| Ngôn ngữ | Voice | Chất lượng |
+|---|---|---|
+| Tiếng Trung | `zh-CN-XiaoxiaoNeural` | Nữ, tự nhiên, chuẩn Phổ thông |
+| Tiếng Anh | `en-US-AriaNeural` | Nữ, tự nhiên, giọng Mỹ |
+
+### Bước 1 — Cài Python dependencies
+
+```bash
+cd /Users/nexusfrontiertech/projects/tools/learn-en-ch
+
+# Tạo virtual environment (khuyến nghị)
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Cài packages
+pip install -r scripts/requirements.txt
+```
+
+### Bước 2 — Tạo R2 API Token
+
+1. Vào [dash.cloudflare.com](https://dash.cloudflare.com) → **R2** → **Manage R2 API Tokens**
+2. Click **Create API Token**
+3. Permission: **Object Read & Write** → chọn bucket `learn-en-ch-assets`
+4. Copy **Access Key ID** và **Secret Access Key**
+
+Bật public access cho bucket:
+- R2 → `learn-en-ch-assets` → **Settings** → **Public Access** → Enable
+
+### Bước 3 — Tạo file .env
+
+```bash
+cp .env.example .env
+# Mở .env và điền thông tin R2 vào
+```
+
+Nội dung `.env`:
+```
+R2_ACCOUNT_ID=abc123def456          # Cloudflare Account ID (góc phải trên dashboard)
+R2_ACCESS_KEY=your_access_key
+R2_SECRET_KEY=your_secret_key
+R2_BUCKET=learn-en-ch-assets
+R2_PUBLIC_URL=https://pub-xxxx.r2.dev   # lấy từ Settings của bucket
+```
+
+### Bước 4 — Chạy script
+
+```bash
+python scripts/generate_audio.py
+```
+
+Output mẫu:
+```
+📄  ask.html
+    🎙   TTS: '你叫什么名字？'
+    ☁️   upload → r2://learn-en-ch-assets/audio/zh_a1b2c3d4e5f6.mp3
+    🎙   TTS: "What's your name?"
+    ☁️   upload → r2://learn-en-ch-assets/audio/en_9f8e7d6c5b4a.mp3
+    ...
+  ✅  Đã lưu ask.html
+
+🎉  Hoàn tất!
+```
+
+Script **idempotent** — chạy lại an toàn:
+- File MP3 đã có local → không generate lại
+- Element đã có nút 🔊 → skip
+- Chỉ generate + upload những gì còn thiếu
+
+### Bước 5 — Deploy lại lên Vercel
+
+```bash
+vercel --prod
+```
+
+Vercel sẽ serve HTML đã được inject nút 🔊. File MP3 nằm trên R2 (không trong git).
+
+### Giá edge-tts + R2
+
+| | Chi phí |
+|---|---|
+| edge-tts (Microsoft) | **Miễn phí** hoàn toàn |
+| R2 storage (10 GB) | **Miễn phí** |
+| R2 egress | **Miễn phí** (không tính băng thông như S3) |
+
+---
+
 ## Tóm tắt thứ tự làm
 
 ```
-1. vercel --prod          ← deploy ngay hôm nay (5 phút)
-2. R2 bucket              ← khi cần thêm audio/ảnh
-3. Supabase               ← khi muốn lưu tiến trình học
+1. vercel --prod                      ← deploy HTML (5 phút)
+2. Tạo R2 bucket + bật public access  ← 10 phút
+3. cp .env.example .env               ← điền R2 credentials
+4. pip install -r scripts/requirements.txt
+5. python scripts/generate_audio.py   ← generate + upload audio
+6. vercel --prod                      ← redeploy HTML có nút 🔊
+7. Supabase                           ← khi muốn lưu tiến trình học
 ```
 
 ---
 
-## Cấu trúc file hiện tại
+## Cấu trúc file
 
 ```
 learn-en-ch/
-├── index.html              ← trang chủ
+├── index.html
+├── .env                    ← KHÔNG commit (trong .gitignore)
+├── .env.example            ← template
+├── .gitignore
+├── audio/                  ← cache MP3 local (trong .gitignore)
 ├── episoden/
-│   ├── ask.html            ← câu hỏi set 1
-│   ├── ask2.html           ← câu hỏi set 2
-│   ├── introduce.html      ← câu trả lời set 1
-│   └── introduce2.html     ← câu trả lời set 2
+│   ├── ask.html
+│   ├── ask2.html
+│   ├── introduce.html
+│   └── introduce2.html
+├── scripts/
+│   ├── generate_audio.py   ← script chính
+│   └── requirements.txt
 └── docs/
-    └── deploy.md           ← file này
+    └── deploy.md
 ```
 
-Vercel sẽ serve `index.html` làm root, các đường dẫn tương đối giữa các file hoạt động bình thường.
+
+python3 -m venv .venv
+
+
+python3 -m venv .venv
+```
+
+### Kích hoạt venv
+
+```bash
+# macOS / Linux
+source .venv/bin/activate
+
+# Windows
+.venv\Scripts\activate
+```
+
+> Khi active thành công, terminal sẽ hiện `(.venv)` ở đầu dòng.
+
+### Cài packages
+
+```bash
+pip install -r requirements.txt
+```
