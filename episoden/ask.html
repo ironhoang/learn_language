@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Câu hỏi cho đối phương</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0 24px;
+    }
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #94a3b8;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .timer-badge {
+      display: inline-block;
+      margin-top: 8px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #f97316;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: #475569; }
+
+    .card-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+    }
+
+    .num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: #0f172a;
+      border: 1px solid #475569;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+
+    .card-body { flex: 1; }
+
+    .zh {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.3;
+    }
+    .pinyin {
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 3px;
+      letter-spacing: 0.03em;
+    }
+    .en {
+      font-size: 0.88rem;
+      color: #7dd3fc;
+      margin-top: 4px;
+    }
+
+    .toggle-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 10px 16px 12px;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #94a3b8;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+      width: fit-content;
+    }
+    .toggle-btn:hover {
+      background: #0f172a;
+      border-color: #475569;
+      color: #cbd5e1;
+    }
+    .toggle-btn .arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+      font-size: 0.65rem;
+    }
+    .toggle-btn.open .arrow { transform: rotate(180deg); }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.15s;
+      z-index: 100;
+    }
+    .home-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+
+    .hint-panel {
+      display: none;
+      border-top: 1px solid #1e3a5f;
+      padding: 14px 16px;
+      background: #0f1a2e;
+    }
+    .hint-panel.open { display: block; }
+
+    .hint-section { margin-bottom: 14px; }
+    .hint-section:last-child { margin-bottom: 0; }
+
+    .hint-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .hint-label.vocab { color: #34d399; }
+    .hint-label.followup { color: #f472b6; }
+
+    .vocab-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .vocab-chip {
+      background: #064e3b;
+      border: 1px solid #065f46;
+      color: #a7f3d0;
+      border-radius: 6px;
+      padding: 3px 9px;
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+    .vocab-chip .py {
+      color: #6ee7b7;
+      font-size: 0.7rem;
+      margin-left: 3px;
+      opacity: 0.85;
+    }
+    .vocab-chip .vn {
+      color: #4ade80;
+      font-size: 0.7rem;
+      margin-left: 2px;
+      opacity: 0.7;
+    }
+
+    .followup-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .followup-item {
+      background: #2d1533;
+      border: 1px solid #581c87;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+    .followup-item .fq-zh {
+      color: #f0abfc;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .followup-item .fq-en {
+      color: #a78bfa;
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<a href="../index.html" class="home-btn">← Home</a>
+
+<header>
+  <h1>Câu hỏi cho đối phương</h1>
+  <div class="timer-badge">⏱ 7 phút / 七分钟</div>
+</header>
+
+<div class="cards">
+
+  <!-- Q1 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">1</div>
+      <div class="card-body">
+        <div class="zh">你叫什么名字？</div>
+        <div class="pinyin">Nǐ jiào shénme míngzi?</div>
+        <div class="en">What's your name?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">叫<span class="py">jiào</span><span class="vn">· tên là</span></div>
+          <div class="vocab-chip">名字<span class="py">míngzi</span><span class="vn">· tên</span></div>
+          <div class="vocab-chip">英文名<span class="py">yīngwén míng</span><span class="vn">· tên tiếng Anh</span></div>
+          <div class="vocab-chip">大家叫我<span class="py">dàjiā jiào wǒ</span><span class="vn">· mọi người gọi tôi là</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">这个名字有什么意思吗？</div>
+            <div class="fq-en">Does this name have a special meaning?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">有英文名吗？</div>
+            <div class="fq-en">Do you have an English name?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">2</div>
+      <div class="card-body">
+        <div class="zh">你是哪里人？</div>
+        <div class="pinyin">Nǐ shì nǎlǐ rén?</div>
+        <div class="en">Where are you from?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">城市<span class="py">chéngshì</span><span class="vn">· thành phố</span></div>
+          <div class="vocab-chip">省<span class="py">shěng</span><span class="vn">· tỉnh</span></div>
+          <div class="vocab-chip">北京/上海<span class="py">Běijīng / Shànghǎi</span></div>
+          <div class="vocab-chip">农村<span class="py">nóngcūn</span><span class="vn">· nông thôn</span></div>
+          <div class="vocab-chip">外地人<span class="py">wàidì rén</span><span class="vn">· người tỉnh khác</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">那个城市怎么样？</div>
+            <div class="fq-en">What's that city like?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">你喜欢住在那里吗？</div>
+            <div class="fq-en">Do you like living there?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">3</div>
+      <div class="card-body">
+        <div class="zh">你做什么工作？</div>
+        <div class="pinyin">Nǐ zuò shénme gōngzuò?</div>
+        <div class="en">What do you do for work?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">上班族<span class="py">shàngbānzú</span><span class="vn">· nhân viên</span></div>
+          <div class="vocab-chip">公司<span class="py">gōngsī</span><span class="vn">· công ty</span></div>
+          <div class="vocab-chip">学生<span class="py">xuésheng</span><span class="vn">· học sinh</span></div>
+          <div class="vocab-chip">老板<span class="py">lǎobǎn</span><span class="vn">· sếp / chủ</span></div>
+          <div class="vocab-chip">自由职业<span class="py">zìyóu zhíyè</span><span class="vn">· freelance</span></div>
+          <div class="vocab-chip">在家<span class="py">zài jiā</span><span class="vn">· làm ở nhà</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">你喜欢你的工作吗？</div>
+            <div class="fq-en">Do you like your job?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">工作忙吗？</div>
+            <div class="fq-en">Is work busy?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">4</div>
+      <div class="card-body">
+        <div class="zh">你有什么爱好？</div>
+        <div class="pinyin">Nǐ yǒu shénme àihào?</div>
+        <div class="en">What are your hobbies?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">爱好<span class="py">àihào</span><span class="vn">· sở thích</span></div>
+          <div class="vocab-chip">喜欢<span class="py">xǐhuān</span><span class="vn">· thích</span></div>
+          <div class="vocab-chip">运动<span class="py">yùndòng</span><span class="vn">· thể thao</span></div>
+          <div class="vocab-chip">看书<span class="py">kànshū</span><span class="vn">· đọc sách</span></div>
+          <div class="vocab-chip">音乐<span class="py">yīnyuè</span><span class="vn">· âm nhạc</span></div>
+          <div class="vocab-chip">旅游<span class="py">lǚyóu</span><span class="vn">· du lịch</span></div>
+          <div class="vocab-chip">做饭<span class="py">zuòfàn</span><span class="vn">· nấu ăn</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">你学了多久了？</div>
+            <div class="fq-en">How long have you been doing that?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">为什么喜欢这个？</div>
+            <div class="fq-en">Why do you like it?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">5</div>
+      <div class="card-body">
+        <div class="zh">你为什么学语言？</div>
+        <div class="pinyin">Nǐ wèishénme xué yǔyán?</div>
+        <div class="en">Why do you study languages?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">因为<span class="py">yīnwèi</span><span class="vn">· vì</span></div>
+          <div class="vocab-chip">兴趣<span class="py">xìngqù</span><span class="vn">· hứng thú</span></div>
+          <div class="vocab-chip">工作需要<span class="py">gōngzuò xūyào</span><span class="vn">· cần cho công việc</span></div>
+          <div class="vocab-chip">交朋友<span class="py">jiāo péngyǒu</span><span class="vn">· kết bạn</span></div>
+          <div class="vocab-chip">旅游<span class="py">lǚyóu</span><span class="vn">· du lịch</span></div>
+          <div class="vocab-chip">文化<span class="py">wénhuà</span><span class="vn">· văn hóa</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">学了多久了？</div>
+            <div class="fq-en">How long have you been learning?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">你觉得这门语言难吗？</div>
+            <div class="fq-en">Do you find this language difficult?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">6</div>
+      <div class="card-body">
+        <div class="zh">你结婚了吗？</div>
+        <div class="pinyin">Nǐ jiéhūn le ma?</div>
+        <div class="en">Are you married?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">结婚了<span class="py">jiéhūn le</span><span class="vn">· đã kết hôn</span></div>
+          <div class="vocab-chip">单身<span class="py">dānshēn</span><span class="vn">· độc thân</span></div>
+          <div class="vocab-chip">男/女朋友<span class="py">nán/nǚ péngyǒu</span><span class="vn">· bạn trai/gái</span></div>
+          <div class="vocab-chip">孩子<span class="py">háizi</span><span class="vn">· con cái</span></div>
+          <div class="vocab-chip">离婚<span class="py">líhūn</span><span class="vn">· ly hôn</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">你们认识多久了？</div>
+            <div class="fq-en">How long have you known each other?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">有孩子吗？</div>
+            <div class="fq-en">Do you have children?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">7</div>
+      <div class="card-body">
+        <div class="zh">你喜欢吃什么？</div>
+        <div class="pinyin">Nǐ xǐhuān chī shénme?</div>
+        <div class="en">What food do you like?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">爱吃<span class="py">ài chī</span><span class="vn">· thích ăn</span></div>
+          <div class="vocab-chip">特别喜欢<span class="py">tèbié xǐhuān</span><span class="vn">· đặc biệt thích</span></div>
+          <div class="vocab-chip">辣<span class="py">là</span><span class="vn">· cay</span></div>
+          <div class="vocab-chip">甜<span class="py">tián</span><span class="vn">· ngọt</span></div>
+          <div class="vocab-chip">特色菜<span class="py">tèsè cài</span><span class="vn">· món đặc sản</span></div>
+          <div class="vocab-chip">不喜欢<span class="py">bù xǐhuān</span><span class="vn">· không thích</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">你会做饭吗？</div>
+            <div class="fq-en">Can you cook?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">你们那里有什么特色菜？</div>
+            <div class="fq-en">What special dishes are from your area?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">8</div>
+      <div class="card-body">
+        <div class="zh">你平时怎么放松？</div>
+        <div class="pinyin">Nǐ píngshí zěnme fàngsōng?</div>
+        <div class="en">How do you usually relax?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">看电影<span class="py">kàn diànyǐng</span><span class="vn">· xem phim</span></div>
+          <div class="vocab-chip">打游戏<span class="py">dǎ yóuxì</span><span class="vn">· chơi game</span></div>
+          <div class="vocab-chip">听音乐<span class="py">tīng yīnyuè</span><span class="vn">· nghe nhạc</span></div>
+          <div class="vocab-chip">运动<span class="py">yùndòng</span><span class="vn">· thể thao</span></div>
+          <div class="vocab-chip">睡觉<span class="py">shuìjiào</span><span class="vn">· ngủ</span></div>
+          <div class="vocab-chip">刷手机<span class="py">shuā shǒujī</span><span class="vn">· lướt điện thoại</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">最近有看什么好看的吗？</div>
+            <div class="fq-en">Have you watched anything good recently?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">你喜欢什么类型的？</div>
+            <div class="fq-en">What genre do you like?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">9</div>
+      <div class="card-body">
+        <div class="zh">你学语言学了多久了？</div>
+        <div class="pinyin">Nǐ xué yǔyán xué le duō jiǔ le?</div>
+        <div class="en">How long have you been studying this language?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">年<span class="py">nián</span><span class="vn">· năm</span></div>
+          <div class="vocab-chip">个月<span class="py">gè yuè</span><span class="vn">· tháng</span></div>
+          <div class="vocab-chip">刚开始<span class="py">gāng kāishǐ</span><span class="vn">· mới bắt đầu</span></div>
+          <div class="vocab-chip">一直<span class="py">yīzhí</span><span class="vn">· liên tục</span></div>
+          <div class="vocab-chip">断断续续<span class="py">duànduàn xùxù</span><span class="vn">· không đều đặn</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">你觉得最难的是什么？</div>
+            <div class="fq-en">What do you find the hardest?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">你用什么方法学习？</div>
+            <div class="fq-en">What method do you use to study?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="card">
+    <div class="card-main">
+      <div class="num">10</div>
+      <div class="card-body">
+        <div class="zh">你有没有去过越南？</div>
+        <div class="pinyin">Nǐ yǒu méiyǒu qùguò Yuènán?</div>
+        <div class="en">Have you ever been to Vietnam?</div>
+      </div>
+    </div>
+    <button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+    <div class="hint-panel">
+      <div class="hint-section">
+        <div class="hint-label vocab">Từ cần nghe</div>
+        <div class="vocab-list">
+          <div class="vocab-chip">去过<span class="py">qùguò</span><span class="vn">· đã đến</span></div>
+          <div class="vocab-chip">没去过<span class="py">méi qùguò</span><span class="vn">· chưa đến</span></div>
+          <div class="vocab-chip">想去<span class="py">xiǎng qù</span><span class="vn">· muốn đến</span></div>
+          <div class="vocab-chip">印象<span class="py">yìnxiàng</span><span class="vn">· ấn tượng</span></div>
+          <div class="vocab-chip">好吃<span class="py">hǎochī</span><span class="vn">· ngon</span></div>
+          <div class="vocab-chip">景色<span class="py">jǐngsè</span><span class="vn">· phong cảnh</span></div>
+        </div>
+      </div>
+      <div class="hint-section">
+        <div class="hint-label followup">Hỏi tiếp</div>
+        <div class="followup-list">
+          <div class="followup-item">
+            <div class="fq-zh">你觉得越南怎么样？</div>
+            <div class="fq-en">What did you think of Vietnam?</div>
+          </div>
+          <div class="followup-item">
+            <div class="fq-zh">你最想去哪个国家？</div>
+            <div class="fq-en">Which country do you most want to visit?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(btn) {
+    btn.classList.toggle('open');
+    btn.nextElementSibling.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
