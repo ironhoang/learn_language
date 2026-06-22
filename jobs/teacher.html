@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Câu hỏi — Giáo viên / 教师</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; padding: 16px; }
+  header { text-align: center; padding: 20px 0 24px; }
+  header h1 { font-size: 1.1rem; font-weight: 600; color: #94a3b8; letter-spacing: 0.05em; text-transform: uppercase; }
+  .job-badge { display: inline-block; margin-top: 8px; background: #0c2a2e; border: 1px solid #0e7490; color: #22d3ee; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 999px; }
+  .timer-badge { display: inline-block; margin-top: 6px; background: #1e293b; border: 1px solid #334155; color: #f97316; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; letter-spacing: 0.08em; }
+  .cards { display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin: 0 auto; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+  .card:hover { border-color: #475569; }
+  .card-main { display: flex; align-items: flex-start; gap: 12px; padding: 16px; }
+  .num { flex-shrink: 0; width: 28px; height: 28px; background: #0f172a; border: 1px solid #475569; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #94a3b8; margin-top: 2px; }
+  .card-body { flex: 1; }
+  .zh { font-size: 1.4rem; font-weight: 700; color: #f1f5f9; line-height: 1.3; }
+  .pinyin { font-size: 0.78rem; color: #64748b; margin-top: 3px; letter-spacing: 0.03em; }
+  .en { font-size: 0.88rem; color: #7dd3fc; margin-top: 4px; }
+  .toggle-btn { display: flex; align-items: center; gap: 6px; margin: 10px 16px 12px; padding: 6px 12px; background: transparent; border: 1px solid #334155; border-radius: 8px; color: #94a3b8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; width: fit-content; }
+  .toggle-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+  .toggle-btn .arrow { display: inline-block; transition: transform 0.2s; font-size: 0.65rem; }
+  .toggle-btn.open .arrow { transform: rotate(180deg); }
+  .home-btn { display: inline-flex; align-items: center; gap: 5px; position: fixed; top: 14px; left: 14px; background: #1e293b; border: 1px solid #334155; color: #94a3b8; font-size: 0.75rem; font-weight: 600; padding: 6px 11px; border-radius: 8px; text-decoration: none; transition: all 0.15s; z-index: 100; }
+  .home-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+  .hint-panel { display: none; border-top: 1px solid #1e3a5f; padding: 14px 16px; background: #0f1a2e; }
+  .hint-panel.open { display: block; }
+  .hint-section { margin-bottom: 14px; }
+  .hint-section:last-child { margin-bottom: 0; }
+  .hint-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .hint-label.vocab { color: #34d399; }
+  .hint-label.followup { color: #f472b6; }
+  .vocab-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .vocab-chip { background: #064e3b; border: 1px solid #065f46; color: #a7f3d0; border-radius: 6px; padding: 3px 9px; font-size: 0.82rem; line-height: 1.5; }
+  .vocab-chip .py { color: #6ee7b7; font-size: 0.7rem; margin-left: 3px; opacity: 0.85; }
+  .vocab-chip .vn { color: #4ade80; font-size: 0.7rem; margin-left: 2px; opacity: 0.7; }
+  .followup-list { display: flex; flex-direction: column; gap: 6px; }
+  .followup-item { background: #2d1533; border: 1px solid #581c87; border-radius: 8px; padding: 8px 10px; }
+  .followup-item .fq-zh { color: #f0abfc; font-size: 0.9rem; font-weight: 600; }
+  .followup-item .fq-en { color: #a78bfa; font-size: 0.75rem; margin-top: 2px; }
+  /* audio play button — injected by generate_audio.py */
+  .audio-btn { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; padding: 0; background: transparent; border: 1px solid #334155; border-radius: 6px; cursor: pointer; font-size: 0.68rem; color: #64748b; vertical-align: middle; margin-left: 7px; transition: all 0.15s; flex-shrink: 0; }
+  .audio-btn:hover { background: #1e293b; border-color: #475569; color: #94a3b8; }
+  .audio-btn.playing { border-color: #f97316; color: #f97316; }
+  @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Home</a>
+<header>
+<h1>Câu hỏi cho đối phương</h1>
+<div class="job-badge">👩‍🏫 Giáo viên / 教师</div>
+<div class="timer-badge">⏱ 7 phút / 七分钟</div>
+</header>
+<div class="cards">
+<!-- Q1 -->
+<div class="card">
+<div class="card-main">
+<div class="num">1</div>
+<div class="card-body">
+<div class="zh">你教什么科目？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_195fe414a9d7.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ jiāo shénme kēmù?</div>
+<div class="en">What subject do you teach?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a96a34f509f2.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">科目<span class="py">kēmù</span><span class="vn">· môn học</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_363ccfd1f1e6.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">数学<span class="py">shùxué</span><span class="vn">· toán học</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6e65831863db.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">语文<span class="py">yǔwén</span><span class="vn">· văn học/tiếng Trung</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9a0d10a46e60.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">英语<span class="py">yīngyǔ</span><span class="vn">· tiếng Anh</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4145d4c179e1.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">这个科目难教吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f7c98deb2be0.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Is that subject hard to teach?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你喜欢教这个科目吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7d94b005cadd.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you enjoy teaching it?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q2 -->
+<div class="card">
+<div class="card-main">
+<div class="num">2</div>
+<div class="card-body">
+<div class="zh">你的学生一般多大？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f3bdb16cf21d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ de xuésheng yībān duō dà?</div>
+<div class="en">How old are your students usually?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f8ce909cf343.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">小学生<span class="py">xiǎoxuéshēng</span><span class="vn">· hs tiểu học</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2f7334a4883e.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">初中生<span class="py">chūzhōngshēng</span><span class="vn">· hs THCS</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7035d554225a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">高中生<span class="py">gāozhōngshēng</span><span class="vn">· hs THPT</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4d401981401f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">大学生<span class="py">dàxuéshēng</span><span class="vn">· sinh viên ĐH</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1ca9d263ff5d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">哪个年龄段的学生最好带？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d9b865691e4a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Which age group is easiest to teach?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你更喜欢教小孩还是大孩子？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8a3a329faa52.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you prefer teaching younger or older students?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q3 -->
+<div class="card">
+<div class="card-main">
+<div class="num">3</div>
+<div class="card-body">
+<div class="zh">一天要上几节课？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2c3d04dad6c4.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Yī tiān yào shàng jǐ jié kè?</div>
+<div class="en">How many classes do you teach a day?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8913af9ade91.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">节课<span class="py">jié kè</span><span class="vn">· tiết học</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_144afd1995c3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">课表<span class="py">kèbiǎo</span><span class="vn">· thời khóa biểu</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ad33c71b5979.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">休息<span class="py">xiūxi</span><span class="vn">· nghỉ ngơi</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3a991a4ca55a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">连续<span class="py">liánxù</span><span class="vn">· liên tục</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bc7616904375.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">一节课多长时间？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7e738f83292d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How long is each class?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">课多的时候累不累？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0da81739cf78.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you get tired when you have a lot of classes?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q4 -->
+<div class="card">
+<div class="card-main">
+<div class="num">4</div>
+<div class="card-body">
+<div class="zh">教书让你最有成就感的是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_88d3247b22b6.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Jiāoshū ràng nǐ zuì yǒu chéngjiùgǎn de shì shénme?</div>
+<div class="en">What gives you the most sense of achievement in teaching?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23bc798e9078.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">成就感<span class="py">chéngjiùgǎn</span><span class="vn">· cảm giác thành tựu</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_80106ce4ce43.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">进步<span class="py">jìnbù</span><span class="vn">· tiến bộ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e389d3202951.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">影响<span class="py">yǐngxiǎng</span><span class="vn">· ảnh hưởng</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_28b42306a040.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">感动<span class="py">gǎndòng</span><span class="vn">· cảm động</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c5fb0b0384f1.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">学生有没有让你特别感动的时候？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_aa5a4096e03f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Have students ever moved you deeply?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你觉得自己对学生影响最大的是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_66cb06340482.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">What do you think is your biggest impact on students?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q5 -->
+<div class="card">
+<div class="card-main">
+<div class="num">5</div>
+<div class="card-body">
+<div class="zh">最难管的学生是什么样的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a88d09d911bd.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Zuì nán guǎn de xuésheng shì shénme yàng de?</div>
+<div class="en">What kind of students are hardest to manage?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f0dbb70086f3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">管<span class="py">guǎn</span><span class="vn">· quản lý/quản</span></div>
+<div class="vocab-chip">调皮<span class="py">tiáopí</span><span class="vn">· nghịch ngợm</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9a87d094973a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">不听话<span class="py">bù tīnghuà</span><span class="vn">· không nghe lời</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_04d38c7969a1.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">注意力<span class="py">zhùyìlì</span><span class="vn">· sự tập trung</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a17b6e9422ff.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你怎么处理课堂上的捣蛋学生？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4a3d1685780c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How do you handle disruptive students in class?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">家长配合重要吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f8cd0b47d81b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Is parental cooperation important?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q6 -->
+<div class="card">
+<div class="card-main">
+<div class="num">6</div>
+<div class="card-body">
+<div class="zh">除了上课，还要做哪些工作？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_722d4908672a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Chúle shàngkè, hái yào zuò nǎxiē gōngzuò?</div>
+<div class="en">Besides teaching classes, what other work do you have?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d7ddc6ee267f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">批改作业<span class="py">pīgǎi zuòyè</span><span class="vn">· chấm bài</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a8626f841344.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">备课<span class="py">bèikè</span><span class="vn">· soạn giáo án</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b32e802a777e.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">开会<span class="py">kāihuì</span><span class="vn">· họp</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_43f7edae16a2.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">辅导<span class="py">fǔdǎo</span><span class="vn">· phụ đạo</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5f66853bdd1d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">批改作业要花多少时间？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a0447f4ab01f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How much time do you spend grading homework?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">备课压力大吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5d6baa644d0f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Is lesson planning stressful?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q7 -->
+<div class="card">
+<div class="card-main">
+<div class="num">7</div>
+<div class="card-body">
+<div class="zh">你是怎么进入教育行业的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c20be7acaaf2.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ shì zěnme jìnrù jiàoyù hángyè de?</div>
+<div class="en">How did you get into education?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_34c88eb6c541.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">教育<span class="py">jiàoyù</span><span class="vn">· giáo dục</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8640cb1581c2.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">师范<span class="py">shīfàn</span><span class="vn">· sư phạm</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0a5319b7ee14.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">证书<span class="py">zhèngshū</span><span class="vn">· chứng chỉ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d40b511510fc.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">热情<span class="py">rèqíng</span><span class="vn">· nhiệt tình/đam mê</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f840bd14ab46.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">从小就想当老师吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bd018961475a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Did you always want to be a teacher?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">拿到教师资格证难吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_275145493b4c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Was it hard to get your teaching certificate?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q8 -->
+<div class="card">
+<div class="card-main">
+<div class="num">8</div>
+<div class="card-body">
+<div class="zh">你觉得当老师最大的挑战是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_43f38890dc7c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ juéde dāng lǎoshī zuìdà de tiǎozhàn shì shénme?</div>
+<div class="en">What do you think is the biggest challenge of being a teacher?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f09f4b0e3ef.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">挑战<span class="py">tiǎozhàn</span><span class="vn">· thách thức</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_590d8b17f21b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">压力<span class="py">yālì</span><span class="vn">· áp lực</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f16b17608555.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">薪水<span class="py">xīnshuǐ</span><span class="vn">· lương</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2095c2c2e710.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">尊重<span class="py">zūnzhòng</span><span class="vn">· tôn trọng</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_adfc640ec347.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你觉得老师受到足够的尊重吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0c1c874689cf.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you think teachers get enough respect?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">如果重新选择，你还会当老师吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3a7bef3ca1a0.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">If you could choose again, would you still become a teacher?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+<script>
+/* audio player — injected by generate_audio.py */
+(function () {
+  var active = null;
+  window.playAudio = function (btn) {
+    if (active) {
+      active.btn.classList.remove('playing');
+      active.audio.pause();
+      active.audio.currentTime = 0;
+      if (active.btn === btn) { active = null; return; }
+    }
+    var audio = new Audio(btn.dataset.src);
+    btn.classList.add('playing');
+    audio.play();
+    active = { audio: audio, btn: btn };
+    audio.onended = function () { btn.classList.remove('playing'); active = null; };
+  };
+})();
+</script>
+<script src="../shared/player-bar.js"></script>
+</body>
+</html>

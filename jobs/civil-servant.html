@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Câu hỏi — Công chức / 公务员</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; padding: 16px; }
+  header { text-align: center; padding: 20px 0 24px; }
+  header h1 { font-size: 1.1rem; font-weight: 600; color: #94a3b8; letter-spacing: 0.05em; text-transform: uppercase; }
+  .job-badge { display: inline-block; margin-top: 8px; background: #0c2a2e; border: 1px solid #0e7490; color: #22d3ee; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 999px; }
+  .timer-badge { display: inline-block; margin-top: 6px; background: #1e293b; border: 1px solid #334155; color: #f97316; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; letter-spacing: 0.08em; }
+  .cards { display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin: 0 auto; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+  .card:hover { border-color: #475569; }
+  .card-main { display: flex; align-items: flex-start; gap: 12px; padding: 16px; }
+  .num { flex-shrink: 0; width: 28px; height: 28px; background: #0f172a; border: 1px solid #475569; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #94a3b8; margin-top: 2px; }
+  .card-body { flex: 1; }
+  .zh { font-size: 1.4rem; font-weight: 700; color: #f1f5f9; line-height: 1.3; }
+  .pinyin { font-size: 0.78rem; color: #64748b; margin-top: 3px; letter-spacing: 0.03em; }
+  .en { font-size: 0.88rem; color: #7dd3fc; margin-top: 4px; }
+  .toggle-btn { display: flex; align-items: center; gap: 6px; margin: 10px 16px 12px; padding: 6px 12px; background: transparent; border: 1px solid #334155; border-radius: 8px; color: #94a3b8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; width: fit-content; }
+  .toggle-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+  .toggle-btn .arrow { display: inline-block; transition: transform 0.2s; font-size: 0.65rem; }
+  .toggle-btn.open .arrow { transform: rotate(180deg); }
+  .home-btn { display: inline-flex; align-items: center; gap: 5px; position: fixed; top: 14px; left: 14px; background: #1e293b; border: 1px solid #334155; color: #94a3b8; font-size: 0.75rem; font-weight: 600; padding: 6px 11px; border-radius: 8px; text-decoration: none; transition: all 0.15s; z-index: 100; }
+  .home-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+  .hint-panel { display: none; border-top: 1px solid #1e3a5f; padding: 14px 16px; background: #0f1a2e; }
+  .hint-panel.open { display: block; }
+  .hint-section { margin-bottom: 14px; }
+  .hint-section:last-child { margin-bottom: 0; }
+  .hint-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .hint-label.vocab { color: #34d399; }
+  .hint-label.followup { color: #f472b6; }
+  .vocab-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .vocab-chip { background: #064e3b; border: 1px solid #065f46; color: #a7f3d0; border-radius: 6px; padding: 3px 9px; font-size: 0.82rem; line-height: 1.5; }
+  .vocab-chip .py { color: #6ee7b7; font-size: 0.7rem; margin-left: 3px; opacity: 0.85; }
+  .vocab-chip .vn { color: #4ade80; font-size: 0.7rem; margin-left: 2px; opacity: 0.7; }
+  .followup-list { display: flex; flex-direction: column; gap: 6px; }
+  .followup-item { background: #2d1533; border: 1px solid #581c87; border-radius: 8px; padding: 8px 10px; }
+  .followup-item .fq-zh { color: #f0abfc; font-size: 0.9rem; font-weight: 600; }
+  .followup-item .fq-en { color: #a78bfa; font-size: 0.75rem; margin-top: 2px; }
+  /* audio play button — injected by generate_audio.py */
+  .audio-btn { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; padding: 0; background: transparent; border: 1px solid #334155; border-radius: 6px; cursor: pointer; font-size: 0.68rem; color: #64748b; vertical-align: middle; margin-left: 7px; transition: all 0.15s; flex-shrink: 0; }
+  .audio-btn:hover { background: #1e293b; border-color: #475569; color: #94a3b8; }
+  .audio-btn.playing { border-color: #f97316; color: #f97316; }
+  @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Home</a>
+<header>
+<h1>Câu hỏi cho đối phương</h1>
+<div class="job-badge">🏛️ Công chức / 公务员</div>
+<div class="timer-badge">⏱ 7 phút / 七分钟</div>
+</header>
+<div class="cards">
+<!-- Q1 -->
+<div class="card">
+<div class="card-main">
+<div class="num">1</div>
+<div class="card-body">
+<div class="zh">你在哪个部门工作？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_501b076ba6f3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ zài nǎge bùmén gōngzuò?</div>
+<div class="en">What department do you work in?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f8c1e3fa519.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">部门<span class="py">bùmén</span><span class="vn">· phòng ban/bộ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1e1459eeed6d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">政府机关<span class="py">zhèngfǔ jīguān</span><span class="vn">· cơ quan nhà nước</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a25fb6fa6526.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">税务局<span class="py">shuìwùjú</span><span class="vn">· cục thuế</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4063cd978a0b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">街道办<span class="py">jiēdào bàn</span><span class="vn">· ủy ban phường</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_595b38feff9c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你们部门主要负责什么工作？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bab64c3a12be.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">What does your department mainly handle?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你在那里工作多久了？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f300ccfeba41.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How long have you worked there?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q2 -->
+<div class="card">
+<div class="card-main">
+<div class="num">2</div>
+<div class="card-body">
+<div class="zh">考公务员考试难吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_564ffb8ab0a7.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Kǎo gōngwùyuán kǎoshì nán ma?</div>
+<div class="en">Is the civil service exam difficult?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_12901e224d44.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">考公<span class="py">kǎogōng</span><span class="vn">· thi công chức (thông tục)</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4aac7d539a5a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">笔试<span class="py">bǐshì</span><span class="vn">· thi viết</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_88646656dabd.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">面试<span class="py">miànshì</span><span class="vn">· phỏng vấn</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1573c74e227f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">竞争比<span class="py">jìngzhēng bǐ</span><span class="vn">· tỉ lệ cạnh tranh</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0c2cee0cd095.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你考了几次才考上的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0d577667f9ca.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How many times did you take the exam before passing?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你是怎么备考的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a045c05ee8d7.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How did you prepare for the exam?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q3 -->
+<div class="card">
+<div class="card-main">
+<div class="num">3</div>
+<div class="card-body">
+<div class="zh">你一般什么时候上下班？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c34f3d43b0eb.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ yībān shénme shíhòu shàng xiàbān?</div>
+<div class="en">What are your usual working hours?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_586ddd830b59.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">朝九晚五<span class="py">zhāo jiǔ wǎn wǔ</span><span class="vn">· 9 giờ sáng đến 5 giờ chiều</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4e31374a8e2d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">午休<span class="py">wǔxiū</span><span class="vn">· nghỉ trưa</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_00e281189f6b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">弹性上班<span class="py">tánxìng shàngbān</span><span class="vn">· giờ giấc linh hoạt</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_eb8370cf7364.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">双休<span class="py">shuāng xiū</span><span class="vn">· nghỉ 2 ngày cuối tuần</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d3209e714a64.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你们有午休吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77cc0c5f43be.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you get a lunch break?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">公务员需要经常加班吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_04b78a2a45d5.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do civil servants often need to work overtime?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q4 -->
+<div class="card">
+<div class="card-main">
+<div class="num">4</div>
+<div class="card-body">
+<div class="zh">工作中经常要处理什么事？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c43d0db87ef7.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Gōngzuò zhōng jīngcháng yào chǔlǐ shénme shì?</div>
+<div class="en">What kinds of things do you handle at work?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a90756a14036.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">审批<span class="py">shěnpī</span><span class="vn">· thẩm duyệt/phê duyệt</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0273ba5c9598.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">材料<span class="py">cáiliào</span><span class="vn">· hồ sơ/tài liệu</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ebc9d9e6f238.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">接待群众<span class="py">jiēdài qúnzhòng</span><span class="vn">· tiếp dân</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_28bbf21c0d17.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">开会<span class="py">kāihuì</span><span class="vn">· họp</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_43f7edae16a2.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你有没有接触到特别难处理的事？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e838c99cc113.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Have you dealt with anything particularly difficult?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">工作中需要经常和群众打交道吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d460fadefd18.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you often interact with the public at work?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q5 -->
+<div class="card">
+<div class="card-main">
+<div class="num">5</div>
+<div class="card-body">
+<div class="zh">你觉得当公务员最大的优点是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6e53c461c57d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ juéde dāng gōngwùyuán zuìdà de yōudiǎn shì shénme?</div>
+<div class="en">What do you think is the biggest advantage of being a civil servant?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b2bcca2e6c4.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">稳定<span class="py">wěndìng</span><span class="vn">· ổn định</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4330746271c4.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">福利<span class="py">fúlì</span><span class="vn">· phúc lợi</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_86b2999e8fb8.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">铁饭碗<span class="py">tiě fànwǎn</span><span class="vn">· bát cơm sắt = việc làm ổn định</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_982f4b2e488a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">体制内<span class="py">tǐzhì nèi</span><span class="vn">· trong biên chế nhà nước</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_92597e0c0898.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你觉得稳定重要还是高薪重要？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8e2525196d33.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">What do you think matters more — stability or high pay?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你有没有想过去私企工作？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e31c54571d8f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Have you ever thought about working in a private company?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q6 -->
+<div class="card">
+<div class="card-main">
+<div class="num">6</div>
+<div class="card-body">
+<div class="zh">有没有感觉工作比较单调？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_eb3093d450b5.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Yǒu méiyǒu gǎnjué gōngzuò bǐjiào dāndìao?</div>
+<div class="en">Do you ever feel the work is monotonous?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_634f00609c4b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">单调<span class="py">dāndìao</span><span class="vn">· đơn điệu</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_69cfab85ce75.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">程序化<span class="py">chéngxùhuà</span><span class="vn">· máy móc/theo quy trình</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8adaec67f64c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">挑战性<span class="py">tiǎozhànxìng</span><span class="vn">· tính thách thức</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1f0dffed3611.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">晋升<span class="py">jìnshēng</span><span class="vn">· thăng tiến</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e5cab0a89361.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你怎么保持对工作的热情？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_12d59e34923d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How do you keep yourself motivated at work?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">公务员晋升难吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_57afeff2aaeb.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Is promotion difficult for civil servants?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q7 -->
+<div class="card">
+<div class="card-main">
+<div class="num">7</div>
+<div class="card-body">
+<div class="zh">国家有没有给公务员提供什么福利？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_48f301b9b303.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Guójiā yǒu méiyǒu gěi gōngwùyuán tígōng shénme fúlì?</div>
+<div class="en">What benefits does the government provide to civil servants?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_51c3c7903a51.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">养老金<span class="py">yǎnglǎo jīn</span><span class="vn">· lương hưu</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e316f5a91e63.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">医疗保险<span class="py">yīliáo bǎoxiǎn</span><span class="vn">· bảo hiểm y tế</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_82d2d4b72c10.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">住房公积金<span class="py">zhùfáng gōngjījīn</span><span class="vn">· quỹ nhà ở</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cf1102f2a558.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">年假<span class="py">niánjià</span><span class="vn">· nghỉ phép năm</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_69a9289632b3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你觉得这些福利是你选择这份工作的原因吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_73ebb7eac6e1.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Were these benefits a reason you chose this job?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">公务员的福利比私企好很多吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_63a0ce9282b3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Are civil servant benefits much better than private sector ones?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q8 -->
+<div class="card">
+<div class="card-main">
+<div class="num">8</div>
+<div class="card-body">
+<div class="zh">有没有可能以后换别的工作？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_07c99e9481d4.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Yǒu méiyǒu kěnéng yǐhòu huàn bié de gōngzuò?</div>
+<div class="en">Is there a chance you'd change careers in the future?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_54dc0176dcd6.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">换工作<span class="py">huàn gōngzuò</span><span class="vn">· đổi việc</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a1d1f42d95e1.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">辞职<span class="py">cízhí</span><span class="vn">· xin thôi việc</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6fb4cfa18e60.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">可能性<span class="py">kěnéngxìng</span><span class="vn">· khả năng</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_70891395fa08.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">体制外<span class="py">tǐzhì wài</span><span class="vn">· ngoài biên chế</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_17b54342d15d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">如果要辞职，你最不舍得的是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1433d0a30d03.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">If you were to quit, what would you miss the most?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你有没有副业或者其他收入来源？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fb79b86b4620.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you have any side income or other sources of income?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+<script>
+/* audio player — injected by generate_audio.py */
+(function () {
+  var active = null;
+  window.playAudio = function (btn) {
+    if (active) {
+      active.btn.classList.remove('playing');
+      active.audio.pause();
+      active.audio.currentTime = 0;
+      if (active.btn === btn) { active = null; return; }
+    }
+    var audio = new Audio(btn.dataset.src);
+    btn.classList.add('playing');
+    audio.play();
+    active = { audio: audio, btn: btn };
+    audio.onended = function () { btn.classList.remove('playing'); active = null; };
+  };
+})();
+</script>
+<script src="../shared/player-bar.js"></script>
+</body>
+</html>

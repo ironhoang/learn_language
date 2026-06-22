@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Câu hỏi — Chủ doanh nghiệp / 老板</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; padding: 16px; }
+  header { text-align: center; padding: 20px 0 24px; }
+  header h1 { font-size: 1.1rem; font-weight: 600; color: #94a3b8; letter-spacing: 0.05em; text-transform: uppercase; }
+  .job-badge { display: inline-block; margin-top: 8px; background: #0c2a2e; border: 1px solid #0e7490; color: #22d3ee; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 999px; }
+  .timer-badge { display: inline-block; margin-top: 6px; background: #1e293b; border: 1px solid #334155; color: #f97316; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; letter-spacing: 0.08em; }
+  .cards { display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin: 0 auto; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+  .card:hover { border-color: #475569; }
+  .card-main { display: flex; align-items: flex-start; gap: 12px; padding: 16px; }
+  .num { flex-shrink: 0; width: 28px; height: 28px; background: #0f172a; border: 1px solid #475569; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #94a3b8; margin-top: 2px; }
+  .card-body { flex: 1; }
+  .zh { font-size: 1.4rem; font-weight: 700; color: #f1f5f9; line-height: 1.3; }
+  .pinyin { font-size: 0.78rem; color: #64748b; margin-top: 3px; letter-spacing: 0.03em; }
+  .en { font-size: 0.88rem; color: #7dd3fc; margin-top: 4px; }
+  .toggle-btn { display: flex; align-items: center; gap: 6px; margin: 10px 16px 12px; padding: 6px 12px; background: transparent; border: 1px solid #334155; border-radius: 8px; color: #94a3b8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; width: fit-content; }
+  .toggle-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+  .toggle-btn .arrow { display: inline-block; transition: transform 0.2s; font-size: 0.65rem; }
+  .toggle-btn.open .arrow { transform: rotate(180deg); }
+  .home-btn { display: inline-flex; align-items: center; gap: 5px; position: fixed; top: 14px; left: 14px; background: #1e293b; border: 1px solid #334155; color: #94a3b8; font-size: 0.75rem; font-weight: 600; padding: 6px 11px; border-radius: 8px; text-decoration: none; transition: all 0.15s; z-index: 100; }
+  .home-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+  .hint-panel { display: none; border-top: 1px solid #1e3a5f; padding: 14px 16px; background: #0f1a2e; }
+  .hint-panel.open { display: block; }
+  .hint-section { margin-bottom: 14px; }
+  .hint-section:last-child { margin-bottom: 0; }
+  .hint-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .hint-label.vocab { color: #34d399; }
+  .hint-label.followup { color: #f472b6; }
+  .vocab-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .vocab-chip { background: #064e3b; border: 1px solid #065f46; color: #a7f3d0; border-radius: 6px; padding: 3px 9px; font-size: 0.82rem; line-height: 1.5; }
+  .vocab-chip .py { color: #6ee7b7; font-size: 0.7rem; margin-left: 3px; opacity: 0.85; }
+  .vocab-chip .vn { color: #4ade80; font-size: 0.7rem; margin-left: 2px; opacity: 0.7; }
+  .followup-list { display: flex; flex-direction: column; gap: 6px; }
+  .followup-item { background: #2d1533; border: 1px solid #581c87; border-radius: 8px; padding: 8px 10px; }
+  .followup-item .fq-zh { color: #f0abfc; font-size: 0.9rem; font-weight: 600; }
+  .followup-item .fq-en { color: #a78bfa; font-size: 0.75rem; margin-top: 2px; }
+  /* audio play button — injected by generate_audio.py */
+  .audio-btn { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; padding: 0; background: transparent; border: 1px solid #334155; border-radius: 6px; cursor: pointer; font-size: 0.68rem; color: #64748b; vertical-align: middle; margin-left: 7px; transition: all 0.15s; flex-shrink: 0; }
+  .audio-btn:hover { background: #1e293b; border-color: #475569; color: #94a3b8; }
+  .audio-btn.playing { border-color: #f97316; color: #f97316; }
+  @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Home</a>
+<header>
+<h1>Câu hỏi cho đối phương</h1>
+<div class="job-badge">🏢 Chủ doanh nghiệp / 老板</div>
+<div class="timer-badge">⏱ 7 phút / 七分钟</div>
+</header>
+<div class="cards">
+<!-- Q1 -->
+<div class="card">
+<div class="card-main">
+<div class="num">1</div>
+<div class="card-body">
+<div class="zh">你做的是什么行业？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9d589146e3bb.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ zuò de shì shénme hángyè?</div>
+<div class="en">What industry are you in?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_704a1b41be85.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">行业<span class="py">hángyè</span><span class="vn">· ngành nghề</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6adafe274922.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">贸易<span class="py">màoyì</span><span class="vn">· thương mại</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f427d663a1cf.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">零售<span class="py">língshòu</span><span class="vn">· bán lẻ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0c5bd351cca5.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">服务业<span class="py">fúwùyè</span><span class="vn">· ngành dịch vụ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_044646a4e5b0.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你是专注国内市场还是也做外贸？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_142d17a1df9f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you focus on the domestic market or also do international trade?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">这个行业现在行情怎么样？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_557c4d965206.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How is the market doing in this industry now?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q2 -->
+<div class="card">
+<div class="card-main">
+<div class="num">2</div>
+<div class="card-body">
+<div class="zh">你的公司大概有多少员工？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e4e420aa8d66.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ de gōngsī dàgài yǒu duōshǎo yuángōng?</div>
+<div class="en">How many employees does your company have?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06d3c311aefc.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">员工<span class="py">yuángōng</span><span class="vn">· nhân viên</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2ed39222055f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">规模<span class="py">guīmó</span><span class="vn">· quy mô</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b00eaa78a38a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">小微企业<span class="py">xiǎowēi qǐyè</span><span class="vn">· doanh nghiệp nhỏ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5dde9b0b61ea.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">团队<span class="py">tuánduì</span><span class="vn">· đội nhóm</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4675fbaf3ec5.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你是自己一个人创业还是有合伙人？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_72d01f17892a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Did you start the business alone or with partners?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">管理员工最难的是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f1e1410b4666.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">What's the hardest part of managing employees?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q3 -->
+<div class="card">
+<div class="card-main">
+<div class="num">3</div>
+<div class="card-body">
+<div class="zh">你是怎么开始创业的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2a2b898658d6.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ shì zěnme kāishǐ chuàngyè de?</div>
+<div class="en">How did you start your business?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_47ffea31bfaa.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">创业<span class="py">chuàngyè</span><span class="vn">· khởi nghiệp</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a57fd81fa09d.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">资金<span class="py">zījīn</span><span class="vn">· vốn</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e4738b301548.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">机会<span class="py">jīhuì</span><span class="vn">· cơ hội</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_31c91e1f5b1f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">辞职<span class="py">cízhí</span><span class="vn">· nghỉ việc</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6fb4cfa18e60.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你是辞职出来创业的吗？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d208d298ea6f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Did you quit your job to start the business?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">刚开始的时候最难的是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_116dfdb36ea2.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">What was the hardest part when you first started?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q4 -->
+<div class="card">
+<div class="card-main">
+<div class="num">4</div>
+<div class="card-body">
+<div class="zh">创业最难的地方是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bdc3aef89903.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Chuàngyè zuì nán de dìfāng shì shénme?</div>
+<div class="en">What's the hardest part of running a business?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c218ef11935.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">现金流<span class="py">xiànjīn liú</span><span class="vn">· dòng tiền</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8f51502044a4.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">竞争<span class="py">jìngzhēng</span><span class="vn">· cạnh tranh</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b8c3fb16d366.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">招聘<span class="py">zhāopìn</span><span class="vn">· tuyển dụng</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1380d399678c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">留住<span class="py">liúzhù</span><span class="vn">· giữ lại</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_80e7a41bb592.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你有没有想过放弃的时候？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35ed8e1d6620.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Have there been times when you thought about giving up?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你怎么解决资金压力？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_393944e6ca25.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How do you deal with financial pressure?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q5 -->
+<div class="card">
+<div class="card-main">
+<div class="num">5</div>
+<div class="card-body">
+<div class="zh">你一般几点开始工作？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_88afa9c48f97.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ yībān jǐ diǎn kāishǐ gōngzuò?</div>
+<div class="en">What time do you usually start working?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_924684f55611.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">自由安排<span class="py">zìyóu ānpái</span><span class="vn">· tự sắp xếp thời gian</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_36d9558fdc35.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">休息日<span class="py">xiūxi rì</span><span class="vn">· ngày nghỉ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1c08ee04584a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">全天候<span class="py">quántiānhòu</span><span class="vn">· 24/7</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e34f12104c2c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">应酬<span class="py">yìngchóu</span><span class="vn">· tiếp khách/giao lưu kinh doanh</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9bfd4165893c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你有没有真正意义上的休假？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c92783bc5964.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you actually get real time off?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你觉得当老板更自由还是更累？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0a82e11eedf9.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Do you think being a boss is more freedom or more exhausting?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q6 -->
+<div class="card">
+<div class="card-main">
+<div class="num">6</div>
+<div class="card-body">
+<div class="zh">你觉得做生意最重要的品质是什么？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6fe457786797.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Nǐ juéde zuò shēngyì zuì zhòngyào de pǐnzhì shì shénme?</div>
+<div class="en">What quality do you think is most important in business?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d59614f7d33.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">品质<span class="py">pǐnzhì</span><span class="vn">· phẩm chất</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5923c27f590f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">诚信<span class="py">chéngxìn</span><span class="vn">· chữ tín</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7bdf68f43a55.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">执行力<span class="py">zhíxínglì</span><span class="vn">· năng lực thực thi</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3d8ec0c5df1f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">人脉<span class="py">rénmài</span><span class="vn">· mạng lưới quan hệ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_46fe0816fc5a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你觉得人脉重要还是能力重要？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a8c5da3fbd36.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">What matters more in business — connections or ability?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你是怎么建立自己的人脉的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3968fb03a957.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How did you build your business network?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q7 -->
+<div class="card">
+<div class="card-main">
+<div class="num">7</div>
+<div class="card-body">
+<div class="zh">生意最忙的时候是什么情况？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_675ce8e1a5bd.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Shēngyì zuì máng de shíhòu shì shénme qíngkuàng?</div>
+<div class="en">What's it like when business is at its busiest?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a441ad8cf37b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">旺季<span class="py">wàngjì</span><span class="vn">· mùa cao điểm</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bc2285008f7a.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">淡季<span class="py">dànjì</span><span class="vn">· mùa thấp điểm</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_91b22ccb7b97.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">订单<span class="py">dìngdān</span><span class="vn">· đơn hàng</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4c117f203718.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">来不及<span class="py">lái bu jí</span><span class="vn">· không kịp</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a47640d36d79.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">你们行业的旺季是什么时候？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7e31757e2d90.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">When is peak season in your industry?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">淡季的时候怎么维持运营？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f2b748a4c56c.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">How do you keep things running during slow season?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Q8 -->
+<div class="card">
+<div class="card-main">
+<div class="num">8</div>
+<div class="card-body">
+<div class="zh">有没有想过放弃，回去打工？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3e3c6ae5a6a3.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="pinyin">Yǒu méiyǒu xiǎngguò fàngqì, huíqù dǎgōng?</div>
+<div class="en">Have you ever thought about giving up and going back to work for someone?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71490bf7bc98.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<button class="toggle-btn" onclick="toggle(this)">Gợi ý <span class="arrow">▼</span></button>
+<div class="hint-panel">
+<div class="hint-section">
+<div class="hint-label vocab">Từ cần nghe</div>
+<div class="vocab-list">
+<div class="vocab-chip">放弃<span class="py">fàngqì</span><span class="vn">· từ bỏ</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5ac2011aeb75.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">打工<span class="py">dǎgōng</span><span class="vn">· làm thuê</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77ac234a2e93.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">坚持<span class="py">jiānchí</span><span class="vn">· kiên trì</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5207208b135b.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="vocab-chip">转型<span class="py">zhuǎnxíng</span><span class="vn">· chuyển đổi mô hình</span><button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1e68ebb3b76f.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+</div>
+</div>
+<div class="hint-section">
+<div class="hint-label followup">Hỏi tiếp</div>
+<div class="followup-list">
+<div class="followup-item">
+<div class="fq-zh">是什么让你坚持下来的？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2d0b223d3917.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">What kept you going?</div>
+</div>
+<div class="followup-item">
+<div class="fq-zh">你有没有后悔过创业？<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bd92f8ae3f58.mp3" onclick="playAudio(this)" title="Phát âm">🔊</button></div>
+<div class="fq-en">Have you ever regretted starting your own business?</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+function toggle(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+<script>
+/* audio player — injected by generate_audio.py */
+(function () {
+  var active = null;
+  window.playAudio = function (btn) {
+    if (active) {
+      active.btn.classList.remove('playing');
+      active.audio.pause();
+      active.audio.currentTime = 0;
+      if (active.btn === btn) { active = null; return; }
+    }
+    var audio = new Audio(btn.dataset.src);
+    btn.classList.add('playing');
+    audio.play();
+    active = { audio: audio, btn: btn };
+    audio.onended = function () { btn.classList.remove('playing'); active = null; };
+  };
+})();
+</script>
+<script src="../shared/player-bar.js"></script>
+</body>
+</html>

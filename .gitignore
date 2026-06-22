@@ -12,9 +12,13 @@ audio/
 __pycache__/
 node_modules/
 .DS_Store
+spec/
 
 # Un-ignore HTML files
 !*.html
+
+# Un-ignore shared JS
+!*.js
 
 # Un-ignore docs/
 !*.md
