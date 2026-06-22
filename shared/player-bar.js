@@ -63,7 +63,7 @@
     zh: {
       btn: document.getElementById('pa-zh'),
       idle: '▶ 中文', running: '⏸ 中文',
-      src: function () { return document.querySelectorAll('.zh .audio-btn[data-src]'); }
+      src: function () { return document.querySelectorAll('.zh .audio-btn[data-src], .vocab-chip .audio-btn[data-src], .fq-zh .audio-btn[data-src]'); }
     },
     en: {
       btn: document.getElementById('pa-en'),
