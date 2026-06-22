@@ -5,6 +5,9 @@
   /* ── CSS ──────────────────────────────────────────────────────── */
   var css = document.createElement('style');
   css.textContent =
+    /* English meaning inside vocab chips */
+    '.vocab-chip .ve{color:#7dd3fc;font-size:0.7rem;margin-left:4px;opacity:0.8;}' +
+
     '#play-all-bar{' +
     'position:fixed;bottom:0;left:0;right:0;height:54px;' +
     'background:#0a0e19;border-top:1px solid #1e293b;' +
@@ -63,12 +66,12 @@
     zh: {
       btn: document.getElementById('pa-zh'),
       idle: '▶ 中文', running: '⏸ 中文',
-      src: function () { return document.querySelectorAll('.zh .audio-btn[data-src], .vocab-chip .audio-btn[data-src], .fq-zh .audio-btn[data-src]'); }
+      src: function () { return document.querySelectorAll('.zh .audio-btn[data-src], .vocab-chip > .audio-btn[data-src], .fq-zh .audio-btn[data-src]'); }
     },
     en: {
       btn: document.getElementById('pa-en'),
       idle: '▶ EN', running: '⏸ EN',
-      src: function () { return document.querySelectorAll('.en .audio-btn[data-src]'); }
+      src: function () { return document.querySelectorAll('.en .audio-btn[data-src], .ve .audio-btn[data-src], .fq-en .audio-btn[data-src]'); }
     }
   };
 

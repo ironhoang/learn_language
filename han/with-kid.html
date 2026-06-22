@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tiếng Hàn cùng con</title>
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0 24px;
+    }
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #94a3b8;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .timer-badge {
+      display: inline-block;
+      margin-top: 8px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #f97316;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      margin-top: 8px;
+      padding: 6px 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f97316;
+      border-left: 3px solid #f97316;
+      background: #1a1208;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: #475569; }
+
+    .card-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+    }
+
+    .num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: #0f172a;
+      border: 1px solid #475569;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+
+    .card-body { flex: 1; }
+
+    .ko {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.3;
+    }
+    .romaja {
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 3px;
+      letter-spacing: 0.03em;
+    }
+    .vn {
+      font-size: 0.88rem;
+      color: #7dd3fc;
+      margin-top: 4px;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.15s;
+      z-index: 100;
+    }
+    .home-btn:hover { background: #0f172a; border-color: #475569; color: #cbd5e1; }
+
+    /* audio play button */
+    .audio-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background: transparent;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.68rem;
+      color: #64748b;
+      vertical-align: middle;
+      margin-left: 7px;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    .audio-btn:hover { background: #1e293b; border-color: #475569; color: #94a3b8; }
+    .audio-btn.playing { border-color: #f97316; color: #f97316; }
+    @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+
+    /* player bar */
+    #play-all-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; height: 54px;
+      background: #0a0e19; border-top: 1px solid #1e293b;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      z-index: 500; padding: 0 12px;
+    }
+    .pa-btn {
+      display: inline-flex; align-items: center;
+      background: #1e293b; border: 1px solid #334155; color: #94a3b8;
+      font-size: 0.78rem; font-weight: 600; padding: 6px 13px;
+      border-radius: 8px; cursor: pointer; transition: all 0.15s;
+      font-family: inherit; white-space: nowrap;
+    }
+    .pa-btn:hover { border-color: #475569; color: #cbd5e1; }
+    .pa-btn.active { border-color: #f97316; color: #f97316; }
+    #pa-divider { width: 1px; height: 22px; background: #1e293b; flex-shrink: 0; margin: 0 2px; }
+    #pa-stop {
+      background: transparent; border: 1px solid #334155; color: #64748b;
+      font-size: 0.78rem; padding: 6px 10px; border-radius: 8px;
+      cursor: pointer; transition: all 0.15s; font-family: inherit;
+    }
+    #pa-stop:hover { border-color: #475569; color: #94a3b8; }
+    #pa-status {
+      font-size: 0.7rem; color: #475569; min-width: 36px; text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Home</a>
+<header>
+<h1>Tiếng Hàn cùng con</h1>
+<div class="timer-badge">👶 Cho bé 2 tuổi · 40 câu</div>
+</header>
+
+<div class="cards">
+
+<div class="section-label">Chào hỏi &amp; Yêu thương</div>
+
+<!-- 1 -->
+<div class="card"><div class="card-main"><div class="num">1</div><div class="card-body">
+<div class="ko">안녕!</div>
+<div class="romaja">Annyeong!</div>
+<div class="vn">Xin chào!</div>
+</div></div></div>
+
+<!-- 2 -->
+<div class="card"><div class="card-main"><div class="num">2</div><div class="card-body">
+<div class="ko">사랑해.</div>
+<div class="romaja">Saranghae.</div>
+<div class="vn">Mẹ / Ba yêu con.</div>
+</div></div></div>
+
+<!-- 3 -->
+<div class="card"><div class="card-main"><div class="num">3</div><div class="card-body">
+<div class="ko">우리 아기 귀여워!</div>
+<div class="romaja">Uri agi gwiyeowo!</div>
+<div class="vn">Con mẹ dễ thương quá!</div>
+</div></div></div>
+
+<!-- 4 -->
+<div class="card"><div class="card-main"><div class="num">4</div><div class="card-body">
+<div class="ko">안아줄게.</div>
+<div class="romaja">Anajiulge.</div>
+<div class="vn">Mẹ ôm con nào.</div>
+</div></div></div>
+
+<!-- 5 -->
+<div class="card"><div class="card-main"><div class="num">5</div><div class="card-body">
+<div class="ko">뽀뽀해줄게.</div>
+<div class="romaja">Ppoppohaejiulge.</div>
+<div class="vn">Mẹ hôn con nào.</div>
+</div></div></div>
+
+<div class="section-label">Sinh hoạt hàng ngày</div>
+
+<!-- 6 -->
+<div class="card"><div class="card-main"><div class="num">6</div><div class="card-body">
+<div class="ko">일어나자.</div>
+<div class="romaja">Ireonaja.</div>
+<div class="vn">Dậy thôi nào.</div>
+</div></div></div>
+
+<!-- 7 -->
+<div class="card"><div class="card-main"><div class="num">7</div><div class="card-body">
+<div class="ko">세수하자.</div>
+<div class="romaja">Sesuhaja.</div>
+<div class="vn">Rửa mặt thôi.</div>
+</div></div></div>
+
+<!-- 8 -->
+<div class="card"><div class="card-main"><div class="num">8</div><div class="card-body">
+<div class="ko">이 닦자.</div>
+<div class="romaja">I dakja.</div>
+<div class="vn">Đánh răng thôi.</div>
+</div></div></div>
+
+<!-- 9 -->
+<div class="card"><div class="card-main"><div class="num">9</div><div class="card-body">
+<div class="ko">옷 입자.</div>
+<div class="romaja">Ot ipja.</div>
+<div class="vn">Mặc quần áo vào.</div>
+</div></div></div>
+
+<!-- 10 -->
+<div class="card"><div class="card-main"><div class="num">10</div><div class="card-body">
+<div class="ko">자자.</div>
+<div class="romaja">Jaja.</div>
+<div class="vn">Ngủ thôi.</div>
+</div></div></div>
+
+<div class="section-label">Ăn uống</div>
+
+<!-- 11 -->
+<div class="card"><div class="card-main"><div class="num">11</div><div class="card-body">
+<div class="ko">밥 먹자.</div>
+<div class="romaja">Bap meokja.</div>
+<div class="vn">Ăn cơm thôi.</div>
+</div></div></div>
+
+<!-- 12 -->
+<div class="card"><div class="card-main"><div class="num">12</div><div class="card-body">
+<div class="ko">배고파?</div>
+<div class="romaja">Baegopa?</div>
+<div class="vn">Con đói không?</div>
+</div></div></div>
+
+<!-- 13 -->
+<div class="card"><div class="card-main"><div class="num">13</div><div class="card-body">
+<div class="ko">맛있어?</div>
+<div class="romaja">Masisseo?</div>
+<div class="vn">Ngon không?</div>
+</div></div></div>
+
+<!-- 14 -->
+<div class="card"><div class="card-main"><div class="num">14</div><div class="card-body">
+<div class="ko">물 마셔.</div>
+<div class="romaja">Mul masyeo.</div>
+<div class="vn">Uống nước đi.</div>
+</div></div></div>
+
+<!-- 15 -->
+<div class="card"><div class="card-main"><div class="num">15</div><div class="card-body">
+<div class="ko">더 먹을래?</div>
+<div class="romaja">Deo meogeullae?</div>
+<div class="vn">Ăn thêm không?</div>
+</div></div></div>
+
+<!-- 16 -->
+<div class="card"><div class="card-main"><div class="num">16</div><div class="card-body">
+<div class="ko">다 먹었어?</div>
+<div class="romaja">Da meogeosseo?</div>
+<div class="vn">Ăn hết rồi à?</div>
+</div></div></div>
+
+<!-- 17 -->
+<div class="card"><div class="card-main"><div class="num">17</div><div class="card-body">
+<div class="ko">뜨거워, 조심해.</div>
+<div class="romaja">Tteugeowo, josimhae.</div>
+<div class="vn">Nóng lắm, cẩn thận nào.</div>
+</div></div></div>
+
+<!-- 18 -->
+<div class="card"><div class="card-main"><div class="num">18</div><div class="card-body">
+<div class="ko">천천히 먹어.</div>
+<div class="romaja">Cheoncheonhi meogeo.</div>
+<div class="vn">Ăn từ từ thôi.</div>
+</div></div></div>
+
+<div class="section-label">Chơi &amp; Hoạt động</div>
+
+<!-- 19 -->
+<div class="card"><div class="card-main"><div class="num">19</div><div class="card-body">
+<div class="ko">같이 놀자!</div>
+<div class="romaja">Gachi nolja!</div>
+<div class="vn">Cùng chơi thôi!</div>
+</div></div></div>
+
+<!-- 20 -->
+<div class="card"><div class="card-main"><div class="num">20</div><div class="card-body">
+<div class="ko">뭐 하고 싶어?</div>
+<div class="romaja">Mwo hago sipeo?</div>
+<div class="vn">Con muốn làm gì?</div>
+</div></div></div>
+
+<!-- 21 -->
+<div class="card"><div class="card-main"><div class="num">21</div><div class="card-body">
+<div class="ko">책 읽어줄까?</div>
+<div class="romaja">Chaek ilgeojulkka?</div>
+<div class="vn">Mẹ đọc sách cho con nhé?</div>
+</div></div></div>
+
+<!-- 22 -->
+<div class="card"><div class="card-main"><div class="num">22</div><div class="card-body">
+<div class="ko">노래하자!</div>
+<div class="romaja">Noraehaja!</div>
+<div class="vn">Hát nào!</div>
+</div></div></div>
+
+<!-- 23 -->
+<div class="card"><div class="card-main"><div class="num">23</div><div class="card-body">
+<div class="ko">춤 춰보자!</div>
+<div class="romaja">Chum chwoboja!</div>
+<div class="vn">Nhảy nào!</div>
+</div></div></div>
+
+<!-- 24 -->
+<div class="card"><div class="card-main"><div class="num">24</div><div class="card-body">
+<div class="ko">공 가지고 놀자.</div>
+<div class="romaja">Gong gajigo nolja.</div>
+<div class="vn">Chơi bóng thôi.</div>
+</div></div></div>
+
+<!-- 25 -->
+<div class="card"><div class="card-main"><div class="num">25</div><div class="card-body">
+<div class="ko">밖에 나가자.</div>
+<div class="romaja">Bakke nagaja.</div>
+<div class="vn">Ra ngoài chơi thôi.</div>
+</div></div></div>
+
+<div class="section-label">Bộ phận cơ thể &amp; Sức khoẻ</div>
+
+<!-- 26 -->
+<div class="card"><div class="card-main"><div class="num">26</div><div class="card-body">
+<div class="ko">손이 어디 있어?</div>
+<div class="romaja">Soni eodi isseo?</div>
+<div class="vn">Tay con đâu?</div>
+</div></div></div>
+
+<!-- 27 -->
+<div class="card"><div class="card-main"><div class="num">27</div><div class="card-body">
+<div class="ko">눈이 어디 있어?</div>
+<div class="romaja">Nuni eodi isseo?</div>
+<div class="vn">Mắt con đâu?</div>
+</div></div></div>
+
+<!-- 28 -->
+<div class="card"><div class="card-main"><div class="num">28</div><div class="card-body">
+<div class="ko">코가 어디 있어?</div>
+<div class="romaja">Koga eodi isseo?</div>
+<div class="vn">Mũi con đâu?</div>
+</div></div></div>
+
+<!-- 29 -->
+<div class="card"><div class="card-main"><div class="num">29</div><div class="card-body">
+<div class="ko">아파? 어디 아파?</div>
+<div class="romaja">Apa? Eodi apa?</div>
+<div class="vn">Đau không? Đau ở đâu?</div>
+</div></div></div>
+
+<!-- 30 -->
+<div class="card"><div class="card-main"><div class="num">30</div><div class="card-body">
+<div class="ko">괜찮아?</div>
+<div class="romaja">Gwaenchana?</div>
+<div class="vn">Con có sao không?</div>
+</div></div></div>
+
+<div class="section-label">Trong nhà</div>
+
+<!-- 31 -->
+<div class="card"><div class="card-main"><div class="num">31</div><div class="card-body">
+<div class="ko">장난감 치우자.</div>
+<div class="romaja">Jangnangam chiuja.</div>
+<div class="vn">Dọn đồ chơi thôi.</div>
+</div></div></div>
+
+<!-- 32 -->
+<div class="card"><div class="card-main"><div class="num">32</div><div class="card-body">
+<div class="ko">의자에 앉아.</div>
+<div class="romaja">Uijae anja.</div>
+<div class="vn">Ngồi vào ghế đi.</div>
+</div></div></div>
+
+<!-- 33 -->
+<div class="card"><div class="card-main"><div class="num">33</div><div class="card-body">
+<div class="ko">이리 와!</div>
+<div class="romaja">Iri wa!</div>
+<div class="vn">Lại đây!</div>
+</div></div></div>
+
+<!-- 34 -->
+<div class="card"><div class="card-main"><div class="num">34</div><div class="card-body">
+<div class="ko">저기 봐!</div>
+<div class="romaja">Jeogi bwa!</div>
+<div class="vn">Nhìn kia kìa!</div>
+</div></div></div>
+
+<!-- 35 -->
+<div class="card"><div class="card-main"><div class="num">35</div><div class="card-body">
+<div class="ko">안 돼!</div>
+<div class="romaja">An dwae!</div>
+<div class="vn">Không được!</div>
+</div></div></div>
+
+<div class="section-label">Khen ngợi &amp; Khuyến khích</div>
+
+<!-- 36 -->
+<div class="card"><div class="card-main"><div class="num">36</div><div class="card-body">
+<div class="ko">잘했어!</div>
+<div class="romaja">Jalhaesseo!</div>
+<div class="vn">Giỏi lắm!</div>
+</div></div></div>
+
+<!-- 37 -->
+<div class="card"><div class="card-main"><div class="num">37</div><div class="card-body">
+<div class="ko">최고야!</div>
+<div class="romaja">Choegoya!</div>
+<div class="vn">Con tuyệt vời nhất!</div>
+</div></div></div>
+
+<!-- 38 -->
+<div class="card"><div class="card-main"><div class="num">38</div><div class="card-body">
+<div class="ko">다시 해봐.</div>
+<div class="romaja">Dasi haebwa.</div>
+<div class="vn">Thử lại đi.</div>
+</div></div></div>
+
+<!-- 39 -->
+<div class="card"><div class="card-main"><div class="num">39</div><div class="card-body">
+<div class="ko">괜찮아, 괜찮아.</div>
+<div class="romaja">Gwaenchana, gwaenchana.</div>
+<div class="vn">Không sao, không sao.</div>
+</div></div></div>
+
+<!-- 40 -->
+<div class="card"><div class="card-main"><div class="num">40</div><div class="card-body">
+<div class="ko">우리 아기 최고!</div>
+<div class="romaja">Uri agi choego!</div>
+<div class="vn">Con mẹ giỏi nhất!</div>
+</div></div></div>
+
+</div><!-- .cards -->
+
+<div id="play-all-bar">
+  <button class="pa-btn" id="pa-ko">▶ 한국어</button>
+  <span id="pa-status"></span>
+  <div id="pa-divider"></div>
+  <button id="pa-stop">■ Dừng</button>
+</div>
+
+<script>
+(function () {
+  var active = null;
+  window.playAudio = function (btn) {
+    if (active) {
+      active.btn.classList.remove('playing');
+      active.audio.pause();
+      active.audio.currentTime = 0;
+      if (active.btn === btn) { active = null; return; }
+    }
+    var audio = new Audio(btn.dataset.src);
+    btn.classList.add('playing');
+    audio.play();
+    active = { audio: audio, btn: btn };
+    audio.onended = function () { btn.classList.remove('playing'); active = null; };
+  };
+})();
+</script>
+
+<script>
+(function () {
+  'use strict';
+  var pa = { list: [], idx: 0, audio: null, on: false };
+  var statusEl = document.getElementById('pa-status');
+  var koBtn    = document.getElementById('pa-ko');
+  var stopBtn  = document.getElementById('pa-stop');
+
+  document.body.style.paddingBottom = '70px';
+
+  function updateStatus() {
+    statusEl.textContent = pa.on ? (pa.idx + 1) + ' / ' + pa.list.length : '';
+  }
+
+  function clearCurrent() {
+    if (pa.audio) { pa.audio.pause(); pa.audio = null; }
+    pa.list.forEach(function (b) { b.classList.remove('playing'); });
+  }
+
+  function step() {
+    if (!pa.on) return;
+    if (pa.idx >= pa.list.length) { pa.idx = 0; }
+    var btn = pa.list[pa.idx];
+    if (!btn || !btn.dataset.src) { pa.idx++; step(); return; }
+    pa.list.forEach(function (b) { b.classList.remove('playing'); });
+    btn.classList.add('playing');
+    updateStatus();
+    pa.audio = new Audio(btn.dataset.src);
+    pa.audio.play().catch(function () { pa.idx++; step(); });
+    pa.audio.onended = function () { btn.classList.remove('playing'); pa.idx++; step(); };
+  }
+
+  function startKo() {
+    clearCurrent();
+    pa.list = Array.from(document.querySelectorAll('.ko .audio-btn[data-src]'));
+    if (!pa.list.length) return;
+    pa.idx = 0; pa.on = true;
+    koBtn.textContent = '⏸ 한국어'; koBtn.classList.add('active');
+    step();
+  }
+
+  function stopAll() {
+    pa.on = false; clearCurrent();
+    koBtn.textContent = '▶ 한국어'; koBtn.classList.remove('active');
+    updateStatus();
+  }
+
+  koBtn.addEventListener('click', function () {
+    if (pa.on) stopAll(); else startKo();
+  });
+  stopBtn.addEventListener('click', stopAll);
+
+  document.addEventListener('click', function (e) {
+    var t   = e.target;
+    var btn = t.closest ? t.closest('.audio-btn') : (t.classList && t.classList.contains('audio-btn') ? t : null);
+    if (btn && pa.on) stopAll();
+  }, true);
+})();
+</script>
+</body>
+</html>
