@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "👨‍💻 Kỹ sư / 工程师"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你是做什么方向的工程师？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_69985bbcf272.mp3",
+      "pinyin": "Nǐ shì zuò shénme fāngxiàng de gōngchéngshī?",
+      "en": "What type of engineer are you?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_372d9ab482b4.mp3",
+      "vocab": [
+        {
+          "zh": "方向",
+          "py": "fāngxiàng",
+          "vn": "· hướng/lĩnh vực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a465db53b8c9.mp3",
+          "ve": "· direction / area of focus",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc9924f04078.mp3"
+        },
+        {
+          "zh": "软件",
+          "py": "ruǎnjiàn",
+          "vn": "· phần mềm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f0dfc65b71f0.mp3",
+          "ve": "· software",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f9fa10ba956c.mp3"
+        },
+        {
+          "zh": "硬件",
+          "py": "yìngjiàn",
+          "vn": "· phần cứng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ed9bebaba92a.mp3",
+          "ve": "· hardware",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ca14c518d1b.mp3"
+        },
+        {
+          "zh": "程序员",
+          "py": "chéngxùyuán",
+          "vn": "· lập trình viên",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_72d9adf4944f.mp3",
+          "ve": "· programmer / developer",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6d936601f321.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你用什么编程语言？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_17e1ace8960a.mp3",
+          "en": "What programming languages do you use?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f1a9e58c93f.mp3"
+        },
+        {
+          "zh": "这个方向好找工作吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0436a73cf617.mp3",
+          "en": "Is it easy to find jobs in that area?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1be692395341.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你在哪家公司上班？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f35ccaa21c13.mp3",
+      "pinyin": "Nǐ zài nǎ jiā gōngsī shàngbān?",
+      "en": "Which company do you work at?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_58cb3de6ffc9.mp3",
+      "vocab": [
+        {
+          "zh": "大厂",
+          "py": "dàchǎng",
+          "vn": "· công ty lớn (big tech)",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c3ab1ce1b7c7.mp3",
+          "ve": "· big tech company",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a76020414577.mp3"
+        },
+        {
+          "zh": "创业公司",
+          "py": "chuàngyè gōngsī",
+          "vn": "· startup",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b296fde88ded.mp3",
+          "ve": "· startup",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd82c1882969.mp3"
+        },
+        {
+          "zh": "外企",
+          "py": "wàiqǐ",
+          "vn": "· công ty nước ngoài",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7ad8748958d4.mp3",
+          "ve": "· foreign company",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b501a8e912e6.mp3"
+        },
+        {
+          "zh": "国企",
+          "py": "guóqǐ",
+          "vn": "· doanh nghiệp nhà nước",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_91de0156a7ee.mp3",
+          "ve": "· state-owned enterprise",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f91e5a59195b.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "公司规模大吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a40ebd5fbeff.mp3",
+          "en": "Is the company large?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5036019bc611.mp3"
+        },
+        {
+          "zh": "你喜欢那里的工作环境吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_41290df999ed.mp3",
+          "en": "Do you like the work environment there?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb58c44ab622.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "你们公司需要经常加班吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3cdf66d33d89.mp3",
+      "pinyin": "Nǐmen gōngsī xūyào jīngcháng jiābān ma?",
+      "en": "Does your company require a lot of overtime?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7ed614b3df47.mp3",
+      "vocab": [
+        {
+          "zh": "加班",
+          "py": "jiābān",
+          "vn": "· làm thêm giờ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b64a21731238.mp3",
+          "ve": "· overtime work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4bf9107372f.mp3"
+        },
+        {
+          "zh": "九九六",
+          "py": "jiǔ jiǔ liù",
+          "vn": "· 996 (9h-21h, 6 ngày)",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b58f8cf0dc3c.mp3",
+          "ve": "· 996 work culture",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_998b4fe911f2.mp3"
+        },
+        {
+          "zh": "deadline",
+          "py": "deadline",
+          "vn": "· hạn chót",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_30e482a8ab57.mp3",
+          "ve": "· deadline",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30e482a8ab57.mp3"
+        },
+        {
+          "zh": "倒班",
+          "py": "dǎobān",
+          "vn": "· làm ca",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c745644cec27.mp3",
+          "ve": "· shift work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0f11c82abd1d.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你接受996工作制吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_377f8695b0a7.mp3",
+          "en": "Are you okay with the 996 work schedule?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5dc92a0f6e22.mp3"
+        },
+        {
+          "zh": "加班有加班费吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d34756fc6664.mp3",
+          "en": "Do you get paid extra for overtime?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_92c43df3e688.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "工程师这行压力大吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5ef7919d15f1.mp3",
+      "pinyin": "Gōngchéngshī zhè háng yālì dà ma?",
+      "en": "Is the engineering field stressful?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b9ee2c03c4f6.mp3",
+      "vocab": [
+        {
+          "zh": "压力",
+          "py": "yālì",
+          "vn": "· áp lực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f16b17608555.mp3",
+          "ve": "· pressure / stress",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3e3abd841a45.mp3"
+        },
+        {
+          "zh": "挑战",
+          "py": "tiǎozhàn",
+          "vn": "· thách thức",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_590d8b17f21b.mp3",
+          "ve": "· challenge",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b04ec0ade3d4.mp3"
+        },
+        {
+          "zh": "竞争",
+          "py": "jìngzhēng",
+          "vn": "· cạnh tranh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b8c3fb16d366.mp3",
+          "ve": "· competition",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3190dbf13bea.mp3"
+        },
+        {
+          "zh": "技术更新",
+          "py": "jìshù gēngxīn",
+          "vn": "· cập nhật kỹ thuật",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6d78c9b9fb70.mp3",
+          "ve": "· technology updates",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_83e41f9b32ba.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你怎么缓解工作压力？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ce489c6fa8f1.mp3",
+          "en": "How do you relieve work stress?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5526e063986e.mp3"
+        },
+        {
+          "zh": "技术更新那么快，跟得上吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f58189858b83.mp3",
+          "en": "Technology changes so fast — can you keep up?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f93c3603204a.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "你是怎么学会这些技术的？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c25b09f1af13.mp3",
+      "pinyin": "Nǐ shì zěnme xuéhuì zhèxiē jìshù de?",
+      "en": "How did you learn your technical skills?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_69a79d1e0043.mp3",
+      "vocab": [
+        {
+          "zh": "自学",
+          "py": "zìxué",
+          "vn": "· tự học",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ee7b340aabcf.mp3",
+          "ve": "· self-study",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_38dc8f368c18.mp3"
+        },
+        {
+          "zh": "培训",
+          "py": "péixùn",
+          "vn": "· đào tạo",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fb4e1405d53a.mp3",
+          "ve": "· training",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c185ddac8b5a.mp3"
+        },
+        {
+          "zh": "课程",
+          "py": "kèchéng",
+          "vn": "· khóa học",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_58983b0dbd37.mp3",
+          "ve": "· course / curriculum",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_756eefa6dd61.mp3"
+        },
+        {
+          "zh": "实践",
+          "py": "shíjiàn",
+          "vn": "· thực hành",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_507829ed9649.mp3",
+          "ve": "· practice / hands-on",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1e596d17a1b9.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有特别推荐的学习资源？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_af11df783ebb.mp3",
+          "en": "Do you have any learning resources you'd recommend?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bb8320fd129a.mp3"
+        },
+        {
+          "zh": "你觉得实际工作跟学校学的差别大吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_31a97e1ef4f3.mp3",
+          "en": "Do you think the gap between school and real work is big?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cb9b46fd64b9.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "这个行业未来发展怎么样？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_967fe374171f.mp3",
+      "pinyin": "Zhège hángyè wèilái fāzhǎn zěnmeyàng?",
+      "en": "How do you see the future of this industry?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_869efbd0ee3b.mp3",
+      "vocab": [
+        {
+          "zh": "前景",
+          "py": "qiánjǐng",
+          "vn": "· triển vọng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35d8cc8b99b0.mp3",
+          "ve": "· prospects / outlook",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_35c5928554e3.mp3"
+        },
+        {
+          "zh": "发展",
+          "py": "fāzhǎn",
+          "vn": "· phát triển",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f61c3e9baa8b.mp3",
+          "ve": "· development / growth",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b33411a3e01c.mp3"
+        },
+        {
+          "zh": "趋势",
+          "py": "qūshì",
+          "vn": "· xu hướng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_009051c58408.mp3",
+          "ve": "· trend",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3d5f1ffeadf5.mp3"
+        },
+        {
+          "zh": "饱和",
+          "py": "bǎohé",
+          "vn": "· bão hòa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9f0e72747988.mp3",
+          "ve": "· saturated",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c90b8dd3280.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得这个行业还有多少年的红利期？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_84a7077a194f.mp3",
+          "en": "How many more years do you think this industry will boom?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1329bf00e79e.mp3"
+        },
+        {
+          "zh": "你有没有想过转行？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ef2ceefc82ff.mp3",
+          "en": "Have you ever thought about switching industries?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b4bcb4b97f09.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "你觉得人工智能会影响你的工作吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_777244e4b04e.mp3",
+      "pinyin": "Nǐ juéde réngōng zhìnéng huì yǐngxiǎng nǐ de gōngzuò ma?",
+      "en": "Do you think AI will affect your work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c12ab0a258b0.mp3",
+      "vocab": [
+        {
+          "zh": "人工智能",
+          "py": "réngōng zhìnéng",
+          "vn": "· trí tuệ nhân tạo",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f068f0dad747.mp3",
+          "ve": "· artificial intelligence",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2dd0692ccbad.mp3"
+        },
+        {
+          "zh": "替代",
+          "py": "tìdài",
+          "vn": "· thay thế",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9503b916eb75.mp3",
+          "ve": "· replace / substitute",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6ca0480d1a8b.mp3"
+        },
+        {
+          "zh": "辅助",
+          "py": "fǔzhù",
+          "vn": "· hỗ trợ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b6d1cdbfab28.mp3",
+          "ve": "· assist / support",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_37e947801e24.mp3"
+        },
+        {
+          "zh": "效率",
+          "py": "xiàolǜ",
+          "vn": "· hiệu quả",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3256142c2215.mp3",
+          "ve": "· efficiency",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5f099425f5cf.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你现在工作中有用到AI工具吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6e251592eac5.mp3",
+          "en": "Do you use AI tools in your work now?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dc2a43d064c0.mp3"
+        },
+        {
+          "zh": "你觉得AI是威胁还是机会？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6bd1ea9edd01.mp3",
+          "en": "Do you see AI as a threat or an opportunity?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2cb5be5e9df6.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "你一般几点上下班？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a425588a1e11.mp3",
+      "pinyin": "Nǐ yībān jǐ diǎn shàng xiàbān?",
+      "en": "What time do you usually start and finish work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_45e285cb4722.mp3",
+      "vocab": [
+        {
+          "zh": "上班",
+          "py": "shàngbān",
+          "vn": "· đi làm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b4f0388f1ee9.mp3",
+          "ve": "· go to work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec7f0ecc5003.mp3"
+        },
+        {
+          "zh": "下班",
+          "py": "xiàbān",
+          "vn": "· tan làm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_96ed60cdcb75.mp3",
+          "ve": "· off work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e9a17b435935.mp3"
+        },
+        {
+          "zh": "弹性工作",
+          "py": "tánxìng gōngzuò",
+          "vn": "· làm việc linh hoạt",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fc629dd43b3e.mp3",
+          "ve": "· flexible work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f23b97d7247b.mp3"
+        },
+        {
+          "zh": "远程办公",
+          "py": "yuǎnchéng bàngōng",
+          "vn": "· làm việc từ xa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_255feabae8e5.mp3",
+          "ve": "· remote work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_15e018941f99.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你可以远程办公吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a13c2b6ecb1a.mp3",
+          "en": "Can you work remotely?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06d81ad9768d.mp3"
+        },
+        {
+          "zh": "你觉得哪种工作方式更适合你？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5ded3e3d1120.mp3",
+          "en": "Which work style suits you better?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f027a0f6370.mp3"
+        }
+      ]
+    }
+  ]
+}

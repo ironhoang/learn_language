@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "title": "Tiếng Hàn cùng con",
+    "badge": "👶 Cho bé 2 tuổi · 40 câu",
+    "type": "korean"
+  },
+  "sections": [
+    {
+      "label": "Chào hỏi & Yêu thương",
+      "items": [
+        {
+          "ko": "안녕!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_6edd1f8de1cd.mp3",
+          "romaja": "Annyeong!",
+          "vn": "Xin chào!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7cdc515b59dc.mp3"
+        },
+        {
+          "ko": "사랑해.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_0aefb764e99a.mp3",
+          "romaja": "Saranghae.",
+          "vn": "Mẹ / Ba yêu con.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_003fa3491806.mp3"
+        },
+        {
+          "ko": "우리 아기 귀여워!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_b136388dbc12.mp3",
+          "romaja": "Uri agi gwiyeowo!",
+          "vn": "Con mẹ dễ thương quá!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e952df0fe0dd.mp3"
+        },
+        {
+          "ko": "안아줄게.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_6ee545cfffb7.mp3",
+          "romaja": "Anajiulge.",
+          "vn": "Mẹ ôm con nào.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_77e8d51ed213.mp3"
+        },
+        {
+          "ko": "뽀뽀해줄게.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_ef4b458598ce.mp3",
+          "romaja": "Ppoppohaejiulge.",
+          "vn": "Mẹ hôn con nào.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_62ce8a334322.mp3"
+        }
+      ]
+    },
+    {
+      "label": "Sinh hoạt hàng ngày",
+      "items": [
+        {
+          "ko": "일어나자.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_5669b1f7d370.mp3",
+          "romaja": "Ireonaja.",
+          "vn": "Dậy thôi nào.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_564ae69bb9c3.mp3"
+        },
+        {
+          "ko": "세수하자.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_31da61fca11f.mp3",
+          "romaja": "Sesuhaja.",
+          "vn": "Rửa mặt thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f4b65a9f8096.mp3"
+        },
+        {
+          "ko": "이 닦자.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_5ee7893447a6.mp3",
+          "romaja": "I dakja.",
+          "vn": "Đánh răng thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d5593f2bd510.mp3"
+        },
+        {
+          "ko": "옷 입자.",
+          "koAudio": null,
+          "romaja": "Ot ipja.",
+          "vn": "Mặc quần áo vào.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6f37d1bd50bb.mp3"
+        },
+        {
+          "ko": "자자.",
+          "koAudio": null,
+          "romaja": "Jaja.",
+          "vn": "Ngủ thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9284dabd519b.mp3"
+        }
+      ]
+    },
+    {
+      "label": "Ăn uống",
+      "items": [
+        {
+          "ko": "밥 먹자.",
+          "koAudio": null,
+          "romaja": "Bap meokja.",
+          "vn": "Ăn cơm thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_355d20311eb1.mp3"
+        },
+        {
+          "ko": "배고파?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_e5c3179c3c7d.mp3",
+          "romaja": "Baegopa?",
+          "vn": "Con đói không?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_31f125564fa4.mp3"
+        },
+        {
+          "ko": "맛있어?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_d1825bbd47d2.mp3",
+          "romaja": "Masisseo?",
+          "vn": "Ngon không?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_1cb8038d362d.mp3"
+        },
+        {
+          "ko": "물 마셔.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_532276848372.mp3",
+          "romaja": "Mul masyeo.",
+          "vn": "Uống nước đi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_75152eb65b96.mp3"
+        },
+        {
+          "ko": "더 먹을래?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_340b0be518f2.mp3",
+          "romaja": "Deo meogeullae?",
+          "vn": "Ăn thêm không?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_645ec1ca5747.mp3"
+        },
+        {
+          "ko": "다 먹었어?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_302d0cce1425.mp3",
+          "romaja": "Da meogeosseo?",
+          "vn": "Ăn hết rồi à?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_aa76fb043274.mp3"
+        },
+        {
+          "ko": "뜨거워, 조심해.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_5661f6559b8e.mp3",
+          "romaja": "Tteugeowo, josimhae.",
+          "vn": "Nóng lắm, cẩn thận nào.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_98847f1c5fc0.mp3"
+        },
+        {
+          "ko": "천천히 먹어.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_7086e2a3be6a.mp3",
+          "romaja": "Cheoncheonhi meogeo.",
+          "vn": "Ăn từ từ thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c7499fff4aa7.mp3"
+        }
+      ]
+    },
+    {
+      "label": "Chơi & Hoạt động",
+      "items": [
+        {
+          "ko": "같이 놀자!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_883c445ac195.mp3",
+          "romaja": "Gachi nolja!",
+          "vn": "Cùng chơi thôi!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4da6f61a1920.mp3"
+        },
+        {
+          "ko": "뭐 하고 싶어?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_e2e7d5b887a6.mp3",
+          "romaja": "Mwo hago sipeo?",
+          "vn": "Con muốn làm gì?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ecb6712f2919.mp3"
+        },
+        {
+          "ko": "책 읽어줄까?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_ac3d715d2ddf.mp3",
+          "romaja": "Chaek ilgeojulkka?",
+          "vn": "Mẹ đọc sách cho con nhé?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c1461620a6fa.mp3"
+        },
+        {
+          "ko": "노래하자!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_951303a56d18.mp3",
+          "romaja": "Noraehaja!",
+          "vn": "Hát nào!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_bb622929c576.mp3"
+        },
+        {
+          "ko": "춤 춰보자!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_22788db082ac.mp3",
+          "romaja": "Chum chwoboja!",
+          "vn": "Nhảy nào!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9403c3a30516.mp3"
+        },
+        {
+          "ko": "공 가지고 놀자.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_4d6fc65772f2.mp3",
+          "romaja": "Gong gajigo nolja.",
+          "vn": "Chơi bóng thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6d1acf7c54ac.mp3"
+        },
+        {
+          "ko": "밖에 나가자.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_485ad931b135.mp3",
+          "romaja": "Bakke nagaja.",
+          "vn": "Ra ngoài chơi thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_49548b2dafba.mp3"
+        }
+      ]
+    },
+    {
+      "label": "Bộ phận cơ thể & Sức khoẻ",
+      "items": [
+        {
+          "ko": "손이 어디 있어?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_02e0efbc3027.mp3",
+          "romaja": "Soni eodi isseo?",
+          "vn": "Tay con đâu?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_aa408f4a3640.mp3"
+        },
+        {
+          "ko": "눈이 어디 있어?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_2082602381d2.mp3",
+          "romaja": "Nuni eodi isseo?",
+          "vn": "Mắt con đâu?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_fa07d874fe60.mp3"
+        },
+        {
+          "ko": "코가 어디 있어?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_10e48b028c07.mp3",
+          "romaja": "Koga eodi isseo?",
+          "vn": "Mũi con đâu?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_2ef6f0a2110e.mp3"
+        },
+        {
+          "ko": "아파? 어디 아파?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_cb758dfc7232.mp3",
+          "romaja": "Apa? Eodi apa?",
+          "vn": "Đau không? Đau ở đâu?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9ccd7c6c9151.mp3"
+        },
+        {
+          "ko": "괜찮아?",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_123eb85422c0.mp3",
+          "romaja": "Gwaenchana?",
+          "vn": "Con có sao không?",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_3e4df3b7fcbc.mp3"
+        }
+      ]
+    },
+    {
+      "label": "Trong nhà",
+      "items": [
+        {
+          "ko": "장난감 치우자.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_b04dd31764a9.mp3",
+          "romaja": "Jangnangam chiuja.",
+          "vn": "Dọn đồ chơi thôi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_054f7ab85ae0.mp3"
+        },
+        {
+          "ko": "의자에 앉아.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_96ae82ca0766.mp3",
+          "romaja": "Uijae anja.",
+          "vn": "Ngồi vào ghế đi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d4fc7a45ffb7.mp3"
+        },
+        {
+          "ko": "이리 와!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_ac77dc527362.mp3",
+          "romaja": "Iri wa!",
+          "vn": "Lại đây!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_dfbcf714abea.mp3"
+        },
+        {
+          "ko": "저기 봐!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_63adfc659a53.mp3",
+          "romaja": "Jeogi bwa!",
+          "vn": "Nhìn kia kìa!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8002effe8fe3.mp3"
+        },
+        {
+          "ko": "안 돼!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_64e6f71bfb3f.mp3",
+          "romaja": "An dwae!",
+          "vn": "Không được!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_cf08b09ba41f.mp3"
+        }
+      ]
+    },
+    {
+      "label": "Khen ngợi & Khuyến khích",
+      "items": [
+        {
+          "ko": "잘했어!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_0a741ed2e466.mp3",
+          "romaja": "Jalhaesseo!",
+          "vn": "Giỏi lắm!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_33950dc62cfd.mp3"
+        },
+        {
+          "ko": "최고야!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_ed9c92aa0c6a.mp3",
+          "romaja": "Choegoya!",
+          "vn": "Con tuyệt vời nhất!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d6e78d9798b2.mp3"
+        },
+        {
+          "ko": "다시 해봐.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_ed1d9e965129.mp3",
+          "romaja": "Dasi haebwa.",
+          "vn": "Thử lại đi.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_2a4803c37b54.mp3"
+        },
+        {
+          "ko": "괜찮아, 괜찮아.",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_b606957e6482.mp3",
+          "romaja": "Gwaenchana, gwaenchana.",
+          "vn": "Không sao, không sao.",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ada96daa72f8.mp3"
+        },
+        {
+          "ko": "우리 아기 최고!",
+          "koAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/ko_de81c79f878a.mp3",
+          "romaja": "Uri agi choego!",
+          "vn": "Con mẹ giỏi nhất!",
+          "vnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_3ea167582ab6.mp3"
+        }
+      ]
+    }
+  ]
+}

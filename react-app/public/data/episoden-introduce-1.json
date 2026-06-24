@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "title": "Câu trả lời của Tôi",
+    "sub": "Tiếng Trung + Tiếng Anh — click Copy để dùng ngay",
+    "type": "introduce"
+  },
+  "answers": [
+    {
+      "id": 1,
+      "questionZh": "你叫什么名字？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_dcdedf4368a8.mp3",
+      "questionVi": "Bạn tên gì?",
+      "answerZh": "我叫Name，英文名叫Name。你可以叫我阿铁。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_df65190ed3fc.mp3",
+      "pinyin": "Wǒ jiào Name, yīngwén míng jiào Name. Nǐ kěyǐ jiào wǒ A-Tiě.",
+      "answerEn": "My name is Name, but my English name is Name. You can call me Name.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_26a5006d191f.mp3",
+      "note": "阿铁 (A-Tiě) = cách gọi thân mật kiểu Trung Quốc cho \"Name\"",
+      "keywords": []
+    },
+    {
+      "id": 2,
+      "questionZh": "你多大了？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ff1749b232c0.mp3",
+      "questionVi": "Bạn bao nhiêu tuổi?",
+      "answerZh": "我三十九岁了。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e34ea0568f7d.mp3",
+      "pinyin": "Wǒ sānshíjiǔ suì le.",
+      "answerEn": "I'm number years old.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_622fb5fb568f.mp3",
+      "note": null,
+      "keywords": [
+        "三十九 sānshíjiǔ = number",
+        "岁 suì = tuổi"
+      ]
+    },
+    {
+      "id": 3,
+      "questionZh": "你是哪里人？你住在哪里？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6bb0ef771db9.mp3",
+      "questionVi": "Bạn người đâu? Bạn sống ở đâu?",
+      "answerZh": "我是越南人，现在住在河内。不过我的老家不在河内，我的妻子和孩子住在老家，我在河内工作。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77e85e8fb83f.mp3",
+      "pinyin": "Wǒ shì Yuènán rén, xiànzài zhù zài Hénèi. Búguò wǒ de lǎojiā bú zài Hénèi, wǒ de qīzi hé háizi zhù zài lǎojiā, wǒ zài Hénèi gōngzuò.",
+      "answerEn": "I'm Vietnamese, and I currently live in Hanoi. But my hometown isn't Hanoi — my wife and kids live in our hometown, and I work here in Hanoi.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_015122f1c467.mp3",
+      "note": null,
+      "keywords": [
+        "河内 Hénèi = Hà Nội",
+        "老家 lǎojiā = quê",
+        "妻子 qīzi = vợ"
+      ]
+    },
+    {
+      "id": 4,
+      "questionZh": "你做什么工作？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a60a2342c85b.mp3",
+      "questionVi": "Bạn làm nghề gì?",
+      "answerZh": "我是做网页开发的，就是做网站这方面的工作。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7346d991d637.mp3",
+      "pinyin": "Wǒ shì zuò wǎngyè kāifā de, jiùshì zuò wǎngzhàn zhè fāngmiàn de gōngzuò.",
+      "answerEn": "I'm a web developer — I build and maintain websites.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dab8e96fbccb.mp3",
+      "note": null,
+      "keywords": [
+        "网页开发 wǎngyè kāifā = web development",
+        "网站 wǎngzhàn = website"
+      ]
+    },
+    {
+      "id": 5,
+      "questionZh": "你有什么爱好？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_da37bd7a9dec.mp3",
+      "questionVi": "Bạn có sở thích gì?",
+      "answerZh": "我很喜欢学外语，特别是英语。现在也在学中文，所以才来这里练习。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e12fe933f5bc.mp3",
+      "pinyin": "Wǒ hěn xǐhuān xué wàiyǔ, tèbié shì yīngyǔ. Xiànzài yě zài xué zhōngwén, suǒyǐ cái lái zhèlǐ liànxí.",
+      "answerEn": "I love learning foreign languages, especially English. I'm also studying Chinese now, which is why I joined here to practice.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_789f03a0e5da.mp3",
+      "note": null,
+      "keywords": [
+        "外语 wàiyǔ = ngoại ngữ",
+        "练习 liànxí = luyện tập"
+      ]
+    },
+    {
+      "id": 6,
+      "questionZh": "你为什么学中文/英语？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d75f060efe0c.mp3",
+      "questionVi": "Tại sao bạn học tiếng Trung/tiếng Anh?",
+      "answerZh": "因为我觉得语言很有意思，而且我喜欢结交新朋友。学语言让我可以和更多人交流。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_463ad54eab9a.mp3",
+      "pinyin": "Yīnwèi wǒ juéde yǔyán hěn yǒuyìsi, érqiě wǒ xǐhuān jiējiāo xīn péngyǒu. Xué yǔyán ràng wǒ kěyǐ hé gèng duō rén jiāoliú.",
+      "answerEn": "Because I find languages really fascinating, and I enjoy meeting new people. Learning a language opens up so many more conversations.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_77036d933f9a.mp3",
+      "note": null,
+      "keywords": [
+        "有意思 yǒuyìsi = thú vị",
+        "交流 jiāoliú = giao tiếp"
+      ]
+    },
+    {
+      "id": 7,
+      "questionZh": "你结婚了吗？有孩子吗？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d8e37a67b4f3.mp3",
+      "questionVi": "Bạn kết hôn chưa? Có con chưa?",
+      "answerZh": "结婚了，也有孩子。我太太和孩子住在老家，我在河内工作，周末或者假期才回去。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b1eca6af1414.mp3",
+      "pinyin": "Jiéhūn le, yě yǒu háizi. Wǒ tàitai hé háizi zhù zài lǎojiā, wǒ zài Hénèi gōngzuò, zhōumò huòzhě jiàqī cái huíqù.",
+      "answerEn": "Yes, I'm married and I have kids. My wife and children live in our hometown, and I work in Hanoi. I go back on weekends or during holidays.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_85e55f437533.mp3",
+      "note": null,
+      "keywords": [
+        "太太 tàitai = vợ",
+        "周末 zhōumò = cuối tuần",
+        "假期 jiàqī = kỳ nghỉ"
+      ]
+    },
+    {
+      "id": 8,
+      "questionZh": "你中文/英语说得怎么样？学了多久了？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5bd525cab04e.mp3",
+      "questionVi": "Trình độ của bạn thế nào? Học bao lâu rồi?",
+      "answerZh": "我中文说得不太好，还在学习中。请多包涵！希望通过这种对话多练习。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f00da5e047e3.mp3",
+      "pinyin": "Wǒ zhōngwén shuō de bú tài hǎo, hái zài xuéxí zhōng. Qǐng duō bāohán! Xīwàng tōngguò zhè zhǒng duìhuà duō liànxí.",
+      "answerEn": "My English is still a work in progress! I've been studying for a while, but I really want to improve my speaking. Conversations like this help a lot.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f318f314265.mp3",
+      "note": null,
+      "keywords": [
+        "包涵 bāohán = thông cảm / bỏ qua lỗi",
+        "对话 duìhuà = hội thoại"
+      ]
+    },
+    {
+      "id": 9,
+      "questionZh": "河内是什么样的城市？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3cb0dd53f81f.mp3",
+      "questionVi": "Hà Nội là thành phố như thế nào?",
+      "answerZh": "河内是越南的首都，很热闹。交通有点堵，摩托车很多。但是有很多好吃的东西，比如河粉、春卷。天气有四季，冬天比较冷。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_124ef367a439.mp3",
+      "pinyin": "Hénèi shì Yuènán de shǒudū, hěn rènào. Jiāotōng yǒudiǎn dǔ, mótuōchē hěn duō. Dànshì yǒu hěn duō hào chī de dōngxi, bǐrú hépén, chūnjuǎn. Tiānqì yǒu sìjì, dōngtiān bǐjiào lěng.",
+      "answerEn": "Hanoi is the capital of Vietnam — it's very lively. Traffic can be quite heavy, with lots of motorbikes. But the food is amazing: pho, spring rolls... The weather has four seasons, and winters can get pretty cold.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb78df8663b8.mp3",
+      "note": null,
+      "keywords": [
+        "首都 shǒudū = thủ đô",
+        "热闹 rènào = sôi động",
+        "河粉 hépén = phở"
+      ]
+    },
+    {
+      "id": 10,
+      "questionZh": "你喜欢吃什么？越南有什么好吃的？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f7c60220097b.mp3",
+      "questionVi": "Bạn thích ăn gì? Việt Nam có gì ngon?",
+      "answerZh": "我很喜欢吃越南菜。最有名的是河粉，汤底很鲜美。还有烤肉饭、春卷、越南法棍面包，都很好吃。如果你来越南，一定要尝尝！",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_134a6fb061f8.mp3",
+      "pinyin": "Wǒ hěn xǐhuān chī Yuènán cài. Zuì yǒumíng de shì hépén, tāng dǐ hěn xiānměi. Hái yǒu kǎoròu fàn, chūnjuǎn, Yuènán fǎgùn miànbāo, dōu hěn hào chī. Rúguǒ nǐ lái Yuènán, yīdìng yào chángchang!",
+      "answerEn": "I love Vietnamese food. The most famous dish is pho — the broth is incredibly flavorful. There's also broken rice, spring rolls, and banh mi. If you ever visit Vietnam, you absolutely have to try them!",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a9afd01d35aa.mp3",
+      "note": null,
+      "keywords": [
+        "鲜美 xiānměi = ngon / đậm đà",
+        "烤肉饭 kǎoròu fàn = cơm tấm",
+        "法棍 fǎgùn = bánh mì"
+      ]
+    }
+  ]
+}

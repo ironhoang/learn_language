@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "💼 Văn phòng / 上班族"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你在哪个行业工作？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4b3c9e0ce310.mp3",
+      "pinyin": "Nǐ zài nǎge hángyè gōngzuò?",
+      "en": "What industry do you work in?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fa375c28c4bd.mp3",
+      "vocab": [
+        {
+          "zh": "行业",
+          "py": "hángyè",
+          "vn": "· ngành nghề",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6adafe274922.mp3",
+          "ve": "· industry / field",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_33b7ff0d5a10.mp3"
+        },
+        {
+          "zh": "金融",
+          "py": "jīnróng",
+          "vn": "· tài chính",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_60f89aac693c.mp3",
+          "ve": "· finance / banking",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2dcfc2eeb4c4.mp3"
+        },
+        {
+          "zh": "互联网",
+          "py": "hùliánwǎng",
+          "vn": "· internet/công nghệ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f27b59fafea3.mp3",
+          "ve": "· internet / tech industry",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_107aecc86c34.mp3"
+        },
+        {
+          "zh": "制造业",
+          "py": "zhìzàoyè",
+          "vn": "· sản xuất",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_163a239c6cc5.mp3",
+          "ve": "· manufacturing industry",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c692b32beda1.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们行业竞争激烈吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d22f4914f01b.mp3",
+          "en": "Is competition intense in your industry?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a7f4808dfe33.mp3"
+        },
+        {
+          "zh": "这个行业的发展前景怎么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fa1b5ea106d1.mp3",
+          "en": "What's the outlook for this industry?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e5cad035c3d1.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你主要负责什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_79164926862a.mp3",
+      "pinyin": "Nǐ zhǔyào fùzé shénme?",
+      "en": "What are your main responsibilities?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4012accfb8ed.mp3",
+      "vocab": [
+        {
+          "zh": "负责",
+          "py": "fùzé",
+          "vn": "· phụ trách",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3715303dc9d1.mp3",
+          "ve": "· be responsible for",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d9ed7920e4bf.mp3"
+        },
+        {
+          "zh": "项目",
+          "py": "xiàngmù",
+          "vn": "· dự án",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_31ecc0e65b4c.mp3",
+          "ve": "· project",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_46f86faa6bbf.mp3"
+        },
+        {
+          "zh": "客户",
+          "py": "kèhù",
+          "vn": "· khách hàng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ff0b207718d7.mp3",
+          "ve": "· client / customer",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b1d4521c521.mp3"
+        },
+        {
+          "zh": "报告",
+          "py": "bàogào",
+          "vn": "· báo cáo",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a5cd4ea1820d.mp3",
+          "ve": "· report",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e98d2f001da5.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你是一个人工作还是团队合作？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f2c489378798.mp3",
+          "en": "Do you work alone or as part of a team?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_de7ca403a9cc.mp3"
+        },
+        {
+          "zh": "你最享受工作中的哪个部分？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_43b64030c9e2.mp3",
+          "en": "What part of your work do you enjoy most?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a95a10f0a092.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "上下班通勤要多久？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b89e489892fe.mp3",
+      "pinyin": "Shàngxiàbān tōngqín yào duōjiǔ?",
+      "en": "How long is your daily commute?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_48fa03fdc911.mp3",
+      "vocab": [
+        {
+          "zh": "通勤",
+          "py": "tōngqín",
+          "vn": "· đi làm hàng ngày",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_687694a16030.mp3",
+          "ve": "· commute",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_76da50ddf581.mp3"
+        },
+        {
+          "zh": "地铁",
+          "py": "dìtiě",
+          "vn": "· tàu điện ngầm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9266202469b6.mp3",
+          "ve": "· subway / metro",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3af6358e1fba.mp3"
+        },
+        {
+          "zh": "堵车",
+          "py": "dǔchē",
+          "vn": "· kẹt xe",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_29e5a2ff0aee.mp3",
+          "ve": "· traffic jam",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c6297389fe0.mp3"
+        },
+        {
+          "zh": "骑车",
+          "py": "qí chē",
+          "vn": "· đi xe đạp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_aa23dbb18c3b.mp3",
+          "ve": "· ride a bike",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8247125ab12a.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你一般怎么上下班？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7699b71a99e3.mp3",
+          "en": "How do you usually commute?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8aa8002e8668.mp3"
+        },
+        {
+          "zh": "通勤时间你一般做什么？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c83353a77901.mp3",
+          "en": "What do you usually do during your commute?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a07477825e01.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "你们公司氛围怎么样？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3d5c63ea405a.mp3",
+      "pinyin": "Nǐmen gōngsī fēnwéi zěnmeyàng?",
+      "en": "How is the atmosphere at your company?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dc6703d8ca3f.mp3",
+      "vocab": [
+        {
+          "zh": "氛围",
+          "py": "fēnwéi",
+          "vn": "· không khí/bầu không khí",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d3d71d82d111.mp3",
+          "ve": "· atmosphere / vibe",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4bcbb9e9a053.mp3"
+        },
+        {
+          "zh": "同事",
+          "py": "tóngshì",
+          "vn": "· đồng nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3a1ff305f35c.mp3",
+          "ve": "· colleague",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2799d44695d2.mp3"
+        },
+        {
+          "zh": "上司",
+          "py": "shàngsī",
+          "vn": "· cấp trên",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3db8bf86fc86.mp3",
+          "ve": "· supervisor / boss",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b5a1e523b43c.mp3"
+        },
+        {
+          "zh": "企业文化",
+          "py": "qǐyè wénhuà",
+          "vn": "· văn hóa doanh nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_892757e21598.mp3",
+          "ve": "· company culture",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed7e056bb08d.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你和同事关系好吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d9c19d97e2be.mp3",
+          "en": "Do you get along well with your colleagues?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_11b02daaff1c.mp3"
+        },
+        {
+          "zh": "公司会组织团建活动吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b2b99e0bcd7d.mp3",
+          "en": "Does the company organize team-building activities?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8b31465b4006.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "经常加班吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3a32fce27ea2.mp3",
+      "pinyin": "Jīngcháng jiābān ma?",
+      "en": "Do you often work overtime?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_29931a615ffd.mp3",
+      "vocab": [
+        {
+          "zh": "加班",
+          "py": "jiābān",
+          "vn": "· làm thêm giờ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b64a21731238.mp3",
+          "ve": "· overtime work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4bf9107372f.mp3"
+        },
+        {
+          "zh": "强制加班",
+          "py": "qiángzhì jiābān",
+          "vn": "· bắt buộc làm thêm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_695678850616.mp3",
+          "ve": "· mandatory overtime",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f96f6fbfbdc5.mp3"
+        },
+        {
+          "zh": "自愿",
+          "py": "zìyuàn",
+          "vn": "· tự nguyện",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_495893508aee.mp3",
+          "ve": "· voluntary",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e7c480e02eb.mp3"
+        },
+        {
+          "zh": "弹性",
+          "py": "tánxìng",
+          "vn": "· linh hoạt",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_091885db07e4.mp3",
+          "ve": "· flexible",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_03fb2efb7078.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "加班有额外报酬吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8c6014d805a3.mp3",
+          "en": "Do you get paid extra for overtime?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_92c43df3e688.mp3"
+        },
+        {
+          "zh": "你觉得工作和生活平衡重要吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_384e1821467c.mp3",
+          "en": "Do you think work-life balance is important?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e14895d8807f.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "有想过跳槽吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_431b674b8579.mp3",
+      "pinyin": "Yǒu xiǎngguò tiàocáo ma?",
+      "en": "Have you thought about changing jobs?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06122964c823.mp3",
+      "vocab": [
+        {
+          "zh": "跳槽",
+          "py": "tiàocáo",
+          "vn": "· nhảy việc",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4d4cfe7407b8.mp3",
+          "ve": "· job-hop / switch jobs",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b460af10997c.mp3"
+        },
+        {
+          "zh": "升职",
+          "py": "shēngzhí",
+          "vn": "· thăng chức",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_076381f2346f.mp3",
+          "ve": "· get promoted",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_470932f5cf8a.mp3"
+        },
+        {
+          "zh": "涨薪",
+          "py": "zhǎng xīn",
+          "vn": "· tăng lương",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_be0c08c809a9.mp3",
+          "ve": "· salary raise",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_799b5aa85045.mp3"
+        },
+        {
+          "zh": "发展空间",
+          "py": "fāzhǎn kōngjiān",
+          "vn": "· không gian phát triển",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35a790e6f89c.mp3",
+          "ve": "· room for growth",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a7ea0f87f1bc.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得你现在的公司有发展空间吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d2efb82dba20.mp3",
+          "en": "Do you think there's room to grow at your current company?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8b8885ec7f2a.mp3"
+        },
+        {
+          "zh": "跳槽对你来说容易吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3c6c16f3c99d.mp3",
+          "en": "Is it easy for you to switch jobs?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_010f20d61841.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "以后有想自己创业的打算吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_443cfa3f955e.mp3",
+      "pinyin": "Yǐhòu yǒu xiǎng zìjǐ chuàngyè de dǎsuàn ma?",
+      "en": "Do you plan to start your own business in the future?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d743455cd58c.mp3",
+      "vocab": [
+        {
+          "zh": "创业",
+          "py": "chuàngyè",
+          "vn": "· khởi nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a57fd81fa09d.mp3",
+          "ve": "· start a business",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_929ea6bfda5c.mp3"
+        },
+        {
+          "zh": "打工",
+          "py": "dǎgōng",
+          "vn": "· làm thuê",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77ac234a2e93.mp3",
+          "ve": "· work for hire",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71fd4ec35953.mp3"
+        },
+        {
+          "zh": "稳定",
+          "py": "wěndìng",
+          "vn": "· ổn định",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4330746271c4.mp3",
+          "ve": "· stable",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f40faf6384fc.mp3"
+        },
+        {
+          "zh": "冒险",
+          "py": "màoxiǎn",
+          "vn": "· liều lĩnh/mạo hiểm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_75ccebcf886a.mp3",
+          "ve": "· take risks",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5eb822f4d290.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得自己更适合打工还是创业？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e2c57e96ac77.mp3",
+          "en": "Do you think you're better suited to work for others or start your own business?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_39409f977707.mp3"
+        },
+        {
+          "zh": "创业的话，你想做什么行业？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f8ef751611cd.mp3",
+          "en": "If you started a business, what industry would you go into?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c465aa0d7c96.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "你下班后一般做什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_48889a9703f7.mp3",
+      "pinyin": "Nǐ xiàbān hòu yībān zuò shénme?",
+      "en": "What do you usually do after work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab9ec119c44a.mp3",
+      "vocab": [
+        {
+          "zh": "健身",
+          "py": "jiànshēn",
+          "vn": "· tập gym",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c24d6f13a44a.mp3",
+          "ve": "· work out / gym",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6235c374d5cc.mp3"
+        },
+        {
+          "zh": "刷手机",
+          "py": "shuā shǒujī",
+          "vn": "· lướt điện thoại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_36d29e2e3bdf.mp3",
+          "ve": "· scroll on phone",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_42e52b9611cd.mp3"
+        },
+        {
+          "zh": "约朋友",
+          "py": "yuē péngyou",
+          "vn": "· hẹn bạn bè",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_02f48ff9f763.mp3",
+          "ve": "· meet friends",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_19b4f1fcad8f.mp3"
+        },
+        {
+          "zh": "做饭",
+          "py": "zuòfàn",
+          "vn": "· nấu ăn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e69a3d710606.mp3",
+          "ve": "· cook",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e3e90fd6d2a7.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有什么兴趣爱好？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_90182583ffa5.mp3",
+          "en": "What hobbies do you have?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_61d609a33687.mp3"
+        },
+        {
+          "zh": "你觉得你的业余生活丰富吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_eece4ce14e03.mp3",
+          "en": "Do you think your personal life is fulfilling?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_033f31dc5561.mp3"
+        }
+      ]
+    }
+  ]
+}

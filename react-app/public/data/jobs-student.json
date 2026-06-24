@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "📚 Sinh viên / 学生"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你在哪里上学？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_240209472a89.mp3",
+      "pinyin": "Nǐ zài nǎlǐ shàngxué?",
+      "en": "Where do you study?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5704e4449828.mp3",
+      "vocab": [
+        {
+          "zh": "大学",
+          "py": "dàxué",
+          "vn": "· đại học",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_572a6791c397.mp3",
+          "ve": "· university",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_10238d611489.mp3"
+        },
+        {
+          "zh": "高中",
+          "py": "gāozhōng",
+          "vn": "· trung học phổ thông",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fefa7c848354.mp3",
+          "ve": "· high school",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_46ae7abb16cb.mp3"
+        },
+        {
+          "zh": "985/211",
+          "py": "jiǔbāwǔ / èryāoyī",
+          "vn": "· ĐH hàng đầu TQ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0e1775ff46d1.mp3",
+          "ve": "· elite universities",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_954e28f565f7.mp3"
+        },
+        {
+          "zh": "本科",
+          "py": "běnkē",
+          "vn": "· đại học (cử nhân)",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_40b14fc519eb.mp3",
+          "ve": "· undergraduate degree",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_81028e340bbd.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们学校有多少学生？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6c54f749f779.mp3",
+          "en": "How many students does your school have?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_539ff6343b8c.mp3"
+        },
+        {
+          "zh": "你喜欢你的学校吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b9d9316fbcd2.mp3",
+          "en": "Do you like your school?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2e72eb124cd3.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你学的是什么专业？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b1ae4274d963.mp3",
+      "pinyin": "Nǐ xué de shì shénme zhuānyè?",
+      "en": "What is your major?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2211eb313727.mp3",
+      "vocab": [
+        {
+          "zh": "专业",
+          "py": "zhuānyè",
+          "vn": "· chuyên ngành",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a7ad35acaea5.mp3",
+          "ve": "· major / field of study",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5f8f381b543d.mp3"
+        },
+        {
+          "zh": "理工科",
+          "py": "lǐgōngkē",
+          "vn": "· khối STEM",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e7ff38e973dd.mp3",
+          "ve": "· STEM fields",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4f1f9b4e0631.mp3"
+        },
+        {
+          "zh": "文科",
+          "py": "wénkē",
+          "vn": "· khoa học xã hội",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_412e99ba26bc.mp3",
+          "ve": "· humanities / social sciences",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7dc01565f30f.mp3"
+        },
+        {
+          "zh": "医学",
+          "py": "yīxué",
+          "vn": "· y học",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5eaa89f42989.mp3",
+          "ve": "· medicine / medical studies",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb2772d64723.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "这个专业就业前景怎么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0b2c4637f405.mp3",
+          "en": "What are the job prospects for that major?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_02642c9d8f3a.mp3"
+        },
+        {
+          "zh": "是你自己选的专业还是父母帮你选的？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c0e5bd8a3b97.mp3",
+          "en": "Did you choose your major yourself or did your parents help?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6f9a3ed0b64b.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "你是几年级的学生？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1509214112b1.mp3",
+      "pinyin": "Nǐ shì jǐ niánjí de xuésheng?",
+      "en": "What year are you in?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_977fa946e3c9.mp3",
+      "vocab": [
+        {
+          "zh": "大一",
+          "py": "dà yī",
+          "vn": "· năm nhất ĐH",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fc20adc747d3.mp3",
+          "ve": "· freshman year",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_af9964a26a9f.mp3"
+        },
+        {
+          "zh": "大四",
+          "py": "dà sì",
+          "vn": "· năm tư ĐH",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d186b2bc76ea.mp3",
+          "ve": "· senior year",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_89d59f5f2ab6.mp3"
+        },
+        {
+          "zh": "研究生",
+          "py": "yánjiūshēng",
+          "vn": "· học viên cao học",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_951b26a4a4b4.mp3",
+          "ve": "· graduate student",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_63cbefa5a604.mp3"
+        },
+        {
+          "zh": "博士",
+          "py": "bóshì",
+          "vn": "· tiến sĩ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7d27be009310.mp3",
+          "ve": "· PhD / doctorate",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23ae0b46d426.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "毕业还有多久？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2ceaad076d9a.mp3",
+          "en": "How long until you graduate?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c12a3e3bf200.mp3"
+        },
+        {
+          "zh": "你想继续读研究生吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2bb9f39d07ca.mp3",
+          "en": "Do you want to go to graduate school?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_be5e2940d665.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "学习最难的科目是哪个？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_efa20b02cccd.mp3",
+      "pinyin": "Xuéxí zuì nán de kēmù shì nǎge?",
+      "en": "Which subject is the hardest for you?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_91447d4d63d0.mp3",
+      "vocab": [
+        {
+          "zh": "难",
+          "py": "nán",
+          "vn": "· khó",
+          "zhAudio": null,
+          "ve": "· difficult",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1a8542a8c583.mp3"
+        },
+        {
+          "zh": "挂科",
+          "py": "guàkē",
+          "vn": "· rớt môn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6c9c548b5e53.mp3",
+          "ve": "· fail a course",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ae9e9869940.mp3"
+        },
+        {
+          "zh": "补考",
+          "py": "bǔkǎo",
+          "vn": "· thi lại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_631b9e9e1a4f.mp3",
+          "ve": "· retake an exam",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e57a3802282.mp3"
+        },
+        {
+          "zh": "及格",
+          "py": "jígé",
+          "vn": "· đạt điểm chuẩn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0b38f7f84987.mp3",
+          "ve": "· pass (an exam)",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_02931b3b611f.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有挂过科？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_353069f5f6bb.mp3",
+          "en": "Have you ever failed a subject?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_100fac61c416.mp3"
+        },
+        {
+          "zh": "你一般怎么复习？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0392eef02d38.mp3",
+          "en": "How do you usually study for exams?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ff1295bb7669.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "课余时间你喜欢做什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1092f7c0c502.mp3",
+      "pinyin": "Kèyú shíjiān nǐ xǐhuān zuò shénme?",
+      "en": "What do you like to do in your free time?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_76787dfc560c.mp3",
+      "vocab": [
+        {
+          "zh": "课余",
+          "py": "kèyú",
+          "vn": "· ngoài giờ học",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ba52016dc896.mp3",
+          "ve": "· after class / extracurricular",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a7574d48a63a.mp3"
+        },
+        {
+          "zh": "社团",
+          "py": "shètuán",
+          "vn": "· câu lạc bộ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5e71ef4309f9.mp3",
+          "ve": "· student club / society",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dae1ba2768a6.mp3"
+        },
+        {
+          "zh": "兼职",
+          "py": "jiānzhí",
+          "vn": "· làm thêm bán thời gian",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7c4f46962c52.mp3",
+          "ve": "· part-time work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f85f532e02e9.mp3"
+        },
+        {
+          "zh": "打游戏",
+          "py": "dǎ yóuxì",
+          "vn": "· chơi game",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_54b6702aa861.mp3",
+          "ve": "· play video games",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1d1d93f33c8.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有在学校外面兼职？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_db599460a40a.mp3",
+          "en": "Do you have a part-time job outside of school?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2083677a06ed.mp3"
+        },
+        {
+          "zh": "你参加了什么社团活动？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_dd56341d965f.mp3",
+          "en": "What clubs or activities are you in?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_903029782149.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "毕业以后想做什么工作？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7dd315d032e5.mp3",
+      "pinyin": "Bìyè yǐhòu xiǎng zuò shénme gōngzuò?",
+      "en": "What job do you want after graduation?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1a6560b13ecc.mp3",
+      "vocab": [
+        {
+          "zh": "毕业",
+          "py": "bìyè",
+          "vn": "· tốt nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b285411eaa64.mp3",
+          "ve": "· graduate",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d86132c5a02a.mp3"
+        },
+        {
+          "zh": "就业",
+          "py": "jiùyè",
+          "vn": "· tìm việc làm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_34a965f2f96e.mp3",
+          "ve": "· find employment",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1e34da381f87.mp3"
+        },
+        {
+          "zh": "考公务员",
+          "py": "kǎo gōngwùyuán",
+          "vn": "· thi công chức",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77737a190e4f.mp3",
+          "ve": "· civil service exam",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9248982a7ddb.mp3"
+        },
+        {
+          "zh": "创业",
+          "py": "chuàngyè",
+          "vn": "· khởi nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a57fd81fa09d.mp3",
+          "ve": "· start a business",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_929ea6bfda5c.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有想出国发展？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5fef265ddf20.mp3",
+          "en": "Have you thought about going abroad for work?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aed6a8b4473e.mp3"
+        },
+        {
+          "zh": "你打算留在大城市还是回老家？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c5af03bdb562.mp3",
+          "en": "Do you plan to stay in a big city or go back home?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef82f08f4a47.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "你住校还是在外面租房？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bec521b95623.mp3",
+      "pinyin": "Nǐ zhù xiào háishi zài wàimiàn zū fáng?",
+      "en": "Do you live on campus or rent outside?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_acb1ba612701.mp3",
+      "vocab": [
+        {
+          "zh": "宿舍",
+          "py": "sùshè",
+          "vn": "· ký túc xá",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ee38f508be81.mp3",
+          "ve": "· dormitory",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2e3c815e4a35.mp3"
+        },
+        {
+          "zh": "租房",
+          "py": "zū fáng",
+          "vn": "· thuê nhà",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a61d6176c2b9.mp3",
+          "ve": "· rent a place",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2d22c57b091c.mp3"
+        },
+        {
+          "zh": "室友",
+          "py": "shìyǒu",
+          "vn": "· bạn cùng phòng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_348011e10a25.mp3",
+          "ve": "· roommate",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f5d9924e3f9e.mp3"
+        },
+        {
+          "zh": "独居",
+          "py": "dújū",
+          "vn": "· sống một mình",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3a5b6f63eab5.mp3",
+          "ve": "· live alone",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_29697a7e57ed.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你跟室友处得怎么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3a273fca3cea.mp3",
+          "en": "How do you get along with your roommates?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4037a2d21efd.mp3"
+        },
+        {
+          "zh": "自己一个人住贵不贵？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1baf33e73bec.mp3",
+          "en": "Is living alone expensive?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_214c2ace4254.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "你觉得读书压力大吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a9d9c9712e76.mp3",
+      "pinyin": "Nǐ juéde dúshū yālì dà ma?",
+      "en": "Do you feel a lot of study pressure?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1b0af3d0ced5.mp3",
+      "vocab": [
+        {
+          "zh": "压力",
+          "py": "yālì",
+          "vn": "· áp lực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f16b17608555.mp3",
+          "ve": "· pressure / stress",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3e3abd841a45.mp3"
+        },
+        {
+          "zh": "卷",
+          "py": "juǎn",
+          "vn": "· cuộc đua/cạnh tranh mạnh",
+          "zhAudio": null,
+          "ve": "· intense competition",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_43aad36b3c5d.mp3"
+        },
+        {
+          "zh": "内卷",
+          "py": "nèijuǎn",
+          "vn": "· cạnh tranh nội bộ khốc liệt",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5420fd5fccf6.mp3",
+          "ve": "· rat race / involution",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a0c56e002b0d.mp3"
+        },
+        {
+          "zh": "躺平",
+          "py": "tǎng píng",
+          "vn": "· buông xuôi/không cố gắng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e3144f89801b.mp3",
+          "ve": "· lie flat / give up striving",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a11080a5993f.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得现在的大学生内卷严重吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1ab6e75dee2b.mp3",
+          "en": "Do you think competition among students is very intense now?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a5b463ef862.mp3"
+        },
+        {
+          "zh": "你怎么调节自己的状态？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_81485136d988.mp3",
+          "en": "How do you manage your mental state?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6f363d9157f5.mp3"
+        }
+      ]
+    }
+  ]
+}

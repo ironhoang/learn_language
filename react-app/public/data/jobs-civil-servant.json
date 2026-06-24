@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "🏛️ Công chức / 公务员"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你在哪个部门工作？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_501b076ba6f3.mp3",
+      "pinyin": "Nǐ zài nǎge bùmén gōngzuò?",
+      "en": "What department do you work in?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f8c1e3fa519.mp3",
+      "vocab": [
+        {
+          "zh": "部门",
+          "py": "bùmén",
+          "vn": "· phòng ban/bộ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1e1459eeed6d.mp3",
+          "ve": "· department",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_459d9fca17e3.mp3"
+        },
+        {
+          "zh": "政府机关",
+          "py": "zhèngfǔ jīguān",
+          "vn": "· cơ quan nhà nước",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a25fb6fa6526.mp3",
+          "ve": "· government agency",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_61e69d72b7f3.mp3"
+        },
+        {
+          "zh": "税务局",
+          "py": "shuìwùjú",
+          "vn": "· cục thuế",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4063cd978a0b.mp3",
+          "ve": "· tax bureau",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9b8d1e3d53a4.mp3"
+        },
+        {
+          "zh": "街道办",
+          "py": "jiēdào bàn",
+          "vn": "· ủy ban phường",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_595b38feff9c.mp3",
+          "ve": "· neighborhood committee",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_43bea38a1eb7.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们部门主要负责什么工作？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bab64c3a12be.mp3",
+          "en": "What does your department mainly handle?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_234c09ab44ad.mp3"
+        },
+        {
+          "zh": "你在那里工作多久了？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f300ccfeba41.mp3",
+          "en": "How long have you worked there?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2c912f2cb260.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "考公务员考试难吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_564ffb8ab0a7.mp3",
+      "pinyin": "Kǎo gōngwùyuán kǎoshì nán ma?",
+      "en": "Is the civil service exam difficult?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_12901e224d44.mp3",
+      "vocab": [
+        {
+          "zh": "考公",
+          "py": "kǎogōng",
+          "vn": "· thi công chức (thông tục)",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4aac7d539a5a.mp3",
+          "ve": "· civil service exam prep",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_39e25a2b9353.mp3"
+        },
+        {
+          "zh": "笔试",
+          "py": "bǐshì",
+          "vn": "· thi viết",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_88646656dabd.mp3",
+          "ve": "· written exam",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4164b99a8eea.mp3"
+        },
+        {
+          "zh": "面试",
+          "py": "miànshì",
+          "vn": "· phỏng vấn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1573c74e227f.mp3",
+          "ve": "· interview",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_04980744f74f.mp3"
+        },
+        {
+          "zh": "竞争比",
+          "py": "jìngzhēng bǐ",
+          "vn": "· tỉ lệ cạnh tranh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0c2cee0cd095.mp3",
+          "ve": "· competition ratio",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7ae53abd88f7.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你考了几次才考上的？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0d577667f9ca.mp3",
+          "en": "How many times did you take the exam before passing?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d7bff0b07c65.mp3"
+        },
+        {
+          "zh": "你是怎么备考的？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a045c05ee8d7.mp3",
+          "en": "How did you prepare for the exam?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_97b3920cd884.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "你一般什么时候上下班？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c34f3d43b0eb.mp3",
+      "pinyin": "Nǐ yībān shénme shíhòu shàng xiàbān?",
+      "en": "What are your usual working hours?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_586ddd830b59.mp3",
+      "vocab": [
+        {
+          "zh": "朝九晚五",
+          "py": "zhāo jiǔ wǎn wǔ",
+          "vn": "· 9 giờ sáng đến 5 giờ chiều",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4e31374a8e2d.mp3",
+          "ve": "· nine to five",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_17e1b7c05479.mp3"
+        },
+        {
+          "zh": "午休",
+          "py": "wǔxiū",
+          "vn": "· nghỉ trưa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_00e281189f6b.mp3",
+          "ve": "· lunch break",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f03349bd03a.mp3"
+        },
+        {
+          "zh": "弹性上班",
+          "py": "tánxìng shàngbān",
+          "vn": "· giờ giấc linh hoạt",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_eb8370cf7364.mp3",
+          "ve": "· flexible hours",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_95364dcfdeae.mp3"
+        },
+        {
+          "zh": "双休",
+          "py": "shuāng xiū",
+          "vn": "· nghỉ 2 ngày cuối tuần",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d3209e714a64.mp3",
+          "ve": "· two-day weekend",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c043cdc0654c.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们有午休吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77cc0c5f43be.mp3",
+          "en": "Do you get a lunch break?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d196d388efb8.mp3"
+        },
+        {
+          "zh": "公务员需要经常加班吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_04b78a2a45d5.mp3",
+          "en": "Do civil servants often need to work overtime?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eedc405fa5b5.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "工作中经常要处理什么事？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c43d0db87ef7.mp3",
+      "pinyin": "Gōngzuò zhōng jīngcháng yào chǔlǐ shénme shì?",
+      "en": "What kinds of things do you handle at work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a90756a14036.mp3",
+      "vocab": [
+        {
+          "zh": "审批",
+          "py": "shěnpī",
+          "vn": "· thẩm duyệt/phê duyệt",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0273ba5c9598.mp3",
+          "ve": "· approve / review documents",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0b1d8b05bc06.mp3"
+        },
+        {
+          "zh": "材料",
+          "py": "cáiliào",
+          "vn": "· hồ sơ/tài liệu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ebc9d9e6f238.mp3",
+          "ve": "· documents / materials",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_62a8f351cd0d.mp3"
+        },
+        {
+          "zh": "接待群众",
+          "py": "jiēdài qúnzhòng",
+          "vn": "· tiếp dân",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_28bbf21c0d17.mp3",
+          "ve": "· receive the public",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_637ce20bfac3.mp3"
+        },
+        {
+          "zh": "开会",
+          "py": "kāihuì",
+          "vn": "· họp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_43f7edae16a2.mp3",
+          "ve": "· have a meeting",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8380282e5e48.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有接触到特别难处理的事？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e838c99cc113.mp3",
+          "en": "Have you dealt with anything particularly difficult?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9ed5621f2226.mp3"
+        },
+        {
+          "zh": "工作中需要经常和群众打交道吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d460fadefd18.mp3",
+          "en": "Do you often interact with the public at work?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_673e13bc30b9.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "你觉得当公务员最大的优点是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6e53c461c57d.mp3",
+      "pinyin": "Nǐ juéde dāng gōngwùyuán zuìdà de yōudiǎn shì shénme?",
+      "en": "What do you think is the biggest advantage of being a civil servant?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b2bcca2e6c4.mp3",
+      "vocab": [
+        {
+          "zh": "稳定",
+          "py": "wěndìng",
+          "vn": "· ổn định",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4330746271c4.mp3",
+          "ve": "· stable",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f40faf6384fc.mp3"
+        },
+        {
+          "zh": "福利",
+          "py": "fúlì",
+          "vn": "· phúc lợi",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_86b2999e8fb8.mp3",
+          "ve": "· benefits / welfare",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6109ebea2b36.mp3"
+        },
+        {
+          "zh": "铁饭碗",
+          "py": "tiě fànwǎn",
+          "vn": "· bát cơm sắt = việc làm ổn định",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_982f4b2e488a.mp3",
+          "ve": "· iron rice bowl (job security)",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3d0616c25234.mp3"
+        },
+        {
+          "zh": "体制内",
+          "py": "tǐzhì nèi",
+          "vn": "· trong biên chế nhà nước",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_92597e0c0898.mp3",
+          "ve": "· within the system",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7c94f05bf2d2.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得稳定重要还是高薪重要？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8e2525196d33.mp3",
+          "en": "What do you think matters more — stability or high pay?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b6b7441ea668.mp3"
+        },
+        {
+          "zh": "你有没有想过去私企工作？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e31c54571d8f.mp3",
+          "en": "Have you ever thought about working in a private company?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_26c1bdbc5629.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "有没有感觉工作比较单调？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_eb3093d450b5.mp3",
+      "pinyin": "Yǒu méiyǒu gǎnjué gōngzuò bǐjiào dāndìao?",
+      "en": "Do you ever feel the work is monotonous?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_634f00609c4b.mp3",
+      "vocab": [
+        {
+          "zh": "单调",
+          "py": "dāndìao",
+          "vn": "· đơn điệu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_69cfab85ce75.mp3",
+          "ve": "· monotonous / boring",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a306f51643ff.mp3"
+        },
+        {
+          "zh": "程序化",
+          "py": "chéngxùhuà",
+          "vn": "· máy móc/theo quy trình",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8adaec67f64c.mp3",
+          "ve": "· routine / by the book",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_15e495910f58.mp3"
+        },
+        {
+          "zh": "挑战性",
+          "py": "tiǎozhànxìng",
+          "vn": "· tính thách thức",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1f0dffed3611.mp3",
+          "ve": "· challenging",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8452ba441713.mp3"
+        },
+        {
+          "zh": "晋升",
+          "py": "jìnshēng",
+          "vn": "· thăng tiến",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e5cab0a89361.mp3",
+          "ve": "· career advancement / promotion",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_19f550f797e2.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你怎么保持对工作的热情？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_12d59e34923d.mp3",
+          "en": "How do you keep yourself motivated at work?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_27307eb35fbd.mp3"
+        },
+        {
+          "zh": "公务员晋升难吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_57afeff2aaeb.mp3",
+          "en": "Is promotion difficult for civil servants?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1c3141546da2.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "国家有没有给公务员提供什么福利？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_48f301b9b303.mp3",
+      "pinyin": "Guójiā yǒu méiyǒu gěi gōngwùyuán tígōng shénme fúlì?",
+      "en": "What benefits does the government provide to civil servants?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_51c3c7903a51.mp3",
+      "vocab": [
+        {
+          "zh": "养老金",
+          "py": "yǎnglǎo jīn",
+          "vn": "· lương hưu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e316f5a91e63.mp3",
+          "ve": "· pension",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a37c4e010f74.mp3"
+        },
+        {
+          "zh": "医疗保险",
+          "py": "yīliáo bǎoxiǎn",
+          "vn": "· bảo hiểm y tế",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_82d2d4b72c10.mp3",
+          "ve": "· health insurance",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f7fff22193ad.mp3"
+        },
+        {
+          "zh": "住房公积金",
+          "py": "zhùfáng gōngjījīn",
+          "vn": "· quỹ nhà ở",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cf1102f2a558.mp3",
+          "ve": "· housing provident fund",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_35820ee699a4.mp3"
+        },
+        {
+          "zh": "年假",
+          "py": "niánjià",
+          "vn": "· nghỉ phép năm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_69a9289632b3.mp3",
+          "ve": "· annual leave",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_028be77a19dd.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得这些福利是你选择这份工作的原因吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_73ebb7eac6e1.mp3",
+          "en": "Were these benefits a reason you chose this job?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac85eccd903e.mp3"
+        },
+        {
+          "zh": "公务员的福利比私企好很多吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_63a0ce9282b3.mp3",
+          "en": "Are civil servant benefits much better than private sector ones?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ca7ad41f5dde.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "有没有可能以后换别的工作？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_07c99e9481d4.mp3",
+      "pinyin": "Yǒu méiyǒu kěnéng yǐhòu huàn bié de gōngzuò?",
+      "en": "Is there a chance you'd change careers in the future?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_54dc0176dcd6.mp3",
+      "vocab": [
+        {
+          "zh": "换工作",
+          "py": "huàn gōngzuò",
+          "vn": "· đổi việc",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a1d1f42d95e1.mp3",
+          "ve": "· change jobs",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eacc73c0c753.mp3"
+        },
+        {
+          "zh": "辞职",
+          "py": "cízhí",
+          "vn": "· xin thôi việc",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6fb4cfa18e60.mp3",
+          "ve": "· resign",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f2b4898ef404.mp3"
+        },
+        {
+          "zh": "可能性",
+          "py": "kěnéngxìng",
+          "vn": "· khả năng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_70891395fa08.mp3",
+          "ve": "· possibility",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d32594b5beb1.mp3"
+        },
+        {
+          "zh": "体制外",
+          "py": "tǐzhì wài",
+          "vn": "· ngoài biên chế",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_17b54342d15d.mp3",
+          "ve": "· outside the system",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8a6fea039144.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "如果要辞职，你最不舍得的是什么？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1433d0a30d03.mp3",
+          "en": "If you were to quit, what would you miss the most?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8b2a8aade5e8.mp3"
+        },
+        {
+          "zh": "你有没有副业或者其他收入来源？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fb79b86b4620.mp3",
+          "en": "Do you have any side income or other sources of income?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_26b1f9c2761f.mp3"
+        }
+      ]
+    }
+  ]
+}

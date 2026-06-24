@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "🏢 Chủ doanh nghiệp / 老板"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你做的是什么行业？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9d589146e3bb.mp3",
+      "pinyin": "Nǐ zuò de shì shénme hángyè?",
+      "en": "What industry are you in?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_704a1b41be85.mp3",
+      "vocab": [
+        {
+          "zh": "行业",
+          "py": "hángyè",
+          "vn": "· ngành nghề",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6adafe274922.mp3",
+          "ve": "· industry / field",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_33b7ff0d5a10.mp3"
+        },
+        {
+          "zh": "贸易",
+          "py": "màoyì",
+          "vn": "· thương mại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f427d663a1cf.mp3",
+          "ve": "· trade / commerce",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_21f40bff39e9.mp3"
+        },
+        {
+          "zh": "零售",
+          "py": "língshòu",
+          "vn": "· bán lẻ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0c5bd351cca5.mp3",
+          "ve": "· retail",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3338b9361100.mp3"
+        },
+        {
+          "zh": "服务业",
+          "py": "fúwùyè",
+          "vn": "· ngành dịch vụ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_044646a4e5b0.mp3",
+          "ve": "· service industry",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_718de8409131.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你是专注国内市场还是也做外贸？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_142d17a1df9f.mp3",
+          "en": "Do you focus on the domestic market or also do international trade?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ddb5e0733fb4.mp3"
+        },
+        {
+          "zh": "这个行业现在行情怎么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_557c4d965206.mp3",
+          "en": "How is the market doing in this industry now?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5ee71a41fccc.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你的公司大概有多少员工？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e4e420aa8d66.mp3",
+      "pinyin": "Nǐ de gōngsī dàgài yǒu duōshǎo yuángōng?",
+      "en": "How many employees does your company have?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06d3c311aefc.mp3",
+      "vocab": [
+        {
+          "zh": "员工",
+          "py": "yuángōng",
+          "vn": "· nhân viên",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2ed39222055f.mp3",
+          "ve": "· employee / staff",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2a33e254726.mp3"
+        },
+        {
+          "zh": "规模",
+          "py": "guīmó",
+          "vn": "· quy mô",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b00eaa78a38a.mp3",
+          "ve": "· scale / size",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4db1aa74e75.mp3"
+        },
+        {
+          "zh": "小微企业",
+          "py": "xiǎowēi qǐyè",
+          "vn": "· doanh nghiệp nhỏ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5dde9b0b61ea.mp3",
+          "ve": "· small business",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a885cec099a.mp3"
+        },
+        {
+          "zh": "团队",
+          "py": "tuánduì",
+          "vn": "· đội nhóm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4675fbaf3ec5.mp3",
+          "ve": "· team",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f894427cc1c5.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你是自己一个人创业还是有合伙人？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_72d01f17892a.mp3",
+          "en": "Did you start the business alone or with partners?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4d99b47a07ab.mp3"
+        },
+        {
+          "zh": "管理员工最难的是什么？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f1e1410b4666.mp3",
+          "en": "What's the hardest part of managing employees?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eea86fcf5d90.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "你是怎么开始创业的？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2a2b898658d6.mp3",
+      "pinyin": "Nǐ shì zěnme kāishǐ chuàngyè de?",
+      "en": "How did you start your business?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_47ffea31bfaa.mp3",
+      "vocab": [
+        {
+          "zh": "创业",
+          "py": "chuàngyè",
+          "vn": "· khởi nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a57fd81fa09d.mp3",
+          "ve": "· start a business",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_929ea6bfda5c.mp3"
+        },
+        {
+          "zh": "资金",
+          "py": "zījīn",
+          "vn": "· vốn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e4738b301548.mp3",
+          "ve": "· capital / funds",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4976bc911386.mp3"
+        },
+        {
+          "zh": "机会",
+          "py": "jīhuì",
+          "vn": "· cơ hội",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_31c91e1f5b1f.mp3",
+          "ve": "· opportunity",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8aaab3374041.mp3"
+        },
+        {
+          "zh": "辞职",
+          "py": "cízhí",
+          "vn": "· nghỉ việc",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6fb4cfa18e60.mp3",
+          "ve": "· resign",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f2b4898ef404.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你是辞职出来创业的吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d208d298ea6f.mp3",
+          "en": "Did you quit your job to start the business?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b6f25f8784bd.mp3"
+        },
+        {
+          "zh": "刚开始的时候最难的是什么？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_116dfdb36ea2.mp3",
+          "en": "What was the hardest part when you first started?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0aa649b139b1.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "创业最难的地方是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bdc3aef89903.mp3",
+      "pinyin": "Chuàngyè zuì nán de dìfāng shì shénme?",
+      "en": "What's the hardest part of running a business?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c218ef11935.mp3",
+      "vocab": [
+        {
+          "zh": "现金流",
+          "py": "xiànjīn liú",
+          "vn": "· dòng tiền",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8f51502044a4.mp3",
+          "ve": "· cash flow",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4de17c943b23.mp3"
+        },
+        {
+          "zh": "竞争",
+          "py": "jìngzhēng",
+          "vn": "· cạnh tranh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b8c3fb16d366.mp3",
+          "ve": "· competition",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3190dbf13bea.mp3"
+        },
+        {
+          "zh": "招聘",
+          "py": "zhāopìn",
+          "vn": "· tuyển dụng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1380d399678c.mp3",
+          "ve": "· recruit / hire",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b34c97150b8e.mp3"
+        },
+        {
+          "zh": "留住",
+          "py": "liúzhù",
+          "vn": "· giữ lại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_80e7a41bb592.mp3",
+          "ve": "· retain / keep",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5619b6308b64.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有想过放弃的时候？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35ed8e1d6620.mp3",
+          "en": "Have there been times when you thought about giving up?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed794ec901b2.mp3"
+        },
+        {
+          "zh": "你怎么解决资金压力？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_393944e6ca25.mp3",
+          "en": "How do you deal with financial pressure?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_53bc7839eef2.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "你一般几点开始工作？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_88afa9c48f97.mp3",
+      "pinyin": "Nǐ yībān jǐ diǎn kāishǐ gōngzuò?",
+      "en": "What time do you usually start working?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_924684f55611.mp3",
+      "vocab": [
+        {
+          "zh": "自由安排",
+          "py": "zìyóu ānpái",
+          "vn": "· tự sắp xếp thời gian",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_36d9558fdc35.mp3",
+          "ve": "· arrange your own time",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a5bb450cfff7.mp3"
+        },
+        {
+          "zh": "休息日",
+          "py": "xiūxi rì",
+          "vn": "· ngày nghỉ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1c08ee04584a.mp3",
+          "ve": "· day off",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b36f90862f1.mp3"
+        },
+        {
+          "zh": "全天候",
+          "py": "quántiānhòu",
+          "vn": "· 24/7",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e34f12104c2c.mp3",
+          "ve": "· around the clock",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_576ca5502f5b.mp3"
+        },
+        {
+          "zh": "应酬",
+          "py": "yìngchóu",
+          "vn": "· tiếp khách/giao lưu kinh doanh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9bfd4165893c.mp3",
+          "ve": "· business entertainment",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9cb9646c300e.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有真正意义上的休假？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c92783bc5964.mp3",
+          "en": "Do you actually get real time off?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f724f77a4993.mp3"
+        },
+        {
+          "zh": "你觉得当老板更自由还是更累？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0a82e11eedf9.mp3",
+          "en": "Do you think being a boss is more freedom or more exhausting?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1356bdc43aaf.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "你觉得做生意最重要的品质是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6fe457786797.mp3",
+      "pinyin": "Nǐ juéde zuò shēngyì zuì zhòngyào de pǐnzhì shì shénme?",
+      "en": "What quality do you think is most important in business?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d59614f7d33.mp3",
+      "vocab": [
+        {
+          "zh": "品质",
+          "py": "pǐnzhì",
+          "vn": "· phẩm chất",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5923c27f590f.mp3",
+          "ve": "· quality / integrity",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e309b76ae39.mp3"
+        },
+        {
+          "zh": "诚信",
+          "py": "chéngxìn",
+          "vn": "· chữ tín",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7bdf68f43a55.mp3",
+          "ve": "· integrity / trustworthiness",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ea077070a4f3.mp3"
+        },
+        {
+          "zh": "执行力",
+          "py": "zhíxínglì",
+          "vn": "· năng lực thực thi",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3d8ec0c5df1f.mp3",
+          "ve": "· execution ability",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_62d47a086c09.mp3"
+        },
+        {
+          "zh": "人脉",
+          "py": "rénmài",
+          "vn": "· mạng lưới quan hệ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_46fe0816fc5a.mp3",
+          "ve": "· network / connections",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_70ab269235d0.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得人脉重要还是能力重要？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a8c5da3fbd36.mp3",
+          "en": "What matters more in business — connections or ability?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_28e44d78328a.mp3"
+        },
+        {
+          "zh": "你是怎么建立自己的人脉的？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3968fb03a957.mp3",
+          "en": "How did you build your business network?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_847e63fed13c.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "生意最忙的时候是什么情况？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_675ce8e1a5bd.mp3",
+      "pinyin": "Shēngyì zuì máng de shíhòu shì shénme qíngkuàng?",
+      "en": "What's it like when business is at its busiest?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a441ad8cf37b.mp3",
+      "vocab": [
+        {
+          "zh": "旺季",
+          "py": "wàngjì",
+          "vn": "· mùa cao điểm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bc2285008f7a.mp3",
+          "ve": "· peak season",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a1633fa72c07.mp3"
+        },
+        {
+          "zh": "淡季",
+          "py": "dànjì",
+          "vn": "· mùa thấp điểm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_91b22ccb7b97.mp3",
+          "ve": "· off-season",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab8392436cfc.mp3"
+        },
+        {
+          "zh": "订单",
+          "py": "dìngdān",
+          "vn": "· đơn hàng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4c117f203718.mp3",
+          "ve": "· order",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_70a17ffa722a.mp3"
+        },
+        {
+          "zh": "来不及",
+          "py": "lái bu jí",
+          "vn": "· không kịp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a47640d36d79.mp3",
+          "ve": "· no time / running late",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ddf0bc5f58c8.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们行业的旺季是什么时候？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7e31757e2d90.mp3",
+          "en": "When is peak season in your industry?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_64563355b87a.mp3"
+        },
+        {
+          "zh": "淡季的时候怎么维持运营？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f2b748a4c56c.mp3",
+          "en": "How do you keep things running during slow season?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee86bf89f327.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "有没有想过放弃，回去打工？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3e3c6ae5a6a3.mp3",
+      "pinyin": "Yǒu méiyǒu xiǎngguò fàngqì, huíqù dǎgōng?",
+      "en": "Have you ever thought about giving up and going back to work for someone?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71490bf7bc98.mp3",
+      "vocab": [
+        {
+          "zh": "放弃",
+          "py": "fàngqì",
+          "vn": "· từ bỏ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5ac2011aeb75.mp3",
+          "ve": "· give up",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_078da1f9958e.mp3"
+        },
+        {
+          "zh": "打工",
+          "py": "dǎgōng",
+          "vn": "· làm thuê",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77ac234a2e93.mp3",
+          "ve": "· work for hire",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71fd4ec35953.mp3"
+        },
+        {
+          "zh": "坚持",
+          "py": "jiānchí",
+          "vn": "· kiên trì",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5207208b135b.mp3",
+          "ve": "· persist / keep going",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a368f3ed059.mp3"
+        },
+        {
+          "zh": "转型",
+          "py": "zhuǎnxíng",
+          "vn": "· chuyển đổi mô hình",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1e68ebb3b76f.mp3",
+          "ve": "· pivot / transform",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_35cdca1412be.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "是什么让你坚持下来的？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2d0b223d3917.mp3",
+          "en": "What kept you going?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_81e38b3e102f.mp3"
+        },
+        {
+          "zh": "你有没有后悔过创业？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bd92f8ae3f58.mp3",
+          "en": "Have you ever regretted starting your own business?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e298dd1d7c7.mp3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "🎯 Freelancer / 自由职业者"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你主要靠什么谋生？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_18a9f9303986.mp3",
+      "pinyin": "Nǐ zhǔyào kào shénme móushēng?",
+      "en": "How do you mainly make a living?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2f1bf0b52a4.mp3",
+      "vocab": [
+        {
+          "zh": "谋生",
+          "py": "móushēng",
+          "vn": "· kiếm sống",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_63b850276e58.mp3",
+          "ve": "· make a living",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cbd696395ab1.mp3"
+        },
+        {
+          "zh": "接单",
+          "py": "jiē dān",
+          "vn": "· nhận đơn hàng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7d457742d1de.mp3",
+          "ve": "· take on orders / get work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d773da64de11.mp3"
+        },
+        {
+          "zh": "设计",
+          "py": "shèjì",
+          "vn": "· thiết kế",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b08890a6ef3b.mp3",
+          "ve": "· design",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_31c13f47ad87.mp3"
+        },
+        {
+          "zh": "写作",
+          "py": "xiězuò",
+          "vn": "· viết lách",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d58e850d9115.mp3",
+          "ve": "· writing",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1cea5345d284.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你做自由职业多久了？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ead6aeffd7ac.mp3",
+          "en": "How long have you been freelancing?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5becf64973bf.mp3"
+        },
+        {
+          "zh": "你是全职做自由职业还是兼职？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_31f7958d394f.mp3",
+          "en": "Are you doing freelance full-time or part-time?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d85700e98e7d.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你一般在哪里工作？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6f115f0c41b3.mp3",
+      "pinyin": "Nǐ yībān zài nǎlǐ gōngzuò?",
+      "en": "Where do you usually work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2325c5ae011.mp3",
+      "vocab": [
+        {
+          "zh": "在家",
+          "py": "zài jiā",
+          "vn": "· ở nhà",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e93b25627442.mp3",
+          "ve": "· at home / work from home",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8000c2232850.mp3"
+        },
+        {
+          "zh": "咖啡厅",
+          "py": "kāfēi tīng",
+          "vn": "· quán cà phê",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_86a9519ee2d1.mp3",
+          "ve": "· coffee shop",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e347a882f7a.mp3"
+        },
+        {
+          "zh": "共享办公室",
+          "py": "gòngxiǎng bàngōngshì",
+          "vn": "· coworking space",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_96cbdc19b7cf.mp3",
+          "ve": "· coworking space",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_15544723f58e.mp3"
+        },
+        {
+          "zh": "随时随地",
+          "py": "suíshí suídì",
+          "vn": "· mọi lúc mọi nơi",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e66b7ed9d809.mp3",
+          "ve": "· anywhere, anytime",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0300e09e4b5a.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有试过游牧办公？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_662000ebfc35.mp3",
+          "en": "Have you tried working as a digital nomad?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b06c1866a64b.mp3"
+        },
+        {
+          "zh": "你觉得在家工作容易分心吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a42f02b50dab.mp3",
+          "en": "Do you find it easy to get distracted working from home?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80f1d716b000.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "自由职业最大的好处是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a54053e0c759.mp3",
+      "pinyin": "Zìyóu zhíyè zuìdà de hǎochù shì shénme?",
+      "en": "What's the biggest advantage of freelancing?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b52d502b6b5.mp3",
+      "vocab": [
+        {
+          "zh": "自由",
+          "py": "zìyóu",
+          "vn": "· tự do",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0aaabc225418.mp3",
+          "ve": "· freedom / free",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2c7c836b72a1.mp3"
+        },
+        {
+          "zh": "灵活",
+          "py": "línghuó",
+          "vn": "· linh hoạt",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f2bf4a2df3c8.mp3",
+          "ve": "· flexible",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_03fb2efb7078.mp3"
+        },
+        {
+          "zh": "时间自主",
+          "py": "shíjiān zìzhǔ",
+          "vn": "· tự chủ thời gian",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5b6c003536f9.mp3",
+          "ve": "· control your own time",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fd1c0c7e1873.mp3"
+        },
+        {
+          "zh": "选择客户",
+          "py": "xuǎnzé kèhù",
+          "vn": "· chọn khách hàng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ec3fb565b835.mp3",
+          "ve": "· choose clients",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e7dcd1ce7d9.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你最珍视自由职业的哪方面？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_db63467af0ae.mp3",
+          "en": "What aspect of freelancing do you value most?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bbd4addcf337.mp3"
+        },
+        {
+          "zh": "和上班族相比，你觉得哪个更自由？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_152bcf5d438e.mp3",
+          "en": "Compared to office workers, who do you think is more free?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fde55ea3bfb4.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "收入稳定吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9dcf497820fc.mp3",
+      "pinyin": "Shōurù wěndìng ma?",
+      "en": "Is your income stable?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4523160cc373.mp3",
+      "vocab": [
+        {
+          "zh": "收入",
+          "py": "shōurù",
+          "vn": "· thu nhập",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6c2fb35be531.mp3",
+          "ve": "· income",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_34ae67734109.mp3"
+        },
+        {
+          "zh": "波动",
+          "py": "bōdòng",
+          "vn": "· dao động/biến động",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1973492d7418.mp3",
+          "ve": "· fluctuate",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3e147b639620.mp3"
+        },
+        {
+          "zh": "淡旺季",
+          "py": "dàn wàngjì",
+          "vn": "· mùa cao và thấp điểm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_028d9a221e4c.mp3",
+          "ve": "· peak and off-season",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_765e1b63303d.mp3"
+        },
+        {
+          "zh": "存钱",
+          "py": "cún qián",
+          "vn": "· tiết kiệm tiền",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_04bcd72c6cb2.mp3",
+          "ve": "· save money",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_87a54e4508b4.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "没有单子的时候你怎么办？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e08ec02c80af.mp3",
+          "en": "What do you do when there's no work coming in?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_627d8f7a5ba0.mp3"
+        },
+        {
+          "zh": "你有没有买社保或者保险？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b297f1f30441.mp3",
+          "en": "Do you have social insurance or private insurance?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cf83c7e509d9.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "你是怎么找客户或项目的？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d1c369f9a9d3.mp3",
+      "pinyin": "Nǐ shì zěnme zhǎo kèhù huò xiàngmù de?",
+      "en": "How do you find clients or projects?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9bbfd6bb666f.mp3",
+      "vocab": [
+        {
+          "zh": "平台",
+          "py": "píngtái",
+          "vn": "· nền tảng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4981287fe504.mp3",
+          "ve": "· platform",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_34a6e5d64ade.mp3"
+        },
+        {
+          "zh": "口碑",
+          "py": "kǒubēi",
+          "vn": "· danh tiếng/tiếng tốt",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_194e3bce2815.mp3",
+          "ve": "· reputation",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6fed0ce68084.mp3"
+        },
+        {
+          "zh": "介绍",
+          "py": "jièshào",
+          "vn": "· giới thiệu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_61a3ec665683.mp3",
+          "ve": "· referral / introduction",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_976f3e900865.mp3"
+        },
+        {
+          "zh": "社交媒体",
+          "py": "shèjiāo méitǐ",
+          "vn": "· mạng xã hội",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_58ba1baa4d39.mp3",
+          "ve": "· social media",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_56b7bb687185.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你主要在哪个平台接单？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_21bbee5b83b6.mp3",
+          "en": "Which platform do you mainly use to get jobs?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a0cc7688f209.mp3"
+        },
+        {
+          "zh": "大部分客户是老客户还是新客户？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_dbe38d5279bf.mp3",
+          "en": "Are most of your clients returning or new?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cf22fc0d3a08.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "你每天大概工作多少小时？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8814f96e06c0.mp3",
+      "pinyin": "Nǐ měitiān dàgài gōngzuò duōshǎo xiǎoshí?",
+      "en": "How many hours do you work each day roughly?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_47740680a432.mp3",
+      "vocab": [
+        {
+          "zh": "大概",
+          "py": "dàgài",
+          "vn": "· khoảng/đại khái",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35b2d2a11d30.mp3",
+          "ve": "· roughly / approximately",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a196ef073fdf.mp3"
+        },
+        {
+          "zh": "忙的时候",
+          "py": "máng de shíhòu",
+          "vn": "· khi bận",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7ac4972e8e6b.mp3",
+          "ve": "· during busy times",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4b9f6c6314e.mp3"
+        },
+        {
+          "zh": "自己安排",
+          "py": "zìjǐ ānpái",
+          "vn": "· tự sắp xếp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1925c0fe675b.mp3",
+          "ve": "· self-schedule",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_948e3aeaf376.mp3"
+        },
+        {
+          "zh": "效率",
+          "py": "xiàolǜ",
+          "vn": "· hiệu quả",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3256142c2215.mp3",
+          "ve": "· efficiency",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5f099425f5cf.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得自由职业有没有帮你提升效率？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_dd1e889e797b.mp3",
+          "en": "Do you think freelancing has helped you become more efficient?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_133bac13d42d.mp3"
+        },
+        {
+          "zh": "你有没有固定的工作时间表？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6e3bc30ff33a.mp3",
+          "en": "Do you have a fixed work schedule?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_75ca8d3f8adb.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "最难的地方是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3b920e1e0a7a.mp3",
+      "pinyin": "Zuì nán de dìfāng shì shénme?",
+      "en": "What's the hardest part of freelancing?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c0009fe392e.mp3",
+      "vocab": [
+        {
+          "zh": "孤独",
+          "py": "gūdú",
+          "vn": "· cô đơn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f3369639e18d.mp3",
+          "ve": "· loneliness / lonely",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d5954c098739.mp3"
+        },
+        {
+          "zh": "自律",
+          "py": "zìlǜ",
+          "vn": "· kỷ luật bản thân",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4241d9ced3ff.mp3",
+          "ve": "· self-discipline",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30afb5cb81d2.mp3"
+        },
+        {
+          "zh": "催款",
+          "py": "cuīkuǎn",
+          "vn": "· đòi tiền/nhắc trả tiền",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6d2a62c5b43f.mp3",
+          "ve": "· chase payment",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e8a76fee9834.mp3"
+        },
+        {
+          "zh": "难客户",
+          "py": "nán kèhù",
+          "vn": "· khách hàng khó tính",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_98bf2348a204.mp3",
+          "ve": "· difficult client",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5865abedef90.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有遇到过不付款的客户？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0ee206f4085c.mp3",
+          "en": "Have you ever had a client who didn't pay?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd9148ab7dd7.mp3"
+        },
+        {
+          "zh": "你觉得自律难不难？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_31cd12151332.mp3",
+          "en": "Do you find it hard to be self-disciplined?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fabac5c43fee.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "有没有想过去公司上班？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0908abe64ad0.mp3",
+      "pinyin": "Yǒu méiyǒu xiǎngguò qù gōngsī shàngbān?",
+      "en": "Have you ever thought about working for a company?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4124b06aaa9.mp3",
+      "vocab": [
+        {
+          "zh": "上班族",
+          "py": "shàngbānzú",
+          "vn": "· dân đi làm văn phòng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d2fdf805396a.mp3",
+          "ve": "· office workers",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d193f482826a.mp3"
+        },
+        {
+          "zh": "安全感",
+          "py": "ānquángǎn",
+          "vn": "· cảm giác an toàn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_77267ec65632.mp3",
+          "ve": "· sense of security",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c4f7f8ff1929.mp3"
+        },
+        {
+          "zh": "社交",
+          "py": "shèjiāo",
+          "vn": "· giao tiếp xã hội",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8b85881d9f37.mp3",
+          "ve": "· socialize",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6fee693e1c17.mp3"
+        },
+        {
+          "zh": "归属感",
+          "py": "guīshǔgǎn",
+          "vn": "· cảm giác thuộc về",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_990ea6374878.mp3",
+          "ve": "· sense of belonging",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ff96989af24f.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你会不会觉得缺少归属感？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6806b628f184.mp3",
+          "en": "Do you ever feel a lack of belonging?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9af079deaaaf.mp3"
+        },
+        {
+          "zh": "如果有一份很好的工作机会，你会考虑去上班吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_748dd520ce37.mp3",
+          "en": "If a great job opportunity came along, would you consider taking it?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e0bb549fffa9.mp3"
+        }
+      ]
+    }
+  ]
+}

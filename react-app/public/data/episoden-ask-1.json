@@ -1,0 +1,697 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "ask"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你叫什么名字？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_dcdedf4368a8.mp3",
+      "pinyin": "Nǐ jiào shénme míngzi?",
+      "en": "What's your name?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a0804b810b8.mp3",
+      "vocab": [
+        {
+          "zh": "叫",
+          "py": "jiào",
+          "vn": "· tên là",
+          "zhAudio": null,
+          "ve": "· called / named",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5f5942956f1c.mp3"
+        },
+        {
+          "zh": "名字",
+          "py": "míngzi",
+          "vn": "· tên",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_689fad203a16.mp3",
+          "ve": "· name",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b068931cc450.mp3"
+        },
+        {
+          "zh": "英文名",
+          "py": "yīngwén míng",
+          "vn": "· tên tiếng Anh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6d20e5e613b8.mp3",
+          "ve": "· English name",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b9dbe621f30a.mp3"
+        },
+        {
+          "zh": "大家叫我",
+          "py": "dàjiā jiào wǒ",
+          "vn": "· mọi người gọi tôi là",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_531118ed1fe0.mp3",
+          "ve": "· everyone calls me",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ba8244b22124.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "这个名字有什么意思吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1d61a248fa2b.mp3",
+          "en": "Does this name have a special meaning?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec33ab40a4e2.mp3"
+        },
+        {
+          "zh": "有英文名吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3669bc8d9087.mp3",
+          "en": "Do you have an English name?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d232afdb41e8.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你是哪里人？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8515b1d0cb7b.mp3",
+      "pinyin": "Nǐ shì nǎlǐ rén?",
+      "en": "Where are you from?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fe9949947337.mp3",
+      "vocab": [
+        {
+          "zh": "城市",
+          "py": "chéngshì",
+          "vn": "· thành phố",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f7d29dfae05b.mp3",
+          "ve": "· city",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4ed5d2eaed1a.mp3"
+        },
+        {
+          "zh": "省",
+          "py": "shěng",
+          "vn": "· tỉnh",
+          "zhAudio": null,
+          "ve": "· province",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_53aad639aca4.mp3"
+        },
+        {
+          "zh": "北京/上海",
+          "py": "Běijīng / Shànghǎi",
+          "vn": "",
+          "zhAudio": null,
+          "ve": "· Beijing / Shanghai",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e7e1e51fc013.mp3"
+        },
+        {
+          "zh": "农村",
+          "py": "nóngcūn",
+          "vn": "· nông thôn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bda3fb373c8a.mp3",
+          "ve": "· countryside / rural",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_153f6b8c422d.mp3"
+        },
+        {
+          "zh": "外地人",
+          "py": "wàidì rén",
+          "vn": "· người tỉnh khác",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8e7fd681b782.mp3",
+          "ve": "· person from another city",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec433fb5ab55.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "那个城市怎么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d6e1783992cf.mp3",
+          "en": "What's that city like?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b01959d2be4c.mp3"
+        },
+        {
+          "zh": "你喜欢住在那里吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_09747205d359.mp3",
+          "en": "Do you like living there?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5d06c3fb869e.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "你做什么工作？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a60a2342c85b.mp3",
+      "pinyin": "Nǐ zuò shénme gōngzuò?",
+      "en": "What do you do for work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a98e60c8b1b8.mp3",
+      "vocab": [
+        {
+          "zh": "上班族",
+          "py": "shàngbānzú",
+          "vn": "· nhân viên",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d2fdf805396a.mp3",
+          "ve": "· office workers",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d193f482826a.mp3"
+        },
+        {
+          "zh": "公司",
+          "py": "gōngsī",
+          "vn": "· công ty",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_41716f87c375.mp3",
+          "ve": "· company",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_93c731f1c3a8.mp3"
+        },
+        {
+          "zh": "学生",
+          "py": "xuésheng",
+          "vn": "· học sinh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35d9969dfa48.mp3",
+          "ve": "· student",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd7350282845.mp3"
+        },
+        {
+          "zh": "老板",
+          "py": "lǎobǎn",
+          "vn": "· sếp / chủ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_db3ac57de8f0.mp3",
+          "ve": "· boss / employer",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f55d99ab85f9.mp3"
+        },
+        {
+          "zh": "自由职业",
+          "py": "zìyóu zhíyè",
+          "vn": "· freelance",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c8319174a887.mp3",
+          "ve": "· freelancing / self-employed",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_421d2debc92d.mp3"
+        },
+        {
+          "zh": "在家",
+          "py": "zài jiā",
+          "vn": "· làm ở nhà",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e93b25627442.mp3",
+          "ve": "· at home / work from home",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8000c2232850.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你喜欢你的工作吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_230abac54379.mp3",
+          "en": "Do you like your job?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4bd8de1e1f4b.mp3"
+        },
+        {
+          "zh": "工作忙吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0a1ca6b6497e.mp3",
+          "en": "Is work busy?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67c4e545981b.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "你有什么爱好？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_da37bd7a9dec.mp3",
+      "pinyin": "Nǐ yǒu shénme àihào?",
+      "en": "What are your hobbies?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1bc635e9d3a7.mp3",
+      "vocab": [
+        {
+          "zh": "爱好",
+          "py": "àihào",
+          "vn": "· sở thích",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1d32ab896499.mp3",
+          "ve": "· hobby",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_128b6697ec11.mp3"
+        },
+        {
+          "zh": "喜欢",
+          "py": "xǐhuān",
+          "vn": "· thích",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3d6c396cf4de.mp3",
+          "ve": "· like / enjoy",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2a50cdae135b.mp3"
+        },
+        {
+          "zh": "运动",
+          "py": "yùndòng",
+          "vn": "· thể thao",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_37b6debeb44d.mp3",
+          "ve": "· sports / exercise",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_86e15a2f61bb.mp3"
+        },
+        {
+          "zh": "看书",
+          "py": "kànshū",
+          "vn": "· đọc sách",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e3ccf0942cf7.mp3",
+          "ve": "· read books",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_215562d819c6.mp3"
+        },
+        {
+          "zh": "音乐",
+          "py": "yīnyuè",
+          "vn": "· âm nhạc",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_95521bb74446.mp3",
+          "ve": "· music",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_18d676991926.mp3"
+        },
+        {
+          "zh": "旅游",
+          "py": "lǚyóu",
+          "vn": "· du lịch",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0ebbd85f6891.mp3",
+          "ve": "· travel",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_69266c67e75c.mp3"
+        },
+        {
+          "zh": "做饭",
+          "py": "zuòfàn",
+          "vn": "· nấu ăn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e69a3d710606.mp3",
+          "ve": "· cook",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e3e90fd6d2a7.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你学了多久了？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_10021e7167f1.mp3",
+          "en": "How long have you been doing that?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4121c14d22cf.mp3"
+        },
+        {
+          "zh": "为什么喜欢这个？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ddf1442a8b59.mp3",
+          "en": "Why do you like it?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e5551d108ab9.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "你为什么学语言？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c8f21faedaf1.mp3",
+      "pinyin": "Nǐ wèishénme xué yǔyán?",
+      "en": "Why do you study languages?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_506696eed4e9.mp3",
+      "vocab": [
+        {
+          "zh": "因为",
+          "py": "yīnwèi",
+          "vn": "· vì",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5f3cf4472ed5.mp3",
+          "ve": "· because",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cc70865f1ecd.mp3"
+        },
+        {
+          "zh": "兴趣",
+          "py": "xìngqù",
+          "vn": "· hứng thú",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_12081dbd5992.mp3",
+          "ve": "· interest / hobby",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_100a8bb4c34c.mp3"
+        },
+        {
+          "zh": "工作需要",
+          "py": "gōngzuò xūyào",
+          "vn": "· cần cho công việc",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35d8cb6bb82b.mp3",
+          "ve": "· needed for work",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6905f6721d13.mp3"
+        },
+        {
+          "zh": "交朋友",
+          "py": "jiāo péngyǒu",
+          "vn": "· kết bạn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fe132603f4a7.mp3",
+          "ve": "· make friends",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a11cbe6b74cf.mp3"
+        },
+        {
+          "zh": "旅游",
+          "py": "lǚyóu",
+          "vn": "· du lịch",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0ebbd85f6891.mp3",
+          "ve": "· travel",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_69266c67e75c.mp3"
+        },
+        {
+          "zh": "文化",
+          "py": "wénhuà",
+          "vn": "· văn hóa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f9f7bb667906.mp3",
+          "ve": "· culture",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f7039a836c0.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "学了多久了？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_49a6e9068d5d.mp3",
+          "en": "How long have you been learning?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_580cac8c9632.mp3"
+        },
+        {
+          "zh": "你觉得这门语言难吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3c76a5287fe9.mp3",
+          "en": "Do you find this language difficult?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3c540d1c94eb.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "你结婚了吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e079834f4b69.mp3",
+      "pinyin": "Nǐ jiéhūn le ma?",
+      "en": "Are you married?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7b52659d7a74.mp3",
+      "vocab": [
+        {
+          "zh": "结婚了",
+          "py": "jiéhūn le",
+          "vn": "· đã kết hôn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_88c59290f22e.mp3",
+          "ve": "· married",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4750ac30159e.mp3"
+        },
+        {
+          "zh": "单身",
+          "py": "dānshēn",
+          "vn": "· độc thân",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_489f60ccb08f.mp3",
+          "ve": "· single",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd5c07036f29.mp3"
+        },
+        {
+          "zh": "男/女朋友",
+          "py": "nán/nǚ péngyǒu",
+          "vn": "· bạn trai/gái",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_29e1b95e4468.mp3",
+          "ve": "· boyfriend / girlfriend",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36939e7f6489.mp3"
+        },
+        {
+          "zh": "孩子",
+          "py": "háizi",
+          "vn": "· con cái",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_03e25ab08d38.mp3",
+          "ve": "· children / kids",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec8f9a68c118.mp3"
+        },
+        {
+          "zh": "离婚",
+          "py": "líhūn",
+          "vn": "· ly hôn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7256045e7ea9.mp3",
+          "ve": "· divorced",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9245d1728a0d.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们认识多久了？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_517c43341c94.mp3",
+          "en": "How long have you known each other?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d6e8a1a7da51.mp3"
+        },
+        {
+          "zh": "有孩子吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2eb914b165c8.mp3",
+          "en": "Do you have children?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_50e23a5c1169.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "你喜欢吃什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2940afe37f5e.mp3",
+      "pinyin": "Nǐ xǐhuān chī shénme?",
+      "en": "What food do you like?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a46a03b68ff1.mp3",
+      "vocab": [
+        {
+          "zh": "爱吃",
+          "py": "ài chī",
+          "vn": "· thích ăn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_65ede282fde7.mp3",
+          "ve": "· love to eat",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_90ffec62a7fa.mp3"
+        },
+        {
+          "zh": "特别喜欢",
+          "py": "tèbié xǐhuān",
+          "vn": "· đặc biệt thích",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4d5cc5123931.mp3",
+          "ve": "· especially like",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c89ec72e7fbe.mp3"
+        },
+        {
+          "zh": "辣",
+          "py": "là",
+          "vn": "· cay",
+          "zhAudio": null,
+          "ve": "· spicy",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd988e878666.mp3"
+        },
+        {
+          "zh": "甜",
+          "py": "tián",
+          "vn": "· ngọt",
+          "zhAudio": null,
+          "ve": "· sweet",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e549a200372d.mp3"
+        },
+        {
+          "zh": "特色菜",
+          "py": "tèsè cài",
+          "vn": "· món đặc sản",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ba459517e0df.mp3",
+          "ve": "· specialty dish",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67be11749376.mp3"
+        },
+        {
+          "zh": "不喜欢",
+          "py": "bù xǐhuān",
+          "vn": "· không thích",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d777fc59f404.mp3",
+          "ve": "· don't like",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_882c303bec73.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你会做饭吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8caf9727c979.mp3",
+          "en": "Can you cook?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_58b2c7f343fd.mp3"
+        },
+        {
+          "zh": "你们那里有什么特色菜？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0269488679f8.mp3",
+          "en": "What special dishes are from your area?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_26aa9c77bc40.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "你平时怎么放松？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_68b7bccfe263.mp3",
+      "pinyin": "Nǐ píngshí zěnme fàngsōng?",
+      "en": "How do you usually relax?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_72f013f94c7a.mp3",
+      "vocab": [
+        {
+          "zh": "看电影",
+          "py": "kàn diànyǐng",
+          "vn": "· xem phim",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2d41be02ec88.mp3",
+          "ve": "· watch movies",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_07715691cf86.mp3"
+        },
+        {
+          "zh": "打游戏",
+          "py": "dǎ yóuxì",
+          "vn": "· chơi game",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_54b6702aa861.mp3",
+          "ve": "· play video games",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1d1d93f33c8.mp3"
+        },
+        {
+          "zh": "听音乐",
+          "py": "tīng yīnyuè",
+          "vn": "· nghe nhạc",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6c3ccd823088.mp3",
+          "ve": "· listen to music",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_615d159bd677.mp3"
+        },
+        {
+          "zh": "运动",
+          "py": "yùndòng",
+          "vn": "· thể thao",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_37b6debeb44d.mp3",
+          "ve": "· sports / exercise",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_86e15a2f61bb.mp3"
+        },
+        {
+          "zh": "睡觉",
+          "py": "shuìjiào",
+          "vn": "· ngủ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_60cffce1f686.mp3",
+          "ve": "· sleep",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c9fab33e9458.mp3"
+        },
+        {
+          "zh": "刷手机",
+          "py": "shuā shǒujī",
+          "vn": "· lướt điện thoại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_36d29e2e3bdf.mp3",
+          "ve": "· scroll on phone",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_42e52b9611cd.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "最近有看什么好看的吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1e33fafe8042.mp3",
+          "en": "Have you watched anything good recently?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1480dbdc0254.mp3"
+        },
+        {
+          "zh": "你喜欢什么类型的？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b27983321bd8.mp3",
+          "en": "What genre do you like?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_af1e423d6fe6.mp3"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "zh": "你学语言学了多久了？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_90384fb28c57.mp3",
+      "pinyin": "Nǐ xué yǔyán xué le duō jiǔ le?",
+      "en": "How long have you been studying this language?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e45f9939782b.mp3",
+      "vocab": [
+        {
+          "zh": "年",
+          "py": "nián",
+          "vn": "· năm",
+          "zhAudio": null,
+          "ve": "· year",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_84cdc76cabf4.mp3"
+        },
+        {
+          "zh": "个月",
+          "py": "gè yuè",
+          "vn": "· tháng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6cd2e09cbb3d.mp3",
+          "ve": "· months",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_da36cfaf48b9.mp3"
+        },
+        {
+          "zh": "刚开始",
+          "py": "gāng kāishǐ",
+          "vn": "· mới bắt đầu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cab09de904c1.mp3",
+          "ve": "· at first / just started",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_880a13cd0b57.mp3"
+        },
+        {
+          "zh": "一直",
+          "py": "yīzhí",
+          "vn": "· liên tục",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_515905219e49.mp3",
+          "ve": "· all the time",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a0c6efd4934.mp3"
+        },
+        {
+          "zh": "断断续续",
+          "py": "duànduàn xùxù",
+          "vn": "· không đều đặn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6f56badd8fb3.mp3",
+          "ve": "· on and off / intermittently",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d8c3e500e344.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得最难的是什么？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_35b775ce62c2.mp3",
+          "en": "What do you find the hardest?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4c137c748c77.mp3"
+        },
+        {
+          "zh": "你用什么方法学习？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_eec44028d536.mp3",
+          "en": "What method do you use to study?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71b3eb604eae.mp3"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "zh": "你有没有去过越南？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_138e84ca305b.mp3",
+      "pinyin": "Nǐ yǒu méiyǒu qùguò Yuènán?",
+      "en": "Have you ever been to Vietnam?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc20fa95ed05.mp3",
+      "vocab": [
+        {
+          "zh": "去过",
+          "py": "qùguò",
+          "vn": "· đã đến",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1a6e1d7ea84d.mp3",
+          "ve": "· have been to",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6af4f4e2f202.mp3"
+        },
+        {
+          "zh": "没去过",
+          "py": "méi qùguò",
+          "vn": "· chưa đến",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_76e486d6d387.mp3",
+          "ve": "· never been to",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f08fb58f36a2.mp3"
+        },
+        {
+          "zh": "想去",
+          "py": "xiǎng qù",
+          "vn": "· muốn đến",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_02a71cad251e.mp3",
+          "ve": "· want to go",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e64e57bec768.mp3"
+        },
+        {
+          "zh": "印象",
+          "py": "yìnxiàng",
+          "vn": "· ấn tượng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_236b4ca6c3cc.mp3",
+          "ve": "· impression",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4ba09b93a4e6.mp3"
+        },
+        {
+          "zh": "好吃",
+          "py": "hǎochī",
+          "vn": "· ngon",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a78e4f228bed.mp3",
+          "ve": "· delicious / tasty",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec4faa513656.mp3"
+        },
+        {
+          "zh": "景色",
+          "py": "jǐngsè",
+          "vn": "· phong cảnh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_565d304ba3ed.mp3",
+          "ve": "· scenery",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6935ba9186f4.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得越南怎么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7e060c770e45.mp3",
+          "en": "What did you think of Vietnam?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_68e7748a64ec.mp3"
+        },
+        {
+          "zh": "你最想去哪个国家？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_689fe505bd69.mp3",
+          "en": "Which country do you most want to visit?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8672ce8fbae5.mp3"
+        }
+      ]
+    }
+  ]
+}

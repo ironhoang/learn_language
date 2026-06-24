@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "🏥 Bác sĩ / Y tá / 医生"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你是哪个科的医生/护士？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1581af49d475.mp3",
+      "pinyin": "Nǐ shì nǎge kē de yīshēng / hùshi?",
+      "en": "What department are you in?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1c98d73fe158.mp3",
+      "vocab": [
+        {
+          "zh": "科",
+          "py": "kē",
+          "vn": "· khoa",
+          "zhAudio": null,
+          "ve": "· department (medical)",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4ef99243a1ea.mp3"
+        },
+        {
+          "zh": "内科",
+          "py": "nèikē",
+          "vn": "· nội khoa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_852c7b6d8358.mp3",
+          "ve": "· internal medicine",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6aca9b49cfa8.mp3"
+        },
+        {
+          "zh": "外科",
+          "py": "wàikē",
+          "vn": "· ngoại khoa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_49c862078b7a.mp3",
+          "ve": "· surgery department",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b437c799936e.mp3"
+        },
+        {
+          "zh": "急诊",
+          "py": "jízhěn",
+          "vn": "· cấp cứu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b628802c75a2.mp3",
+          "ve": "· emergency room",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_099db2c39291.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你是在公立医院还是私立医院？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_28521bf2ef44.mp3",
+          "en": "Do you work at a public or private hospital?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_489c7f81be35.mp3"
+        },
+        {
+          "zh": "这个科室忙吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_21a1ab9e7785.mp3",
+          "en": "Is your department busy?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d00a9ca795e0.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你一般要上多少小时的班？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9d36824e301c.mp3",
+      "pinyin": "Nǐ yībān yào shàng duōshǎo xiǎoshí de bān?",
+      "en": "How many hours do you usually work per shift?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2a2f2400e47a.mp3",
+      "vocab": [
+        {
+          "zh": "班",
+          "py": "bān",
+          "vn": "· ca/buổi làm",
+          "zhAudio": null,
+          "ve": "· shift",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2ab64f4ee279.mp3"
+        },
+        {
+          "zh": "夜班",
+          "py": "yèbān",
+          "vn": "· ca đêm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_46c2d8df0f8b.mp3",
+          "ve": "· night shift",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6ac872148b8e.mp3"
+        },
+        {
+          "zh": "轮班",
+          "py": "lúnbān",
+          "vn": "· ca xoay",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_61edfb748a9c.mp3",
+          "ve": "· rotating shifts",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_452099d86721.mp3"
+        },
+        {
+          "zh": "值班",
+          "py": "zhíbān",
+          "vn": "· trực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d1d8c4b1edaa.mp3",
+          "ve": "· on duty",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bc66bd161e10.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "夜班累吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c044a90a2773.mp3",
+          "en": "Is the night shift tiring?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b1a4c4a14b26.mp3"
+        },
+        {
+          "zh": "你们有多少天休息？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5636e170e7e3.mp3",
+          "en": "How many days off do you get?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_debc3fed8d32.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "工作中最有成就感的是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1e9dff102839.mp3",
+      "pinyin": "Gōngzuò zhōng zuì yǒu chéngjiùgǎn de shì shénme?",
+      "en": "What gives you the most sense of achievement at work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0c8610e773b7.mp3",
+      "vocab": [
+        {
+          "zh": "成就感",
+          "py": "chéngjiùgǎn",
+          "vn": "· cảm giác thành tựu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_80106ce4ce43.mp3",
+          "ve": "· sense of achievement",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bc1c3db605de.mp3"
+        },
+        {
+          "zh": "治好",
+          "py": "zhìhǎo",
+          "vn": "· chữa khỏi",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0c69c91e2406.mp3",
+          "ve": "· cure / heal",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f38889b19419.mp3"
+        },
+        {
+          "zh": "救人",
+          "py": "jiù rén",
+          "vn": "· cứu người",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e8802815d259.mp3",
+          "ve": "· save lives",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_02bd9e7ccd37.mp3"
+        },
+        {
+          "zh": "感谢",
+          "py": "gǎnxiè",
+          "vn": "· cảm ơn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ce818f7ec133.mp3",
+          "ve": "· gratitude",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f0e6169589a.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "有没有让你印象深刻的病人？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6fa02fdd2ea6.mp3",
+          "en": "Have you had a patient who left a deep impression?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e6508156f101.mp3"
+        },
+        {
+          "zh": "你怎么处理工作中的失败？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7bf87879956b.mp3",
+          "en": "How do you deal with failures at work?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3790208585f4.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "你是怎么决定要当医生/护士的？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6f4eca3485b7.mp3",
+      "pinyin": "Nǐ shì zěnme juédìng yào dāng yīshēng / hùshi de?",
+      "en": "How did you decide to become a doctor/nurse?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80686f3cb991.mp3",
+      "vocab": [
+        {
+          "zh": "志愿",
+          "py": "zhìyuàn",
+          "vn": "· nguyện vọng/ước mơ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a96f3449cbab.mp3",
+          "ve": "· aspiration / wish",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d406859dfc7c.mp3"
+        },
+        {
+          "zh": "家人影响",
+          "py": "jiārén yǐngxiǎng",
+          "vn": "· ảnh hưởng từ gia đình",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9e6acdc0a96e.mp3",
+          "ve": "· family influence",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cbd6167c5619.mp3"
+        },
+        {
+          "zh": "使命感",
+          "py": "shǐmìnggǎn",
+          "vn": "· cảm giác sứ mệnh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_adc34834f40f.mp3",
+          "ve": "· sense of mission",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7726512ff522.mp3"
+        },
+        {
+          "zh": "帮助别人",
+          "py": "bāngzhù biérén",
+          "vn": "· giúp đỡ người khác",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0ca3056bb27e.mp3",
+          "ve": "· help others",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80a1aa572386.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你家里有其他人是做医疗的吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7f07b6e9219b.mp3",
+          "en": "Does anyone else in your family work in medicine?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab244b93f1ee.mp3"
+        },
+        {
+          "zh": "学医难吗？读了几年？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8c642b5e14c6.mp3",
+          "en": "Is studying medicine hard? How many years did it take?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_66b530025249.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "医疗行业现在压力大吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8f51494a44ef.mp3",
+      "pinyin": "Yīliáo hángyè xiànzài yālì dà ma?",
+      "en": "Is the medical field under a lot of pressure nowadays?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b17fd0c0eefe.mp3",
+      "vocab": [
+        {
+          "zh": "医疗",
+          "py": "yīliáo",
+          "vn": "· y tế",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2fbcd878905d.mp3",
+          "ve": "· healthcare / medical",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0ac634852d64.mp3"
+        },
+        {
+          "zh": "医闹",
+          "py": "yī nào",
+          "vn": "· bệnh nhân/gia đình gây rối",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_11fdc32dc198.mp3",
+          "ve": "· patient-doctor disputes / violence",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b7846c3e3fa7.mp3"
+        },
+        {
+          "zh": "待遇",
+          "py": "dàiyù",
+          "vn": "· đãi ngộ/lương thưởng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7d7dc5437242.mp3",
+          "ve": "· compensation / benefits",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_81fa2106fdb8.mp3"
+        },
+        {
+          "zh": "风险",
+          "py": "fēngxiǎn",
+          "vn": "· rủi ro",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_57846ffb8175.mp3",
+          "ve": "· risk",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c6142b27f138.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得医生的待遇合理吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f2c32955022b.mp3",
+          "en": "Do you think doctors are fairly compensated?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_39ac4acb3dc5.mp3"
+        },
+        {
+          "zh": "你有没有遇到过难相处的病人家属？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6b86f8b8953c.mp3",
+          "en": "Have you ever dealt with difficult patient families?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23d18eea218f.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "下班之后怎么放松？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b880c0f2f267.mp3",
+      "pinyin": "Xiàbān zhīhòu zěnme fàngsōng?",
+      "en": "How do you relax after work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ca17ff22ed70.mp3",
+      "vocab": [
+        {
+          "zh": "放松",
+          "py": "fàngsōng",
+          "vn": "· thư giãn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bb725f7b610c.mp3",
+          "ve": "· relax",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c180aaadf5ab.mp3"
+        },
+        {
+          "zh": "运动",
+          "py": "yùndòng",
+          "vn": "· tập thể dục",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_37b6debeb44d.mp3",
+          "ve": "· sports / exercise",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_86e15a2f61bb.mp3"
+        },
+        {
+          "zh": "睡觉",
+          "py": "shuìjiào",
+          "vn": "· ngủ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_60cffce1f686.mp3",
+          "ve": "· sleep",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c9fab33e9458.mp3"
+        },
+        {
+          "zh": "陪家人",
+          "py": "péi jiārén",
+          "vn": "· ở bên gia đình",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d8a3cb6555a2.mp3",
+          "ve": "· spend time with family",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f2abc97e33e.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你下班后还会想工作的事情吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_36c21d3be3ce.mp3",
+          "en": "Do you think about work after you get off?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e7c280cbd2ed.mp3"
+        },
+        {
+          "zh": "你怎么保持自己的身体健康？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2f30e41c2517.mp3",
+          "en": "How do you keep yourself healthy?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_990783dfe7d7.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "你觉得医生/护士这个职业值得吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_17d7de62d926.mp3",
+      "pinyin": "Nǐ juéde yīshēng / hùshi zhège zhíyè zhídé ma?",
+      "en": "Do you think being a doctor/nurse is worth it?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1c48112bc12.mp3",
+      "vocab": [
+        {
+          "zh": "值得",
+          "py": "zhídé",
+          "vn": "· xứng đáng/đáng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_259584d9a730.mp3",
+          "ve": "· worthwhile",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b71f8ecd8db4.mp3"
+        },
+        {
+          "zh": "职业",
+          "py": "zhíyè",
+          "vn": "· nghề nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7379c919057d.mp3",
+          "ve": "· career / profession",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2d81697db690.mp3"
+        },
+        {
+          "zh": "牺牲",
+          "py": "xīshēng",
+          "vn": "· hy sinh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0105e99b7021.mp3",
+          "ve": "· sacrifice",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f40a32a42ce1.mp3"
+        },
+        {
+          "zh": "意义",
+          "py": "yìyì",
+          "vn": "· ý nghĩa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3ad82898286e.mp3",
+          "ve": "· meaning / significance",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f6004d1c6d1d.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你会推荐年轻人走这条路吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_02147f5133c6.mp3",
+          "en": "Would you recommend this career path to young people?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4463ae8be839.mp3"
+        },
+        {
+          "zh": "如果重新选择，你还会学医吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c85331f7b198.mp3",
+          "en": "If you could choose again, would you still study medicine?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_88878e706f25.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "现在医院里最缺什么类型的医护人员？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_534d161e4489.mp3",
+      "pinyin": "Xiànzài yīyuàn lǐ zuì quē shénme lèixíng de yīhù rényuán?",
+      "en": "What type of medical staff are most needed in hospitals now?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_46509dc4110f.mp3",
+      "vocab": [
+        {
+          "zh": "缺",
+          "py": "quē",
+          "vn": "· thiếu",
+          "zhAudio": null,
+          "ve": "· shortage / lack",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6ef4963bf44d.mp3"
+        },
+        {
+          "zh": "人手不足",
+          "py": "rénshǒu bùzú",
+          "vn": "· thiếu nhân lực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a15800f4b143.mp3",
+          "ve": "· understaffed",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee5d5c27bd41.mp3"
+        },
+        {
+          "zh": "专科",
+          "py": "zhuānkē",
+          "vn": "· chuyên khoa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_50ab51c60223.mp3",
+          "ve": "· specialist / vocational",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_736c6b810ec4.mp3"
+        },
+        {
+          "zh": "全科医生",
+          "py": "quánkē yīshēng",
+          "vn": "· bác sĩ đa khoa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6a846ee64edb.mp3",
+          "ve": "· general practitioner",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b995cbd1ffa8.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "现在医学毕业生好找工作吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c9fb8b8b1e7e.mp3",
+          "en": "Is it easy to find jobs for medical graduates now?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b23f0b2dec81.mp3"
+        },
+        {
+          "zh": "你觉得未来医疗会变成什么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ab8adca5cc73.mp3",
+          "en": "What do you think healthcare will look like in the future?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_72951eed26b2.mp3"
+        }
+      ]
+    }
+  ]
+}

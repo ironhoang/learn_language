@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "👨‍🍳 Đầu bếp / 厨师"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你做的是哪种菜系？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8fc326a27eba.mp3",
+      "pinyin": "Nǐ zuò de shì nǎ zhǒng càixì?",
+      "en": "What cuisine do you specialize in?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1adcdca2c021.mp3",
+      "vocab": [
+        {
+          "zh": "菜系",
+          "py": "càixì",
+          "vn": "· hệ ẩm thực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8811351a7913.mp3",
+          "ve": "· cuisine style",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_53d9c13f6095.mp3"
+        },
+        {
+          "zh": "川菜",
+          "py": "chuāncài",
+          "vn": "· ẩm thực Tứ Xuyên",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4874ac7d53cc.mp3",
+          "ve": "· Sichuan cuisine",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ebb5af221a1d.mp3"
+        },
+        {
+          "zh": "粤菜",
+          "py": "yuècài",
+          "vn": "· ẩm thực Quảng Đông",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_efab498e3723.mp3",
+          "ve": "· Cantonese cuisine",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ea57653fa6db.mp3"
+        },
+        {
+          "zh": "西餐",
+          "py": "xīcān",
+          "vn": "· ẩm thực phương Tây",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_934dd2c97e89.mp3",
+          "ve": "· Western cuisine",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f181b89a94fe.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "这个菜系有什么特点？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_be2cb8fb6621.mp3",
+          "en": "What are the characteristics of that cuisine?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c92b8931231d.mp3"
+        },
+        {
+          "zh": "你有没有学过其他菜系？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_00a1c3aafc1a.mp3",
+          "en": "Have you learned other cuisines?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e65407dc557d.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你在哪里工作？餐厅还是酒店？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_080cd6efea9c.mp3",
+      "pinyin": "Nǐ zài nǎlǐ gōngzuò? Cāntīng háishi jiǔdiàn?",
+      "en": "Where do you work — a restaurant or a hotel?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_78cf823f6c51.mp3",
+      "vocab": [
+        {
+          "zh": "餐厅",
+          "py": "cāntīng",
+          "vn": "· nhà hàng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a67e3999d3c5.mp3",
+          "ve": "· restaurant",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6d4b62960a6a.mp3"
+        },
+        {
+          "zh": "酒店",
+          "py": "jiǔdiàn",
+          "vn": "· khách sạn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a48985ec8fdd.mp3",
+          "ve": "· hotel",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e919c49d5f0c.mp3"
+        },
+        {
+          "zh": "食堂",
+          "py": "shítáng",
+          "vn": "· căng tin",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_530237176db5.mp3",
+          "ve": "· canteen / cafeteria",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c855b486758.mp3"
+        },
+        {
+          "zh": "私房菜",
+          "py": "sīfáng cài",
+          "vn": "· nhà hàng ẩm thực gia đình",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_75b1472cabde.mp3",
+          "ve": "· home-style restaurant",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_575acc0a9dc5.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们餐厅一天大概接待多少客人？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_477499c12674.mp3",
+          "en": "How many customers does your restaurant serve per day?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_761a267308e4.mp3"
+        },
+        {
+          "zh": "你更喜欢在哪种地方工作？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_757022c7bf84.mp3",
+          "en": "Which type of place do you prefer working at?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_231f969db7da.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "每天要工作多长时间？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7fc94098bbb3.mp3",
+      "pinyin": "Měi tiān yào gōngzuò duō cháng shíjiān?",
+      "en": "How many hours do you work each day?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_01ee53f3c966.mp3",
+      "vocab": [
+        {
+          "zh": "早班",
+          "py": "zǎobān",
+          "vn": "· ca sáng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_04e4610da60d.mp3",
+          "ve": "· morning shift",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_33ec10e3759a.mp3"
+        },
+        {
+          "zh": "午市",
+          "py": "wǔshì",
+          "vn": "· bữa trưa",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f7b356b49cd4.mp3",
+          "ve": "· lunch service",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8843dccd564f.mp3"
+        },
+        {
+          "zh": "晚市",
+          "py": "wǎnshì",
+          "vn": "· bữa tối",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f402d5a61100.mp3",
+          "ve": "· dinner service",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a37542171ee.mp3"
+        },
+        {
+          "zh": "备料",
+          "py": "bèiliào",
+          "vn": "· chuẩn bị nguyên liệu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c96fc6985c32.mp3",
+          "ve": "· prep ingredients",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a3589882e600.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你一般几点开始备料？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_25c284cecc59.mp3",
+          "en": "What time do you usually start prepping?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef014452e71f.mp3"
+        },
+        {
+          "zh": "你有休息日吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cb9c04ba9c3f.mp3",
+          "en": "Do you get days off?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b6d78ddd16df.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "你最拿手的菜是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fc930c9ec7cb.mp3",
+      "pinyin": "Nǐ zuì náshǒu de cài shì shénme?",
+      "en": "What's your signature dish?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_759162596824.mp3",
+      "vocab": [
+        {
+          "zh": "拿手",
+          "py": "náshǒu",
+          "vn": "· sở trường/thế mạnh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fa9adf847746.mp3",
+          "ve": "· specialty / best at",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_82992b0c2cf7.mp3"
+        },
+        {
+          "zh": "招牌菜",
+          "py": "zhāopái cài",
+          "vn": "· món đặc trưng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b47bc8f3d12b.mp3",
+          "ve": "· signature dish",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a3a99e98fbd5.mp3"
+        },
+        {
+          "zh": "秘诀",
+          "py": "mìjué",
+          "vn": "· bí quyết",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a106ce80ee3b.mp3",
+          "ve": "· secret technique",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_77a6160d3c99.mp3"
+        },
+        {
+          "zh": "口感",
+          "py": "kǒugǎn",
+          "vn": "· kết cấu/cảm giác trong miệng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9af08962eb79.mp3",
+          "ve": "· texture / mouthfeel",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4cc380b4ccf4.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "这道菜有什么特别的秘诀吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_49a7d6d8969f.mp3",
+          "en": "Is there any special secret to this dish?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_85b6be2d36a1.mp3"
+        },
+        {
+          "zh": "你觉得烹饪最难掌握的技术是什么？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fbe44678d874.mp3",
+          "en": "What's the hardest cooking technique to master?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c0544d9480c4.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "厨房里最忙的时候是什么时候？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0daa89144130.mp3",
+      "pinyin": "Chúfáng lǐ zuì máng de shíhòu shì shénme shíhòu?",
+      "en": "When is the kitchen the busiest?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b9560b8fdb7f.mp3",
+      "vocab": [
+        {
+          "zh": "高峰期",
+          "py": "gāofēng qī",
+          "vn": "· giờ cao điểm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_51eacbd6875b.mp3",
+          "ve": "· peak hours / rush hour",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_163a019d62f7.mp3"
+        },
+        {
+          "zh": "堂食",
+          "py": "táng shí",
+          "vn": "· ăn tại chỗ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d6d597e328e4.mp3",
+          "ve": "· dine-in",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_39950db29f10.mp3"
+        },
+        {
+          "zh": "外卖",
+          "py": "wàimài",
+          "vn": "· giao đồ ăn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a26614c4604d.mp3",
+          "ve": "· food delivery / takeout",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_59fc9d91a764.mp3"
+        },
+        {
+          "zh": "催单",
+          "py": "cuīdān",
+          "vn": "· giục đơn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_291cb4bb4a42.mp3",
+          "ve": "· rush orders",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c7bb6183de68.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "高峰期你们厨房有多少人在工作？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6751e80a75c2.mp3",
+          "en": "How many people are working in the kitchen during peak hours?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_50aab60d9f09.mp3"
+        },
+        {
+          "zh": "出餐压力大吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f8c74d711977.mp3",
+          "en": "Is there a lot of pressure to get orders out fast?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_52be616a6f79.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "在家还会自己做饭吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6d59a5cc7fd5.mp3",
+      "pinyin": "Zài jiā hái huì zìjǐ zuòfàn ma?",
+      "en": "Do you still cook at home yourself?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_206a2de2ca6e.mp3",
+      "vocab": [
+        {
+          "zh": "做饭",
+          "py": "zuòfàn",
+          "vn": "· nấu ăn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e69a3d710606.mp3",
+          "ve": "· cook",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e3e90fd6d2a7.mp3"
+        },
+        {
+          "zh": "叫外卖",
+          "py": "jiào wàimài",
+          "vn": "· gọi đồ ăn giao",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_26adfd0d9f14.mp3",
+          "ve": "· order food delivery",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3c2d873559ac.mp3"
+        },
+        {
+          "zh": "简单做",
+          "py": "jiǎndān zuò",
+          "vn": "· nấu đơn giản",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1eeaf942fc45.mp3",
+          "ve": "· cook simply",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30f4ffcfc830.mp3"
+        },
+        {
+          "zh": "没胃口",
+          "py": "méi wèikǒu",
+          "vn": "· không ngon miệng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cc2bdd09070a.mp3",
+          "ve": "· no appetite",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_725f458e443c.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你家里人喜欢你做的菜吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_59a922246ad1.mp3",
+          "en": "Does your family enjoy the food you cook?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e4b41256b477.mp3"
+        },
+        {
+          "zh": "做了一天菜，回家还有力气再做饭吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_42bdf0520e24.mp3",
+          "en": "After cooking all day, do you still have energy to cook at home?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0e6cc8b60b7d.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "你是怎么进入这行的？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2433858f4329.mp3",
+      "pinyin": "Nǐ shì zěnme jìnrù zhè háng de?",
+      "en": "How did you get into this profession?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d5c192b0673c.mp3",
+      "vocab": [
+        {
+          "zh": "入行",
+          "py": "rùháng",
+          "vn": "· gia nhập ngành",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5c234e9d2271.mp3",
+          "ve": "· enter the field",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_29c0ece23faa.mp3"
+        },
+        {
+          "zh": "拜师",
+          "py": "bài shī",
+          "vn": "· bái sư học nghề",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_94ce638ef861.mp3",
+          "ve": "· apprentice to a master",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_937f66428721.mp3"
+        },
+        {
+          "zh": "学徒",
+          "py": "xuétú",
+          "vn": "· học nghề/thực tập sinh",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e64d0c3e8840.mp3",
+          "ve": "· apprentice",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c11c2b13d63a.mp3"
+        },
+        {
+          "zh": "厨艺学校",
+          "py": "chúyì xuéxiào",
+          "vn": "· trường dạy nấu ăn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4ce833aee75b.mp3",
+          "ve": "· culinary school",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ac1db7f1a0f.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你是跟谁学的厨艺？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9046144eb95f.mp3",
+          "en": "Who did you learn cooking from?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d662fa48672d.mp3"
+        },
+        {
+          "zh": "做厨师需要考什么证书吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_047b0abe584a.mp3",
+          "en": "Do you need any certifications to be a chef?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4450a5c4cbe3.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "最喜欢用什么食材？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2168a6189b38.mp3",
+      "pinyin": "Zuì xǐhuān yòng shénme shícái?",
+      "en": "What ingredients do you love working with most?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_504d954fef3b.mp3",
+      "vocab": [
+        {
+          "zh": "食材",
+          "py": "shícái",
+          "vn": "· nguyên liệu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_43589f00ebf7.mp3",
+          "ve": "· ingredients",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e049012c6990.mp3"
+        },
+        {
+          "zh": "新鲜",
+          "py": "xīnxiān",
+          "vn": "· tươi",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0ec6e913a8b0.mp3",
+          "ve": "· fresh",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_76010858c836.mp3"
+        },
+        {
+          "zh": "海鲜",
+          "py": "hǎixiān",
+          "vn": "· hải sản",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d39d8417b961.mp3",
+          "ve": "· seafood",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f57611add43f.mp3"
+        },
+        {
+          "zh": "本地食材",
+          "py": "běndì shícái",
+          "vn": "· nguyên liệu địa phương",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_da7ff0632b34.mp3",
+          "ve": "· local ingredients",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23c11e98fa29.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得食材好不好对菜的质量影响大吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4a624b29c7e2.mp3",
+          "en": "Do you think the quality of ingredients greatly affects the dish?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d3187330d71c.mp3"
+        },
+        {
+          "zh": "有没有什么食材是你不喜欢用的？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e1e6572b7dae.mp3",
+          "en": "Are there any ingredients you don't like working with?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fb529eb84477.mp3"
+        }
+      ]
+    }
+  ]
+}

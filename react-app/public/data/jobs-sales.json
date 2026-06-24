@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "title": "Câu hỏi cho đối phương",
+    "timerBadge": "⏱ 7 phút / 七分钟",
+    "type": "job-ask",
+    "jobBadge": "📊 Sales / Marketing / 销售"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "zh": "你做的是哪方面的销售/市场？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8afc5fcc364e.mp3",
+      "pinyin": "Nǐ zuò de shì nǎ fāngmiàn de xiāoshòu / shìchǎng?",
+      "en": "What area of sales or marketing are you in?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e814f4cfa175.mp3",
+      "vocab": [
+        {
+          "zh": "销售",
+          "py": "xiāoshòu",
+          "vn": "· bán hàng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7f0dc5e3bbee.mp3",
+          "ve": "· sales",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9ed083b1436e.mp3"
+        },
+        {
+          "zh": "市场",
+          "py": "shìchǎng",
+          "vn": "· marketing/thị trường",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_552cacb8043a.mp3",
+          "ve": "· market / marketing",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1481bb43d420.mp3"
+        },
+        {
+          "zh": "品牌",
+          "py": "pǐnpái",
+          "vn": "· thương hiệu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_09307ce83952.mp3",
+          "ve": "· brand",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c4d3a946a1f.mp3"
+        },
+        {
+          "zh": "线上推广",
+          "py": "xiànshàng tuīguǎng",
+          "vn": "· quảng bá trực tuyến",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c1a2d8695014.mp3",
+          "ve": "· online promotion",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f34fc66e49ab.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你卖的是什么产品或服务？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4cc7fea6775b.mp3",
+          "en": "What product or service do you sell?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d747bebb18ff.mp3"
+        },
+        {
+          "zh": "你主要针对哪类客户群体？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d7fdad5a37d4.mp3",
+          "en": "What type of customers do you mainly target?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9ade11a89040.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zh": "你主要怎么找客户？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_12fa7f7ebf52.mp3",
+      "pinyin": "Nǐ zhǔyào zěnme zhǎo kèhù?",
+      "en": "How do you mainly find customers?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_72b355eec6da.mp3",
+      "vocab": [
+        {
+          "zh": "客户",
+          "py": "kèhù",
+          "vn": "· khách hàng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ff0b207718d7.mp3",
+          "ve": "· client / customer",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b1d4521c521.mp3"
+        },
+        {
+          "zh": "陌生拜访",
+          "py": "mòshēng bàifǎng",
+          "vn": "· cold call/tiếp cận người lạ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_523b32ad6658.mp3",
+          "ve": "· cold calling / cold canvassing",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f7cb862012ca.mp3"
+        },
+        {
+          "zh": "转介绍",
+          "py": "zhuǎn jièshào",
+          "vn": "· giới thiệu qua khách cũ",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_594c7f719a4b.mp3",
+          "ve": "· client referral",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ced4aa3d26e.mp3"
+        },
+        {
+          "zh": "社交媒体",
+          "py": "shèjiāo méitǐ",
+          "vn": "· mạng xã hội",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_58ba1baa4d39.mp3",
+          "ve": "· social media",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_56b7bb687185.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "现在做销售还需要打cold call吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_0c2a85909b72.mp3",
+          "en": "Do you still need to make cold calls in sales now?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c306a2532b9c.mp3"
+        },
+        {
+          "zh": "你觉得哪种获客方式最有效？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b0c241a5330b.mp3",
+          "en": "What customer acquisition method do you find most effective?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c8b8b61d26b.mp3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "zh": "销售有没有业绩压力？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2837526d9bc8.mp3",
+      "pinyin": "Xiāoshòu yǒu méiyǒu yèjī yālì?",
+      "en": "Is there performance pressure in sales?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1c593b1d07e.mp3",
+      "vocab": [
+        {
+          "zh": "业绩",
+          "py": "yèjī",
+          "vn": "· doanh số/kết quả",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_32ba4f6ebfb1.mp3",
+          "ve": "· performance results",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8d3307ed8c17.mp3"
+        },
+        {
+          "zh": "指标",
+          "py": "zhǐbiāo",
+          "vn": "· KPI/chỉ tiêu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7e687515fc56.mp3",
+          "ve": "· KPI / target",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d755a1ad668d.mp3"
+        },
+        {
+          "zh": "提成",
+          "py": "tíchéng",
+          "vn": "· hoa hồng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_de03c4d1c5c4.mp3",
+          "ve": "· commission",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2fbf858aea52.mp3"
+        },
+        {
+          "zh": "完不成",
+          "py": "wán bu chéng",
+          "vn": "· không đạt chỉ tiêu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f83a661a9440.mp3",
+          "ve": "· fail to hit targets",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c59771824e23.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "完不成业绩会怎么样？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bd258c4a7016.mp3",
+          "en": "What happens if you don't hit your targets?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6cef707374a4.mp3"
+        },
+        {
+          "zh": "你一般怎么给自己减压？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_75aafb7b665b.mp3",
+          "en": "How do you usually relieve stress for yourself?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b7d620de6a4f.mp3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zh": "遇到很难搞的客户，你怎么处理？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1393eb3fe222.mp3",
+      "pinyin": "Yùdào hěn nán gǎo de kèhù, nǐ zěnme chǔlǐ?",
+      "en": "How do you handle difficult customers?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d7a3e8223908.mp3",
+      "vocab": [
+        {
+          "zh": "难搞",
+          "py": "nán gǎo",
+          "vn": "· khó chiều/khó tính",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7a2b6d1eac69.mp3",
+          "ve": "· hard to deal with",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_522d8965d8b2.mp3"
+        },
+        {
+          "zh": "投诉",
+          "py": "tóusù",
+          "vn": "· khiếu nại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_e19d1d1a25fd.mp3",
+          "ve": "· file a complaint",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1bbb967b67f3.mp3"
+        },
+        {
+          "zh": "退款",
+          "py": "tuìkuǎn",
+          "vn": "· hoàn tiền",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_44c198c146ae.mp3",
+          "ve": "· refund",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df6f85687a0d.mp3"
+        },
+        {
+          "zh": "耐心",
+          "py": "nàixīn",
+          "vn": "· kiên nhẫn",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1c46dd81cd41.mp3",
+          "ve": "· patience",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4c8476db197a.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有遇到过特别无理的客户？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7d8a3d87b278.mp3",
+          "en": "Have you ever encountered an especially unreasonable customer?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab6e76778a78.mp3"
+        },
+        {
+          "zh": "你觉得客户永远是对的吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_68984a8f6652.mp3",
+          "en": "Do you think the customer is always right?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_95b03bc67295.mp3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zh": "做销售最有成就感的是什么？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_8e9645e803af.mp3",
+      "pinyin": "Zuò xiāoshòu zuì yǒu chéngjiùgǎn de shì shénme?",
+      "en": "What's the most satisfying part of sales?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e5982d2401f1.mp3",
+      "vocab": [
+        {
+          "zh": "成交",
+          "py": "chéngjiao",
+          "vn": "· chốt hợp đồng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6e0488570e2e.mp3",
+          "ve": "· close a deal",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_51f9020a931b.mp3"
+        },
+        {
+          "zh": "超额完成",
+          "py": "chāo'é wánchéng",
+          "vn": "· vượt chỉ tiêu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_31f803f0cc0a.mp3",
+          "ve": "· exceed targets",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d35dfd640fad.mp3"
+        },
+        {
+          "zh": "信任",
+          "py": "xìnrèn",
+          "vn": "· tin tưởng",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ba871361454d.mp3",
+          "ve": "· trust",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac05c7d8f440.mp3"
+        },
+        {
+          "zh": "回头客",
+          "py": "huítóu kè",
+          "vn": "· khách hàng quay lại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_462a84ed278b.mp3",
+          "ve": "· returning customer",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_be1cf534c304.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有印象最深的一次成交？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5f0382283dd2.mp3",
+          "en": "What's the most memorable deal you've closed?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_29e65e8f845f.mp3"
+        },
+        {
+          "zh": "你怎么建立和客户的长期关系？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a5528176c950.mp3",
+          "en": "How do you build long-term relationships with customers?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e5e9e983a054.mp3"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zh": "你觉得做销售需要什么性格？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_33d4fd627db5.mp3",
+      "pinyin": "Nǐ juéde zuò xiāoshòu xūyào shénme xìnggé?",
+      "en": "What personality do you think suits sales best?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d3bdb06f9700.mp3",
+      "vocab": [
+        {
+          "zh": "性格",
+          "py": "xìnggé",
+          "vn": "· tính cách",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_689150c23002.mp3",
+          "ve": "· personality",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_389c96dcef75.mp3"
+        },
+        {
+          "zh": "外向",
+          "py": "wàixiàng",
+          "vn": "· hướng ngoại",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7d9daf137124.mp3",
+          "ve": "· extroverted",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d49cc4ace233.mp3"
+        },
+        {
+          "zh": "抗压",
+          "py": "kàng yā",
+          "vn": "· chịu được áp lực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fafa4b39fa33.mp3",
+          "ve": "· stress resilience",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e12652268ff.mp3"
+        },
+        {
+          "zh": "同理心",
+          "py": "tónglǐ xīn",
+          "vn": "· sự đồng cảm",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ca2984540961.mp3",
+          "ve": "· empathy",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_68dd29a95522.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你觉得内向的人能做好销售吗？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fd4115757bb4.mp3",
+          "en": "Do you think introverts can do well in sales?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b083e9945c4b.mp3"
+        },
+        {
+          "zh": "做销售有没有改变了你的性格？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_aab82ae82504.mp3",
+          "en": "Has working in sales changed your personality?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e12773cc43ea.mp3"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zh": "现在大家都在网上买东西，对你的工作有影响吗？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cf66ba5e2ddd.mp3",
+      "pinyin": "Xiànzài dàjiā dōu zài wǎngshàng mǎi dōngxi, duì nǐ de gōngzuò yǒu yǐngxiǎng ma?",
+      "en": "Everyone shops online now — does that affect your work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_083232f2dbc6.mp3",
+      "vocab": [
+        {
+          "zh": "电商",
+          "py": "diànshāng",
+          "vn": "· thương mại điện tử",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_802a181dcf3e.mp3",
+          "ve": "· e-commerce",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c59bda8712cf.mp3"
+        },
+        {
+          "zh": "直播带货",
+          "py": "zhíbō dài huò",
+          "vn": "· bán hàng qua livestream",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ef5e3f13b9a2.mp3",
+          "ve": "· livestream commerce",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_de3b8277554d.mp3"
+        },
+        {
+          "zh": "线下",
+          "py": "xiànxià",
+          "vn": "· offline/trực tiếp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_75ab31b47ff2.mp3",
+          "ve": "· offline",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_27a21354321d.mp3"
+        },
+        {
+          "zh": "转型",
+          "py": "zhuǎnxíng",
+          "vn": "· chuyển đổi",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1e68ebb3b76f.mp3",
+          "ve": "· pivot / transform",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_35cdca1412be.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你们有没有做直播带货？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_94b12cdea577.mp3",
+          "en": "Do you do live-stream selling?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e772b46026ee.mp3"
+        },
+        {
+          "zh": "你觉得线上和线下销售哪个更有前景？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ea9eb870b985.mp3",
+          "en": "Which do you think has better prospects — online or offline sales?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0fff5603ec00.mp3"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zh": "你是怎么保持对工作的热情的？",
+      "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ccd114e2d640.mp3",
+      "pinyin": "Nǐ shì zěnme bǎochí duì gōngzuò de rèqíng de?",
+      "en": "How do you keep your enthusiasm for work?",
+      "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e8bdb9b43466.mp3",
+      "vocab": [
+        {
+          "zh": "热情",
+          "py": "rèqíng",
+          "vn": "· nhiệt tình",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f840bd14ab46.mp3",
+          "ve": "· enthusiasm",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b29e740c1412.mp3"
+        },
+        {
+          "zh": "动力",
+          "py": "dònglì",
+          "vn": "· động lực",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3c7603a8cb47.mp3",
+          "ve": "· motivation",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8b20d3634bbb.mp3"
+        },
+        {
+          "zh": "职业倦怠",
+          "py": "zhíyè juàndài",
+          "vn": "· kiệt sức nghề nghiệp",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7ec58653491f.mp3",
+          "ve": "· professional burnout",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_97826e364e07.mp3"
+        },
+        {
+          "zh": "目标",
+          "py": "mùbiāo",
+          "vn": "· mục tiêu",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_73e82552c8c1.mp3",
+          "ve": "· goal / target",
+          "veAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b3d5f408fd75.mp3"
+        }
+      ],
+      "followup": [
+        {
+          "zh": "你有没有经历过职业倦怠？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c36534cd16eb.mp3",
+          "en": "Have you ever experienced burnout?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac04f3aeb2ed.mp3"
+        },
+        {
+          "zh": "你有没有想过换一个完全不同的行业？",
+          "zhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_45ce1a2b268b.mp3",
+          "en": "Have you ever thought about switching to a completely different field?",
+          "enAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dbc35bb67b0d.mp3"
+        }
+      ]
+    }
+  ]
+}

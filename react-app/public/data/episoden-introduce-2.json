@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "title": "Câu trả lời của Khánh (Iron)",
+    "sub": "Tiếng Trung + Tiếng Anh — click Copy để dùng ngay",
+    "type": "introduce"
+  },
+  "answers": [
+    {
+      "id": 1,
+      "questionZh": "你有兄弟姐妹吗？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_36292bfc888a.mp3",
+      "questionVi": "Bạn có anh chị em không?",
+      "answerZh": "我有兄弟姐妹。我们关系还不错，虽然住得不近，但经常联系。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_360715e41503.mp3",
+      "pinyin": "Wǒ yǒu xiōngdì jiěmèi. Wǒmen guānxi hái bùcuò, suīrán zhù de bù jìn, dàn jīngcháng liánxì.",
+      "answerEn": "Yes, I have siblings. We have a good relationship — we don't live close to each other, but we stay in touch regularly.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67932c42e03c.mp3",
+      "note": null,
+      "keywords": [
+        "关系 guānxi = mối quan hệ",
+        "联系 liánxì = liên lạc"
+      ]
+    },
+    {
+      "id": 2,
+      "questionZh": "你最喜欢看什么电影或电视剧？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7c04315fbcfd.mp3",
+      "questionVi": "Bạn thích xem phim gì?",
+      "answerZh": "我喜欢看动作片和科幻片。最近也开始看中文剧来练习中文，挺有意思的。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_3313df18dc80.mp3",
+      "pinyin": "Wǒ xǐhuān kàn dòngzuò piàn hé kēhuàn piàn. Zuìjìn yě kāishǐ kàn zhōngwén jù lái liànxí zhōngwén, tǐng yǒuyìsi de.",
+      "answerEn": "I enjoy action and sci-fi movies. I've also recently started watching Chinese dramas to practice my Chinese — it's actually quite fun.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6f48d39cb7d7.mp3",
+      "note": null,
+      "keywords": [
+        "科幻片 kēhuàn piàn = phim khoa học viễn tưởng",
+        "中文剧 = phim Trung Quốc"
+      ]
+    },
+    {
+      "id": 3,
+      "questionZh": "你觉得学语言最难的是什么？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1b040ce4eecf.mp3",
+      "questionVi": "Bạn thấy học ngôn ngữ khó nhất ở điểm nào?",
+      "answerZh": "我觉得最难的是口语，因为想说的时候脑子里找不到词。听力也很难，说话太快就听不懂了。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6ba269c60e0b.mp3",
+      "pinyin": "Wǒ juéde zuì nán de shì kǒuyǔ, yīnwèi xiǎng shuō de shíhòu nǎozi lǐ zhǎo bù dào cí. Tīnglì yě hěn nán, shuōhuà tài kuài jiù tīng bù dǒng le.",
+      "answerEn": "I think speaking is the hardest part — when I want to say something, I can't find the right words fast enough. Listening is tough too; if someone speaks too fast, I lose track completely.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac3a6a6a1b95.mp3",
+      "note": null,
+      "keywords": [
+        "口语 kǒuyǔ = khẩu ngữ / nói",
+        "听力 tīnglì = nghe hiểu",
+        "脑子 nǎozi = não bộ"
+      ]
+    },
+    {
+      "id": 4,
+      "questionZh": "你有没有养宠物？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_17dcb5289549.mp3",
+      "questionVi": "Bạn có nuôi thú cưng không?",
+      "answerZh": "我现在没有养宠物。因为我一个人住在河内，上班又比较忙，没时间照顾。不过我挺喜欢狗的。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fac5411490e9.mp3",
+      "pinyin": "Wǒ xiànzài méiyǒu yǎng chǒngwù. Yīnwèi wǒ yīgè rén zhù zài Hénèi, shàngbān yòu bǐjiào máng, méi shíjiān zhàogù. Búguò wǒ tǐng xǐhuān gǒu de.",
+      "answerEn": "I don't have any pets right now. Since I live alone in Hanoi and work keeps me pretty busy, I don't have time to take care of one. But I really like dogs.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e8e8749d7311.mp3",
+      "note": null,
+      "keywords": [
+        "照顾 zhàogù = chăm sóc",
+        "一个人住 = sống một mình"
+      ]
+    },
+    {
+      "id": 5,
+      "questionZh": "你平时几点起床？是早起型吗？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_23b68ec63278.mp3",
+      "questionVi": "Bạn thường dậy mấy giờ? Bạn là người dậy sớm không?",
+      "answerZh": "我一般六七点起床。我不算早起型，也不是夜猫子，比较正常吧。工作日要上班，所以不能睡太晚。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_dbb5cc42f41c.mp3",
+      "pinyin": "Wǒ yībān liù qī diǎn qǐchuáng. Wǒ bú suàn zǎoqǐ xíng, yě bú shì yèmāozi, bǐjiào zhèngcháng ba. Gōngzuòrì yào shàngbān, suǒyǐ bù néng shuì tài wǎn.",
+      "answerEn": "I usually get up around six or seven. I'm neither a super early bird nor a night owl — pretty average, I'd say. On weekdays I have work, so I can't stay up too late.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef2041851675.mp3",
+      "note": null,
+      "keywords": [
+        "夜猫子 yèmāozi = cú đêm",
+        "工作日 gōngzuòrì = ngày làm việc"
+      ]
+    },
+    {
+      "id": 6,
+      "questionZh": "你最想去哪个国家旅游？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4cd9f53b3eab.mp3",
+      "questionVi": "Bạn muốn đến nước nào nhất?",
+      "answerZh": "我很想去日本，因为我对日本文化很感兴趣，比如食物、风景还有动漫。中国也在我的愿望清单里！",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_05a22671aa7e.mp3",
+      "pinyin": "Wǒ hěn xiǎng qù Rìběn, yīnwèi wǒ duì Rìběn wénhuà hěn gǎn xìngqù, bǐrú shíwù, fēngjǐng hái yǒu dòngmàn. Zhōngguó yě zài wǒ de yuànwàng qīngdān lǐ!",
+      "answerEn": "I'd love to visit Japan — I'm really interested in Japanese culture, like the food, the scenery, and anime. China is also on my bucket list!",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb7104f312b9.mp3",
+      "note": null,
+      "keywords": [
+        "感兴趣 gǎn xìngqù = quan tâm / hứng thú",
+        "愿望清单 yuànwàng qīngdān = danh sách ước mơ"
+      ]
+    },
+    {
+      "id": 7,
+      "questionZh": "你喜欢听什么音乐？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_1c3f5cfa5226.mp3",
+      "questionVi": "Bạn thích nghe nhạc gì?",
+      "answerZh": "我喜欢听流行音乐，英文歌和越南歌都听。有时候也听轻音乐，比较舒服，适合工作的时候听。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6ef4f0668795.mp3",
+      "pinyin": "Wǒ xǐhuān tīng liúxíng yīnyuè, yīngwén gē hé Yuènán gē dōu tīng. Yǒushíhòu yě tīng qīng yīnyuè, bǐjiào shūfu, shìhé gōngzuò de shíhòu tīng.",
+      "answerEn": "I enjoy pop music — both English and Vietnamese songs. Sometimes I listen to soft, ambient music too. It's relaxing and great for focusing while working.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cff69fcddad6.mp3",
+      "note": null,
+      "keywords": [
+        "流行 liúxíng = nhạc pop",
+        "轻音乐 qīng yīnyuè = nhạc nhẹ",
+        "舒服 shūfu = dễ chịu"
+      ]
+    },
+    {
+      "id": 8,
+      "questionZh": "你最近在忙什么？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_76aa72fb0690.mp3",
+      "questionVi": "Gần đây bạn đang bận gì?",
+      "answerZh": "最近工作比较忙，做了一些网页项目。业余时间在学英语和中文。每天都觉得时间不够用！",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_312e50d410a0.mp3",
+      "pinyin": "Zuìjìn gōngzuò bǐjiào máng, zuò le yīxiē wǎngyè xiàngmù. Yèyú shíjiān zài xué yīngyǔ hé zhōngwén. Měitiān dōu juéde shíjiān bùgòu yòng!",
+      "answerEn": "Work has been pretty busy lately — I've been working on some web projects. In my free time I'm studying English and Chinese. There never seems to be enough hours in the day!",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_83ba64642242.mp3",
+      "note": null,
+      "keywords": [
+        "项目 xiàngmù = dự án",
+        "业余时间 yèyú shíjiān = thời gian rảnh"
+      ]
+    },
+    {
+      "id": 9,
+      "questionZh": "你觉得越南和中国有什么不同？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_339835223080.mp3",
+      "questionVi": "Bạn thấy Việt Nam và Trung Quốc khác nhau thế nào?",
+      "answerZh": "我觉得两国文化有很多相似的地方，比如重视家庭、传统节日的习俗。不同的地方是饮食和语言。中文的声调很难，越南语也有声调，所以我有点感觉。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cac64ce03c61.mp3",
+      "pinyin": "Wǒ juéde liǎng guó wénhuà yǒu hěn duō xiāngsì de dìfāng, bǐrú zhòngshì jiātíng, chuántǒng jiérì de xísú. Bùtóng de dìfāng shì yǐnshí hé yǔyán. Zhōngwén de shēngdiào hěn nán, Yuènán yǔ yě yǒu shēngdiào, suǒyǐ wǒ yǒudiǎn gǎnjué.",
+      "answerEn": "I think the two cultures share a lot — like the importance of family and traditional holiday customs. The main differences are food and language. Chinese tones are really hard, but Vietnamese also has tones, so I have a bit of a feel for it.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b46f07a95274.mp3",
+      "note": null,
+      "keywords": [
+        "声调 shēngdiào = thanh điệu",
+        "传统 chuántǒng = truyền thống",
+        "重视 zhòngshì = coi trọng"
+      ]
+    },
+    {
+      "id": 10,
+      "questionZh": "如果你有很多钱，你会做什么？",
+      "questionZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b0c222e41558.mp3",
+      "questionVi": "Nếu có nhiều tiền, bạn sẽ làm gì?",
+      "answerZh": "如果我有很多钱，我首先会让我的家人生活得更好。然后我想去很多国家旅游，学更多的语言。可能还会做自己喜欢的项目。",
+      "answerZhAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_98434e481b71.mp3",
+      "pinyin": "Rúguǒ wǒ yǒu hěn duō qián, wǒ shǒuxiān huì ràng wǒ de jiārén shēnghuó de gèng hǎo. Rán hòu wǒ xiǎng qù hěn duō guójiā lǚyóu, xué gèng duō de yǔyán. Kěnéng hái huì zuò zìjǐ xǐhuān de xiàngmù.",
+      "answerEn": "If I had a lot of money, the first thing I'd do is make sure my family lives comfortably. Then I'd travel to many countries and learn more languages. I'd probably also work on personal projects I'm passionate about.",
+      "answerEnAudio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e3ba064bcf6.mp3",
+      "note": null,
+      "keywords": [
+        "首先 shǒuxiān = trước tiên",
+        "家人 jiārén = gia đình",
+        "可能 kěnéng = có thể"
+      ]
+    }
+  ]
+}

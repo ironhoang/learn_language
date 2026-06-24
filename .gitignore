@@ -19,9 +19,17 @@ spec/
 
 # Un-ignore shared JS
 !*.js
+!*.jsx
 
 # Un-ignore docs/
 !*.md
+
+# Un-ignore styles & assets
+!*.css
+!*.svg
+
+# Un-ignore JSON (package.json, data files)
+!*.json
 
 # Un-ignore chính file này
 !.gitignore
