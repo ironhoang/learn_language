@@ -58,6 +58,15 @@
       color: #f97316;
       border-left: 3px solid #f97316;
       background: #1a1208;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sec-icon {
+      font-size: 1rem; opacity: 0.8; flex-shrink: 0;
+      text-transform: none; letter-spacing: 0;
     }
 
     .card {
@@ -463,6 +472,8 @@
     audio.play();
     active = { audio: audio, btn: btn };
     audio.onended = function () { btn.classList.remove('playing'); active = null; };
+    var card = btn.closest ? btn.closest('.card') : null;
+    if (card) { card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
   };
 })();
 </script>
@@ -509,6 +520,59 @@
     pa.list.forEach(function (b) { b.classList.remove('playing'); });
   }
 
+  function expandSection(label) {
+    label.classList.remove('collapsed');
+    var icon = label.querySelector('.sec-icon');
+    if (icon) icon.textContent = '▾';
+    var s = label.nextElementSibling;
+    while (s && !s.classList.contains('section-label')) {
+      s.style.display = '';
+      s = s.nextElementSibling;
+    }
+  }
+
+  function toggleSection(label) {
+    if (label.classList.contains('collapsed')) {
+      expandSection(label);
+    } else {
+      label.classList.add('collapsed');
+      var icon = label.querySelector('.sec-icon');
+      if (icon) icon.textContent = '▸';
+      var s = label.nextElementSibling;
+      while (s && !s.classList.contains('section-label')) {
+        s.style.display = 'none';
+        s = s.nextElementSibling;
+      }
+    }
+  }
+
+  // Thêm icon toggle vào mỗi section-label
+  document.querySelectorAll('.section-label').forEach(function(label) {
+    var span = document.createElement('span');
+    span.className = 'sec-icon';
+    span.textContent = '▾';
+    label.appendChild(span);
+  });
+
+  function getOwnerLabel(card) {
+    var nodes = Array.from(document.querySelectorAll('.cards > .section-label, .cards > .card'));
+    var label = null;
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i].classList.contains('section-label')) label = nodes[i];
+      if (nodes[i] === card) return label;
+    }
+    return null;
+  }
+
+  function scrollToCard(btn) {
+    var card = btn.closest ? btn.closest('.card') : null;
+    if (!card) return;
+    var label = getOwnerLabel(card);
+    if (label && label.classList.contains('collapsed')) expandSection(label);
+    card.style.display = '';
+    setTimeout(function () { card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
+  }
+
   function step() {
     if (!pa.on) return;
     if (pa.idx >= pa.list.length) { pa.idx = 0; }
@@ -516,6 +580,7 @@
     if (!btn || !btn.dataset.src) { pa.idx++; step(); return; }
     pa.list.forEach(function (b) { b.classList.remove('playing'); });
     btn.classList.add('playing');
+    scrollToCard(btn);
     updateStatus();
     pa.audio = new Audio(btn.dataset.src);
     pa.audio.play().catch(function () { pa.idx++; step(); });
@@ -543,6 +608,10 @@
     });
   });
   stopBtn.addEventListener('click', stopAll);
+
+  document.querySelectorAll('.section-label').forEach(function (label) {
+    label.addEventListener('click', function () { toggleSection(label); });
+  });
 
   document.addEventListener('click', function (e) {
     var t   = e.target;
