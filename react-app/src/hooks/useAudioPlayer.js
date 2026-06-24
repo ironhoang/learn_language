@@ -1,7 +1,10 @@
 // Module-level singleton — one audio plays at a time across all components
 let currentAudio = null;
 let currentSrc = null;
+let lastManualSrc = null; // last src the user clicked manually
 let subscribers = [];
+
+export function getLastManualSrc() { return lastManualSrc; }
 
 function notify() {
   subscribers.forEach(fn => fn(currentSrc));
@@ -56,6 +59,7 @@ export function useAudioPlayer() {
   }, []);
 
   function toggle(src) {
+    lastManualSrc = src; // remember where the user was
     if (currentSrc === src) stopCurrent();
     else playSrc(src);
   }
