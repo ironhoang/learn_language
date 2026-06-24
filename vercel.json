@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm --prefix react-app install && npm --prefix react-app run build",
-  "outputDirectory": "react-app/dist",
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist",
   "installCommand": "echo skip"
 }
