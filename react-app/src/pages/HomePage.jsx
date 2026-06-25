@@ -62,6 +62,17 @@ const HAN = [
   { to: '/han/with-kid', icon: '👶', title: 'Tiếng Hàn cùng con', desc: '40 câu cho bé 2 tuổi: chào hỏi, sinh hoạt, ăn uống, vui chơi' },
 ];
 
+const TECH = [
+  { href: '/sum-tech/01_python_core.html',    icon: '🐍', title: 'Python Core',             desc: '20 câu: GIL, đa luồng, decorators, generators, memory management' },
+  { href: '/sum-tech/02_fastapi.html',        icon: '⚡', title: 'FastAPI & Framework',      desc: '20 câu: async/await, dependency injection, middleware, routing' },
+  { href: '/sum-tech/03_database.html',       icon: '🗄️', title: 'Database',                desc: '20 câu: ACID, indexing, transactions, Redis, CAP theorem' },
+  { href: '/sum-tech/04_security.html',       icon: '🔐', title: 'Bảo mật',                 desc: '20 câu: JWT, OAuth, SQL injection, XSS, CSRF, bcrypt, TLS' },
+  { href: '/sum-tech/05_algorithms.html',     icon: '🧮', title: 'Thuật toán & CTDL',       desc: '20 câu: Big O, sorting, tree, graph, dynamic programming' },
+  { href: '/sum-tech/06_project_design.html', icon: '🏗️', title: 'Project & System Design', desc: '20 câu: microservices, circuit breaker, saga, observability' },
+  { href: '/sum-tech/07_oop_solid.html',      icon: '🧩', title: 'OOP & SOLID',              desc: '18 câu: encapsulation, polymorphism, design patterns, SOLID' },
+  { href: '/sum-tech/summary.html',           icon: '📋', title: 'Summary — Tổng hợp',      desc: 'Tất cả câu hỏi theo chủ đề, nhìn nhanh toàn bộ' },
+];
+
 export default function HomePage() {
   return (
     <div className="home-page">
@@ -134,6 +145,25 @@ export default function HomePage() {
                 <div className="card-arrow">Mở →</div>
               </Link>
             ))}
+          </div>
+        </div>
+
+        {/* Ôn tập kỹ thuật */}
+        <div>
+          <div className="section-header"><h2>Ôn tập kỹ thuật</h2></div>
+          <div className="set-group">
+            <div className="set-title">20 câu hỏi mỗi chủ đề · giải thích tiếng Việt · có audio</div>
+            <div className="set-cards">
+              {TECH.map(t => (
+                <a key={t.href} className="nav-card" href={t.href}>
+                  <div className="card-icon">{t.icon}</div>
+                  <div className="card-type tech">Tech</div>
+                  <div className="card-title">{t.title}</div>
+                  <div className="card-desc">{t.desc}</div>
+                  <div className="card-arrow">Mở →</div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

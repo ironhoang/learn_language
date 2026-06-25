@@ -57,6 +57,7 @@ body {
 .card-type.ask  { color: #f472b6; }
 .card-type.intro { color: #34d399; }
 .card-type.job  { color: #22d3ee; }
+.card-type.tech { color: #a78bfa; }
 .card-title { font-size: 0.95rem; font-weight: 700; color: #f1f5f9; line-height: 1.3; margin-bottom: 6px; }
 .card-desc  { font-size: 0.78rem; color: #64748b; line-height: 1.5; flex: 1; }
 .card-arrow { margin-top: 12px; font-size: 0.75rem; color: #334155; transition: color 0.15s; }
