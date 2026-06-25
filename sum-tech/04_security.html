@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>Security — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #ef4444; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #ef4444; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #7f1d1d; margin-bottom: 16px; }
+  .qnum { background: #fee2e2; color: #b91c1c; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #b91c1c; font-weight: 600; }
+  .analogy { background: #fff1f2; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #fca5a5; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #ef4444; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; }
+  .copy-btn:hover { background: #dc2626; }
+
+  .audio-bar { margin: -4px 0 14px; }
+  .audio-bar audio { width: 100%; height: 36px; }
+  .audio-note { font-size: 13px; color: #999; margin-bottom: 3px; font-style: italic; }
+  #playAllBtn { position: fixed; top: 64px; right: 20px; padding: 10px 18px;
+    background: #ef4444; color: white; border: none; border-radius: 8px;
+    cursor: pointer; font-size: 16px; font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25); z-index: 100; }
+  #playAllBtn.playing { background: #dc2626; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<button id="playAllBtn" onclick="playAll()">▶ Play All</button>
+<h1>Bảo mật — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> Phân biệt Authentication và Authorization?</div><div class="audio-bar"><div class="audio-note">Câu 1 &amp; 2</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_01_02_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Authentication</span> — xác thực: xác nhận bạn là ai. Hệ thống hỏi "bạn có thực sự là người bạn tự xưng không?" — bạn cung cấp mật khẩu, OTP, vân tay để chứng minh.</p>
+<p><span class="term">Authorization</span> — phân quyền: sau khi biết bạn là ai, kiểm tra bạn được làm gì. Nhân viên giao dịch được xem thông tin tài khoản nhưng không được phê duyệt khoản vay lớn.</p>
+<p>Hai khái niệm theo thứ tự cố định: phải xác thực xong mới phân quyền được.</p>
+<div class="analogy">Vào tòa nhà công ty: quẹt thẻ ở cổng là authentication — bảo vệ biết bạn là nhân viên hợp lệ. Không vào được phòng server là authorization — bảo vệ đã biết bạn là ai, nhưng hệ thống kiểm tra bạn có quyền vào phòng đó không.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> Cấu trúc của JWT là gì? Làm sao hoạt động?</div>
+<div class="answer">
+<p><span class="term">JWT</span> là chuỗi văn bản mang thông tin có thể xác minh, gồm ba phần ngăn cách bởi dấu chấm.</p>
+<p><span class="term">Header</span>: loại token và thuật toán mã hóa. <span class="term">Payload</span>: thông tin như user id, vai trò, thời gian tạo, thời gian hết hạn. <span class="term">Signature</span>: chữ ký tạo bằng cách mã hóa header+payload với khóa bí mật chỉ server biết.</p>
+<p>Khi nhận JWT, server tính lại chữ ký từ header+payload, so với chữ ký trong token. Khớp → dữ liệu toàn vẹn. Ai đó sửa payload để nâng quyền → chữ ký không còn khớp, token bị từ chối.</p>
+<div class="analogy">Giấy tờ có con dấu công chứng — ai cũng đọc được nội dung, nhưng không làm giả được con dấu nếu không có khuôn dấu thật. Con dấu là chữ ký, khuôn dấu là khóa bí mật của server.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Access Token và Refresh Token khác nhau thế nào?</div><div class="audio-bar"><div class="audio-note">Câu 3 &amp; 4</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_03_04_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Access Token</span>: gửi kèm mỗi request để chứng minh quyền truy cập. Vì xuất hiện trong mọi request nên nguy cơ bị đánh cắp cao — thời gian sống ngắn, thường 15–60 phút.</p>
+<p><span class="term">Refresh Token</span>: chỉ dùng khi access token hết hạn để xin cấp cái mới. Không gửi kèm mọi request, chỉ dùng đúng một chỗ — thời gian sống dài hơn, thường 7–30 ngày. Lưu trong httpOnly cookie không đọc được qua JavaScript.</p>
+<div class="analogy">Access token như vé vào cửa ngắn hạn — vài giờ là hết. Refresh token như phiếu đổi vé — đưa phiếu để lấy vé mới, không cần đăng ký lại từ đầu. Phiếu đổi vé được giữ cẩn thận hơn vì mất thì phải đăng ký lại hoàn toàn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Làm sao logout khi dùng JWT? Vấn đề là gì?</div>
+<div class="answer">
+<p>JWT không thể "thu hồi" — token vẫn hợp lệ cho đến khi tự hết hạn dù người dùng đã logout. Đây là điểm phức tạp cốt lõi của JWT so với session truyền thống.</p>
+<p>Giải pháp phổ biến: <span class="term">blacklist</span>. Mỗi JWT có trường <code>jti</code> — JWT ID duy nhất. Khi logout, lưu jti vào Redis với TTL bằng thời gian còn lại của token. Mỗi request đến, kiểm tra jti có trong blacklist không — có thì từ chối.</p>
+<p>Nhược điểm nhỏ: mỗi request tốn thêm một lần tra cứu Redis. Nhưng Redis rất nhanh nên ảnh hưởng không đáng kể.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> OAuth 2.0 Authorization Code Flow là gì?</div><div class="audio-bar"><div class="audio-note">Câu 5 &amp; 6</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_05_06_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">OAuth 2.0</span> cho phép ứng dụng truy cập tài nguyên của user trên hệ thống khác mà không cần biết mật khẩu của họ. Authorization Code Flow là luồng an toàn nhất.</p>
+<p>Bốn bước: (1) ứng dụng chuyển hướng user đến trang đăng nhập của nhà cung cấp, ví dụ Google. (2) User đăng nhập và đồng ý cấp quyền. (3) Google chuyển về ứng dụng kèm authorization code ngắn hạn. (4) Ứng dụng dùng code này đổi lấy access token trực tiếp server-to-server — không qua trình duyệt.</p>
+<p>Bước 4 đi thẳng server-to-server nên access token không bao giờ lộ qua browser. Code chỉ dùng được một lần và hết hạn sau vài phút.</p>
+<div class="analogy">Visa qua đại sứ quán: nộp đơn (redirect đến Google) → nhận thư giới thiệu (authorization code) → đưa thư cho cơ quan cấp visa (server đổi code lấy token). Cơ quan cấp visa xác nhận trực tiếp — bước an toàn nhất.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> SQL Injection là gì? Cách phòng tránh?</div>
+<div class="answer">
+<p><span class="term">SQL Injection</span>: dữ liệu người dùng nhập vào được ghép trực tiếp vào câu query SQL. Kẻ tấn công nhập ký tự đặc biệt thay đổi ý nghĩa của query — có thể trả về toàn bộ dữ liệu, xóa bảng, hoặc điều khiển server.</p>
+<p>Phòng tránh: luôn dùng <span class="term">parameterized query</span>. Thay vì ghép chuỗi, đặt ký hiệu chỗ trống trong query và truyền dữ liệu vào riêng biệt — database xử lý dữ liệu như dữ liệu thuần túy, không bao giờ hiểu là SQL. SQLAlchemy tự động làm điều này.</p>
+<div class="analogy">Nhân viên ngân hàng hỏi tên bạn — nếu bạn có thể đọc bất kỳ lệnh gì, bạn nói "Và hãy chuyển toàn bộ tiền vào tài khoản tôi". Parameterized query giống như form có ô riêng cho từng thông tin — nhân viên chỉ ghi vào ô tên, phần còn lại không ảnh hưởng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> XSS là gì? Cách phòng tránh?</div><div class="audio-bar"><div class="audio-note">Câu 7 &amp; 8</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_07_08_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">XSS — Cross-Site Scripting</span>: kẻ tấn công chèn JavaScript độc hại vào trang web mà user khác sẽ thấy — trình duyệt của họ thực thi script đó, có thể đánh cắp cookie phiên đăng nhập.</p>
+<p>Ví dụ: trang bình luận không lọc nội dung, kẻ tấn công đăng bình luận chứa script. User khác xem bình luận, script chạy, gửi cookie về cho kẻ tấn công.</p>
+<p>Phòng tránh: escape ký tự đặc biệt HTML khi hiển thị dữ liệu user, dùng Content Security Policy, lưu token trong <span class="term">httpOnly cookie</span> để JavaScript không đọc được.</p>
+<div class="analogy">Ai đó dán tờ giấy có hướng dẫn độc hại vào bản tin công ty — nhân viên nhìn thấy và vô tình làm theo. httpOnly cookie như két khóa — ai nhìn thấy tờ giấy cũng không mở được để lấy chìa khóa quan trọng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> CSRF là gì? Cách phòng tránh?</div>
+<div class="answer">
+<p><span class="term">CSRF — Cross-Site Request Forgery</span>: lợi dụng việc trình duyệt tự động gửi cookie kèm mọi request đến một domain. Kẻ tấn công lừa bạn click link trên trang của họ — trình duyệt tự gửi request đến ngân hàng kèm cookie đăng nhập hợp lệ.</p>
+<p>Phòng tránh hiệu quả nhất: thuộc tính <span class="term">SameSite</span> trên cookie. <code>SameSite=Strict</code>: trình duyệt chỉ gửi cookie khi user đang ở đúng domain. <code>SameSite=Lax</code>: phiên bản nhẹ hơn, cho phép một số điều hướng bình thường.</p>
+<p>Cách cũ vẫn phổ biến: CSRF token — server tạo mã ngẫu nhiên nhúng vào form, kiểm tra khi nhận request. Trang web kẻ tấn công không biết được mã này.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> Tại sao không dùng MD5 hay SHA-1 để mã hóa mật khẩu? Dùng gì thay thế?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_09_4.wav"></audio></div>
+<div class="answer">
+<p>MD5 và SHA-1 tính toán rất nhanh — đây chính là vấn đề. Kẻ tấn công dùng GPU mạnh thử hàng tỷ mật khẩu mỗi giây, hoặc tra bảng rainbow table đã tính sẵn hàng triệu cặp mật khẩu/hash.</p>
+<p><span class="term">bcrypt</span> được thiết kế ngược lại — cố ý chậm và tốn tài nguyên. Tự động thêm salt ngẫu nhiên vào mật khẩu, loại bỏ khả năng dùng rainbow table. Có work factor điều chỉnh độ khó theo thời gian khi phần cứng mạnh hơn.</p>
+<p><span class="term">Argon2</span> và <span class="term">scrypt</span> mạnh hơn nữa — không chỉ tốn CPU mà còn tốn nhiều RAM, khiến tấn công bằng phần cứng chuyên dụng khó hơn nhiều.</p>
+<div class="analogy">MD5 như ổ khóa có thể thử mỗi chìa trong một giây. bcrypt như két sắt đòi 10 giây mỗi lần thử, và cơ chế salt đảm bảo không chìa nào dùng lại được. Kẻ trộm cần hàng triệu năm thay vì vài giờ.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> HTTPS và TLS hoạt động thế nào?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_10_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">TLS</span> là giao thức mã hóa kết nối. HTTPS là HTTP chạy bên trong kết nối TLS.</p>
+<p>Khi kết nối đến HTTPS, hai bên "bắt tay" trước: server gửi chứng chỉ số kèm khóa công khai, client xác minh chứng chỉ hợp lệ, hai bên dùng kỹ thuật mật mã thỏa thuận khóa bí mật chung mà không ai nghe lén biết được. Từ đó mọi dữ liệu mã hóa bằng khóa này.</p>
+<p>Ngay cả khi ai đó bắt được toàn bộ gói tin, họ không đọc được nội dung vì không có khóa bí mật — khóa chỉ tồn tại trong RAM của client và server.</p>
+<div class="analogy">Hai người nói chuyện trong hộp thủy tinh kín — người ngoài thấy môi mấp máy nhưng không nghe tiếng. Quá trình bắt tay TLS là lúc hai người đặt quy tắc mã hóa riêng trước khi nói chuyện thật.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> OWASP Top 10 là gì? Kể một số lỗ hổng quan trọng?</div><div class="audio-bar"><div class="audio-note">Câu 11 &amp; 12</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_11_12_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">OWASP Top 10</span>: danh sách 10 rủi ro bảo mật phổ biến và nguy hiểm nhất trong web app, cập nhật định kỳ bởi tổ chức phi lợi nhuận OWASP.</p>
+<p>Quan trọng nhất với fintech: <span class="term">Broken Access Control</span> (#1 năm 2021) — user thực hiện được hành động không được phép như xem tài khoản người khác. <span class="term">Cryptographic Failures</span> — lưu mật khẩu plain text hoặc dùng thuật toán yếu. <span class="term">Injection</span> — SQL Injection. <span class="term">Security Misconfiguration</span> — để lộ thông tin debug, dùng cấu hình mặc định không an toàn.</p>
+<p>Với ngân hàng số, Broken Access Control đặc biệt nguy hiểm: nếu API xem số dư không kiểm tra kỹ người gọi có phải chủ tài khoản, toàn bộ dữ liệu tài chính khách hàng có thể bị lộ.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> Rate limiting — các chiến lược nào?</div>
+<div class="answer">
+<p><span class="term">Fixed Window</span>: đếm request trong khoảng thời gian cố định — 100 request từ 10:00:00 đến 10:01:00. Đơn giản nhất nhưng có điểm yếu: có thể gửi 100 request vào 10:00:59 và 100 vào 10:01:01 — 200 request trong 2 giây mà không vi phạm.</p>
+<p><span class="term">Sliding Window</span>: luôn đếm request trong 60 giây vừa rồi tính từ hiện tại — chính xác hơn nhưng tốn bộ nhớ hơn vì cần lưu timestamp từng request.</p>
+<p><span class="term">Token Bucket</span>: mỗi user có thùng token được thêm đều đặn, mỗi request tiêu một token. Ưu điểm: cho phép burst — gửi nhiều request khi thùng đầy — phản ánh lưu lượng tự nhiên hơn.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> Secrets Management là gì? Cách lưu trữ thông tin nhạy cảm?</div><div class="audio-bar"><div class="audio-note">Câu 13 &amp; 14</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_13_14_4.wav"></audio></div>
+<div class="answer">
+<p>Ứng dụng cần nhiều thứ nhạy cảm: mật khẩu database, API key, khóa ký JWT. <span class="term">Secrets Management</span> là tổ chức lưu trữ và cung cấp những thứ này an toàn.</p>
+<p>Tuyệt đối không: lưu trong code nguồn hay file cấu hình đẩy lên git. Một khi đã lên git, coi như đã lộ dù xóa đi sau đó.</p>
+<p>Cơ bản: biến môi trường hoặc file <code>.env</code> chỉ tồn tại trên server. Production: <span class="term">AWS Secrets Manager</span> hoặc <span class="term">HashiCorp Vault</span> — mã hóa, kiểm soát truy cập, audit log ai đọc gì khi nào, tự động xoay vòng secret định kỳ.</p>
+<div class="analogy">Chìa khóa nhà không để trước cửa dù tiện lợi. Biến môi trường như giữ trong túi. Vault như két sắt ngân hàng — có kiểm soát truy cập và ghi nhật ký đầy đủ.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> API Key và JWT khác nhau như thế nào? Khi nào dùng cái nào?</div>
+<div class="answer">
+<p><span class="term">API Key</span>: chuỗi ngẫu nhiên đơn giản. Server nhận key, tra database để biết key thuộc về ai và có quyền gì. Mỗi request cần một lần tra cứu. Có thể thu hồi ngay lập tức.</p>
+<p><span class="term">JWT</span> tự chứa thông tin trong token — server chỉ xác minh chữ ký, không cần tra database. Nhanh hơn và phù hợp với kiến trúc nhiều service.</p>
+<p>Khi nào dùng: API Key cho giao tiếp machine-to-machine, đặc biệt khi cần thu hồi ngay — partner tích hợp API thanh toán. JWT cho xác thực user cuối trong web/mobile — đăng nhập một lần, dùng token cho các request tiếp theo.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> Principle of Least Privilege là gì?</div><div class="audio-bar"><div class="audio-note">Câu 15 &amp; 16</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_15_16_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Principle of Least Privilege</span>: mỗi thực thể — user, service, tiến trình — chỉ được cấp đúng những quyền tối thiểu cần thiết để làm nhiệm vụ của mình.</p>
+<p>Áp dụng thực tế: tài khoản database của API chỉ đọc chỉ cần SELECT, không cần DELETE hay DROP. Nhân viên giao dịch không thấy số thẻ đầy đủ. Microservice thanh toán chỉ gọi được service tài khoản, không gọi service marketing.</p>
+<p>Tại sao quan trọng: khi một component bị xâm phạm, thiệt hại bị giới hạn trong phạm vi quyền của nó. Service đọc-báo-cáo bị hack nhưng chỉ có SELECT — kẻ tấn công không xóa hay sửa được gì.</p>
+<div class="analogy">Nhân viên mới không được cấp ngay chìa khóa toàn tòa nhà — chỉ thẻ vào phòng làm việc của mình. Phạm vi quyền đúng bằng phạm vi trách nhiệm.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Security Headers là gì? Tại sao quan trọng?</div>
+<div class="answer">
+<p><span class="term">Security Headers</span> là HTTP header đặc biệt server gửi kèm response, hướng dẫn trình duyệt áp dụng các biện pháp bảo vệ bổ sung.</p>
+<p><span class="term">Content-Security-Policy</span>: chỉ tải script từ nguồn tin cậy — phòng XSS. <span class="term">X-Frame-Options</span>: ngăn trang bị nhúng vào iframe — phòng clickjacking. <span class="term">Strict-Transport-Security</span>: trình duyệt luôn dùng HTTPS — ngăn downgrade về HTTP. <span class="term">X-Content-Type-Options</span>: ngăn trình duyệt đoán mò kiểu file.</p>
+<p>Đây là lớp phòng thủ bổ sung — không thay thế code đúng nhưng giảm đáng kể tác hại nếu có lỗ hổng.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Audit logging là gì? Tầm quan trọng trong fintech?</div><div class="audio-bar"><div class="audio-note">Câu 17 &amp; 18</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_17_18_4.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Audit logging</span>: ghi lại mọi hành động quan trọng — ai làm gì, lúc nào, từ đâu, kết quả gì. Khác với log kỹ thuật để debug, audit log là bằng chứng dùng trong điều tra và tuân thủ pháp lý.</p>
+<p>Trong fintech, đây là yêu cầu bắt buộc: tranh chấp giao dịch cần chứng minh ai thao tác gì khi nào; sự cố bảo mật cần dựng lại chuỗi sự kiện; kiểm toán cơ quan nhà nước cần xuất báo cáo đầy đủ.</p>
+<p>Yêu cầu thiết kế: ghi ngay cả khi transaction chính thất bại. Ghi đủ thông tin: user id, IP, loại hành động, kết quả. Audit log phải được bảo vệ — không ai xóa hoặc sửa, kể cả admin. Thường lưu riêng ở hệ thống bất biến.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> Defense in Depth là gì?</div>
+<div class="answer">
+<p><span class="term">Defense in Depth</span>: thay vì tin vào một lớp bảo vệ duy nhất, xây nhiều lớp độc lập. Kẻ tấn công vượt qua một lớp vẫn còn nhiều lớp khác cản trở.</p>
+<p>Ví dụ cho API nhận thanh toán: HTTPS mã hóa kết nối → xác thực JWT → kiểm tra quyền cụ thể → validate dữ liệu đầu vào → parameterized query → giới hạn nghiệp vụ → audit log. Bảy lớp độc lập.</p>
+<p>Không lớp nào hoàn hảo, nhưng phá qua tất cả cùng lúc gần như không thể.</p>
+<div class="analogy">Lâu đài thời trung cổ: hào nước → tường thành → cổng kiên cố → lính gác → két sắt tầng hầm. Kẻ tấn công phải vượt từng lớp — không có đường tắt.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> mTLS là gì? Khi nào dùng?</div><div class="audio-bar"><div class="audio-note">Câu 19 &amp; 20</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/04_security/cau_19_20_4.wav"></audio></div>
+<div class="answer">
+<p>TLS thông thường chỉ xác thực server. <span class="term">mTLS — Mutual TLS</span>: cả server cũng xác thực chứng chỉ của client — hai chiều.</p>
+<p>Trong giao tiếp giữa microservice, bạn muốn service thanh toán chỉ chấp nhận request từ service được ủy quyền. mTLS cung cấp điều này ở tầng mạng, độc lập với logic xác thực ở tầng ứng dụng.</p>
+<p>Ứng dụng: giao tiếp giữa service trong hệ thống ngân hàng, kết nối server đến database cần bảo mật tối đa. Service mesh như Istio tự động cấu hình mTLS cho toàn bộ giao tiếp giữa các service trong Kubernetes.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> Làm sao validate và sanitize input đúng cách?</div>
+<div class="answer">
+<p><span class="term">Validation</span>: kiểm tra dữ liệu có đúng định dạng và giá trị không. <span class="term">Sanitization</span>: loại bỏ hoặc chuyển đổi ký tự nguy hiểm trước khi dùng.</p>
+<p>Nguyên tắc: không tin dữ liệu từ bên ngoài — kể cả user đăng nhập hợp lệ, đối tác tin cậy, hay service nội bộ. Validate tại điểm tiếp nhận trước khi làm bất cứ điều gì.</p>
+<p>Với FastAPI và Pydantic: kiểm tra kiểu, giới hạn giá trị, định dạng email, độ dài chuỗi là tự động. Thêm validate nghiệp vụ: số tiền không âm, không vượt giới hạn hàng ngày. Sanitize HTML để chống XSS. Kiểm tra đuôi file khi upload.</p>
+<div class="analogy">Kiểm tra hành lý sân bay — trước khi lên máy bay (xử lý trong hệ thống), mọi hành lý qua soi chiếu (validation) và những gì bị cấm thì giữ lại (sanitization). Không ai được ngoại lệ.</div>
+</div>
+</div>
+
+<script>
+const _au = Array.from(document.querySelectorAll('.qa-audio'));
+function playAll() {
+  const btn = document.getElementById('playAllBtn');
+  if (btn.classList.contains('playing')) {
+    _au.forEach(a => { a.pause(); a.currentTime = 0; });
+    btn.classList.remove('playing'); btn.textContent = '▶ Play All'; return;
+  }
+  btn.classList.add('playing'); btn.textContent = '⏹ Dừng';
+  _nxt(0);
+}
+function _nxt(i) {
+  if (i >= _au.length) {
+    const b = document.getElementById('playAllBtn');
+    b.classList.remove('playing'); b.textContent = '▶ Play All'; return;
+  }
+  _au[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  _au[i].currentTime = 0;
+  _au[i].play().catch(() => {});
+  _au[i].onended = () => _nxt(i + 1);
+}
+</script>
+</body>
+</html>

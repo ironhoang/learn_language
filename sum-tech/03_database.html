@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>Database — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #10b981; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #10b981; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #065f46; margin-bottom: 16px; }
+  .qnum { background: #d1fae5; color: #047857; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #047857; font-weight: 600; }
+  .analogy { background: #ecfdf5; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #6ee7b7; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #10b981; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(16,185,129,.4); }
+  .copy-btn:hover { background: #059669; }
+
+  .audio-bar { margin: -4px 0 14px; }
+  .audio-bar audio { width: 100%; height: 36px; }
+  .audio-note { font-size: 13px; color: #999; margin-bottom: 3px; font-style: italic; }
+  #playAllBtn { position: fixed; top: 64px; right: 20px; padding: 10px 18px;
+    background: #10b981; color: white; border: none; border-radius: 8px;
+    cursor: pointer; font-size: 16px; font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25); z-index: 100; }
+  #playAllBtn.playing { background: #dc2626; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<button id="playAllBtn" onclick="playAll()">▶ Play All</button>
+<h1>Database — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> ACID là gì? Giải thích từng tính chất?</div><div class="audio-bar"><div class="audio-note">Câu 1 &amp; 2</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_01_02_3.wav"></audio></div>
+<div class="answer">
+<p>ACID là bốn tính chất cốt lõi của database đáng tin cậy — quan trọng đặc biệt trong lĩnh vực tài chính.</p>
+<p><span class="term">Atomicity — Nguyên tử</span>: giao dịch hoặc thành công hoàn toàn hoặc thất bại hoàn toàn. Chuyển tiền gồm hai bước: trừ tài khoản A và cộng tài khoản B — nếu bước hai lỗi, bước đầu phải hoàn tác, tiền không được mất giữa đường.</p>
+<p><span class="term">Consistency — Nhất quán</span>: dữ liệu luôn chuyển từ trạng thái hợp lệ này sang trạng thái hợp lệ khác. Ràng buộc "số dư không âm" hay "mã tài khoản phải duy nhất" không bao giờ bị vi phạm.</p>
+<p><span class="term">Isolation — Cô lập</span>: các giao dịch song song không nhìn thấy kết quả trung gian của nhau. Giao dịch A không thấy dữ liệu chưa commit của B.</p>
+<p><span class="term">Durability — Bền vững</span>: sau khi commit, dữ liệu được ghi vĩnh viễn dù tắt điện hay restart — nhờ cơ chế ghi nhật ký trước khi ghi dữ liệu thật.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> Clustered Index và Non-Clustered Index khác nhau thế nào?</div>
+<div class="answer">
+<p><span class="term">Clustered Index</span>: dữ liệu thật được sắp xếp vật lý theo thứ tự của index. Mỗi bảng chỉ có một clustered index — thường đặt trên khóa chính. Tìm kiếm theo clustered index đến thẳng nơi lưu dữ liệu trong một bước.</p>
+<p><span class="term">Non-Clustered Index</span>: index riêng biệt không ảnh hưởng thứ tự vật lý. Lưu giá trị cột được đánh index kèm con trỏ đến hàng thật. Tìm kiếm hai bước: vào index lấy địa chỉ, rồi nhảy đến địa chỉ đó lấy dữ liệu.</p>
+<div class="analogy">Clustered index như sách in theo thứ tự từ đầu đến cuối. Non-clustered như bảng tra cứu từ khóa ở cuối sách — chỉ đến trang nào, nhưng dữ liệu thật vẫn nằm theo thứ tự riêng của sách.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Khi nào nên tạo index? Khi nào không nên?</div><div class="audio-bar"><div class="audio-note">Câu 3 &amp; 4</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_03_04_3.wav"></audio></div>
+<div class="answer">
+<p>Nên tạo index khi: cột thường xuyên xuất hiện trong WHERE, JOIN, hoặc ORDER BY. Cột có nhiều giá trị khác nhau — email khách hàng là tốt vì mỗi người có email riêng.</p>
+<p>Không nên tạo index khi: bảng quá nhỏ (dưới vài nghìn hàng) — quét toàn bộ còn nhanh hơn. Cột có ít giá trị khác nhau như cột giới tính — index không giúp ích. Bảng ghi nhiều đọc ít — mỗi lần INSERT/UPDATE, tất cả index phải cập nhật theo, làm chậm ghi.</p>
+<div class="analogy">Mục lục thư viện: với 50 cuốn không cần mục lục, với 500.000 cuốn thì không thể thiếu. Nhưng mỗi cuốn nhập mới, thủ thư phải cập nhật mục lục — công việc họ cũng chậm hơn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Composite Index là gì? Rule thiết kế ra sao?</div>
+<div class="answer">
+<p><span class="term">Composite Index</span> là index trên nhiều cột cùng lúc — ví dụ index trên (user_id, created_at).</p>
+<p>Quy tắc quan trọng nhất: đặt cột dùng điều kiện bằng nhau trước, cột dùng điều kiện phạm vi sau. Tìm "giao dịch của user X trong tháng Y" → đặt user_id trước, created_at sau.</p>
+<p>Index (A, B) hỗ trợ query dùng A, hoặc cả A+B — nhưng không hỗ trợ query chỉ dùng B. Như từ điển Anh-Việt: tra từ tiếng Anh nhanh, nhưng không tra được từ tiếng Việt.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> Transaction Isolation Level — có những mức nào?</div><div class="audio-bar"><div class="audio-note">Câu 5 &amp; 6</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_05_06_3.wav"></audio></div>
+<div class="answer">
+<p>Có bốn mức từ thấp đến cao, quyết định giao dịch có thể thấy những thay đổi nào từ giao dịch khác đang chạy song song.</p>
+<p><span class="term">Read Uncommitted</span>: đọc cả dữ liệu chưa commit — gần như không dùng trong thực tế. <span class="term">Read Committed</span>: chỉ đọc dữ liệu đã commit — mức mặc định của PostgreSQL. <span class="term">Repeatable Read</span>: đọc cùng hàng nhiều lần trong giao dịch cho kết quả giống nhau, dù giao dịch khác đã cập nhật.</p>
+<p><span class="term">Serializable</span>: giao dịch chạy như thể tuần tự — an toàn nhất nhưng chậm nhất. Hệ thống ngân hàng thường dùng Repeatable Read hoặc Serializable.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> Dirty Read, Non-repeatable Read, Phantom Read là gì?</div>
+<div class="answer">
+<p>Ba loại vấn đề khi giao dịch chạy song song không được cô lập đúng cách.</p>
+<p><span class="term">Dirty Read</span>: đọc dữ liệu của giao dịch khác chưa commit. Nếu giao dịch đó rollback, bạn đã đọc dữ liệu không bao giờ tồn tại chính thức.</p>
+<p><span class="term">Non-repeatable Read</span>: trong cùng giao dịch, đọc cùng hàng hai lần thấy kết quả khác — vì giao dịch khác đã cập nhật và commit giữa hai lần đọc.</p>
+<p><span class="term">Phantom Read</span>: đọc theo điều kiện lần đầu thấy 10 hàng, lần hai trong cùng giao dịch thấy 11 hàng — vì giao dịch khác đã thêm hàng mới thỏa điều kiện đó.</p>
+<div class="analogy">Dirty: sao chép bài thi người chưa nộp — họ có thể xóa đi sau. Non-repeatable: hỏi giá căn hộ sáng 3 tỷ, chiều hỏi lại 3,2 tỷ. Phantom: đếm xe bãi đậu lần đầu 20, lần hai 21 vì có xe vừa vào.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> Optimistic Lock và Pessimistic Lock — khi nào dùng cái nào?</div><div class="audio-bar"><div class="audio-note">Câu 7 &amp; 8</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_07_08_3.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Pessimistic Lock</span>: khóa dữ liệu ngay khi đọc, không ai khác đọc hay sửa được. Chắc chắn không xung đột, nhưng giảm tốc độ và dễ gây deadlock.</p>
+<p><span class="term">Optimistic Lock</span>: không khóa khi đọc, ai cũng đọc được. Khi ghi, kiểm tra version có thay đổi chưa — nếu có thì retry. Tốt khi đọc nhiều, xung đột ít.</p>
+<div class="analogy">Pessimistic như dán biển "đang sử dụng" vào phòng họp ngay khi vào — không ai vào được dù bạn đang ngồi không. Optimistic như làm việc bình thường, trước khi lưu file chung thì kiểm tra ai có sửa chưa — nếu có thì merge lại.</div>
+<p>Ngân hàng: số dư tài khoản dùng khóa bi quan vì xung đột cao, sai lầm có hậu quả lớn. Cập nhật trạng thái đơn hàng có thể dùng khóa lạc quan.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> N+1 Query Problem là gì? Cách khắc phục?</div>
+<div class="answer">
+<p>Thay vì lấy hết dữ liệu cần trong một câu query, code vô tình chạy rất nhiều query nhỏ: một câu lấy N bản ghi, rồi N câu riêng lẻ cho từng bản ghi. Tổng là N+1 câu.</p>
+<p>Ví dụ: lấy 100 người dùng rồi vòng lặp lấy đơn hàng của từng người — 101 câu query. Mỗi câu tốn vài mili giây, tổng cộng có thể lên hàng trăm ms.</p>
+<p>Khắc phục: lấy danh sách người dùng trước, rồi lấy tất cả đơn hàng bằng một câu query với <code>WHERE user_id IN (...)</code>, ghép lại trong code. Tổng chỉ hai câu thay vì 101.</p>
+<div class="analogy">Đi siêu thị: cách sai là mỗi khi cần một món chạy ra mua rồi về, lại chạy tiếp — 100 chuyến. Cách đúng là lập danh sách và đi một chuyến mua hết.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> EXPLAIN ANALYZE dùng để làm gì?</div><div class="audio-bar"><div class="audio-note">Câu 9 &amp; 10</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_09_10_3.wav"></audio></div>
+<div class="answer">
+<p><span class="term">EXPLAIN ANALYZE</span> trong PostgreSQL hiển thị kế hoạch thực thi thật của một câu query: dùng index nào, quét bao nhiêu hàng, tốn bao nhiêu thời gian từng bước.</p>
+<p>Điều cần chú ý nhất: database có đang dùng index không hay đang quét toàn bộ bảng. Quét toàn bộ bảng hàng triệu hàng rất chậm. Nếu database quét toàn bộ mà bạn nghĩ nó nên dùng index, có thể index chưa được tạo hoặc điều kiện viết chưa đúng cách.</p>
+<div class="analogy">GPS không chỉ đường mà còn giải thích: đoạn này đi tránh vì kẹt xe, đoạn kia đi đường nhỏ vì nhanh hơn. EXPLAIN ANALYZE cho thấy lộ trình thực tế và thời gian từng đoạn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> Redis dùng khi nào trong hệ thống backend?</div>
+<div class="answer">
+<p>Redis lưu dữ liệu trong RAM — tốc độ đọc ghi dưới một mili giây, nhanh hơn database disk nhiều lần.</p>
+<p><span class="term">Cache</span>: lưu tạm kết quả tốn kém hoặc ít thay đổi như tỷ giá, cấu hình, thông tin user. Lần sau lấy từ Redis thay vì query database.</p>
+<p><span class="term">Session</span>: lưu token đăng nhập với TTL, xóa khi logout. <span class="term">Rate limiting</span>: đếm request theo IP, từ chối nếu vượt ngưỡng. <span class="term">Distributed lock</span>: đảm bảo chỉ một server xử lý một giao dịch cụ thể tại một thời điểm, tránh xử lý trùng lặp.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> Cache-Aside và Write-Through — khác nhau thế nào?</div><div class="audio-bar"><div class="audio-note">Câu 11 &amp; 12</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_11_12_3.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Cache-Aside</span>: khi cần dữ liệu, kiểm tra cache trước. Cache hit → trả về ngay. Cache miss → query database, lưu vào cache, rồi trả về. Dữ liệu chỉ vào cache khi được hỏi lần đầu.</p>
+<p><span class="term">Write-Through</span>: mỗi khi ghi vào database, đồng thời ghi vào cache. Cache luôn fresh, nhưng mỗi thao tác ghi tốn thêm thời gian, và cache có thể chứa nhiều dữ liệu ít được đọc.</p>
+<div class="analogy">Cache-Aside như nhà hàng chỉ nấu khi có khách đặt — không lãng phí, nhưng lần đầu phải chờ. Write-Through như siêu thị cập nhật bảng giá ngay khi có thay đổi — luôn chính xác nhưng tốn công hơn.</div>
+<p>Thực tế hầu hết dùng Cache-Aside kết hợp TTL vì đơn giản và hiệu quả.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> Cache Stampede là gì? Cách xử lý?</div>
+<div class="answer">
+<p><span class="term">Cache Stampede</span>: một key cache hết hạn đúng lúc nhiều request đến, tất cả cùng thấy cache miss và đồng loạt query database để rebuild. Database đột ngột nhận hàng trăm query giống nhau — có thể bị quá tải.</p>
+<p>Giải pháp phổ biến: dùng <span class="term">distributed lock</span> — chỉ cho phép một request rebuild cache, các request còn lại chờ. Khi cache được rebuild, tất cả đều lấy được kết quả.</p>
+<div class="analogy">Kho hàng hết một sản phẩm — nếu không có quy trình, hàng trăm nhân viên cùng chạy vào kho kiểm tra. Giải pháp: cử một người vào, người đó thông báo kết quả cho tất cả còn lại.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> Tại sao không dùng số thực để lưu tiền tệ?</div><div class="audio-bar"><div class="audio-note">Câu 13 &amp; 14</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_13_14_3.wav"></audio></div>
+<div class="answer">
+<p>Máy tính lưu số thực dạng nhị phân. Nhiều số thập phân như 0.1, 0.2 không biểu diễn chính xác được — 0.1 + 0.2 cho ra 0.30000000000000004 chứ không phải 0.3.</p>
+<p>Nhân sai số này lên hàng triệu giao dịch: tổng số không cân đối, kiểm toán không khớp — rất nguy hiểm cho hệ thống tài chính.</p>
+<p>Giải pháp: dùng <span class="term">NUMERIC</span> trong database với số chữ số thập phân cố định, và kiểu <span class="term">Decimal</span> từ thư viện <code>decimal</code> trong Python. Cả hai lưu số dạng thập phân, không phải nhị phân — không có sai số làm tròn.</p>
+<div class="analogy">Thước đo: thước thông thường chính xác đến mili mét. Nhưng sản xuất chip điện tử cần chính xác đến nano mét. Float là thước thông thường, Decimal là thước chuyên dụng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> Sharding và Partitioning khác nhau thế nào?</div>
+<div class="answer">
+<p><span class="term">Partitioning</span>: chia bảng lớn thành nhiều phân vùng nhỏ trong cùng một server. Ứng dụng không cần biết — vẫn query như một bảng. Ví dụ: bảng giao dịch chia theo năm.</p>
+<p><span class="term">Sharding</span>: chia dữ liệu ra nhiều server khác nhau. Ứng dụng phải biết kết nối đến server nào. Ví dụ: user ID lẻ ở server 1, chẵn ở server 2.</p>
+<p>Sharding vượt qua giới hạn của một server đơn lẻ về dung lượng và hiệu năng — nhưng ứng dụng phức tạp hơn nhiều: query liên shard, transaction toàn vẹn giữa nhiều shard.</p>
+<div class="analogy">Partitioning như tủ hồ sơ chia nhiều ngăn kéo theo năm — vẫn một tủ, một phòng. Sharding như phân chia hồ sơ ra các chi nhánh thành phố khác nhau — cần biết hồ sơ nào ở chi nhánh nào.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> Deadlock là gì? Làm sao tránh?</div><div class="audio-bar"><div class="audio-note">Câu 15 &amp; 16</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_15_16_3.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Deadlock</span> xảy ra khi hai giao dịch chờ nhau giải phóng khóa và không ai nhường. Giao dịch A giữ khóa tài khoản 1, chờ khóa tài khoản 2. Giao dịch B giữ khóa tài khoản 2, chờ khóa tài khoản 1. Cả hai chờ nhau mãi.</p>
+<p>Cách phòng tránh hiệu quả nhất: luôn khóa tài nguyên theo cùng một thứ tự cố định. Ví dụ mọi giao dịch đều khóa tài khoản có số nhỏ hơn trước. A khóa tài khoản 1 trước, B thấy tài khoản 1 đã bị khóa và chờ — không còn vòng chờ vô hạn.</p>
+<div class="analogy">Hai xe gặp nhau ở giao lộ không đèn, cả hai cùng nhường và không ai đi. Quy định "xe từ phải ưu tiên" là thứ tự cố định — giải quyết bế tắc.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Connection Pool là gì? Tại sao quan trọng?</div>
+<div class="answer">
+<p>Thiết lập kết nối database tốn 100–500ms: bắt tay TCP, xác thực TLS, đăng nhập. Nếu mỗi request tạo kết nối mới, 1000 request/giây tạo 1000 kết nối mới — cực kỳ tốn kém.</p>
+<p><span class="term">Connection Pool</span>: tạo sẵn một tập kết nối khi khởi động, lưu trong pool. Mỗi request mượn một kết nối, dùng xong trả lại. Không tốn thời gian tạo mới mỗi lần.</p>
+<p>Database cũng có giới hạn kết nối tối đa — PostgreSQL mặc định 100. Pool đảm bảo không vượt quá giới hạn này.</p>
+<div class="analogy">Đội xe công ty: thuê taxi mỗi lần đi tốn thời gian chờ và chi phí cao. Đội xe riêng — nhân viên mượn xe ra, xong trả về bãi, người khác dùng tiếp.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> UUID và Auto-increment ID — khi nào dùng cái nào?</div><div class="audio-bar"><div class="audio-note">Câu 17 &amp; 18</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_17_18_3.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Auto-increment</span>: số tăng 1, 2, 3... Đơn giản, nhỏ gọn (8 byte), chèn hiệu quả vì tuần tự. Nhược điểm: lộ thứ tự tạo bản ghi, không an toàn trong URL, không dùng được khi nhiều server cần tạo ID độc lập.</p>
+<p><span class="term">UUID v4</span>: 128 bit ngẫu nhiên — không thể đoán, toàn cầu duy nhất. Nhưng lớn hơn (16 byte) và vì ngẫu nhiên nên chèn vào B-tree index gây nhiều phân tách, chậm hơn ở quy mô lớn.</p>
+<p><span class="term">UUID v7</span>: phiên bản mới nhất — bắt đầu bằng timestamp nên tăng tuần tự theo thời gian, kết hợp ưu điểm của cả hai.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> Immutable Ledger Pattern là gì? Tại sao dùng trong fintech?</div>
+<div class="answer">
+<p><span class="term">Immutable Ledger</span>: thay vì cập nhật trực tiếp số dư, mỗi thay đổi là một bản ghi mới không thể xóa hay sửa. Số dư hiện tại là tổng của tất cả bản ghi.</p>
+<p>Lý do quan trọng trong tài chính: có lịch sử đầy đủ mọi giao dịch, dễ kiểm toán và đối chiếu, nếu có lỗi thì thêm giao dịch bù trừ thay vì sửa dữ liệu cũ. Quan trọng nhất — không ai có thể xóa bằng chứng giao dịch.</p>
+<div class="analogy">Sổ kế toán thủ công ngày xưa: kế toán không bao giờ tẩy xóa, sai thì viết thêm dòng điều chỉnh. Toàn bộ lịch sử tồn tại vĩnh viễn để kiểm toán truy vết từng đồng tiền.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> Tại sao cần Idempotency Key trong payment API?</div><div class="audio-bar"><div class="audio-note">Câu 19 &amp; 20</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/03_database/cau_19_20_3.wav"></audio></div>
+<div class="answer">
+<p>Khi ứng dụng gửi yêu cầu chuyển tiền và không nhận được phản hồi đúng hạn, nó không biết: server có nhận được không? Giao dịch đã xử lý chưa? Hay mạng đứt giữa chừng? Nếu retry, giao dịch có thể bị xử lý hai lần.</p>
+<p><span class="term">Idempotency Key</span>: ứng dụng tự tạo mã duy nhất cho mỗi yêu cầu và gửi kèm. Server kiểm tra: đã thấy mã này trước đó và đã xử lý thành công thì trả kết quả cũ, không xử lý lại. Lần đầu thì xử lý bình thường và lưu kết quả.</p>
+<p>Nhờ đó, dù retry bao nhiêu lần, giao dịch chỉ thực hiện đúng một lần.</p>
+<div class="analogy">Email có tiêu đề duy nhất — dù vô tình gửi ba lần, người nhận nhận ra "đã nhận cái này rồi" và chỉ xử lý một lần.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> CAP Theorem là gì? Áp dụng thực tế thế nào?</div>
+<div class="answer">
+<p>CAP Theorem: hệ thống phân tán không thể đồng thời đảm bảo cả ba tính chất — <span class="term">Consistency</span> (mọi node thấy cùng dữ liệu mới nhất), <span class="term">Availability</span> (mọi request nhận được phản hồi), <span class="term">Partition Tolerance</span> (hoạt động khi mạng bị chia cắt giữa các node).</p>
+<p>Vì phân vùng mạng là thực tế không thể tránh, hệ thống phải chọn giữa C và A khi có sự cố.</p>
+<p>Ngân hàng chọn <span class="term">Consistency</span> — thà từ chối giao dịch còn hơn hiển thị số dư sai. Mạng xã hội chọn <span class="term">Availability</span> — thà hiển thị số like hơi cũ còn hơn không hiển thị gì.</p>
+<div class="analogy">Chuỗi cửa hàng khi hệ thống kết nối lỗi: dừng tất cả giao dịch cho đến khi kết nối phục hồi (ưu tiên nhất quán), hoặc mỗi cửa hàng tiếp tục bán theo tồn kho riêng rồi đồng bộ sau (ưu tiên sẵn sàng, có thể sai lệch tồn kho).</div>
+</div>
+</div>
+
+<script>
+const _au = Array.from(document.querySelectorAll('.qa-audio'));
+function playAll() {
+  const btn = document.getElementById('playAllBtn');
+  if (btn.classList.contains('playing')) {
+    _au.forEach(a => { a.pause(); a.currentTime = 0; });
+    btn.classList.remove('playing'); btn.textContent = '▶ Play All'; return;
+  }
+  btn.classList.add('playing'); btn.textContent = '⏹ Dừng';
+  _nxt(0);
+}
+function _nxt(i) {
+  if (i >= _au.length) {
+    const b = document.getElementById('playAllBtn');
+    b.classList.remove('playing'); b.textContent = '▶ Play All'; return;
+  }
+  _au[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  _au[i].currentTime = 0;
+  _au[i].play().catch(() => {});
+  _au[i].onended = () => _nxt(i + 1);
+}
+</script>
+</body>
+</html>

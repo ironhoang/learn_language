@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>OOP &amp; SOLID — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #7c3aed; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #7c3aed; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #5b21b6; margin-bottom: 16px; }
+  .qnum { background: #ede9fe; color: #6d28d9; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #6d28d9; font-weight: 600; }
+  .analogy { background: #f5f3ff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #a78bfa; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #7c3aed; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; }
+  .copy-btn:hover { background: #6d28d9; }
+
+  .audio-bar { margin: -4px 0 14px; }
+  .audio-bar audio { width: 100%; height: 36px; }
+  .audio-note { font-size: 13px; color: #999; margin-bottom: 3px; font-style: italic; }
+  #playAllBtn { position: fixed; top: 64px; right: 20px; padding: 10px 18px;
+    background: #7c3aed; color: white; border: none; border-radius: 8px;
+    cursor: pointer; font-size: 16px; font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25); z-index: 100; }
+  #playAllBtn.playing { background: #dc2626; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<button id="playAllBtn" onclick="playAll()">▶ Play All</button>
+<h1>OOP &amp; SOLID — Ôn tập kỹ thuật</h1>
+<p class="subtitle">18 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> OOP là gì? Tại sao lại dùng OOP?</div><div class="audio-bar"><div class="audio-note">Câu 1 &amp; 2</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_01_02.wav"></audio></div>
+<div class="answer">
+<p><span class="term">OOP — Object-Oriented Programming</span>: tổ chức code xoay quanh các đối tượng, mỗi đối tượng gộp dữ liệu và hành vi liên quan vào một đơn vị. Thay vì nghĩ "chương trình làm gì", ta nghĩ "có những thứ gì và chúng tương tác ra sao".</p>
+<p>Lợi ích: code phản ánh thế giới thực nên dễ hiểu — người dùng, đơn hàng, sản phẩm là khái niệm ta đã quen. Tái sử dụng qua kế thừa. Thay đổi một chỗ không ảnh hưởng toàn bộ nhờ đóng gói. Dễ mở rộng thêm tính năng mới.</p>
+<p>Bốn tính chất cốt lõi: đóng gói, kế thừa, đa hình, trừu tượng — phối hợp nhau tạo nên sức mạnh của OOP.</p>
+<div class="analogy">Lập trình thủ tục như viết kịch bản từng bước. OOP như xây dựng nhân vật với đặc điểm riêng rồi để họ tương tác — gần với cách thế giới thực vận hành hơn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> Encapsulation — Đóng gói là gì?</div>
+<div class="answer">
+<p><span class="term">Encapsulation</span>: che giấu dữ liệu bên trong đối tượng, chỉ cho phép truy cập qua các phương thức được kiểm soát.</p>
+<p>Ví dụ: class BankAccount có <code>balance</code> là private — không ai thay đổi trực tiếp. Muốn thay đổi phải qua <code>deposit</code> hoặc <code>withdraw</code>, hai phương thức này kiểm tra điều kiện trước khi thực hiện. Nếu balance là public, bất kỳ đâu trong code có thể gán thành âm triệu mà không ai biết.</p>
+<p>Lợi ích: bảo vệ toàn vẹn dữ liệu, thay đổi cách lưu trữ bên trong mà không ảnh hưởng code bên ngoài, dễ debug vì biết chính xác ai thay đổi.</p>
+<div class="analogy">ATM là đóng gói điển hình — không thò tay lấy tiền được. Chỉ tương tác qua giao diện nút bấm, máy kiểm tra thẻ, PIN, số dư rồi mới trả tiền.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Inheritance — Kế thừa là gì? Vấn đề của kế thừa sâu?</div><div class="audio-bar"><div class="audio-note">Câu 3 &amp; 4</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_03_04.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Inheritance</span>: class con tái sử dụng thuộc tính và phương thức của class cha, đồng thời thêm hoặc ghi đè để có hành vi riêng. Class cha định nghĩa cái chung, class con mở rộng.</p>
+<p>Ví dụ: Animal có <code>eat</code> và <code>sleep</code>. Dog kế thừa Animal, thêm <code>bark</code>. Cat thêm <code>meow</code>. Không cần viết lại eat và sleep cho mỗi loài.</p>
+<p>Vấn đề kế thừa sâu nhiều tầng: thay đổi ở tầng trên ảnh hưởng toàn bộ cây, khó debug, dễ vi phạm Liskov. Khuyến khích giữ cây nông, không quá 2–3 tầng, ưu tiên composition.</p>
+<div class="analogy">Gen di truyền — con thừa hưởng đặc điểm cha mẹ nhưng có nét riêng. Phả hệ quá nhiều tầng thì khó tra ai ảnh hưởng ai.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Polymorphism — Đa hình là gì? Override và Overload khác nhau thế nào?</div>
+<div class="answer">
+<p><span class="term">Polymorphism</span>: cùng một phương thức hoạt động khác nhau tùy vào đối tượng thực tế. "Nhiều hình dạng" từ một giao diện chung.</p>
+<p><span class="term">Method Overriding</span>: class con định nghĩa lại phương thức của cha — cùng tên, cùng tham số, hành vi khác. Đây là đa hình runtime. Animal có <code>speak</code>, Dog ghi đè trả về "Gâu", Cat trả về "Meo" — gọi <code>animal.speak()</code> trên danh sách hỗn hợp, mỗi con kêu đúng tiếng.</p>
+<p><span class="term">Method Overloading</span>: nhiều phương thức cùng tên nhưng khác tham số trong cùng class — đa hình compile-time. Python không hỗ trợ trực tiếp, dùng default arguments hoặc *args để mô phỏng.</p>
+<div class="analogy">Nút "Play" — bấm trên YouTube phát video, trên Spotify phát nhạc, trên podcast phát audio. Cùng nút, hành vi khác nhau tùy ngữ cảnh.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> Abstraction — Trừu tượng là gì?</div><div class="audio-bar"><div class="audio-note">Câu 5 &amp; 6</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_05_06.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Abstraction</span>: ẩn đi sự phức tạp bên trong, chỉ lộ ra những gì cần thiết. Tập trung vào "làm gì" thay vì "làm thế nào".</p>
+<p>Trong code: abstract class và interface định nghĩa "cái gì cần có" mà không nói cách triển khai. Class con tự triển khai. Ví dụ: abstract class PaymentGateway có phương thức <code>pay</code> trừu tượng. MoMoGateway và VNPayGateway đều triển khai <code>pay</code> theo cách riêng — code gọi <code>payment.pay()</code> mà không cần biết đang dùng cổng nào.</p>
+<p>Khác Encapsulation: Encapsulation ẩn dữ liệu và cách lưu trữ. Abstraction ẩn sự phức tạp của logic và chỉ lộ interface.</p>
+<div class="analogy">Lái xe ô tô — chỉ cần biết vô lăng, chân ga, phanh. Không cần biết động cơ hoạt động ra sao, hộp số chuyển thế nào. Nhà sản xuất ẩn toàn bộ sự phức tạp đó.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> Abstract Class và Interface khác nhau thế nào?</div>
+<div class="answer">
+<p><span class="term">Abstract Class</span>: không thể khởi tạo trực tiếp, có thể chứa cả phương thức đã triển khai lẫn trừu tượng. Class con kế thừa và bắt buộc triển khai phần trừu tượng. Dùng khi các class con có logic chung cần tái sử dụng.</p>
+<p><span class="term">Interface</span>: hợp đồng thuần túy — chỉ khai báo phương thức, không triển khai. Class implement interface cam kết sẽ có đủ các phương thức đó. Một class có thể implement nhiều interface nhưng chỉ kế thừa một abstract class. Python dùng ABC — Abstract Base Class để mô phỏng cả hai.</p>
+<p>Quy tắc chọn: abstract class khi có code dùng chung. Interface khi chỉ cần đảm bảo class có một bộ phương thức nhất định. Nếu phân vân, ưu tiên interface — linh hoạt hơn.</p>
+<div class="analogy">Abstract class như bản vẽ một phần — có phần cố định chung nhưng để trống phần tùy biến. Interface như giấy phép xây dựng — cam kết phải có lối thoát hiểm, thang máy, điện nước, còn thiết kế bên trong tự làm.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> Composition over Inheritance — tại sao ưu tiên composition?</div><div class="audio-bar"><div class="audio-note">Câu 7 &amp; 8</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_07_08.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Composition</span>: thay vì kế thừa, đưa đối tượng khác làm thuộc tính. "Has-a" thay vì "Is-a". Car có một Engine bên trong — <code>car.engine.start()</code>. Engine có thể thay bằng ElectricEngine mà không sửa class Car.</p>
+<p>Tại sao ưu tiên: linh hoạt hơn — thay đổi hành vi lúc runtime bằng cách hoán đổi component. Tránh vấn đề kế thừa sâu. Dễ test hơn — mock từng component riêng lẻ.</p>
+<p>Kế thừa vẫn có chỗ dùng: khi quan hệ thực sự là "Is-a" không tranh luận được, và khi cần đa hình. Nhưng khi phân vân, chọn composition.</p>
+<div class="analogy">Kế thừa như sinh ra đã cố định — con người không tháo tay ra thay được. Composition như lắp ráp robot — thay cánh tay, thay động cơ, nâng cấp từng phần dễ dàng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> SOLID là gì? Tại sao quan trọng?</div>
+<div class="answer">
+<p><span class="term">SOLID</span>: năm nguyên tắc thiết kế OOP do Uncle Bob đề xuất — Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.</p>
+<p>Tại sao quan trọng: code vi phạm SOLID thường thành "spaghetti code" — thay đổi một chỗ phá vỡ chỗ khác, khó test vì mọi thứ phụ thuộc nhau, khó mở rộng vì phải sửa code cũ khi thêm tính năng.</p>
+<p>SOLID không phải quy tắc tuyệt đối — áp dụng cứng nhắc tạo ra quá nhiều abstraction không cần thiết. Hiểu tại sao từng nguyên tắc tồn tại quan trọng hơn áp dụng máy móc.</p>
+<div class="analogy">Nguyên tắc xây nhà — không bắt buộc nhưng nhà vi phạm đều dễ sụp hoặc khó sửa. Nhà tuân thủ thì dễ cải tạo, thêm tầng, thay nội thất mà không lo sập móng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> S — Single Responsibility Principle là gì?</div><div class="audio-bar"><div class="audio-note">Câu 9 &amp; 10</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_09_10.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Single Responsibility Principle</span>: một class chỉ nên có một lý do để thay đổi — chịu trách nhiệm cho một việc duy nhất.</p>
+<p>Vi phạm: class UserService vừa xử lý logic user, vừa gửi email, vừa ghi log, vừa kết nối database. Khi đổi cách gửi email phải sửa UserService — dù logic user không liên quan gì.</p>
+<p>Đúng: tách thành UserService, EmailService, Logger, UserRepository — mỗi class một trách nhiệm. Đổi email không đụng đến user logic.</p>
+<div class="analogy">Bếp trưởng không nên đồng thời làm kế toán, lái xe giao hàng và rửa bát. Mỗi người một vai trò — thay người giao hàng không ảnh hưởng bếp trưởng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> O — Open/Closed Principle là gì?</div>
+<div class="answer">
+<p><span class="term">Open/Closed Principle</span>: class nên mở để mở rộng nhưng đóng để sửa đổi. Thêm tính năng mới bằng code mới, không sửa code đang chạy tốt.</p>
+<p>Vi phạm: hàm <code>calculate_discount</code> dùng if-else cho từng loại khách hàng. Mỗi khi thêm loại mới phải sửa hàm — nguy cơ phá logic các loại cũ.</p>
+<p>Đúng: abstract class DiscountStrategy với phương thức <code>calculate</code>. Mỗi loại khách hàng là class riêng implement nó. Thêm loại mới chỉ cần thêm class — không đụng code cũ.</p>
+<div class="analogy">Ổ cắm điện — thiết kế để cắm bất kỳ thiết bị nào mà không cần sửa ổ cắm. Thiết bị mới chỉ cần có phích cắm đúng chuẩn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> L — Liskov Substitution Principle là gì?</div><div class="audio-bar"><div class="audio-note">Câu 11 &amp; 12</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_11_12.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Liskov Substitution Principle</span>: đối tượng class con phải có thể thay thế class cha mà không làm hỏng chương trình. Class con phải hành xử đúng như những gì class cha hứa hẹn.</p>
+<p>Vi phạm kinh điển: Square kế thừa Rectangle. Rectangle có <code>setWidth</code> và <code>setHeight</code> độc lập. Nhưng Square ghi đè để khi setWidth thì cũng đặt height bằng nhau. Code kỳ vọng diện tích = width × height sẽ sai khi nhận Square thay vì Rectangle. Square không thể thay thế Rectangle.</p>
+<p>Dấu hiệu vi phạm: class con phải throw exception hoặc làm trống phương thức kế thừa từ cha — quan hệ kế thừa sai, nên dùng composition.</p>
+<div class="analogy">Nhân viên mới phải làm được những việc đã cam kết trong mô tả công việc — nếu từ chối các việc đó, đó là vi phạm cam kết khi tuyển dụng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> I — Interface Segregation Principle là gì?</div>
+<div class="answer">
+<p><span class="term">Interface Segregation Principle</span>: không ép class implement phương thức nó không cần. Nhiều interface nhỏ chuyên biệt tốt hơn một interface lớn đa năng.</p>
+<p>Vi phạm: interface Animal có <code>fly</code>, <code>swim</code>, <code>run</code>, <code>climb</code>. Dog phải implement <code>fly</code> dù chó không bay — để trống hoặc raise exception. "Fat interface" ép class triển khai điều vô nghĩa.</p>
+<p>Đúng: tách thành Flyable, Swimmable, Runnable. Dog implement Runnable và Swimmable. Bird implement Flyable và Runnable. Mỗi class chỉ implement điều có nghĩa với nó.</p>
+<div class="analogy">Form đăng ký mua bánh mì không nên hỏi giấy phép lái xe, bằng đại học và kinh nghiệm bơi lội. Tách form riêng cho từng mục đích.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> D — Dependency Inversion Principle là gì?</div><div class="audio-bar"><div class="audio-note">Câu 13 &amp; 14</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_13_14.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Dependency Inversion Principle</span>: module cấp cao không phụ thuộc vào module cấp thấp — cả hai phụ thuộc vào abstraction. Chi tiết triển khai phụ thuộc vào abstraction, không phải ngược lại.</p>
+<p>Vi phạm: OrderService tạo trực tiếp <code>MySQLDatabase()</code> bên trong constructor. Muốn đổi sang PostgreSQL phải sửa OrderService. Muốn test phải có MySQL thật.</p>
+<p>Đúng: OrderService nhận vào một DatabaseInterface qua constructor — <span class="term">Dependency Injection</span>. Ai tạo OrderService sẽ quyết định truyền MySQL, PostgreSQL hay MockDatabase cho test. OrderService không biết và không cần biết đang dùng loại nào.</p>
+<div class="analogy">Đèn không nên hàn cứng vào ổ điện cố định — dùng phích cắm để có thể cắm vào bất kỳ nguồn nào đạt chuẩn. Ai lắp đặt quyết định nguồn điện, đèn chỉ cần đủ chuẩn là sáng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> Dependency Injection là gì? Các kiểu DI?</div>
+<div class="answer">
+<p><span class="term">Dependency Injection</span>: cung cấp dependency cho đối tượng từ bên ngoài thay vì để đối tượng tự tạo. Là cách triển khai phổ biến nhất của Dependency Inversion.</p>
+<p>Ba kiểu: <span class="term">Constructor Injection</span> — truyền qua constructor khi khởi tạo, phổ biến và rõ ràng nhất, bắt buộc có dependency mới tạo được đối tượng. <span class="term">Method Injection</span> — truyền vào từng phương thức khi gọi, dùng khi dependency chỉ cần trong một phương thức. <span class="term">Property Injection</span> — gán sau khởi tạo, ít dùng vì dễ quên dẫn đến None error.</p>
+<p>FastAPI sử dụng DI mạnh qua hệ thống <code>Depends</code> — tự động inject database session, current user, config vào endpoint.</p>
+<div class="analogy">Nhà hàng không tự nuôi bò — nhận thịt từ nhà cung cấp bên ngoài. Ai vận hành quyết định nhà cung cấp nào, đầu bếp chỉ cần thịt đúng tiêu chuẩn là nấu được.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> Design Pattern là gì? Các nhóm pattern phổ biến?</div><div class="audio-bar"><div class="audio-note">Câu 15 &amp; 16</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_15_16.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Design Pattern</span>: giải pháp tái sử dụng cho các bài toán thiết kế phổ biến. Không phải code copy-paste mà là blueprint — khuôn mẫu tư duy đã được kiểm chứng.</p>
+<p><span class="term">Creational Patterns</span>: cách tạo đối tượng — Singleton đảm bảo chỉ một instance, Factory tạo đối tượng không cần biết class cụ thể, Builder xây dựng đối tượng phức tạp từng bước.</p>
+<p><span class="term">Structural Patterns</span>: tổ chức các class — Adapter chuyển đổi interface không tương thích, Decorator thêm tính năng không sửa class gốc, Facade giao diện đơn giản cho hệ thống phức tạp.</p>
+<p><span class="term">Behavioral Patterns</span>: cách các đối tượng giao tiếp — Observer thông báo khi có thay đổi, Strategy hoán đổi thuật toán lúc runtime, Repository trừu tượng hóa tầng truy cập dữ liệu.</p>
+<div class="analogy">Mẫu kiến trúc đã kiểm chứng — không cần tự phát minh cách xây cầu thang mỗi lần xây nhà. Áp dụng mẫu có sẵn, tùy biến cho ngữ cảnh cụ thể.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Singleton Pattern — khi nào dùng và cạm bẫy?</div>
+<div class="answer">
+<p><span class="term">Singleton</span>: đảm bảo chỉ có một instance trong toàn bộ ứng dụng, mọi nơi gọi đến class đều nhận cùng đối tượng đó.</p>
+<p>Hợp lý: connection pool — không muốn hàng trăm kết nối riêng lẻ. Config manager — đọc cấu hình một lần. Logger — ghi log tập trung từ nhiều nơi.</p>
+<p>Cạm bẫy: Singleton là global state — state từ test này ảnh hưởng test khác. Khó mở rộng. Trong môi trường đa luồng cần cẩn thận race condition khi khởi tạo. Nhiều lập trình viên kinh nghiệm coi Singleton là anti-pattern và ưu tiên Dependency Injection thay thế.</p>
+<div class="analogy">Giám đốc công ty — chỉ một người, mọi bộ phận báo cáo lên cùng một người. Tập trung quyết định nhưng tạo bottleneck — nếu giám đốc gặp vấn đề thì toàn công ty bị ảnh hưởng.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Repository Pattern là gì? Tại sao phổ biến trong backend?</div><div class="audio-bar"><div class="audio-note">Câu 17 &amp; 18</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/07_oop_solid/07_oop_solid_cau_17_18.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Repository Pattern</span>: lớp trung gian giữa business logic và tầng truy cập dữ liệu. Service chỉ gọi các phương thức rõ nghĩa như <code>get_by_id</code>, <code>find_by_email</code>, <code>save</code> — không viết SQL hay ORM query trực tiếp trong service.</p>
+<p>Lợi ích: service không biết dữ liệu lưu ở đâu — MySQL, PostgreSQL hay MongoDB. Muốn đổi database chỉ viết lại Repository, service không đổi. Dễ test — InMemoryRepository thay thế khi test, không cần database thật.</p>
+<p>Trong FastAPI thường kết hợp với Dependency Injection — inject repository vào service, inject service vào endpoint qua Depends. Tạo kiến trúc sạch, dễ thay từng tầng độc lập.</p>
+<div class="analogy">Thủ kho — không vào kho tự lấy mà gọi thủ kho: "lấy 10 cái bàn phím". Thủ kho biết hàng ở đâu và cách lấy. Bạn chỉ cần biết giao diện giao tiếp với thủ kho.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> Làm thế nào nhận biết code đang vi phạm OOP và SOLID?</div>
+<div class="answer">
+<p>Có một số "code smell" — dấu hiệu cảnh báo không cần phân tích sâu.</p>
+<p>Vi phạm Single Responsibility: class có tên chứa chữ "And" như UserAndEmailService. File dài hàng nghìn dòng. Nhiều lý do khác nhau khiến class phải thay đổi.</p>
+<p>Vi phạm Open/Closed: mỗi lần thêm tính năng lại thêm nhánh if-else vào hàm cũ. Chuỗi if-else dài kiểm tra loại đối tượng — thường nên dùng polymorphism thay thế.</p>
+<p>Vi phạm Liskov: class con override phương thức cha để throw exception "not implemented" hoặc để trống. Test với cha pass nhưng test với con fail.</p>
+<p>Vi phạm Dependency Inversion: từ khóa <code>new</code> xuất hiện sâu trong business logic. Không thể test class mà không cần database hoặc service bên ngoài thật.</p>
+<div class="analogy">Code smell như mùi thức ăn — không cần phân tích hóa học mới biết hỏng. Một số dấu hiệu đủ để biết cần xem xét lại, nhưng không phải mọi "mùi" đều cần sửa ngay.</div>
+</div>
+</div>
+
+<script>
+const _au = Array.from(document.querySelectorAll('.qa-audio'));
+function playAll() {
+  const btn = document.getElementById('playAllBtn');
+  if (btn.classList.contains('playing')) {
+    _au.forEach(a => { a.pause(); a.currentTime = 0; });
+    btn.classList.remove('playing'); btn.textContent = '▶ Play All'; return;
+  }
+  btn.classList.add('playing'); btn.textContent = '⏹ Dừng';
+  _nxt(0);
+}
+function _nxt(i) {
+  if (i >= _au.length) {
+    const b = document.getElementById('playAllBtn');
+    b.classList.remove('playing'); b.textContent = '▶ Play All'; return;
+  }
+  _au[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  _au[i].currentTime = 0;
+  _au[i].play().catch(() => {});
+  _au[i].onended = () => _nxt(i + 1);
+}
+</script>
+</body>
+</html>

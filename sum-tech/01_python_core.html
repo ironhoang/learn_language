@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>Python Core — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #3b82f6; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #3b82f6; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #1e3a8a; margin-bottom: 16px; }
+  .qnum { background: #dbeafe; color: #1d4ed8; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #1d4ed8; font-weight: 600; }
+  .analogy { background: #eff6ff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #93c5fd; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #3b82f6; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(59,130,246,.4); }
+  .copy-btn:hover { background: #2563eb; }
+  @media print { .copy-btn { display: none; } }
+
+  .audio-bar { margin: -4px 0 14px; }
+  .audio-bar audio { width: 100%; height: 36px; }
+  .audio-note { font-size: 13px; color: #999; margin-bottom: 3px; font-style: italic; }
+  #playAllBtn { position: fixed; top: 64px; right: 20px; padding: 10px 18px;
+    background: #3b82f6; color: white; border: none; border-radius: 8px;
+    cursor: pointer; font-size: 16px; font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25); z-index: 100; }
+  #playAllBtn.playing { background: #dc2626; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<button id="playAllBtn" onclick="playAll()">▶ Play All</button>
+<h1>Python Core — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> GIL là gì và tại sao nó tồn tại?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_01.wav"></audio></div>
+<div class="answer">
+<p>GIL là <span class="term">Global Interpreter Lock</span> — một cái khóa trong Python đảm bảo tại bất kỳ thời điểm nào, chỉ một luồng được phép chạy code Python, dù máy có nhiều nhân CPU.</p>
+<p>GIL tồn tại để bảo vệ cơ chế <span class="term">đếm tham chiếu</span> quản lý bộ nhớ. Mỗi object có bộ đếm ghi lại bao nhiêu nơi đang trỏ đến nó; khi bộ đếm về không, Python giải phóng object đó. Nếu nhiều luồng cùng thao tác bộ đếm này không có khóa, có thể xóa nhầm object đang dùng hoặc rò rỉ bộ nhớ.</p>
+<div class="analogy">Như tờ phiếu mượn sách thư viện — GIL đảm bảo không ai ghi đồng thời lên phiếu, tránh nhầm lẫn số lượng người đang mượn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> GIL ảnh hưởng thế nào đến lập trình đa luồng?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_02.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Tác vụ I/O</span> như gọi API, đọc file, truy vấn database — khi chờ mạng trả về, luồng tự nhả GIL cho luồng khác chạy. Đa luồng hoạt động hiệu quả với loại tác vụ này.</p>
+<p><span class="term">Tác vụ tính toán nặng</span> thì ngược lại — các luồng tranh nhau giữ GIL, thay nhau chạy chứ không thực sự song song. Giải pháp là dùng <span class="term">đa tiến trình</span>: mỗi tiến trình có GIL riêng, thực sự chạy song song trên nhiều nhân CPU.</p>
+<div class="analogy">Nhà bếp có một con dao (GIL): nhân viên đang chờ nước sôi có thể đặt dao cho người khác dùng — nhưng khi ai cũng cần dao liên tục thì phải xếp hàng. Mua thêm dao chính là thêm tiến trình.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Phân biệt đa luồng, đa tiến trình và asyncio?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_03.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Đa luồng</span>: nhiều luồng trong cùng tiến trình, chia sẻ bộ nhớ. Tốt cho I/O, không giúp ích cho CPU vì bị GIL.</p>
+<p><span class="term">Đa tiến trình</span>: mỗi tiến trình là Python riêng biệt với GIL riêng — thực sự song song trên nhiều nhân. Chi phí khởi động cao hơn, chia sẻ dữ liệu phức tạp hơn.</p>
+<p><span class="term">Asyncio</span>: chỉ một luồng, nhưng chương trình tạm dừng khi đang chờ và chuyển sang việc khác. Rất hiệu quả cho hàng trăm kết nối đồng thời như API server.</p>
+<div class="analogy">Đa luồng như một người nhiều tay nhưng chung một bộ não. Đa tiến trình như nhiều người hoàn toàn độc lập. Asyncio như người biết tận dụng thời gian chờ để làm việc khác — không lãng phí.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Async và await hoạt động như thế nào?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_04.wav"></audio></div>
+<div class="answer">
+<p>Hàm đánh dấu <span class="term">async</span> trở thành coroutine — không chạy ngay khi gọi mà chạy khi được event loop điều phối.</p>
+<p>Từ khóa <span class="term">await</span> là điểm tạm dừng: hàm nhường quyền cho event loop và nói "tôi đang chờ, hãy xử lý việc khác, khi tôi xong thì quay lại". <span class="term">Event loop</span> là vòng lặp trung tâm kiểm tra coroutine nào đã sẵn sàng, cho nó chạy tiếp. Tất cả xảy ra trong một luồng nhưng xử lý được hàng nghìn kết nối đồng thời.</p>
+<div class="analogy">Nhân viên phục vụ giỏi — ghi order xong không đứng chờ bếp mà đi phục vụ bàn khác. Khi bếp kêu tên thì quay lại lấy món. Event loop là bộ đàm trong tai nhắc nhở khi nào cần quay lại đâu.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> Sự khác biệt giữa asyncio.gather và asyncio.wait?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_05.wav"></audio></div>
+<div class="answer">
+<p><span class="term">gather</span> chạy tất cả coroutine đồng thời, trả kết quả theo đúng thứ tự ban đầu. Nếu một coroutine lỗi, mặc định toàn bộ nhóm thất bại. Dùng khi cần kết quả của tất cả và muốn xử lý đơn giản.</p>
+<p><span class="term">wait</span> linh hoạt hơn: chỉ định chờ đến khi coroutine đầu tiên xong, hoặc đầu tiên lỗi, hoặc tất cả xong. Trả về hai nhóm done/pending để xử lý riêng lẻ.</p>
+<div class="analogy">Gather như chờ tất cả đơn hàng về mới mở. Wait như theo dõi từng kiện hàng — cái nào về trước xử lý trước.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> Generator là gì? Khi nào nên dùng?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_06.wav"></audio></div>
+<div class="answer">
+<p>Generator dùng từ khóa <span class="term">yield</span> thay vì return — tạo ra từng phần tử một theo yêu cầu thay vì tính toán hết rồi mới trả về. Bộ nhớ sử dụng gần như không đổi dù dữ liệu có bao nhiêu phần tử.</p>
+<p>Đọc file 10 triệu dòng: cách thông thường nạp hết vào RAM; generator đọc từng dòng, xử lý xong, rồi chuyển tiếp.</p>
+<div class="analogy">Dịch vụ streaming — đọc đến đâu hiện đến đó, không cần tải hết về trước.</div>
+<p>Dùng generator khi xử lý file lớn, stream dữ liệu từ API, hoặc bất kỳ khi nào cần tiết kiệm bộ nhớ thay vì tải hết vào RAM.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> __slots__ dùng để làm gì?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_07.wav"></audio></div>
+<div class="answer">
+<p>Mặc định, mỗi object Python có <span class="term">__dict__</span> — từ điển nội bộ lưu mọi thuộc tính, tốn khoảng 200–400 byte mỗi object.</p>
+<p>Khai báo <span class="term">__slots__</span> nói với Python "object này chỉ có đúng những thuộc tính này". Python bỏ __dict__, lưu trực tiếp vào cấu trúc cố định — tiết kiệm 40–60% bộ nhớ mỗi object.</p>
+<div class="analogy">Ví thông thường có nhiều ngăn rỗng — linh hoạt nhưng cồng kềnh. Ví có slots chỉ đúng ba ngăn: thẻ, tiền mặt, receipt — gọn hơn nhưng không thêm được gì.</div>
+<p>Dùng khi tạo hàng triệu object cùng loại — tiết kiệm bộ nhớ đáng kể ở quy mô lớn.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> Decorator là gì? Cách hoạt động?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_08.wav"></audio></div>
+<div class="answer">
+<p>Decorator là hàm nhận một hàm khác làm đầu vào, bọc thêm logic xung quanh, rồi trả về hàm mới. Dùng ký hiệu <span class="term">@tên_decorator</span> đặt ngay trên hàm muốn trang trí.</p>
+<p>Ứng dụng thực tế: thêm logging tự động, đo thời gian chạy, tự động retry khi lỗi mạng, kiểm tra quyền truy cập, hoặc cache kết quả — tất cả mà không cần sửa hàm gốc.</p>
+<div class="analogy">Như gói quà — món quà bên trong là hàm gốc, decorator là giấy gói và nơ bên ngoài. Người nhận vẫn nhận được món quà, kèm thêm trải nghiệm mở gói đẹp hơn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> functools.wraps dùng để làm gì?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_09.wav"></audio></div>
+<div class="answer">
+<p>Khi tạo decorator, hàm bọc bên trong có tên riêng của nó, không phải tên hàm gốc. Nếu ai hỏi tên hàm, Python trả lời tên hàm bọc — gây nhầm lẫn khi debug hoặc đọc tài liệu tự động sinh.</p>
+<p><span class="term">functools.wraps</span> sao chép tên, docstring, module từ hàm gốc sang hàm bọc. Nhờ đó log lỗi và tài liệu hiển thị đúng tên hàm bạn đã viết.</p>
+<div class="analogy">Đóng gói sản phẩm cho người khác bán — nếu không dán nhãn đúng, khách thấy tên hộp thay vì tên sản phẩm thật. functools.wraps là dán nhãn gốc lên hộp mới.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> Context manager là gì? Tại sao cần thiết?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_10.wav"></audio></div>
+<div class="answer">
+<p>Context manager đảm bảo tài nguyên được thiết lập và dọn dẹp đúng cách, <span class="term">dù chương trình có gặp lỗi hay không</span>. Dùng với cú pháp <code>with ... as</code>.</p>
+<p>Mở file mà không có context manager: nếu lỗi giữa chừng, file có thể không được đóng — mất dữ liệu hoặc rò rỉ tài nguyên. Context manager tự động xử lý phần đóng này.</p>
+<p>Trong backend, context manager quan trọng cho kết nối database — đảm bảo connection trả về pool, transaction được commit hoặc rollback đúng cách.</p>
+<div class="analogy">Mượn xe — dù đi đâu, về sớm hay muộn, người cho mượn luôn muốn xe được trả. Context manager là hợp đồng đảm bảo điều đó tự động xảy ra.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> Phân biệt deepcopy và shallow copy?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_11.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Shallow copy</span> tạo object mới ở tầng ngoài, nhưng các object lồng bên trong vẫn là tham chiếu đến gốc. Thay đổi bên trong bản sao → bản gốc cũng bị ảnh hưởng.</p>
+<p><span class="term">Deep copy</span> tạo bản sao hoàn toàn độc lập, đệ quy sao chép mọi thứ bên trong. Thay đổi bản sao không ảnh hưởng gì đến bản gốc.</p>
+<div class="analogy">Copy-paste thư mục: shallow copy như tạo phím tắt đến các file — trông có vẻ hai thư mục nhưng cùng trỏ vào file thật. Deep copy như sao chép toàn bộ nội dung thực sự.</div>
+<p>Dùng deep copy khi cần thay đổi bản sao mà không được ảnh hưởng bản gốc, ví dụ clone cấu hình để thử nghiệm.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> List comprehension và hàm map() — khi nào dùng cái nào?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_12.wav"></audio></div>
+<div class="answer">
+<p><span class="term">List comprehension</span> là cách viết Pythonic để tạo danh sách mới, có thể kèm điều kiện lọc. Dễ đọc, kết quả có ngay trong bộ nhớ.</p>
+<p><span class="term">map()</span> trả về đối tượng lười biếng — không tính ngay, chỉ tính khi cần. Tiết kiệm bộ nhớ hơn khi làm việc với chuỗi dài mà chỉ cần duyệt qua một lần.</p>
+<div class="analogy">List comprehension như đặt cả đĩa thức ăn ra trước. map() như đầu bếp đứng chờ — bạn lấy từng món thì mới nấu.</div>
+<p>Dùng list comprehension khi cần kết quả ngay và code cần rõ ràng. Dùng map() khi chuỗi rất dài và không cần tất cả cùng lúc.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> *args và **kwargs là gì?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_13.wav"></audio></div>
+<div class="answer">
+<p><span class="term">*args</span> cho phép hàm nhận bất kỳ số lượng đối số vị trí nào. Dấu sao gom tất cả đối số thừa vào một tuple.</p>
+<p><span class="term">**kwargs</span> tương tự nhưng cho đối số có tên — hai dấu sao gom vào một từ điển. Rất hữu ích khi viết hàm nhận cấu hình linh hoạt.</p>
+<div class="analogy">*args như bao tải đựng bao nhiêu kiện hàng cũng được — bỏ vào theo thứ tự. **kwargs như hộp có dán nhãn tên từng kiện — không cần thứ tự nhưng mỗi cái phải có tên.</div>
+<p>Thường dùng trong decorator để hàm bọc truyền toàn bộ đối số xuống hàm gốc mà không cần biết hàm gốc nhận bao nhiêu.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> Python quản lý bộ nhớ như thế nào?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_14.wav"></audio></div>
+<div class="answer">
+<p>Python dùng ba cơ chế. Thứ nhất, <span class="term">đếm tham chiếu</span>: mỗi object có bộ đếm, khi về không thì giải phóng ngay — nhanh và là cơ chế chính.</p>
+<p>Thứ hai, <span class="term">garbage collector theo chu kỳ</span>: xử lý trường hợp hai object tham chiếu lẫn nhau thành vòng tròn — bộ đếm không bao giờ về không dù không ai bên ngoài dùng. GC định kỳ phát hiện và xóa các vòng này.</p>
+<p>Thứ ba, <span class="term">bể bộ nhớ</span>: Python xin một vùng bộ nhớ lớn từ hệ điều hành và tự quản lý bên trong, tái sử dụng các ô nhỏ đã giải phóng — giảm chi phí cấp phát cho từng object.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> is và == khác nhau thế nào?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_15.wav"></audio></div>
+<div class="answer">
+<p><span class="term">==</span> so sánh giá trị: "hai thứ này bằng nhau về nội dung không?". <span class="term">is</span> so sánh danh tính: "hai biến này có đang trỏ vào đúng một object trong bộ nhớ không?".</p>
+<p>Hai danh sách cùng nội dung thì == trả về True nhưng is trả về False — vì là hai object riêng biệt.</p>
+<div class="analogy">is như so sánh số CMND — mỗi người một số duy nhất. == như so sánh tên — hai người khác nhau có thể cùng tên Nguyễn Văn A.</div>
+<p>Quy tắc thực tế: chỉ dùng is để kiểm tra None, True, False vì các giá trị này luôn là một object duy nhất. Mọi trường hợp còn lại dùng ==.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Exception chaining (raise ... from ...) là gì?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_16.wav"></audio></div>
+<div class="answer">
+<p>Khi bắt lỗi và muốn báo lỗi cấp cao hơn, dùng <code>raise LỗiMới from LỗiGốc</code>. Python giữ nguyên thông tin lỗi gốc và đính kèm lỗi mới — khi in ra stack trace bạn thấy cả hai.</p>
+<p>Cần thiết khi viết thư viện: wrap lỗi kỹ thuật thấp (lỗi kết nối database) thành lỗi có nghĩa nghiệp vụ ("không thể lấy thông tin tài khoản"). Người dùng thư viện nhận lỗi có ý nghĩa, lập trình viên debug vẫn thấy nguyên nhân gốc.</p>
+<div class="analogy">Báo cáo sự cố theo tầng: cấp dưới báo "máy chủ DB không phản hồi", cấp trên viết "giao dịch không thể hoàn thành, nguyên nhân: DB không phản hồi". Thông tin gốc được giữ lại, diễn đạt phù hợp hơn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Phân biệt classmethod, staticmethod và instance method?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_17.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Instance method</span>: nhận self — truy cập và thay đổi thuộc tính của object cụ thể.</p>
+<p><span class="term">classmethod</span>: nhận cls là bản thân lớp. Dùng để tạo object theo nhiều cách khác nhau — gọi là factory method. Ví dụ tạo Payment từ JSON hoặc từ chuỗi văn bản.</p>
+<p><span class="term">staticmethod</span>: không nhận self hay cls — hàm bình thường đặt trong lớp cho gọn. Dùng cho hàm tiện ích liên quan đến lớp nhưng không cần truy cập vào lớp hay object, ví dụ kiểm tra số tiền có hợp lệ không.</p>
+<div class="analogy">Nhà máy xe: instance method như công nhân làm trực tiếp trên chiếc xe cụ thể. classmethod như quy trình đặt hàng xe mới từ nhiều kênh khác nhau. staticmethod như quy trình kiểm tra an toàn chung — không gắn với chiếc xe nào.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> __init__ và __new__ khác nhau thế nào?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_18.wav"></audio></div>
+<div class="answer">
+<p>Tạo object có hai bước. <span class="term">__new__</span>: Python cấp phát vùng bộ nhớ, tạo ra object rỗng. <span class="term">__init__</span>: điền các thuộc tính ban đầu vào object đó.</p>
+<p>Thường chỉ cần quan tâm đến __init__. __new__ hầu như không cần override trừ trường hợp đặc biệt như Singleton — đảm bảo chỉ có một instance duy nhất của lớp tồn tại.</p>
+<div class="analogy">__new__ như xây căn phòng — tạo không gian trống. __init__ như trang trí nội thất — đặt bàn ghế, treo tranh. Bạn thường chỉ lo phần trang trí.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> Pydantic dùng để làm gì? Tại sao quan trọng trong API tài chính?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_19.wav"></audio></div>
+<div class="answer">
+<p>Pydantic <span class="term">xác nhận và chuyển đổi dữ liệu</span> dựa trên type hints. Khi request đến API, Pydantic tự kiểm tra kiểu, giá trị, định dạng — và báo lỗi rõ ràng nếu sai.</p>
+<p>Trong hệ thống tài chính, dữ liệu sai nếu không bắt từ đầu sẽ lan vào hệ thống — một số tiền âm, số tài khoản thiếu chữ số có thể gây lỗi tài chính khó phát hiện. Pydantic ngặn ngay tại cổng vào.</p>
+<p>Ngoài ra, Pydantic tự động sinh tài liệu API — developer khác biết chính xác API nhận và trả gì mà không cần viết tay.</p>
+<div class="analogy">Nhân viên nhận hồ sơ ngân hàng — kiểm tra đủ giấy tờ, ký đúng chỗ trước khi chuyển vào trong. Sai thì sửa ngay tại bàn, không để lọt vào bên trong rồi mới phát hiện.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> Làm sao tối ưu performance cho Python service xử lý nhiều request?</div><div class="audio-bar"><audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/01_python_core/cau_20.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Lập trình bất đồng bộ</span> với asyncio và FastAPI — thay vì chờ từng request, server xử lý song song nhiều request trong cùng một luồng.</p>
+<p><span class="term">Connection pooling</span> cho database và Redis — tạo kết nối tốn 100–500ms, pool giữ sẵn kết nối để mượn dùng không cần tạo mới mỗi lần.</p>
+<p><span class="term">Bộ nhớ đệm</span> cho dữ liệu ít thay đổi như tỷ giá, cấu hình — lưu Redis với TTL phù hợp thay vì query database mỗi lần.</p>
+<p><span class="term">Generator</span> cho dữ liệu lớn thay vì nạp hết vào RAM. <span class="term">Đo trước khi tối ưu</span> — dùng profiler để biết đúng chỗ chậm. Tác vụ tính toán nặng thì dùng <span class="term">Celery worker</span> chạy nền.</p>
+</div>
+</div>
+
+<script>
+const _au = Array.from(document.querySelectorAll('.qa-audio'));
+function playAll() {
+  const btn = document.getElementById('playAllBtn');
+  if (btn.classList.contains('playing')) {
+    _au.forEach(a => { a.pause(); a.currentTime = 0; });
+    btn.classList.remove('playing'); btn.textContent = '▶ Play All'; return;
+  }
+  btn.classList.add('playing'); btn.textContent = '⏹ Dừng';
+  _nxt(0);
+}
+function _nxt(i) {
+  if (i >= _au.length) {
+    const b = document.getElementById('playAllBtn');
+    b.classList.remove('playing'); b.textContent = '▶ Play All'; return;
+  }
+  _au[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  _au[i].currentTime = 0;
+  _au[i].play().catch(() => {});
+  _au[i].onended = () => _nxt(i + 1);
+}
+</script>
+</body>
+</html>

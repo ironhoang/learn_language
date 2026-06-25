@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>Project &amp; System Design — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #06b6d4; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #06b6d4; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #0e7490; margin-bottom: 16px; }
+  .qnum { background: #cffafe; color: #0891b2; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #0891b2; font-weight: 600; }
+  .analogy { background: #ecfeff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #67e8f9; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #06b6d4; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; }
+  .copy-btn:hover { background: #0891b2; }
+
+  .audio-bar { margin: -4px 0 14px; }
+  .audio-bar audio { width: 100%; height: 36px; }
+  .audio-note { font-size: 13px; color: #999; margin-bottom: 3px; font-style: italic; }
+  #playAllBtn { position: fixed; top: 64px; right: 20px; padding: 10px 18px;
+    background: #06b6d4; color: white; border: none; border-radius: 8px;
+    cursor: pointer; font-size: 16px; font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25); z-index: 100; }
+  #playAllBtn.playing { background: #dc2626; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<button id="playAllBtn" onclick="playAll()">▶ Play All</button>
+<h1>Project &amp; System Design — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> Hãy giới thiệu project gần đây nhất của bạn?</div><div class="audio-bar"><div class="audio-note">Câu 1 &amp; 2</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_01_02_6.wav"></audio></div>
+<div class="answer">
+<p>Câu mở đầu quan trọng — cần ngắn nhưng ấn tượng. Dùng cấu trúc <span class="term">STAR-light</span>: Situation, Task, Action, Result.</p>
+<p>Mẫu câu: "Tôi xây dựng API thanh toán cho ứng dụng 50 nghìn người dùng. Bài toán chính là xử lý chuyển tiền đồng bộ gây timeout khi tải cao. Tôi thiết kế lại theo kiến trúc bất đồng bộ dùng hàng đợi tin nhắn — giao dịch tiếp nhận ngay, xử lý trong nền, kết quả thông báo qua WebSocket. Kết quả: thời gian phản hồi giảm từ 3 giây xuống 200ms, tỷ lệ timeout về không trong giờ cao điểm."</p>
+<p>Ba điểm cần có: con số cụ thể chứng minh impact, công nghệ đã dùng, vấn đề thực sự đã giải quyết.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> Monolith và Microservices — khi nào chọn cái nào?</div>
+<div class="answer">
+<p><span class="term">Monolith</span>: toàn bộ ứng dụng chạy một đơn vị duy nhất — cùng codebase, cùng database, deploy cùng nhau. Đơn giản để vận hành và debug.</p>
+<p><span class="term">Microservices</span>: chia thành các service độc lập, mỗi service có database riêng, deploy riêng.</p>
+<p>Chọn monolith khi: giai đoạn đầu, team dưới 5 người, ranh giới domain chưa rõ. Chuyển sang microservices khi: team lớn, các module cần scale khác nhau, nhiều nhóm muốn deploy độc lập. Đừng chọn microservices quá sớm — độ phức tạp vận hành tăng rất nhiều.</p>
+<div class="analogy">Cửa hàng nhỏ bán đủ thứ là monolith — một người quản lý tất cả, đơn giản. Tập đoàn bán lẻ lớn là microservices — mỗi bộ phận vận hành độc lập. Cửa hàng nhỏ mà "tập đoàn hóa" chỉ tạo ra biên bản họp vô tận.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Circuit Breaker Pattern là gì? Tại sao cần?</div><div class="audio-bar"><div class="audio-note">Câu 3 &amp; 4</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_03_04_6.wav"></audio></div>
+<div class="answer">
+<p>Khi service B chậm hoặc lỗi, service A chờ đợi và thất bại liên tục — request tích lũy, tài nguyên cạn kiệt, A cũng sập theo. Đây là <span class="term">cascading failure</span>.</p>
+<p><span class="term">Circuit Breaker</span> có ba trạng thái. <span class="term">CLOSED</span>: bình thường, mọi request đi qua. <span class="term">OPEN</span>: khi lỗi vượt ngưỡng — ngắt mạch, mọi request fail ngay lập tức không cần chờ, trả về fallback. <span class="term">HALF-OPEN</span>: sau một khoảng thời gian, thử cho vài request qua — nếu thành công thì về CLOSED, nếu fail thì về OPEN.</p>
+<div class="analogy">Cầu dao điện trong nhà — khi quá tải, ngắt để tránh cháy. Sau khi sửa xong thì đóng lại. Không có cầu dao, dây điện cháy và kéo theo cả hệ thống.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Saga Pattern là gì? Khi nào dùng trong fintech?</div>
+<div class="answer">
+<p>Trong hệ thống phân tán, một giao dịch nghiệp vụ cần cập nhật nhiều service — ví dụ chuyển tiền: trừ ví người gửi, cộng ví người nhận, ghi nhật ký. Không thể dùng database transaction thông thường vì mỗi service có database riêng.</p>
+<p><span class="term">Saga</span> là chuỗi transaction cục bộ — mỗi bước thực hiện một phần, publish sự kiện cho bước tiếp theo. Nếu bước nào thất bại, chạy transaction bù trừ để hoàn tác các bước trước.</p>
+<p>Hai kiểu tổ chức: <span class="term">Choreography</span> — mỗi service tự lắng nghe và phản ứng, không có điều phối viên trung tâm. <span class="term">Orchestration</span> — một service điều phối viên chỉ đạo từng bước, dễ theo dõi và debug hơn, phù hợp giao dịch tài chính phức tạp.</p>
+<div class="analogy">Orchestration như wedding planner — biết chính xác ai làm gì, bước nào đến bước nào, và khi hoa không về kịp thì backup là gì.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> High Availability là gì? Làm sao đạt được?</div><div class="audio-bar"><div class="audio-note">Câu 5 &amp; 6</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_05_06_6.wav"></audio></div>
+<div class="answer">
+<p><span class="term">High Availability</span>: hệ thống vẫn hoạt động khi một số thành phần gặp sự cố. Thường đo bằng tỷ lệ uptime — 99,9% là khoảng 8 giờ downtime mỗi năm, 99,99% là 52 phút.</p>
+<p>Nguyên tắc cốt lõi: loại bỏ <span class="term">single point of failure</span> — không có thành phần nào mà hỏng là toàn bộ dừng. Chạy nhiều instance, nhiều node database. Load balancer phân phối traffic và phát hiện instance không khỏe.</p>
+<p>Kỹ thuật cụ thể: database replication với primary/replica, failover tự động. Nhiều availability zone tránh sự cố địa lý. Kubernetes tự restart pod khi lỗi. Graceful shutdown xử lý xong request đang có trước khi tắt.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> Horizontal scaling và Vertical scaling khác nhau thế nào?</div>
+<div class="answer">
+<p><span class="term">Vertical scaling</span>: nâng cấp máy chủ hiện tại — thêm RAM, CPU mạnh hơn. Đơn giản, không sửa ứng dụng. Nhưng có giới hạn cứng, chi phí tăng không tuyến tính, và vẫn còn single point of failure.</p>
+<p><span class="term">Horizontal scaling</span>: thêm nhiều máy chủ và phân phối tải. Mở rộng gần như vô hạn, chi phí tuyến tính, đạt được HA. Yêu cầu ứng dụng phải stateless — request lần sau có thể đến instance khác.</p>
+<p>Thực tế thường kết hợp: vertical đến một mức vì ít server dễ quản lý hơn, sau đó horizontal để tiếp tục tăng trưởng. Database hay vertical; application server hay horizontal.</p>
+<div class="analogy">Vertical như thuê nhân viên giỏi hơn — có giới hạn và đắt dần. Horizontal như thuê thêm nhiều người — linh hoạt nhưng cần quy trình phối hợp tốt.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> Load Balancing hoạt động thế nào? Các thuật toán phân phối?</div><div class="audio-bar"><div class="audio-note">Câu 7 &amp; 8</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_07_08_6.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Load Balancer</span>: nhận toàn bộ request từ người dùng và phân phối đến các instance phía sau. Người dùng chỉ biết một địa chỉ.</p>
+<p>Các thuật toán: <span class="term">Round Robin</span> — lần lượt phân phối, đơn giản nhưng không tính tải thực tế. <span class="term">Least Connections</span> — gửi đến server đang xử lý ít request nhất, thông minh hơn khi request có thời gian xử lý khác nhau. <span class="term">Sticky Sessions</span> — request từ cùng người dùng luôn đến cùng server, dùng khi ứng dụng có state phụ thuộc instance.</p>
+<p>Load balancer còn health check định kỳ — tự ngừng gửi request đến server không phản hồi.</p>
+<div class="analogy">Lễ tân phân phòng họp. Round Robin: theo thứ tự phòng. Least Connections: phòng còn ít người nhất. Sticky Sessions: khách quen luôn phòng họ thích.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> Blue/Green và Canary deployment khác nhau thế nào?</div>
+<div class="answer">
+<p><span class="term">Blue/Green</span>: duy trì hai môi trường giống nhau. Blue đang phục vụ, triển khai lên Green, test kỹ, chuyển toàn bộ traffic sang Green. Rollback: chuyển ngược về Blue trong vài giây. Chi phí cao vì cần gấp đôi tài nguyên.</p>
+<p><span class="term">Canary</span>: triển khai phiên bản mới cho một phần nhỏ người dùng — ví dụ 5%. Theo dõi metrics. Ổn thì tăng dần lên 10%, 20%, 50%, 100%. Có vấn đề thì rollback trước khi ảnh hưởng đến đa số. Tiết kiệm tài nguyên hơn nhưng cần theo dõi phức tạp hơn.</p>
+<div class="analogy">Blue/Green như đổi ca cả tổ. Canary như thử sản phẩm mới một cửa hàng trước khi triển khai toàn quốc.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> Observability là gì? Metrics, Logs, Traces khác nhau thế nào?</div><div class="audio-bar"><div class="audio-note">Câu 9 &amp; 10</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_09_10_6.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Observability</span>: khả năng hiểu trạng thái nội tại của hệ thống qua dữ liệu đầu ra. Gồm ba trụ cột.</p>
+<p><span class="term">Metrics</span>: số đo theo thời gian — request/giây, tỷ lệ lỗi, thời gian phản hồi, CPU. Trả lời "hệ thống khỏe không?" — dùng để cảnh báo. Công cụ: Prometheus + Grafana.</p>
+<p><span class="term">Logs</span>: sự kiện rời rạc — giao dịch 1234 thất bại, user 567 đăng nhập. Trả lời "điều gì đã xảy ra?" — dùng điều tra sự cố. Công cụ: Elasticsearch + Kibana.</p>
+<p><span class="term">Traces</span>: theo dõi một request qua nhiều service — hiển thị toàn bộ hành trình với thời gian từng bước. Trả lời "bottleneck ở đâu?" Công cụ: Jaeger, Zipkin.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> Làm sao thiết kế API versioning?</div>
+<div class="answer">
+<p>Khi API đang được nhiều khách hàng dùng, không thể thay đổi tùy tiện vì sẽ làm vỡ ứng dụng của họ. <span class="term">API versioning</span> cho phép phát triển API mà không phá tương thích ngược.</p>
+<p>Phổ biến nhất: đặt version vào URL path — <code>/api/v1/</code> chạy song song <code>/api/v2/</code>. Khách hàng cũ dùng v1, mới dùng v2. Khi đủ người chuyển sang v2, deprecated rồi remove v1.</p>
+<p>Nguyên tắc: thêm field mới vào response không phá tương thích — client cũ bỏ qua field không biết. Xóa field hoặc đổi kiểu dữ liệu mới cần version mới. Giữ version cũ đủ lâu để khách hàng có thời gian migration.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> Message Queue là gì? Khi nào dùng thay vì gọi API trực tiếp?</div><div class="audio-bar"><div class="audio-note">Câu 11 &amp; 12</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_11_12_6.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Message Queue</span>: trung gian lưu trữ tin nhắn giữa producer và consumer. Producer không cần chờ consumer xử lý xong.</p>
+<p>Dùng Queue khi: tốc độ xử lý hai bên chênh lệch — hệ thống nhận 10.000 giao dịch/giây nhưng email service chỉ 100/giây, queue hấp thu sự chênh lệch. Muốn tăng độ tin cậy — consumer hỏng tạm thời, tin nhắn vẫn trong queue chờ. Muốn decouple — producer không cần biết consumer là ai.</p>
+<p>Dùng API trực tiếp khi cần kết quả ngay để phản hồi người dùng, khi xử lý đồng bộ là bắt buộc.</p>
+<div class="analogy">Gửi thư qua bưu điện thay vì gặp trực tiếp — bỏ vào thùng và đi về. Nếu người nhận đi vắng, thư vẫn đến khi họ quay lại.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> CAP Theorem là gì? Ảnh hưởng đến thiết kế hệ thống ngân hàng thế nào?</div>
+<div class="answer">
+<p><span class="term">CAP Theorem</span>: hệ thống phân tán không thể đồng thời đảm bảo cả ba: Consistency, Availability, Partition Tolerance. Khi mạng bị chia cắt, chỉ chọn được hai.</p>
+<p><span class="term">Consistency</span>: mọi node thấy cùng dữ liệu cùng lúc. <span class="term">Availability</span>: mọi request nhận được phản hồi dù một số node hỏng. <span class="term">Partition Tolerance</span>: hệ thống vẫn hoạt động khi mạng bị chia cắt.</p>
+<p>Với ngân hàng: Partition Tolerance bắt buộc vì sự cố mạng là thực tế. Phải chọn giữa C và A. Với số dư và giao dịch chuyển tiền, Consistency được ưu tiên — thà từ chối giao dịch còn hơn hiển thị số dư sai. Hệ thống CP chấp nhận một số request thất bại khi có sự cố mạng.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> Làm sao thiết kế hệ thống thanh toán chịu được tải cao?</div><div class="audio-bar"><div class="audio-note">Câu 13 &amp; 14</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_13_14_6.wav"></audio></div>
+<div class="answer">
+<p>Hệ thống thanh toán cần giải quyết đồng thời: không mất tiền, không trùng giao dịch, hiệu suất cao, phục hồi được khi sự cố.</p>
+<p>Các pattern cốt lõi: <span class="term">Idempotency Key</span> — client gửi kèm mã duy nhất mỗi giao dịch. Server lưu kết quả theo mã này — nếu gửi lại cùng mã, trả kết quả cũ, không xử lý lại. <span class="term">Immutable Ledger</span> — không bao giờ sửa hay xóa giao dịch đã ghi, chỉ thêm bản ghi bù trừ.</p>
+<p>Kiến trúc: API tiếp nhận nhanh và đẩy vào queue. Worker lấy từ queue xử lý có kiểm soát. Database phân vùng theo user. Cache cho dữ liệu tra cứu thường xuyên như tỷ giá, giới hạn giao dịch. Read replica cho báo cáo.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> Event-driven Architecture là gì?</div>
+<div class="answer">
+<p><span class="term">Event-driven Architecture</span>: các component giao tiếp qua sự kiện thay vì gọi hàm trực tiếp. Khi có điều gì xảy ra, component phát sự kiện. Ai quan tâm thì lắng nghe và phản ứng.</p>
+<p>Ví dụ: hoàn thành giao dịch chuyển tiền, service thanh toán phát sự kiện "giao dịch thành công". Service thông báo gửi email, service điểm thưởng cộng điểm, service audit ghi log — ba service không biết nhau, chỉ biết sự kiện.</p>
+<p>Ưu điểm: service độc lập, dễ thêm tính năng mới không cần sửa code cũ. Nhược điểm: khó debug vì luồng phân tán, khó đảm bảo thứ tự, cần message broker để vận hành.</p>
+<div class="analogy">Loa thông báo siêu thị — quét mã thành viên và loa phát. Quầy ưu đãi phản ứng, quầy VIP phản ứng, hệ thống điểm thưởng phản ứng — tất cả độc lập, không ai gọi ai.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> Làm sao xử lý nợ kỹ thuật trong dự án?</div><div class="audio-bar"><div class="audio-note">Câu 15 &amp; 16</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_15_16_6.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Technical debt</span>: tích lũy quyết định tạm thời, code không tối ưu, thiếu test. Như nợ tài chính — không xử lý thì lãi tích lũy, mọi tính năng mới chậm hơn và lỗi nhiều hơn.</p>
+<p>Cách tiếp cận thực tế: nhận biết và đo lường — không thể quản lý thứ không đo được. Tạo danh sách có ưu tiên. Áp dụng quy tắc Boy Scout: mỗi khi đụng code, để lại sạch hơn một chút.</p>
+<p>Với hệ thống lớn cần cải tổ, dùng <span class="term">Strangler Fig Pattern</span> — thay thế dần từng phần hệ thống cũ bằng mới, hai hệ thống song song, traffic chuyển dần. Không viết lại toàn bộ một lúc — rủi ro cực kỳ cao.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> SLI, SLO, SLA là gì?</div>
+<div class="answer">
+<p>Nền tảng của Site Reliability Engineering để quản lý độ tin cậy hệ thống.</p>
+<p><span class="term">SLI — Service Level Indicator</span>: chỉ số đo lường thực tế — tỷ lệ request thành công, thời gian phản hồi p99, uptime. Số đo được từ hệ thống.</p>
+<p><span class="term">SLO — Service Level Objective</span>: mục tiêu đặt ra cho SLI — tỷ lệ thành công trên 99,9%, p99 dưới 200ms. Cam kết nội bộ, mục tiêu team kỹ thuật hướng đến.</p>
+<p><span class="term">SLA — Service Level Agreement</span>: thỏa thuận ràng buộc pháp lý với khách hàng — nếu uptime dưới 99,5%, khách được giảm tiền. SLA thường kém khắt khe hơn SLO để có buffer an toàn.</p>
+<div class="analogy">Pizza. SLI là thời gian giao thực tế. SLO là tiêu chuẩn nội bộ: giao trong 30 phút. SLA là cam kết với khách: 45 phút hoặc hoàn tiền.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Làm sao đảm bảo eventual consistency trong hệ thống ngân hàng?</div><div class="audio-bar"><div class="audio-note">Câu 17 &amp; 18</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_17_18_6.wav"></audio></div>
+<div class="answer">
+<p><span class="term">Eventual Consistency</span>: sau một khoảng thời gian không có cập nhật mới, tất cả node sẽ có cùng dữ liệu — nhưng trong lúc đang cập nhật, các node có thể thấy khác nhau.</p>
+<p>Không phải mọi thứ đều cần strong consistency. Số dư khi thực hiện giao dịch cần tuyệt đối nhất quán — không được sai. Dashboard tổng hợp, thông báo điểm thưởng có thể chậm vài giây mà không ảnh hưởng nghiêm trọng.</p>
+<p>Kỹ thuật: <span class="term">Outbox Pattern</span> — ghi sự kiện vào database cùng transaction chính, worker đọc và publish — không mất sự kiện. <span class="term">Reconciliation</span> — định kỳ so sánh dữ liệu và sửa lệch. <span class="term">Idempotent consumer</span> — xử lý cùng sự kiện nhiều lần cho cùng kết quả, xử lý được duplicate.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> Làm sao debug khi hệ thống chậm trong production?</div>
+<div class="answer">
+<p>Debug hiệu suất cần tiếp cận có hệ thống, không mò mẫm.</p>
+<p>Bước 1: xác định phạm vi — chậm toàn bộ hay chỉ một số endpoint? Tất cả người dùng hay một số? Bắt đầu từ khi nào? Có deployment gần đây không?</p>
+<p>Bước 2: xem metrics — CPU, memory, database connections, queue depth. Chỉ số nào bất thường chỉ ra hướng điều tra. Bước 3: xem distributed traces — bước nào trong chuỗi tốn nhiều thời gian nhất. Bước 4: với database — chạy EXPLAIN ANALYZE, kiểm tra index, slow query log. Bước 5: xem logs tìm pattern lỗi.</p>
+<p>Sai lầm phổ biến: thay đổi nhiều thứ cùng lúc. Thay đổi từng thứ và đo kết quả trước khi làm tiếp.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> Tại sao chọn FastAPI cho dự án fintech?</div><div class="audio-bar"><div class="audio-note">Câu 19 &amp; 20</div>
+<audio class="qa-audio" controls="" src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/lythuyet-audio/06_project_design/cau_19_20_6.wav"></audio></div>
+<div class="answer">
+<p>Câu hỏi về quyết định kỹ thuật — cần giải thích dựa trên nhu cầu cụ thể.</p>
+<p>FastAPI phù hợp fintech vì: hiệu suất cao nhờ async I/O — quan trọng khi xử lý nhiều request đồng thời. Type safety qua Pydantic tự động validate dữ liệu đầu vào — giảm lỗi format trong giao dịch tài chính. Tài liệu API tự động — quan trọng khi làm việc với nhiều team và đối tác. Dependency Injection tổ chức code rõ ràng và dễ test.</p>
+<p>Nhược điểm cần nêu thành thật: trẻ hơn Django/Flask nên ecosystem nhỏ hơn. Async có learning curve. Không có ORM hay admin panel tích hợp sẵn.</p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> Câu hỏi nào bạn muốn hỏi người kỹ thuật ở Tyme?</div>
+<div class="answer">
+<p>Cơ hội thể hiện đã nghiên cứu kỹ và thực sự quan tâm. Câu hỏi tốt vừa giúp bạn đánh giá công ty, vừa gây ấn tượng với người hỏi.</p>
+<p>Câu hỏi kỹ thuật: "Team đang xử lý những thách thức kỹ thuật nào lớn nhất trong năm tới?" — cho thấy bạn nghĩ đến tương lai. "Cấu trúc microservices hiện tại chia thành các domain nào?" — cho thấy hiểu về kiến trúc. "Quy trình on-call và incident response như thế nào?" — cho thấy bạn hiểu về production ownership.</p>
+<p>Câu hỏi văn hóa: "Tyme đo thành công của engineer thế nào sau sáu tháng đầu?" "Team học công nghệ mới như thế nào?" Tránh hỏi lương hay phúc lợi ngay vòng đầu — để đến khi có offer.</p>
+</div>
+</div>
+
+<script>
+const _au = Array.from(document.querySelectorAll('.qa-audio'));
+function playAll() {
+  const btn = document.getElementById('playAllBtn');
+  if (btn.classList.contains('playing')) {
+    _au.forEach(a => { a.pause(); a.currentTime = 0; });
+    btn.classList.remove('playing'); btn.textContent = '▶ Play All'; return;
+  }
+  btn.classList.add('playing'); btn.textContent = '⏹ Dừng';
+  _nxt(0);
+}
+function _nxt(i) {
+  if (i >= _au.length) {
+    const b = document.getElementById('playAllBtn');
+    b.classList.remove('playing'); b.textContent = '▶ Play All'; return;
+  }
+  _au[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  _au[i].currentTime = 0;
+  _au[i].play().catch(() => {});
+  _au[i].onended = () => _nxt(i + 1);
+}
+</script>
+</body>
+</html>
