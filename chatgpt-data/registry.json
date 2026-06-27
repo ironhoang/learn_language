@@ -12,5 +12,33 @@
     "desc": "20 phrases · 40 sentences",
     "icon": "💬",
     "href": "episoden/tech.html"
+  },
+  {
+    "stem": "life1",
+    "title": "Life1",
+    "desc": "20 phrases · 40 examples",
+    "icon": "💬",
+    "href": "episoden/life1.html"
+  },
+  {
+    "stem": "life2",
+    "title": "Life2",
+    "desc": "20 phrases · 40 examples",
+    "icon": "💬",
+    "href": "episoden/life2.html"
+  },
+  {
+    "stem": "work1",
+    "title": "Work1",
+    "desc": "20 phrases · 40 examples",
+    "icon": "💬",
+    "href": "episoden/work1.html"
+  },
+  {
+    "stem": "tech2",
+    "title": "Tech2",
+    "desc": "20 phrases · 40 examples",
+    "icon": "💬",
+    "href": "episoden/tech2.html"
   }
 ]
