@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import HomeBtn from '../components/HomeBtn';
 import PlayerBar from '../components/PlayerBar';
 import AudioBtn from '../components/AudioBtn';
+import { useAudioPlayer } from '../hooks/useAudioPlayer';
 
 function usePageData(dataKey) {
   const [data, setData] = useState(null);
@@ -31,9 +32,9 @@ function CopyBtn({ text }) {
   );
 }
 
-function AnswerCard({ ans }) {
+function AnswerCard({ ans, cardRef }) {
   return (
-    <div className="intro-card">
+    <div className="intro-card" ref={cardRef}>
       <div className="card-question">
         <div className="q-label">Họ sẽ hỏi</div>
         <div className="q-zh">
@@ -88,6 +89,27 @@ function AnswerCard({ ans }) {
 export default function IntroducePage() {
   const { setId } = useParams();
   const data = usePageData(`episoden-introduce-${setId}`);
+  const cardRefs = useRef({});
+  const dataRef = useRef(null);
+  const { activeSrc } = useAudioPlayer();
+
+  useEffect(() => {
+    if (data) dataRef.current = data;
+  }, [data]);
+
+  // Scroll to card containing the currently playing audio
+  useEffect(() => {
+    if (!activeSrc || !dataRef.current) return;
+    const { answers } = dataRef.current;
+    for (let i = 0; i < answers.length; i++) {
+      const ans = answers[i];
+      if (ans.questionZhAudio === activeSrc || ans.answerZhAudio === activeSrc || ans.answerEnAudio === activeSrc) {
+        const el = cardRefs.current[i];
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      }
+    }
+  }, [activeSrc]);
 
   if (!data) return <div className="loading">Đang tải…</div>;
   const { meta, answers } = data;
@@ -100,7 +122,13 @@ export default function IntroducePage() {
         {meta.sub && <div style={{ marginTop: 6, fontSize: '0.8rem', color: '#475569' }}>{meta.sub}</div>}
       </header>
       <div className="cards">
-        {answers.map(ans => <AnswerCard key={ans.id} ans={ans} />)}
+        {answers.map((ans, i) => (
+          <AnswerCard
+            key={ans.id}
+            ans={ans}
+            cardRef={el => { cardRefs.current[i] = el; }}
+          />
+        ))}
       </div>
       <PlayerBar />
     </div>

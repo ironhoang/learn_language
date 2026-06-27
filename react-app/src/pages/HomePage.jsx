@@ -73,6 +73,10 @@ const TECH = [
   { href: '/sum-tech/summary.html',           icon: '📋', title: 'Summary — Tổng hợp',      desc: 'Tất cả câu hỏi theo chủ đề, nhìn nhanh toàn bộ' },
 ];
 
+const CHATGPT_ENGLISH = [
+  { href: "/episoden/english-project.html", icon: "📝", title: "English Project", desc: "16 corrections · 3 expression tips · 2 groups" },
+];
+
 export default function HomePage() {
   return (
     <div className="home-page">
@@ -166,6 +170,22 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+                                                                {/* CHATGPT-DATA-START */}
+        <div>
+          <div className="section-header"><h2>English Corrections</h2></div>
+          <div className="set-cards">
+            {CHATGPT_ENGLISH.map(c => (
+              <a key={c.href} className="nav-card" href={c.href}>
+                <div className="card-icon">{c.icon}</div>
+                <div className="card-type" style={{ color: '#34d399' }}>English</div>
+                <div className="card-title">{c.title}</div>
+                <div className="card-desc">{c.desc}</div>
+                <div className="card-arrow">Mở →</div>
+              </a>
+            ))}
+          </div>
+        </div>
+        {/* CHATGPT-DATA-END */}
       </div>
     </div>
   );

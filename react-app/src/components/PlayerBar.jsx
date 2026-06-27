@@ -10,12 +10,12 @@ const MODES = {
   zh: {
     idle: '▶ 中文',
     running: '⏸ 中文',
-    selector: '.zh .audio-btn[data-src], .vocab-chip > .audio-btn[data-src], .fq-zh .audio-btn[data-src]',
+    selector: '.zh .audio-btn[data-src], .q-zh .audio-btn[data-src], .a-zh .audio-btn[data-src], .vocab-chip > .audio-btn[data-src], .fq-zh .audio-btn[data-src]',
   },
   en: {
     idle: '▶ EN',
     running: '⏸ EN',
-    selector: '.en .audio-btn[data-src], .ve .audio-btn[data-src], .fq-en .audio-btn[data-src]',
+    selector: '.en .audio-btn[data-src], .a-en .audio-btn[data-src], .ve .audio-btn[data-src], .fq-en .audio-btn[data-src]',
   },
 };
 
