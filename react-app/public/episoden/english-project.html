@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>English Project — Conversation &amp; Corrections</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f1f5f9; color: #1e293b;
+  max-width: 740px; margin: 0 auto; padding: 24px 16px 80px;
+  font-size: 15px; line-height: 1.7;
+}
+a.home { display:inline-block; margin-bottom:20px; font-size:0.82rem; color:#64748b; text-decoration:none; }
+a.home:hover { color:#1e293b; }
+h1 { font-size:1.3rem; font-weight:700; color:#1e3a8a; margin-bottom:4px; }
+.subtitle { font-size:0.82rem; color:#64748b; margin-bottom:28px; }
+
+/* ── Group divider ── */
+.group-divider {
+  display:flex; align-items:center; gap:10px;
+  margin: 36px 0 16px; color:#94a3b8; font-size:0.72rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.08em;
+}
+.group-divider::before, .group-divider::after {
+  content:''; flex:1; height:1px; background:#e2e8f0;
+}
+
+/* ── PM message ── */
+.pm-card {
+  background:#fff; border:1px solid #bfdbfe; border-left:4px solid #3b82f6;
+  border-radius:12px; padding:16px 20px; margin-bottom:12px;
+}
+.pm-label { font-size:0.68rem; font-weight:700; letter-spacing:.1em;
+  text-transform:uppercase; color:#3b82f6; margin-bottom:8px; }
+.pm-card p { color:#1e293b; margin-bottom:6px; }
+.pm-card p:last-child { margin-bottom:0; }
+.pm-card ul, .pm-card ol { padding-left:18px; }
+.pm-card li { margin-bottom:2px; }
+
+/* ── User message ── */
+.user-card {
+  background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #94a3b8;
+  border-radius:12px; padding:14px 18px; margin-bottom:12px;
+}
+.user-label { font-size:0.68rem; font-weight:700; letter-spacing:.1em;
+  text-transform:uppercase; color:#64748b; margin-bottom:8px; }
+.user-card p { color:#475569; font-style:italic; }
+
+/* ── Correction card ── */
+.corr-card {
+  background:#fff; border:1px solid #e2e8f0; border-radius:12px;
+  padding:16px 20px; margin-bottom:10px;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+}
+.orig-row { display:flex; align-items:baseline; gap:8px; margin-bottom:10px; }
+.orig-badge { font-size:0.65rem; font-weight:700; padding:2px 7px; border-radius:4px;
+  background:#fee2e2; color:#b91c1c; flex-shrink:0; }
+.orig-text { color:#94a3b8; font-size:0.9rem; text-decoration:line-through; }
+.better-label { font-size:0.68rem; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:#15803d; margin-bottom:6px; }
+.better-row { display:flex; align-items:flex-start; margin-bottom:6px; }
+.better-num { font-size:0.7rem; color:#94a3b8; margin-right:6px; padding-top:3px; flex-shrink:0; }
+.better-text { color:#1e293b; font-weight:500; flex:1; }
+.better-text.alt { font-weight:400; color:#374151; }
+.why-label { font-size:0.68rem; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:#7c3aed; margin:10px 0 4px; }
+.why { font-size:0.82rem; color:#64748b; padding-left:14px; }
+.why li { margin-bottom:2px; }
+
+/* ── Expression card ── */
+.expr-card {
+  background:#fffbeb; border:1px solid #fde68a; border-left:4px solid #f59e0b;
+  border-radius:12px; padding:14px 20px; margin-bottom:10px;
+}
+.expr-title { font-size:0.8rem; font-weight:700; color:#92400e; margin-bottom:10px; }
+.expr-row { display:flex; align-items:flex-start; margin-bottom:6px; }
+.expr-row span { flex:1; color:#1e293b; }
+
+/* ── Audio button ── */
+.audio-btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:24px; height:24px; padding:0; margin-left:6px; flex-shrink:0;
+  background:transparent; border:1px solid #cbd5e1;
+  border-radius:5px; cursor:pointer; font-size:0.7rem; color:#94a3b8;
+  vertical-align:middle; transition:all .15s;
+}
+.audio-btn:hover { background:#eff6ff; border-color:#3b82f6; color:#3b82f6; }
+.audio-btn.playing { border-color:#f97316; color:#f97316; }
+@keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+.audio-btn.playing { animation:audio-pulse 1s ease-in-out infinite; }
+
+/* ── Play bar ── */
+#play-all-bar {
+  position:fixed; bottom:0; left:0; right:0; height:52px;
+  background:#f8fafc; border-top:1px solid #e2e8f0;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  z-index:500; padding:0 12px; box-shadow:0 -2px 8px rgba(0,0,0,.05);
+}
+.pa-btn {
+  background:#f1f5f9; border:1px solid #cbd5e1; color:#475569;
+  font-size:0.78rem; font-weight:600; padding:6px 14px;
+  border-radius:8px; cursor:pointer; transition:all .15s;
+  font-family:inherit; white-space:nowrap;
+}
+.pa-btn:hover { border-color:#94a3b8; color:#1e293b; }
+.pa-btn.active { border-color:#f97316; color:#f97316; background:#fff7ed; }
+.pa-btn.marked { border-color:#3b82f6; color:#3b82f6; }
+#pa-stop {
+  background:transparent; border:1px solid #e2e8f0; color:#94a3b8;
+  font-size:0.78rem; padding:6px 10px; border-radius:8px;
+  cursor:pointer; transition:all .15s; font-family:inherit;
+}
+#pa-stop:hover { border-color:#94a3b8; color:#475569; }
+#pa-status { font-size:0.7rem; color:#94a3b8; min-width:50px; text-align:center; font-variant-numeric:tabular-nums; }
+</style>
+</head>
+<body>
+<a class="home" href="/">← Home</a>
+<h1>English Project — Corrections</h1>
+<p class="subtitle">16 corrections · 2 listening groups (~2 min each)</p>
+<script>
+(function () {
+  var cur = { audio: null, btn: null, onDone: null };
+
+  function stopCur() {
+    if (cur.audio) { cur.audio.pause(); cur.audio.currentTime = 0; cur.audio = null; }
+    if (cur.btn)   { cur.btn.classList.remove('playing'); }
+    cur.btn = null; cur.onDone = null;
+  }
+
+  function getUrls(btn) {
+    if (btn.dataset.src) return [btn.dataset.src];
+    return [];
+  }
+
+  function playList(btn, srcs, onDone) {
+    stopCur();
+    if (!srcs || !srcs.length) { if (onDone) onDone(); return; }
+    btn.classList.add('playing');
+    cur.btn = btn; cur.onDone = onDone;
+    var idx = 0;
+    function next() {
+      if (cur.btn !== btn) return;
+      if (idx >= srcs.length) {
+        btn.classList.remove('playing'); cur.btn = null;
+        if (onDone) onDone(); return;
+      }
+      var audio = new Audio(srcs[idx++]);
+      cur.audio = audio;
+      audio.play().catch(function() { next(); });
+      audio.onended = next;
+    }
+    next();
+  }
+
+  window.playAudio = function (btn) {
+    if (cur.btn === btn) { stopCur(); return; }
+    stopCur();
+    window._fromBtn = btn;
+    var f = document.getElementById('pa-from');
+    if (f) { f.classList.add('marked'); f.classList.remove('active'); }
+    playList(btn, getUrls(btn), null);
+  };
+
+  window._playList = playList;
+  window._stopCur  = stopCur;
+  window._getUrls  = getUrls;
+})();
+</script>
+<div class="group-divider">Group 1 · ~2 min</div>
+<div class="pm-card">
+<div class="pm-label">Project Manager</div>
+<p>I like your idea. It gives users a clear learning path instead of random lessons.</p>
+<p>I have a few suggestions:</p>
+<p>Instead of 10 levels, we could align them with CEFR (A1, A2, B1, B2, C1). Each level can have multiple units. Each unit should focus on one topic, such as: Greetings Food Travel Programming AI Meetings Docker Databases Besides vocabulary and sentences, I'd like to include a short AI conversation at the end of each unit so users can practice what they have learned. Yes, we definitely need to store user progress. We should also remember difficult words and review them later using spaced repetition.</p>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">The first, we need provide few level (like 10 level), and provide category.</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">First, we need to provide several levels (for example, 10 levels) and different learning categories.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>First, (not The first,)</li>
+<li>need to provide</li>
+<li>several levels sounds more natural than few level</li>
+<li>10 levels (plural)</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">After that we create sublevel for each category.</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">After that, we can create sub-levels for each category.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>Add a comma after After that.</li>
+<li>can create sounds more natural in a discussion.</li>
+<li>sub-levels is plural.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">For example, we create 10 level, 10 categories.</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">For example, we could have 10 levels and 10 categories.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>could have is more natural when discussing ideas.</li>
+<li>Add and between the two items.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">Then in each category, we create sublevel like category A1 with around 10 vocabularies, and 10 sentences.</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">Then, each category can contain several units. For example, the A1 category could have 10 vocabulary words and 10 example sentences.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>We usually say vocabulary words, not vocabularies.</li>
+<li>contain several units is clearer than create sublevel.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">Each vocabulary we create practice: write, read (we don't need user read correctly, just make they speakout), choice correct answer.</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">For each vocabulary word, we should provide several exercises: writing, speaking, and multiple-choice questions. We don't need to evaluate pronunciation perfectly; we just want users to speak out loud.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>For each vocabulary word</li>
+<li>provide several exercises</li>
+<li>multiple-choice questions is the standard term.</li>
+<li>speak out loud is a common expression.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">we need storage user progress too</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">We also need to store the user's learning progress.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>store is the verb.</li>
+<li>storage is the noun.</li>
+<li>the user's learning progress is more natural.</li>
+</ul>
+</div>
+<div class="expr-card">
+<div class="expr-title">⭐ Useful expressions for meetings</div>
+<div class="expr-row"><span>We create...</span></div>
+<div class="expr-row"><span>We should implement...</span></div>
+<div class="expr-row"><span>We could add...</span></div>
+<div class="expr-row"><span>I'd like to include...</span></div>
+<div class="expr-row"><span>It would be useful to...</span></div>
+<div class="expr-row"><span>One possible feature is...</span></div>
+</div>
+<div class="pm-card">
+<div class="pm-label">Project Manager</div>
+<p>Your proposal looks solid.</p>
+<p>Now let's discuss the technical design.</p>
+<p>How would you design the backend?</p>
+<p>What services or modules do you think we need? Please don't worry about implementation details yet. Just describe the overall architecture in English.</p>
+</div>
+<div class="user-card">
+<div class="user-label">You</div>
+<p>Ok about the technical design I have some Ideal 1. Create fastAPI with docker compose 2. DB we can use pgsql, redis 3. We need some seed data to provide category, level 4. Build UI in reactjs with register, login, choice level, category to start learn</p>
+</div>
+<div class="pm-card">
+<div class="pm-label">Project Manager</div>
+<p>Good start. I like that you're thinking about the technology stack before the implementation.</p>
+<p>I have a few questions.</p>
+<p>Why do we need Redis in the first version? What will we use it for? Should we use JWT authentication or session-based authentication? Since this is an AI application, where should we integrate the LLM? Should the frontend call the LLM directly, or should the backend handle all AI requests?</p>
+<p>Personally, I prefer this architecture:</p>
+<p>FastAPI (REST API) PostgreSQL (application data) Redis (cache, rate limiting, background jobs) Celery or Dramatiq (optional, for AI tasks) React Docker Compose Nginx (when deploying)</p>
+<p>What do you think?</p>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">Ok about the technical design</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">Okay, let's talk about the technical design.</span></div>
+<div class="better-row"><span class="better-num">②</span><span class="better-text alt">Okay, here are my ideas for the technical design.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>&quot;about the technical design&quot; is incomplete.</li>
+<li>Native speakers usually say Let's talk about... or Here are my ideas...</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">I have some Ideal</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">I have some ideas.</span></div>
+<div class="better-row"><span class="better-num">②</span><span class="better-text alt">I'd like to share a few ideas.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>Ideal = lý tưởng (adjective/noun)</li>
+<li>Idea = ý tưởng</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">Create fastAPI with docker compose</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">We should build the backend using FastAPI and Docker Compose.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>build the backend using... sounds much more professional.</li>
+<li>FastAPI and Docker Compose are proper names.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">DB we can use pgsql, redis</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">For the database, we can use PostgreSQL and Redis.</span></div>
+<div class="better-row"><span class="better-num">②</span><span class="better-text alt">We can use PostgreSQL as the primary database and Redis for caching.</span></div>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">We need some seed data to provide category, level</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">We need some seed data for categories and levels.</span></div>
+<div class="better-row"><span class="better-num">②</span><span class="better-text alt">We should prepare seed data for the initial categories and learning levels.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>provide category is unnatural.</li>
+<li>prepare seed data is a common software engineering phrase.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">Build UI in reactjs with register, login, choice level, category to start learn</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">We should build the frontend in React. It should include user registration, login, level selection, category selection, and the learning interface.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>frontend is more common than UI in technical discussions.</li>
+<li>registration (noun)</li>
+<li>level selection</li>
+<li>category selection</li>
+<li>learning interface sounds much more natural than start learn.</li>
+</ul>
+</div>
+<div class="expr-card">
+<div class="expr-title">⭐ New expression of the day</div>
+<div class="expr-row"><span>We need...</span></div>
+<div class="expr-row"><span>We should...</span></div>
+<div class="expr-row"><span>I'd recommend...</span></div>
+<div class="expr-row"><span>It would be better to...</span></div>
+<div class="expr-row"><span>One thing we should consider is...</span></div>
+</div>
+<div class="pm-card">
+<div class="pm-label">Project Manager</div>
+<p>One last question for today's design meeting:</p>
+<p>How should we organize the AI module?</p>
+<p>In the future, we may support OpenAI, Claude, Gemini, and local models through Ollama.</p>
+<p>How would you design the code so that adding a new AI provider is easy?</p>
+<p>(Hint: This is a common backend system design question in interviews.)</p>
+</div>
+<div class="user-card">
+<div class="user-label">You</div>
+<p>Yes, we can create AI interface first, this provide which method AI we can support. and if we can integrate with deepseek first. if another model AI added, we can switch to other model by config DB or environment variable</p>
+</div>
+<div class="pm-card">
+<div class="pm-label">Project Manager</div>
+<p>That's a good direction. I like that you're thinking about extensibility from the beginning.</p>
+<p>I would refine the design a little.</p>
+<p>Instead of having the rest of the application know about DeepSeek, OpenAI, or Claude, all business logic should only communicate with an AIProvider interface.</p>
+<p>For example:</p>
+<p>AIProvider chat() generate_lesson() evaluate_answer() correct_grammar()</p>
+<p>Then we can have multiple implementations:</p>
+<p>DeepSeekProvider OpenAIProvider GeminiProvider OllamaProvider</p>
+<p>The application only depends on the interface. The actual provider is selected by configuration (environment variables) or a database setting.</p>
+<p>That way, adding a new provider requires very little code.</p>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">Yes, we can create AI interface first</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">Yes, we can create an AI interface first.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>Add an before AI interface.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">this provide which method AI we can support.</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">This interface defines the methods that every AI provider must implement.</span></div>
+<div class="better-row"><span class="better-num">②</span><span class="better-text alt">This interface defines the functions supported by all AI providers.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>&quot;provide which method&quot; is not natural.</li>
+<li>defines the methods is the expression developers usually use.</li>
+</ul>
+</div>
+<div class="group-divider">Group 2 · ~1 min</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">and if we can integrate with deepseek first.</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">We can integrate DeepSeek first.</span></div>
+<div class="better-row"><span class="better-num">②</span><span class="better-text alt">Initially, we can integrate DeepSeek as the default provider.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>No need for if here.</li>
+<li>Initially is a common word in design discussions.</li>
+</ul>
+</div>
+<div class="corr-card">
+<div class="orig-row"><span class="orig-badge">Original</span><span class="orig-text">if another model AI added, we can switch to other model by config DB or environment variable</span></div>
+<div class="better-label">✅ Better</div>
+<div class="better-row"><span class="better-num">①</span><span class="better-text">If we add another AI provider in the future, we can switch to it through a database setting or an environment variable.</span></div>
+<div class="better-row"><span class="better-num">②</span><span class="better-text alt">The active AI provider should be configurable through an environment variable or a database configuration.</span></div>
+<div class="why-label">Why</div>
+<ul class="why">
+<li>AI provider is more common than AI model in this context.</li>
+<li>configurable is a very common word in software architecture.</li>
+</ul>
+</div>
+<div class="expr-card">
+<div class="expr-title">⭐ Useful expression</div>
+<div class="expr-row"><span>The system should be configurable.</span></div>
+<div class="expr-row"><span>The implementation should be provider-agnostic.</span></div>
+<div class="expr-row"><span>The design should be extensible.</span></div>
+<div class="expr-row"><span>We should avoid hard-coding the provider.</span></div>
+<div class="expr-row"><span>The AI module should be provider-agnostic so that we can add new providers without changing the business logic.</span></div>
+</div>
+<div class="pm-card">
+<div class="pm-label">Project Manager</div>
+<p>Excellent. I think we have a solid high-level architecture.</p>
+<p>Now I'd like to discuss the database design.</p>
+<p>We need to store levels, categories, lessons, vocabulary, sentences, user progress, AI chat history, and review schedules.</p>
+<p>Can you propose the main database tables?</p>
+<p>(Try to explain your design in English. Don't worry if you don't know every table—we'll improve it together.)</p>
+</div>
+<div id="play-all-bar">
+  <button class="pa-btn" id="pa-all">&#9654; Play All</button>
+  <button class="pa-btn" id="pa-from">&#9654; From here</button>
+  <span id="pa-status"></span>
+  <button id="pa-stop">&#9632; Stop</button>
+</div>
+<script>
+(function () {
+  'use strict';
+  var pa = { list: [], idx: 0, on: false, mode: null };
+  var statusEl = document.getElementById('pa-status');
+  var MODES = {
+    all:  { btn: document.getElementById('pa-all'),  idle: '▶ Play All',  running: '⏸ Play All',  sel: '.audio-btn' },
+    from: { btn: document.getElementById('pa-from'), idle: '▶ From here', running: '⏸ From here', sel: '.audio-btn' }
+  };
+  function updateStatus() { statusEl.textContent = pa.on ? (pa.idx+1)+' / '+pa.list.length : ''; }
+  function resetBtns() {
+    Object.keys(MODES).forEach(function(k){ MODES[k].btn.textContent=MODES[k].idle; MODES[k].btn.classList.remove('active'); });
+  }
+  function scrollToBtn(btn) {
+    var card = btn.closest('.corr-card') || btn.closest('.expr-card');
+    if (card) setTimeout(function(){ card.scrollIntoView({behavior:'smooth',block:'center'}); }, 60);
+  }
+  function step() {
+    if (!pa.on) return;
+    if (pa.idx >= pa.list.length) { stopAll(); return; }
+    var btn = pa.list[pa.idx];
+    var urls = window._getUrls ? window._getUrls(btn) : (btn.dataset.src ? [btn.dataset.src] : []);
+    if (!urls.length) { pa.idx++; step(); return; }
+    pa.list.forEach(function(b){ b.classList.remove('playing'); });
+    scrollToBtn(btn); updateStatus();
+    window._playList(btn, urls, function(){ pa.idx++; step(); });
+  }
+  function startMode(key) {
+    if (window._stopCur) window._stopCur();
+    var m = MODES[key];
+    pa.list = Array.from(document.querySelectorAll(m.sel));
+    if (!pa.list.length) return;
+    pa.idx = 0;
+    if (key === 'from' && window._fromBtn) {
+      var found = pa.list.indexOf(window._fromBtn);
+      if (found >= 0) pa.idx = found;
+    }
+    pa.on = true; pa.mode = key;
+    resetBtns();
+    m.btn.textContent = m.running; m.btn.classList.add('active'); m.btn.classList.remove('marked');
+    step();
+  }
+  function stopAll() {
+    pa.on = false; pa.mode = null;
+    if (window._stopCur) window._stopCur();
+    resetBtns(); updateStatus();
+    if (window._fromBtn) { var f=document.getElementById('pa-from'); if(f) f.classList.add('marked'); }
+  }
+  Object.keys(MODES).forEach(function(k){
+    MODES[k].btn.addEventListener('click', function(){ if(pa.on && pa.mode===k) stopAll(); else startMode(k); });
+  });
+  document.getElementById('pa-stop').addEventListener('click', stopAll);
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('.audio-btn') : null;
+    if (btn && pa.on) { pa.on=false; pa.mode=null; resetBtns(); updateStatus(); }
+  }, true);
+})();
+</script>
+</body>
+</html>

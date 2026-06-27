@@ -170,7 +170,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-                                                                {/* CHATGPT-DATA-START */}
+                                                                                {/* CHATGPT-DATA-START */}
         <div>
           <div className="section-header"><h2>English Corrections</h2></div>
           <div className="set-cards">
