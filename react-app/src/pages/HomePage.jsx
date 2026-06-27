@@ -75,6 +75,7 @@ const TECH = [
 
 const CHATGPT_ENGLISH = [
   { href: "/episoden/english-project.html", icon: "📝", title: "English Project", desc: "16 corrections · 3 expression tips · 2 groups" },
+  { href: "/episoden/tech.html", icon: "💬", title: "Tech", desc: "20 phrases · 40 sentences" },
 ];
 
 export default function HomePage() {
@@ -170,7 +171,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-                                                                                        {/* CHATGPT-DATA-START */}
+                                                                                                                                        {/* CHATGPT-DATA-START */}
         <div>
           <div className="section-header"><h2>English Corrections</h2></div>
           <div className="set-cards">

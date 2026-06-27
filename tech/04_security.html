@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>Security — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #ef4444; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #ef4444; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #7f1d1d; margin-bottom: 16px; }
+  .qnum { background: #fee2e2; color: #b91c1c; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #b91c1c; font-weight: 600; }
+  .analogy { background: #fff1f2; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #fca5a5; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #ef4444; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; }
+  .copy-btn:hover { background: #dc2626; }
+
+    /* audio — injected by generate_audio_tech.py */
+    .audio-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; padding: 0;
+      background: transparent; border: 1px solid #cbd5e1;
+      border-radius: 5px; cursor: pointer; font-size: 0.6rem; color: #94a3b8;
+      vertical-align: middle; margin-left: 8px;
+      transition: all 0.15s; flex-shrink: 0;
+    }
+    .audio-btn:hover { background: #eff6ff; border-color: #3b82f6; color: #3b82f6; }
+    .audio-btn.playing { border-color: #f97316; color: #f97316; }
+    @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+    #play-all-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; height: 52px;
+      background: #f8fafc; border-top: 1px solid #e2e8f0;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      z-index: 500; padding: 0 12px; box-shadow: 0 -2px 8px rgba(0,0,0,.05);
+    }
+    .pa-btn {
+      background: #f1f5f9; border: 1px solid #cbd5e1; color: #475569;
+      font-size: 0.78rem; font-weight: 600; padding: 6px 13px;
+      border-radius: 8px; cursor: pointer; transition: all 0.15s;
+      font-family: inherit; white-space: nowrap;
+    }
+    .pa-btn:hover { border-color: #94a3b8; color: #1e293b; }
+    .pa-btn.active { border-color: #f97316; color: #f97316; background: #fff7ed; }
+    .pa-btn.marked { border-color: #3b82f6; color: #3b82f6; }
+    #pa-stop {
+      background: transparent; border: 1px solid #e2e8f0; color: #94a3b8;
+      font-size: 0.78rem; padding: 6px 10px; border-radius: 8px;
+      cursor: pointer; transition: all 0.15s; font-family: inherit;
+    }
+    #pa-stop:hover { border-color: #94a3b8; color: #475569; }
+    #pa-status {
+      font-size: 0.7rem; color: #94a3b8; min-width: 44px; text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<h1>Bảo mật — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> Phân biệt Authentication và Authorization?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a052a67226c0.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Authentication</span> hay xác thực là quá trình xác nhận bạn là ai. Hệ thống hỏi: "Bạn có thực sự là người mà bạn tự xưng không?". Bạn cung cấp bằng chứng — thường là mật khẩu, mã OTP, vân tay — và hệ thống xác nhận danh tính.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_2163dd8756bf.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Authorization</span> hay phân quyền là quá trình kiểm tra bạn được phép làm gì. Sau khi đã biết bạn là ai, hệ thống hỏi: "Bạn có quyền thực hiện hành động này không?". Ví dụ nhân viên giao dịch được xem thông tin tài khoản khách hàng nhưng không được phép phê duyệt khoản vay trên 100 triệu.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_ff64a715e05a.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Hai khái niệm này riêng biệt và theo thứ tự: phải xác thực xong mới phân quyền được. Bạn không thể kiểm tra quyền của ai đó khi chưa biết người đó là ai.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_5f0b6cc17004.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Vào tòa nhà công ty. Quẹt thẻ nhân viên ở cổng là Authentication — bảo vệ biết bạn là nhân viên hợp lệ. Nhưng không phải mọi nhân viên đều vào được phòng server — đó là Authorization. Bảo vệ đã biết bạn là ai, nhưng hệ thống kiểm tra bạn có được phép vào phòng đó không.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_80949c946216.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c75f7811d70d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_a1f16139d461.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cf1e8c14e545.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_65548e1edf26.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2cd0f311fcb7.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b803413f104a.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> Cấu trúc của JWT là gì? Làm sao hoạt động?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_8601288dd602.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">JWT</span> viết tắt của JSON Web Token, là một chuỗi văn bản mang thông tin theo cách có thể xác minh được. JWT gồm ba phần ngăn cách bởi dấu chấm.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_cf04421ab7f8.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Phần đầu tiên là <span class="term">Header</span> chứa loại token và thuật toán mã hóa. Phần thứ hai là <span class="term">Payload</span> chứa thông tin như id người dùng, vai trò, thời điểm tạo token, thời điểm hết hạn. Phần thứ ba là <span class="term">Signature</span> — chữ ký số tạo ra bằng cách mã hóa header và payload với một khóa bí mật chỉ server biết.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_7e3c94dc7273.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Khi server nhận JWT, nó tính lại chữ ký từ header và payload nhận được, rồi so sánh với chữ ký trong token. Nếu khớp, dữ liệu không bị sửa đổi. Nếu ai đó sửa payload để thay đổi quyền truy cập, chữ ký sẽ không còn khớp và token bị từ chối.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e8425e303a2e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như giấy tờ có con dấu đỏ công chứng. Ai cũng đọc được nội dung giấy tờ, nhưng không ai làm giả được con dấu mà không có khuôn dấu thật. Con dấu là chữ ký, khuôn dấu là khóa bí mật của server.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6682bd83457e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_37efe3b1e066.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Access Token và Refresh Token khác nhau thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_8d4bc1ad3a61.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Cả hai đều là JWT nhưng phục vụ mục đích khác nhau và có thời gian sống khác nhau.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a9ad583b03ef.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Access Token</span> được gửi kèm mỗi request để chứng minh quyền truy cập. Vì nó xuất hiện trong mỗi request, nguy cơ bị đánh cắp cao hơn. Để giảm thiệt hại nếu bị đánh cắp, access token có thời gian sống ngắn — thường 15 đến 60 phút.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_4ef773698533.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Refresh Token</span> chỉ dùng khi access token hết hạn để xin cấp access token mới. Nó không gửi kèm mọi request, chỉ dùng đúng một chỗ. Nhờ đó thời gian sống có thể dài hơn nhiều — thường 7 đến 30 ngày. Refresh token thường được lưu trong httpOnly cookie, không thể đọc qua JavaScript, giảm nguy cơ bị đánh cắp qua lỗ hổng XSS.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_cbf9acd4ef6c.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Access token như vé vào cửa ngắn hạn — dùng được trong vài giờ, sau đó hết hạn. Refresh token như phiếu đổi vé — bạn đưa phiếu này cho quầy để lấy vé mới mà không cần xếp hàng đăng ký lại từ đầu. Phiếu đổi vé được giữ cẩn thận hơn vì nếu mất thì phải đăng ký lại hoàn toàn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_dd418b490b63.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Làm sao logout khi dùng JWT? Vấn đề là gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_708788b69872.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Đây là điểm phức tạp của JWT. Khác với session truyền thống lưu trên server có thể xóa được, JWT là token tự chứa thông tin. Khi bạn cấp một JWT, bạn không thể "thu hồi" nó — token vẫn hợp lệ cho đến khi tự hết hạn dù người dùng đã logout.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_077eb60a1770.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Giải pháp phổ biến nhất là dùng <span class="term">danh sách đen</span>. Mỗi JWT có trường jti — viết tắt của JWT ID, một định danh duy nhất. Khi người dùng logout, lưu jti đó vào Redis với thời gian sống bằng thời gian còn lại của token. Mỗi request đến, server kiểm tra jti có trong danh sách đen không — nếu có thì từ chối.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_f8902b049a12.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Nhược điểm của cách này là mỗi request phải tra cứu Redis thêm một lần, tạo thêm độ trễ nhỏ. Nhưng Redis rất nhanh nên ảnh hưởng thường không đáng kể. Nhiều hệ thống ưu tiên access token ngắn hạn kết hợp blacklist để cân bằng bảo mật và hiệu suất.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_0887d49f8846.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> OAuth 2.0 Authorization Code Flow là gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_75c26b00d632.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">OAuth 2.0</span> là giao thức ủy quyền cho phép ứng dụng của bạn truy cập tài nguyên của người dùng trên hệ thống khác mà không cần biết mật khẩu của họ. Authorization Code Flow là luồng an toàn nhất trong OAuth 2.0, dùng cho ứng dụng web.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_630d9efd5792.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Luồng gồm bốn bước. Bước một: ứng dụng của bạn chuyển hướng người dùng đến trang đăng nhập của nhà cung cấp — ví dụ Google. Bước hai: người dùng đăng nhập vào Google và đồng ý cấp quyền cho ứng dụng của bạn. Bước ba: Google chuyển hướng về ứng dụng kèm một mã tạm thời gọi là authorization code. Bước bốn: ứng dụng của bạn dùng mã này để đổi lấy access token trực tiếp với Google, không qua trình duyệt người dùng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b91d777adb64.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Bước bốn đi trực tiếp từ server đến server, không qua trình duyệt, nên access token không bao giờ lộ ra ngoài. Mã authorization code chỉ dùng được một lần và hết hạn sau vài phút.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_cdf104e0ee8b.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như lấy visa thông qua đại sứ quán. Bạn nộp đơn vào đại sứ quán (chuyển hướng đến Google). Đại sứ quán cấp thư giới thiệu (authorization code). Bạn đưa thư cho cơ quan cấp visa (server đổi code lấy token). Cơ quan cấp visa thực sự — đây là bước an toàn nhất.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_f4c5f30476b4.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> SQL Injection là gì? Cách phòng tránh?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_ed3438522edb.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">SQL Injection</span> là lỗ hổng bảo mật xảy ra khi dữ liệu người dùng nhập vào được ghép trực tiếp vào câu truy vấn SQL mà không được kiểm tra. Kẻ tấn công có thể nhập các ký tự đặc biệt để thay đổi ý nghĩa của câu truy vấn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_17e5dcc9254f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ví dụ: nếu hệ thống ghép trực tiếp tên người dùng vào câu truy vấn, kẻ tấn công có thể nhập một chuỗi đặc biệt khiến câu truy vấn trả về tất cả người dùng thay vì chỉ người dùng có tên đó. Nguy hiểm hơn, họ có thể xóa bảng, lấy toàn bộ dữ liệu nhạy cảm, hay thậm chí điều khiển server.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b56516107531.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Phòng tránh chính yếu: luôn dùng <span class="term">parameterized query</span> hay còn gọi là prepared statement. Thay vì ghép chuỗi, bạn đặt ký hiệu chỗ trống trong câu truy vấn và truyền dữ liệu vào riêng biệt. Cơ sở dữ liệu xử lý dữ liệu như dữ liệu thuần túy, không bao giờ hiểu là mã SQL. Các ORM như SQLAlchemy tự động làm điều này.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_d2626f265423.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như điền form giấy tờ thay vì nói lệnh. Nếu nhân viên ngân hàng hỏi tên bạn và bạn có thể đọc bất kỳ lệnh gì, bạn có thể nói "Và hãy chuyển toàn bộ tiền của mọi người vào tài khoản tôi". Parameterized query giống như form có ô riêng cho từng thông tin — nhân viên chỉ ghi đúng vào ô tên, phần còn lại không ảnh hưởng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e20283647b4a.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> XSS là gì? Cách phòng tránh?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_d837beffcbda.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">XSS</span> viết tắt của Cross-Site Scripting, là lỗ hổng cho phép kẻ tấn công chèn mã JavaScript độc hại vào trang web mà người dùng khác sẽ nhìn thấy và trình duyệt của họ sẽ thực thi.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_ee00996c77a8.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ví dụ: nếu trang bình luận không kiểm tra nội dung, kẻ tấn công đăng bình luận chứa đoạn JavaScript. Khi người dùng khác xem bình luận đó, JavaScript chạy trong trình duyệt của họ, có thể đánh cắp cookie phiên đăng nhập và gửi về cho kẻ tấn công.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e3737507a53c.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Phòng tránh có nhiều lớp: trốn ký tự đặc biệt HTML khi hiển thị dữ liệu người dùng (không bao giờ hiển thị nguyên văn), dùng Content Security Policy để giới hạn trình duyệt chỉ chạy script từ nguồn được tin cậy, lưu token trong <span class="term">httpOnly cookie</span> thay vì localStorage để JavaScript không đọc được, xác thực và làm sạch dữ liệu đầu vào.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a117110d3dbd.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như ai đó dán tờ giấy có chứa hướng dẫn độc hại vào bản tin của công ty. Nhân viên nhìn thấy và vô tình làm theo. httpOnly cookie giống như tủ khóa — ai nhìn thấy tờ giấy cũng không mở được tủ để lấy chìa khóa quan trọng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e9bde8d7274f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> CSRF là gì? Cách phòng tránh?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_9ea223fbe226.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">CSRF</span> viết tắt của Cross-Site Request Forgery, là tấn công lợi dụng việc trình duyệt tự động gửi cookie của bạn kèm mọi request đến một domain. Kẻ tấn công lừa bạn click vào link hoặc hình ảnh ẩn trên trang web của họ, trình duyệt tự động gửi request đến ngân hàng của bạn kèm cookie đăng nhập hợp lệ.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_4f3680418a42.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Phòng tránh hiệu quả nhất hiện nay là dùng thuộc tính <span class="term">SameSite</span> trên cookie. Khi đặt SameSite=Strict, trình duyệt chỉ gửi cookie khi người dùng đang ở đúng domain, không gửi khi bắt đầu từ domain khác. SameSite=Lax là phiên bản nhẹ hơn, an toàn hơn Lax nhưng cho phép một số trường hợp điều hướng bình thường.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_96ff07529980.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Cách cũ hơn nhưng vẫn phổ biến là CSRF token — server tạo một mã ngẫu nhiên duy nhất cho mỗi phiên, nhúng vào form, và kiểm tra mã này khi nhận request. Trang web của kẻ tấn công không thể biết được mã này.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_3eed4fd315a6.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> Tại sao không dùng MD5 hay SHA-1 để mã hóa mật khẩu? Dùng gì thay thế?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_61a56af7a100.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>MD5 và SHA-1 là các hàm băm được thiết kế để tính toán nhanh. Đây chính là vấn đề: khi tính toán nhanh, kẻ tấn công có thể thử hàng tỷ mật khẩu mỗi giây bằng cách dùng GPU mạnh. Họ có thể tạo sẵn bảng tra cứu với hàng triệu cặp mật khẩu và mã băm tương ứng gọi là rainbow table.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e3f7affa28ff.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">bcrypt</span> được thiết kế ngược lại — cố ý chậm và tốn tài nguyên. Nó tự động thêm muối ngẫu nhiên vào mật khẩu trước khi băm, loại bỏ khả năng dùng rainbow table. Có tham số work factor cho phép tăng độ khó lên theo thời gian khi phần cứng mạnh hơn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_fb88e117364f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Hai lựa chọn mạnh hơn nữa là <span class="term">Argon2</span> — giành giải cuộc thi mật khẩu 2015 — và <span class="term">scrypt</span>. Cả hai không chỉ tốn CPU mà còn tốn bộ nhớ, khiến tấn công bằng phần cứng chuyên dụng khó hơn nhiều.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_9c8711527d5f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">MD5 giống ổ khóa mà ai cũng có thể thử từng chìa trong một giây. bcrypt giống két sắt đòi hỏi 10 giây cho mỗi lần thử, và cơ chế muối đảm bảo không chìa nào dùng lại được. Kẻ trộm cần hàng triệu năm thay vì vài giờ.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_1d09446a34b7.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_51f01b313d48.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_2116c2fb10c6.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> HTTPS và TLS hoạt động thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_cf4f6609340a.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">TLS</span> viết tắt của Transport Layer Security, là giao thức mã hóa kết nối giữa client và server. HTTPS chính là HTTP chạy bên trong kết nối TLS được mã hóa.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_c293b2669e2f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Khi bạn kết nối đến một website HTTPS, hai bên thực hiện quá trình "bắt tay" trước khi trao đổi dữ liệu. Server gửi chứng chỉ số có chứa khóa công khai. Client xác minh chứng chỉ hợp lệ và được cấp bởi tổ chức tin cậy. Hai bên dùng kỹ thuật mật mã để đồng ý một khóa bí mật chung mà không ai nghe lén có thể biết được. Từ đó mọi dữ liệu đều được mã hóa với khóa bí mật chung này.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b8a533c67170.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ngay cả khi ai đó nghe lén được toàn bộ gói tin truyền đi, họ không thể đọc nội dung vì không có khóa bí mật. Khóa bí mật chỉ tồn tại trong bộ nhớ của client và server, không bao giờ được truyền trực tiếp.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_bb28095de675.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như hai người nói chuyện trong hộp thủy tinh kín mà người ngoài nhìn thấy môi mấp máy nhưng không nghe tiếng. Quá trình bắt tay TLS là lúc hai người đặt quy tắc mã hóa riêng trước khi nói chuyện thật.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_eaf390266093.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_099d7d04319e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_326a187b63b1.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> OWASP Top 10 là gì? Kể một số lỗ hổng quan trọng?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_8d05b0e2599d.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">OWASP Top 10</span> là danh sách 10 rủi ro bảo mật phổ biến và nguy hiểm nhất trong ứng dụng web, được cập nhật định kỳ bởi tổ chức bảo mật phi lợi nhuận OWASP.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_ee2216c1822b.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Những lỗ hổng quan trọng nhất với ứng dụng fintech: thứ nhất là <span class="term">Broken Access Control</span> — người dùng thực hiện được hành động không được phép như xem tài khoản người khác. Đây là số một trong OWASP Top 10 2021. Thứ hai là <span class="term">Injection</span> bao gồm SQL Injection đã đề cập. Thứ ba là <span class="term">Cryptographic Failures</span> — lưu mật khẩu dạng plain text hoặc dùng thuật toán mã hóa yếu. Thứ tư là <span class="term">Insecure Design</span> — thiết kế hệ thống không có bảo mật từ đầu. Thứ năm là <span class="term">Security Misconfiguration</span> — để lộ thông tin debug, dùng cấu hình mặc định không an toàn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_2239063566f6.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Với ngân hàng số, Broken Access Control đặc biệt nguy hiểm: nếu API endpoint xem số dư không kiểm tra kỹ người đang gọi có phải chủ tài khoản không, toàn bộ dữ liệu tài chính của khách hàng có thể bị lộ.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_95877ff716a2.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> Rate limiting — các chiến lược nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_426967902614.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Có ba chiến lược giới hạn tần suất phổ biến, mỗi cái có đặc điểm riêng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_38b93df6d569.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Fixed Window</span> hay cửa sổ cố định: đếm số request trong mỗi khoảng thời gian cố định — ví dụ 100 request mỗi phút từ 10:00:00 đến 10:01:00. Đơn giản nhất để implement nhưng có điểm yếu: kẻ tấn công có thể gửi 100 request vào 10:00:59 và 100 request vào 10:01:01 — 200 request trong 2 giây mà không vi phạm giới hạn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_0154c9268ab0.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Sliding Window</span> hay cửa sổ trượt: luôn đếm request trong 60 giây vừa rồi tính từ thời điểm hiện tại. Chính xác hơn nhưng tốn bộ nhớ hơn vì cần lưu timestamp của từng request.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_0cf8765120bb.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Token Bucket</span> hay thùng token: mỗi người dùng có một thùng, token được thêm vào thùng đều đặn. Mỗi request tiêu tốn một token. Khi hết token, request bị từ chối. Ưu điểm lớn: cho phép burst — gửi nhiều request trong thời gian ngắn khi thùng đầy — phù hợp với lưu lượng tự nhiên hơn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_07fb47440d81.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> Secrets Management là gì? Cách lưu trữ thông tin nhạy cảm?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_80fbe55e3a2c.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Ứng dụng cần nhiều thông tin nhạy cảm để hoạt động: mật khẩu cơ sở dữ liệu, khóa API của dịch vụ bên ngoài, khóa ký JWT. <span class="term">Secrets Management</span> là cách tổ chức lưu trữ và cung cấp những thông tin này một cách an toàn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_46d3341183f4.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Điều tuyệt đối không được làm: lưu thông tin nhạy cảm trong code nguồn hay file cấu hình được đẩy lên git. Khi đã lên git, coi như thông tin đó đã bị lộ dù bạn xóa đi sau đó.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_8aeff13a42e8.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Giải pháp cơ bản nhất là biến môi trường — không lưu trong code mà lấy từ môi trường chạy. Tốt hơn là dùng file <span class="term">.env</span> chỉ tồn tại trên server, không đưa vào git. Trong môi trường cloud và production, dùng dịch vụ quản lý secret chuyên dụng như <span class="term">AWS Secrets Manager</span> hay <span class="term">HashiCorp Vault</span>. Các dịch vụ này mã hóa secret, kiểm soát ai có thể đọc, ghi lại mọi lần đọc, và tự động xoay vòng secret định kỳ.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_38e1343cf6ad.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Chìa khóa nhà không nên để trước cửa dù tiện lợi. Bạn giữ trong túi (biến môi trường), không ghi vào tờ giấy dán cửa (code nguồn). Vault giống như két sắt ngân hàng — có kiểm soát truy cập, ghi nhật ký ai lấy gì và khi nào.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_20364a9ea03d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b70a213f150.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6c5ada9127df.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> API Key và JWT khác nhau như thế nào? Khi nào dùng cái nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a7d16adc8838.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">API Key</span> là một chuỗi ngẫu nhiên đơn giản — giống như mật khẩu cho ứng dụng. Server nhận key này, tra cứu trong cơ sở dữ liệu để biết key thuộc về ai và có những quyền gì. Mỗi request với API key đều cần một lần tra cứu cơ sở dữ liệu.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_8a88280016df.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">JWT</span> tự chứa thông tin trong token — server không cần tra cứu cơ sở dữ liệu, chỉ cần xác minh chữ ký. Nhanh hơn và phù hợp với kiến trúc nhiều service.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_2bfa976a1c72.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Khi nào dùng cái nào: API Key phù hợp cho giao tiếp giữa các ứng dụng (máy với máy), đặc biệt khi cần có thể thu hồi ngay lập tức. Ví dụ partner tích hợp API thanh toán dùng API key. JWT phù hợp cho xác thực người dùng cuối trong ứng dụng web hay mobile — đăng nhập một lần, nhận token, dùng token cho các request tiếp theo.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e254a981c9ed.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> Principle of Least Privilege là gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_f285d15299c6.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Principle of Least Privilege</span> hay Nguyên tắc Tối thiểu Đặc quyền là nguyên tắc bảo mật cốt lõi: mỗi thực thể — người dùng, service, tiến trình — chỉ được cấp đúng những quyền tối thiểu cần thiết để thực hiện nhiệm vụ của mình, không hơn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_95866ed6243f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Áp dụng thực tế: tài khoản cơ sở dữ liệu của API chỉ đọc chỉ cần quyền SELECT, không cần DELETE hay DROP. Nhân viên giao dịch chỉ thấy thông tin cơ bản của khách hàng, không thấy mật khẩu hay số thẻ đầy đủ. Microservice thanh toán chỉ được phép gọi đến service tài khoản, không gọi đến service marketing.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_63dfa7327e13.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Tại sao quan trọng: khi một component bị xâm phạm, thiệt hại bị giới hạn trong phạm vi quyền của component đó. Nếu service đọc-báo-cáo bị hack nhưng chỉ có quyền SELECT, kẻ tấn công không thể xóa hay sửa dữ liệu.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_8c7be39f04e4.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Nhân viên mới không được cấp ngay chìa khóa toàn tòa nhà. Họ chỉ có thẻ từ vào được phòng làm việc của mình. Giám đốc IT mới có quyền vào phòng server. Giám đốc tài chính mới xem được số liệu tài chính mật. Phạm vi quyền đúng bằng phạm vi trách nhiệm.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Security Headers là gì? Tại sao quan trọng?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_83bf9d322add.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Security Headers</span> là các header HTTP đặc biệt mà server gửi kèm response, hướng dẫn trình duyệt áp dụng các biện pháp bảo vệ bổ sung.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_c09417b27f1e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Content-Security-Policy</span> nói với trình duyệt chỉ được tải script, style, hình ảnh từ những nguồn được liệt kê — phòng XSS. <span class="term">X-Frame-Options</span> ngăn trang web của bạn bị nhúng vào iframe của trang khác — phòng clickjacking là tấn công lừa người dùng click vào nút ẩn bên dưới. <span class="term">Strict-Transport-Security</span> nói với trình duyệt luôn dùng HTTPS cho domain này trong một khoảng thời gian dài — ngăn downgrade về HTTP. <span class="term">X-Content-Type-Options</span> ngăn trình duyệt đoán mò kiểu file và thực thi file không đúng loại.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_9d3f1932aa4f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Những header này là lớp phòng thủ cộng thêm — không thay thế việc code đúng nhưng giảm đáng kể tác hại nếu có lỗ hổng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_abdcbe466341.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Audit logging là gì? Tầm quan trọng trong fintech?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b4a2d02b0e9d.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Audit logging</span> hay nhật ký kiểm toán là việc ghi lại mọi hành động quan trọng trong hệ thống: ai làm gì, vào lúc nào, từ đâu, với kết quả gì. Khác với log kỹ thuật để debug, audit log là bằng chứng có thể dùng trong điều tra và tuân thủ quy định.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_853bf2e4c7b6.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Trong fintech, đây là yêu cầu bắt buộc theo pháp lý. Khi xảy ra tranh chấp giao dịch, cần chứng minh ai đã thực hiện thao tác gì và khi nào. Khi bị tấn công, cần dựng lại toàn bộ chuỗi sự kiện. Khi kiểm toán từ cơ quan nhà nước, cần xuất báo cáo đầy đủ.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_2746c8c01b7c.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Yêu cầu thiết kế: audit log phải được ghi ngay cả khi transaction chính thất bại. Phải ghi lại đủ thông tin như id người dùng, địa chỉ IP, loại hành động, trạng thái kết quả. Audit log cần được bảo vệ — không ai có thể xóa hoặc sửa, kể cả admin. Thường lưu riêng ở hệ thống bất biến.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_7ee70c99f272.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> Defense in Depth là gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_4dd1b5f77cb8.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Defense in Depth</span> hay Phòng thủ theo Chiều sâu là triết lý bảo mật: thay vì tin tưởng vào một lớp bảo vệ duy nhất, xây dựng nhiều lớp bảo vệ độc lập. Nếu kẻ tấn công vượt qua một lớp, vẫn còn nhiều lớp khác cản trở.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_5283f09b13a1.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ví dụ cho API endpoint nhận thông tin thanh toán: lớp một là HTTPS mã hóa kết nối. Lớp hai là xác thực JWT. Lớp ba là kiểm tra quyền cụ thể. Lớp bốn là xác thực và làm sạch dữ liệu đầu vào. Lớp năm là parameterized query ngăn SQL Injection. Lớp sám là kiểm tra thêm logic nghiệp vụ như giới hạn số tiền giao dịch. Lớp bảy là ghi audit log.</p>
+<p>Không lớp nào hoàn hảo. Nhưng phá qua tất cả bảy lớp cùng lúc là gần như không thể. Đây là lý do hệ thống quan trọng cần nhiều lớp bảo vệ chứ không chỉ một.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_42d5d71c0954.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như lâu đài thời trung cổ: hào nước bên ngoài, tường thành cao, cổng kiên cố, lính gác trong, két sắt ở tầng hầm. Kẻ tấn công phải vượt qua từng lớp — không có đường tắt nào.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> mTLS là gì? Khi nào dùng?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e7e155660c5b.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>TLS thông thường chỉ xác thực server — client kiểm tra chứng chỉ của server để đảm bảo kết nối đến đúng server. <span class="term">mTLS</span> viết tắt của Mutual TLS hay TLS hai chiều — cả server cũng xác thực chứng chỉ của client.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_492fbe161554.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Trong giao tiếp giữa các microservice trong cùng hệ thống, bạn muốn đảm bảo không chỉ client kết nối đến đúng service, mà service cũng chỉ chấp nhận request từ những service được ủy quyền. mTLS cung cấp điều này ở tầng mạng, độc lập với logic xác thực ở tầng ứng dụng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_8db888adbc04.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ứng dụng phổ biến: giao tiếp giữa service thanh toán và service tài khoản trong hệ thống ngân hàng, kết nối từ server đến cơ sở dữ liệu khi cần bảo mật tối đa, kết nối đến thiết bị IoT. Service mesh như Istio tự động cấu hình mTLS cho toàn bộ giao tiếp giữa các service trong Kubernetes.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_368c8a4664a1.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> Làm sao validate và sanitize input đúng cách?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_37286122e503.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Validation</span> hay xác thực là kiểm tra dữ liệu có đúng định dạng và giá trị mong đợi không. <span class="term">Sanitization</span> hay làm sạch là loại bỏ hoặc chuyển đổi các ký tự nguy hiểm trong dữ liệu trước khi dùng.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_13148717f8fa.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_db33df852302.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f8263bd4902.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8f1d79362871.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Nguyên tắc: không bao giờ tin tưởng dữ liệu từ bên ngoài — kể cả từ người dùng đăng nhập hợp lệ, đối tác tin cậy, hay thậm chí các service nội bộ. Xác thực tại điểm tiếp nhận trước khi làm bất cứ điều gì với dữ liệu.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_13fc352a50a0.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aaabf0d39951.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4e3ea11c0842.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Với FastAPI và Pydantic, phần lớn xác thực tự động: Pydantic kiểm tra kiểu dữ liệu, giới hạn giá trị, định dạng email, độ dài chuỗi. Với số tiền giao dịch, thêm xác thực nghiệp vụ: không âm, không vượt giới hạn hàng ngày, đúng định dạng tiền tệ. Với dữ liệu hiển thị, làm sạch HTML để ngăn XSS. Với tên file upload, loại bỏ ký tự đặc biệt và kiểm tra đuôi file.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_942217c08156.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fa69cb719d96.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7c69185d391b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c02e0cea906d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_da4e19f217ee.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b781ffa7d6d9.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4bdc800676d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_cf4714e11aa6.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4c4ad5fca2e7.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_3f0d98b9b453.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_137c17283c44.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7274dfb15358.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b5358fd0f7f2.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_df13568b990d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_72bc206ab772.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như kiểm tra hành lý tại sân bay. Trước khi cho lên máy bay (xử lý trong hệ thống), mọi hành lý đều qua soi chiếu và cân (validation), và những gì bị cấm mang lên thì giữ lại (sanitization). Không ai được ngoại lệ dù là khách VIP.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8afa24402586.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a617908b172c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d3abbf0147ff.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_76ea86f99a08.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_dda77fa22f6b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f86068bbc35.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<script>
+/* audio engine — injected by generate_audio_tech.py */
+(function () {
+  var cur = { audio: null, btn: null, onDone: null };
+
+  function stopCur() {
+    if (cur.audio) { cur.audio.pause(); cur.audio.currentTime = 0; cur.audio = null; }
+    if (cur.btn)   { cur.btn.classList.remove('playing'); }
+    cur.btn = null; cur.onDone = null;
+  }
+
+  function getUrls(btn) {
+    if (btn.dataset.srcs) { try { return JSON.parse(btn.dataset.srcs); } catch(e) {} }
+    if (btn.dataset.src)  { return [btn.dataset.src]; }
+    return [];
+  }
+
+  function playList(btn, srcs, onDone) {
+    stopCur();
+    if (!srcs || !srcs.length) { if (onDone) onDone(); return; }
+    btn.classList.add('playing');
+    cur.btn = btn; cur.onDone = onDone;
+    var idx = 0;
+    function next() {
+      if (cur.btn !== btn) return;          /* bị dừng ngoài */
+      if (idx >= srcs.length) {
+        btn.classList.remove('playing');
+        cur.btn = null;
+        if (onDone) onDone();
+        return;
+      }
+      var audio = new Audio(srcs[idx++]);
+      cur.audio = audio;
+      audio.play().catch(function() { next(); });
+      audio.onended = next;
+    }
+    next();
+  }
+
+  /* click đơn lẻ */
+  window.playAudio = function (btn) {
+    if (cur.btn === btn) { stopCur(); return; }   /* toggle off */
+    stopCur();
+    /* đánh dấu vị trí cho ▶ Từ đây */
+    window._fromBtn = btn;
+    var f = document.getElementById('pa-from');
+    if (f) { f.classList.add('marked'); f.classList.remove('active'); }
+    playList(btn, getUrls(btn), null);
+  };
+
+  /* expose cho play-all bar */
+  window._playList = playList;
+  window._stopCur  = stopCur;
+  window._getUrls  = getUrls;
+})();
+</script>
+</body>
+</html>

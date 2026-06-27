@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>FastAPI — Ôn tập kỹ thuật</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #f59e0b; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #f59e0b; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #92400e; margin-bottom: 16px; }
+  .qnum { background: #fef3c7; color: #b45309; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #b45309; font-weight: 600; }
+  .analogy { background: #fffbeb; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #fcd34d; }
+  pre { background: #1e293b; border-radius: 8px; padding: 16px 20px; overflow-x: auto; margin: 14px 0; }
+  code { font-family: 'Fira Mono', 'Cascadia Code', monospace; font-size: 14px; line-height: 1.6; color: #e2e8f0; }
+  p code { background: #f1f5f9; color: #0f172a; padding: 1px 6px; border-radius: 4px; font-size: 0.88em; font-style: normal; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 16px; }
+  th { background: #f1f5f9; text-align: left; padding: 8px 12px; border: 1px solid #e2e8f0; }
+  td { padding: 8px 12px; border: 1px solid #e2e8f0; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+
+    /* audio — injected by generate_audio_tech.py */
+    .audio-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; padding: 0;
+      background: transparent; border: 1px solid #cbd5e1;
+      border-radius: 5px; cursor: pointer; font-size: 0.6rem; color: #94a3b8;
+      vertical-align: middle; margin-left: 8px;
+      transition: all 0.15s; flex-shrink: 0;
+    }
+    .audio-btn:hover { background: #eff6ff; border-color: #3b82f6; color: #3b82f6; }
+    .audio-btn.playing { border-color: #f97316; color: #f97316; }
+    @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+    #play-all-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; height: 52px;
+      background: #f8fafc; border-top: 1px solid #e2e8f0;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      z-index: 500; padding: 0 12px; box-shadow: 0 -2px 8px rgba(0,0,0,.05);
+    }
+    .pa-btn {
+      background: #f1f5f9; border: 1px solid #cbd5e1; color: #475569;
+      font-size: 0.78rem; font-weight: 600; padding: 6px 13px;
+      border-radius: 8px; cursor: pointer; transition: all 0.15s;
+      font-family: inherit; white-space: nowrap;
+    }
+    .pa-btn:hover { border-color: #94a3b8; color: #1e293b; }
+    .pa-btn.active { border-color: #f97316; color: #f97316; background: #fff7ed; }
+    .pa-btn.marked { border-color: #3b82f6; color: #3b82f6; }
+    #pa-stop {
+      background: transparent; border: 1px solid #e2e8f0; color: #94a3b8;
+      font-size: 0.78rem; padding: 6px 10px; border-radius: 8px;
+      cursor: pointer; transition: all 0.15s; font-family: inherit;
+    }
+    #pa-stop:hover { border-color: #94a3b8; color: #475569; }
+    #pa-status {
+      font-size: 0.7rem; color: #94a3b8; min-width: 44px; text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<h1>FastAPI &amp; Framework — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Có code snippet</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> FastAPI lifespan hoạt động như thế nào? Tại sao không dùng on_event?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_6db5f52de96a.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Lifespan</span> là hàm async generator chia làm 2 phần: code trước <code>yield</code> chạy khi startup, code sau <code>yield</code> chạy khi shutdown. Đây là nơi khởi tạo DB pool, Redis, load ML model — những thứ tốn chi phí và nên tái sử dụng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_db86531836b5.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><code>on_event</code> đã deprecated từ v0.93. Lifespan tốt hơn vì: nếu startup lỗi giữa chừng, phần cleanup sau <code>yield</code> vẫn đảm bảo chạy.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_5daef3dc3319.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from contextlib import asynccontextmanager
+from fastapi import FastAPI
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # startup -- chay 1 lan
+    app.state.db    = await create_db_pool()
+    app.state.redis = await create_redis()
+    yield                          # app dang nhan request
+    # shutdown -- chay 1 lan khi tat
+    await app.state.db.close()
+    await app.state.redis.close()
+
+app = FastAPI(lifespan=lifespan)</code></pre>
+<div class="analogy">Như ca trực bảo vệ: bật hệ thống khi vào ca, tắt và khóa cửa khi tan ca.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_3b47e0932757.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> Dependency Injection trong FastAPI là gì? Cách hoạt động?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_bc1231fa8ce8.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Dependency Injection</span> là cơ chế FastAPI tự động gọi hàm phụ thuộc và truyền kết quả vào endpoint — thay vì endpoint phải tự khởi tạo DB, xác thực token. Dùng <code>Depends()</code> để khai báo.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_1424b5d553a5.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Nếu nhiều endpoint trong cùng request cùng cần 1 phụ thuộc, FastAPI chỉ gọi 1 lần và tái sử dụng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_4470b6da1033.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi import Depends
+
+async def get_db():
+    db = SessionLocal()
+    try:
+        yield db          # tra DB cho endpoint dung
+    finally:
+        db.close()        # dam bao dong du co loi
+
+async def get_current_user(
+    token: str = Depends(oauth2_scheme),
+    db = Depends(get_db),
+):
+    user = verify_token(token, db)
+    if not user:
+        raise HTTPException(status_code=401)
+    return user
+
+@app.get("/me")
+async def me(user = Depends(get_current_user)):
+    return user   # FastAPI tu inject user</code></pre>
+<div class="analogy">Như hệ thống cấp phát đồ mổ trong bệnh viện: bác sĩ không tự đi lấy, có hệ thống chuẩn bị sẵn và thu hồi sau ca.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_c1c2be9ddf93.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Middleware là gì? Thứ tự thực thi thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_5444542f1e87.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Middleware</span> là code chạy với mọi request trước khi vào endpoint và mọi response trước khi trả về client. Dùng cho: logging, request ID, auth check, CORS, rate limiting.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_cf3f7e7d5298.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Thứ tự quan trọng: middleware <strong>thêm sau</strong> thì <strong>chạy trước</strong> — như lớp vỏ hành từ ngoài vào trong.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_0c31329a463e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>@app.middleware("http")
+async def add_request_id(request: Request, call_next):
+    request_id = str(uuid4())
+    request.state.id = request_id
+    response = await call_next(request)   # goi middleware tiep / endpoint
+    response.headers["X-Request-ID"] = request_id
+    return response
+
+# Thu tu thuc thi khi request den:
+# LogMiddleware -&gt; AuthMiddleware -&gt; endpoint -&gt; AuthMiddleware -&gt; LogMiddleware
+app.add_middleware(AuthMiddleware)   # them truoc -&gt; chay sau (lop trong)
+app.add_middleware(LogMiddleware)    # them sau  -&gt; chay truoc (lop ngoai)</code></pre>
+<div class="analogy">Như các trạm kiểm soát ở sân bay: check-in → soi chiếu → cửa ra, và ngược lại khi về.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_ff68417a815d.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Phân biệt HTTPException, custom exception handler và RequestValidationError?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_97922c09f742.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Ba cách xử lý lỗi, dùng đúng chỗ:<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_34373ea2667e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">HTTPException</span>: lỗi HTTP đơn giản, chủ động throw trong code. <span class="term">Custom handler</span>: lỗi business logic riêng, cần format thống nhất. <span class="term">RequestValidationError</span>: Pydantic tự throw khi input sai kiểu — có thể ghi đè handler mặc định.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_66d752ec43c1.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># 1. HTTPException -- loi HTTP chuan
+@app.get("/users/{id}")
+async def get_user(id: int, db=Depends(get_db)):
+    user = db.get(User, id)
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+# 2. Custom exception -- loi business logic co them data
+class InsufficientFundsError(Exception):
+    def __init__(self, balance: float, required: float):
+        self.balance = balance
+        self.required = required
+
+@app.exception_handler(InsufficientFundsError)
+async def handle_funds(request, exc: InsufficientFundsError):
+    return JSONResponse(status_code=400, content={
+        "error": "insufficient_funds",
+        "balance": exc.balance,
+        "required": exc.required,
+    })
+
+# 3. RequestValidationError -- ghi de format loi Pydantic
+from fastapi.exceptions import RequestValidationError
+
+@app.exception_handler(RequestValidationError)
+async def validation_handler(request, exc):
+    return JSONResponse(status_code=422, content={"detail": exc.errors()})</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> Background Tasks là gì? Khi nào dùng Celery thay vì Background Tasks?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_f8ad177c1e88.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Background Tasks</span>: chạy task sau khi response đã trả về client, built-in không cần cài thêm. Giới hạn: nếu app restart thì task mất, không có retry, không monitor được.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_47fdb7c40dc6.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Celery</span>: hàng đợi task bền vững, cần Redis/RabbitMQ. Task được lưu, tự retry khi lỗi, có Flower để monitor.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_926c80a2871e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi import BackgroundTasks
+
+async def send_notification(email: str, data: dict):
+    await email_client.send(email, data)
+
+@app.post("/transfer")
+async def transfer(req: TransferRequest, bg: BackgroundTasks):
+    result = await process_transfer(req)
+    bg.add_task(send_notification, req.email, result)  # khong block response
+    return {"status": "success"}</code></pre>
+<table>
+<tr><th></th><th>Background Tasks</th><th>Celery</th></tr>
+<tr><td>Setup</td><td>built-in</td><td>Redis + pip install celery</td></tr>
+<tr><td>Persist khi restart</td><td>❌</td><td>✓</td></tr>
+<tr><td>Retry tự động</td><td>❌</td><td>✓</td></tr>
+<tr><td>Monitor</td><td>❌</td><td>✓ Flower UI</td></tr>
+<tr><td>Dùng khi</td><td>email, log đơn giản</td><td>thanh toán, report lớn</td></tr>
+</table>
+<div class="analogy">Background Tasks như nhờ đồng nghiệp ngồi cạnh — nhanh, nhưng họ về sớm thì việc mất. Celery như gửi qua hòm thư nội bộ — có ghi chép, ai đó khác làm thay được.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_1566f2e7c75f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> Hàm async và hàm sync trong FastAPI — khi nào dùng cái nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_cc76076f803c.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Dùng <code>async def</code> khi gọi các hàm async (DB async, HTTP async). FastAPI chạy trong event loop — không block các request khác.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_99acea212168.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Dùng <code>def</code> thuần khi dùng thư viện đồng bộ. FastAPI tự chạy trong thread pool riêng — không block event loop.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_26c45774c595.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Lỗi nguy hiểm: viết <code>async def</code> nhưng bên trong gọi hàm blocking — đóng băng toàn bộ event loop, không request nào khác được xử lý.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b7d30a4d38d8.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># Dung: async + thu vien async
+@app.get("/users")
+async def get_users(db: AsyncSession = Depends(get_async_db)):
+    result = await db.execute(select(User))
+    return result.scalars().all()
+
+# Dung: sync + thu vien dong bo (FastAPI tu chay trong thread)
+@app.get("/report")
+def generate_report():
+    return heavy_pandas_computation()   # blocking OK vi la def, khong async
+
+# SAI: async + blocking call -&gt; dong bang event loop
+@app.get("/bad")
+async def bad():
+    time.sleep(5)          # BLOCK toan bo app!
+    requests.get(url)      # BLOCK! -&gt; dung httpx.AsyncClient thay</code></pre>
+<div class="analogy">Le tan async giỏi: trong khi chờ phòng dọn, tiếp tục check-in khách khác. Le tan sync: thuê người phụ riêng ngồi phòng khác, không làm gián đoạn quầy chính.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_5d03a8dd89ab.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> FastAPI dùng ASGI hay WSGI? Khác nhau thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_ce63781bcf96.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">WSGI</span> (Flask, Django cũ): đồng bộ, 1 request tại 1 thời điểm, không hỗ trợ WebSocket.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a0550c4210c9.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">ASGI</span> (FastAPI, Django 4+): bất đồng bộ, nhiều request đồng thời, hỗ trợ WebSocket và Server-Sent Events. FastAPI xây trên ASGI qua Starlette, chạy bằng <span class="term">Uvicorn</span>.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_224572e60c2d.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># Development
+uvicorn main:app --reload
+
+# Production: nhieu process Uvicorn qua Gunicorn -&gt; da nhan CPU + async
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+
+# Hoac chay nhieu instance qua Docker + load balancer</code></pre>
+<div class="analogy">WSGI như đường 1 làn — xe nối đuôi nhau. ASGI như đường cao tốc nhiều làn — xe chạy song song.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_1b222b359edc.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> APIRouter dùng để làm gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_cc86202f3221.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">APIRouter</span> chia API thành module theo domain nghiệp vụ — mỗi domain 1 file riêng. Router có prefix URL, tags riêng cho docs, và có thể gắn dependency chung cho toàn bộ route trong router.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_d4786b7ca345.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># routers/users.py
+from fastapi import APIRouter, Depends
+
+router = APIRouter(prefix="/users", tags=["users"])
+
+@router.get("/{id}")
+async def get_user(id: int): ...
+
+@router.post("/")
+async def create_user(): ...
+
+# routers/transactions.py
+router = APIRouter(prefix="/transactions", tags=["transactions"])
+
+@router.post("/")
+async def create_transaction(): ...
+
+# main.py
+from routers import users, transactions
+
+app = FastAPI()
+app.include_router(users.router)
+app.include_router(
+    transactions.router,
+    dependencies=[Depends(require_auth)],  # auth cho toan bo /transactions
+)</code></pre>
+<div class="analogy">Như phòng ban trong công ty: CEO (app) chỉ quản lý trưởng phòng (router), không quản lý từng nhân viên.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_dabd54badf4e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> Response Model dùng để làm gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_0a9afa57a08f.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Response Model</span> khai báo cấu trúc dữ liệu trả về. FastAPI tự động lọc — chỉ giữ field có trong model, loại bỏ hết field không khai báo. Quan trọng cho bảo mật: endpoint có thể trả về object đầy đủ (kể cả password hash) nhưng chỉ field trong model mới ra đến client.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_fd7b0399f1ae.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>class UserInDB(Base):
+    id: int
+    email: str
+    hashed_password: str   # KHONG muon expose
+
+class UserResponse(BaseModel):
+    id: int
+    email: str             # chi 2 field nay duoc phep ra ngoai
+
+@app.get("/users/{id}", response_model=UserResponse)
+async def get_user(id: int, db=Depends(get_db)):
+    return db.get(User, id)   # hashed_password tu dong bi loc
+
+# response_model_exclude_unset=True -- bo field None khoi response
+@app.patch("/users/{id}", response_model=UserResponse, response_model_exclude_unset=True)
+async def update_user(id: int, data: UserUpdate): ...</code></pre>
+<div class="analogy">Như tờ khai hải quan: dù trong kho có nhiều hàng, chỉ những gì trong tờ khai mới được qua cửa.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_5062a8dd50d0.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> Làm sao implement JWT authentication trong FastAPI?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b9ef1a32cbcb.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Flow gồm 3 bước: (1) <code>/login</code> xác thực user, trả JWT. (2) Các request tiếp theo gửi token trong header <code>Authorization: Bearer &lt;token&gt;</code>. (3) Dependency <code>get_current_user</code> tự động đọc, verify token và inject user vào endpoint.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a83ffdac9f7b.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+import jwt
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
+
+async def get_current_user(token: str = Depends(oauth2_scheme), db=Depends(get_db)):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        user_id = payload["sub"]
+    except jwt.JWTError:
+        raise HTTPException(status_code=401, detail="Invalid token")
+    user = await db.get(User, user_id)
+    if not user:
+        raise HTTPException(status_code=401)
+    return user
+
+@app.post("/auth/login")
+async def login(form: OAuth2PasswordRequestForm = Depends(), db=Depends(get_db)):
+    user = await authenticate(form.username, form.password, db)
+    if not user:
+        raise HTTPException(status_code=401, detail="Wrong credentials")
+    token = jwt.encode(
+        {"sub": str(user.id), "exp": datetime.utcnow() + timedelta(hours=1)},
+        SECRET_KEY, algorithm="HS256",
+    )
+    return {"access_token": token, "token_type": "bearer"}
+
+@app.get("/me")
+async def me(user = Depends(get_current_user)):   # tu dong verify
+    return user</code></pre>
+<div class="analogy">Như thẻ từ tòa nhà: quẹt thẻ ở cửa (đọc token), hệ thống check (verify), mở cửa và ghi nhận ai vào (inject user).<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e43e1d1f3f75.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> Làm sao handle CORS trong FastAPI?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_2fde6a90872c.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">CORS</span> là cơ chế trình duyệt bảo vệ: khi frontend ở <code>app.mybank.com</code> gọi API ở <code>api.mybank.com</code>, browser hỏi server có cho phép không. FastAPI có <code>CORSMiddleware</code> tích hợp sẵn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b50e64e13c2e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Điểm quan trọng: không dùng <code>allow_origins=["*"]</code> nếu API có xác thực — browser sẽ chặn việc gửi cookie/Authorization header kèm wildcard origin.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_5e46bad0bc75.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://app.mybank.com",
+        "https://admin.mybank.com",
+    ],
+    allow_credentials=True,          # cho phep gui cookie / Authorization header
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["Authorization", "Content-Type"],
+)</code></pre>
+<div class="analogy">Như danh sách khách được phép vào tòa nhà: bảo vệ kiểm tra, không có tên trong danh sách thì không vào.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_2a61b08e3e0e.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> Path parameter, Query parameter và Request body — khi nào dùng cái nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_35b0d094578b.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<table>
+<tr><th>Loại</th><th>Vị trí trong request</th><th>Khi nào dùng</th></tr>
+<tr><td>Path param</td><td><code>/users/{id}</code></td><td>Định danh resource — bắt buộc</td></tr>
+<tr><td>Query param</td><td><code>?page=2&amp;sort=date</code></td><td>Lọc, phân trang, tùy chọn</td></tr>
+<tr><td>Request body</td><td>JSON trong body</td><td>Dữ liệu phức tạp, POST/PUT/PATCH</td></tr>
+</table>
+<pre><code>@app.get("/users/{user_id}/transactions")
+async def get_transactions(
+    user_id: int,                       # path -- bat buoc
+    page: int = 1,                      # query -- optional, mac dinh = 1
+    from_date: date | None = None,      # query -- optional
+    status: str | None = None,
+):
+    ...
+
+@app.post("/transactions")
+async def create_transaction(
+    body: TransactionRequest,           # request body -- POST
+):
+    ...</code></pre>
+<div class="analogy">Đặt phòng: số phòng = path (cụ thể), giờ nhận phòng = query (tùy chọn), thông tin khách = body (dữ liệu phức tạp).<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a0dc43a16716.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> Làm sao test FastAPI endpoint?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_168d572b48d6.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>FastAPI có <code>TestClient</code> built-in — gọi endpoint trực tiếp không cần chạy server. Kết hợp <code>dependency_overrides</code> để thay DB thật bằng DB test.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_0ce5aee70157.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi.testclient import TestClient
+
+# Override dependency de test khong can DB that
+def override_get_db():
+    db = TestingSessionLocal()   # SQLite in-memory
+    try:
+        yield db
+    finally:
+        db.close()
+
+app.dependency_overrides[get_db] = override_get_db
+client = TestClient(app)
+
+def test_create_user():
+    response = client.post("/users", json={"email": "test@ex.com", "password": "abc"})
+    assert response.status_code == 201
+    assert response.json()["email"] == "test@ex.com"
+
+def test_get_user_not_found():
+    response = client.get("/users/999")
+    assert response.status_code == 404
+
+def test_unauthorized():
+    response = client.get("/me")   # khong gui token
+    assert response.status_code == 401</code></pre>
+<div class="analogy">Như thử nghiệm ATM với tiền giả — kiểm tra mọi tình huống (rút thành công, quá số dư, sai PIN) mà không cần hệ thống thật.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_2e1bb3b338c8.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> Streaming response là gì? Khi nào dùng?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_72e414d5a7bd.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0ae1a5fe8960.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Thay vì chờ xử lý xong rồi gửi 1 lần, <span class="term">StreamingResponse</span> gửi dữ liệu từng phần nhỏ ngay khi có. Dùng khi: export file CSV/Excel lớn, LLM trả về từng token, download file lớn. Lợi ích chính: RAM dùng gần như không đổi dù file có bao nhiêu dòng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_3e6b9f5d749d.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi.responses import StreamingResponse
+
+async def generate_csv(user_id: int):
+    yield "date,amount,description\n"      # header tra ve ngay
+    async for row in db.stream(           # doc tung dong tu DB
+        select(Transaction).where(Transaction.user_id == user_id)
+    ):
+        yield f"{row.date},{row.amount},{row.desc}\n"
+
+@app.get("/export/transactions")
+async def export_csv(user = Depends(get_current_user)):
+    return StreamingResponse(
+        generate_csv(user.id),
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=transactions.csv"},
+    )
+
+# LLM streaming -- tra tung token ngay khi co
+async def stream_llm(prompt: str):
+    async for chunk in llm.stream(prompt):
+        yield f"data: {chunk}\n\n"   # Server-Sent Events format
+
+@app.get("/chat")
+async def chat(q: str):
+    return StreamingResponse(stream_llm(q), media_type="text/event-stream")</code></pre>
+<div class="analogy">Như truyền hình trực tiếp: xem từng khung hình ngay khi quay, không phải đợi quay xong cả buổi.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b321f21da8a6.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> WebSocket trong FastAPI hoạt động thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_025e3729711b.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>HTTP: client gửi → server trả → kết thúc. <span class="term">WebSocket</span>: kết nối duy trì hai chiều, cả hai bên gửi bất cứ lúc nào. Dùng cho: thông báo realtime giao dịch, cập nhật tỷ giá, dashboard live.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_79b3bce24e4a.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi import WebSocket, WebSocketDisconnect
+
+class ConnectionManager:
+    def __init__(self):
+        self.connections: dict[int, WebSocket] = {}
+
+    async def connect(self, user_id: int, ws: WebSocket):
+        await ws.accept()
+        self.connections[user_id] = ws
+
+    async def send(self, user_id: int, data: dict):
+        if ws := self.connections.get(user_id):
+            await ws.send_json(data)
+
+manager = ConnectionManager()
+
+@app.websocket("/ws/notifications/{user_id}")
+async def ws_notifications(websocket: WebSocket, user_id: int):
+    await manager.connect(user_id, websocket)
+    try:
+        while True:
+            data = await websocket.receive_text()
+            await websocket.send_json({"echo": data})
+    except WebSocketDisconnect:
+        del manager.connections[user_id]
+
+# Gui notification tu bat ky dau trong app
+await manager.send(user_id, {"type": "transfer", "amount": 500000})</code></pre>
+<div class="analogy">HTTP như gửi thư — gửi, chờ phản hồi, xong. WebSocket như gọi điện — kết nối duy trì, cả hai nói bất cứ lúc nào.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_c958b540724a.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Làm sao implement rate limiting trong FastAPI?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_b42f3d0d113d.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Rate limiting</span> giới hạn số request mỗi IP/user trong khoảng thời gian nhất định. Dùng Redis làm bộ đếm vì: rất nhanh và atomic — nhiều server cùng check không bị race condition.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_864901565479.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># Cach 1: slowapi -- don gian nhat
+from slowapi import Limiter
+from slowapi.util import get_remote_address
+
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+
+@app.get("/api/rates")
+@limiter.limit("60/minute")      # 60 request/phut/IP
+async def get_rates(request: Request):
+    return {"USD": 25000}
+
+# Cach 2: Redis counter -- linh hoat hon, dung cho production
+async def check_rate_limit(ip: str, limit: int = 100, window: int = 60):
+    key = f"rate:{ip}"
+    count = await redis.incr(key)
+    if count == 1:
+        await redis.expire(key, window)   # bat dau dem 60s
+    if count &gt; limit:
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests",
+            headers={"Retry-After": str(window)},
+        )</code></pre>
+<div class="analogy">Như quầy vé hạn chế số lượng: đếm người vào bằng Redis, quá ngưỡng thì từ chối đến hết giờ.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_0ece22e29b2a.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Làm sao trả về nhiều loại response từ một endpoint?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_812499c269df.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Khai báo tất cả response codes có thể trong <code>responses</code> dict để docs chính xác. Khi trả về response không phải default model, dùng <code>JSONResponse</code> trực tiếp.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_80fbf7b52ac4.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi.responses import JSONResponse
+
+class TransferSuccess(BaseModel):
+    transaction_id: str
+    amount: float
+
+class TransferError(BaseModel):
+    code: str
+    message: str
+    balance: float | None = None
+
+@app.post(
+    "/transactions",
+    response_model=TransferSuccess,
+    responses={
+        200: {"model": TransferSuccess},
+        400: {"model": TransferError, "description": "Loi business logic"},
+        422: {"description": "Validation error -- sai format input"},
+    },
+)
+async def transfer(data: TransferRequest, user=Depends(get_current_user)):
+    if user.balance &lt; data.amount:
+        return JSONResponse(
+            status_code=400,
+            content={"code": "insufficient_funds",
+                     "message": "So du khong du", "balance": user.balance},
+        )
+    result = await process_transfer(data, user)
+    return result   # FastAPI tu apply response_model</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> OpenAPI docs được sinh tự động như thế nào trong FastAPI?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_d1d0e70f67ab.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>FastAPI đọc type hints, Pydantic models, <code>Field</code> description, và metadata trong decorator để tự sinh file OpenAPI JSON. Phục vụ tại <code>/docs</code> (Swagger UI, thử API trực tiếp) và <code>/redoc</code> (docs đọc). Docs không bao giờ lỗi thời vì sinh từ code.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_c195a4ffa649.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from pydantic import BaseModel, Field
+
+class TransferRequest(BaseModel):
+    amount: float = Field(..., gt=0, description="So tien chuyen (VND)")
+    receiver_account: str = Field(..., min_length=10, description="So tai khoan nhan")
+    note: str = Field("", max_length=200, description="Noi dung chuyen khoan")
+
+@app.post(
+    "/transactions",
+    summary="Tao giao dich chuyen tien",
+    description="Chuyen tien tu tai khoan nguoi dung dang dang nhap.",
+    tags=["transactions"],
+    response_model=TransferSuccess,
+    status_code=201,
+)
+async def create_transfer(data: TransferRequest):
+    ...
+# -&gt; /docs tu sinh form voi description, validation rules, example values</code></pre>
+<div class="analogy">Như phần mềm tự tạo bản vẽ kỹ thuật từ mô hình 3D — thay đổi mô hình thì bản vẽ tự cập nhật, không cần vẽ thủ công.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_528220e790b7.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> Làm sao xử lý file upload trong FastAPI?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_a32fa00bcf70.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Dùng <code>UploadFile</code> nhận file qua <code>multipart/form-data</code>. Quan trọng: stream file thẳng lên S3 thay vì đọc hết vào RAM — đặc biệt khi file ảnh KYC có thể vài chục MB.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_e3ba3b9c5248.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from fastapi import UploadFile, File, Form
+import aioboto3
+
+@app.post("/kyc/documents")
+async def upload_document(
+    file: UploadFile = File(...),
+    doc_type: str = Form(...),
+    user = Depends(get_current_user),
+):
+    ALLOWED = {"image/jpeg", "image/png", "application/pdf"}
+    if file.content_type not in ALLOWED:
+        raise HTTPException(400, "Chi chap nhan JPEG, PNG, PDF")
+
+    # Doc tung chunk 64KB, kiem tra kich thuoc, khong load het vao RAM
+    MAX_SIZE = 10 * 1024 * 1024   # 10 MB
+    size = 0
+    chunks = []
+    while chunk := await file.read(64 * 1024):
+        size += len(chunk)
+        if size &gt; MAX_SIZE:
+            raise HTTPException(413, "File qua lon (toi da 10MB)")
+        chunks.append(chunk)
+
+    s3_key = f"kyc/{user.id}/{doc_type}/{uuid4()}{Path(file.filename).suffix}"
+    async with aioboto3.Session().client("s3") as s3:
+        await s3.put_object(Bucket=BUCKET, Key=s3_key, Body=b"".join(chunks))
+
+    return {"key": s3_key, "size_bytes": size}</code></pre>
+<div class="analogy">Như băng chuyền: hàng đi thẳng từ A sang B từng kiện, không cần kho chứa lớn ở giữa.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_000af8e28754.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> Làm sao implement health check endpoint đúng cách?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_71749daab4e2.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Phân biệt 2 loại: <span class="term">Liveness</span> — app còn chạy không? Trả lời ngay, không check gì. <span class="term">Readiness</span> — app sẵn sàng nhận traffic không? Check DB, Redis, external deps. Kubernetes dùng liveness để quyết định có restart không, dùng readiness để quyết định có route traffic vào không.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_1b09f3b8761b.wav" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>@app.get("/health/live", tags=["health"])
+async def liveness():
+    return {"status": "ok"}   # tra ngay, khong check gi them
+
+@app.get("/health/ready", tags=["health"])
+async def readiness():
+    checks: dict[str, str] = {}
+
+    try:
+        await db.execute(text("SELECT 1"))
+        checks["db"] = "ok"
+    except Exception as e:
+        checks["db"] = f"error: {e}"
+
+    try:
+        await redis.ping()
+        checks["redis"] = "ok"
+    except Exception as e:
+        checks["redis"] = f"error: {e}"
+
+    try:
+        await payment_client.ping()
+        checks["payment_gw"] = "ok"
+    except Exception as e:
+        checks["payment_gw"] = f"error: {e}"
+
+    if any(v != "ok" for v in checks.values()):
+        raise HTTPException(status_code=503, detail=checks)
+
+    return checks
+
+# Kubernetes config:
+# livenessProbe:  GET /health/live  -&gt; neu fail: restart pod
+# readinessProbe: GET /health/ready -&gt; neu fail: ngung route traffic, khong restart</code></pre>
+<div class="analogy">Liveness: nhân viên còn trong văn phòng không? Readiness: nhân viên đã sẵn sàng nhận cuộc gọi chưa — dù ở văn phòng nhưng đang ăn trưa thì chưa ready.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_689cb9cf6487.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<script>
+/* audio engine — injected by generate_audio_tech.py */
+(function () {
+  var cur = { audio: null, btn: null, onDone: null };
+
+  function stopCur() {
+    if (cur.audio) { cur.audio.pause(); cur.audio.currentTime = 0; cur.audio = null; }
+    if (cur.btn)   { cur.btn.classList.remove('playing'); }
+    cur.btn = null; cur.onDone = null;
+  }
+
+  function getUrls(btn) {
+    if (btn.dataset.srcs) { try { return JSON.parse(btn.dataset.srcs); } catch(e) {} }
+    if (btn.dataset.src)  { return [btn.dataset.src]; }
+    return [];
+  }
+
+  function playList(btn, srcs, onDone) {
+    stopCur();
+    if (!srcs || !srcs.length) { if (onDone) onDone(); return; }
+    btn.classList.add('playing');
+    cur.btn = btn; cur.onDone = onDone;
+    var idx = 0;
+    function next() {
+      if (cur.btn !== btn) return;          /* bị dừng ngoài */
+      if (idx >= srcs.length) {
+        btn.classList.remove('playing');
+        cur.btn = null;
+        if (onDone) onDone();
+        return;
+      }
+      var audio = new Audio(srcs[idx++]);
+      cur.audio = audio;
+      audio.play().catch(function() { next(); });
+      audio.onended = next;
+    }
+    next();
+  }
+
+  /* click đơn lẻ */
+  window.playAudio = function (btn) {
+    if (cur.btn === btn) { stopCur(); return; }   /* toggle off */
+    stopCur();
+    /* đánh dấu vị trí cho ▶ Từ đây */
+    window._fromBtn = btn;
+    var f = document.getElementById('pa-from');
+    if (f) { f.classList.add('marked'); f.classList.remove('active'); }
+    playList(btn, getUrls(btn), null);
+  };
+
+  /* expose cho play-all bar */
+  window._playList = playList;
+  window._stopCur  = stopCur;
+  window._getUrls  = getUrls;
+})();
+</script>
+</body>
+</html>

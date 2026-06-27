@@ -1,0 +1,16 @@
+[
+  {
+    "stem": "english-project",
+    "title": "English Project",
+    "desc": "16 corrections · 3 expression tips · 2 groups",
+    "icon": "📝",
+    "href": "episoden/english-project.html"
+  },
+  {
+    "stem": "tech",
+    "title": "Tech",
+    "desc": "20 phrases · 40 sentences",
+    "icon": "💬",
+    "href": "episoden/tech.html"
+  }
+]

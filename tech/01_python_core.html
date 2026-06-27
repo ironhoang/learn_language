@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>Python Core — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #3b82f6; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #3b82f6; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #1e3a8a; margin-bottom: 16px; }
+  .qnum { background: #dbeafe; color: #1d4ed8; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #1d4ed8; font-weight: 600; }
+  .analogy { background: #eff6ff; border-radius: 8px; padding: 10px 16px; margin: 10px 0; font-style: italic; color: #374151; border-left: 3px solid #93c5fd; font-size: 17px; }
+  pre { background: #1e293b; border-radius: 8px; padding: 14px 18px; overflow-x: auto; margin: 12px 0; }
+  pre code { font-family: 'Fira Code', 'Consolas', monospace; font-size: 14px; color: #e2e8f0; line-height: 1.7; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #3b82f6; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(59,130,246,.4); }
+  .copy-btn:hover { background: #2563eb; }
+  @media print { .copy-btn { display: none; } }
+
+    /* audio — injected by generate_audio_tech.py */
+    .audio-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; padding: 0;
+      background: transparent; border: 1px solid #cbd5e1;
+      border-radius: 5px; cursor: pointer; font-size: 0.6rem; color: #94a3b8;
+      vertical-align: middle; margin-left: 8px;
+      transition: all 0.15s; flex-shrink: 0;
+    }
+    .audio-btn:hover { background: #eff6ff; border-color: #3b82f6; color: #3b82f6; }
+    .audio-btn.playing { border-color: #f97316; color: #f97316; }
+    @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+    #play-all-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; height: 52px;
+      background: #f8fafc; border-top: 1px solid #e2e8f0;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      z-index: 500; padding: 0 12px; box-shadow: 0 -2px 8px rgba(0,0,0,.05);
+    }
+    .pa-btn {
+      background: #f1f5f9; border: 1px solid #cbd5e1; color: #475569;
+      font-size: 0.78rem; font-weight: 600; padding: 6px 13px;
+      border-radius: 8px; cursor: pointer; transition: all 0.15s;
+      font-family: inherit; white-space: nowrap;
+    }
+    .pa-btn:hover { border-color: #94a3b8; color: #1e293b; }
+    .pa-btn.active { border-color: #f97316; color: #f97316; background: #fff7ed; }
+    #pa-stop {
+      background: transparent; border: 1px solid #e2e8f0; color: #94a3b8;
+      font-size: 0.78rem; padding: 6px 10px; border-radius: 8px;
+      cursor: pointer; transition: all 0.15s; font-family: inherit;
+    }
+    #pa-stop:hover { border-color: #94a3b8; color: #475569; }
+    #pa-status {
+      font-size: 0.7rem; color: #94a3b8; min-width: 44px; text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .pa-btn.marked { border-color: #3b82f6; color: #3b82f6; }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<h1>Python Core — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> GIL là gì và tại sao nó tồn tại?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_39dc634f7402.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">GIL (Global Interpreter Lock)</span> là một cái khóa trong CPython — tại bất kỳ thời điểm nào, chỉ có một thread được phép chạy Python bytecode, dù máy có nhiều nhân CPU.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7bf43c612c6f.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>GIL tồn tại vì Python dùng <span class="term">reference counting</span> để quản lý bộ nhớ. Mỗi object có bộ đếm số nơi đang trỏ đến nó. Nếu nhiều thread cùng tăng/giảm bộ đếm này đồng thời sẽ gây race condition — object bị xóa nhầm khi đang dùng, hoặc không bao giờ được xóa.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_93a46108bf22.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">GIL như cái mic duy nhất trong hội trường — chỉ 1 người nói tại 1 thời điểm, tránh tất cả nói cùng lúc gây loạn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_17631e4c9e12.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<pre><code>import threading, time
+
+count = 0
+def increment():
+    global count
+    for _ in range(1_000_000):
+        count += 1  # GIL bảo vệ thao tác này
+
+threads = [threading.Thread(target=increment) for _ in range(2)]
+for t in threads: t.start()
+for t in threads: t.join()
+# count ~ 2_000_000 (không bị corrupt dù 2 thread)</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> GIL ảnh hưởng thế nào đến lập trình đa luồng?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0de7f9be0e7d.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">I/O-bound</span> (gọi API, đọc file, query DB): thread tự nhả GIL khi chờ, thread khác chạy vào. Threading vẫn hiệu quả.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c3d5766512e3.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">CPU-bound</span> (xử lý ảnh, thuật toán nặng): các thread tranh nhau giữ GIL, chạy tuần tự chứ không song song thật. Dùng threading ở đây không giúp ích, thậm chí chậm hơn. Giải pháp: <span class="term">multiprocessing</span> — mỗi process có GIL riêng, chạy thật sự song song.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e6a745572094.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import time, threading, multiprocessing
+
+def cpu_task():
+    sum(i**2 for i in range(1_000_000))
+
+# Threading — không nhanh hơn vì GIL
+start = time.time()
+threads = [threading.Thread(target=cpu_task) for _ in range(4)]
+for t in threads: t.start()
+for t in threads: t.join()
+print(f"Threading: {time.time()-start:.2f}s")  # ~4s
+
+# Multiprocessing — thật sự song song
+start = time.time()
+with multiprocessing.Pool(4) as pool:
+    pool.map(lambda _: cpu_task(), range(4))
+print(f"Multiprocessing: {time.time()-start:.2f}s")  # ~1s</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Phân biệt đa luồng, đa tiến trình và asyncio?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_06b541a3288c.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Ba cơ chế xử lý đồng thời, mỗi cái phù hợp một use case khác nhau:<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_dae19f65cebd.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># Threading — share memory, bị GIL, tốt cho I/O
+from concurrent.futures import ThreadPoolExecutor
+with ThreadPoolExecutor(max_workers=10) as ex:
+    results = list(ex.map(fetch_url, urls))  # gọi 10 API song song
+
+# Multiprocessing — process riêng, GIL riêng, tốt cho CPU
+from concurrent.futures import ProcessPoolExecutor
+with ProcessPoolExecutor(max_workers=4) as ex:
+    results = list(ex.map(resize_image, images))  # xử lý ảnh song song
+
+# asyncio — 1 thread, event loop, tốt nhất cho I/O concurrency cao
+import asyncio
+async def main():
+    results = await asyncio.gather(*[fetch(url) for url in urls])
+    # 1000 request đồng thời trong 1 thread</code></pre>
+<p>Quy tắc chọn: I/O ít kết nối → threading; I/O nhiều kết nối → asyncio; tính toán nặng → multiprocessing.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6867d3c27731.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Async và await hoạt động như thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_875c2c2fa589.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Hàm có <span class="term">async def</span> tạo ra coroutine — không chạy ngay khi gọi, phải được event loop điều phối. Từ khóa <span class="term">await</span> là điểm nhường quyền: hàm tạm dừng, event loop chạy coroutine khác, khi I/O xong thì quay lại tiếp tục.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4791f3eed89a.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như nhân viên phục vụ: ghi order xong không đứng chờ bếp nấu, quay sang phục vụ bàn khác. Khi bếp kêu thì mới quay lại lấy món.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_290868260cdd.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<pre><code>import asyncio
+
+async def fetch(name, delay):
+    print(f"  start {name}")
+    await asyncio.sleep(delay)   # nhường quyền — không block
+    print(f"  done  {name}")
+    return f"result-{name}"
+
+async def main():
+    # Chạy song song — tổng ~1s thay vì 3s
+    results = await asyncio.gather(
+        fetch("A", 1),
+        fetch("B", 1),
+        fetch("C", 1),
+    )
+    print(results)
+
+asyncio.run(main())</code></pre>
+<p>Lưu ý: nếu gọi hàm blocking (time.sleep, requests.get) bên trong async def sẽ block toàn bộ event loop. Phải dùng thư viện async (httpx, asyncpg, aiofiles).<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_63ca4a81ea7d.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> Sự khác biệt giữa asyncio.gather và asyncio.wait?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_720900c18787.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">gather</span>: chạy tất cả, chờ tất cả xong, trả kết quả theo đúng thứ tự ban đầu. Nếu 1 cái lỗi mặc định toàn bộ fail. Dùng khi cần đủ kết quả mới làm tiếp.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ae30c331ace5.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">wait</span>: linh hoạt hơn — có thể dừng khi cái đầu tiên xong, hoặc khi cái đầu tiên lỗi. Trả về 2 set: <code>done</code> và <code>pending</code>, xử lý từng cái riêng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7d290f5f6eb3.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import asyncio
+
+# gather — chờ tất cả, kết quả theo thứ tự
+results = await asyncio.gather(
+    fetch("A"), fetch("B"), fetch("C"),
+    return_exceptions=True   # không fail toàn bộ khi 1 cái lỗi
+)
+
+# wait — lấy cái nào xong trước
+tasks = [asyncio.create_task(fetch(u)) for u in urls]
+done, pending = await asyncio.wait(
+    tasks,
+    return_when=asyncio.FIRST_COMPLETED   # dừng ngay khi có 1 xong
+)
+for task in pending:
+    task.cancel()   # hủy các task còn lại</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> Generator là gì? Khi nào nên dùng?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5274c8ea73ba.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Generator là hàm dùng <span class="term">yield</span> thay vì return. Thay vì tính hết rồi trả về một lần, generator tạo từng phần tử theo yêu cầu — chỉ khi iterator gọi next(). Bộ nhớ gần như không đổi dù xử lý triệu dòng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_919cd9444d62.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># ❌ Không dùng generator — 10M dòng vào RAM cùng lúc
+def read_all(path):
+    return open(path).readlines()   # ~1GB RAM với file lớn
+
+# ✅ Generator — chỉ giữ 1 dòng tại 1 thời điểm
+def read_lines(path):
+    with open(path) as f:
+        for line in f:
+            yield line.strip()
+
+for line in read_lines("huge.csv"):
+    process(line)   # RAM không tăng
+
+# Generator expression — còn ngắn hơn
+squares = (x**2 for x in range(10_000_000))   # lazy, không tính ngay
+total = sum(squares)   # tính từng cái, không cần list</code></pre>
+<p>Dùng generator khi: đọc file lớn, stream dữ liệu từ API, pipeline xử lý nhiều bước, hoặc chuỗi vô hạn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_dbc37eec298a.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> __slots__ dùng để làm gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8a221d4da505.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Mặc định mỗi object Python có <span class="term">__dict__</span> — từ điển nội bộ lưu thuộc tính, tốn khoảng 200–400 byte overhead. Khi khai báo <span class="term">__slots__</span>, Python không tạo __dict__ nữa, lưu trực tiếp vào cấu trúc cố định — tiết kiệm 40–60% memory mỗi object.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ae95413d58b1.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import sys
+
+class Transaction:
+    def __init__(self, id, amount):
+        self.id = id
+        self.amount = amount
+
+class TransactionSlots:
+    __slots__ = ['id', 'amount']
+    def __init__(self, id, amount):
+        self.id = id
+        self.amount = amount
+
+t1 = Transaction(1, 100)
+t2 = TransactionSlots(1, 100)
+
+print(sys.getsizeof(t1) + sys.getsizeof(t1.__dict__))  # ~360 bytes
+print(sys.getsizeof(t2))                                 # ~56 bytes
+
+# 1 triệu object: ~304MB vs ~56MB
+# Nhược điểm: không thể thêm thuộc tính ngoài __slots__</code></pre>
+<p>Dùng khi tạo hàng triệu object cùng kiểu: cache entry, event record, transaction row.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5df5d17e8c34.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> Decorator là gì? Cách hoạt động?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_566d9e4a52a5.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Decorator là hàm nhận một hàm làm input, bọc thêm logic, trả về hàm mới. Ký hiệu <span class="term">@decorator</span> là cú pháp sugar: <code>func = decorator(func)</code>.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4336d5b1996c.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Decorator như lớp áo ngoài — thêm tính năng mà không sửa bên trong.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c788dd55b6d8.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<pre><code>import functools, time
+
+def timer(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        elapsed = time.perf_counter() - start
+        print(f"{func.__name__} took {elapsed:.3f}s")
+        return result
+    return wrapper
+
+def retry(times=3):
+    def decorator(func):
+        @functools.wraps(func)
+        async def wrapper(*args, **kwargs):
+            for attempt in range(times):
+                try:
+                    return await func(*args, **kwargs)
+                except Exception as e:
+                    if attempt == times - 1:
+                        raise
+        return wrapper
+    return decorator
+
+@timer
+def process_payment(amount): ...
+
+@retry(times=3)
+async def call_bank_api(payload): ...</code></pre>
+<p>Trong thực tế: logging, timing, retry, auth check, cache, rate limit — tất cả đều dùng decorator để tách logic cross-cutting ra khỏi business logic.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f3d89c415759.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> functools.wraps dùng để làm gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_cc85f1331052.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Khi tạo decorator, hàm wrapper che mất tên, docstring, signature của hàm gốc. <span class="term">functools.wraps</span> sao chép metadata đó từ hàm gốc sang wrapper — quan trọng cho logging, debugging, và FastAPI (dùng tên hàm để generate route docs).<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b03d8eabb22a.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import functools
+
+# ❌ Không dùng wraps
+def log(func):
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+@log
+def transfer(): "Transfer money"
+
+print(transfer.__name__)   # "wrapper"   ← sai
+print(transfer.__doc__)    # None         ← mất docstring
+
+# ✅ Dùng wraps
+def log(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+@log
+def transfer(): "Transfer money"
+
+print(transfer.__name__)   # "transfer"  ← đúng
+print(transfer.__doc__)    # "Transfer money"</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> Context manager là gì? Tại sao cần thiết?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f25e383d0f40.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Context manager đảm bảo tài nguyên được dọn dẹp đúng cách <span class="term">dù có exception hay không</span> — thông qua cú pháp <code>with ... as</code>. Python gọi <code>__enter__</code> khi vào block và <code>__exit__</code> khi thoát ra (kể cả khi lỗi).<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_2a77143ec69a.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># ❌ Không có context manager — file có thể không được đóng khi lỗi
+f = open("data.txt")
+data = f.read()   # nếu lỗi ở đây → f.close() không bao giờ chạy
+f.close()
+
+# ✅ Context manager — luôn đóng dù có lỗi
+with open("data.txt") as f:
+    data = f.read()
+
+# Tự tạo context manager cho DB transaction
+class DBTransaction:
+    def __enter__(self):
+        self.conn = get_connection()
+        self.conn.begin()
+        return self.conn
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if exc_type:
+            self.conn.rollback()   # lỗi → rollback
+        else:
+            self.conn.commit()     # OK → commit
+        self.conn.close()          # luôn đóng
+
+with DBTransaction() as conn:
+    conn.execute("UPDATE accounts SET balance = balance - 100 WHERE id=1")
+    conn.execute("UPDATE accounts SET balance = balance + 100 WHERE id=2")</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> Phân biệt deepcopy và shallow copy?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_be6e8058dc5b.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Shallow copy</span>: tạo object mới ở tầng ngoài cùng, nhưng các object lồng bên trong vẫn là tham chiếu chung với bản gốc. Thay đổi bên trong → ảnh hưởng bản gốc.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5615ed285f0c.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Deep copy</span>: đệ quy sao chép tất cả mọi thứ bên trong. Hoàn toàn độc lập với bản gốc.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_af1c34f0931f.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import copy
+
+original = {"user": {"name": "Iron", "balance": 1000}}
+
+# Shallow copy — bug thực tế
+shallow = copy.copy(original)
+shallow["user"]["balance"] = 0
+print(original["user"]["balance"])   # ❌ 0 — bản gốc bị sửa!
+
+# Deep copy — an toàn
+deep = copy.deepcopy(original)
+deep["user"]["balance"] = 0
+print(original["user"]["balance"])   # ✅ 1000 — bản gốc nguyên vẹn
+
+# List cũng vậy
+a = [[1, 2], [3, 4]]
+b = a.copy()          # shallow
+b[0].append(99)
+print(a[0])           # [1, 2, 99] ← a bị ảnh hưởng!</code></pre>
+<p>Dùng deepcopy khi cần clone cấu hình để thử nghiệm, hoặc bất kỳ khi nào dữ liệu có cấu trúc lồng nhau và cần hoàn toàn độc lập.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_a54d7f9d74c1.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> List comprehension và hàm map() — khi nào dùng cái nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_64be69986afc.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">List comprehension</span>: tạo list ngay, dễ đọc, Pythonic — ưu tiên dùng hầu hết trường hợp.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_51fa48e05978.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">map()</span>: trả về iterator lazy — không tính ngay, chỉ tính khi cần. Tiết kiệm RAM khi chuỗi rất dài và chỉ duyệt qua một lần.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_42e224a0dcd8.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>data = range(1_000_000)
+
+# List comprehension — rõ ràng, kết quả sẵn trong RAM
+evens_squared = [x**2 for x in data if x % 2 == 0]
+
+# map/filter — lazy, không tạo list trung gian
+result = map(lambda x: x**2, filter(lambda x: x % 2 == 0, data))
+total = sum(result)   # chỉ khi sum chạy mới tính từng phần tử
+
+# Generator expression — lazy như map nhưng dễ đọc hơn
+total = sum(x**2 for x in data if x % 2 == 0)   # ✅ best of both</code></pre>
+<p>Khuyến nghị: dùng list comprehension khi cần list thật, dùng generator expression khi chỉ cần duyệt qua một lần. map() ít dùng hơn trong Python hiện đại.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_869cdb5271d3.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> *args và **kwargs là gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c0c3b8bc9f29.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">*args</span>: gom tất cả positional arguments thừa vào một tuple.<br/>
+<span class="term">**kwargs</span>: gom tất cả keyword arguments thừa vào một dict.<br/>
+    Dùng nhiều nhất trong decorator để truyền nguyên xi mọi đối số xuống hàm gốc.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6531c0bddb69.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import functools
+
+def log(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):   # nhận MỌI đối số, bất kể bao nhiêu
+        print(f"Calling {func.__name__} args={args} kwargs={kwargs}")
+        return func(*args, **kwargs)   # truyền xuống nguyên xi
+    return wrapper
+
+@log
+def transfer(from_acc, to_acc, amount, currency="VND"):
+    pass
+
+transfer("A001", "B002", 500)
+# "Calling transfer args=('A001','B002',500) kwargs={}"
+transfer("A001", "B002", 500, currency="USD")
+# "Calling transfer args=('A001','B002',500) kwargs={'currency':'USD'}"
+
+# *args trong hàm thông thường
+def sum_all(*args):
+    return sum(args)
+
+sum_all(1, 2, 3, 4, 5)   # 15</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> Python quản lý bộ nhớ như thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_a28286af67ac.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Ba cơ chế chính:<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_1c89a35fcd39.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">1. Reference counting</span>: mỗi object có bộ đếm số nơi đang trỏ đến. Khi về 0, giải phóng ngay.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e1e0160b152b.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">2. Cyclic garbage collector</span>: xử lý circular reference — trường hợp 2 object trỏ nhau, ref count không bao giờ về 0 dù không ai dùng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ba8f041701de.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">3. Memory pool</span>: Python không xin/trả OS từng byte nhỏ (tốn kém). Thay vào đó giữ pool nội bộ, tái sử dụng ô nhớ đã giải phóng.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_937cbf93fa7d.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import sys
+
+x = [1, 2, 3]
+print(sys.getrefcount(x))   # 2 (x + tham số getrefcount)
+
+y = x                        # ref count → 3
+del x                        # ref count → 2
+del y                        # ref count → 0 → giải phóng ngay
+
+# Circular reference — cần GC
+a, b = {}, {}
+a['b'] = b
+b['a'] = a     # a và b trỏ nhau, ref count không về 0
+del a, b       # GC định kỳ sẽ phát hiện và xóa
+
+import gc
+gc.collect()   # ép chạy GC ngay nếu cần</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> is và == khác nhau thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5bf760ebdfda.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">==</span>: so sánh giá trị — gọi <code>__eq__</code>.<br/>
+<span class="term">is</span>: so sánh danh tính — kiểm tra cùng địa chỉ bộ nhớ (<code>id(a) == id(b)</code>).<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b833db732e1d.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># Bug thực tế — nhầm is với ==
+a = 1000
+b = 1000
+print(a == b)   # ✅ True  (giá trị bằng nhau)
+print(a is b)   # ❌ False (hai object khác nhau trong RAM)
+
+# Python cache int từ -5 đến 256 → is có thể True nhưng không nên dựa vào
+x = 256; y = 256
+print(x is y)   # True (cached)
+x = 257; y = 257
+print(x is y)   # False (không cached)
+
+# String interning cũng gây nhầm lẫn
+s1 = "hello"
+s2 = "hello"
+print(s1 is s2)   # True (interned) — nhưng đừng dựa vào điều này
+
+# ✅ Quy tắc thực tế: is CHỈ dùng với None, True, False
+if result is None: ...
+if flag is True: ...   # hoặc đơn giản là: if flag: ...</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Exception chaining (raise ... from ...) là gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e757ca8094ce.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Khi bắt lỗi kỹ thuật và muốn throw lỗi nghiệp vụ, dùng <span class="term">raise NewError from original</span>. Python giữ cả hai trong traceback — người debug thấy đủ context, người dùng API thấy lỗi có nghĩa.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_766f1de85078.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>class PaymentError(Exception):
+    pass
+
+def get_account(account_id: str):
+    try:
+        return db.query("SELECT * FROM accounts WHERE id = %s", account_id)
+    except DatabaseConnectionError as e:
+        # Wrap lỗi kỹ thuật thành lỗi nghiệp vụ
+        raise PaymentError(f"Cannot retrieve account {account_id}") from e
+
+# Traceback sẽ hiện:
+# DatabaseConnectionError: connection refused
+# The above exception was the direct cause of:
+# PaymentError: Cannot retrieve account ACC001
+
+# raise ... from None: ẩn lỗi gốc hoàn toàn
+raise PaymentError("Account not found") from None</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Phân biệt classmethod, staticmethod và instance method?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_3cc3f4d728de.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Instance method</span>: nhận <code>self</code>, truy cập thuộc tính object cụ thể.<br/>
+<span class="term">classmethod</span>: nhận <code>cls</code>, dùng làm factory — tạo object từ nhiều nguồn khác nhau.<br/>
+<span class="term">staticmethod</span>: không nhận self/cls, là hàm tiện ích đặt trong class cho gọn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5d489e2e35ef.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>import json
+from decimal import Decimal
+
+class Payment:
+    def __init__(self, amount: Decimal, currency: str):
+        self.amount = amount
+        self.currency = currency
+
+    # Instance method — làm việc trên object cụ thể
+    def display(self) -&gt; str:
+        return f"{self.amount} {self.currency}"
+
+    # classmethod — factory: tạo object từ nhiều dạng input
+    @classmethod
+    def from_dict(cls, data: dict) -&gt; "Payment":
+        return cls(Decimal(str(data["amount"])), data["currency"])
+
+    @classmethod
+    def from_json(cls, json_str: str) -&gt; "Payment":
+        return cls.from_dict(json.loads(json_str))
+
+    # staticmethod — validation, không cần self/cls
+    @staticmethod
+    def is_valid_amount(amount: float) -&gt; bool:
+        return 0 &lt; amount &lt;= 1_000_000_000
+
+p = Payment.from_dict({"amount": "99.50", "currency": "USD"})
+p = Payment.from_json('{"amount": "99.50", "currency": "USD"}')
+Payment.is_valid_amount(-100)   # False</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> __init__ và __new__ khác nhau thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_484ae5b55e7c.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">__new__</span>: cấp phát bộ nhớ và tạo object trống — chạy trước.<br/>
+<span class="term">__init__</span>: điền thuộc tính vào object vừa tạo — chạy sau.<br/>
+    99% trường hợp chỉ cần __init__. __new__ dùng khi cần kiểm soát việc có tạo object mới hay không — ví dụ Singleton.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d2db8ca32085.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>class Singleton:
+    _instance = None
+
+    def __new__(cls):
+        # __new__ quyết định: tạo mới hay trả object cũ
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+    def __init__(self):
+        if not hasattr(self, 'initialized'):
+            self.config = {}
+            self.initialized = True
+
+s1 = Singleton()
+s2 = Singleton()
+print(s1 is s2)   # True — cùng 1 object
+
+# __new__ cũng dùng khi kế thừa immutable type
+class PositiveInt(int):
+    def __new__(cls, value):
+        if value &lt;= 0:
+            raise ValueError("Must be positive")
+        return super().__new__(cls, value)   # int là immutable, phải dùng __new__</code></pre>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> Pydantic dùng để làm gì? Tại sao quan trọng trong API tài chính?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7c652ba2f090.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Pydantic tự động <span class="term">validate và convert dữ liệu</span> dựa trên type hints. Trong fintech, dữ liệu sai (số tiền âm, thiếu trường, sai định dạng) phải bị chặn ngay tại cổng vào — không để lọt vào business logic.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e17033bc0b6c.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code>from pydantic import BaseModel, field_validator
+from decimal import Decimal
+
+class TransferRequest(BaseModel):
+    from_account: str
+    to_account: str
+    amount: Decimal       # tự convert string "99.5" → Decimal
+    currency: str = "VND"
+
+    @field_validator("amount")
+    @classmethod
+    def must_be_positive(cls, v):
+        if v &lt;= 0:
+            raise ValueError("amount must be positive")
+        return v
+
+    @field_validator("from_account", "to_account")
+    @classmethod
+    def must_not_be_same(cls, v, info):
+        # validator chạy sau khi field được set
+        return v
+
+# FastAPI tự động validate — không cần code thêm
+@app.post("/transfer")
+async def transfer(req: TransferRequest):
+    # req.amount đã là Decimal, đã validated dương
+    await process(req.from_account, req.to_account, req.amount)
+
+# {"amount": -100} → 422 Unprocessable Entity (tự động)
+# {"amount": "abc"} → 422 (Decimal không parse được)
+# {"amount": "50.5", ...} → ✅ req.amount = Decimal("50.5")</code></pre>
+<p>Pydantic cũng tự sinh OpenAPI docs — không cần viết tài liệu thủ công.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_88d12ba8ff56.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> Làm sao tối ưu performance cho Python service xử lý nhiều request?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_80cdb0cdea47.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Năm hướng thực tế, theo thứ tự ưu tiên:<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_46eb8e40b8a5.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<pre><code># 1. Async I/O — không block event loop
+@app.get("/rates")
+async def get_rates():
+    data = await redis.get("exchange_rates")   # async, không block
+    return data
+
+# 2. Connection pool — tránh tạo connection mới mỗi request (~100-500ms/lần)
+engine = create_async_engine(DB_URL, pool_size=20, max_overflow=10)
+
+# 3. Cache với TTL — tránh query DB cho dữ liệu ít thay đổi
+async def get_rate(currency: str):
+    cached = await redis.get(f"rate:{currency}")
+    if cached:
+        return cached
+    rate = await fetch_from_bank_api(currency)
+    await redis.setex(f"rate:{currency}", 300, rate)   # cache 5 phút
+    return rate
+
+# 4. Generator cho export/report lớn — không load hết vào RAM
+async def export_transactions(account_id):
+    async for row in db.stream(select(Transaction).where(...)):
+        yield row.to_csv_line()
+
+# 5. Celery cho tác vụ nặng/chậm — trả response ngay, xử lý nền
+@celery.task
+def generate_monthly_report(user_id: str):
+    ...   # chạy nền, không giữ HTTP connection</code></pre>
+<p>Quan trọng: <span class="term">đo trước, tối ưu sau</span>. Dùng cProfile hoặc py-spy để xác định chỗ thực sự chậm trước khi thay đổi.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_50ce314c025f.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+
+<script>
+/* audio engine — injected by generate_audio_tech.py */
+(function () {
+  var cur = { audio: null, btn: null, onDone: null };
+
+  function stopCur() {
+    if (cur.audio) { cur.audio.pause(); cur.audio.currentTime = 0; cur.audio = null; }
+    if (cur.btn)   { cur.btn.classList.remove('playing'); }
+    cur.btn = null; cur.onDone = null;
+  }
+
+  function getUrls(btn) {
+    if (btn.dataset.srcs) { try { return JSON.parse(btn.dataset.srcs); } catch(e) {} }
+    if (btn.dataset.src)  { return [btn.dataset.src]; }
+    return [];
+  }
+
+  function playList(btn, srcs, onDone) {
+    stopCur();
+    if (!srcs || !srcs.length) { if (onDone) onDone(); return; }
+    btn.classList.add('playing');
+    cur.btn = btn; cur.onDone = onDone;
+    var idx = 0;
+    function next() {
+      if (cur.btn !== btn) return;
+      if (idx >= srcs.length) {
+        btn.classList.remove('playing');
+        cur.btn = null;
+        if (onDone) onDone();
+        return;
+      }
+      var audio = new Audio(srcs[idx++]);
+      cur.audio = audio;
+      audio.play().catch(function() { next(); });
+      audio.onended = next;
+    }
+    next();
+  }
+
+  window.playAudio = function (btn) {
+    if (cur.btn === btn) { stopCur(); return; }
+    stopCur();
+    window._fromBtn = btn;
+    var f = document.getElementById('pa-from');
+    if (f) { f.classList.add('marked'); f.classList.remove('active'); }
+    playList(btn, getUrls(btn), null);
+  };
+
+  window._playList = playList;
+  window._stopCur  = stopCur;
+  window._getUrls  = getUrls;
+})();
+</script>
+
+<div id="play-all-bar">
+  <button class="pa-btn" id="pa-all">&#9654; Tất cả</button>
+  <button class="pa-btn" id="pa-q">&#9654; Câu hỏi</button>
+  <button class="pa-btn" id="pa-a">&#9654; Câu trả lời</button>
+  <button class="pa-btn" id="pa-from">&#9654; Từ đây</button>
+  <span id="pa-status"></span>
+  <button id="pa-stop">&#9632; Dừng</button>
+</div>
+
+<script>
+/* play-all bar — injected by generate_audio_tech.py */
+(function () {
+  'use strict';
+  var pa = { list: [], idx: 0, on: false, mode: null };
+  var statusEl = document.getElementById('pa-status');
+
+  var MODES = {
+    all:  { btn: document.getElementById('pa-all'),  idle: '▶ Tất cả',      running: '⏸ Tất cả',      sel: '.audio-btn' },
+    q:    { btn: document.getElementById('pa-q'),    idle: '▶ Câu hỏi',     running: '⏸ Câu hỏi',     sel: '.question .audio-btn' },
+    a:    { btn: document.getElementById('pa-a'),    idle: '▶ Câu trả lời', running: '⏸ Câu trả lời', sel: '.answer .audio-btn' },
+    from: { btn: document.getElementById('pa-from'), idle: '▶ Từ đây',      running: '⏸ Từ đây',      sel: '.audio-btn' }
+  };
+
+  document.body.style.paddingBottom = '68px';
+
+  function updateStatus() {
+    statusEl.textContent = pa.on ? (pa.idx + 1) + ' / ' + pa.list.length : '';
+  }
+
+  function resetBtns() {
+    Object.keys(MODES).forEach(function (k) {
+      MODES[k].btn.textContent = MODES[k].idle;
+      MODES[k].btn.classList.remove('active');
+    });
+  }
+
+  function scrollToBtn(btn) {
+    var qa = btn.closest ? btn.closest('.qa') : null;
+    if (qa) { setTimeout(function () { qa.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 60); }
+  }
+
+  function step() {
+    if (!pa.on) return;
+    if (pa.idx >= pa.list.length) { stopAll(); return; }
+    var btn = pa.list[pa.idx];
+    var urls = window._getUrls ? window._getUrls(btn) : (btn.dataset.src ? [btn.dataset.src] : []);
+    if (!urls.length) { pa.idx++; step(); return; }
+    pa.list.forEach(function (b) { b.classList.remove('playing'); });
+    scrollToBtn(btn);
+    updateStatus();
+    window._playList(btn, urls, function () { pa.idx++; step(); });
+  }
+
+  function startMode(key) {
+    if (window._stopCur) window._stopCur();
+    var m = MODES[key];
+    pa.list = Array.from(document.querySelectorAll(m.sel));
+    if (!pa.list.length) return;
+    pa.idx = 0;
+    if (key === 'from' && window._fromBtn) {
+      var found = pa.list.indexOf(window._fromBtn);
+      if (found >= 0) pa.idx = found;
+    }
+    pa.on = true; pa.mode = key;
+    resetBtns();
+    m.btn.textContent = m.running;
+    m.btn.classList.add('active');
+    m.btn.classList.remove('marked');
+    step();
+  }
+
+  function stopAll() {
+    pa.on = false; pa.mode = null;
+    if (window._stopCur) window._stopCur();
+    resetBtns(); updateStatus();
+    if (window._fromBtn) {
+      var f = document.getElementById('pa-from');
+      if (f) f.classList.add('marked');
+    }
+  }
+
+  Object.keys(MODES).forEach(function (k) {
+    MODES[k].btn.addEventListener('click', function () {
+      if (pa.on && pa.mode === k) stopAll(); else startMode(k);
+    });
+  });
+  document.getElementById('pa-stop').addEventListener('click', stopAll);
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.audio-btn') : null;
+    if (btn && pa.on) { pa.on = false; pa.mode = null; resetBtns(); updateStatus(); }
+  }, true);
+})();
+</script>
+</body>
+</html>

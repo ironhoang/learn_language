@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git ls-tree *)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(python3 *)",
+      "Bash(npm create *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5174/)",
+      "Bash(curl -s \"http://localhost:5174/data/episoden-ask-1.json\")",
+      "Bash(curl -s http://localhost:5174/data/episoden-ask-1.json)",
+      "Bash(curl -s http://localhost:5174/data/jobs-teacher.json)",
+      "Bash(curl -s http://localhost:5174/data/han-with-kid.json)",
+      "Skill(run)",
+      "Bash(git -C /Users/nexusfrontiertech/projects/tools/learn-en-ch status vercel.json)",
+      "Bash(git -C /Users/nexusfrontiertech/projects/tools/learn-en-ch ls-files react-app/)",
+      "Bash(git -C /Users/nexusfrontiertech/projects/tools/learn-en-ch status --short react-app/)",
+      "Bash(git -C /Users/nexusfrontiertech/projects/tools/learn-en-ch ls-files --others --exclude-standard react-app/src/ react-app/public/ react-app/package.json react-app/package-lock.json)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(pip install *)",
+      "Bash(python scripts/generate_audio_tech.py 01_python_core.html --dry-run)",
+      "Bash(.venv/bin/python *)",
+      "Bash(ln -s ../../sum-tech /Users/nexusfrontiertech/projects/tools/learn-en-ch/react-app/public/sum-tech)",
+      "Bash(python *)"
+    ]
+  }
+}

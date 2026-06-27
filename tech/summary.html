@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Summary — Tất cả câu hỏi</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, serif; max-width: 960px; margin: 0 auto; padding: 40px 24px 60px; background: #fafaf8; color: #1a1a1a; font-size: 15px; line-height: 1.6; }
+  h1 { font-size: 26px; color: #1a1a2e; border-bottom: 3px solid #374151; padding-bottom: 10px; margin-bottom: 6px; }
+  .meta { color: #666; font-size: 13px; margin-bottom: 36px; }
+  .section { margin-bottom: 36px; }
+  .section-title { font-size: 17px; font-weight: 700; padding: 8px 14px; border-radius: 6px; margin-bottom: 8px; display: inline-block; }
+  table { width: 100%; border-collapse: collapse; }
+  tr { border-bottom: 1px solid #e5e7eb; }
+  tr:last-child { border-bottom: none; }
+  td { padding: 7px 10px; vertical-align: top; }
+  td:first-child { width: 34px; color: #9ca3af; font-family: monospace; font-size: 13px; white-space: nowrap; padding-right: 6px; }
+  td:nth-child(2) { width: 42%; font-weight: 600; color: #1e293b; padding-right: 16px; }
+  td:nth-child(3) { color: #374151; }
+  tr:hover { background: #f1f5f9; }
+
+  /* Colors per section */
+  .s1 .section-title { background: #dbeafe; color: #1d4ed8; }
+  .s1 td:first-child { color: #93c5fd; }
+  .s2 .section-title { background: #fef3c7; color: #b45309; }
+  .s2 td:first-child { color: #fcd34d; }
+  .s3 .section-title { background: #d1fae5; color: #047857; }
+  .s3 td:first-child { color: #6ee7b7; }
+  .s4 .section-title { background: #fee2e2; color: #b91c1c; }
+  .s4 td:first-child { color: #fca5a5; }
+  .s5 .section-title { background: #f3e8ff; color: #7c3aed; }
+  .s5 td:first-child { color: #c084fc; }
+  .s6 .section-title { background: #cffafe; color: #0891b2; }
+  .s6 td:first-child { color: #67e8f9; }
+  .s7 .section-title { background: #ede9fe; color: #6d28d9; }
+  .s7 td:first-child { color: #a78bfa; }
+
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 8px 16px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600; }
+  .home-btn:hover { background: #4b5563; }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 8px 16px; background: #374151; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; }
+  .copy-btn:hover { background: #1f2937; }
+  @media print { .home-btn, .copy-btn { display: none; } }
+
+  /* ── Mobile: câu hỏi trên, trả lời dưới ── */
+  @media (max-width: 680px) {
+    body { padding: 56px 14px 48px; font-size: 14px; }
+    h1 { font-size: 20px; }
+    .meta { margin-bottom: 24px; }
+    .section { margin-bottom: 28px; }
+    .section-title { font-size: 14px; padding: 6px 10px; display: block; }
+    .home-btn, .copy-btn { padding: 7px 12px; font-size: 13px; top: 12px; }
+    .home-btn { left: 12px; }
+    .copy-btn { right: 12px; }
+
+    /* Bỏ layout bảng, chuyển mỗi row thành card dọc */
+    table, tbody, tr, td { display: block; width: 100%; }
+    tr { padding: 10px 0; border-bottom: 1px solid #e5e7eb; }
+    tr:last-child { border-bottom: none; }
+    tr:hover { background: none; }
+
+    /* Số thứ tự + câu hỏi cùng dòng */
+    td:first-child {
+      display: inline;
+      width: auto;
+      font-size: 12px;
+      padding: 0 5px 0 0;
+      vertical-align: baseline;
+    }
+    td:nth-child(2) {
+      display: inline;
+      width: auto;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0;
+    }
+
+    /* Câu trả lời xuống dòng riêng */
+    td:nth-child(3) {
+      display: block;
+      margin-top: 5px;
+      padding: 6px 0 0 14px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #4b5563;
+      border-left: 3px solid #d1d5db;
+    }
+    .s1 td:nth-child(3) { border-left-color: #93c5fd; }
+    .s2 td:nth-child(3) { border-left-color: #fcd34d; }
+    .s3 td:nth-child(3) { border-left-color: #6ee7b7; }
+    .s4 td:nth-child(3) { border-left-color: #fca5a5; }
+    .s5 td:nth-child(3) { border-left-color: #c084fc; }
+    .s6 td:nth-child(3) { border-left-color: #67e8f9; }
+    .s7 td:nth-child(3) { border-left-color: #a78bfa; }
+  }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy</button>
+
+<h1>Summary — Tất cả câu hỏi ôn tập</h1>
+<p class="meta">138 câu · 7 chủ đề · Mỗi câu 1 dòng hỏi + 1 dòng đáp</p>
+
+<!-- ── 01 PYTHON CORE ── -->
+<div class="section s1">
+  <div class="section-title">01 · Python Core — 20 câu</div>
+  <table>
+    <tr><td>01</td><td>GIL là gì và tại sao nó tồn tại?</td><td>Khóa toàn cục chỉ cho một luồng chạy tại một thời điểm, để bảo vệ bộ đếm tham chiếu quản lý bộ nhớ khỏi race condition.</td></tr>
+    <tr><td>02</td><td>GIL ảnh hưởng thế nào đến đa luồng?</td><td>Tác vụ I/O nhả GIL nên đa luồng có hiệu quả; tác vụ CPU không song song được — dùng đa tiến trình thay.</td></tr>
+    <tr><td>03</td><td>Phân biệt đa luồng, đa tiến trình và asyncio?</td><td>Đa luồng: chia sẻ bộ nhớ, bị GIL. Đa tiến trình: GIL riêng, tốt cho CPU. Asyncio: một luồng, chuyển ngữ cảnh khi chờ I/O.</td></tr>
+    <tr><td>04</td><td>Async và await hoạt động như thế nào?</td><td>async tạo coroutine; await là điểm tạm dừng nhường quyền cho event loop xử lý coroutine khác.</td></tr>
+    <tr><td>05</td><td>asyncio.gather vs asyncio.wait khác gì nhau?</td><td>gather chạy tất cả, trả kết quả theo thứ tự, một lỗi là fail toàn bộ; wait linh hoạt hơn, chia kết quả thành done/pending.</td></tr>
+    <tr><td>06</td><td>Generator là gì? Khi nào nên dùng?</td><td>Hàm dùng yield tạo giá trị theo yêu cầu; dùng khi cần tiết kiệm bộ nhớ với dữ liệu lớn hoặc stream.</td></tr>
+    <tr><td>07</td><td>__slots__ dùng để làm gì?</td><td>Khai báo cố định thuộc tính của class, bỏ __dict__ nội bộ, tiết kiệm 40–60% bộ nhớ khi tạo hàng triệu object.</td></tr>
+    <tr><td>08</td><td>Decorator là gì? Cách hoạt động?</td><td>Hàm nhận hàm khác làm đầu vào, bọc thêm logic, trả về hàm mới — dùng cú pháp @tên để áp dụng.</td></tr>
+    <tr><td>09</td><td>functools.wraps dùng để làm gì?</td><td>Sao chép tên, docstring của hàm gốc sang hàm bọc trong decorator để log và debug không bị nhầm tên.</td></tr>
+    <tr><td>10</td><td>Context manager là gì? Tại sao cần thiết?</td><td>Cú pháp "with" đảm bảo tài nguyên luôn được dọn dẹp đúng cách dù có lỗi hay không.</td></tr>
+    <tr><td>11</td><td>Phân biệt deepcopy và shallow copy?</td><td>Shallow copy chỉ sao chép tầng ngoài, object con vẫn dùng chung; deepcopy tạo bản sao hoàn toàn độc lập đệ quy.</td></tr>
+    <tr><td>12</td><td>List comprehension vs hàm map() — dùng khi nào?</td><td>List comprehension rõ ràng, kết quả ngay; map() lười biếng, tiết kiệm bộ nhớ khi duyệt qua một lần với chuỗi dài.</td></tr>
+    <tr><td>13</td><td>*args và **kwargs là gì?</td><td>*args gom đối số vị trí thừa vào tuple; **kwargs gom đối số có tên thừa vào dict — dùng nhiều trong decorator.</td></tr>
+    <tr><td>14</td><td>Python quản lý bộ nhớ như thế nào?</td><td>Ba cơ chế: đếm tham chiếu (chính), garbage collector cho vòng tham chiếu, và bể bộ nhớ tái sử dụng object nhỏ.</td></tr>
+    <tr><td>15</td><td>is và == khác nhau thế nào?</td><td>== so sánh giá trị; is so sánh danh tính (cùng object trong bộ nhớ). Chỉ dùng is để kiểm tra None/True/False.</td></tr>
+    <tr><td>16</td><td>Exception chaining (raise … from …) là gì?</td><td>Gắn lỗi gốc vào lỗi mới, giữ nguyên nguyên nhân kỹ thuật trong khi cung cấp lỗi có ý nghĩa nghiệp vụ hơn.</td></tr>
+    <tr><td>17</td><td>Phân biệt classmethod, staticmethod và instance method?</td><td>instance method nhận self; classmethod nhận cls (factory); staticmethod không nhận gì — hàm tiện ích đặt trong class.</td></tr>
+    <tr><td>18</td><td>__init__ và __new__ khác nhau thế nào?</td><td>__new__ cấp phát bộ nhớ tạo object rỗng; __init__ điền dữ liệu vào. Thường chỉ override __init__, __new__ dùng cho Singleton.</td></tr>
+    <tr><td>19</td><td>Pydantic dùng để làm gì? Tại sao quan trọng trong API tài chính?</td><td>Tự động validate và chuyển đổi dữ liệu qua type hints; ngăn dữ liệu sai lan vào hệ thống và tự sinh tài liệu API.</td></tr>
+    <tr><td>20</td><td>Làm sao tối ưu performance cho Python service nhiều request?</td><td>Asyncio, connection pooling, cache Redis, generator cho dữ liệu lớn, đo trước khi tối ưu, tác vụ nặng dùng Celery.</td></tr>
+  </table>
+</div>
+
+<!-- ── 02 FASTAPI ── -->
+<div class="section s2">
+  <div class="section-title">02 · FastAPI — 20 câu</div>
+  <table>
+    <tr><td>01</td><td>FastAPI lifespan hoạt động thế nào? Tại sao không dùng on_event?</td><td>Hàm async generator chia đôi bằng yield: trước yield là khởi động, sau yield là dọn dẹp; on_event đã deprecated vì thiếu đảm bảo dọn dẹp khi lỗi.</td></tr>
+    <tr><td>02</td><td>Dependency Injection trong FastAPI là gì?</td><td>FastAPI tự động gọi hàm phụ thuộc và truyền kết quả vào endpoint; cùng request chỉ gọi một lần dù nhiều endpoint cần.</td></tr>
+    <tr><td>03</td><td>Middleware là gì? Thứ tự thực thi thế nào?</td><td>Code chạy với mọi request/response; middleware thêm sau sẽ chạy trước — như lớp hành tây, ngoài cùng vào trước.</td></tr>
+    <tr><td>04</td><td>Phân biệt HTTPException, custom exception handler và RequestValidationError?</td><td>HTTPException: ném thủ công; custom handler: bắt lỗi tự định nghĩa, trả JSON nhất quán; RequestValidationError: Pydantic tự ném khi dữ liệu sai.</td></tr>
+    <tr><td>05</td><td>Background Tasks vs Celery — khi nào dùng cái nào?</td><td>Background Tasks: đơn giản, mất khi tắt server; Celery: bền vững, tự retry, có monitoring — dùng cho tác vụ quan trọng.</td></tr>
+    <tr><td>06</td><td>Hàm async và sync trong FastAPI — khi nào dùng cái nào?</td><td>async khi gọi hàm bất đồng bộ; sync khi dùng thư viện blocking — FastAPI tự chạy sync trong thread riêng để không chặn event loop.</td></tr>
+    <tr><td>07</td><td>FastAPI dùng ASGI hay WSGI? Khác nhau thế nào?</td><td>FastAPI dùng ASGI (qua Starlette) — hỗ trợ async và WebSocket; WSGI là giao thức cũ đồng bộ của Flask/Django. Server chạy là Uvicorn.</td></tr>
+    <tr><td>08</td><td>APIRouter dùng để làm gì?</td><td>Chia API thành module theo domain, mỗi router có prefix, tags và dependency riêng — app chỉ include router, không quản lý từng endpoint.</td></tr>
+    <tr><td>09</td><td>Response Model dùng để làm gì?</td><td>Khai báo cấu trúc response, FastAPI tự lọc chỉ giữ field khai báo — bảo vệ dữ liệu nhạy cảm và tạo tài liệu chính xác.</td></tr>
+    <tr><td>10</td><td>Làm sao implement JWT authentication trong FastAPI?</td><td>Khai báo OAuth2PasswordBearer lấy token từ header → hàm dependency giải mã xác minh → endpoint khai báo Depends vào hàm đó.</td></tr>
+    <tr><td>11</td><td>Làm sao handle CORS trong FastAPI?</td><td>Thêm CORSMiddleware, liệt kê domain cụ thể, bật allow_credentials nếu cần — không dùng wildcard * cho API có xác thực.</td></tr>
+    <tr><td>12</td><td>Path param, Query param và Request body — khi nào dùng?</td><td>Path: định danh resource bắt buộc; Query: lọc/phân trang tùy chọn; Body: dữ liệu phức tạp/nhạy cảm với POST/PUT/PATCH.</td></tr>
+    <tr><td>13</td><td>Làm sao test FastAPI endpoint?</td><td>Dùng TestClient không cần server thật; override Depends để inject mock/in-memory DB; test cả trường hợp thành công và lỗi.</td></tr>
+    <tr><td>14</td><td>Streaming response là gì? Khi nào dùng?</td><td>Server gửi dữ liệu từng phần khi có, client nhận ngay — dùng cho file lớn, CSV xuất, hoặc phản hồi LLM theo từng token.</td></tr>
+    <tr><td>15</td><td>WebSocket trong FastAPI hoạt động thế nào?</td><td>Kết nối hai chiều liên tục, server có thể chủ động push — dùng cho thông báo realtime, tỷ giá, dashboard giao dịch trực tiếp.</td></tr>
+    <tr><td>16</td><td>Làm sao implement rate limiting trong FastAPI?</td><td>Dùng Redis làm bộ đếm nguyên tử theo IP+thời gian; từ chối 429 khi vượt ngưỡng — Redis đảm bảo chính xác khi nhiều server.</td></tr>
+    <tr><td>17</td><td>Làm sao trả về nhiều loại response từ một endpoint?</td><td>Khai báo responses={200: ..., 400: ...} trong decorator; trả về JSONResponse với status_code phù hợp để bypass response model mặc định.</td></tr>
+    <tr><td>18</td><td>OpenAPI docs được sinh tự động như thế nào trong FastAPI?</td><td>FastAPI đọc type hints, Pydantic models, metadata decorator → tạo JSON OpenAPI → Swagger UI (/docs) và ReDoc (/redoc) tự động.</td></tr>
+    <tr><td>19</td><td>Làm sao xử lý file upload trong FastAPI?</td><td>Nhận multipart/form-data, kiểm tra loại và kích thước, stream trực tiếp lên S3 — không đọc toàn bộ vào RAM.</td></tr>
+    <tr><td>20</td><td>Làm sao implement health check endpoint đúng cách?</td><td>Liveness: phản hồi nhanh xác nhận còn sống; Readiness: kiểm tra DB/Redis/dependencies trước khi nhận traffic mới từ Kubernetes.</td></tr>
+  </table>
+</div>
+
+<!-- ── 03 DATABASE ── -->
+<div class="section s3">
+  <div class="section-title">03 · Database — 20 câu</div>
+  <table>
+    <tr><td>01</td><td>ACID là gì? Giải thích từng tính chất?</td><td>Atomicity: all or nothing; Consistency: luôn hợp lệ; Isolation: giao dịch không thấy nhau; Durability: commit là vĩnh viễn.</td></tr>
+    <tr><td>02</td><td>Clustered Index và Non-Clustered Index khác nhau thế nào?</td><td>Clustered: dữ liệu sắp xếp vật lý theo index, một bảng chỉ có một; Non-Clustered: index riêng lưu con trỏ đến dữ liệu, tìm hai bước.</td></tr>
+    <tr><td>03</td><td>Khi nào nên tạo index? Khi nào không nên?</td><td>Nên: cột WHERE/JOIN/ORDER BY có nhiều giá trị khác nhau; Không nên: bảng nhỏ, cột ít giá trị (giới tính), bảng ghi nhiều đọc ít.</td></tr>
+    <tr><td>04</td><td>Composite Index là gì? Rule thiết kế ra sao?</td><td>Index nhiều cột; đặt cột equality trước, cột range sau; index (A,B) hỗ trợ query dùng A nhưng không hỗ trợ chỉ dùng B.</td></tr>
+    <tr><td>05</td><td>Transaction Isolation Level — có những mức nào?</td><td>Read Uncommitted → Read Committed (mặc định PG) → Repeatable Read → Serializable. Ngân hàng thường dùng Repeatable Read hoặc Serializable.</td></tr>
+    <tr><td>06</td><td>Dirty Read, Non-repeatable Read, Phantom Read là gì?</td><td>Dirty: đọc dữ liệu chưa commit; Non-repeatable: cùng hàng đọc hai lần cho kết quả khác; Phantom: cùng điều kiện lần hai thấy thêm hàng mới.</td></tr>
+    <tr><td>07</td><td>Optimistic Lock và Pessimistic Lock — khi nào dùng?</td><td>Pessimistic: khóa ngay khi đọc, chắc chắn nhưng dễ deadlock — dùng cho số dư; Optimistic: kiểm tra version khi ghi — dùng khi ít xung đột.</td></tr>
+    <tr><td>08</td><td>N+1 Query Problem là gì? Cách khắc phục?</td><td>Lấy N bản ghi rồi loop gọi thêm N query riêng lẻ; khắc phục: dùng một query WHERE IN để lấy hết dữ liệu liên quan, ghép trong code.</td></tr>
+    <tr><td>09</td><td>EXPLAIN ANALYZE dùng để làm gì?</td><td>Hiển thị kế hoạch thực thi thật của PostgreSQL: có dùng index không, quét bao nhiêu hàng, thời gian từng bước — để tìm query chậm.</td></tr>
+    <tr><td>10</td><td>Redis dùng khi nào trong hệ thống backend?</td><td>Cache kết quả tốn kém, lưu session, rate limiting bộ đếm, distributed lock đảm bảo chỉ một server xử lý một giao dịch cùng lúc.</td></tr>
+    <tr><td>11</td><td>Cache-Aside và Write-Through — khác nhau thế nào?</td><td>Cache-Aside: chỉ vào cache khi được hỏi lần đầu (lazy); Write-Through: ghi cả DB lẫn cache đồng thời — luôn fresh nhưng ghi chậm hơn.</td></tr>
+    <tr><td>12</td><td>Cache Stampede là gì? Cách xử lý?</td><td>Nhiều request cùng thấy cache miss, đồng loạt query DB; giải pháp: distributed lock cho phép chỉ một request rebuild cache, còn lại chờ.</td></tr>
+    <tr><td>13</td><td>Tại sao không dùng số thực để lưu tiền tệ?</td><td>Float không biểu diễn chính xác số thập phân trong nhị phân (0.1+0.2≠0.3); dùng NUMERIC trong DB và Decimal trong Python.</td></tr>
+    <tr><td>14</td><td>Sharding và Partitioning khác nhau thế nào?</td><td>Partitioning: chia bảng trong cùng một server, ứng dụng không cần biết; Sharding: chia ra nhiều server khác nhau, ứng dụng phải biết đến server nào.</td></tr>
+    <tr><td>15</td><td>Deadlock là gì? Làm sao tránh?</td><td>Hai giao dịch chờ nhau giải phóng khóa vô hạn; phòng tránh bằng cách luôn khóa tài nguyên theo cùng một thứ tự cố định.</td></tr>
+    <tr><td>16</td><td>Connection Pool là gì? Tại sao quan trọng?</td><td>Tạo sẵn tập kết nối DB, request mượn dùng rồi trả — tránh tốn 100–500ms tạo kết nối mới mỗi lần và không vượt giới hạn max connections.</td></tr>
+    <tr><td>17</td><td>UUID và Auto-increment ID — khi nào dùng cái nào?</td><td>Auto-increment: nhỏ, nhanh, dễ đoán; UUID v4: an toàn, toàn cầu duy nhất; UUID v7: kết hợp cả hai — tăng theo thời gian và toàn cầu duy nhất.</td></tr>
+    <tr><td>18</td><td>Immutable Ledger Pattern là gì? Tại sao dùng trong fintech?</td><td>Không bao giờ sửa xóa giao dịch, chỉ thêm bản ghi mới; đảm bảo lịch sử đầy đủ bất biến, dễ kiểm toán, không mất bằng chứng.</td></tr>
+    <tr><td>19</td><td>Tại sao cần Idempotency Key trong payment API?</td><td>Khi mạng lỗi client retry, key duy nhất đảm bảo server nhận ra request trùng lặp và trả kết quả cũ — giao dịch chỉ thực hiện một lần.</td></tr>
+    <tr><td>20</td><td>CAP Theorem là gì? Áp dụng thực tế thế nào?</td><td>Hệ thống phân tán chỉ đảm bảo được 2/3: Consistency, Availability, Partition Tolerance; ngân hàng ưu tiên C (nhất quán) hơn A (sẵn sàng).</td></tr>
+  </table>
+</div>
+
+<!-- ── 04 SECURITY ── -->
+<div class="section s4">
+  <div class="section-title">04 · Bảo mật — 20 câu</div>
+  <table>
+    <tr><td>01</td><td>Phân biệt Authentication và Authorization?</td><td>Authentication: xác nhận bạn là ai; Authorization: kiểm tra bạn được làm gì — phải xác thực xong mới phân quyền được.</td></tr>
+    <tr><td>02</td><td>Cấu trúc của JWT là gì? Làm sao hoạt động?</td><td>Header.Payload.Signature — server xác minh bằng cách tính lại Signature từ Header+Payload; payload sai thì chữ ký không khớp.</td></tr>
+    <tr><td>03</td><td>Access Token và Refresh Token khác nhau thế nào?</td><td>Access Token sống ngắn (15–60 phút), gửi mọi request; Refresh Token sống dài (7–30 ngày), chỉ dùng để xin Access Token mới, lưu httpOnly cookie.</td></tr>
+    <tr><td>04</td><td>Làm sao logout khi dùng JWT? Vấn đề là gì?</td><td>JWT không thu hồi được; giải pháp: lưu jti vào Redis blacklist khi logout, mỗi request kiểm tra jti có trong blacklist không.</td></tr>
+    <tr><td>05</td><td>OAuth 2.0 Authorization Code Flow là gì?</td><td>Redirect đến provider → user đồng ý → nhận code ngắn hạn → server đổi code lấy token server-to-server (token không lộ qua browser).</td></tr>
+    <tr><td>06</td><td>SQL Injection là gì? Cách phòng tránh?</td><td>Kẻ tấn công chèn SQL qua input; phòng bằng parameterized query — dữ liệu luôn được xử lý như dữ liệu, không bao giờ như SQL.</td></tr>
+    <tr><td>07</td><td>XSS là gì? Cách phòng tránh?</td><td>Chèn JavaScript độc hại vào trang; phòng bằng escape HTML khi hiển thị, Content-Security-Policy, lưu token trong httpOnly cookie.</td></tr>
+    <tr><td>08</td><td>CSRF là gì? Cách phòng tránh?</td><td>Lừa browser tự gửi request kèm cookie hợp lệ; phòng bằng SameSite=Strict/Lax trên cookie, hoặc CSRF token nhúng vào form.</td></tr>
+    <tr><td>09</td><td>Tại sao không dùng MD5/SHA-1 cho mật khẩu? Dùng gì thay?</td><td>MD5/SHA-1 quá nhanh, dễ brute force; dùng bcrypt, Argon2 hoặc scrypt — cố tình chậm, tốn bộ nhớ, tự thêm salt.</td></tr>
+    <tr><td>10</td><td>HTTPS và TLS hoạt động thế nào?</td><td>TLS bắt tay: server gửi chứng chỉ, hai bên thỏa thuận khóa bí mật chung không qua mạng → mọi dữ liệu được mã hóa bằng khóa đó.</td></tr>
+    <tr><td>11</td><td>OWASP Top 10 là gì? Kể vài lỗ hổng quan trọng?</td><td>Top 2021: #1 Broken Access Control, #2 Cryptographic Failures, #3 Injection — với fintech, Broken Access Control nguy hiểm nhất.</td></tr>
+    <tr><td>12</td><td>Rate limiting — các chiến lược nào?</td><td>Fixed Window: đơn giản nhưng có burst cuối window; Sliding Window: chính xác hơn; Token Bucket: cho phép burst tự nhiên — phổ biến nhất.</td></tr>
+    <tr><td>13</td><td>Secrets Management là gì? Cách lưu trữ thông tin nhạy cảm?</td><td>Không commit vào git; dùng biến môi trường hoặc file .env; production dùng AWS Secrets Manager/HashiCorp Vault — có audit log và xoay vòng tự động.</td></tr>
+    <tr><td>14</td><td>API Key và JWT khác nhau như thế nào?</td><td>API Key: chuỗi đơn giản, server tra DB mỗi request, thu hồi ngay được — dùng cho machine-to-machine; JWT: tự chứa thông tin, nhanh hơn — dùng cho user.</td></tr>
+    <tr><td>15</td><td>Principle of Least Privilege là gì?</td><td>Mỗi thực thể chỉ được đúng quyền tối thiểu cần thiết; khi bị xâm phạm, thiệt hại bị giới hạn trong phạm vi quyền của component đó.</td></tr>
+    <tr><td>16</td><td>Security Headers là gì? Tại sao quan trọng?</td><td>Header HTTP hướng dẫn browser tăng bảo vệ: CSP ngăn XSS, X-Frame-Options ngăn clickjacking, HSTS ép HTTPS — lớp phòng thủ bổ sung.</td></tr>
+    <tr><td>17</td><td>Audit logging là gì? Tầm quan trọng trong fintech?</td><td>Ghi ai làm gì khi nào từ đâu kết quả gì; bắt buộc theo pháp lý, dùng để điều tra tranh chấp và kiểm toán — không ai được xóa.</td></tr>
+    <tr><td>18</td><td>Defense in Depth là gì?</td><td>Xây nhiều lớp bảo vệ độc lập: HTTPS → JWT → phân quyền → validate input → parameterized query → giới hạn nghiệp vụ → audit log.</td></tr>
+    <tr><td>19</td><td>mTLS là gì? Khi nào dùng?</td><td>TLS hai chiều — cả client cũng xác thực chứng chỉ; dùng cho giao tiếp giữa microservice, kết nối DB cần bảo mật tối đa.</td></tr>
+    <tr><td>20</td><td>Làm sao validate và sanitize input đúng cách?</td><td>Không tin dữ liệu từ bên ngoài; Pydantic tự validate kiểu/range; thêm validate nghiệp vụ (số tiền không âm); sanitize HTML để chống XSS.</td></tr>
+  </table>
+</div>
+
+<!-- ── 05 ALGORITHMS ── -->
+<div class="section s5">
+  <div class="section-title">05 · Thuật Toán & CTDL — 20 câu</div>
+  <table>
+    <tr><td>01</td><td>Big O Notation là gì? Tại sao quan trọng?</td><td>Diễn đạt tốc độ tăng trưởng thời gian/bộ nhớ khi dữ liệu lớn lên; giúp chọn đúng thuật toán trước khi code ra quy mô lớn.</td></tr>
+    <tr><td>02</td><td>Array và Linked List khác nhau thế nào?</td><td>Array: truy cập O(1), chèn xóa O(n); Linked List: chèn xóa O(1), tìm theo vị trí O(n). Python list là array động đủ dùng hầu hết.</td></tr>
+    <tr><td>03</td><td>Stack và Queue là gì? Ứng dụng thực tế?</td><td>Stack LIFO: lịch sử browser, call stack Python; Queue FIFO: hàng đợi in, Celery task queue, xử lý sự kiện theo thứ tự.</td></tr>
+    <tr><td>04</td><td>Hash Table hoạt động thế nào? Collision xử lý ra sao?</td><td>Hàm băm ánh xạ key → vị trí mảng, O(1) trung bình; collision xử lý bằng Chaining (danh sách tại ô) hoặc Open Addressing (tìm ô trống kế).</td></tr>
+    <tr><td>05</td><td>Tìm kiếm nhị phân hoạt động thế nào?</td><td>Mảng đã sắp xếp, mỗi bước so với phần tử giữa rồi bỏ nửa không chứa đáp án — O(log n), 1 triệu phần tử tìm trong 20 bước.</td></tr>
+    <tr><td>06</td><td>BFS và DFS khác nhau thế nào? Khi nào dùng?</td><td>BFS dùng Queue, duyệt theo tầng — tìm đường ngắn nhất; DFS dùng Stack/đệ quy, đi sâu — duyệt toàn bộ, phát hiện chu trình.</td></tr>
+    <tr><td>07</td><td>Merge Sort và Quick Sort khác nhau thế nào?</td><td>Merge Sort: O(n log n) mọi trường hợp, cần O(n) thêm; Quick Sort: O(n log n) trung bình, O(n²) xấu nhất, sắp xếp tại chỗ, nhanh hơn thực tế.</td></tr>
+    <tr><td>08</td><td>Heap và Priority Queue là gì?</td><td>Heap là cây nhị phân đặc biệt: phần tử nhỏ/lớn nhất luôn ở gốc O(1); Priority Queue là cấu trúc trừu tượng, Heap là cách implement tối ưu.</td></tr>
+    <tr><td>09</td><td>LRU Cache là gì? Implement thế nào?</td><td>Loại phần tử ít dùng gần đây nhất khi đầy; implement bằng OrderedDict Python — get/put đều O(1) nhờ xóa rồi chèn lại cuối.</td></tr>
+    <tr><td>10</td><td>Dynamic Programming là gì? Nguyên tắc hoạt động?</td><td>Chia bài toán lớn thành bài toán con chồng nhau, giải một lần, lưu kết quả, tái sử dụng — Fibonacci từ O(2ⁿ) xuống O(n).</td></tr>
+    <tr><td>11</td><td>Giải bài Two Sum trong O(n)?</td><td>Duyệt mảng, mỗi phần tử tính phần bù (target - x), tra hash table xem đã gặp chưa, lưu vào nếu chưa — O(n) thời gian, O(n) bộ nhớ.</td></tr>
+    <tr><td>12</td><td>Giải bài Valid Parentheses dùng Stack thế nào?</td><td>Push ngoặc mở; gặp ngoặc đóng thì pop và kiểm tra khớp; cuối cùng stack rỗng là hợp lệ — O(n) thời gian, O(n) bộ nhớ.</td></tr>
+    <tr><td>13</td><td>Sliding Window là kỹ thuật gì?</td><td>Duy trì cửa sổ kích thước k trượt qua mảng: thêm phần tử mới, bỏ phần tử cũ O(1) mỗi bước — tổng O(n) thay vì O(n×k).</td></tr>
+    <tr><td>14</td><td>Làm sao đảo ngược Linked List?</td><td>Ba con trỏ prev/curr/next: lưu next, đổi hướng curr→prev, tiến cả hai — O(n) thời gian, O(1) bộ nhớ.</td></tr>
+    <tr><td>15</td><td>Floyd's Cycle Detection là gì?</td><td>Con rùa bước 1, con thỏ bước 2; có chu trình thì thỏ gặp rùa; không có thì thỏ ra null — O(1) bộ nhớ thay vì O(n) của hash set.</td></tr>
+    <tr><td>16</td><td>Cây nhị phân tìm kiếm (BST) là gì? Duyệt thế nào?</td><td>Trái < cha < phải; Inorder cho dãy tăng, Preorder để sao chép, Postorder để xóa; mất cân bằng thành O(n) — dùng AVL/Red-Black.</td></tr>
+    <tr><td>17</td><td>Topological Sort là gì? Ứng dụng?</td><td>Sắp xếp DAG sao cho mọi cạnh u→v thì u trước v; dùng cho thứ tự build module, task dependency, phát hiện vòng phụ thuộc.</td></tr>
+    <tr><td>18</td><td>Trie là gì? Khi nào dùng?</td><td>Cây tiền tố lưu chuỗi; tìm/kiểm tra prefix O(độ dài chuỗi) bất kể có bao nhiêu chuỗi — dùng cho autocomplete, từ điển, keyword filter.</td></tr>
+    <tr><td>19</td><td>Graph — Adjacency Matrix vs Adjacency List?</td><td>Matrix: kiểm tra cạnh O(1), tốn O(n²) bộ nhớ — dùng cho đồ thị dày; List: O(n+E) bộ nhớ — phổ biến hơn với đồ thị thưa.</td></tr>
+    <tr><td>20</td><td>Khi nào không dùng đệ quy? Chuyển sang vòng lặp thế nào?</td><td>Khi đệ quy sâu quá 1000 cấp (Python limit); chuyển bằng cách dùng stack tự quản lý trong heap — bộ nhớ heap lớn hơn call stack nhiều.</td></tr>
+  </table>
+</div>
+
+<!-- ── 06 PROJECT DESIGN ── -->
+<div class="section s6">
+  <div class="section-title">06 · Project &amp; System Design — 20 câu</div>
+  <table>
+    <tr><td>01</td><td>Hãy giới thiệu project gần đây nhất của bạn?</td><td>Dùng cấu trúc STAR-light: tình huống → nhiệm vụ → hành động cụ thể → kết quả có con số; tránh nói chung chung không có context.</td></tr>
+    <tr><td>02</td><td>Monolith và Microservices — khi nào chọn cái nào?</td><td>Monolith: team nhỏ, giai đoạn đầu, cần tốc độ; Microservices: team lớn, các module scale khác nhau, domain đã rõ ràng — đừng chọn sớm.</td></tr>
+    <tr><td>03</td><td>Circuit Breaker Pattern là gì? Tại sao cần?</td><td>Ngăn cascading failure khi service phụ thuộc hỏng; ba trạng thái: CLOSED → OPEN (ngắt mạch, fail nhanh) → HALF-OPEN (thử lại dần).</td></tr>
+    <tr><td>04</td><td>Saga Pattern là gì? Khi nào dùng trong fintech?</td><td>Chuỗi local transaction có compensating transaction khi lỗi; Choreography (phân tán) vs Orchestration (điều phối trung tâm) — fintech dùng Orchestration.</td></tr>
+    <tr><td>05</td><td>High Availability là gì? Làm sao đạt được?</td><td>Hệ thống tiếp tục hoạt động khi thành phần hỏng; đạt bằng: loại điểm thất bại đơn, chạy nhiều instance, load balancer, failover tự động.</td></tr>
+    <tr><td>06</td><td>Horizontal scaling và Vertical scaling khác nhau thế nào?</td><td>Vertical: nâng cấp máy, có giới hạn, đơn giản; Horizontal: thêm máy, gần như vô hạn, cần stateless — thực tế kết hợp cả hai.</td></tr>
+    <tr><td>07</td><td>Load Balancing hoạt động thế nào? Các thuật toán phân phối?</td><td>Phân phối request đến nhiều instance; Round Robin (tuần tự), Least Connections (ít nhất đang xử lý), Sticky Sessions (cùng user cùng server).</td></tr>
+    <tr><td>08</td><td>Blue/Green deployment và Canary deployment khác nhau thế nào?</td><td>Blue/Green: hai môi trường song song, chuyển toàn bộ traffic — rollback cực nhanh; Canary: tăng dần %, theo dõi metrics — tiết kiệm tài nguyên hơn.</td></tr>
+    <tr><td>09</td><td>Observability là gì? Metrics, Logs, Traces khác nhau thế nào?</td><td>Metrics: số đo theo thời gian, cảnh báo; Logs: sự kiện rời rạc, điều tra; Traces: hành trình request qua nhiều service, tìm bottleneck.</td></tr>
+    <tr><td>10</td><td>Làm sao thiết kế API versioning?</td><td>URL path phổ biến nhất (/v1, /v2); thêm field không phá tương thích, xóa/đổi kiểu mới cần version mới; giữ version cũ đủ lâu để migrate.</td></tr>
+    <tr><td>11</td><td>Message Queue là gì? Khi nào dùng thay vì gọi API trực tiếp?</td><td>Buffer giữa producer và consumer; dùng khi tốc độ khác nhau, cần độ tin cậy khi consumer tạm hỏng, hoặc muốn decouple hai service.</td></tr>
+    <tr><td>12</td><td>CAP Theorem ảnh hưởng đến thiết kế hệ thống ngân hàng thế nào?</td><td>Partition Tolerance bắt buộc → phải chọn C hoặc A; ngân hàng chọn Consistency (CP) — thà từ chối giao dịch còn hơn số dư sai.</td></tr>
+    <tr><td>13</td><td>Làm sao thiết kế hệ thống thanh toán chịu tải cao?</td><td>Idempotency Key chống trùng lặp, Immutable Ledger không sửa xóa, queue tiếp nhận nhanh → worker xử lý có kiểm soát, cache tỷ giá/giới hạn.</td></tr>
+    <tr><td>14</td><td>Event-driven Architecture là gì?</td><td>Service giao tiếp qua sự kiện thay vì gọi trực tiếp; dễ thêm tính năng mới (thêm consumer), nhưng khó debug và cần message broker.</td></tr>
+    <tr><td>15</td><td>Làm sao xử lý nợ kỹ thuật trong dự án?</td><td>Đo lường và ưu tiên; áp dụng Boy Scout Rule mỗi lần đụng code; hệ thống lớn dùng Strangler Fig Pattern thay thế dần không rewrite toàn bộ.</td></tr>
+    <tr><td>16</td><td>SLI, SLO, SLA là gì?</td><td>SLI: số đo thực tế (tỷ lệ thành công); SLO: mục tiêu nội bộ team; SLA: cam kết pháp lý với khách hàng — SLA thường dễ hơn SLO để có buffer.</td></tr>
+    <tr><td>17</td><td>Làm sao đảm bảo eventual consistency trong hệ thống ngân hàng?</td><td>Số dư cần strong consistency; dashboard/thông báo chấp nhận chậm vài giây; dùng Outbox Pattern, Reconciliation, Idempotent Consumer.</td></tr>
+    <tr><td>18</td><td>Làm sao debug khi hệ thống chậm trong production?</td><td>Xác định phạm vi → kiểm tra metrics → xem distributed traces → EXPLAIN ANALYZE query chậm → logs; thay đổi một thứ, đo rồi mới tiếp.</td></tr>
+    <tr><td>19</td><td>Tại sao chọn FastAPI cho dự án fintech?</td><td>Async I/O hiệu suất cao, Pydantic validate tự động, tài liệu tự sinh, DI dễ test — nhược điểm: hệ sinh thái nhỏ hơn Django, không có ORM tích hợp.</td></tr>
+    <tr><td>20</td><td>Câu hỏi nào bạn muốn hỏi người kỹ thuật ở Tyme?</td><td>Hỏi về thách thức kỹ thuật lớn nhất, kiến trúc microservice, quy trình incident response, cách đo thành công của engineer sau 6 tháng.</td></tr>
+  </table>
+</div>
+
+<!-- ── 07 OOP SOLID ── -->
+<div class="section s7">
+  <div class="section-title">07 · OOP &amp; SOLID — 18 câu</div>
+  <table>
+    <tr><td>01</td><td>OOP là gì? Tại sao dùng OOP?</td><td>Tổ chức code xoay quanh đối tượng gộp dữ liệu và hành vi; dễ hiểu, tái sử dụng, thay đổi cục bộ, mở rộng không phá vỡ cái cũ.</td></tr>
+    <tr><td>02</td><td>Encapsulation — Đóng gói là gì?</td><td>Che giấu dữ liệu bên trong, chỉ truy cập qua phương thức kiểm soát — bảo vệ tính toàn vẹn, biết chính xác ai thay đổi dữ liệu.</td></tr>
+    <tr><td>03</td><td>Inheritance — Kế thừa là gì? Vấn đề của kế thừa sâu?</td><td>Class con tái sử dụng và mở rộng class cha; kế thừa sâu gây thay đổi tầng trên ảnh hưởng toàn bộ — giữ nông, ưu tiên composition.</td></tr>
+    <tr><td>04</td><td>Polymorphism là gì? Override và Overload khác nhau?</td><td>Cùng interface hành xử khác nhau theo đối tượng; Override: ghi đè ở class con (runtime); Overload: cùng tên khác tham số (compile-time, Python dùng default args).</td></tr>
+    <tr><td>05</td><td>Abstraction — Trừu tượng là gì?</td><td>Ẩn sự phức tạp, chỉ lộ interface cần thiết; abstract class/interface định nghĩa "làm gì" không định nghĩa "làm thế nào".</td></tr>
+    <tr><td>06</td><td>Abstract Class và Interface khác nhau thế nào?</td><td>Abstract Class: có code dùng chung, kế thừa một; Interface: hợp đồng thuần túy, implement nhiều — không chắc thì dùng interface, linh hoạt hơn.</td></tr>
+    <tr><td>07</td><td>Composition over Inheritance — tại sao ưu tiên composition?</td><td>"Has-a" thay vì "Is-a"; linh hoạt đổi component lúc runtime, tránh kế thừa sâu, dễ test mock từng phần — kế thừa vẫn hợp lý khi quan hệ thực sự is-a.</td></tr>
+    <tr><td>08</td><td>SOLID là gì? Tại sao quan trọng?</td><td>Năm nguyên tắc OOP của Uncle Bob: SRP, OCP, LSP, ISP, DIP — giúp code dễ thay đổi, dễ test, dễ mở rộng; hiểu lý do hơn áp dụng máy móc.</td></tr>
+    <tr><td>09</td><td>S — Single Responsibility Principle là gì?</td><td>Một class chỉ một lý do để thay đổi; vi phạm khi class vừa xử lý logic vừa gửi email vừa ghi log — tách thành class riêng cho từng trách nhiệm.</td></tr>
+    <tr><td>10</td><td>O — Open/Closed Principle là gì?</td><td>Mở để mở rộng, đóng để sửa đổi; thêm tính năng bằng code mới không sửa code cũ — dùng abstract class + class con mới thay vì thêm if-else.</td></tr>
+    <tr><td>11</td><td>L — Liskov Substitution Principle là gì?</td><td>Class con phải thay thế được class cha mà không phá chương trình; vi phạm khi override để throw "not implemented" hoặc kết quả sai expectation.</td></tr>
+    <tr><td>12</td><td>I — Interface Segregation Principle là gì?</td><td>Không ép class implement phương thức không cần; tách interface lớn thành nhiều interface nhỏ chuyên biệt — class chỉ implement những gì có nghĩa.</td></tr>
+    <tr><td>13</td><td>D — Dependency Inversion Principle là gì?</td><td>Module cấp cao phụ thuộc vào abstraction, không vào implementation cụ thể; đổi database chỉ sửa Repository, không sửa Service.</td></tr>
+    <tr><td>14</td><td>Dependency Injection là gì? Các kiểu DI?</td><td>Truyền dependency từ bên ngoài vào thay vì tự tạo; Constructor Injection (phổ biến nhất), Method Injection, Property Injection.</td></tr>
+    <tr><td>15</td><td>Design Pattern là gì? Các nhóm pattern phổ biến?</td><td>Giải pháp tái sử dụng cho bài toán thiết kế đã kiểm chứng; Creational (Singleton, Factory, Builder), Structural (Adapter, Decorator), Behavioral (Observer, Strategy, Repository).</td></tr>
+    <tr><td>16</td><td>Singleton Pattern — khi nào dùng và cạm bẫy?</td><td>Dùng cho connection pool, config, logger; cạm bẫy: global state khó test, race condition đa luồng — nhiều người ưu tiên DI thay thế.</td></tr>
+    <tr><td>17</td><td>Repository Pattern là gì? Tại sao phổ biến trong backend?</td><td>Tầng trung gian giữa business logic và DB; Service gọi get_by_id thay vì viết SQL; đổi DB chỉ sửa Repository, dễ test bằng InMemoryRepository.</td></tr>
+    <tr><td>18</td><td>Làm thế nào nhận biết code đang vi phạm OOP và SOLID?</td><td>SRP: class tên có "And", file nghìn dòng; OCP: if-else dài thêm loại mới; LSP: class con override để throw "not implemented"; DIP: từ khóa new trong business logic.</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

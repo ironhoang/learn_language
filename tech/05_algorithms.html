@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>Algorithms &amp; DS — Audio</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; background: #fafaf8; color: #2c2c2c; line-height: 1.9; font-size: 20px; }
+  h1 { font-size: 30px; color: #1a1a2e; border-bottom: 3px solid #a855f7; padding-bottom: 12px; margin-bottom: 8px; }
+  .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
+  .qa { margin-bottom: 44px; padding: 28px 32px; background: #fff; border-radius: 12px; border-left: 5px solid #a855f7; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .question { font-weight: 700; font-size: 21px; color: #6b21a8; margin-bottom: 16px; }
+  .qnum { background: #f3e8ff; color: #7c3aed; padding: 2px 10px; border-radius: 20px; font-size: 16px; margin-right: 10px; font-family: monospace; }
+  .answer p { margin: 0 0 12px; }
+  .answer p:last-child { margin-bottom: 0; }
+  .term { color: #7c3aed; font-weight: 600; }
+  .analogy { background: #faf5ff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-style: italic; color: #374151; border-left: 3px solid #c084fc; }
+  .home-btn { position: fixed; top: 20px; left: 20px; padding: 10px 18px; background: #6b7280; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .home-btn:hover { background: #4b5563; }
+  @media print { .home-btn { display: none; } }
+  .copy-btn { position: fixed; top: 20px; right: 20px; padding: 10px 18px; background: #a855f7; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; }
+  .copy-btn:hover { background: #9333ea; }
+
+    /* audio — injected by generate_audio_tech.py */
+    .audio-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; padding: 0;
+      background: transparent; border: 1px solid #cbd5e1;
+      border-radius: 5px; cursor: pointer; font-size: 0.6rem; color: #94a3b8;
+      vertical-align: middle; margin-left: 8px;
+      transition: all 0.15s; flex-shrink: 0;
+    }
+    .audio-btn:hover { background: #eff6ff; border-color: #3b82f6; color: #3b82f6; }
+    .audio-btn.playing { border-color: #f97316; color: #f97316; }
+    @keyframes audio-pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .audio-btn.playing { animation: audio-pulse 1s ease-in-out infinite; }
+    #play-all-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; height: 52px;
+      background: #f8fafc; border-top: 1px solid #e2e8f0;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      z-index: 500; padding: 0 12px; box-shadow: 0 -2px 8px rgba(0,0,0,.05);
+    }
+    .pa-btn {
+      background: #f1f5f9; border: 1px solid #cbd5e1; color: #475569;
+      font-size: 0.78rem; font-weight: 600; padding: 6px 13px;
+      border-radius: 8px; cursor: pointer; transition: all 0.15s;
+      font-family: inherit; white-space: nowrap;
+    }
+    .pa-btn:hover { border-color: #94a3b8; color: #1e293b; }
+    .pa-btn.active { border-color: #f97316; color: #f97316; background: #fff7ed; }
+    .pa-btn.marked { border-color: #3b82f6; color: #3b82f6; }
+    #pa-stop {
+      background: transparent; border: 1px solid #e2e8f0; color: #94a3b8;
+      font-size: 0.78rem; padding: 6px 10px; border-radius: 8px;
+      cursor: pointer; transition: all 0.15s; font-family: inherit;
+    }
+    #pa-stop:hover { border-color: #94a3b8; color: #475569; }
+    #pa-status {
+      font-size: 0.7rem; color: #94a3b8; min-width: 44px; text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+</style>
+</head>
+<body>
+<a class="home-btn" href="../index.html">← Trang chủ</a>
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.body.innerText)">📋 Copy toàn bộ</button>
+<h1>Thuật Toán &amp; Cấu Trúc Dữ Liệu — Ôn tập kỹ thuật</h1>
+<p class="subtitle">20 câu hỏi · Giải thích bằng tiếng Việt · Dành cho nghe audio</p>
+<div class="qa">
+<div class="question"><span class="qnum">01.</span> Big O Notation là gì? Tại sao quan trọng?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f2703dfead19.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e015b62703c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e8fceba5a85e.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Big O Notation</span> là cách diễn đạt tốc độ tăng trưởng của thời gian thực thi hoặc bộ nhớ sử dụng của một thuật toán khi kích thước đầu vào tăng lên. Nó trả lời câu hỏi: khi dữ liệu tăng gấp 10 lần, thuật toán chậm đi bao nhiêu lần?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f2703dfead19.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e015b62703c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_cf183ced2e91.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Các mức phổ biến từ nhanh nhất đến chậm nhất: O(1) là hằng số — thời gian không thay đổi dù dữ liệu lớn đến đâu, ví dụ tra cứu phần tử trong mảng biết vị trí. O(log n) là logarithm — tăng rất chậm, ví dụ tìm kiếm nhị phân. O(n) là tuyến tính — tỷ lệ thẳng với kích thước dữ liệu. O(n log n) — sắp xếp hiệu quả. O(n bình phương) — hai vòng lặp lồng nhau. O(2 mũ n) — bùng nổ tổ hợp, dùng được với n nhỏ thôi.</p>
+<p>Quan trọng vì: thuật toán O(n bình phương) chạy tốt với 100 phần tử nhưng sẽ cực kỳ chậm với 1 triệu phần tử. Hiểu Big O giúp chọn đúng thuật toán cho quy mô dữ liệu thực tế.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8c7fe118373b.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Tìm tên trong danh bạ điện thoại. O(n) là đọc từ đầu đến khi thấy — mất nửa tiếng với quyển dày. O(log n) là dùng tính năng tìm kiếm — vài giây dù danh bạ có triệu số. Với 10 tên thì cả hai như nhau. Với 10 triệu tên thì khác nhau hoàn toàn.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">02.</span> Mảng (Array) và Danh sách liên kết (Linked List) khác nhau thế nào?</div>
+<div class="answer">
+<p><span class="term">Mảng</span> lưu các phần tử liên tiếp nhau trong bộ nhớ. Bạn biết địa chỉ đầu tiên và kích thước mỗi phần tử, nên tính được ngay vị trí của bất kỳ phần tử nào — truy cập theo chỉ số là O(1). Nhưng chèn hoặc xóa ở giữa cần dịch chuyển tất cả phần tử sau đó — O(n).<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ed5d3729c1f2.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Danh sách liên kết</span> gồm các node rải rác trong bộ nhớ, mỗi node chứa giá trị và con trỏ đến node tiếp theo. Chèn hoặc xóa rất nhanh — chỉ thay đổi con trỏ, O(1) nếu biết vị trí. Nhưng tìm phần tử thứ k phải đi từ đầu qua k bước — O(n).<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5b9b62657eb6.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6ce41930fda6.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_fa4c9cf6dac7.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_31c46b503666.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Khi nào dùng cái nào: mảng khi cần truy cập ngẫu nhiên thường xuyên và kích thước ít thay đổi. Danh sách liên kết khi thường xuyên thêm xóa ở đầu hoặc giữa. Trong thực tế Python, list là mảng động nên đủ dùng cho hầu hết trường hợp.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_66bbd4975ad3.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d6f51b928fc8.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_210c00546a3a.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Mảng như dãy ghế đánh số trong rạp chiếu phim — đi thẳng đến ghế 150 không cần đếm. Danh sách liên kết như đoàn tàu — để đến toa thứ 15 phải đi qua 14 toa trước, nhưng thêm toa mới vào giữa chỉ cần nối lại đầu móc.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_1982fb38b138.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">03.</span> Stack và Queue là gì? Ứng dụng thực tế?</div>
+<div class="answer">
+<p><span class="term">Stack</span> hay ngăn xếp là cấu trúc dữ liệu LIFO — Last In First Out, vào sau ra trước. Phần tử thêm vào cuối cùng sẽ được lấy ra đầu tiên. Hai thao tác chính: push thêm phần tử vào đỉnh, pop lấy phần tử từ đỉnh.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2187e1021a91.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_47ff6d8d3be1.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_249e6270d397.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d368079748a0.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7fb55ed0b7a3.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4dd240a2adcd.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Queue</span> hay hàng đợi là cấu trúc dữ liệu FIFO — First In First Out, vào trước ra trước. Như xếp hàng mua vé: người đến trước được phục vụ trước.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_722ad2d05ecf.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8a3bdd9aa1fa.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_303813e2e892.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7fb55ed0b7a3.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b08a93cfaa76.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ứng dụng Stack: trình duyệt web dùng stack để lưu lịch sử trang — mỗi trang mới push vào, nút Back pop ra. Khi Python thực thi code, mỗi lần gọi hàm push stack frame, hàm trả về thì pop. Kiểm tra ngoặc đóng mở cũng dùng stack. Ứng dụng Queue: hàng đợi in ấn, hàng đợi task trong Celery, xử lý sự kiện theo thứ tự.</p>
+<div class="analogy">Stack như chồng đĩa bát — rửa xong úp lên, lấy từ trên xuống. Queue như hàng người chờ tại ngân hàng — đến trước phục vụ trước.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2187e1021a91.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_a40bbe2d3d65.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_722ad2d05ecf.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_bc75014addda.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">04.</span> Hash Table hoạt động thế nào? Collision được xử lý ra sao?</div>
+<div class="answer">
+<p><span class="term">Hash Table</span> hay bảng băm là cấu trúc dữ liệu cho phép tìm kiếm, chèn, xóa với độ phức tạp trung bình O(1). Hoạt động bằng cách dùng hàm băm để ánh xạ mỗi khóa sang một vị trí trong mảng. Python dictionary là hash table.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b5b5abd00b41.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_37804e79109e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c2d8730c4cdd.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b3bcb1afc97e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_47a85b710490.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_edebd71af0a9.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Vấn đề <span class="term">collision</span> hay va chạm xảy ra khi hai khóa khác nhau được ánh xạ sang cùng một vị trí. Có hai cách xử lý phổ biến.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b5585f0d2678.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cb5e8a23ec9e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e412480bc1da.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Cách một là <span class="term">Chaining</span>: mỗi vị trí trong mảng lưu một danh sách liên kết. Khi có collision, phần tử mới được thêm vào danh sách ở vị trí đó. Tìm kiếm cần duyệt qua danh sách.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_50016048f3a0.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8cb8b7062b4c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_404a48b92292.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d56cb6bd9215.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f2fdb75e7d66.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Cách hai là <span class="term">Open Addressing</span>: khi có collision, tìm vị trí trống tiếp theo theo một quy tắc nhất định. Tất cả phần tử nằm trong mảng chính, không cần cấu trúc bổ sung.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_04b5447d8f96.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71c6cd4bb853.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b0fa47831ee9.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d56cb6bd9215.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_af5b5552f782.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Thư viện với mã sách: mã 1234 được xếp ở kệ 34, nhưng kệ 34 đã có sách khác. Chaining như để nhiều sách ở cùng kệ theo hàng. Open Addressing như tìm kệ trống gần nhất và ghi chú lại.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7e42bcb722bd.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8cb8b7062b4c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8abeff6ef4d7.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71c6cd4bb853.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d4235bb99dd9.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">05.</span> Tìm kiếm nhị phân (Binary Search) hoạt động thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_88c34086edda.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Tìm kiếm nhị phân</span> là thuật toán tìm phần tử trong mảng đã được sắp xếp với độ phức tạp O(log n). Thay vì duyệt từng phần tử, mỗi bước loại bỏ một nửa không gian tìm kiếm.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_8802045950b3.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Cách hoạt động: so sánh giá trị cần tìm với phần tử ở giữa mảng. Nếu bằng thì tìm thấy. Nếu nhỏ hơn thì phần tử phải nằm ở nửa trái, bỏ nửa phải. Nếu lớn hơn thì phần tử nằm ở nửa phải, bỏ nửa trái. Lặp lại với nửa còn lại cho đến khi tìm thấy hoặc hết phần tử.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_242de3951640.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Tại sao O(log n): mỗi bước giảm nửa số phần tử cần xét. Với 1 triệu phần tử, sau 20 bước là tìm được vì 2 mũ 20 bằng hơn 1 triệu. Điều kiện bắt buộc: mảng phải được sắp xếp trước.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_dc29e064db70.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Đoán số từ 1 đến 1000. Luôn hỏi "số cần tìm lớn hơn 500 không?". Câu trả lời Yes/No loại bỏ ngay một nửa. Tối đa 10 lần hỏi là tìm ra số trong 1000. Nếu hỏi tuần tự thì tệ nhất mất 1000 lần.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_831203bb155b.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">06.</span> BFS và DFS khác nhau thế nào? Khi nào dùng cái nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_004cecb0b735.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Cả hai là thuật toán duyệt đồ thị hoặc cây, khác nhau ở thứ tự thăm các node.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_49aadcdbf34d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_10ee2d15bdba.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">BFS</span> viết tắt của Breadth-First Search hay tìm kiếm theo chiều rộng. Bắt đầu từ node gốc, thăm tất cả các node ở mức hiện tại trước khi đi xuống mức tiếp theo. Dùng Queue để theo dõi các node cần thăm. BFS đảm bảo tìm được đường đi ngắn nhất tính theo số bước.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_838fea3c1a3e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_1f3887fd9e1b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_13348442cc6a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e1b910632820.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_117377fde613.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_408ba1bae75b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_722ad2d05ecf.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_29de3ac375cf.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_6f27b5ca056f.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_838fea3c1a3e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c9746af66026.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">DFS</span> viết tắt của Depth-First Search hay tìm kiếm theo chiều sâu. Đi sâu vào một nhánh hết mức có thể trước khi quay lại thử nhánh khác. Dùng Stack hoặc đệ quy. DFS dùng ít bộ nhớ hơn BFS trong nhiều trường hợp.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1bb62b63c65.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9ce00e049306.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_13348442cc6a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5f1ccdb5b713.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2187e1021a91.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7707a933b879.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1bb62b63c65.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_09d6f04ebd04.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_838fea3c1a3e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_85d3fa671769.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Khi nào dùng: BFS khi cần tìm đường ngắn nhất, tìm phần tử gần nhất. DFS khi cần duyệt toàn bộ cấu trúc, phát hiện chu trình, giải các bài toán dạng mê cung hay đặt hậu.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_39ac530984b4.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_838fea3c1a3e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_3761377adbb5.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1bb62b63c65.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_17c0ab2cdf86.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">BFS như sóng nước lan ra từ điểm ném đá — lan đều mọi hướng theo vòng tròn từ gần đến xa. DFS như người đi mê cung luôn ưu tiên rẽ trái — đi sâu một hướng hết rồi quay lại thử hướng khác.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_838fea3c1a3e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_15759f7b470c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1bb62b63c65.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d6a0cf16cef1.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">07.</span> Merge Sort và Quick Sort khác nhau thế nào?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_511424caae97.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1bfdbf1af746.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_3e2e82c1f5ba.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Merge Sort</span> chia mảng làm đôi, sắp xếp từng nửa đệ quy, rồi trộn hai nửa đã sắp xếp lại. Độ phức tạp luôn là O(n log n) trong mọi trường hợp — tệ nhất, tốt nhất, hay trung bình. Cần thêm bộ nhớ O(n) cho mảng phụ khi trộn.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2d2078850310.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d2c68621110f.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c2d8730c4cdd.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c42baab9ee9f.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Quick Sort</span> chọn một phần tử làm pivot, chia các phần tử thành hai nhóm: nhỏ hơn pivot và lớn hơn pivot, rồi đệ quy sắp xếp từng nhóm. Trung bình O(n log n) nhưng trường hợp tệ nhất là O(n bình phương) khi pivot luôn là phần tử nhỏ nhất hoặc lớn nhất. Không cần bộ nhớ phụ, sắp xếp tại chỗ.</p>
+<p>Trong thực tế: Python dùng Timsort — kết hợp Merge Sort và Insertion Sort, tối ưu cho dữ liệu thực tế. Quick Sort thường nhanh hơn trong thực tế dù độ phức tạp lý thuyết như nhau vì ít bỏ lỡ cache CPU hơn.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9d705de3e31b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a7f5f35426b9.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_809c2e182019.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_17a2ebbb16d5.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b79606d54d1a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_511424caae97.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4d3be24278a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_96378c47640e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1bfdbf1af746.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4abc55d51428.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b13247aebde6.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0e9715ffabe6.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Merge Sort như chia bộ bài ra từng tập nhỏ cho nhiều người sắp xếp, rồi gộp lại có trật tự — luôn mất cùng thời gian. Quick Sort như chọn một lá bài làm mốc, để tất cả nhỏ hơn sang trái, lớn hơn sang phải, rồi xử lý từng bên — thường nhanh hơn nhưng nếu chọn mốc kém thì chậm.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">08.</span> Heap và Priority Queue là gì?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c29e416a0444.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5441b4dd1173.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4c8b424bea6d.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Heap</span> là cấu trúc dữ liệu dạng cây nhị phân đặc biệt: mọi node cha đều lớn hơn hoặc bằng con trong Max-Heap, hoặc nhỏ hơn hoặc bằng con trong Min-Heap. Tính chất này đảm bảo phần tử lớn nhất hoặc nhỏ nhất luôn ở gốc — truy cập O(1). Thêm phần tử mới hoặc lấy phần tử gốc ra là O(log n).<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_556e9a86db9c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0fdbf1bb324e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_56e2333784e5.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Priority Queue</span> hay hàng đợi ưu tiên là cấu trúc dữ liệu trừu tượng: mỗi phần tử có độ ưu tiên, phần tử có độ ưu tiên cao nhất được lấy ra trước. Heap là cách implement Priority Queue hiệu quả nhất.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5441b4dd1173.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_3266237aad10.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_556e9a86db9c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_1f53037a3b7c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_af1c5783df5a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_a4028dfeb835.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ứng dụng trong fintech: hàng đợi xử lý giao dịch ưu tiên — giao dịch VIP xử lý trước. Lên lịch nhiệm vụ theo deadline gần nhất. Thuật toán Dijkstra tìm đường đi ngắn nhất dùng Priority Queue. Python có module heapq với Min-Heap tích hợp sẵn.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d058aeb5c3b5.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2ca09bbe9042.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_910ebfe106cf.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5a11e0bd65af.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9190bef444f7.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30e482a8ab57.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_15572bb17f96.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_052d7289884a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c6ab5801e897.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cdad507aa4f1.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eacebb245e39.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4c88de84de20.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Phòng cấp cứu bệnh viện. Bệnh nhân không phục vụ theo thứ tự đến — ai nặng hơn được ưu tiên. Bác sĩ luôn biết ngay bệnh nhân nặng nhất đang chờ. Đó là Priority Queue.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_149dcfd8a7fc.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fcb718c93b41.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">09.</span> LRU Cache là gì? Implement thế nào?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_48c289b805cb.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4c8b424bea6d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab4cdcf52e08.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0cd92b9874ef.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">LRU Cache</span> viết tắt của Least Recently Used Cache, là cache với chiến lược đuổi phần tử ít được dùng gần đây nhất khi cache đầy. Đây là chiến lược cache phổ biến nhất vì phản ánh tốt mô hình sử dụng thực tế.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_48c289b805cb.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9449a5efbe16.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_acdb81956884.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_019d1ca7d50c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bcb91c9d3317.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0fea6a13c52b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_20e28e86683c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0fea6a13c52b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ee911934079d.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0fea6a13c52b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5c09585228dc.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Yêu cầu: tra cứu theo khóa là O(1), cập nhật "vừa được dùng" là O(1), đuổi phần tử cũ nhất là O(1). Không có cấu trúc dữ liệu đơn lẻ nào đáp ứng cả ba. Giải pháp là kết hợp hai cấu trúc.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_bb5858318c47.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Dùng <span class="term">OrderedDict</span> trong Python — là từ điển duy trì thứ tự chèn. Khi dùng một khóa, xóa rồi chèn lại để đưa về cuối danh sách (vị trí mới nhất). Khi cache đầy, xóa phần tử đầu danh sách (cũ nhất). Cả ba thao tác đều O(1).<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d5e424508d64.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_760009a8ee40.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c6330ca473aa.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a7f5f35426b9.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_90b76a8dacd3.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0fea6a13c52b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0ed6d92ad409.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Bàn làm việc có giới hạn hồ sơ. Hồ sơ bạn vừa dùng để trên cùng. Khi cần thêm hồ sơ mới mà bàn đầy, cất hồ sơ ở dưới cùng (lâu không đụng tới) vào kho. Hồ sơ quan trọng và mới dùng luôn trong tầm tay.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_fd8b9468baf7.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">10.</span> Dynamic Programming là gì? Nguyên tắc hoạt động?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_43716ee4eedd.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Dynamic Programming</span> hay quy hoạch động là kỹ thuật giải các bài toán lớn bằng cách chia thành các bài toán con nhỏ hơn, giải từng bài toán con một lần, lưu kết quả lại, tái sử dụng khi cần thay vì tính lại.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed8cda5bb8b9.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_bec6282fb94e.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Hai điều kiện để áp dụng quy hoạch động: thứ nhất là <span class="term">bài toán con chồng nhau</span> — các bài toán con xuất hiện lặp đi lặp lại; thứ hai là <span class="term">cấu trúc con tối ưu</span> — lời giải tối ưu của bài toán lớn xây dựng từ lời giải tối ưu của các bài toán con.</p>
+<p>Ví dụ bài toán Fibonacci: tính F(n) = F(n-1) + F(n-2). Cách đệ quy đơn giản tính F(5) cần tính F(3) hai lần, F(2) ba lần. Với n lớn, số lần tính bùng nổ. Quy hoạch động lưu kết quả vào mảng, mỗi giá trị chỉ tính một lần — từ O(2 mũ n) xuống còn O(n).</p>
+<div class="analogy">Như tra cứu bảng nhân. Học một lần và lưu kết quả, sau đó tra bảng thay vì nhân tay mỗi lần. Quy hoạch động là bảng tra cứu cho các bài toán phức tạp.</div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">11.</span> Giải bài Two Sum trong O(n)?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_363beb48cd59.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Bài toán: cho mảng số nguyên và một số target, tìm hai phần tử trong mảng có tổng bằng target, trả về vị trí của chúng.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b3c08aed4457.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0ee9c9019e74.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0116b3403040.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0ee9c9019e74.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_511f61c95504.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Cách ngây thơ dùng hai vòng lặp lồng nhau thử mọi cặp — O(n bình phương). Với mảng 10 nghìn phần tử đã chậm.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_969fdbd8ec6c.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Cách O(n) dùng hash table: duyệt mảng một lần. Với mỗi phần tử, tính phần bù cần thiết là target trừ phần tử hiện tại. Tra cứu hash table xem phần bù đó đã thấy chưa. Nếu có thì tìm thấy cặp. Nếu chưa thì lưu phần tử hiện tại vào hash table và đi tiếp. Mỗi phần tử chỉ xử lý một lần, tra cứu hash table là O(1). Tổng cộng O(n) thời gian, O(n) bộ nhớ cho hash table.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_837f006f55fb.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_147c5cbae1a8.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5c9574f2e4f9.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_42aefbae01d2.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_09f90f0420bc.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_147c5cbae1a8.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5d3b4a979ded.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_147c5cbae1a8.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7eb65979dbda.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_147c5cbae1a8.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ea7eff0d2a6b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_edebd71af0a9.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Tìm hai người có số áo cộng lại bằng 100. Cách chậm: nhờ từng cặp người đứng cạnh nhau kiểm tra. Cách nhanh: khi gặp người số 37, tra danh sách xem đã gặp số 63 chưa. Ghi tên vào danh sách khi gặp. Chỉ cần đi qua một lần.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_91e4fbecbc40.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">12.</span> Giải bài Valid Parentheses dùng Stack thế nào?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f8b104f89c26.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b01a50d3a829.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_809c2e182019.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2187e1021a91.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0cd92b9874ef.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Bài toán: cho chuỗi gồm các ký tự ngoặc tròn, vuông, nhọn — kiểm tra xem chuỗi có hợp lệ không. Hợp lệ nghĩa là mỗi ngoặc mở phải có ngoặc đóng tương ứng và đúng thứ tự.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_1b27ee6d3b36.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Dùng Stack: duyệt từng ký tự. Nếu là ngoặc mở (ba dạng), push vào stack. Nếu là ngoặc đóng, kiểm tra stack có trống không — nếu trống thì không hợp lệ vì không có ngoặc mở tương ứng. Nếu không trống, lấy ra phần tử trên cùng của stack và kiểm tra có phải ngoặc mở tương ứng không — nếu không khớp thì không hợp lệ. Sau khi duyệt hết, nếu stack trống thì hợp lệ — mọi ngoặc mở đều có ngoặc đóng. Nếu stack còn phần tử thì còn ngoặc mở chưa đóng.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d5e424508d64.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2187e1021a91.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b1d1ed3476ed.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c6aee5b1be1.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_acd9a3ff34b5.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fac2a47adace.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5d1cd264c7e4.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fac2a47adace.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_232051d5902a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fac2a47adace.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_beee33232e25.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fac2a47adace.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_484ff33b469d.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Độ phức tạp: O(n) thời gian, O(n) bộ nhớ trong trường hợp xấu nhất khi tất cả là ngoặc mở.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_08d1a3f6ebd7.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như kiểm tra móc áo lồng nhau. Mỗi lần thấy móc trái thì đặt vào ngăn kéo. Khi thấy móc phải, lấy từ ngăn kéo ra kiểm tra xem có khớp không. Xong hết mà ngăn kéo trống là ổn.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_235a2500273d.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">13.</span> Sliding Window là kỹ thuật gì?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b30f13de2433.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_aca1807bc6be.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Sliding Window</span> hay cửa sổ trượt là kỹ thuật giải các bài toán trên mảng hoặc chuỗi cần xét một vùng liên tiếp. Thay vì tính lại từ đầu cho mỗi vùng, cửa sổ trượt dần qua mảng, loại phần tử ra khỏi cửa sổ và thêm phần tử mới vào.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b30f13de2433.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_926a5f2f73da.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Bài toán điển hình: tìm tổng lớn nhất của k phần tử liên tiếp trong mảng. Cách ngây thơ: với mỗi vị trí, tính tổng k phần tử từ đó — O(n nhân k). Sliding Window: tính tổng k phần tử đầu tiên. Rồi trượt cửa sổ sang phải: cộng phần tử mới vào, trừ phần tử cũ ra — O(1) cho mỗi bước. Tổng cộng O(n).<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_69d2a5277240.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b30f13de2433.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_c12a6fab2d1d.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ứng dụng trong fintech: tính tổng giao dịch trong 7 ngày trượt, phát hiện bất thường trong giao dịch chuỗi, giới hạn tần suất theo Sliding Window để chính xác hơn Fixed Window.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d058aeb5c3b5.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2ca09bbe9042.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ed7cbdf9848a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b30f13de2433.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_7ff5a08b5aae.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e5b23ac1fab3.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">14.</span> Làm sao đảo ngược Linked List?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_e24db170aa11.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_78fb3e75aed0.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Đây là bài toán cổ điển kiểm tra hiểu biết về con trỏ. Cần đảo chiều mọi liên kết trong danh sách liên kết.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_802fb20543df.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Giải pháp dùng ba con trỏ: con trỏ previous bắt đầu là null, con trỏ current bắt đầu là node đầu, con trỏ next để lưu tạm. Duyệt danh sách: lưu node tiếp theo vào next để không mất. Đổi hướng liên kết của current sang previous. Tiến previous và current lên một bước. Lặp lại đến hết danh sách. Khi current là null thì previous là node đầu của danh sách đã đảo.</p>
+<p>Độ phức tạp: O(n) thời gian vì duyệt một lần. O(1) bộ nhớ vì chỉ dùng ba con trỏ phụ dù danh sách dài bao nhiêu.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_af1e5d2907c4.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như đổi chiều mũi tên trên một con đường một chiều có nhiều biển chỉ đường. Đi từ đầu đến cuối, tại mỗi biển: nhớ biển tiếp theo, quay biển hiện tại 180 độ, rồi đi tiếp. Sau khi xong thì con đường đã một chiều theo hướng ngược lại.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5ea4cb00f076.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">15.</span> Floyd's Cycle Detection là gì?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/gemini_649983d3cf85.wav" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Floyd's Cycle Detection</span> hay thuật toán con rùa và thỏ là cách phát hiện chu trình trong danh sách liên kết chỉ dùng O(1) bộ nhớ.</p>
+<p>Ý tưởng: dùng hai con trỏ, một chạy chậm mỗi bước đi một node gọi là con rùa, một chạy nhanh mỗi bước đi hai node gọi là con thỏ. Cả hai bắt đầu từ đầu danh sách. Nếu không có chu trình, con thỏ sẽ đến cuối danh sách. Nếu có chu trình, con thỏ sẽ "bắt kịp" con rùa từ sau — hai con trỏ sẽ gặp nhau tại một điểm nào đó trong chu trình.</p>
+<p>Tại sao O(1) bộ nhớ: chỉ dùng hai con trỏ dù danh sách có bao nhiêu node. Cách khác là lưu mọi node đã thăm vào hash set — nhưng cần O(n) bộ nhớ.</p>
+<div class="analogy">Đường chạy bộ hình tròn. Nếu hai người chạy cùng chiều nhưng một người nhanh gấp đôi, người nhanh sẽ vượt qua người chậm — gặp nhau dù xuất phát từ cùng điểm. Nếu đường thẳng, người nhanh về đích trước và không gặp lại.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_120d2fbd6fe5.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">16.</span> Cây nhị phân tìm kiếm (BST) là gì? Duyệt thế nào?</div>
+<div class="answer">
+<p><span class="term">BST</span> viết tắt của Binary Search Tree, là cây nhị phân với tính chất: mọi node con bên trái đều nhỏ hơn node cha, mọi node con bên phải đều lớn hơn node cha. Tính chất này cho phép tìm kiếm hiệu quả O(log n) trong cây cân bằng.</p>
+<p>Ba cách duyệt cây: <span class="term">Inorder</span> là trái-gốc-phải — duyệt inorder BST cho ra dãy số sắp xếp tăng dần. <span class="term">Preorder</span> là gốc-trái-phải — hay dùng để sao chép cây, vì ghé thăm node cha trước node con. <span class="term">Postorder</span> là trái-phải-gốc — hay dùng để xóa cây, vì xử lý node con trước khi xóa node cha.</p>
+<p>Vấn đề: BST có thể bị mất cân bằng — ví dụ chèn các số theo thứ tự tăng dần sẽ cho cây thẳng như danh sách, mọi thao tác thành O(n). Cây tự cân bằng như AVL Tree hay Red-Black Tree giải quyết vấn đề này, đảm bảo chiều cao luôn O(log n).<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b5585f0d2678.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ae8200cb4561.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4ae3433931dd.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_caab17286d00.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_2a8181b592ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b0c14770e6b.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_dd761c3ea425.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">17.</span> Topological Sort là gì? Ứng dụng?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f9c4755d1b2.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_a4b5a88db0c8.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p><span class="term">Topological Sort</span> hay sắp xếp topo là thuật toán sắp xếp các node trong đồ thị có hướng không có chu trình sao cho mỗi cạnh từ node u đến node v thì u luôn xuất hiện trước v trong thứ tự kết quả.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f9c4755d1b2.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_b923809b2a9e.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_fb096deadea9.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_04845f82da90.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_f60f08568603.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ứng dụng: xác định thứ tự build các module phụ thuộc nhau — module A phụ thuộc module B thì B phải build trước A. Thứ tự thực hiện các task có ràng buộc phụ thuộc — task B phải hoàn thành trước khi bắt đầu task C. Phát hiện vòng phụ thuộc tuần hoàn trong hệ thống — nếu đồ thị có chu trình thì không tồn tại thứ tự topo.</p>
+<p>Hai cách implement: dùng DFS với stack, hoặc dùng thuật toán Kahn dựa trên đếm in-degree. In-degree là số lượng cạnh chỉ vào một node — node nào có in-degree bằng không thì không có phụ thuộc, xử lý được ngay.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_26f685010a3c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b9e46364944.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_809c2e182019.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1bb62b63c65.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ed6f95ecee97.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_81f95e9f18e4.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_a65c00b35a68.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_84871167d045.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_ebc85538da5d.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">18.</span> Trie là gì? Khi nào dùng?</div>
+<div class="answer">
+<p><span class="term">Trie</span> phát âm là "try", còn gọi là cây tiền tố, là cấu trúc dữ liệu dạng cây đặc biệt để lưu trữ chuỗi ký tự. Mỗi node biểu diễn một ký tự, đường từ gốc đến node biểu diễn một tiền tố của chuỗi.</p>
+<p>Ưu điểm nổi bật: tìm kiếm chuỗi và kiểm tra tiền tố là O(độ dài chuỗi) bất kể có bao nhiêu chuỗi trong cây. So sánh với hash set — kiểm tra tồn tại cũng O(độ dài) nhưng tìm "tất cả chuỗi bắt đầu bằng abc" với hash set cần O(n tổng), với Trie chỉ cần đi đến node "abc" và liệt kê con.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0b41eb3da42a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e34342c84f06.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5b7af1f1c3d7.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e34342c84f06.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_16f99d70bd94.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_dee0a2ea1dad.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Ứng dụng: gợi ý tự động khi gõ tên khách hàng hoặc mã giao dịch, kiểm tra từ khóa bị cấm trong văn bản, bộ từ điển cho hệ thống nhận dạng giọng nói.<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d5b08eae3431.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Như chỉ mục của từ điển được tổ chức theo từng chữ cái rồi từng âm tiết. Tìm tất cả từ bắt đầu bằng "trans" — chỉ cần đi đến mục "trans" và liệt kê, không cần đọc toàn bộ từ điển.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d313e33bbc59.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_248e01720502.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_4d571ff1a847.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_248e01720502.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_994dbc1c17a2.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">19.</span> Graph — các dạng biểu diễn và khi nào dùng?<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4cdbd2bafa81.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_93275a74a2e0.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Đồ thị là cấu trúc dữ liệu gồm các node và cạnh nối giữa chúng. Có hai cách biểu diễn chính.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0f7c1e0953f2.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5c3325f7b18d.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Adjacency Matrix</span> hay ma trận kề: dùng mảng hai chiều n nhân n, ô i-j bằng 1 nếu có cạnh từ i đến j. Kiểm tra xem hai node có liên kết không là O(1). Nhưng luôn dùng O(n bình phương) bộ nhớ dù đồ thị có ít cạnh.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8039e763ca23.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d2ef01370afe.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_0f9d2573be88.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p><span class="term">Adjacency List</span> hay danh sách kề: mỗi node lưu danh sách các node hàng xóm. Dùng bộ nhớ O(n cộng số cạnh) — hiệu quả hơn với đồ thị thưa. Duyệt tất cả hàng xóm của một node nhanh. Nhưng kiểm tra hai node có liên kết không cần duyệt danh sách.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b3205433012a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_400fdf281b4c.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_cbce4e046f79.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_25f239fd31bd.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_74e842655766.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c4536996ca.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_5961aab81baa.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<p>Khi nào dùng: Adjacency Matrix cho đồ thị dày với nhiều cạnh, hoặc khi thường xuyên kiểm tra cạnh cụ thể. Adjacency List cho đồ thị thưa — phổ biến hơn trong thực tế vì hầu hết bài toán có đồ thị thưa.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_39ac530984b4.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8039e763ca23.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_327199a0954a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b3205433012a.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_35588d805d67.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+</div>
+</div>
+<div class="qa">
+<div class="question"><span class="qnum">20.</span> Khi nào không dùng đệ quy? Chuyển sang vòng lặp thế nào?<button class="audio-btn" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_143cd08fb8af.mp3" onclick="playAudio(this)" title="Nghe">🔊</button></div>
+<div class="answer">
+<p>Đệ quy thanh lịch và dễ đọc nhưng có giới hạn. <span class="term">Stack overflow</span> xảy ra khi đệ quy quá sâu — Python mặc định giới hạn khoảng 1000 cấp. Mỗi lần gọi hàm đệ quy tốn bộ nhớ cho stack frame. Với cây BST mất cân bằng có một triệu node, duyệt đệ quy sẽ gặp lỗi.</p>
+<p>Chuyển đệ quy sang vòng lặp bằng cách dùng stack tự quản lý: thay vì để Python tự duy trì call stack, bạn tạo stack riêng trong bộ nhớ heap và tự quản lý. Bộ nhớ heap lớn hơn nhiều so với call stack của Python.</p>
+<p>Đặc biệt với đệ quy đuôi — tail recursion, là đệ quy mà lời gọi đệ quy là thao tác cuối cùng — có thể chuyển thành vòng lặp đơn giản không cần stack. Python không tối ưu đệ quy đuôi như một số ngôn ngữ khác nên việc chuyển thủ công đặc biệt quan trọng.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_d4e732597c66.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bc1b013f1135.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_bde8a337a0a5.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bdb0d4f461a3.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_9401e0a17c46.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></p>
+<div class="analogy">Đệ quy như nhân viên giao việc tiếp cho đồng nghiệp và chờ đồng nghiệp xong rồi mới tiếp tục — xếp hàng chờ sâu. Vòng lặp với stack tự quản lý như có sổ tay ghi danh sách việc cần làm — làm xong một việc thì gạch đi và làm việc tiếp theo, không cần chờ ai.<button class="audio-btn" data-srcs='["https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_93de5fbf0a49.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fac2a47adace.mp3", "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/vi_84a03f5b2ba8.mp3"]' onclick="playAudio(this)" title="Nghe">🔊</button></div>
+</div>
+</div>
+<script>
+/* audio engine — injected by generate_audio_tech.py */
+(function () {
+  var cur = { audio: null, btn: null, onDone: null };
+
+  function stopCur() {
+    if (cur.audio) { cur.audio.pause(); cur.audio.currentTime = 0; cur.audio = null; }
+    if (cur.btn)   { cur.btn.classList.remove('playing'); }
+    cur.btn = null; cur.onDone = null;
+  }
+
+  function getUrls(btn) {
+    if (btn.dataset.srcs) { try { return JSON.parse(btn.dataset.srcs); } catch(e) {} }
+    if (btn.dataset.src)  { return [btn.dataset.src]; }
+    return [];
+  }
+
+  function playList(btn, srcs, onDone) {
+    stopCur();
+    if (!srcs || !srcs.length) { if (onDone) onDone(); return; }
+    btn.classList.add('playing');
+    cur.btn = btn; cur.onDone = onDone;
+    var idx = 0;
+    function next() {
+      if (cur.btn !== btn) return;          /* bị dừng ngoài */
+      if (idx >= srcs.length) {
+        btn.classList.remove('playing');
+        cur.btn = null;
+        if (onDone) onDone();
+        return;
+      }
+      var audio = new Audio(srcs[idx++]);
+      cur.audio = audio;
+      audio.play().catch(function() { next(); });
+      audio.onended = next;
+    }
+    next();
+  }
+
+  /* click đơn lẻ */
+  window.playAudio = function (btn) {
+    if (cur.btn === btn) { stopCur(); return; }   /* toggle off */
+    stopCur();
+    /* đánh dấu vị trí cho ▶ Từ đây */
+    window._fromBtn = btn;
+    var f = document.getElementById('pa-from');
+    if (f) { f.classList.add('marked'); f.classList.remove('active'); }
+    playList(btn, getUrls(btn), null);
+  };
+
+  /* expose cho play-all bar */
+  window._playList = playList;
+  window._stopCur  = stopCur;
+  window._getUrls  = getUrls;
+})();
+</script>
+</body>
+</html>
