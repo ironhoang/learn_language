@@ -80,6 +80,7 @@ const CHATGPT_ENGLISH = [
   { href: "/episoden/life2.html", icon: "💬", title: "Life2", desc: "20 phrases · 40 examples" },
   { href: "/episoden/work1.html", icon: "💬", title: "Work1", desc: "20 phrases · 40 examples" },
   { href: "/episoden/tech2.html", icon: "💬", title: "Tech2", desc: "20 phrases · 40 examples" },
+  { href: "/episoden/a1-1.html", icon: "📝", title: "A1 1", desc: "0 corrections · 0 expression tips · 0 groups" },
 ];
 
 export default function HomePage() {
@@ -175,7 +176,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-                                                                                                                                                                                                                {/* CHATGPT-DATA-START */}
+                                                                                                                                                                                                                                        {/* CHATGPT-DATA-START */}
         <div>
           <div className="section-header"><h2>English Corrections</h2></div>
           <div className="set-cards">

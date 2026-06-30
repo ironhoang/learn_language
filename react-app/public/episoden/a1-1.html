@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A1 1</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f1f5f9; color: #1e293b;
+  max-width: 740px; margin: 0 auto; padding: 24px 16px 80px;
+  font-size: 15px; line-height: 1.7;
+}
+a.home { display:inline-block; margin-bottom:20px; color:#64748b; text-decoration:none; font-size:14px; }
+a.home:hover { color:#0ea5e9; }
+h1 { font-size:22px; font-weight:700; margin-bottom:24px; color:#0f172a; }
+
+.section-divider {
+  margin: 28px 0 14px;
+  padding: 8px 14px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px; font-weight: 700;
+  color: #475569; letter-spacing: .04em;
+}
+
+.entry-card {
+  background: #fff; border-radius: 14px; padding: 18px 20px 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 14px;
+}
+.phrase-row {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 10px; margin-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.phrase-num  { font-weight:700; color:#94a3b8; min-width:22px; font-size:13px; }
+.phrase-en   { font-weight:700; color:#0f172a; font-size:15px; flex:1; }
+.phrase-vi   { font-size:12px; color:#64748b; font-style:italic; }
+
+.sent-row {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 5px 0; border-bottom: 1px solid #f1f5f9;
+}
+.sent-row:last-child { border-bottom: none; }
+.sent-marker { font-size:13px; color:#94a3b8; min-width:18px; }
+.sent-text   { flex:1; color:#1e293b; }
+
+.audio-btn {
+  background: none; border: none; cursor: pointer; font-size: 16px;
+  padding: 2px 4px; border-radius: 6px; color: #64748b; flex-shrink: 0;
+  transition: color .15s;
+}
+.audio-btn:hover  { color: #0ea5e9; }
+.audio-btn.playing { color: #0ea5e9; animation: pulse 1s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+.playbar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(15,23,42,.92); backdrop-filter: blur(8px);
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px; z-index: 100;
+}
+.playbar button {
+  background: #0ea5e9; color: #fff; border: none; border-radius: 8px;
+  padding: 7px 14px; font-size: 13px; font-weight: 600; cursor: pointer;
+  white-space: nowrap; transition: background .15s;
+}
+.playbar button:hover    { background: #0284c7; }
+.playbar button.secondary { background: #334155; }
+.playbar button.secondary:hover { background: #475569; }
+.now-playing {
+  flex: 1; font-size: 12px; color: #94a3b8;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.delay-badge { font-size: 11px; color: #64748b; white-space: nowrap; }
+</style>
+</head>
+<body>
+<a class="home" href="/">← Home</a>
+<h1>A1 1</h1>
+<div class="section-divider">LỚP 1: GIAO TIẾP HÀNG NGÀY (Daily Communication)</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">1.</span><span class="phrase-en">Good morning / Good afternoon</span> <span class="phrase-vi">(Chào buổi sáng / Chào buổi chiều)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_429f22038907.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">Good morning, how are you today?</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_15233e522989.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Good afternoon, nice to meet you.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c9a2fb8c9d69.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">2.</span><span class="phrase-en">Thank you very much</span> <span class="phrase-vi">(Cảm ơn bạn rất nhiều)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d903e64cbc5a.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">Thank you very much for your help.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_162955bdaf41.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Thank you very much for the coffee.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a40150d8137f.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">3.</span><span class="phrase-en">You&#x27;re welcome</span> <span class="phrase-vi">(Không có chi / Chào mừng bạn)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2611912a7d61.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">&quot;Thank you for the food.&quot; - &quot;You&#x27;re welcome.&quot;</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fea27619f6a8.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">You&#x27;re welcome to join our team.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bdb4085d9476.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">4.</span><span class="phrase-en">Excuse me</span> <span class="phrase-vi">(Xin lỗi cho tôi hỏi / Xin nhường đường)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1ee5e3abd5b.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">Excuse me, where is the bathroom?</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a99294e0c75.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Excuse me, can I ask a question?</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cb29cb3dd89c.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">5.</span><span class="phrase-en">I&#x27;m sorry</span> <span class="phrase-vi">(Tôi xin lỗi)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9b11ad1f856f.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I&#x27;m sorry, I am late for the meeting.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_37a127cacba9.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">I&#x27;m sorry, I don&#x27;t understand.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_73870a5356c6.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="section-divider">LỚP 2: THÔNG TIN CÁ NHÂN (Personal Information)</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">6.</span><span class="phrase-en">My name is...</span> <span class="phrase-vi">(Tên tôi là...)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9830b1bac038.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">My name is Nam, and I am a developer.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6854980e2db5.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">My name is John, nice to meet you.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80d6b37e2b4b.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">7.</span><span class="phrase-en">I am from...</span> <span class="phrase-vi">(Tôi đến từ...)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_443d0b95a67b.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I am from Vietnam, and I live in Hanoi.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_531af6969258.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">I am from Japan, but I work in the US.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_74d1cf92b87d.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">8.</span><span class="phrase-en">I am [number] years old</span> <span class="phrase-vi">(Tôi [số] tuổi)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3374378208eb.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I am 25 years old.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c7b9d3ce42ca.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">I am 30 years old this year.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_83d212159c74.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">9.</span><span class="phrase-en">I live in...</span> <span class="phrase-vi">(Tôi sống ở...)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ad0e5b21d9e1.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I live in Ho Chi Minh City with my family.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a52e6d18f6a0.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">I live in a small apartment.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36c7f4a72216.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">10.</span><span class="phrase-en">My hobby is... / I like...</span> <span class="phrase-vi">(Sở thích của tôi là... / Tôi thích...)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4ff084ed1873.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">My hobby is playing video games.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d91110df4a66.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">I like listening to music in my free time.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2ae197776c93.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="section-divider">LỚP 3: ĐỜI SỐNG &amp; SINH HOẠT (Everyday Life)</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">11.</span><span class="phrase-en">Wake up / Get up</span> <span class="phrase-vi">(Thức dậy / Rời khỏi giường)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_78384e534bda.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I wake up at 6 AM every day.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67583514d0da.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">What time do you get up on Sunday?</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4146817c4da5.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">12.</span><span class="phrase-en">Go to work / Go to school</span> <span class="phrase-vi">(Đi làm / Đi học)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_437f83f02ed5.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I go to work by motorbike.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_557b5d7024a0.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Children go to school from Monday to Friday.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_03d01684a9e8.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">13.</span><span class="phrase-en">Have breakfast / lunch / dinner</span> <span class="phrase-vi">(Ăn sáng / trưa / tối)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_31c62073c1fb.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I have breakfast at 7 AM.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f29dea52c1f.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Let&#x27;s have lunch together today.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_40fd6079c37b.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">14.</span><span class="phrase-en">Go home</span> <span class="phrase-vi">(Đi về nhà)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_382c69628e6c.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I go home at 6 PM after work.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1c47d9399eaa.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">I want to go home and rest.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4afdbe909ac6.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">15.</span><span class="phrase-en">Go to bed</span> <span class="phrase-vi">(Đi ngủ)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a41854824b29.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I usually go to bed at 11 PM.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc1eae7e7145.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Children should go to bed early.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b6752caffdb.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="section-divider">LỚP 4: TRONG CÔNG VIỆC CƠ BẢN (Basic Work)</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">16.</span><span class="phrase-en">I am a... [Job]</span> <span class="phrase-vi">(Tôi là một...)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3695d40b6d24.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I am a software engineer.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_476dce8dc96e.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">I am a student at IT university.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6319636465df.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">17.</span><span class="phrase-en">Work from home</span> <span class="phrase-vi">(Làm việc tại nhà)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c0b820c287b4.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I work from home every Friday.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e99481e5b77c.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Do you like to work from home?</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6198f6a5b223.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">18.</span><span class="phrase-en">Check email</span> <span class="phrase-vi">(Kiểm tra hòm thư điện tử)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1dbcd6a4428a.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I check my email every morning.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_663938470b50.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Please check your email for the ticket.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0821b6c0a131.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">19.</span><span class="phrase-en">Open the file / Close the window</span> <span class="phrase-vi">(Mở file / Đóng cửa sổ)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_803552fa0016.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">Please open the file on your computer.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b85aaf3ea850.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Can you close the window, please?</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9cc25fb946f4.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+<div class="entry-card"><div class="phrase-row"><span class="phrase-num">20.</span><span class="phrase-en">Have a question</span> <span class="phrase-vi">(Có một câu hỏi)</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_29a1089cc257.mp3" data-kind="phrase" title="Play">&#128266;</button></div><div class="sent-row"><span class="sent-marker">①</span><span class="sent-text">I have a question about this project.</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b57c72c4493.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+<div class="sent-row"><span class="sent-marker">②</span><span class="sent-text">Do you have any questions for me?</span><button class="audio-btn" onclick="playAudio(this)" data-src="https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e0937e338a14.mp3" data-kind="sent" title="Play">&#128266;</button></div>
+</div>
+
+<div class="playbar">
+  <button onclick="playAll()">▶ Play All</button>
+  <button class="secondary" onclick="playPhrasesOnly()">▶ Phrases</button>
+  <button class="secondary" onclick="stopAll()">■ Stop</button>
+  <span id="now-playing" class="now-playing"></span>
+  <span class="delay-badge">⏱ 4s gap</span>
+</div>
+
+<audio id="main-audio" preload="none"></audio>
+<script>
+const SHADOW_DELAY = 4000;
+let allBtns = [];
+let currentIdx = -1;
+let shadowTimer = null;
+
+function collectBtns() {
+  allBtns = Array.from(document.querySelectorAll('.audio-btn[data-src]'))
+    .filter(b => b.dataset.src);
+}
+
+function clearPlaying() {
+  document.querySelectorAll('.audio-btn.playing').forEach(b => b.classList.remove('playing'));
+  document.getElementById('now-playing').textContent = '';
+  if (shadowTimer) { clearTimeout(shadowTimer); shadowTimer = null; }
+}
+
+function scrollToBtn(btn) {
+  const card = btn.closest('.entry-card') || btn;
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function labelOf(btn) {
+  return btn.closest('.sent-row')?.querySelector('.sent-text')?.textContent
+      || btn.closest('.phrase-row')?.querySelector('.phrase-en')?.textContent
+      || '';
+}
+
+function playAudio(btn) {
+  clearPlaying();
+  currentIdx = -1;
+  const audio = document.getElementById('main-audio');
+  audio.src = btn.dataset.src;
+  btn.classList.add('playing');
+  audio.play();
+  audio.onended = () => btn.classList.remove('playing');
+}
+
+function playAll() {
+  if (!allBtns.length) collectBtns();
+  currentIdx = 0;
+  playNext();
+}
+
+function playPhrasesOnly() {
+  if (!allBtns.length) collectBtns();
+  const list = allBtns.filter(b => b.dataset.kind === 'phrase');
+  if (!list.length) return;
+  playNextFiltered(list);
+}
+
+function playNext() {
+  clearPlaying();
+  if (currentIdx >= allBtns.length) { currentIdx = -1; return; }
+  const btn = allBtns[currentIdx];
+  const audio = document.getElementById('main-audio');
+  audio.src = btn.dataset.src;
+  btn.classList.add('playing');
+  scrollToBtn(btn);
+  document.getElementById('now-playing').textContent = labelOf(btn);
+  audio.play();
+  audio.onended = () => {
+    btn.classList.remove('playing');
+    currentIdx++;
+    if (currentIdx < allBtns.length) {
+      shadowTimer = setTimeout(playNext, SHADOW_DELAY);
+    } else {
+      currentIdx = -1;
+      document.getElementById('now-playing').textContent = '';
+    }
+  };
+}
+
+function playNextFiltered(list) {
+  clearPlaying();
+  if (!list.length) return;
+  const btn = list[0]; const rest = list.slice(1);
+  const audio = document.getElementById('main-audio');
+  audio.src = btn.dataset.src;
+  btn.classList.add('playing');
+  scrollToBtn(btn);
+  document.getElementById('now-playing').textContent = labelOf(btn);
+  audio.play();
+  audio.onended = () => {
+    btn.classList.remove('playing');
+    if (rest.length) shadowTimer = setTimeout(() => playNextFiltered(rest), SHADOW_DELAY);
+    else document.getElementById('now-playing').textContent = '';
+  };
+}
+
+function stopAll() {
+  clearPlaying();
+  const audio = document.getElementById('main-audio');
+  audio.pause(); audio.src = '';
+  currentIdx = -1;
+}
+
+document.addEventListener('DOMContentLoaded', collectBtns);
+</script>
+</body>
+</html>
