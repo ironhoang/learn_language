@@ -58,8 +58,12 @@ h1 { font-size:22px; font-weight:700; margin-bottom:24px; color:#0f172a; }
 .playbar {
   position: fixed; bottom: 0; left: 0; right: 0;
   background: rgba(15,23,42,.92); backdrop-filter: blur(8px);
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap; row-gap: 6px;
   padding: 10px 16px; z-index: 100;
+}
+.start-select {
+  background: #1e293b; color: #e2e8f0; border: none; border-radius: 8px;
+  padding: 7px 8px; font-size: 12px; max-width: 150px; flex-shrink: 0;
 }
 .playbar button {
   background: #0ea5e9; color: #fff; border: none; border-radius: 8px;
@@ -144,23 +148,69 @@ h1 { font-size:22px; font-weight:700; margin-bottom:24px; color:#0f172a; }
 </div>
 
 <div class="playbar">
+  <select id="start-select" class="start-select" title="Play from"></select>
   <button onclick="playAll()">▶ Play All</button>
   <button class="secondary" onclick="playPhrasesOnly()">▶ Phrases</button>
   <button class="secondary" onclick="stopAll()">■ Stop</button>
   <span id="now-playing" class="now-playing"></span>
-  <span class="delay-badge">⏱ 4s gap</span>
+  <span class="delay-badge">⏱ 4s ×3</span>
 </div>
 
 <audio id="main-audio" preload="none"></audio>
 <script>
 const SHADOW_DELAY = 4000;
+const REPEAT_COUNT = 3;
 let allBtns = [];
+let entryMeta = [];
 let currentIdx = -1;
+let filteredIdx = -1;
+let currentFilteredList = null;
+let repeatCount = 0;
 let shadowTimer = null;
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
 
 function collectBtns() {
   allBtns = Array.from(document.querySelectorAll('.audio-btn[data-src]'))
     .filter(b => b.dataset.src);
+
+  entryMeta = [];
+  Array.from(document.querySelectorAll('.entry-card')).forEach((card, i) => {
+    Array.from(card.querySelectorAll('.audio-btn[data-src]')).forEach(b => {
+      b.dataset.entryIdx = i;
+    });
+    const phraseBtn = card.querySelector('.phrase-row .audio-btn[data-src]');
+    const startIndex = phraseBtn ? allBtns.indexOf(phraseBtn) : -1;
+    const label = card.querySelector('.phrase-en')?.textContent.trim() || `Entry ${i + 1}`;
+    entryMeta.push({ startIndex, label });
+  });
+
+  populateStartSelect();
+}
+
+function populateStartSelect() {
+  const sel = document.getElementById('start-select');
+  if (!sel) return;
+  sel.innerHTML = entryMeta
+    .map((e, i) => `<option value="${i}">${i + 1}. ${escapeHtml(e.label)}</option>`)
+    .join('');
+}
+
+function getSelectedEntryIdx() {
+  const sel = document.getElementById('start-select');
+  return sel ? Number(sel.value || 0) : 0;
+}
+
+function setSelectFromBtn(btn) {
+  const sel = document.getElementById('start-select');
+  if (!sel || btn.dataset.entryIdx === undefined) return;
+  sel.value = btn.dataset.entryIdx;
 }
 
 function clearPlaying() {
@@ -182,71 +232,136 @@ function labelOf(btn) {
 
 function playAudio(btn) {
   clearPlaying();
-  currentIdx = -1;
+  currentIdx = -1; filteredIdx = -1; currentFilteredList = null;
+  repeatCount = 0;
+  setSelectFromBtn(btn);
+  playSingleStep(btn);
+}
+
+function playSingleStep(btn) {
   const audio = document.getElementById('main-audio');
-  audio.src = btn.dataset.src;
   btn.classList.add('playing');
+  document.getElementById('now-playing').textContent = `${labelOf(btn)} (${repeatCount + 1}/${REPEAT_COUNT})`;
+  audio.src = btn.dataset.src;
+  audio.currentTime = 0;
   audio.play();
-  audio.onended = () => btn.classList.remove('playing');
+  audio.onended = () => {
+    repeatCount++;
+    if (repeatCount < REPEAT_COUNT) {
+      shadowTimer = setTimeout(() => playSingleStep(btn), SHADOW_DELAY);
+    } else {
+      btn.classList.remove('playing');
+      document.getElementById('now-playing').textContent = '';
+      repeatCount = 0;
+    }
+  };
 }
 
 function playAll() {
   if (!allBtns.length) collectBtns();
-  currentIdx = 0;
-  playNext();
+  const entry = entryMeta[getSelectedEntryIdx()];
+  currentIdx = entry && entry.startIndex >= 0 ? entry.startIndex : 0;
+  filteredIdx = -1; currentFilteredList = null;
+  repeatCount = 0;
+  playSequenceStep();
+}
+
+function playSequenceStep() {
+  if (currentIdx < 0 || currentIdx >= allBtns.length) {
+    clearPlaying();
+    currentIdx = -1;
+    return;
+  }
+  const btn = allBtns[currentIdx];
+  const audio = document.getElementById('main-audio');
+  if (repeatCount === 0) {
+    document.querySelectorAll('.audio-btn.playing').forEach(b => b.classList.remove('playing'));
+    scrollToBtn(btn);
+  }
+  btn.classList.add('playing');
+  document.getElementById('now-playing').textContent = `${labelOf(btn)} (${repeatCount + 1}/${REPEAT_COUNT})`;
+  audio.src = btn.dataset.src;
+  audio.currentTime = 0;
+  audio.play();
+  audio.onended = () => {
+    repeatCount++;
+    if (repeatCount < REPEAT_COUNT) {
+      shadowTimer = setTimeout(playSequenceStep, SHADOW_DELAY);
+    } else {
+      btn.classList.remove('playing');
+      repeatCount = 0;
+      currentIdx++;
+      if (currentIdx < allBtns.length) {
+        shadowTimer = setTimeout(playSequenceStep, SHADOW_DELAY);
+      } else {
+        currentIdx = -1;
+        document.getElementById('now-playing').textContent = '';
+      }
+    }
+  };
 }
 
 function playPhrasesOnly() {
   if (!allBtns.length) collectBtns();
   const list = allBtns.filter(b => b.dataset.kind === 'phrase');
   if (!list.length) return;
-  playNextFiltered(list);
+  const entryIdx = getSelectedEntryIdx();
+  let startPos = list.findIndex(b => Number(b.dataset.entryIdx) === entryIdx);
+  if (startPos < 0) startPos = 0;
+  currentFilteredList = list;
+  filteredIdx = startPos;
+  currentIdx = -1;
+  repeatCount = 0;
+  playFilteredStep();
 }
 
-function playNext() {
-  clearPlaying();
-  if (currentIdx >= allBtns.length) { currentIdx = -1; return; }
-  const btn = allBtns[currentIdx];
+function playFilteredStep() {
+  if (!currentFilteredList || filteredIdx < 0 || filteredIdx >= currentFilteredList.length) {
+    clearPlaying();
+    currentFilteredList = null;
+    filteredIdx = -1;
+    return;
+  }
+  const btn = currentFilteredList[filteredIdx];
   const audio = document.getElementById('main-audio');
-  audio.src = btn.dataset.src;
+  if (repeatCount === 0) {
+    document.querySelectorAll('.audio-btn.playing').forEach(b => b.classList.remove('playing'));
+    scrollToBtn(btn);
+  }
   btn.classList.add('playing');
-  scrollToBtn(btn);
-  document.getElementById('now-playing').textContent = labelOf(btn);
+  document.getElementById('now-playing').textContent = `${labelOf(btn)} (${repeatCount + 1}/${REPEAT_COUNT})`;
+  audio.src = btn.dataset.src;
+  audio.currentTime = 0;
   audio.play();
   audio.onended = () => {
-    btn.classList.remove('playing');
-    currentIdx++;
-    if (currentIdx < allBtns.length) {
-      shadowTimer = setTimeout(playNext, SHADOW_DELAY);
+    repeatCount++;
+    if (repeatCount < REPEAT_COUNT) {
+      shadowTimer = setTimeout(playFilteredStep, SHADOW_DELAY);
     } else {
-      currentIdx = -1;
-      document.getElementById('now-playing').textContent = '';
+      btn.classList.remove('playing');
+      repeatCount = 0;
+      filteredIdx++;
+      if (filteredIdx < currentFilteredList.length) {
+        shadowTimer = setTimeout(playFilteredStep, SHADOW_DELAY);
+      } else {
+        filteredIdx = -1;
+        currentFilteredList = null;
+        document.getElementById('now-playing').textContent = '';
+      }
     }
-  };
-}
-
-function playNextFiltered(list) {
-  clearPlaying();
-  if (!list.length) return;
-  const btn = list[0]; const rest = list.slice(1);
-  const audio = document.getElementById('main-audio');
-  audio.src = btn.dataset.src;
-  btn.classList.add('playing');
-  scrollToBtn(btn);
-  document.getElementById('now-playing').textContent = labelOf(btn);
-  audio.play();
-  audio.onended = () => {
-    btn.classList.remove('playing');
-    if (rest.length) shadowTimer = setTimeout(() => playNextFiltered(rest), SHADOW_DELAY);
-    else document.getElementById('now-playing').textContent = '';
   };
 }
 
 function stopAll() {
   clearPlaying();
   const audio = document.getElementById('main-audio');
-  audio.pause(); audio.src = '';
+  audio.onended = null;
+  audio.pause();
+  audio.src = '';
   currentIdx = -1;
+  filteredIdx = -1;
+  currentFilteredList = null;
+  repeatCount = 0;
 }
 
 document.addEventListener('DOMContentLoaded', collectBtns);
