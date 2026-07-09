@@ -57,18 +57,18 @@
       "text": "Hey, do you have a minute?",
       "example": "Hey, do you have a minute to look at something?",
       "translation_vi": "Này, bạn có rảnh một chút để xem cái này không?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_041667c171cd.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a19bb194e9d1.mp3",
       "phrases": [
         {
           "text": "Hey, do you have a minute",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e3da076d99f7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d5049312659.mp3"
         },
         {
           "text": "to look at something?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd24915f0196.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_97db9ef4e929.mp3"
         }
       ]
     },
@@ -78,18 +78,18 @@
       "text": "Could you help me with something?",
       "example": "Could you help me with something for a few minutes?",
       "translation_vi": "Bạn có thể giúp tôi một việc trong vài phút không?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee7274292427.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_108b26887de4.mp3",
       "phrases": [
         {
           "text": "Could you help me with something",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_64c32f0d9346.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8150a83a11c0.mp3"
         },
         {
           "text": "for a few minutes?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b341fe2ab41.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_620fca66f991.mp3"
         }
       ]
     },
@@ -99,18 +99,18 @@
       "text": "I'm stuck on a problem.",
       "example": "I'm stuck on a problem and could use another perspective.",
       "translation_vi": "Tôi đang bị kẹt với một vấn đề và cần một góc nhìn khác.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e171cf9385c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_46157e2de601.mp3",
       "phrases": [
         {
           "text": "I'm stuck on a problem",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0507a21e77d4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_89339e593884.mp3"
         },
         {
           "text": "and could use another perspective.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_204bdbe5408c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fa03cc314eeb.mp3"
         }
       ]
     },
@@ -120,18 +120,18 @@
       "text": "Are you free to pair for a bit?",
       "example": "Are you free to pair for a bit on this issue?",
       "translation_vi": "Bạn có rảnh để pair một chút về vấn đề này không?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_46aabd9b31b5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4ff17727c32c.mp3",
       "phrases": [
         {
           "text": "Are you free to pair for a bit",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f857a7dffcfb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fba7578eab3a.mp3"
         },
         {
           "text": "on this issue?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec75ae442e7d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3217a3a7040e.mp3"
         }
       ]
     },
@@ -141,18 +141,18 @@
       "text": "Can I grab you for a quick screen share?",
       "example": "Can I grab you for a quick screen share? I'm running into an error.",
       "translation_vi": "Tôi nhờ bạn share màn hình một lát được không? Tôi đang gặp lỗi.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4c7210c8df89.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_099c769fe97b.mp3",
       "phrases": [
         {
           "text": "Can I grab you for a quick screen share?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0a21754cc13a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_430ca6aa1a4d.mp3"
         },
         {
           "text": "I'm running into an error.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a44c0ff150e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4b34b75dca95.mp3"
         }
       ]
     },
@@ -162,18 +162,18 @@
       "text": "I'm trying to...",
       "example": "I'm trying to implement the chat history feature.",
       "translation_vi": "Tôi đang cố gắng implement tính năng lịch sử chat.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e47e0274c9a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_20f8e8d2604f.mp3",
       "phrases": [
         {
           "text": "I'm trying to implement",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f5a9117ddef.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4ed19364fdf5.mp3"
         },
         {
           "text": "the chat history feature.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_636109be5905.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f14d8df1a1be.mp3"
         }
       ]
     },
@@ -183,18 +183,18 @@
       "text": "The issue is that...",
       "example": "The issue is that the embedding service returns a 503 error.",
       "translation_vi": "Vấn đề là embedding service trả về lỗi 503.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_18104c03bbb2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ea97bdbe7630.mp3",
       "phrases": [
         {
           "text": "The issue is that",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_141c3776769e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_098a92723e81.mp3"
         },
         {
           "text": "the embedding service returns a 503 error.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cbf4733f77de.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8352f2f269b7.mp3"
         }
       ]
     },
@@ -204,23 +204,23 @@
       "text": "The error message says...",
       "example": "The error message says 'connection refused' when I call the API.",
       "translation_vi": "Thông báo lỗi ghi 'kết nối bị từ chối' khi tôi gọi API.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eceed1c0378c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_34bebbbee303.mp3",
       "phrases": [
         {
           "text": "The error message says",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a97fb004a7d8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_34d5580b1866.mp3"
         },
         {
           "text": "'connection refused'",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dc448f74f311.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_063ff4d9f0c4.mp3"
         },
         {
           "text": "when I call the API.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_142cc67357e3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9b6729b86c7c.mp3"
         }
       ]
     },
@@ -230,23 +230,23 @@
       "text": "It works on my machine but fails in staging.",
       "example": "It works on my machine but fails in staging. Not sure what's different.",
       "translation_vi": "Nó chạy được trên máy tôi nhưng bị lỗi trên staging. Không chắc khác gì.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b46d701d6178.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_157955b889da.mp3",
       "phrases": [
         {
           "text": "It works on my machine",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_89c123e03519.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_eb1c811d62bf.mp3"
         },
         {
           "text": "but fails in staging.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a6ec0a57cd5c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ec7908259b45.mp3"
         },
         {
           "text": "Not sure what's different.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_076a530b455f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_612bd132281f.mp3"
         }
       ]
     },
@@ -256,23 +256,23 @@
       "text": "I've already tried...",
       "example": "I've already tried restarting the service and clearing the cache.",
       "translation_vi": "Tôi đã thử restart service và xóa cache rồi.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2d63078d9d2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_81347976b09e.mp3",
       "phrases": [
         {
           "text": "I've already tried",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e7b18c9488d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_293f0370338e.mp3"
         },
         {
           "text": "restarting the service",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e67ebaaaa880.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_69f8ac68d870.mp3"
         },
         {
           "text": "and clearing the cache.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8f414f268ffb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b6ba34179366.mp3"
         }
       ]
     },
@@ -282,18 +282,18 @@
       "text": "Let me share my screen.",
       "example": "Let me share my screen so you can see what I'm seeing.",
       "translation_vi": "Để tôi share màn hình để bạn thấy những gì tôi thấy.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7b0f3760fe48.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3b33641aedf.mp3",
       "phrases": [
         {
           "text": "Let me share my screen",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a077fa3a4665.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2cae57287903.mp3"
         },
         {
           "text": "so you can see what I'm seeing.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4dede1c95a7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_09c9930afa7b.mp3"
         }
       ]
     },
@@ -303,18 +303,18 @@
       "text": "I'll show you the code.",
       "example": "I'll show you the relevant part of the code.",
       "translation_vi": "Tôi sẽ cho bạn xem phần code liên quan.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_827dcbfbe3fa.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_465b7ddffaf5.mp3",
       "phrases": [
         {
           "text": "I'll show you",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a3296fd8bad4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_25a117ba309f.mp3"
         },
         {
           "text": "the relevant part of the code.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_50204bb16f29.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d2d5c4ecb63a.mp3"
         }
       ]
     },
@@ -324,18 +324,18 @@
       "text": "Here's the stack trace.",
       "example": "Here's the stack trace from the last run.",
       "translation_vi": "Đây là stack trace từ lần chạy cuối.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc6aca103503.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a7ed1e9fb623.mp3",
       "phrases": [
         {
           "text": "Here's the stack trace",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_94c0269efe19.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_57e046d326b7.mp3"
         },
         {
           "text": "from the last run.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bbe8497fc1f8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_429697eeb4d6.mp3"
         }
       ]
     },
@@ -345,18 +345,18 @@
       "text": "Let me walk you through the flow.",
       "example": "Let me walk you through the flow step by step.",
       "translation_vi": "Để tôi dẫn bạn qua luồng xử lý từng bước.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_17a6d183562e.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c9befb0fe80.mp3",
       "phrases": [
         {
           "text": "Let me walk you through the flow",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_12f829dde063.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cc51266966b4.mp3"
         },
         {
           "text": "step by step.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_365edff7ba41.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6b33987e6879.mp3"
         }
       ]
     },
@@ -366,18 +366,18 @@
       "text": "This is the function that's failing.",
       "example": "This is the function that's failing when I pass in a long input.",
       "translation_vi": "Đây là hàm bị lỗi khi tôi truyền input dài.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df690a26567e.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_56d65423c0dd.mp3",
       "phrases": [
         {
           "text": "This is the function that's failing",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_41296c9d1d44.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_18f4e775de06.mp3"
         },
         {
           "text": "when I pass in a long input.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f644589fa0c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f7c50955fa76.mp3"
         }
       ]
     },
@@ -387,18 +387,18 @@
       "text": "What if we try...",
       "example": "What if we try increasing the timeout value?",
       "translation_vi": "Nếu chúng ta thử tăng giá trị timeout thì sao?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_187eda0ff985.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_92cc8185e0b9.mp3",
       "phrases": [
         {
           "text": "What if we try",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7501b9228617.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7b0ff121bde2.mp3"
         },
         {
           "text": "increasing the timeout value?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_28e6a6256a88.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6fce5703f905.mp3"
         }
       ]
     },
@@ -408,18 +408,18 @@
       "text": "Maybe the issue is...",
       "example": "Maybe the issue is that the token limit is too low.",
       "translation_vi": "Có thể vấn đề là giới hạn token quá thấp.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab4a6c1e08de.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9ad385d2860e.mp3",
       "phrases": [
         {
           "text": "Maybe the issue is that",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_652a53acafde.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_893f611a7f0c.mp3"
         },
         {
           "text": "the token limit is too low.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df5fecb54fa4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9421892ee977.mp3"
         }
       ]
     },
@@ -429,18 +429,18 @@
       "text": "Let's check the logs.",
       "example": "Let's check the logs to see what happened before the crash.",
       "translation_vi": "Hãy kiểm tra log để xem chuyện gì xảy ra trước khi crash.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec2534ad8afa.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3a20b1580619.mp3",
       "phrases": [
         {
           "text": "Let's check the logs",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_60e876438d8e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_634a87aef97e.mp3"
         },
         {
           "text": "to see what happened before the crash.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4d6cbf2e8285.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7a5c8f7f2949.mp3"
         }
       ]
     },
@@ -450,18 +450,18 @@
       "text": "Have you considered...?",
       "example": "Have you considered using a different embedding model?",
       "translation_vi": "Bạn đã cân nhắc dùng một embedding model khác chưa?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_12cdf1f42c3e.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d99667cffcc.mp3",
       "phrases": [
         {
           "text": "Have you considered",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_befe3bf35e8b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6c8c32c6e574.mp3"
         },
         {
           "text": "using a different embedding model?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eba8fdc5ce24.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0d061b7043ba.mp3"
         }
       ]
     },
@@ -471,18 +471,18 @@
       "text": "I wonder if the config is wrong.",
       "example": "I wonder if the config is wrong for the vector database.",
       "translation_vi": "Tôi tự hỏi liệu config có sai cho vector database không.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_094f7005890c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d8a2dce5432d.mp3",
       "phrases": [
         {
           "text": "I wonder if the config is wrong",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_59719a822bb3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0a7eb5c71a17.mp3"
         },
         {
           "text": "for the vector database.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f516ac1b69f4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_20f1fe155ce3.mp3"
         }
       ]
     },
@@ -492,23 +492,23 @@
       "text": "How about we...",
       "example": "How about we add a retry mechanism with exponential backoff?",
       "translation_vi": "Hay là chúng ta thêm cơ chế retry với exponential backoff?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b95290cd75ba.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_06d6957540c9.mp3",
       "phrases": [
         {
           "text": "How about we add",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4ea4e0f7c91c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1ff12462281e.mp3"
         },
         {
           "text": "a retry mechanism",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a097c4d243f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4083df8aa02f.mp3"
         },
         {
           "text": "with exponential backoff?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e1ef8fa64c7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_33a0d55872f3.mp3"
         }
       ]
     },
@@ -518,23 +518,23 @@
       "text": "My suggestion is to...",
       "example": "My suggestion is to refactor the agent workflow into smaller steps.",
       "translation_vi": "Gợi ý của tôi là refactor agent workflow thành các bước nhỏ hơn.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e79012ae862c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ebd724268cdb.mp3",
       "phrases": [
         {
           "text": "My suggestion is to refactor",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b0864bff2c5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ac0859d62f4f.mp3"
         },
         {
           "text": "the agent workflow",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b48b3e61f9d1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d25981d69d53.mp3"
         },
         {
           "text": "into smaller steps.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd912a3dba7d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8a8bdc480cbf.mp3"
         }
       ]
     },
@@ -544,18 +544,18 @@
       "text": "Let's try...",
       "example": "Let's try reproducing the issue in a minimal test case.",
       "translation_vi": "Hãy thử tái tạo vấn đề với một test case tối giản.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_538689f61d52.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_843987163840.mp3",
       "phrases": [
         {
           "text": "Let's try reproducing the issue",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d37c4b9167cf.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d6160c012615.mp3"
         },
         {
           "text": "in a minimal test case.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67c98f64c2b9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_57cf58e7fd3c.mp3"
         }
       ]
     },
@@ -565,23 +565,23 @@
       "text": "I think we should...",
       "example": "I think we should add more logging to trace the latency.",
       "translation_vi": "Tôi nghĩ chúng ta nên thêm log nhiều hơn để theo dõi độ trễ.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_681e52506ed5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a0c576303062.mp3",
       "phrases": [
         {
           "text": "I think we should add",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df276e0fe994.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a7b15adfddb3.mp3"
         },
         {
           "text": "more logging",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6694e96d633f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5f53bb04dabc.mp3"
         },
         {
           "text": "to trace the latency.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_643af170801e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3f41311ad592.mp3"
         }
       ]
     },
@@ -591,23 +591,23 @@
       "text": "What do you think about...?",
       "example": "What do you think about using an MCP server for the tool calls?",
       "translation_vi": "Bạn nghĩ sao về việc dùng MCP server cho các tool calls?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_699ff2fb00c3.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_57be2f68bc53.mp3",
       "phrases": [
         {
           "text": "What do you think about",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c251778b81f1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ffabea8c0322.mp3"
         },
         {
           "text": "using an MCP server",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_443141f9239e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_59eb85a28c10.mp3"
         },
         {
           "text": "for the tool calls?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_245e9b17a643.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_25d9804b8ec2.mp3"
         }
       ]
     },
@@ -617,18 +617,18 @@
       "text": "I'll take care of...",
       "example": "I'll take care of fixing the config, you handle the test updates.",
       "translation_vi": "Tôi sẽ xử lý sửa config, bạn lo phần cập nhật test.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_365ff856a580.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2ad32891f346.mp3",
       "phrases": [
         {
           "text": "I'll take care of fixing the config,",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b7e93d3390c2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d9b5b453a4c7.mp3"
         },
         {
           "text": "you handle the test updates.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_37a003154213.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_533c4ba9adff.mp3"
         }
       ]
     },
@@ -638,18 +638,18 @@
       "text": "Can you work on...?",
       "example": "Can you work on the frontend while I debug the backend?",
       "translation_vi": "Bạn làm phần frontend trong khi tôi debug backend nhé?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8b1ae82bbc31.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_37145d993e89.mp3",
       "phrases": [
         {
           "text": "Can you work on the frontend",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23efc3b46b2f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_98fef953f2c7.mp3"
         },
         {
           "text": "while I debug the backend?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c43443bf754e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_14afb55846be.mp3"
         }
       ]
     },
@@ -659,23 +659,23 @@
       "text": "Let's split this into two tasks.",
       "example": "Let's split this into two tasks: investigate the error and patch the code.",
       "translation_vi": "Hãy chia việc này thành hai task: điều tra lỗi và vá code.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_64ce0d88ee75.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f6cfba8ff3fe.mp3",
       "phrases": [
         {
           "text": "Let's split this into two tasks:",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_10f45d5b99e7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_51216c44aca2.mp3"
         },
         {
           "text": "investigate the error",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac0a502f3022.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d56ac3cbbb4.mp3"
         },
         {
           "text": "and patch the code.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_84ca46dc1a0c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_71f99b4c5216.mp3"
         }
       ]
     },
@@ -685,18 +685,18 @@
       "text": "You can start with...",
       "example": "You can start with the unit tests, and I'll refactor the main logic.",
       "translation_vi": "Bạn bắt đầu với unit test, tôi sẽ refactor logic chính.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3c20a04f6a9c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b9f66387e29a.mp3",
       "phrases": [
         {
           "text": "You can start with the unit tests,",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9131260a89c6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f0f2a2e290d1.mp3"
         },
         {
           "text": "and I'll refactor the main logic.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7db765961e24.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ca02cf991d84.mp3"
         }
       ]
     },
@@ -706,18 +706,18 @@
       "text": "Let's pair on the tricky part first.",
       "example": "Let's pair on the tricky part first, then split the rest.",
       "translation_vi": "Hãy pair phần khó trước, sau đó chia phần còn lại.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5f3519c600d9.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_efc4fd670fc0.mp3",
       "phrases": [
         {
           "text": "Let's pair on the tricky part first,",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b955d03d17b0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7e140ee2fe6f.mp3"
         },
         {
           "text": "then split the rest.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b8e590e650f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bd9dabfd47f9.mp3"
         }
       ]
     },
@@ -727,18 +727,18 @@
       "text": "Thanks for your help.",
       "example": "Thanks for your help, I think we found the root cause.",
       "translation_vi": "Cảm ơn bạn đã giúp đỡ, tôi nghĩ chúng ta đã tìm ra nguyên nhân gốc.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8dd5ab336bb8.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_113e36492e69.mp3",
       "phrases": [
         {
           "text": "Thanks for your help,",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b3bf2c168ad.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5c9933185d10.mp3"
         },
         {
           "text": "I think we found the root cause.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7148f9ea8f44.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5aae9d5060d6.mp3"
         }
       ]
     },
@@ -748,18 +748,18 @@
       "text": "That makes sense now.",
       "example": "That makes sense now. I can take it from here.",
       "translation_vi": "Bây giờ đã rõ rồi. Tôi có thể tự xử lý tiếp.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fe573870d002.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fca5cc8237d1.mp3",
       "phrases": [
         {
           "text": "That makes sense now.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8eb84fde8b0e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4d96acde43e3.mp3"
         },
         {
           "text": "I can take it from here.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a0a1904fc3e5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5615adaa3572.mp3"
         }
       ]
     },
@@ -769,18 +769,18 @@
       "text": "I really appreciate your time.",
       "example": "I really appreciate your time on this.",
       "translation_vi": "Tôi thực sự cảm kích thời gian bạn dành cho việc này.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b700f0697976.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_26704d81b2c2.mp3",
       "phrases": [
         {
           "text": "I really appreciate your time",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dce387457b6f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3d649191840c.mp3"
         },
         {
           "text": "on this.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9aa17c4b9622.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_20b49555cc92.mp3"
         }
       ]
     },
@@ -790,18 +790,18 @@
       "text": "I'll let you know how it goes.",
       "example": "I'll let you know how it goes after I deploy the fix.",
       "translation_vi": "Tôi sẽ cho bạn biết kết quả sau khi deploy bản sửa.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e14dce96fbfa.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4d49f3136af3.mp3",
       "phrases": [
         {
           "text": "I'll let you know how it goes",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_88f1542dd723.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_42310bb99243.mp3"
         },
         {
           "text": "after I deploy the fix.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_09952ba0dda4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_528561d9d5a0.mp3"
         }
       ]
     },
@@ -811,18 +811,18 @@
       "text": "Happy to return the favor anytime.",
       "example": "Happy to return the favor anytime you need a second pair of eyes.",
       "translation_vi": "Sẵn sàng giúp lại bạn bất cứ lúc nào cần thêm một đôi mắt.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0ff6d0f6f951.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cfec1a8570b8.mp3",
       "phrases": [
         {
           "text": "Happy to return the favor",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71da6beb6e22.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_81b15942b417.mp3"
         },
         {
           "text": "anytime you need a second pair of eyes.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_463789f74e88.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_57593d730527.mp3"
         }
       ]
     }
@@ -831,7 +831,7 @@
     {
       "id": "recall-01",
       "prompt": "How do you start asking for help?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e83f9ac235a1.mp3",
       "accepted_patterns": [
         "Hey, do you have a minute",
         "Could you help me with",
@@ -844,7 +844,7 @@
     {
       "id": "recall-02",
       "prompt": "How do you explain the problem you're facing?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e89e757e6f1a.mp3",
       "accepted_patterns": [
         "I'm trying to",
         "The issue is that",
@@ -857,7 +857,7 @@
     {
       "id": "recall-03",
       "prompt": "How do you share context with your partner?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3eb39ad5706a.mp3",
       "accepted_patterns": [
         "Let me share my screen",
         "I'll show you the code",
@@ -870,7 +870,7 @@
     {
       "id": "recall-04",
       "prompt": "How do you think out loud during pairing?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f1d8d8ca7604.mp3",
       "accepted_patterns": [
         "What if we try",
         "Maybe the issue is",
@@ -883,7 +883,7 @@
     {
       "id": "recall-05",
       "prompt": "How do you propose a solution?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0d5b7a1370d5.mp3",
       "accepted_patterns": [
         "How about we",
         "My suggestion is to",
@@ -896,7 +896,7 @@
     {
       "id": "recall-06",
       "prompt": "How do you split the work?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eea414d4d793.mp3",
       "accepted_patterns": [
         "I'll take care of",
         "Can you work on",
@@ -909,7 +909,7 @@
     {
       "id": "recall-07",
       "prompt": "How do you wrap up and thank your partner?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_512450f7037c.mp3",
       "accepted_patterns": [
         "Thanks for your help",
         "That makes sense now",
@@ -930,17 +930,17 @@
           "role": "Engineer",
           "text": "Hey, do you have a minute to look at something?",
           "translation_vi": "Này, bạn có rảnh một chút để xem cái này không?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_041667c171cd.mp3",
           "phrases": [
             {
               "text": "Hey, do you have a minute",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e3da076d99f7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d5049312659.mp3"
             },
             {
               "text": "to look at something?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd24915f0196.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_97db9ef4e929.mp3"
             }
           ]
         },
@@ -948,28 +948,28 @@
           "role": "Colleague",
           "text": "Sure, what's up?",
           "translation_vi": "Ừ, có chuyện gì vậy?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e2ed2f172690.mp3"
         },
         {
           "role": "Engineer",
           "text": "I'm stuck on a problem with the RAG pipeline. The embedding service keeps timing out.",
           "translation_vi": "Tôi đang bị kẹt với RAG pipeline. Embedding service cứ bị timeout.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2639f3b99406.mp3",
           "phrases": [
             {
               "text": "I'm stuck on a problem",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0507a21e77d4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_89339e593884.mp3"
             },
             {
               "text": "with the RAG pipeline.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_236713040b42.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0f240d792516.mp3"
             },
             {
               "text": "The embedding service keeps timing out.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4d6e12af8842.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e901d9333cfe.mp3"
             }
           ]
         },
@@ -977,28 +977,28 @@
           "role": "Colleague",
           "text": "Have you tried increasing the timeout?",
           "translation_vi": "Bạn đã thử tăng timeout chưa?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b11ea0ab150d.mp3"
         },
         {
           "role": "Engineer",
           "text": "Yes, but it still fails with large inputs. Let me share my screen.",
           "translation_vi": "Rồi, nhưng nó vẫn lỗi với input lớn. Để tôi share màn hình.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e521d107aa24.mp3",
           "phrases": [
             {
               "text": "Yes, but it still fails",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_78a3f3cbadf8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dca2e84d5ee6.mp3"
             },
             {
               "text": "with large inputs.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e21fdced983a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ec632396a1b9.mp3"
             },
             {
               "text": "Let me share my screen.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_19cc5a0aebcb.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2271a37ebd90.mp3"
             }
           ]
         },
@@ -1006,17 +1006,17 @@
           "role": "Colleague",
           "text": "Okay, I see the code. Maybe we should check the token limit.",
           "translation_vi": "Ok, tôi thấy code rồi. Có lẽ chúng ta nên kiểm tra giới hạn token.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_749e4521e19a.mp3",
           "phrases": [
             {
               "text": "Okay, I see the code.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7be4a24808f0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_47ae51cb3be8.mp3"
             },
             {
               "text": "Maybe we should check the token limit.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_931ac47f3fc2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_25093311daa7.mp3"
             }
           ]
         },
@@ -1024,22 +1024,22 @@
           "role": "Engineer",
           "text": "Good idea. What if we add a retry with exponential backoff?",
           "translation_vi": "Ý hay đó. Nếu chúng ta thêm retry với exponential backoff thì sao?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2e9e4f60e7a2.mp3",
           "phrases": [
             {
               "text": "Good idea.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_60f47e2ba681.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cf00aaf9d830.mp3"
             },
             {
               "text": "What if we add a retry",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d1bef83dec96.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_db403fbba7fa.mp3"
             },
             {
               "text": "with exponential backoff?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e1ef8fa64c7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_33a0d55872f3.mp3"
             }
           ]
         },
@@ -1047,22 +1047,22 @@
           "role": "Colleague",
           "text": "That could work. Let's split the work: I'll implement the retry, you test it.",
           "translation_vi": "Có thể đấy. Chia việc nhé: tôi implement retry, bạn test nó.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_102ded288bc1.mp3",
           "phrases": [
             {
               "text": "That could work.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c17efa990090.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_439235cd842d.mp3"
             },
             {
               "text": "Let's split the work:",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8a17b5e22b63.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aa93c0224f0b.mp3"
             },
             {
               "text": "I'll implement the retry, you test it.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d30f5257d031.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_eafa75db5763.mp3"
             }
           ]
         },
@@ -1070,13 +1070,13 @@
           "role": "Engineer",
           "text": "Sounds good. Thanks for your help!",
           "translation_vi": "Ổn đó. Cảm ơn bạn đã giúp!",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_601fb965e69b.mp3"
         },
         {
           "role": "Colleague",
           "text": "No problem. Let me know how it goes.",
           "translation_vi": "Không có gì. Cho tôi biết kết quả nhé.",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3af084233b93.mp3"
         }
       ]
     },
@@ -1089,17 +1089,17 @@
           "role": "Engineer",
           "text": "I'm trying to fix this bug in the agent workflow.",
           "translation_vi": "Tôi đang cố gắng sửa lỗi này trong agent workflow.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4ac10c4f1b04.mp3",
           "phrases": [
             {
               "text": "I'm trying to fix this bug",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_abd2447ca971.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5e5bd179e78f.mp3"
             },
             {
               "text": "in the agent workflow.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7bb8a7694d4a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e3dfe7437c33.mp3"
             }
           ]
         },
@@ -1107,28 +1107,28 @@
           "role": "Tech Lead",
           "text": "What's the error?",
           "translation_vi": "Lỗi gì thế?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d2179ca8b09b.mp3"
         },
         {
           "role": "Engineer",
           "text": "The error message says 'MCP tool call failed' when the context is too long.",
           "translation_vi": "Thông báo lỗi ghi 'MCP tool call failed' khi ngữ cảnh quá dài.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_28dd81b26178.mp3",
           "phrases": [
             {
               "text": "The error message says",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a97fb004a7d8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_34d5580b1866.mp3"
             },
             {
               "text": "'MCP tool call failed'",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cc2f1dc87992.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f06db8f93a45.mp3"
             },
             {
               "text": "when the context is too long.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_16f62214735b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c432a0f6c21.mp3"
             }
           ]
         },
@@ -1136,17 +1136,17 @@
           "role": "Tech Lead",
           "text": "Let's check the logs. Can you share the stack trace?",
           "translation_vi": "Hãy kiểm tra log. Bạn gửi stack trace được không?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b1ace9e7a9a3.mp3",
           "phrases": [
             {
               "text": "Let's check the logs.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b99bdd86d7a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_65985007dc36.mp3"
             },
             {
               "text": "Can you share the stack trace?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_78e19a649dc6.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_448c9917c8ab.mp3"
             }
           ]
         },
@@ -1154,22 +1154,22 @@
           "role": "Engineer",
           "text": "Sure, here it is. I've already tried chunking the input, but it still fails.",
           "translation_vi": "Được, đây ạ. Tôi đã thử chunk input rồi, nhưng vẫn lỗi.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2c0c2c051b05.mp3",
           "phrases": [
             {
               "text": "Sure, here it is.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7dafa5a1c740.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5c9be59f066e.mp3"
             },
             {
               "text": "I've already tried chunking the input,",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dfa00385cf25.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_140fcbef6d1f.mp3"
             },
             {
               "text": "but it still fails.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e6de43f76bfd.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_49bed098ea56.mp3"
             }
           ]
         },
@@ -1177,22 +1177,22 @@
           "role": "Tech Lead",
           "text": "I see. Have you considered using a different approach for context management?",
           "translation_vi": "Tôi thấy rồi. Bạn đã cân nhắc dùng cách tiếp cận khác cho quản lý ngữ cảnh chưa?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d8abf4452457.mp3",
           "phrases": [
             {
               "text": "I see.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5471bbcac05a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_50483e06afcd.mp3"
             },
             {
               "text": "Have you considered using a different approach",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2996f4d4a0d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_97461dd4dfa1.mp3"
             },
             {
               "text": "for context management?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5a1522c914c1.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7dad459fff3c.mp3"
             }
           ]
         },
@@ -1200,23 +1200,23 @@
           "role": "Engineer",
           "text": "Not yet. What do you suggest?",
           "translation_vi": "Chưa. Bạn gợi ý gì?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a383976dc8f2.mp3"
         },
         {
           "role": "Tech Lead",
           "text": "How about we use a sliding window? Keep only the last few messages.",
           "translation_vi": "Hay là chúng ta dùng sliding window? Chỉ giữ vài tin nhắn cuối.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1d046ad27f4e.mp3",
           "phrases": [
             {
               "text": "How about we use a sliding window?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1fe424c995a7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_419f96c7e452.mp3"
             },
             {
               "text": "Keep only the last few messages.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2cf92ceb6e6c.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2ed299dc4d9a.mp3"
             }
           ]
         },
@@ -1224,17 +1224,17 @@
           "role": "Engineer",
           "text": "That makes sense. Let's pair on implementing it.",
           "translation_vi": "Hợp lý đấy. Hãy cùng pair implement nó.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b298e973eb1.mp3",
           "phrases": [
             {
               "text": "That makes sense.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_544a23bb7265.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_35d089c25e69.mp3"
             },
             {
               "text": "Let's pair on implementing it.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_07ae5e363b8b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_020980f350de.mp3"
             }
           ]
         },
@@ -1242,22 +1242,22 @@
           "role": "Tech Lead",
           "text": "Alright. I'll write the logic, you write the tests.",
           "translation_vi": "Được rồi. Tôi viết logic, bạn viết test.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9212319f950c.mp3",
           "phrases": [
             {
               "text": "Alright.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_97ae6a4cb0bf.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ac187080b994.mp3"
             },
             {
               "text": "I'll write the logic,",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_789cd9ebe819.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_60629521b97d.mp3"
             },
             {
               "text": "you write the tests.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4d486bb900ac.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_11b102199d30.mp3"
             }
           ]
         },
@@ -1265,7 +1265,7 @@
           "role": "Engineer",
           "text": "Perfect. Thanks a lot for your time!",
           "translation_vi": "Tuyệt vời. Cảm ơn bạn rất nhiều!",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e545b99668c1.mp3"
         }
       ]
     }
