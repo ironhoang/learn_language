@@ -1,0 +1,813 @@
+{
+  "meta": {
+    "id": "pair-programming",
+    "title": "Asking for Help / Pair Programming",
+    "title_vi": "Nhờ giúp đỡ / Lập trình cặp đôi",
+    "description": "Learn how to ask a teammate for help, explain your problem, share context, and work together to solve it.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "team-communication",
+    "tags": ["pair-programming", "asking-for-help", "collaboration"]
+  },
+  "nodes": [
+    {
+      "id": "initiate-help",
+      "label": "Initiate Help Request",
+      "label_vi": "Bắt đầu nhờ giúp đỡ"
+    },
+    {
+      "id": "explain-problem",
+      "label": "Explain the Problem",
+      "label_vi": "Giải thích vấn đề"
+    },
+    {
+      "id": "share-context",
+      "label": "Share Context / Screen",
+      "label_vi": "Chia sẻ ngữ cảnh / màn hình"
+    },
+    {
+      "id": "think-aloud",
+      "label": "Think Out Loud",
+      "label_vi": "Suy nghĩ thành tiếng"
+    },
+    {
+      "id": "propose-solution",
+      "label": "Propose a Solution",
+      "label_vi": "Đề xuất giải pháp"
+    },
+    {
+      "id": "split-work",
+      "label": "Split the Work",
+      "label_vi": "Phân chia công việc"
+    },
+    {
+      "id": "wrap-up",
+      "label": "Wrap Up and Thank",
+      "label_vi": "Kết thúc và cảm ơn"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "initiate-01",
+      "node_id": "initiate-help",
+      "text": "Hey, do you have a minute?",
+      "example": "Hey, do you have a minute to look at something?",
+      "translation_vi": "Này, bạn có rảnh một chút để xem cái này không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Hey, do you have a minute", "audio": "", "audio_slow": ""},
+        {"text": "to look at something?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "initiate-02",
+      "node_id": "initiate-help",
+      "text": "Could you help me with something?",
+      "example": "Could you help me with something for a few minutes?",
+      "translation_vi": "Bạn có thể giúp tôi một việc trong vài phút không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you help me with something", "audio": "", "audio_slow": ""},
+        {"text": "for a few minutes?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "initiate-03",
+      "node_id": "initiate-help",
+      "text": "I'm stuck on a problem.",
+      "example": "I'm stuck on a problem and could use another perspective.",
+      "translation_vi": "Tôi đang bị kẹt với một vấn đề và cần một góc nhìn khác.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm stuck on a problem", "audio": "", "audio_slow": ""},
+        {"text": "and could use another perspective.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "initiate-04",
+      "node_id": "initiate-help",
+      "text": "Are you free to pair for a bit?",
+      "example": "Are you free to pair for a bit on this issue?",
+      "translation_vi": "Bạn có rảnh để pair một chút về vấn đề này không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Are you free to pair for a bit", "audio": "", "audio_slow": ""},
+        {"text": "on this issue?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "initiate-05",
+      "node_id": "initiate-help",
+      "text": "Can I grab you for a quick screen share?",
+      "example": "Can I grab you for a quick screen share? I'm running into an error.",
+      "translation_vi": "Tôi nhờ bạn share màn hình một lát được không? Tôi đang gặp lỗi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Can I grab you for a quick screen share?", "audio": "", "audio_slow": ""},
+        {"text": "I'm running into an error.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-01",
+      "node_id": "explain-problem",
+      "text": "I'm trying to...",
+      "example": "I'm trying to implement the chat history feature.",
+      "translation_vi": "Tôi đang cố gắng implement tính năng lịch sử chat.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm trying to implement", "audio": "", "audio_slow": ""},
+        {"text": "the chat history feature.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-02",
+      "node_id": "explain-problem",
+      "text": "The issue is that...",
+      "example": "The issue is that the embedding service returns a 503 error.",
+      "translation_vi": "Vấn đề là embedding service trả về lỗi 503.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The issue is that", "audio": "", "audio_slow": ""},
+        {"text": "the embedding service returns a 503 error.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-03",
+      "node_id": "explain-problem",
+      "text": "The error message says...",
+      "example": "The error message says 'connection refused' when I call the API.",
+      "translation_vi": "Thông báo lỗi ghi 'kết nối bị từ chối' khi tôi gọi API.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The error message says", "audio": "", "audio_slow": ""},
+        {"text": "'connection refused'", "audio": "", "audio_slow": ""},
+        {"text": "when I call the API.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-04",
+      "node_id": "explain-problem",
+      "text": "It works on my machine but fails in staging.",
+      "example": "It works on my machine but fails in staging. Not sure what's different.",
+      "translation_vi": "Nó chạy được trên máy tôi nhưng bị lỗi trên staging. Không chắc khác gì.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "It works on my machine", "audio": "", "audio_slow": ""},
+        {"text": "but fails in staging.", "audio": "", "audio_slow": ""},
+        {"text": "Not sure what's different.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-05",
+      "node_id": "explain-problem",
+      "text": "I've already tried...",
+      "example": "I've already tried restarting the service and clearing the cache.",
+      "translation_vi": "Tôi đã thử restart service và xóa cache rồi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I've already tried", "audio": "", "audio_slow": ""},
+        {"text": "restarting the service", "audio": "", "audio_slow": ""},
+        {"text": "and clearing the cache.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "share-01",
+      "node_id": "share-context",
+      "text": "Let me share my screen.",
+      "example": "Let me share my screen so you can see what I'm seeing.",
+      "translation_vi": "Để tôi share màn hình để bạn thấy những gì tôi thấy.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me share my screen", "audio": "", "audio_slow": ""},
+        {"text": "so you can see what I'm seeing.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "share-02",
+      "node_id": "share-context",
+      "text": "I'll show you the code.",
+      "example": "I'll show you the relevant part of the code.",
+      "translation_vi": "Tôi sẽ cho bạn xem phần code liên quan.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll show you", "audio": "", "audio_slow": ""},
+        {"text": "the relevant part of the code.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "share-03",
+      "node_id": "share-context",
+      "text": "Here's the stack trace.",
+      "example": "Here's the stack trace from the last run.",
+      "translation_vi": "Đây là stack trace từ lần chạy cuối.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Here's the stack trace", "audio": "", "audio_slow": ""},
+        {"text": "from the last run.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "share-04",
+      "node_id": "share-context",
+      "text": "Let me walk you through the flow.",
+      "example": "Let me walk you through the flow step by step.",
+      "translation_vi": "Để tôi dẫn bạn qua luồng xử lý từng bước.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me walk you through the flow", "audio": "", "audio_slow": ""},
+        {"text": "step by step.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "share-05",
+      "node_id": "share-context",
+      "text": "This is the function that's failing.",
+      "example": "This is the function that's failing when I pass in a long input.",
+      "translation_vi": "Đây là hàm bị lỗi khi tôi truyền input dài.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This is the function that's failing", "audio": "", "audio_slow": ""},
+        {"text": "when I pass in a long input.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "think-01",
+      "node_id": "think-aloud",
+      "text": "What if we try...",
+      "example": "What if we try increasing the timeout value?",
+      "translation_vi": "Nếu chúng ta thử tăng giá trị timeout thì sao?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What if we try", "audio": "", "audio_slow": ""},
+        {"text": "increasing the timeout value?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "think-02",
+      "node_id": "think-aloud",
+      "text": "Maybe the issue is...",
+      "example": "Maybe the issue is that the token limit is too low.",
+      "translation_vi": "Có thể vấn đề là giới hạn token quá thấp.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Maybe the issue is that", "audio": "", "audio_slow": ""},
+        {"text": "the token limit is too low.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "think-03",
+      "node_id": "think-aloud",
+      "text": "Let's check the logs.",
+      "example": "Let's check the logs to see what happened before the crash.",
+      "translation_vi": "Hãy kiểm tra log để xem chuyện gì xảy ra trước khi crash.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's check the logs", "audio": "", "audio_slow": ""},
+        {"text": "to see what happened before the crash.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "think-04",
+      "node_id": "think-aloud",
+      "text": "Have you considered...?",
+      "example": "Have you considered using a different embedding model?",
+      "translation_vi": "Bạn đã cân nhắc dùng một embedding model khác chưa?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Have you considered", "audio": "", "audio_slow": ""},
+        {"text": "using a different embedding model?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "think-05",
+      "node_id": "think-aloud",
+      "text": "I wonder if the config is wrong.",
+      "example": "I wonder if the config is wrong for the vector database.",
+      "translation_vi": "Tôi tự hỏi liệu config có sai cho vector database không.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I wonder if the config is wrong", "audio": "", "audio_slow": ""},
+        {"text": "for the vector database.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-01",
+      "node_id": "propose-solution",
+      "text": "How about we...",
+      "example": "How about we add a retry mechanism with exponential backoff?",
+      "translation_vi": "Hay là chúng ta thêm cơ chế retry với exponential backoff?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How about we add", "audio": "", "audio_slow": ""},
+        {"text": "a retry mechanism", "audio": "", "audio_slow": ""},
+        {"text": "with exponential backoff?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-02",
+      "node_id": "propose-solution",
+      "text": "My suggestion is to...",
+      "example": "My suggestion is to refactor the agent workflow into smaller steps.",
+      "translation_vi": "Gợi ý của tôi là refactor agent workflow thành các bước nhỏ hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "My suggestion is to refactor", "audio": "", "audio_slow": ""},
+        {"text": "the agent workflow", "audio": "", "audio_slow": ""},
+        {"text": "into smaller steps.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-03",
+      "node_id": "propose-solution",
+      "text": "Let's try...",
+      "example": "Let's try reproducing the issue in a minimal test case.",
+      "translation_vi": "Hãy thử tái tạo vấn đề với một test case tối giản.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's try reproducing the issue", "audio": "", "audio_slow": ""},
+        {"text": "in a minimal test case.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-04",
+      "node_id": "propose-solution",
+      "text": "I think we should...",
+      "example": "I think we should add more logging to trace the latency.",
+      "translation_vi": "Tôi nghĩ chúng ta nên thêm log nhiều hơn để theo dõi độ trễ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I think we should add", "audio": "", "audio_slow": ""},
+        {"text": "more logging", "audio": "", "audio_slow": ""},
+        {"text": "to trace the latency.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-05",
+      "node_id": "propose-solution",
+      "text": "What do you think about...?",
+      "example": "What do you think about using an MCP server for the tool calls?",
+      "translation_vi": "Bạn nghĩ sao về việc dùng MCP server cho các tool calls?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What do you think about", "audio": "", "audio_slow": ""},
+        {"text": "using an MCP server", "audio": "", "audio_slow": ""},
+        {"text": "for the tool calls?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "split-01",
+      "node_id": "split-work",
+      "text": "I'll take care of...",
+      "example": "I'll take care of fixing the config, you handle the test updates.",
+      "translation_vi": "Tôi sẽ xử lý sửa config, bạn lo phần cập nhật test.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll take care of fixing the config,", "audio": "", "audio_slow": ""},
+        {"text": "you handle the test updates.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "split-02",
+      "node_id": "split-work",
+      "text": "Can you work on...?",
+      "example": "Can you work on the frontend while I debug the backend?",
+      "translation_vi": "Bạn làm phần frontend trong khi tôi debug backend nhé?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Can you work on the frontend", "audio": "", "audio_slow": ""},
+        {"text": "while I debug the backend?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "split-03",
+      "node_id": "split-work",
+      "text": "Let's split this into two tasks.",
+      "example": "Let's split this into two tasks: investigate the error and patch the code.",
+      "translation_vi": "Hãy chia việc này thành hai task: điều tra lỗi và vá code.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's split this into two tasks:", "audio": "", "audio_slow": ""},
+        {"text": "investigate the error", "audio": "", "audio_slow": ""},
+        {"text": "and patch the code.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "split-04",
+      "node_id": "split-work",
+      "text": "You can start with...",
+      "example": "You can start with the unit tests, and I'll refactor the main logic.",
+      "translation_vi": "Bạn bắt đầu với unit test, tôi sẽ refactor logic chính.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "You can start with the unit tests,", "audio": "", "audio_slow": ""},
+        {"text": "and I'll refactor the main logic.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "split-05",
+      "node_id": "split-work",
+      "text": "Let's pair on the tricky part first.",
+      "example": "Let's pair on the tricky part first, then split the rest.",
+      "translation_vi": "Hãy pair phần khó trước, sau đó chia phần còn lại.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's pair on the tricky part first,", "audio": "", "audio_slow": ""},
+        {"text": "then split the rest.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-01",
+      "node_id": "wrap-up",
+      "text": "Thanks for your help.",
+      "example": "Thanks for your help, I think we found the root cause.",
+      "translation_vi": "Cảm ơn bạn đã giúp đỡ, tôi nghĩ chúng ta đã tìm ra nguyên nhân gốc.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thanks for your help,", "audio": "", "audio_slow": ""},
+        {"text": "I think we found the root cause.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-02",
+      "node_id": "wrap-up",
+      "text": "That makes sense now.",
+      "example": "That makes sense now. I can take it from here.",
+      "translation_vi": "Bây giờ đã rõ rồi. Tôi có thể tự xử lý tiếp.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "That makes sense now.", "audio": "", "audio_slow": ""},
+        {"text": "I can take it from here.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-03",
+      "node_id": "wrap-up",
+      "text": "I really appreciate your time.",
+      "example": "I really appreciate your time on this.",
+      "translation_vi": "Tôi thực sự cảm kích thời gian bạn dành cho việc này.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I really appreciate your time", "audio": "", "audio_slow": ""},
+        {"text": "on this.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-04",
+      "node_id": "wrap-up",
+      "text": "I'll let you know how it goes.",
+      "example": "I'll let you know how it goes after I deploy the fix.",
+      "translation_vi": "Tôi sẽ cho bạn biết kết quả sau khi deploy bản sửa.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll let you know how it goes", "audio": "", "audio_slow": ""},
+        {"text": "after I deploy the fix.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-05",
+      "node_id": "wrap-up",
+      "text": "Happy to return the favor anytime.",
+      "example": "Happy to return the favor anytime you need a second pair of eyes.",
+      "translation_vi": "Sẵn sàng giúp lại bạn bất cứ lúc nào cần thêm một đôi mắt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Happy to return the favor", "audio": "", "audio_slow": ""},
+        {"text": "anytime you need a second pair of eyes.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "How do you start asking for help?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Hey, do you have a minute",
+        "Could you help me with",
+        "I'm stuck on",
+        "Are you free to pair",
+        "Can I grab you for"
+      ],
+      "hint_vi": "Bắt đầu nhờ giúp đỡ như thế nào?"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "How do you explain the problem you're facing?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'm trying to",
+        "The issue is that",
+        "The error message says",
+        "It works on my machine but fails",
+        "I've already tried"
+      ],
+      "hint_vi": "Giải thích vấn đề bạn đang gặp"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "How do you share context with your partner?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Let me share my screen",
+        "I'll show you the code",
+        "Here's the stack trace",
+        "Let me walk you through",
+        "This is the function that's failing"
+      ],
+      "hint_vi": "Chia sẻ ngữ cảnh với người cùng pair"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "How do you think out loud during pairing?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "What if we try",
+        "Maybe the issue is",
+        "Let's check the logs",
+        "Have you considered",
+        "I wonder if"
+      ],
+      "hint_vi": "Suy nghĩ thành tiếng trong lúc pair"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "How do you propose a solution?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "How about we",
+        "My suggestion is to",
+        "Let's try",
+        "I think we should",
+        "What do you think about"
+      ],
+      "hint_vi": "Đề xuất giải pháp"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "How do you split the work?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'll take care of",
+        "Can you work on",
+        "Let's split this into",
+        "You can start with",
+        "Let's pair on the tricky part first"
+      ],
+      "hint_vi": "Phân chia công việc"
+    },
+    {
+      "id": "recall-07",
+      "prompt": "How do you wrap up and thank your partner?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Thanks for your help",
+        "That makes sense now",
+        "I really appreciate your time",
+        "I'll let you know how it goes",
+        "Happy to return the favor"
+      ],
+      "hint_vi": "Kết thúc và cảm ơn"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Asking a Colleague for Help",
+      "title_vi": "Nhờ đồng nghiệp giúp đỡ",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Hey, do you have a minute to look at something?",
+          "translation_vi": "Này, bạn có rảnh một chút để xem cái này không?",
+          "audio": "",
+          "phrases": [
+            {"text": "Hey, do you have a minute", "audio": "", "audio_slow": ""},
+            {"text": "to look at something?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Sure, what's up?",
+          "translation_vi": "Ừ, có chuyện gì vậy?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm stuck on a problem with the RAG pipeline. The embedding service keeps timing out.",
+          "translation_vi": "Tôi đang bị kẹt với RAG pipeline. Embedding service cứ bị timeout.",
+          "audio": "",
+          "phrases": [
+            {"text": "I'm stuck on a problem", "audio": "", "audio_slow": ""},
+            {"text": "with the RAG pipeline.", "audio": "", "audio_slow": ""},
+            {"text": "The embedding service keeps timing out.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Have you tried increasing the timeout?",
+          "translation_vi": "Bạn đã thử tăng timeout chưa?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Yes, but it still fails with large inputs. Let me share my screen.",
+          "translation_vi": "Rồi, nhưng nó vẫn lỗi với input lớn. Để tôi share màn hình.",
+          "audio": "",
+          "phrases": [
+            {"text": "Yes, but it still fails", "audio": "", "audio_slow": ""},
+            {"text": "with large inputs.", "audio": "", "audio_slow": ""},
+            {"text": "Let me share my screen.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Okay, I see the code. Maybe we should check the token limit.",
+          "translation_vi": "Ok, tôi thấy code rồi. Có lẽ chúng ta nên kiểm tra giới hạn token.",
+          "audio": "",
+          "phrases": [
+            {"text": "Okay, I see the code.", "audio": "", "audio_slow": ""},
+            {"text": "Maybe we should check the token limit.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Good idea. What if we add a retry with exponential backoff?",
+          "translation_vi": "Ý hay đó. Nếu chúng ta thêm retry với exponential backoff thì sao?",
+          "audio": "",
+          "phrases": [
+            {"text": "Good idea.", "audio": "", "audio_slow": ""},
+            {"text": "What if we add a retry", "audio": "", "audio_slow": ""},
+            {"text": "with exponential backoff?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "That could work. Let's split the work: I'll implement the retry, you test it.",
+          "translation_vi": "Có thể đấy. Chia việc nhé: tôi implement retry, bạn test nó.",
+          "audio": "",
+          "phrases": [
+            {"text": "That could work.", "audio": "", "audio_slow": ""},
+            {"text": "Let's split the work:", "audio": "", "audio_slow": ""},
+            {"text": "I'll implement the retry, you test it.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sounds good. Thanks for your help!",
+          "translation_vi": "Ổn đó. Cảm ơn bạn đã giúp!",
+          "audio": ""
+        },
+        {
+          "role": "Colleague",
+          "text": "No problem. Let me know how it goes.",
+          "translation_vi": "Không có gì. Cho tôi biết kết quả nhé.",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Pair Programming on a Bug",
+      "title_vi": "Lập trình cặp đôi sửa lỗi",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "I'm trying to fix this bug in the agent workflow.",
+          "translation_vi": "Tôi đang cố gắng sửa lỗi này trong agent workflow.",
+          "audio": "",
+          "phrases": [
+            {"text": "I'm trying to fix this bug", "audio": "", "audio_slow": ""},
+            {"text": "in the agent workflow.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What's the error?",
+          "translation_vi": "Lỗi gì thế?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "The error message says 'MCP tool call failed' when the context is too long.",
+          "translation_vi": "Thông báo lỗi ghi 'MCP tool call failed' khi ngữ cảnh quá dài.",
+          "audio": "",
+          "phrases": [
+            {"text": "The error message says", "audio": "", "audio_slow": ""},
+            {"text": "'MCP tool call failed'", "audio": "", "audio_slow": ""},
+            {"text": "when the context is too long.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Let's check the logs. Can you share the stack trace?",
+          "translation_vi": "Hãy kiểm tra log. Bạn gửi stack trace được không?",
+          "audio": "",
+          "phrases": [
+            {"text": "Let's check the logs.", "audio": "", "audio_slow": ""},
+            {"text": "Can you share the stack trace?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sure, here it is. I've already tried chunking the input, but it still fails.",
+          "translation_vi": "Được, đây ạ. Tôi đã thử chunk input rồi, nhưng vẫn lỗi.",
+          "audio": "",
+          "phrases": [
+            {"text": "Sure, here it is.", "audio": "", "audio_slow": ""},
+            {"text": "I've already tried chunking the input,", "audio": "", "audio_slow": ""},
+            {"text": "but it still fails.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I see. Have you considered using a different approach for context management?",
+          "translation_vi": "Tôi thấy rồi. Bạn đã cân nhắc dùng cách tiếp cận khác cho quản lý ngữ cảnh chưa?",
+          "audio": "",
+          "phrases": [
+            {"text": "I see.", "audio": "", "audio_slow": ""},
+            {"text": "Have you considered using a different approach", "audio": "", "audio_slow": ""},
+            {"text": "for context management?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Not yet. What do you suggest?",
+          "translation_vi": "Chưa. Bạn gợi ý gì?",
+          "audio": ""
+        },
+        {
+          "role": "Tech Lead",
+          "text": "How about we use a sliding window? Keep only the last few messages.",
+          "translation_vi": "Hay là chúng ta dùng sliding window? Chỉ giữ vài tin nhắn cuối.",
+          "audio": "",
+          "phrases": [
+            {"text": "How about we use a sliding window?", "audio": "", "audio_slow": ""},
+            {"text": "Keep only the last few messages.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "That makes sense. Let's pair on implementing it.",
+          "translation_vi": "Hợp lý đấy. Hãy cùng pair implement nó.",
+          "audio": "",
+          "phrases": [
+            {"text": "That makes sense.", "audio": "", "audio_slow": ""},
+            {"text": "Let's pair on implementing it.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Alright. I'll write the logic, you write the tests.",
+          "translation_vi": "Được rồi. Tôi viết logic, bạn viết test.",
+          "audio": "",
+          "phrases": [
+            {"text": "Alright.", "audio": "", "audio_slow": ""},
+            {"text": "I'll write the logic,", "audio": "", "audio_slow": ""},
+            {"text": "you write the tests.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Perfect. Thanks a lot for your time!",
+          "translation_vi": "Tuyệt vời. Cảm ơn bạn rất nhiều!",
+          "audio": ""
+        }
+      ]
+    }
+  ]
+}

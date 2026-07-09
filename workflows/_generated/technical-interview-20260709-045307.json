@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "id": "technical-interview",
+    "title": "Technical Interview",
+    "title_vi": "Phỏng vấn kỹ thuật",
+    "description": "Practice technical interview scenarios: explaining projects, problem-solving, answering follow-ups, and asking questions to the interviewer.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "career",
+    "tags": ["interview", "technical", "career"]
+  },
+  "nodes": [
+    {
+      "id": "self-intro",
+      "label": "Self Introduction",
+      "label_vi": "Giới thiệu bản thân"
+    },
+    {
+      "id": "project-explanation",
+      "label": "Project Explanation",
+      "label_vi": "Giải thích dự án"
+    },
+    {
+      "id": "problem-solving",
+      "label": "Problem Solving Out Loud",
+      "label_vi": "Giải quyết vấn đề nói ra"
+    },
+    {
+      "id": "follow-up-questions",
+      "label": "Follow-Up Questions",
+      "label_vi": "Câu hỏi tiếp theo"
+    },
+    {
+      "id": "asking-questions",
+      "label": "Asking the Interviewer",
+      "label_vi": "Hỏi người phỏng vấn"
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "intro-01",
+      "node_id": "self-intro",
+      "text": "I'm a software engineer with...",
+      "example": "I'm a software engineer with four years of experience.",
+      "translation_vi": "Tôi là kỹ sư phần mềm với bốn năm kinh nghiệm.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm a software engineer", "audio": "", "audio_slow": ""},
+        {"text": "with four years of experience.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-02",
+      "node_id": "self-intro",
+      "text": "My background is in...",
+      "example": "My background is in machine learning and backend systems.",
+      "translation_vi": "Nền tảng của tôi là học máy và hệ thống backend.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "My background is in", "audio": "", "audio_slow": ""},
+        {"text": "machine learning", "audio": "", "audio_slow": ""},
+        {"text": "and backend systems.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-03",
+      "node_id": "self-intro",
+      "text": "Currently, I work on...",
+      "example": "Currently, I work on building AI-powered search tools.",
+      "translation_vi": "Hiện tại, tôi làm về xây dựng công cụ tìm kiếm AI.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Currently, I work on", "audio": "", "audio_slow": ""},
+        {"text": "building AI-powered search tools.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-04",
+      "node_id": "self-intro",
+      "text": "I'm particularly interested in...",
+      "example": "I'm particularly interested in large language models and their applications.",
+      "translation_vi": "Tôi đặc biệt quan tâm đến mô hình ngôn ngữ lớn và ứng dụng của chúng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm particularly interested in", "audio": "", "audio_slow": ""},
+        {"text": "large language models", "audio": "", "audio_slow": ""},
+        {"text": "and their applications.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-05",
+      "node_id": "self-intro",
+      "text": "Thank you for having me.",
+      "example": "Thank you for having me today.",
+      "translation_vi": "Cảm ơn vì đã mời tôi phỏng vấn hôm nay.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thank you", "audio": "", "audio_slow": ""},
+        {"text": "for having me today.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-06",
+      "node_id": "self-intro",
+      "text": "I'm excited about this opportunity.",
+      "example": "I'm excited about this opportunity to work with your team.",
+      "translation_vi": "Tôi rất hào hứng với cơ hội này để làm việc cùng đội của bạn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm excited about this opportunity", "audio": "", "audio_slow": ""},
+        {"text": "to work with your team.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "project-01",
+      "node_id": "project-explanation",
+      "text": "One project I'd like to talk about is...",
+      "example": "One project I'd like to talk about is a RAG-based chatbot.",
+      "translation_vi": "Một dự án tôi muốn nói đến là chatbot dựa trên RAG.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "One project I'd like to talk about", "audio": "", "audio_slow": ""},
+        {"text": "is a RAG-based chatbot.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "project-02",
+      "node_id": "project-explanation",
+      "text": "The goal was to...",
+      "example": "The goal was to reduce response time for customer queries.",
+      "translation_vi": "Mục tiêu là giảm thời gian phản hồi cho câu hỏi khách hàng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The goal was to", "audio": "", "audio_slow": ""},
+        {"text": "reduce response time", "audio": "", "audio_slow": ""},
+        {"text": "for customer queries.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "project-03",
+      "node_id": "project-explanation",
+      "text": "I was responsible for...",
+      "example": "I was responsible for designing the retrieval pipeline.",
+      "translation_vi": "Tôi chịu trách nhiệm thiết kế pipeline truy xuất.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I was responsible for", "audio": "", "audio_slow": ""},
+        {"text": "designing the retrieval pipeline.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "project-04",
+      "node_id": "project-explanation",
+      "text": "We used... to implement it.",
+      "example": "We used a vector database to implement it.",
+      "translation_vi": "Chúng tôi sử dụng vector database để triển khai.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We used a vector database", "audio": "", "audio_slow": ""},
+        {"text": "to implement it.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "project-05",
+      "node_id": "project-explanation",
+      "text": "One challenge we faced was...",
+      "example": "One challenge we faced was high latency in the embedding service.",
+      "translation_vi": "Một thách thức chúng tôi gặp là độ trễ cao ở embedding service.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "One challenge we faced was", "audio": "", "audio_slow": ""},
+        {"text": "high latency", "audio": "", "audio_slow": ""},
+        {"text": "in the embedding service.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "project-06",
+      "node_id": "project-explanation",
+      "text": "We solved it by...",
+      "example": "We solved it by adding a caching layer and optimizing the index.",
+      "translation_vi": "Chúng tôi giải quyết bằng cách thêm tầng cache và tối ưu index.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We solved it by", "audio": "", "audio_slow": ""},
+        {"text": "adding a caching layer", "audio": "", "audio_slow": ""},
+        {"text": "and optimizing the index.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "problem-01",
+      "node_id": "problem-solving",
+      "text": "So the problem is...",
+      "example": "So the problem is to find the top K most similar vectors efficiently.",
+      "translation_vi": "Vậy vấn đề là tìm K vector tương tự nhất một cách hiệu quả.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "So the problem is", "audio": "", "audio_slow": ""},
+        {"text": "to find the top K most similar vectors", "audio": "", "audio_slow": ""},
+        {"text": "efficiently.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "problem-02",
+      "node_id": "problem-solving",
+      "text": "Let me think out loud.",
+      "example": "Let me think out loud for a moment.",
+      "translation_vi": "Để tôi suy nghĩ nói ra một chút.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me think out loud", "audio": "", "audio_slow": ""},
+        {"text": "for a moment.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "problem-03",
+      "node_id": "problem-solving",
+      "text": "First, I would...",
+      "example": "First, I would check if the data fits in memory.",
+      "translation_vi": "Đầu tiên, tôi sẽ kiểm tra xem dữ liệu có vừa bộ nhớ không.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "First, I would", "audio": "", "audio_slow": ""},
+        {"text": "check if the data fits in memory.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "problem-04",
+      "node_id": "problem-solving",
+      "text": "If that's the case, I could use...",
+      "example": "If that's the case, I could use a brute-force approach with cosine similarity.",
+      "translation_vi": "Nếu vậy, tôi có thể dùng cách brute-force với cosine similarity.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "If that's the case,", "audio": "", "audio_slow": ""},
+        {"text": "I could use a brute-force approach", "audio": "", "audio_slow": ""},
+        {"text": "with cosine similarity.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "problem-05",
+      "node_id": "problem-solving",
+      "text": "However, if the dataset is large, I'd need...",
+      "example": "However, if the dataset is large, I'd need approximate nearest neighbor search.",
+      "translation_vi": "Tuy nhiên, nếu tập dữ liệu lớn, tôi cần tìm kiếm xấp xỉ lân cận gần nhất.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "However, if the dataset is large,", "audio": "", "audio_slow": ""},
+        {"text": "I'd need approximate nearest neighbor search.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "problem-06",
+      "node_id": "problem-solving",
+      "text": "One trade-off is between accuracy and speed.",
+      "example": "One trade-off is between accuracy and speed.",
+      "translation_vi": "Một sự đánh đổi là giữa độ chính xác và tốc độ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "One trade-off is", "audio": "", "audio_slow": ""},
+        {"text": "between accuracy and speed.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "follow-01",
+      "node_id": "follow-up-questions",
+      "text": "That's a good question.",
+      "example": "That's a good question. Let me break it down.",
+      "translation_vi": "Đó là câu hỏi hay. Để tôi phân tích.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "That's a good question.", "audio": "", "audio_slow": ""},
+        {"text": "Let me break it down.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "follow-02",
+      "node_id": "follow-up-questions",
+      "text": "To be more specific...",
+      "example": "To be more specific, we used a hybrid approach combining keyword and semantic search.",
+      "translation_vi": "Cụ thể hơn, chúng tôi dùng phương pháp kết hợp tìm kiếm từ khóa và ngữ nghĩa.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "To be more specific,", "audio": "", "audio_slow": ""},
+        {"text": "we used a hybrid approach", "audio": "", "audio_slow": ""},
+        {"text": "combining keyword and semantic search.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "follow-03",
+      "node_id": "follow-up-questions",
+      "text": "The reason we chose that was...",
+      "example": "The reason we chose that was to balance recall and latency.",
+      "translation_vi": "Lý do chúng tôi chọn cách đó là để cân bằng recall và độ trễ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The reason we chose that was", "audio": "", "audio_slow": ""},
+        {"text": "to balance recall and latency.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "follow-04",
+      "node_id": "follow-up-questions",
+      "text": "I haven't encountered that directly, but I think...",
+      "example": "I haven't encountered that directly, but I think I would start by profiling the bottleneck.",
+      "translation_vi": "Tôi chưa gặp trực tiếp, nhưng tôi nghĩ sẽ bắt đầu bằng cách đo điểm nghẽn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I haven't encountered that directly,", "audio": "", "audio_slow": ""},
+        {"text": "but I think I would start", "audio": "", "audio_slow": ""},
+        {"text": "by profiling the bottleneck.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "follow-05",
+      "node_id": "follow-up-questions",
+      "text": "Could you clarify what you mean by...?",
+      "example": "Could you clarify what you mean by scalability in this context?",
+      "translation_vi": "Bạn có thể làm rõ ý khả năng mở rộng trong ngữ cảnh này không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you clarify", "audio": "", "audio_slow": ""},
+        {"text": "what you mean by scalability", "audio": "", "audio_slow": ""},
+        {"text": "in this context?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "follow-06",
+      "node_id": "follow-up-questions",
+      "text": "I'd like to add that...",
+      "example": "I'd like to add that we also considered using a graph database.",
+      "translation_vi": "Tôi muốn nói thêm rằng chúng tôi cũng cân nhắc dùng graph database.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'd like to add that", "audio": "", "audio_slow": ""},
+        {"text": "we also considered", "audio": "", "audio_slow": ""},
+        {"text": "using a graph database.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-01",
+      "node_id": "asking-questions",
+      "text": "Could you tell me more about...?",
+      "example": "Could you tell me more about the team's current tech stack?",
+      "translation_vi": "Bạn có thể cho tôi biết thêm về tech stack hiện tại của đội không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you tell me more", "audio": "", "audio_slow": ""},
+        {"text": "about the team's current tech stack?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-02",
+      "node_id": "asking-questions",
+      "text": "What does a typical sprint look like?",
+      "example": "What does a typical sprint look like for this team?",
+      "translation_vi": "Một sprint điển hình của đội như thế nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What does a typical sprint look like", "audio": "", "audio_slow": ""},
+        {"text": "for this team?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-03",
+      "node_id": "asking-questions",
+      "text": "How do you handle code reviews?",
+      "example": "How do you handle code reviews and knowledge sharing?",
+      "translation_vi": "Các bạn xử lý code review và chia sẻ kiến thức thế nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How do you handle code reviews", "audio": "", "audio_slow": ""},
+        {"text": "and knowledge sharing?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-04",
+      "node_id": "asking-questions",
+      "text": "What are the biggest challenges the team is facing?",
+      "example": "What are the biggest challenges the team is facing right now?",
+      "translation_vi": "Những thách thức lớn nhất mà đội đang đối mặt là gì?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What are the biggest challenges", "audio": "", "audio_slow": ""},
+        {"text": "the team is facing right now?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-05",
+      "node_id": "asking-questions",
+      "text": "Is there opportunity for growth in...?",
+      "example": "Is there opportunity for growth in machine learning research?",
+      "translation_vi": "Có cơ hội phát triển trong nghiên cứu học máy không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Is there opportunity for growth", "audio": "", "audio_slow": ""},
+        {"text": "in machine learning research?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-06",
+      "node_id": "asking-questions",
+      "text": "What would my first project be?",
+      "example": "What would my first project be if I join?",
+      "translation_vi": "Dự án đầu tiên của tôi sẽ là gì nếu tôi gia nhập?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What would my first project be", "audio": "", "audio_slow": ""},
+        {"text": "if I join?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "close-01",
+      "node_id": "closing",
+      "text": "Thank you for your time.",
+      "example": "Thank you for your time and the interesting discussion.",
+      "translation_vi": "Cảm ơn vì thời gian và cuộc thảo luận thú vị.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thank you for your time", "audio": "", "audio_slow": ""},
+        {"text": "and the interesting discussion.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "close-02",
+      "node_id": "closing",
+      "text": "I look forward to hearing from you.",
+      "example": "I look forward to hearing from you about next steps.",
+      "translation_vi": "Tôi mong nhận được phản hồi về các bước tiếp theo.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I look forward to hearing from you", "audio": "", "audio_slow": ""},
+        {"text": "about next steps.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "close-03",
+      "node_id": "closing",
+      "text": "I really enjoyed this conversation.",
+      "example": "I really enjoyed this conversation and learned a lot.",
+      "translation_vi": "Tôi thực sự thích cuộc trò chuyện này và học được nhiều điều.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I really enjoyed this conversation", "audio": "", "audio_slow": ""},
+        {"text": "and learned a lot.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "close-04",
+      "node_id": "closing",
+      "text": "Please feel free to reach out if you need more information.",
+      "example": "Please feel free to reach out if you need more information from me.",
+      "translation_vi": "Xin đừng ngần ngại liên hệ nếu bạn cần thêm thông tin từ tôi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Please feel free to reach out", "audio": "", "audio_slow": ""},
+        {"text": "if you need more information from me.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "close-05",
+      "node_id": "closing",
+      "text": "Have a great rest of your day.",
+      "example": "Have a great rest of your day.",
+      "translation_vi": "Chúc bạn phần còn lại của ngày tốt lành.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Have a great rest of your day.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "Tell me about yourself.",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'm a software engineer with",
+        "My background is in",
+        "Currently, I work on",
+        "I'm particularly interested in"
+      ],
+      "hint_vi": "Giới thiệu bản thân, kinh nghiệm và sở thích."
+    },
+    {
+      "id": "recall-02",
+      "prompt": "Describe a project you worked on.",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "One project I'd like to talk about is",
+        "The goal was to",
+        "I was responsible for",
+        "We used"
+      ],
+      "hint_vi": "Mô tả một dự án bạn đã làm, mục tiêu, vai trò, công nghệ."
+    },
+    {
+      "id": "recall-03",
+      "prompt": "Walk me through how you would solve this problem.",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "So the problem is",
+        "First, I would",
+        "If that's the case, I could use",
+        "However, if the dataset is large",
+        "One trade-off is"
+      ],
+      "hint_vi": "Nói ra cách giải quyết vấn đề từng bước."
+    },
+    {
+      "id": "recall-04",
+      "prompt": "Can you elaborate on that?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "To be more specific",
+        "The reason we chose that was",
+        "I'd like to add that"
+      ],
+      "hint_vi": "Giải thích chi tiết hơn về điều bạn vừa nói."
+    },
+    {
+      "id": "recall-05",
+      "prompt": "Do you have any questions for us?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Could you tell me more about",
+        "What does a typical sprint look like",
+        "How do you handle code reviews",
+        "What are the biggest challenges",
+        "Is there opportunity for growth in",
+        "What would my first project be"
+      ],
+      "hint_vi": "Hỏi người phỏng vấn về công ty, đội, công việc."
+    },
+    {
+      "id": "recall-06",
+      "prompt": "Any final thoughts?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Thank you for your time",
+        "I look forward to hearing from you",
+        "I really enjoyed this conversation",
+        "Please feel free to reach out"
+      ],
+      "hint_vi": "Kết thúc cuộc phỏng vấn lịch sự."
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Project explanation and follow-up",
+      "title_vi": "Giải thích dự án và câu hỏi tiếp",
+      "turns": [
+        {
+          "role": "Interviewer",
+          "text": "Could you walk me through one of your recent projects?",
+          "translation_vi": "Bạn có thể trình bày một dự án gần đây không?",
+          "audio": "",
+          "phrases": [
+            {"text": "Could you walk me through", "audio": "", "audio_slow": ""},
+            {"text": "one of your recent projects?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sure. One project I'd like to talk about is a RAG-based chatbot for customer support.",
+          "translation_vi": "Chắc chắn. Một dự án tôi muốn nói đến là chatbot hỗ trợ khách hàng dựa trên RAG.",
+          "audio": "",
+          "phrases": [
+            {"text": "Sure.", "audio": "", "audio_slow": ""},
+            {"text": "One project I'd like to talk about", "audio": "", "audio_slow": ""},
+            {"text": "is a RAG-based chatbot", "audio": "", "audio_slow": ""},
+            {"text": "for customer support.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "What was your role?",
+          "translation_vi": "Vai trò của bạn là gì?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I was responsible for designing the retrieval pipeline and integrating the LLM.",
+          "translation_vi": "Tôi chịu trách nhiệm thiết kế pipeline truy xuất và tích hợp LLM.",
+          "audio": "",
+          "phrases": [
+            {"text": "I was responsible for", "audio": "", "audio_slow": ""},
+            {"text": "designing the retrieval pipeline", "audio": "", "audio_slow": ""},
+            {"text": "and integrating the LLM.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "What was the biggest challenge?",
+          "translation_vi": "Thách thức lớn nhất là gì?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "The biggest challenge was high latency in the embedding service. We solved it by adding a caching layer.",
+          "translation_vi": "Thách thức lớn nhất là độ trễ cao ở embedding service. Chúng tôi giải quyết bằng cách thêm tầng cache.",
+          "audio": "",
+          "phrases": [
+            {"text": "The biggest challenge was", "audio": "", "audio_slow": ""},
+            {"text": "high latency", "audio": "", "audio_slow": ""},
+            {"text": "in the embedding service.", "audio": "", "audio_slow": ""},
+            {"text": "We solved it by adding a caching layer.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "How did you measure success?",
+          "translation_vi": "Bạn đo lường thành công thế nào?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "We tracked response time and customer satisfaction scores. Both improved significantly.",
+          "translation_vi": "Chúng tôi theo dõi thời gian phản hồi và điểm hài lòng của khách hàng. Cả hai đều cải thiện đáng kể.",
+          "audio": "",
+          "phrases": [
+            {"text": "We tracked response time", "audio": "", "audio_slow": ""},
+            {"text": "and customer satisfaction scores.", "audio": "", "audio_slow": ""},
+            {"text": "Both improved significantly.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Problem-solving and asking questions",
+      "title_vi": "Giải quyết vấn đề và hỏi lại",
+      "turns": [
+        {
+          "role": "Interviewer",
+          "text": "Let's say you need to build a real-time recommendation system. How would you approach it?",
+          "translation_vi": "Giả sử bạn cần xây hệ thống gợi ý thời gian thực. Bạn sẽ tiếp cận thế nào?",
+          "audio": "",
+          "phrases": [
+            {"text": "Let's say you need to build", "audio": "", "audio_slow": ""},
+            {"text": "a real-time recommendation system.", "audio": "", "audio_slow": ""},
+            {"text": "How would you approach it?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Let me think out loud. First, I would understand the data size and latency requirements.",
+          "translation_vi": "Để tôi suy nghĩ nói ra. Đầu tiên, tôi sẽ hiểu kích thước dữ liệu và yêu cầu độ trễ.",
+          "audio": "",
+          "phrases": [
+            {"text": "Let me think out loud.", "audio": "", "audio_slow": ""},
+            {"text": "First, I would understand", "audio": "", "audio_slow": ""},
+            {"text": "the data size and latency requirements.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Assume it's a large-scale system.",
+          "translation_vi": "Giả sử đó là hệ thống quy mô lớn.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "If it's large-scale, I'd use approximate nearest neighbor search with a vector database, and cache popular results.",
+          "translation_vi": "Nếu quy mô lớn, tôi sẽ dùng tìm kiếm xấp xỉ lân cận gần nhất với vector database và cache kết quả phổ biến.",
+          "audio": "",
+          "phrases": [
+            {"text": "If it's large-scale,", "audio": "", "audio_slow": ""},
+            {"text": "I'd use approximate nearest neighbor search", "audio": "", "audio_slow": ""},
+            {"text": "with a vector database,", "audio": "", "audio_slow": ""},
+            {"text": "and cache popular results.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "How would you handle cold start for new users?",
+          "translation_vi": "Bạn xử lý vấn đề khởi động nguội cho người dùng mới thế nào?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "That's a good question. I would use a hybrid approach: content-based filtering initially, then switch to collaborative filtering as we gather data.",
+          "translation_vi": "Đó là câu hỏi hay. Tôi sẽ dùng phương pháp kết hợp: lọc dựa trên nội dung ban đầu, sau đó chuyển sang lọc cộng tác khi có dữ liệu.",
+          "audio": "",
+          "phrases": [
+            {"text": "That's a good question.", "audio": "", "audio_slow": ""},
+            {"text": "I would use a hybrid approach:", "audio":

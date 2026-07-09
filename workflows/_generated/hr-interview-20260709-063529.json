@@ -1,0 +1,893 @@
+{
+  "meta": {
+    "id": "hr-interview",
+    "title": "HR Interview",
+    "title_vi": "Phỏng vấn HR",
+    "description": "Practice answering common HR interview questions: strengths, weaknesses, motivation, salary expectations, and culture fit.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "career",
+    "tags": ["interview", "hr", "career"]
+  },
+  "nodes": [
+    {
+      "id": "opening",
+      "label": "Opening",
+      "label_vi": "Mở đầu"
+    },
+    {
+      "id": "self-introduction",
+      "label": "Self-Introduction",
+      "label_vi": "Tự giới thiệu"
+    },
+    {
+      "id": "strengths-weaknesses",
+      "label": "Strengths & Weaknesses",
+      "label_vi": "Điểm mạnh & điểm yếu"
+    },
+    {
+      "id": "leaving-job",
+      "label": "Leaving Current Job",
+      "label_vi": "Lý do nghỉ việc"
+    },
+    {
+      "id": "salary",
+      "label": "Salary Expectations",
+      "label_vi": "Mức lương kỳ vọng"
+    },
+    {
+      "id": "culture-fit",
+      "label": "Culture Fit",
+      "label_vi": "Phù hợp văn hóa"
+    },
+    {
+      "id": "questions-for-interviewer",
+      "label": "Questions for Interviewer",
+      "label_vi": "Câu hỏi cho người phỏng vấn"
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "opening-01",
+      "node_id": "opening",
+      "text": "Hello, nice to meet you.",
+      "example": "Hello, nice to meet you. I'm excited to be here.",
+      "translation_vi": "Xin chào, rất vui được gặp bạn. Tôi rất hào hứng khi có mặt ở đây.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Hello, nice to meet you.", "audio": "", "audio_slow": "" },
+        { "text": "I'm excited to be here.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "opening-02",
+      "node_id": "opening",
+      "text": "Thank you for having me.",
+      "example": "Thank you for having me today.",
+      "translation_vi": "Cảm ơn vì đã mời tôi đến hôm nay.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Thank you for having me", "audio": "", "audio_slow": "" },
+        { "text": "today.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "opening-03",
+      "node_id": "opening",
+      "text": "I'm ready to get started.",
+      "example": "I'm ready to get started whenever you are.",
+      "translation_vi": "Tôi sẵn sàng bắt đầu khi bạn muốn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm ready to get started", "audio": "", "audio_slow": "" },
+        { "text": "whenever you are.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "opening-04",
+      "node_id": "opening",
+      "text": "Please make yourself comfortable.",
+      "example": "Please make yourself comfortable. Can I get you some water?",
+      "translation_vi": "Xin hãy thoải mái. Tôi lấy cho bạn chút nước nhé?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Please make yourself comfortable.", "audio": "", "audio_slow": "" },
+        { "text": "Can I get you some water?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "opening-05",
+      "node_id": "opening",
+      "text": "Let's begin, shall we?",
+      "example": "Let's begin, shall we? I'll start with a few general questions.",
+      "translation_vi": "Chúng ta bắt đầu nhé? Tôi sẽ bắt đầu với vài câu hỏi chung.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Let's begin, shall we?", "audio": "", "audio_slow": "" },
+        { "text": "I'll start with a few general questions.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "self-introduction-01",
+      "node_id": "self-introduction",
+      "text": "I'm a software engineer with...",
+      "example": "I'm a software engineer with five years of experience.",
+      "translation_vi": "Tôi là kỹ sư phần mềm với 5 năm kinh nghiệm.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm a software engineer", "audio": "", "audio_slow": "" },
+        { "text": "with five years of experience.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "self-introduction-02",
+      "node_id": "self-introduction",
+      "text": "My background is in...",
+      "example": "My background is in backend development and AI systems.",
+      "translation_vi": "Nền tảng của tôi là phát triển backend và hệ thống AI.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "My background is in", "audio": "", "audio_slow": "" },
+        { "text": "backend development and AI systems.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "self-introduction-03",
+      "node_id": "self-introduction",
+      "text": "I'm passionate about...",
+      "example": "I'm passionate about building scalable machine learning pipelines.",
+      "translation_vi": "Tôi đam mê xây dựng các pipeline machine learning có khả năng mở rộng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm passionate about", "audio": "", "audio_slow": "" },
+        { "text": "building scalable machine learning pipelines.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "self-introduction-04",
+      "node_id": "self-introduction",
+      "text": "I've worked extensively with...",
+      "example": "I've worked extensively with Python, Docker, and AWS.",
+      "translation_vi": "Tôi đã làm việc nhiều với Python, Docker và AWS.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I've worked extensively with", "audio": "", "audio_slow": "" },
+        { "text": "Python, Docker, and AWS.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "self-introduction-05",
+      "node_id": "self-introduction",
+      "text": "In my current role, I...",
+      "example": "In my current role, I lead the data engineering team.",
+      "translation_vi": "Trong vai trò hiện tại, tôi dẫn dắt đội kỹ thuật dữ liệu.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "In my current role,", "audio": "", "audio_slow": "" },
+        { "text": "I lead the data engineering team.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "self-introduction-06",
+      "node_id": "self-introduction",
+      "text": "I'm looking for a role where...",
+      "example": "I'm looking for a role where I can contribute to impactful AI products.",
+      "translation_vi": "Tôi tìm kiếm một vai trò nơi tôi có thể đóng góp vào các sản phẩm AI có tác động.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm looking for a role where", "audio": "", "audio_slow": "" },
+        { "text": "I can contribute to impactful AI products.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-01",
+      "node_id": "strengths-weaknesses",
+      "text": "One of my strengths is...",
+      "example": "One of my strengths is problem-solving under pressure.",
+      "translation_vi": "Một trong những điểm mạnh của tôi là giải quyết vấn đề dưới áp lực.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "One of my strengths is", "audio": "", "audio_slow": "" },
+        { "text": "problem-solving under pressure.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-02",
+      "node_id": "strengths-weaknesses",
+      "text": "I'm good at...",
+      "example": "I'm good at communicating complex technical ideas to non-technical stakeholders.",
+      "translation_vi": "Tôi giỏi truyền đạt các ý tưởng kỹ thuật phức tạp cho các bên liên quan không chuyên.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm good at", "audio": "", "audio_slow": "" },
+        { "text": "communicating complex technical ideas", "audio": "", "audio_slow": "" },
+        { "text": "to non-technical stakeholders.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-03",
+      "node_id": "strengths-weaknesses",
+      "text": "A weakness I'm working on is...",
+      "example": "A weakness I'm working on is public speaking, so I've joined a Toastmasters club.",
+      "translation_vi": "Một điểm yếu tôi đang khắc phục là nói trước đám đông, nên tôi đã tham gia câu lạc bộ Toastmasters.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "A weakness I'm working on is", "audio": "", "audio_slow": "" },
+        { "text": "public speaking,", "audio": "", "audio_slow": "" },
+        { "text": "so I've joined a Toastmasters club.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-04",
+      "node_id": "strengths-weaknesses",
+      "text": "I sometimes struggle with...",
+      "example": "I sometimes struggle with delegating tasks, but I'm learning to trust my team more.",
+      "translation_vi": "Đôi khi tôi gặp khó khăn trong việc phân công nhiệm vụ, nhưng tôi đang học cách tin tưởng đội nhóm hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I sometimes struggle with", "audio": "", "audio_slow": "" },
+        { "text": "delegating tasks,", "audio": "", "audio_slow": "" },
+        { "text": "but I'm learning to trust my team more.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-05",
+      "node_id": "strengths-weaknesses",
+      "text": "I've received positive feedback on...",
+      "example": "I've received positive feedback on my ability to mentor junior engineers.",
+      "translation_vi": "Tôi nhận được phản hồi tích cực về khả năng hướng dẫn các kỹ sư junior.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I've received positive feedback on", "audio": "", "audio_slow": "" },
+        { "text": "my ability to mentor junior engineers.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "leaving-job-01",
+      "node_id": "leaving-job",
+      "text": "I'm looking for new challenges.",
+      "example": "I'm looking for new challenges that align with my career goals.",
+      "translation_vi": "Tôi đang tìm kiếm những thử thách mới phù hợp với mục tiêu nghề nghiệp của mình.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm looking for new challenges", "audio": "", "audio_slow": "" },
+        { "text": "that align with my career goals.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "leaving-job-02",
+      "node_id": "leaving-job",
+      "text": "I feel I've grown as much as I can in my current role.",
+      "example": "I feel I've grown as much as I can in my current role, so I'm ready for something new.",
+      "translation_vi": "Tôi cảm thấy mình đã phát triển hết mức trong vai trò hiện tại, nên tôi sẵn sàng cho điều gì đó mới.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I feel I've grown as much as I can", "audio": "", "audio_slow": "" },
+        { "text": "in my current role,", "audio": "", "audio_slow": "" },
+        { "text": "so I'm ready for something new.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "leaving-job-03",
+      "node_id": "leaving-job",
+      "text": "I'm interested in...",
+      "example": "I'm interested in the AI domain, which my current company doesn't focus on.",
+      "translation_vi": "Tôi quan tâm đến lĩnh vực AI, mà công ty hiện tại không tập trung vào.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm interested in the AI domain,", "audio": "", "audio_slow": "" },
+        { "text": "which my current company doesn't focus on.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "leaving-job-04",
+      "node_id": "leaving-job",
+      "text": "I'm leaving because...",
+      "example": "I'm leaving because I want to work on more impactful projects.",
+      "translation_vi": "Tôi rời đi vì muốn làm việc trên các dự án có tác động hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm leaving because", "audio": "", "audio_slow": "" },
+        { "text": "I want to work on more impactful projects.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "leaving-job-05",
+      "node_id": "leaving-job",
+      "text": "It's a mutual decision to part ways.",
+      "example": "It's a mutual decision to part ways due to restructuring.",
+      "translation_vi": "Đó là quyết định chung do tái cấu trúc.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "It's a mutual decision", "audio": "", "audio_slow": "" },
+        { "text": "to part ways", "audio": "", "audio_slow": "" },
+        { "text": "due to restructuring.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "salary-01",
+      "node_id": "salary",
+      "text": "Based on my research...",
+      "example": "Based on my research, the market rate for this role is between 80k and 100k.",
+      "translation_vi": "Dựa trên nghiên cứu của tôi, mức lương thị trường cho vị trí này khoảng 80k đến 100k.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Based on my research,", "audio": "", "audio_slow": "" },
+        { "text": "the market rate for this role", "audio": "", "audio_slow": "" },
+        { "text": "is between 80k and 100k.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "salary-02",
+      "node_id": "salary",
+      "text": "I'm expecting a salary in the range of...",
+      "example": "I'm expecting a salary in the range of 90k to 110k.",
+      "translation_vi": "Tôi mong đợi mức lương trong khoảng 90k đến 110k.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm expecting a salary", "audio": "", "audio_slow": "" },
+        { "text": "in the range of 90k to 110k.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "salary-03",
+      "node_id": "salary",
+      "text": "I'm open to negotiation.",
+      "example": "I'm open to negotiation based on the total compensation package.",
+      "translation_vi": "Tôi sẵn sàng thương lượng dựa trên tổng gói đãi ngộ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm open to negotiation", "audio": "", "audio_slow": "" },
+        { "text": "based on the total compensation package.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "salary-04",
+      "node_id": "salary",
+      "text": "My current salary is...",
+      "example": "My current salary is around 85k, but I'm looking for growth.",
+      "translation_vi": "Mức lương hiện tại của tôi khoảng 85k, nhưng tôi đang tìm kiếm sự phát triển.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "My current salary is around 85k,", "audio": "", "audio_slow": "" },
+        { "text": "but I'm looking for growth.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "salary-05",
+      "node_id": "salary",
+      "text": "Could you share the salary band for this role?",
+      "example": "Could you share the salary band for this role?",
+      "translation_vi": "Bạn có thể chia sẻ khung lương cho vị trí này không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Could you share the salary band", "audio": "", "audio_slow": "" },
+        { "text": "for this role?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "culture-fit-01",
+      "node_id": "culture-fit",
+      "text": "I value collaboration and transparency.",
+      "example": "I value collaboration and transparency in a team.",
+      "translation_vi": "Tôi coi trọng sự hợp tác và minh bạch trong đội nhóm.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I value collaboration", "audio": "", "audio_slow": "" },
+        { "text": "and transparency in a team.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "culture-fit-02",
+      "node_id": "culture-fit",
+      "text": "I thrive in an environment where...",
+      "example": "I thrive in an environment where I'm given ownership and autonomy.",
+      "translation_vi": "Tôi phát triển tốt trong môi trường nơi tôi được giao quyền sở hữu và tự chủ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I thrive in an environment where", "audio": "", "audio_slow": "" },
+        { "text": "I'm given ownership and autonomy.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "culture-fit-03",
+      "node_id": "culture-fit",
+      "text": "I prefer a flat hierarchy with open communication.",
+      "example": "I prefer a flat hierarchy with open communication across teams.",
+      "translation_vi": "Tôi thích cấu trúc phẳng với sự giao tiếp cởi mở giữa các nhóm.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I prefer a flat hierarchy", "audio": "", "audio_slow": "" },
+        { "text": "with open communication across teams.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "culture-fit-04",
+      "node_id": "culture-fit",
+      "text": "What is the team culture like here?",
+      "example": "What is the team culture like here? How often do you have retrospectives?",
+      "translation_vi": "Văn hóa nhóm ở đây thế nào? Bao lâu các bạn tổ chức retrospective?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "What is the team culture like here?", "audio": "", "audio_slow": "" },
+        { "text": "How often do you have retrospectives?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "culture-fit-05",
+      "node_id": "culture-fit",
+      "text": "I'm looking for a company that supports...",
+      "example": "I'm looking for a company that supports continuous learning and growth.",
+      "translation_vi": "Tôi tìm kiếm một công ty hỗ trợ học tập liên tục và phát triển.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'm looking for a company that supports", "audio": "", "audio_slow": "" },
+        { "text": "continuous learning and growth.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-01",
+      "node_id": "questions-for-interviewer",
+      "text": "What does success look like in this role?",
+      "example": "What does success look like in this role in the first six months?",
+      "translation_vi": "Thành công trong vai trò này trông như thế nào trong sáu tháng đầu?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "What does success look like", "audio": "", "audio_slow": "" },
+        { "text": "in this role", "audio": "", "audio_slow": "" },
+        { "text": "in the first six months?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-02",
+      "node_id": "questions-for-interviewer",
+      "text": "Can you tell me about the team?",
+      "example": "Can you tell me about the team I'd be working with?",
+      "translation_vi": "Bạn có thể cho tôi biết về đội nhóm tôi sẽ làm việc cùng không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Can you tell me about the team", "audio": "", "audio_slow": "" },
+        { "text": "I'd be working with?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-03",
+      "node_id": "questions-for-interviewer",
+      "text": "What are the next steps in the process?",
+      "example": "What are the next steps in the interview process?",
+      "translation_vi": "Các bước tiếp theo trong quy trình phỏng vấn là gì?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "What are the next steps", "audio": "", "audio_slow": "" },
+        { "text": "in the interview process?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-04",
+      "node_id": "questions-for-interviewer",
+      "text": "How does the company approach professional development?",
+      "example": "How does the company approach professional development and training?",
+      "translation_vi": "Công ty tiếp cận phát triển chuyên môn và đào tạo như thế nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "How does the company approach", "audio": "", "audio_slow": "" },
+        { "text": "professional development and training?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-05",
+      "node_id": "questions-for-interviewer",
+      "text": "Is there anything else you'd like to know about me?",
+      "example": "Is there anything else you'd like to know about me?",
+      "translation_vi": "Còn điều gì bạn muốn biết thêm về tôi không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Is there anything else", "audio": "", "audio_slow": "" },
+        { "text": "you'd like to know about me?", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "closing-01",
+      "node_id": "closing",
+      "text": "Thank you for your time.",
+      "example": "Thank you for your time and the opportunity to interview.",
+      "translation_vi": "Cảm ơn bạn đã dành thời gian và cơ hội phỏng vấn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Thank you for your time", "audio": "", "audio_slow": "" },
+        { "text": "and the opportunity to interview.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "closing-02",
+      "node_id": "closing",
+      "text": "I look forward to hearing from you.",
+      "example": "I look forward to hearing from you regarding the next steps.",
+      "translation_vi": "Tôi mong chờ tin tức từ bạn về các bước tiếp theo.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I look forward to hearing from you", "audio": "", "audio_slow": "" },
+        { "text": "regarding the next steps.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "closing-03",
+      "node_id": "closing",
+      "text": "It was great meeting you.",
+      "example": "It was great meeting you and learning more about the role.",
+      "translation_vi": "Thật tuyệt khi gặp bạn và tìm hiểu thêm về vị trí này.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "It was great meeting you", "audio": "", "audio_slow": "" },
+        { "text": "and learning more about the role.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "closing-04",
+      "node_id": "closing",
+      "text": "I'll send a follow-up email.",
+      "example": "I'll send a follow-up email with my references.",
+      "translation_vi": "Tôi sẽ gửi email tiếp theo với thông tin người tham khảo.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "I'll send a follow-up email", "audio": "", "audio_slow": "" },
+        { "text": "with my references.", "audio": "", "audio_slow": "" }
+      ]
+    },
+    {
+      "id": "closing-05",
+      "node_id": "closing",
+      "text": "Have a great day.",
+      "example": "Have a great day. I hope to hear from you soon.",
+      "translation_vi": "Chúc bạn một ngày tốt lành. Hy vọng sớm nhận được tin từ bạn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        { "text": "Have a great day.", "audio": "", "audio_slow": "" },
+        { "text": "I hope to hear from you soon.", "audio": "", "audio_slow": "" }
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "Tell me about yourself.",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'm a software engineer with",
+        "My background is in",
+        "I'm passionate about",
+        "I've worked extensively with",
+        "In my current role"
+      ],
+      "hint_vi": "Giới thiệu bản thân, kinh nghiệm và đam mê"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "What are your strengths?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "One of my strengths is",
+        "I'm good at",
+        "I've received positive feedback on"
+      ],
+      "hint_vi": "Nói về điểm mạnh của bạn"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What are your weaknesses?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "A weakness I'm working on is",
+        "I sometimes struggle with"
+      ],
+      "hint_vi": "Nói về điểm yếu và cách khắc phục"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "Why are you leaving your current job?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'm looking for new challenges",
+        "I feel I've grown as much as I can",
+        "I'm interested in",
+        "I'm leaving because",
+        "It's a mutual decision"
+      ],
+      "hint_vi": "Nêu lý do rời công ty hiện tại"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "What are your salary expectations?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Based on my research",
+        "I'm expecting a salary in the range of",
+        "I'm open to negotiation",
+        "My current salary is"
+      ],
+      "hint_vi": "Đề cập mức lương kỳ vọng"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What kind of company culture do you prefer?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I value collaboration and transparency",
+        "I thrive in an environment where",
+        "I prefer a flat hierarchy",
+        "I'm looking for a company that supports"
+      ],
+      "hint_vi": "Nói về văn hóa công ty bạn thích"
+    },
+    {
+      "id": "recall-07",
+      "prompt": "Do you have any questions for me?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "What does success look like",
+        "Can you tell me about the team",
+        "What are the next steps",
+        "How does the company approach professional development",
+        "Is there anything else"
+      ],
+      "hint_vi": "Đặt câu hỏi cho người phỏng vấn"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "HR Interview with a Manager",
+      "title_vi": "Phỏng vấn HR với quản lý",
+      "turns": [
+        {
+          "role": "Interviewer",
+          "text": "Hello, nice to meet you. Please have a seat.",
+          "translation_vi": "Xin chào, rất vui được gặp bạn. Mời bạn ngồi.",
+          "audio": "",
+          "phrases": [
+            { "text": "Hello, nice to meet you.", "audio": "", "audio_slow": "" },
+            { "text": "Please have a seat.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thank you. I'm excited to be here.",
+          "translation_vi": "Cảm ơn. Tôi rất hào hứng khi có mặt ở đây.",
+          "audio": "",
+          "phrases": [
+            { "text": "Thank you.", "audio": "", "audio_slow": "" },
+            { "text": "I'm excited to be here.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Great. Let's start with a quick introduction. Tell me about yourself.",
+          "translation_vi": "Tuyệt. Hãy bắt đầu với phần giới thiệu nhanh. Hãy kể về bản thân bạn.",
+          "audio": "",
+          "phrases": [
+            { "text": "Great. Let's start with a quick introduction.", "audio": "", "audio_slow": "" },
+            { "text": "Tell me about yourself.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm a software engineer with five years of experience in backend development and AI systems.",
+          "translation_vi": "Tôi là kỹ sư phần mềm với 5 năm kinh nghiệm trong phát triển backend và hệ thống AI.",
+          "audio": "",
+          "phrases": [
+            { "text": "I'm a software engineer", "audio": "", "audio_slow": "" },
+            { "text": "with five years of experience", "audio": "", "audio_slow": "" },
+            { "text": "in backend development and AI systems.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "That sounds interesting. What do you consider your greatest strength?",
+          "translation_vi": "Nghe thú vị đấy. Bạn coi đâu là điểm mạnh nhất của mình?",
+          "audio": "",
+          "phrases": [
+            { "text": "That sounds interesting.", "audio": "", "audio_slow": "" },
+            { "text": "What do you consider your greatest strength?", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "One of my strengths is problem-solving under pressure. I've handled many production incidents calmly.",
+          "translation_vi": "Một điểm mạnh là giải quyết vấn đề dưới áp lực. Tôi đã xử lý nhiều sự cố sản xuất một cách bình tĩnh.",
+          "audio": "",
+          "phrases": [
+            { "text": "One of my strengths is problem-solving under pressure.", "audio": "", "audio_slow": "" },
+            { "text": "I've handled many production incidents calmly.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "And a weakness you're working on?",
+          "translation_vi": "Và một điểm yếu bạn đang khắc phục?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "A weakness I'm working on is public speaking. I've joined a Toastmasters club to improve.",
+          "translation_vi": "Một điểm yếu tôi đang khắc phục là nói trước đám đông. Tôi đã tham gia câu lạc bộ Toastmasters để cải thiện.",
+          "audio": "",
+          "phrases": [
+            { "text": "A weakness I'm working on is public speaking.", "audio": "", "audio_slow": "" },
+            { "text": "I've joined a Toastmasters club to improve.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Good to hear. Why are you leaving your current job?",
+          "translation_vi": "Tốt. Tại sao bạn rời công việc hiện tại?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm looking for new challenges that align with my career goals, especially in the AI domain.",
+          "translation_vi": "Tôi tìm kiếm thử thách mới phù hợp với mục tiêu nghề nghiệp, đặc biệt là trong lĩnh vực AI.",
+          "audio": "",
+          "phrases": [
+            { "text": "I'm looking for new challenges", "audio": "", "audio_slow": "" },
+            { "text": "that align with my career goals,", "audio": "", "audio_slow": "" },
+            { "text": "especially in the AI domain.", "audio": "", "audio_slow": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Discussing Salary and Culture Fit",
+      "title_vi": "Thảo luận về lương và văn hóa",
+      "turns": [
+        {
+          "role": "Interviewer",
+          "text": "Let's talk about salary expectations. What are you looking for?",
+          "translation_vi": "Hãy nói về kỳ vọng lương. Bạn mong đợi mức nào?",
+          "audio": "",
+          "phrases": [
+            { "text": "Let's talk about salary expectations.", "audio": "", "audio_slow": "" },
+            { "text": "What are you looking for?", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Based on my research, the market rate for this role is between 80k and 100k. I'm expecting around 95k.",
+          "translation_vi": "Dựa trên nghiên cứu, mức thị trường cho vị trí này là 80k đến 100k. Tôi mong đợi khoảng 95k.",
+          "audio": "",
+          "phrases": [
+            { "text": "Based on my research,", "audio": "", "audio_slow": "" },
+            { "text": "the market rate for this role", "audio": "", "audio_slow": "" },
+            { "text": "is between 80k and 100k.", "audio": "", "audio_slow": "" },
+            { "text": "I'm expecting around 95k.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "That's within our range. How about company culture? What do you value?",
+          "translation_vi": "Mức đó nằm trong khoảng của chúng tôi. Còn văn hóa công ty thì sao? Bạn coi trọng điều gì?",
+          "audio": "",
+          "phrases": [
+            { "text": "That's within our range.", "audio": "", "audio_slow": "" },
+            { "text": "How about company culture?", "audio": "", "audio_slow": "" },
+            { "text": "What do you value?", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I value collaboration and transparency. I thrive in an environment where I'm given ownership.",
+          "translation_vi": "Tôi coi trọng sự hợp tác và minh bạch. Tôi phát triển tốt trong môi trường được giao quyền sở hữu.",
+          "audio": "",
+          "phrases": [
+            { "text": "I value collaboration and transparency.", "audio": "", "audio_slow": "" },
+            { "text": "I thrive in an environment where I'm given ownership.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Great. Do you have any questions for me?",
+          "translation_vi": "Tuyệt. Bạn có câu hỏi nào cho tôi không?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Yes, what does success look like in this role in the first six months?",
+          "translation_vi": "Có, thành công trong vai trò này trong sáu tháng đầu trông như thế nào?",
+          "audio": "",
+          "phrases": [
+            { "text": "Yes, what does success look like", "audio": "", "audio_slow": "" },
+            { "text": "in this role", "audio": "", "audio_slow": "" },
+            { "text": "in the first six months?", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Good question. I'd expect you to be fully ramped and leading your first project.",
+          "translation_vi": "Câu hỏi hay. Tôi mong bạn sẽ hoàn toàn thích nghi và dẫn dắt dự án đầu tiên.",
+          "audio": "",
+          "phrases": [
+            { "text": "Good question.", "audio": "", "audio_slow": "" },
+            { "text": "I'd expect you to be fully ramped", "audio": "", "audio_slow": "" },
+            { "text": "and leading your first project.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thank you. I'm excited about the opportunity.",
+          "translation_vi": "Cảm ơn. Tôi rất hào hứng với cơ hội này.",
+          "audio": "",
+          "phrases": [
+            { "text": "Thank you.", "audio": "", "audio_slow": "" },
+            { "text": "I'm excited about the opportunity.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Great. We'll be in touch soon. Have a great day.",
+          "translation_vi": "Tuyệt. Chúng tôi sẽ liên lạc sớm. Chúc bạn một ngày tốt lành.",
+          "audio": "",
+          "phrases": [
+            { "text": "Great. We'll be in touch soon.", "audio": "", "audio_slow": "" },
+            { "text": "Have a great day.", "audio": "", "audio_slow": "" }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thank you, you too. I look forward to hearing from you.",
+          "translation_vi": "Cảm ơn, bạn cũng vậy. Tôi mong chờ tin từ bạn.",
+          "audio": "",
+          "phrases": [
+            { "text": "Thank you, you too.", "audio": "", "audio_slow": "" },
+            { "text": "I look forward to hearing from you.", "audio": "", "audio_slow": "" }
+          ]
+        }
+      ]
+    }
+  ]
+}

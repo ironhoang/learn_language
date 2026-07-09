@@ -1,0 +1,981 @@
+{
+  "meta": {
+    "id": "architecture-discussion",
+    "title": "Architecture Discussion",
+    "title_vi": "Thảo luận kiến trúc",
+    "description": "Discuss system design decisions: propose an approach, weigh trade-offs, push back with concerns, and reach a decision.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "engineering",
+    "tags": [
+      "architecture",
+      "system-design",
+      "trade-off"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "open-discussion",
+      "label": "Open Discussion",
+      "label_vi": "Mở đầu thảo luận"
+    },
+    {
+      "id": "propose-approach",
+      "label": "Propose Approach",
+      "label_vi": "Đề xuất phương án"
+    },
+    {
+      "id": "state-context",
+      "label": "State Context",
+      "label_vi": "Nêu bối cảnh"
+    },
+    {
+      "id": "highlight-benefits",
+      "label": "Highlight Benefits",
+      "label_vi": "Nêu lợi ích"
+    },
+    {
+      "id": "raise-concerns",
+      "label": "Raise Concerns",
+      "label_vi": "Nêu lo ngại"
+    },
+    {
+      "id": "push-back",
+      "label": "Push Back",
+      "label_vi": "Phản biện"
+    },
+    {
+      "id": "resolve-decision",
+      "label": "Resolve & Decide",
+      "label_vi": "Quyết định"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "open-01",
+      "node_id": "open-discussion",
+      "text": "Let's talk about the architecture for...",
+      "example": "Let's talk about the architecture for the new AI service.",
+      "translation_vi": "Hãy thảo luận về kiến trúc cho AI service mới.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8ba6f16b3506.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b1e564dfaf39.mp3",
+      "phrases": [
+        {
+          "text": "Let's talk about",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c59fe3561292.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9e6893430f81.mp3"
+        },
+        {
+          "text": "the architecture for",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d35916fb3891.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9bc140c81204.mp3"
+        },
+        {
+          "text": "the new AI service.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed443248835d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_112f8196443e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "open-02",
+      "node_id": "open-discussion",
+      "text": "We need to decide on...",
+      "example": "We need to decide on the vector database.",
+      "translation_vi": "Chúng ta cần quyết định về vector database.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_14ce65176940.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_23480d70abf4.mp3",
+      "phrases": [
+        {
+          "text": "We need to decide",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36d96f5b5417.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_029bf430f080.mp3"
+        },
+        {
+          "text": "on the vector database.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8208c30d1a47.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a240eaa39c0a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "open-03",
+      "node_id": "open-discussion",
+      "text": "I'd like to propose...",
+      "example": "I'd like to propose using a RAG pipeline.",
+      "translation_vi": "Tôi muốn đề xuất sử dụng RAG pipeline.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7681de9c0d55.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ac047a1730dd.mp3",
+      "phrases": [
+        {
+          "text": "I'd like to propose",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f73416ee2476.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fab53a0d78fd.mp3"
+        },
+        {
+          "text": "using a RAG pipeline.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d3ce2bee5078.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2ee77957f816.mp3"
+        }
+      ]
+    },
+    {
+      "id": "open-04",
+      "node_id": "open-discussion",
+      "text": "What are your thoughts on...?",
+      "example": "What are your thoughts on the agent workflow?",
+      "translation_vi": "Bạn nghĩ gì về agent workflow?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_94c1c985eb29.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2bc583347d48.mp3",
+      "phrases": [
+        {
+          "text": "What are your thoughts",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_167c799be415.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7502c9781c7e.mp3"
+        },
+        {
+          "text": "on the agent workflow?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_68cfc397ef61.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9f4eb7e071de.mp3"
+        }
+      ]
+    },
+    {
+      "id": "propose-01",
+      "node_id": "propose-approach",
+      "text": "I think we should go with...",
+      "example": "I think we should go with the MCP protocol.",
+      "translation_vi": "Tôi nghĩ chúng ta nên chọn MCP protocol.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b3bf93fe3329.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_01bb23fbe4f1.mp3",
+      "phrases": [
+        {
+          "text": "I think we should",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_471e43123d8c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cc7746cb7710.mp3"
+        },
+        {
+          "text": "go with the MCP protocol.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80f3c0406e0b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1aaab55f2f67.mp3"
+        }
+      ]
+    },
+    {
+      "id": "propose-02",
+      "node_id": "propose-approach",
+      "text": "My proposal is to...",
+      "example": "My proposal is to use a graph-based agent.",
+      "translation_vi": "Đề xuất của tôi là sử dụng graph-based agent.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_751b629189c0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e578113401af.mp3",
+      "phrases": [
+        {
+          "text": "My proposal is",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d740d3a2f0f7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8ff3f6784fde.mp3"
+        },
+        {
+          "text": "to use a graph-based agent.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_98d25c558048.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f36e1438af5e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "propose-03",
+      "node_id": "propose-approach",
+      "text": "One option is to...",
+      "example": "One option is to embed the LLM directly.",
+      "translation_vi": "Một phương án là nhúng LLM trực tiếp.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7b35a410a33e.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_680d76f1ebec.mp3",
+      "phrases": [
+        {
+          "text": "One option is",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f49dd279322a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cb163a69c1e5.mp3"
+        },
+        {
+          "text": "to embed the LLM directly.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_baecec85e28f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_22959acf3dad.mp3"
+        }
+      ]
+    },
+    {
+      "id": "propose-04",
+      "node_id": "propose-approach",
+      "text": "We could also consider...",
+      "example": "We could also consider using a vector store.",
+      "translation_vi": "Chúng ta cũng có thể cân nhắc dùng vector store.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4022e47ba16e.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_72615023ec6e.mp3",
+      "phrases": [
+        {
+          "text": "We could also consider",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a493ccb7b359.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c5a884f59648.mp3"
+        },
+        {
+          "text": "using a vector store.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d54f95c320c6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e9f4d9d4c433.mp3"
+        }
+      ]
+    },
+    {
+      "id": "state-01",
+      "node_id": "state-context",
+      "text": "Given our current constraints...",
+      "example": "Given our current constraints, latency is critical.",
+      "translation_vi": "Với những ràng buộc hiện tại, độ trễ là yếu tố quan trọng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0acb4206e99c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fb069a6305d5.mp3",
+      "phrases": [
+        {
+          "text": "Given our current constraints,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fa6585aad6b7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b60d6fc5746a.mp3"
+        },
+        {
+          "text": "latency is critical.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9cb9f34cbdd7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7782d53beabb.mp3"
+        }
+      ]
+    },
+    {
+      "id": "state-02",
+      "node_id": "state-context",
+      "text": "We have a strict token limit on...",
+      "example": "We have a strict token limit on the prompt.",
+      "translation_vi": "Chúng ta có giới hạn token nghiêm ngặt cho prompt.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f13edb98200f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_023d89341837.mp3",
+      "phrases": [
+        {
+          "text": "We have a strict token limit",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ff51f12918fe.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5a2f542b1194.mp3"
+        },
+        {
+          "text": "on the prompt.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c9b7890531fe.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6e30f086bf7e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "state-03",
+      "node_id": "state-context",
+      "text": "The team is already familiar with...",
+      "example": "The team is already familiar with Kubernetes.",
+      "translation_vi": "Team đã quen với Kubernetes.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d8aadaa8ef7f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_09234710c3a3.mp3",
+      "phrases": [
+        {
+          "text": "The team is already familiar",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_228fda4c2594.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_33515ce1e569.mp3"
+        },
+        {
+          "text": "with Kubernetes.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e86e03ebee44.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a2ce56e6dfd0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "state-04",
+      "node_id": "state-context",
+      "text": "We need to keep the deployment simple.",
+      "example": "We need to keep the deployment simple for now.",
+      "translation_vi": "Chúng ta cần giữ việc triển khai đơn giản.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4f87bc0e5264.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3a65e3dad3d1.mp3",
+      "phrases": [
+        {
+          "text": "We need to keep",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30d61f1d1c7c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_774b0d6ccaca.mp3"
+        },
+        {
+          "text": "the deployment simple",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4f6b9c403596.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8720eb0d09b0.mp3"
+        },
+        {
+          "text": "for now.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_237339b41c3e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_58e8b33fae9a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "benefits-01",
+      "node_id": "highlight-benefits",
+      "text": "The main advantage is...",
+      "example": "The main advantage is lower latency.",
+      "translation_vi": "Lợi thế chính là độ trễ thấp hơn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d575c0526fd6.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bc0a3105a224.mp3",
+      "phrases": [
+        {
+          "text": "The main advantage",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9bd33ddb7f6f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f5053a00c87f.mp3"
+        },
+        {
+          "text": "is lower latency.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2fa030de35d7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ae4714b125a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "benefits-02",
+      "node_id": "highlight-benefits",
+      "text": "This approach scales well because...",
+      "example": "This approach scales well because it's stateless.",
+      "translation_vi": "Phương án này mở rộng tốt vì nó không trạng thái.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d2932687670d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0e1dfbb04654.mp3",
+      "phrases": [
+        {
+          "text": "This approach scales well",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab69ed950505.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bbfeb7f20eae.mp3"
+        },
+        {
+          "text": "because it's stateless.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e31f634c8f7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1c3cd30a8d8b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "benefits-03",
+      "node_id": "highlight-benefits",
+      "text": "It will reduce our costs by...",
+      "example": "It will reduce our costs by about 20 percent.",
+      "translation_vi": "Nó sẽ giảm chi phí khoảng 20 phần trăm.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_db7c98731efb.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_13b443b8f403.mp3",
+      "phrases": [
+        {
+          "text": "It will reduce our costs",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6c7347c17af9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7b4a74f39a26.mp3"
+        },
+        {
+          "text": "by about 20 percent.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_163eff5f6cc9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ab3ce3fefc9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "benefits-04",
+      "node_id": "highlight-benefits",
+      "text": "Another benefit is easier maintenance.",
+      "example": "Another benefit is easier maintenance over time.",
+      "translation_vi": "Một lợi ích khác là bảo trì dễ dàng hơn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e081ee4b5e5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3a50fc5babbf.mp3",
+      "phrases": [
+        {
+          "text": "Another benefit",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d50082a899a4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4ad5854f0d06.mp3"
+        },
+        {
+          "text": "is easier maintenance",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_90bd430e246f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6f916d6b60d9.mp3"
+        },
+        {
+          "text": "over time.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a1644c604339.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_50676e0ed167.mp3"
+        }
+      ]
+    },
+    {
+      "id": "concerns-01",
+      "node_id": "raise-concerns",
+      "text": "I have a concern about...",
+      "example": "I have a concern about the token limit.",
+      "translation_vi": "Tôi có lo ngại về giới hạn token.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_70cb987a28df.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_efa31543f27d.mp3",
+      "phrases": [
+        {
+          "text": "I have a concern",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c8cbdad2835.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c834df039867.mp3"
+        },
+        {
+          "text": "about the token limit.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_84ca52c0a97b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_78565820c78d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "concerns-02",
+      "node_id": "raise-concerns",
+      "text": "The downside is...",
+      "example": "The downside is it adds complexity.",
+      "translation_vi": "Mặt trái là nó thêm độ phức tạp.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30fd04ccb223.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4bec17aeb135.mp3",
+      "phrases": [
+        {
+          "text": "The downside is",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c029d0549b89.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9cde54202437.mp3"
+        },
+        {
+          "text": "it adds complexity.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b06718b4d81e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_66333f429eb1.mp3"
+        }
+      ]
+    },
+    {
+      "id": "concerns-03",
+      "node_id": "raise-concerns",
+      "text": "What about the reliability of...?",
+      "example": "What about the reliability of the embedding service?",
+      "translation_vi": "Còn độ tin cậy của embedding service thì sao?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_88bebb535e91.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c16899f9be5d.mp3",
+      "phrases": [
+        {
+          "text": "What about the reliability",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0ec0c22168b5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_53c3387a667c.mp3"
+        },
+        {
+          "text": "of the embedding service?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_310f6478d5f8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_92c80245da15.mp3"
+        }
+      ]
+    },
+    {
+      "id": "concerns-04",
+      "node_id": "raise-concerns",
+      "text": "We might face issues with...",
+      "example": "We might face issues with latency spikes.",
+      "translation_vi": "Chúng ta có thể gặp vấn đề với độ trễ tăng đột biến.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b241a3d0fa13.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1684accd8f7e.mp3",
+      "phrases": [
+        {
+          "text": "We might face issues",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_529aeb66989e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_908312cab123.mp3"
+        },
+        {
+          "text": "with latency spikes.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_21df70102a81.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_93e8b58c8c7e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pushback-01",
+      "node_id": "push-back",
+      "text": "I see your point, but...",
+      "example": "I see your point, but we can optimize the prompt.",
+      "translation_vi": "Tôi hiểu ý bạn, nhưng chúng ta có thể tối ưu prompt.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fb738e09eec7.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f1030d2b29fa.mp3",
+      "phrases": [
+        {
+          "text": "I see your point,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dbd1ef0b701d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_050d63fb4b83.mp3"
+        },
+        {
+          "text": "but we can optimize the prompt.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bf7f4726a583.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4e81584bbd5b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pushback-02",
+      "node_id": "push-back",
+      "text": "That's a valid concern, however...",
+      "example": "That's a valid concern, however we have a fallback plan.",
+      "translation_vi": "Đó là lo ngại hợp lý, tuy nhiên chúng ta có phương án dự phòng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fa81ea8c28a0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c92669c5326a.mp3",
+      "phrases": [
+        {
+          "text": "That's a valid concern,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e4c459fac905.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_713c40ee0ad3.mp3"
+        },
+        {
+          "text": "however we have a fallback plan.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7fe5b69ca40c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_702089eef201.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pushback-03",
+      "node_id": "push-back",
+      "text": "Actually, I think we can mitigate that by...",
+      "example": "Actually, I think we can mitigate that by caching.",
+      "translation_vi": "Thực ra, tôi nghĩ chúng ta có thể giảm thiểu bằng caching.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_97c22eda1351.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_18e70cbadb95.mp3",
+      "phrases": [
+        {
+          "text": "Actually, I think we can mitigate that",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee044427f00c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e6b16bed39c1.mp3"
+        },
+        {
+          "text": "by caching.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5ba3e6c3e40a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_abaa5abd262b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pushback-04",
+      "node_id": "push-back",
+      "text": "I disagree because...",
+      "example": "I disagree because the trade-off is worth it.",
+      "translation_vi": "Tôi không đồng ý vì sự đánh đổi là xứng đáng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aa36d688c8b7.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_49f6181098e4.mp3",
+      "phrases": [
+        {
+          "text": "I disagree because",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef8060355043.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_86192179fb29.mp3"
+        },
+        {
+          "text": "the trade-off is worth it.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a322d5a2eefe.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ee838d335652.mp3"
+        }
+      ]
+    },
+    {
+      "id": "resolve-01",
+      "node_id": "resolve-decision",
+      "text": "Okay, let's go with...",
+      "example": "Okay, let's go with the RAG approach.",
+      "translation_vi": "Được rồi, chúng ta chọn phương án RAG.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_87f1d43313ed.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_525c7f17d999.mp3",
+      "phrases": [
+        {
+          "text": "Okay, let's go with",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_89162a9bcf31.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_596b0db0b2d7.mp3"
+        },
+        {
+          "text": "the RAG approach.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a110c098f16.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d7c4437de1c9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "resolve-02",
+      "node_id": "resolve-decision",
+      "text": "We can compromise by...",
+      "example": "We can compromise by starting simple and iterating.",
+      "translation_vi": "Chúng ta có thể thỏa hiệp bằng cách bắt đầu đơn giản và cải tiến dần.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_592f6fcd8809.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7002485b4417.mp3",
+      "phrases": [
+        {
+          "text": "We can compromise by",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f07da5e0b35a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b7d1fa7b26ff.mp3"
+        },
+        {
+          "text": "starting simple",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_237e402c4e0a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b7e5d59af1b3.mp3"
+        },
+        {
+          "text": "and iterating.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9df3b266da7c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8aa2f54019de.mp3"
+        }
+      ]
+    },
+    {
+      "id": "resolve-03",
+      "node_id": "resolve-decision",
+      "text": "Let's agree on...",
+      "example": "Let's agree on using the MCP protocol.",
+      "translation_vi": "Chúng ta thống nhất dùng MCP protocol nhé.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f99f5b356476.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ee375a4334cc.mp3",
+      "phrases": [
+        {
+          "text": "Let's agree on",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b2eee603d262.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3e2e994b35b1.mp3"
+        },
+        {
+          "text": "using the MCP protocol.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bc15307d78fb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e21c9d6204e9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "resolve-04",
+      "node_id": "resolve-decision",
+      "text": "Sounds like a plan.",
+      "example": "Sounds like a plan. Let's document it.",
+      "translation_vi": "Nghe có vẻ ổn. Hãy ghi lại quyết định.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_66db7d60ee56.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dbb9cf443085.mp3",
+      "phrases": [
+        {
+          "text": "Sounds like a plan.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9778e8e92a6c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c6cc4433eeb.mp3"
+        },
+        {
+          "text": "Let's document it.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0bf00fdea754.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c02d9b0d88e4.mp3"
+        }
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What approach are you proposing?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_83c6df1adb5c.mp3",
+      "accepted_patterns": [
+        "I think we should go with",
+        "My proposal is to",
+        "One option is to",
+        "We could also consider"
+      ],
+      "hint_vi": "Đề xuất phương án kiến trúc"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "What is the context or constraint?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ccec7975ba02.mp3",
+      "accepted_patterns": [
+        "Given our current constraints",
+        "We have a strict token limit on",
+        "The team is already familiar with",
+        "We need to keep"
+      ],
+      "hint_vi": "Nêu bối cảnh hoặc ràng buộc"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What are the benefits of this approach?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c5d62c07ecd8.mp3",
+      "accepted_patterns": [
+        "The main advantage is",
+        "This approach scales well because",
+        "It will reduce our costs by",
+        "Another benefit is"
+      ],
+      "hint_vi": "Nêu lợi ích của phương án"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What concerns do you have?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2389f0de1e6f.mp3",
+      "accepted_patterns": [
+        "I have a concern about",
+        "The downside is",
+        "What about the reliability of",
+        "We might face issues with"
+      ],
+      "hint_vi": "Nêu lo ngại"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "How do you push back against a concern?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cab570975c5c.mp3",
+      "accepted_patterns": [
+        "I see your point, but",
+        "That's a valid concern, however",
+        "Actually, I think we can mitigate that by",
+        "I disagree because"
+      ],
+      "hint_vi": "Phản biện lại lo ngại"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What is the final decision?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0617757d0343.mp3",
+      "accepted_patterns": [
+        "Okay, let's go with",
+        "We can compromise by",
+        "Let's agree on",
+        "Sounds like a plan"
+      ],
+      "hint_vi": "Đưa ra quyết định cuối cùng"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Architecture discussion with tech lead",
+      "title_vi": "Thảo luận kiến trúc với tech lead",
+      "turns": [
+        {
+          "role": "Tech Lead",
+          "text": "Let's discuss the architecture for the new feature.",
+          "translation_vi": "Chúng ta thảo luận kiến trúc cho tính năng mới nhé.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f7775147fc6a.mp3",
+          "phrases": [
+            {
+              "text": "Let's discuss the architecture",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_44619599d071.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c1490fa772d0.mp3"
+            },
+            {
+              "text": "for the new feature.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bebf43f7568b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dd320857504c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I think we should go with a RAG pipeline.",
+          "translation_vi": "Tôi nghĩ chúng ta nên chọn RAG pipeline.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_726a4b696897.mp3",
+          "phrases": [
+            {
+              "text": "I think we should go with",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d3817cdabdd9.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_416e4854d08b.mp3"
+            },
+            {
+              "text": "a RAG pipeline.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0845f8927c4a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a7fa2bf4aa2.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What's the main advantage?",
+          "translation_vi": "Lợi thế chính là gì?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9aebae95eaf1.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "It scales well and keeps latency low.",
+          "translation_vi": "Nó mở rộng tốt và giữ độ trễ thấp.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a85d83b75591.mp3",
+          "phrases": [
+            {
+              "text": "It scales well",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8fac4c61fae3.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_eee50895fb96.mp3"
+            },
+            {
+              "text": "and keeps latency low.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5e463cec9162.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0e88e7cb8f59.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I have a concern about the token limit.",
+          "translation_vi": "Tôi lo ngại về giới hạn token.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_114dfb59c241.mp3",
+          "phrases": [
+            {
+              "text": "I have a concern",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1512b9b05fb5.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d928dee24cf8.mp3"
+            },
+            {
+              "text": "about the token limit.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_16878291ca11.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9f1a30e158f4.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "That's a valid concern, but we can optimize the prompt.",
+          "translation_vi": "Đó là lo ngại hợp lý, nhưng chúng ta có thể tối ưu prompt.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fecf87679c54.mp3",
+          "phrases": [
+            {
+              "text": "That's a valid concern,",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e4c459fac905.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_713c40ee0ad3.mp3"
+            },
+            {
+              "text": "but we can optimize the prompt.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bf7f4726a583.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4e81584bbd5b.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Okay, let's go with the RAG pipeline.",
+          "translation_vi": "Được rồi, chúng ta chọn RAG pipeline.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ba99d8f4f3c.mp3",
+          "phrases": [
+            {
+              "text": "Okay, let's go with",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_07bef1a0bec3.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_40b7492b1cdc.mp3"
+            },
+            {
+              "text": "the RAG pipeline.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6218c18c69a2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_57943ad8263c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sounds like a plan.",
+          "translation_vi": "Nghe có vẻ ổn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9778e8e92a6c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Debating microservices vs monolith",
+      "title_vi": "Tranh luận microservices vs monolith",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "I think we should use microservices.",
+          "translation_vi": "Tôi nghĩ chúng ta nên dùng microservices.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cf962c746a3b.mp3"
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What's the context?",
+          "translation_vi": "Bối cảnh thế nào?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_98cae861b307.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "We have a small team and need fast iterations.",
+          "translation_vi": "Chúng ta có team nhỏ và cần lặp nhanh.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b83cc44d723d.mp3",
+          "phrases": [
+            {
+              "text": "We have a small team",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_03059c620ca7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8a07c2618870.mp3"
+            },
+            {
+              "text": "and need fast iterations.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b18ebae83ce8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3119deb7bcf7.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "The downside is added complexity.",
+          "translation_vi": "Mặt trái là thêm độ phức tạp.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b9c344e3e013.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "I see your point, but we can start simple.",
+          "translation_vi": "Tôi hiểu ý bạn, nhưng chúng ta có thể bắt đầu đơn giản.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2f66d50300f1.mp3",
+          "phrases": [
+            {
+              "text": "I see your point,",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dbd1ef0b701d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_050d63fb4b83.mp3"
+            },
+            {
+              "text": "but we can start simple.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cec67e06456c.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f9ce5ce5e04c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What about the deployment overhead?",
+          "translation_vi": "Còn chi phí triển khai thì sao?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_07960f1096b7.mp3",
+          "phrases": [
+            {
+              "text": "What about",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_117ad178e6b9.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_624853fd8724.mp3"
+            },
+            {
+              "text": "the deployment overhead?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e7628e7cbd67.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b95b8794b5b6.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Actually, I think we can mitigate that with containers.",
+          "translation_vi": "Thực ra, tôi nghĩ chúng ta có thể giảm thiểu bằng container.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e20dc0e9c2a0.mp3",
+          "phrases": [
+            {
+              "text": "Actually, I think we can mitigate that",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee044427f00c.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e6b16bed39c1.mp3"
+            },
+            {
+              "text": "with containers.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f19e6c786dcb.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_88ea9d26eff2.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Okay, let's agree on a hybrid approach.",
+          "translation_vi": "Được rồi, chúng ta thống nhất phương án kết hợp.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e481b7f08d75.mp3",
+          "phrases": [
+            {
+              "text": "Okay, let's agree on",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a8f7ca9a03d0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7939b285a4ef.mp3"
+            },
+            {
+              "text": "a hybrid approach.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_809d8fc3be9f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cb1861e3972d.mp3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

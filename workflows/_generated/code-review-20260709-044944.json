@@ -1,0 +1,745 @@
+{
+  "meta": {
+    "id": "code-review",
+    "title": "Code Review",
+    "title_vi": "Review code",
+    "description": "Review a teammate's pull request: understand the change, ask questions, request changes, and approve.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "engineering",
+    "tags": ["code-review", "pull-request", "feedback"]
+  },
+  "nodes": [
+    {
+      "id": "open-pr",
+      "label": "Open Pull Request",
+      "label_vi": "Mở pull request"
+    },
+    {
+      "id": "understand-change",
+      "label": "Understand the Change",
+      "label_vi": "Hiểu thay đổi"
+    },
+    {
+      "id": "ask-clarify",
+      "label": "Ask Clarifying Questions",
+      "label_vi": "Đặt câu hỏi làm rõ"
+    },
+    {
+      "id": "suggest-improvement",
+      "label": "Suggest Improvements",
+      "label_vi": "Đề xuất cải thiện"
+    },
+    {
+      "id": "request-changes",
+      "label": "Request Changes",
+      "label_vi": "Yêu cầu thay đổi"
+    },
+    {
+      "id": "approve-merge",
+      "label": "Approve and Merge",
+      "label_vi": "Phê duyệt và merge"
+    },
+    {
+      "id": "wrap-up",
+      "label": "Wrap Up",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "open-pr-01",
+      "node_id": "open-pr",
+      "text": "Can you review my PR?",
+      "example": "Can you review my PR when you have a moment?",
+      "translation_vi": "Bạn review PR của tôi khi rảnh được không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Can you review my PR", "audio": "", "audio_slow": ""},
+        {"text": "when you have a moment?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "open-pr-02",
+      "node_id": "open-pr",
+      "text": "I've opened a PR for...",
+      "example": "I've opened a PR for the new authentication flow.",
+      "translation_vi": "Tôi đã mở PR cho luồng xác thực mới.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I've opened a PR", "audio": "", "audio_slow": ""},
+        {"text": "for the new authentication flow.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "open-pr-03",
+      "node_id": "open-pr",
+      "text": "Could you take a look at...?",
+      "example": "Could you take a look at the refactored module?",
+      "translation_vi": "Bạn xem giúp module đã refactor được không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you take a look", "audio": "", "audio_slow": ""},
+        {"text": "at the refactored module?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "open-pr-04",
+      "node_id": "open-pr",
+      "text": "I just pushed a PR for...",
+      "example": "I just pushed a PR for the data migration script.",
+      "translation_vi": "Tôi vừa push PR cho script migrate dữ liệu.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I just pushed a PR", "audio": "", "audio_slow": ""},
+        {"text": "for the data migration script.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "open-pr-05",
+      "node_id": "open-pr",
+      "text": "This PR addresses...",
+      "example": "This PR addresses the issue with token expiration.",
+      "translation_vi": "PR này giải quyết vấn đề hết hạn token.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This PR addresses", "audio": "", "audio_slow": ""},
+        {"text": "the issue with token expiration.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "understand-change-01",
+      "node_id": "understand-change",
+      "text": "Let me read through the changes.",
+      "example": "Let me read through the changes first.",
+      "translation_vi": "Để tôi đọc qua các thay đổi trước.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me read through", "audio": "", "audio_slow": ""},
+        {"text": "the changes first.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "understand-change-02",
+      "node_id": "understand-change",
+      "text": "I see you modified...",
+      "example": "I see you modified the error handling logic.",
+      "translation_vi": "Tôi thấy bạn đã sửa logic xử lý lỗi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I see you modified", "audio": "", "audio_slow": ""},
+        {"text": "the error handling logic.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "understand-change-03",
+      "node_id": "understand-change",
+      "text": "What does this function do?",
+      "example": "What does this new utility function do exactly?",
+      "translation_vi": "Hàm tiện ích mới này làm gì vậy?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What does this new utility function", "audio": "", "audio_slow": ""},
+        {"text": "do exactly?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "understand-change-04",
+      "node_id": "understand-change",
+      "text": "I'm not sure I understand...",
+      "example": "I'm not sure I understand the caching strategy here.",
+      "translation_vi": "Tôi không chắc hiểu chiến lược cache ở đây.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm not sure I understand", "audio": "", "audio_slow": ""},
+        {"text": "the caching strategy here.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "understand-change-05",
+      "node_id": "understand-change",
+      "text": "Why did you choose...?",
+      "example": "Why did you choose a hash map over a list?",
+      "translation_vi": "Tại sao bạn chọn hash map thay vì list?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Why did you choose", "audio": "", "audio_slow": ""},
+        {"text": "a hash map over a list?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-clarify-01",
+      "node_id": "ask-clarify",
+      "text": "Could you explain...?",
+      "example": "Could you explain this part more?",
+      "translation_vi": "Bạn giải thích phần này thêm được không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you explain", "audio": "", "audio_slow": ""},
+        {"text": "this part more?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-clarify-02",
+      "node_id": "ask-clarify",
+      "text": "I'm curious about...",
+      "example": "I'm curious about the decision to use async here.",
+      "translation_vi": "Tôi tò mò về quyết định dùng async ở đây.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm curious about", "audio": "", "audio_slow": ""},
+        {"text": "the decision to use async here.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-clarify-03",
+      "node_id": "ask-clarify",
+      "text": "What was your reasoning behind...?",
+      "example": "What was your reasoning behind the batch size?",
+      "translation_vi": "Lý do bạn chọn kích thước batch là gì?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What was your reasoning", "audio": "", "audio_slow": ""},
+        {"text": "behind the batch size?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-clarify-04",
+      "node_id": "ask-clarify",
+      "text": "Did you consider...?",
+      "example": "Did you consider using a queue instead?",
+      "translation_vi": "Bạn có cân nhắc dùng queue thay vì không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Did you consider", "audio": "", "audio_slow": ""},
+        {"text": "using a queue instead?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-clarify-05",
+      "node_id": "ask-clarify",
+      "text": "How does this handle...?",
+      "example": "How does this handle concurrent requests?",
+      "translation_vi": "Cái này xử lý concurrent request thế nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How does this handle", "audio": "", "audio_slow": ""},
+        {"text": "concurrent requests?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "suggest-improvement-01",
+      "node_id": "suggest-improvement",
+      "text": "You might want to...",
+      "example": "You might want to add a null check here.",
+      "translation_vi": "Bạn có thể thêm null check ở đây.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "You might want to", "audio": "", "audio_slow": ""},
+        {"text": "add a null check here.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "suggest-improvement-02",
+      "node_id": "suggest-improvement",
+      "text": "How about...?",
+      "example": "How about extracting this into a separate method?",
+      "translation_vi": "Hay là tách cái này thành một method riêng?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How about extracting", "audio": "", "audio_slow": ""},
+        {"text": "this into a separate method?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "suggest-improvement-03",
+      "node_id": "suggest-improvement",
+      "text": "A cleaner approach would be...",
+      "example": "A cleaner approach would be to use a switch statement.",
+      "translation_vi": "Cách sạch hơn là dùng switch statement.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "A cleaner approach", "audio": "", "audio_slow": ""},
+        {"text": "would be to use a switch statement.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "suggest-improvement-04",
+      "node_id": "suggest-improvement",
+      "text": "Consider adding...",
+      "example": "Consider adding unit tests for the new module.",
+      "translation_vi": "Cân nhắc thêm unit test cho module mới.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Consider adding", "audio": "", "audio_slow": ""},
+        {"text": "unit tests for the new module.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "suggest-improvement-05",
+      "node_id": "suggest-improvement",
+      "text": "I think we could improve...",
+      "example": "I think we could improve the error messages here.",
+      "translation_vi": "Tôi nghĩ chúng ta có thể cải thiện thông báo lỗi ở đây.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I think we could improve", "audio": "", "audio_slow": ""},
+        {"text": "the error messages here.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "request-changes-01",
+      "node_id": "request-changes",
+      "text": "We need to fix...",
+      "example": "We need to fix the memory leak before merging.",
+      "translation_vi": "Chúng ta cần sửa lỗi rò rỉ bộ nhớ trước khi merge.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need to fix", "audio": "", "audio_slow": ""},
+        {"text": "the memory leak before merging.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "request-changes-02",
+      "node_id": "request-changes",
+      "text": "This won't work because...",
+      "example": "This won't work because it misses edge cases.",
+      "translation_vi": "Cái này không chạy được vì thiếu các trường hợp đặc biệt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This won't work", "audio": "", "audio_slow": ""},
+        {"text": "because it misses edge cases.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "request-changes-03",
+      "node_id": "request-changes",
+      "text": "Could you update...?",
+      "example": "Could you update the variable name for clarity?",
+      "translation_vi": "Bạn cập nhật tên biến cho rõ nghĩa được không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you update", "audio": "", "audio_slow": ""},
+        {"text": "the variable name for clarity?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "request-changes-04",
+      "node_id": "request-changes",
+      "text": "Please remove...",
+      "example": "Please remove the commented-out code.",
+      "translation_vi": "Hãy xóa code đã comment đi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Please remove", "audio": "", "audio_slow": ""},
+        {"text": "the commented-out code.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "request-changes-05",
+      "node_id": "request-changes",
+      "text": "I think we should refactor...",
+      "example": "I think we should refactor this into smaller functions.",
+      "translation_vi": "Tôi nghĩ chúng ta nên refactor cái này thành các hàm nhỏ hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I think we should refactor", "audio": "", "audio_slow": ""},
+        {"text": "this into smaller functions.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "approve-merge-01",
+      "node_id": "approve-merge",
+      "text": "Looks good to me.",
+      "example": "Looks good to me. I'll approve it.",
+      "translation_vi": "Trông ổn với tôi. Tôi sẽ approve.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Looks good to me.", "audio": "", "audio_slow": ""},
+        {"text": "I'll approve it.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "approve-merge-02",
+      "node_id": "approve-merge",
+      "text": "Approved.",
+      "example": "Approved. Nice work on the refactor!",
+      "translation_vi": "Đã approve. Làm tốt lắm với bản refactor!",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Approved.", "audio": "", "audio_slow": ""},
+        {"text": "Nice work on the refactor!", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "approve-merge-03",
+      "node_id": "approve-merge",
+      "text": "This looks ready to merge.",
+      "example": "This looks ready to merge. Go ahead.",
+      "translation_vi": "Cái này có vẻ sẵn sàng để merge. Cứ làm đi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This looks ready to merge.", "audio": "", "audio_slow": ""},
+        {"text": "Go ahead.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "approve-merge-04",
+      "node_id": "approve-merge",
+      "text": "I'm happy with the changes.",
+      "example": "I'm happy with the changes. Merging now.",
+      "translation_vi": "Tôi hài lòng với các thay đổi. Merge ngay.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm happy with the changes.", "audio": "", "audio_slow": ""},
+        {"text": "Merging now.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "approve-merge-05",
+      "node_id": "approve-merge",
+      "text": "Great, I'll merge it.",
+      "example": "Great, I'll merge it after the CI passes.",
+      "translation_vi": "Tuyệt, tôi sẽ merge sau khi CI chạy xong.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Great, I'll merge it", "audio": "", "audio_slow": ""},
+        {"text": "after the CI passes.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-01",
+      "node_id": "wrap-up",
+      "text": "Thanks for the review!",
+      "example": "Thanks for the review! I'll address the comments.",
+      "translation_vi": "Cảm ơn đã review! Tôi sẽ xử lý các góp ý.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thanks for the review!", "audio": "", "audio_slow": ""},
+        {"text": "I'll address the comments.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-02",
+      "node_id": "wrap-up",
+      "text": "I'll make the changes and push again.",
+      "example": "I'll make the changes and push again.",
+      "translation_vi": "Tôi sẽ sửa và push lại.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll make the changes", "audio": "", "audio_slow": ""},
+        {"text": "and push again.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-03",
+      "node_id": "wrap-up",
+      "text": "Let me know if you need anything else.",
+      "example": "Let me know if you need anything else.",
+      "translation_vi": "Cho tôi biết nếu bạn cần gì thêm.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me know", "audio": "", "audio_slow": ""},
+        {"text": "if you need anything else.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-04",
+      "node_id": "wrap-up",
+      "text": "Happy to help.",
+      "example": "Happy to help. Let's sync after you push.",
+      "translation_vi": "Sẵn lòng giúp. Sau khi bạn push thì mình sync lại nhé.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Happy to help.", "audio": "", "audio_slow": ""},
+        {"text": "Let's sync after you push.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-05",
+      "node_id": "wrap-up",
+      "text": "Great teamwork!",
+      "example": "Great teamwork! The PR is merged now.",
+      "translation_vi": "Làm việc nhóm tuyệt vời! PR đã được merge rồi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Great teamwork!", "audio": "", "audio_slow": ""},
+        {"text": "The PR is merged now.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What is this PR about?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "This PR addresses",
+        "I've opened a PR for",
+        "I just pushed a PR for"
+      ],
+      "hint_vi": "Nói về mục đích của PR"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "Can you explain this part?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Could you explain",
+        "I'm curious about",
+        "What was your reasoning behind"
+      ],
+      "hint_vi": "Hỏi làm rõ một phần trong code"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "Any suggestions for improvement?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "You might want to",
+        "How about",
+        "A cleaner approach would be",
+        "Consider adding",
+        "I think we could improve"
+      ],
+      "hint_vi": "Đề xuất cải thiện"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What needs to be fixed?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "We need to fix",
+        "This won't work because",
+        "Could you update",
+        "Please remove",
+        "I think we should refactor"
+      ],
+      "hint_vi": "Yêu cầu thay đổi cần thiết"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "Do you approve the PR?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Looks good to me",
+        "Approved",
+        "This looks ready to merge",
+        "I'm happy with the changes",
+        "Great, I'll merge it"
+      ],
+      "hint_vi": "Phê duyệt hoặc từ chối"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What will you do after the review?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Thanks for the review",
+        "I'll make the changes and push again",
+        "Let me know if you need anything else",
+        "Happy to help"
+      ],
+      "hint_vi": "Nói về bước tiếp theo"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Reviewing a PR with a colleague",
+      "title_vi": "Review PR với đồng nghiệp",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Hi, can you review my PR?",
+          "translation_vi": "Chào, bạn review PR của tôi được không?",
+          "audio": "",
+          "phrases": [
+            {"text": "Hi, can you review my PR?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Sure, let me take a look.",
+          "translation_vi": "Được, để tôi xem qua.",
+          "audio": "",
+          "phrases": [
+            {"text": "Sure, let me take a look.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I see you modified the auth service. What does this new function do?",
+          "translation_vi": "Tôi thấy bạn sửa auth service. Hàm mới này làm gì?",
+          "audio": "",
+          "phrases": [
+            {"text": "I see you modified the auth service.", "audio": "", "audio_slow": ""},
+            {"text": "What does this new function do?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "It handles token refresh logic. I extracted it for reusability.",
+          "translation_vi": "Nó xử lý logic refresh token. Tôi tách ra để dùng lại.",
+          "audio": "",
+          "phrases": [
+            {"text": "It handles token refresh logic.", "audio": "", "audio_slow": ""},
+            {"text": "I extracted it for reusability.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "You might want to add a null check for the token parameter.",
+          "translation_vi": "Bạn có thể thêm null check cho tham số token.",
+          "audio": "",
+          "phrases": [
+            {"text": "You might want to add a null check", "audio": "", "audio_slow": ""},
+            {"text": "for the token parameter.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Good point. I'll add that and push again.",
+          "translation_vi": "Đúng vậy. Tôi sẽ thêm và push lại.",
+          "audio": "",
+          "phrases": [
+            {"text": "Good point.", "audio": "", "audio_slow": ""},
+            {"text": "I'll add that and push again.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Looks good to me. I'll approve after you push.",
+          "translation_vi": "Trông ổn rồi. Tôi sẽ approve sau khi bạn push.",
+          "audio": "",
+          "phrases": [
+            {"text": "Looks good to me.", "audio": "", "audio_slow": ""},
+            {"text": "I'll approve after you push.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thanks a lot!",
+          "translation_vi": "Cảm ơn nhiều!",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Requesting changes on a PR",
+      "title_vi": "Yêu cầu thay đổi trên PR",
+      "turns": [
+        {
+          "role": "Tech Lead",
+          "text": "I've reviewed your PR. There are a few issues.",
+          "translation_vi": "Tôi đã review PR của bạn. Có vài vấn đề.",
+          "audio": "",
+          "phrases": [
+            {"text": "I've reviewed your PR.", "audio": "", "audio_slow": ""},
+            {"text": "There are a few issues.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Okay, what needs to be fixed?",
+          "translation_vi": "Vâng, cần sửa gì ạ?",
+          "audio": "",
+          "phrases": [
+            {"text": "Okay, what needs to be fixed?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "We need to fix the memory leak in the caching layer.",
+          "translation_vi": "Chúng ta cần sửa lỗi rò rỉ bộ nhớ ở tầng cache.",
+          "audio": "",
+          "phrases": [
+            {"text": "We need to fix the memory leak", "audio": "", "audio_slow": ""},
+            {"text": "in the caching layer.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I see. I'll look into it.",
+          "translation_vi": "Tôi hiểu. Tôi sẽ xem xét.",
+          "audio": "",
+          "phrases": [
+            {"text": "I see.", "audio": "", "audio_slow": ""},
+            {"text": "I'll look into it.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Also, please remove the commented-out code in the utils file.",
+          "translation_vi": "Với lại, hãy xóa code đã comment trong file utils.",
+          "audio": "",
+          "phrases": [
+            {"text": "Also, please remove", "audio": "", "audio_slow": ""},
+            {"text": "the commented-out code in the utils file.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sure, I'll clean that up.",
+          "translation_vi": "Vâng, tôi sẽ dọn dẹp.",
+          "audio": "",
+          "phrases": [
+            {"text": "Sure, I'll clean that up.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Great. Let me know when you've pushed the changes.",
+          "translation_vi": "Tốt. Cho tôi biết khi bạn push thay đổi nhé.",
+          "audio": "",
+          "phrases": [
+            {"text": "Great.", "audio": "", "audio_slow": ""},
+            {"text": "Let me know when you've pushed the changes.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Will do. Thanks!",
+          "translation_vi": "Vâng. Cảm ơn!",
+          "audio": ""
+        }
+      ]
+    }
+  ]
+}

@@ -54,5 +54,12 @@
     "category": "career",
     "tags": ["interview", "hr", "career"],
     "hint": "A candidate in an HR/behavioral interview: talking about strengths and weaknesses, why they're leaving their current job, salary expectations, culture-fit questions."
+  },
+  "pair-programming": {
+    "title": "Asking for Help / Pair Programming",
+    "title_vi": "Nhờ giúp đỡ / Lập trình cặp đôi",
+    "category": "team-communication",
+    "tags": ["pair-programming", "asking-for-help", "collaboration"],
+    "hint": "An engineer asking a teammate for help mid-task and pairing with them: explaining what they're stuck on, sharing screen/context, thinking out loud together, splitting the work."
   }
 }

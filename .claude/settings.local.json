@@ -38,7 +38,9 @@
       "Bash(curl -s -o /dev/null -w \"progress.js: %{http_code}\\\\n\" http://localhost:8850/workflows/shared/progress.js)",
       "Bash(curl -s -o /dev/null -w \"lesson.js: %{http_code}\\\\n\" http://localhost:8850/workflows/shared/lesson.js)",
       "Bash(curl -sI http://localhost:8850/workflows/daily-standup/index.html)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(pkill -f \"http.server 8780\")",
+      "Bash(ps -p 71043 -o etime=)"
     ]
   }
 }

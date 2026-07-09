@@ -1,0 +1,619 @@
+{
+  "meta": {
+    "id": "architecture-discussion",
+    "title": "Architecture Discussion",
+    "title_vi": "Thảo luận kiến trúc",
+    "description": "Discuss system design decisions: propose an approach, weigh trade-offs, push back with concerns, and reach a decision.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "engineering",
+    "tags": ["architecture", "system-design", "trade-off"]
+  },
+  "nodes": [
+    {
+      "id": "open-discussion",
+      "label": "Open Discussion",
+      "label_vi": "Mở đầu thảo luận"
+    },
+    {
+      "id": "propose-approach",
+      "label": "Propose Approach",
+      "label_vi": "Đề xuất phương án"
+    },
+    {
+      "id": "state-context",
+      "label": "State Context",
+      "label_vi": "Nêu bối cảnh"
+    },
+    {
+      "id": "highlight-benefits",
+      "label": "Highlight Benefits",
+      "label_vi": "Nêu lợi ích"
+    },
+    {
+      "id": "raise-concerns",
+      "label": "Raise Concerns",
+      "label_vi": "Nêu lo ngại"
+    },
+    {
+      "id": "push-back",
+      "label": "Push Back",
+      "label_vi": "Phản biện"
+    },
+    {
+      "id": "resolve-decision",
+      "label": "Resolve & Decide",
+      "label_vi": "Quyết định"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "open-01",
+      "node_id": "open-discussion",
+      "text": "Let's talk about the architecture for...",
+      "example": "Let's talk about the architecture for the new AI service.",
+      "translation_vi": "Hãy thảo luận về kiến trúc cho AI service mới.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's talk about", "audio": "", "audio_slow": ""},
+        {"text": "the architecture for", "audio": "", "audio_slow": ""},
+        {"text": "the new AI service.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "open-02",
+      "node_id": "open-discussion",
+      "text": "We need to decide on...",
+      "example": "We need to decide on the vector database.",
+      "translation_vi": "Chúng ta cần quyết định về vector database.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need to decide", "audio": "", "audio_slow": ""},
+        {"text": "on the vector database.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "open-03",
+      "node_id": "open-discussion",
+      "text": "I'd like to propose...",
+      "example": "I'd like to propose using a RAG pipeline.",
+      "translation_vi": "Tôi muốn đề xuất sử dụng RAG pipeline.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'd like to propose", "audio": "", "audio_slow": ""},
+        {"text": "using a RAG pipeline.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "open-04",
+      "node_id": "open-discussion",
+      "text": "What are your thoughts on...?",
+      "example": "What are your thoughts on the agent workflow?",
+      "translation_vi": "Bạn nghĩ gì về agent workflow?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What are your thoughts", "audio": "", "audio_slow": ""},
+        {"text": "on the agent workflow?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-01",
+      "node_id": "propose-approach",
+      "text": "I think we should go with...",
+      "example": "I think we should go with the MCP protocol.",
+      "translation_vi": "Tôi nghĩ chúng ta nên chọn MCP protocol.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I think we should", "audio": "", "audio_slow": ""},
+        {"text": "go with the MCP protocol.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-02",
+      "node_id": "propose-approach",
+      "text": "My proposal is to...",
+      "example": "My proposal is to use a graph-based agent.",
+      "translation_vi": "Đề xuất của tôi là sử dụng graph-based agent.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "My proposal is", "audio": "", "audio_slow": ""},
+        {"text": "to use a graph-based agent.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-03",
+      "node_id": "propose-approach",
+      "text": "One option is to...",
+      "example": "One option is to embed the LLM directly.",
+      "translation_vi": "Một phương án là nhúng LLM trực tiếp.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "One option is", "audio": "", "audio_slow": ""},
+        {"text": "to embed the LLM directly.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-04",
+      "node_id": "propose-approach",
+      "text": "We could also consider...",
+      "example": "We could also consider using a vector store.",
+      "translation_vi": "Chúng ta cũng có thể cân nhắc dùng vector store.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We could also consider", "audio": "", "audio_slow": ""},
+        {"text": "using a vector store.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "state-01",
+      "node_id": "state-context",
+      "text": "Given our current constraints...",
+      "example": "Given our current constraints, latency is critical.",
+      "translation_vi": "Với những ràng buộc hiện tại, độ trễ là yếu tố quan trọng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Given our current constraints,", "audio": "", "audio_slow": ""},
+        {"text": "latency is critical.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "state-02",
+      "node_id": "state-context",
+      "text": "We have a strict token limit on...",
+      "example": "We have a strict token limit on the prompt.",
+      "translation_vi": "Chúng ta có giới hạn token nghiêm ngặt cho prompt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We have a strict token limit", "audio": "", "audio_slow": ""},
+        {"text": "on the prompt.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "state-03",
+      "node_id": "state-context",
+      "text": "The team is already familiar with...",
+      "example": "The team is already familiar with Kubernetes.",
+      "translation_vi": "Team đã quen với Kubernetes.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The team is already familiar", "audio": "", "audio_slow": ""},
+        {"text": "with Kubernetes.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "state-04",
+      "node_id": "state-context",
+      "text": "We need to keep the deployment simple.",
+      "example": "We need to keep the deployment simple for now.",
+      "translation_vi": "Chúng ta cần giữ việc triển khai đơn giản.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need to keep", "audio": "", "audio_slow": ""},
+        {"text": "the deployment simple", "audio": "", "audio_slow": ""},
+        {"text": "for now.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "benefits-01",
+      "node_id": "highlight-benefits",
+      "text": "The main advantage is...",
+      "example": "The main advantage is lower latency.",
+      "translation_vi": "Lợi thế chính là độ trễ thấp hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The main advantage", "audio": "", "audio_slow": ""},
+        {"text": "is lower latency.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "benefits-02",
+      "node_id": "highlight-benefits",
+      "text": "This approach scales well because...",
+      "example": "This approach scales well because it's stateless.",
+      "translation_vi": "Phương án này mở rộng tốt vì nó không trạng thái.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This approach scales well", "audio": "", "audio_slow": ""},
+        {"text": "because it's stateless.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "benefits-03",
+      "node_id": "highlight-benefits",
+      "text": "It will reduce our costs by...",
+      "example": "It will reduce our costs by about 20 percent.",
+      "translation_vi": "Nó sẽ giảm chi phí khoảng 20 phần trăm.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "It will reduce our costs", "audio": "", "audio_slow": ""},
+        {"text": "by about 20 percent.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "benefits-04",
+      "node_id": "highlight-benefits",
+      "text": "Another benefit is easier maintenance.",
+      "example": "Another benefit is easier maintenance over time.",
+      "translation_vi": "Một lợi ích khác là bảo trì dễ dàng hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Another benefit", "audio": "", "audio_slow": ""},
+        {"text": "is easier maintenance", "audio": "", "audio_slow": ""},
+        {"text": "over time.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "concerns-01",
+      "node_id": "raise-concerns",
+      "text": "I have a concern about...",
+      "example": "I have a concern about the token limit.",
+      "translation_vi": "Tôi có lo ngại về giới hạn token.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I have a concern", "audio": "", "audio_slow": ""},
+        {"text": "about the token limit.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "concerns-02",
+      "node_id": "raise-concerns",
+      "text": "The downside is...",
+      "example": "The downside is it adds complexity.",
+      "translation_vi": "Mặt trái là nó thêm độ phức tạp.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The downside is", "audio": "", "audio_slow": ""},
+        {"text": "it adds complexity.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "concerns-03",
+      "node_id": "raise-concerns",
+      "text": "What about the reliability of...?",
+      "example": "What about the reliability of the embedding service?",
+      "translation_vi": "Còn độ tin cậy của embedding service thì sao?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What about the reliability", "audio": "", "audio_slow": ""},
+        {"text": "of the embedding service?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "concerns-04",
+      "node_id": "raise-concerns",
+      "text": "We might face issues with...",
+      "example": "We might face issues with latency spikes.",
+      "translation_vi": "Chúng ta có thể gặp vấn đề với độ trễ tăng đột biến.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We might face issues", "audio": "", "audio_slow": ""},
+        {"text": "with latency spikes.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pushback-01",
+      "node_id": "push-back",
+      "text": "I see your point, but...",
+      "example": "I see your point, but we can optimize the prompt.",
+      "translation_vi": "Tôi hiểu ý bạn, nhưng chúng ta có thể tối ưu prompt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I see your point,", "audio": "", "audio_slow": ""},
+        {"text": "but we can optimize the prompt.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pushback-02",
+      "node_id": "push-back",
+      "text": "That's a valid concern, however...",
+      "example": "That's a valid concern, however we have a fallback plan.",
+      "translation_vi": "Đó là lo ngại hợp lý, tuy nhiên chúng ta có phương án dự phòng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "That's a valid concern,", "audio": "", "audio_slow": ""},
+        {"text": "however we have a fallback plan.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pushback-03",
+      "node_id": "push-back",
+      "text": "Actually, I think we can mitigate that by...",
+      "example": "Actually, I think we can mitigate that by caching.",
+      "translation_vi": "Thực ra, tôi nghĩ chúng ta có thể giảm thiểu bằng caching.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Actually, I think we can mitigate that", "audio": "", "audio_slow": ""},
+        {"text": "by caching.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pushback-04",
+      "node_id": "push-back",
+      "text": "I disagree because...",
+      "example": "I disagree because the trade-off is worth it.",
+      "translation_vi": "Tôi không đồng ý vì sự đánh đổi là xứng đáng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I disagree because", "audio": "", "audio_slow": ""},
+        {"text": "the trade-off is worth it.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolve-01",
+      "node_id": "resolve-decision",
+      "text": "Okay, let's go with...",
+      "example": "Okay, let's go with the RAG approach.",
+      "translation_vi": "Được rồi, chúng ta chọn phương án RAG.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Okay, let's go with", "audio": "", "audio_slow": ""},
+        {"text": "the RAG approach.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolve-02",
+      "node_id": "resolve-decision",
+      "text": "We can compromise by...",
+      "example": "We can compromise by starting simple and iterating.",
+      "translation_vi": "Chúng ta có thể thỏa hiệp bằng cách bắt đầu đơn giản và cải tiến dần.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We can compromise by", "audio": "", "audio_slow": ""},
+        {"text": "starting simple", "audio": "", "audio_slow": ""},
+        {"text": "and iterating.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolve-03",
+      "node_id": "resolve-decision",
+      "text": "Let's agree on...",
+      "example": "Let's agree on using the MCP protocol.",
+      "translation_vi": "Chúng ta thống nhất dùng MCP protocol nhé.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's agree on", "audio": "", "audio_slow": ""},
+        {"text": "using the MCP protocol.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolve-04",
+      "node_id": "resolve-decision",
+      "text": "Sounds like a plan.",
+      "example": "Sounds like a plan. Let's document it.",
+      "translation_vi": "Nghe có vẻ ổn. Hãy ghi lại quyết định.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Sounds like a plan.", "audio": "", "audio_slow": ""},
+        {"text": "Let's document it.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What approach are you proposing?",
+      "prompt_audio": "",
+      "accepted_patterns": ["I think we should go with", "My proposal is to", "One option is to", "We could also consider"],
+      "hint_vi": "Đề xuất phương án kiến trúc"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "What is the context or constraint?",
+      "prompt_audio": "",
+      "accepted_patterns": ["Given our current constraints", "We have a strict token limit on", "The team is already familiar with", "We need to keep"],
+      "hint_vi": "Nêu bối cảnh hoặc ràng buộc"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What are the benefits of this approach?",
+      "prompt_audio": "",
+      "accepted_patterns": ["The main advantage is", "This approach scales well because", "It will reduce our costs by", "Another benefit is"],
+      "hint_vi": "Nêu lợi ích của phương án"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What concerns do you have?",
+      "prompt_audio": "",
+      "accepted_patterns": ["I have a concern about", "The downside is", "What about the reliability of", "We might face issues with"],
+      "hint_vi": "Nêu lo ngại"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "How do you push back against a concern?",
+      "prompt_audio": "",
+      "accepted_patterns": ["I see your point, but", "That's a valid concern, however", "Actually, I think we can mitigate that by", "I disagree because"],
+      "hint_vi": "Phản biện lại lo ngại"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What is the final decision?",
+      "prompt_audio": "",
+      "accepted_patterns": ["Okay, let's go with", "We can compromise by", "Let's agree on", "Sounds like a plan"],
+      "hint_vi": "Đưa ra quyết định cuối cùng"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Architecture discussion with tech lead",
+      "title_vi": "Thảo luận kiến trúc với tech lead",
+      "turns": [
+        {
+          "role": "Tech Lead",
+          "text": "Let's discuss the architecture for the new feature.",
+          "translation_vi": "Chúng ta thảo luận kiến trúc cho tính năng mới nhé.",
+          "audio": "",
+          "phrases": [
+            {"text": "Let's discuss the architecture", "audio": "", "audio_slow": ""},
+            {"text": "for the new feature.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I think we should go with a RAG pipeline.",
+          "translation_vi": "Tôi nghĩ chúng ta nên chọn RAG pipeline.",
+          "audio": "",
+          "phrases": [
+            {"text": "I think we should go with", "audio": "", "audio_slow": ""},
+            {"text": "a RAG pipeline.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What's the main advantage?",
+          "translation_vi": "Lợi thế chính là gì?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "It scales well and keeps latency low.",
+          "translation_vi": "Nó mở rộng tốt và giữ độ trễ thấp.",
+          "audio": "",
+          "phrases": [
+            {"text": "It scales well", "audio": "", "audio_slow": ""},
+            {"text": "and keeps latency low.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I have a concern about the token limit.",
+          "translation_vi": "Tôi lo ngại về giới hạn token.",
+          "audio": "",
+          "phrases": [
+            {"text": "I have a concern", "audio": "", "audio_slow": ""},
+            {"text": "about the token limit.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "That's a valid concern, but we can optimize the prompt.",
+          "translation_vi": "Đó là lo ngại hợp lý, nhưng chúng ta có thể tối ưu prompt.",
+          "audio": "",
+          "phrases": [
+            {"text": "That's a valid concern,", "audio": "", "audio_slow": ""},
+            {"text": "but we can optimize the prompt.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Okay, let's go with the RAG pipeline.",
+          "translation_vi": "Được rồi, chúng ta chọn RAG pipeline.",
+          "audio": "",
+          "phrases": [
+            {"text": "Okay, let's go with", "audio": "", "audio_slow": ""},
+            {"text": "the RAG pipeline.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sounds like a plan.",
+          "translation_vi": "Nghe có vẻ ổn.",
+          "audio": ""
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Debating microservices vs monolith",
+      "title_vi": "Tranh luận microservices vs monolith",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "I think we should use microservices.",
+          "translation_vi": "Tôi nghĩ chúng ta nên dùng microservices.",
+          "audio": ""
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What's the context?",
+          "translation_vi": "Bối cảnh thế nào?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "We have a small team and need fast iterations.",
+          "translation_vi": "Chúng ta có team nhỏ và cần lặp nhanh.",
+          "audio": "",
+          "phrases": [
+            {"text": "We have a small team", "audio": "", "audio_slow": ""},
+            {"text": "and need fast iterations.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "The downside is added complexity.",
+          "translation_vi": "Mặt trái là thêm độ phức tạp.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I see your point, but we can start simple.",
+          "translation_vi": "Tôi hiểu ý bạn, nhưng chúng ta có thể bắt đầu đơn giản.",
+          "audio": "",
+          "phrases": [
+            {"text": "I see your point,", "audio": "", "audio_slow": ""},
+            {"text": "but we can start simple.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What about the deployment overhead?",
+          "translation_vi": "Còn chi phí triển khai thì sao?",
+          "audio": "",
+          "phrases": [
+            {"text": "What about", "audio": "", "audio_slow": ""},
+            {"text": "the deployment overhead?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Actually, I think we can mitigate that with containers.",
+          "translation_vi": "Thực ra, tôi nghĩ chúng ta có thể giảm thiểu bằng container.",
+          "audio": "",
+          "phrases": [
+            {"text": "Actually, I think we can mitigate that", "audio": "", "audio_slow": ""},
+            {"text": "with containers.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Okay, let's agree on a hybrid approach.",
+          "translation_vi": "Được rồi, chúng ta thống nhất phương án kết hợp.",
+          "audio": "",
+          "phrases": [
+            {"text": "Okay, let's agree on", "audio": "", "audio_slow": ""},
+            {"text": "a hybrid approach.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    }
+  ]
+}

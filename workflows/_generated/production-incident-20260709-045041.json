@@ -1,0 +1,768 @@
+{
+  "meta": {
+    "id": "production-incident",
+    "title": "Production Incident",
+    "title_vi": "Sự cố production",
+    "description": "Handle a production incident: acknowledge alert, assess impact, communicate status, coordinate fix, and write postmortem.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "engineering",
+    "tags": ["incident", "oncall", "outage"]
+  },
+  "nodes": [
+    {
+      "id": "alert-acknowledged",
+      "label": "Alert Acknowledged",
+      "label_vi": "Xác nhận cảnh báo"
+    },
+    {
+      "id": "impact-assessment",
+      "label": "Impact Assessment",
+      "label_vi": "Đánh giá tác động"
+    },
+    {
+      "id": "status-update",
+      "label": "Status Update",
+      "label_vi": "Cập nhật trạng thái"
+    },
+    {
+      "id": "fix-attempt",
+      "label": "Fix Attempt",
+      "label_vi": "Nỗ lực sửa lỗi"
+    },
+    {
+      "id": "escalation",
+      "label": "Escalation",
+      "label_vi": "Leo thang"
+    },
+    {
+      "id": "incident-resolved",
+      "label": "Incident Resolved",
+      "label_vi": "Sự cố đã xử lý"
+    },
+    {
+      "id": "postmortem",
+      "label": "Postmortem",
+      "label_vi": "Postmortem"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "alert-01",
+      "node_id": "alert-acknowledged",
+      "text": "I see the alert.",
+      "example": "I see the alert. PagerDuty just fired.",
+      "translation_vi": "Tôi thấy cảnh báo. PagerDuty vừa kích hoạt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I see the alert.", "audio": "", "audio_slow": ""},
+        {"text": "PagerDuty just fired.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "alert-02",
+      "node_id": "alert-acknowledged",
+      "text": "I'm looking at it now.",
+      "example": "I'm looking at it now. Give me a moment.",
+      "translation_vi": "Tôi đang xem nó. Chờ một chút.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm looking at it now.", "audio": "", "audio_slow": ""},
+        {"text": "Give me a moment.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "alert-03",
+      "node_id": "alert-acknowledged",
+      "text": "Acknowledging the incident.",
+      "example": "Acknowledging the incident in Opsgenie now.",
+      "translation_vi": "Tôi đang xác nhận sự cố trong Opsgenie.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Acknowledging the incident", "audio": "", "audio_slow": ""},
+        {"text": "in Opsgenie now.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "alert-04",
+      "node_id": "alert-acknowledged",
+      "text": "I'm on it.",
+      "example": "I'm on it. I'll start investigating.",
+      "translation_vi": "Tôi xử lý đây. Tôi sẽ bắt đầu điều tra.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm on it.", "audio": "", "audio_slow": ""},
+        {"text": "I'll start investigating.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "alert-05",
+      "node_id": "alert-acknowledged",
+      "text": "Let me check the dashboard.",
+      "example": "Let me check the dashboard for more details.",
+      "translation_vi": "Để tôi kiểm tra dashboard để biết thêm chi tiết.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me check the dashboard", "audio": "", "audio_slow": ""},
+        {"text": "for more details.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "impact-01",
+      "node_id": "impact-assessment",
+      "text": "It's affecting...",
+      "example": "It's affecting the payment API. Users can't complete transactions.",
+      "translation_vi": "Nó ảnh hưởng đến payment API. Người dùng không thể hoàn tất giao dịch.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "It's affecting the payment API.", "audio": "", "audio_slow": ""},
+        {"text": "Users can't complete transactions.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "impact-02",
+      "node_id": "impact-assessment",
+      "text": "About X percent of users are impacted.",
+      "example": "About 30 percent of users are impacted right now.",
+      "translation_vi": "Khoảng 30% người dùng đang bị ảnh hưởng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "About 30 percent of users", "audio": "", "audio_slow": ""},
+        {"text": "are impacted right now.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "impact-03",
+      "node_id": "impact-assessment",
+      "text": "It's a critical issue.",
+      "example": "It's a critical issue. We need to fix it ASAP.",
+      "translation_vi": "Đây là vấn đề nghiêm trọng. Chúng ta cần sửa gấp.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "It's a critical issue.", "audio": "", "audio_slow": ""},
+        {"text": "We need to fix it ASAP.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "impact-04",
+      "node_id": "impact-assessment",
+      "text": "The root cause seems to be...",
+      "example": "The root cause seems to be a database connection pool exhaustion.",
+      "translation_vi": "Nguyên nhân gốc dường như là cạn kiệt connection pool database.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The root cause seems to be", "audio": "", "audio_slow": ""},
+        {"text": "a database connection pool exhaustion.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "impact-05",
+      "node_id": "impact-assessment",
+      "text": "We're seeing errors in...",
+      "example": "We're seeing errors in the embedding service logs.",
+      "translation_vi": "Chúng tôi thấy lỗi trong log của embedding service.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We're seeing errors", "audio": "", "audio_slow": ""},
+        {"text": "in the embedding service logs.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "status-01",
+      "node_id": "status-update",
+      "text": "Current status: still investigating.",
+      "example": "Current status: still investigating the root cause.",
+      "translation_vi": "Trạng thái hiện tại: vẫn đang điều tra nguyên nhân.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Current status:", "audio": "", "audio_slow": ""},
+        {"text": "still investigating the root cause.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "status-02",
+      "node_id": "status-update",
+      "text": "We've identified the issue.",
+      "example": "We've identified the issue. It's a misconfigured load balancer.",
+      "translation_vi": "Chúng tôi đã xác định vấn đề. Đó là load balancer cấu hình sai.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We've identified the issue.", "audio": "", "audio_slow": ""},
+        {"text": "It's a misconfigured load balancer.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "status-03",
+      "node_id": "status-update",
+      "text": "ETA for fix is...",
+      "example": "ETA for fix is approximately 30 minutes.",
+      "translation_vi": "Thời gian dự kiến sửa xong là khoảng 30 phút.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "ETA for fix is", "audio": "", "audio_slow": ""},
+        {"text": "approximately 30 minutes.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "status-04",
+      "node_id": "status-update",
+      "text": "We'll keep you posted.",
+      "example": "We'll keep you posted every 15 minutes.",
+      "translation_vi": "Chúng tôi sẽ cập nhật cho bạn mỗi 15 phút.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We'll keep you posted", "audio": "", "audio_slow": ""},
+        {"text": "every 15 minutes.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "status-05",
+      "node_id": "status-update",
+      "text": "Status page has been updated.",
+      "example": "Status page has been updated with the incident details.",
+      "translation_vi": "Trạng thái trang đã được cập nhật với chi tiết sự cố.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Status page has been updated", "audio": "", "audio_slow": ""},
+        {"text": "with the incident details.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "fix-01",
+      "node_id": "fix-attempt",
+      "text": "I'm rolling back the last deployment.",
+      "example": "I'm rolling back the last deployment to the previous version.",
+      "translation_vi": "Tôi đang rollback bản deploy cuối về phiên bản trước.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm rolling back", "audio": "", "audio_slow": ""},
+        {"text": "the last deployment", "audio": "", "audio_slow": ""},
+        {"text": "to the previous version.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "fix-02",
+      "node_id": "fix-attempt",
+      "text": "We're scaling up the service.",
+      "example": "We're scaling up the service to handle the load.",
+      "translation_vi": "Chúng tôi đang scale up service để xử lý tải.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We're scaling up the service", "audio": "", "audio_slow": ""},
+        {"text": "to handle the load.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "fix-03",
+      "node_id": "fix-attempt",
+      "text": "I'm deploying a hotfix.",
+      "example": "I'm deploying a hotfix for the null pointer exception.",
+      "translation_vi": "Tôi đang deploy bản hotfix cho lỗi null pointer.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm deploying a hotfix", "audio": "", "audio_slow": ""},
+        {"text": "for the null pointer exception.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "fix-04",
+      "node_id": "fix-attempt",
+      "text": "Let's restart the pods.",
+      "example": "Let's restart the pods in the cluster.",
+      "translation_vi": "Hãy restart các pod trong cluster.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's restart the pods", "audio": "", "audio_slow": ""},
+        {"text": "in the cluster.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "fix-05",
+      "node_id": "fix-attempt",
+      "text": "The fix is being tested.",
+      "example": "The fix is being tested in staging.",
+      "translation_vi": "Bản sửa đang được kiểm tra trên staging.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The fix is being tested", "audio": "", "audio_slow": ""},
+        {"text": "in staging.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "escalation-01",
+      "node_id": "escalation",
+      "text": "I need to escalate this.",
+      "example": "I need to escalate this to the senior engineer.",
+      "translation_vi": "Tôi cần leo thang việc này lên senior engineer.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I need to escalate this", "audio": "", "audio_slow": ""},
+        {"text": "to the senior engineer.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "escalation-02",
+      "node_id": "escalation",
+      "text": "Can someone from the database team help?",
+      "example": "Can someone from the database team help with this query?",
+      "translation_vi": "Có ai từ team database giúp với câu truy vấn này không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Can someone from the database team", "audio": "", "audio_slow": ""},
+        {"text": "help with this query?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "escalation-03",
+      "node_id": "escalation",
+      "text": "We need to involve the platform team.",
+      "example": "We need to involve the platform team for the infrastructure issue.",
+      "translation_vi": "Chúng ta cần huy động platform team cho vấn đề hạ tầng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need to involve", "audio": "", "audio_slow": ""},
+        {"text": "the platform team", "audio": "", "audio_slow": ""},
+        {"text": "for the infrastructure issue.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "escalation-04",
+      "node_id": "escalation",
+      "text": "I'm paging the on-call lead.",
+      "example": "I'm paging the on-call lead for approval.",
+      "translation_vi": "Tôi đang page on-call lead để xin phê duyệt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm paging", "audio": "", "audio_slow": ""},
+        {"text": "the on-call lead", "audio": "", "audio_slow": ""},
+        {"text": "for approval.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "escalation-05",
+      "node_id": "escalation",
+      "text": "This is beyond my scope.",
+      "example": "This is beyond my scope. I need help from the SRE team.",
+      "translation_vi": "Việc này ngoài khả năng của tôi. Tôi cần sự giúp đỡ từ SRE team.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This is beyond my scope.", "audio": "", "audio_slow": ""},
+        {"text": "I need help from the SRE team.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolved-01",
+      "node_id": "incident-resolved",
+      "text": "The incident is resolved.",
+      "example": "The incident is resolved. Services are back to normal.",
+      "translation_vi": "Sự cố đã được giải quyết. Các dịch vụ đã trở lại bình thường.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The incident is resolved.", "audio": "", "audio_slow": ""},
+        {"text": "Services are back to normal.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolved-02",
+      "node_id": "incident-resolved",
+      "text": "All systems are green.",
+      "example": "All systems are green. No more alerts.",
+      "translation_vi": "Tất cả hệ thống đều xanh. Không còn cảnh báo nào.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "All systems are green.", "audio": "", "audio_slow": ""},
+        {"text": "No more alerts.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolved-03",
+      "node_id": "incident-resolved",
+      "text": "I'm closing the incident.",
+      "example": "I'm closing the incident in the tracker.",
+      "translation_vi": "Tôi đang đóng sự cố trong tracker.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm closing the incident", "audio": "", "audio_slow": ""},
+        {"text": "in the tracker.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolved-04",
+      "node_id": "incident-resolved",
+      "text": "The fix has been verified.",
+      "example": "The fix has been verified by the QA team.",
+      "translation_vi": "Bản sửa đã được QA team xác nhận.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The fix has been verified", "audio": "", "audio_slow": ""},
+        {"text": "by the QA team.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "resolved-05",
+      "node_id": "incident-resolved",
+      "text": "Thanks for the help, everyone.",
+      "example": "Thanks for the help, everyone. Great teamwork.",
+      "translation_vi": "Cảm ơn mọi người đã giúp đỡ. Làm việc nhóm tuyệt vời.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thanks for the help, everyone.", "audio": "", "audio_slow": ""},
+        {"text": "Great teamwork.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "postmortem-01",
+      "node_id": "postmortem",
+      "text": "Let's write a postmortem.",
+      "example": "Let's write a postmortem for this incident.",
+      "translation_vi": "Hãy viết postmortem cho sự cố này.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's write a postmortem", "audio": "", "audio_slow": ""},
+        {"text": "for this incident.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "postmortem-02",
+      "node_id": "postmortem",
+      "text": "The timeline of events is...",
+      "example": "The timeline of events is documented in the incident log.",
+      "translation_vi": "Dòng thời gian các sự kiện đã được ghi lại trong nhật ký sự cố.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The timeline of events", "audio": "", "audio_slow": ""},
+        {"text": "is documented in the incident log.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "postmortem-03",
+      "node_id": "postmortem",
+      "text": "The root cause was...",
+      "example": "The root cause was a missing timeout configuration.",
+      "translation_vi": "Nguyên nhân gốc là thiếu cấu hình timeout.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The root cause was", "audio": "", "audio_slow": ""},
+        {"text": "a missing timeout configuration.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "postmortem-04",
+      "node_id": "postmortem",
+      "text": "The action items are...",
+      "example": "The action items are: add monitoring and increase timeout.",
+      "translation_vi": "Các mục hành động là: thêm giám sát và tăng timeout.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The action items are:", "audio": "", "audio_slow": ""},
+        {"text": "add monitoring and increase timeout.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "postmortem-05",
+      "node_id": "postmortem",
+      "text": "We should automate the rollback.",
+      "example": "We should automate the rollback process to reduce MTTR.",
+      "translation_vi": "Chúng ta nên tự động hóa quy trình rollback để giảm MTTR.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We should automate the rollback process", "audio": "", "audio_slow": ""},
+        {"text": "to reduce MTTR.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "postmortem-06",
+      "node_id": "postmortem",
+      "text": "Let's schedule a review meeting.",
+      "example": "Let's schedule a review meeting to discuss the findings.",
+      "translation_vi": "Hãy lên lịch một cuộc họp review để thảo luận về những phát hiện.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's schedule a review meeting", "audio": "", "audio_slow": ""},
+        {"text": "to discuss the findings.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What do you do when you see the alert?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I acknowledge the incident",
+        "I see the alert",
+        "I'm looking at it now",
+        "I'm on it"
+      ],
+      "hint_vi": "Bạn làm gì khi thấy cảnh báo?"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "How do you assess the impact?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "It's affecting",
+        "About X percent of users are impacted",
+        "It's a critical issue",
+        "The root cause seems to be"
+      ],
+      "hint_vi": "Bạn đánh giá tác động thế nào?"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "How do you communicate the status?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Current status: still investigating",
+        "We've identified the issue",
+        "ETA for fix is",
+        "We'll keep you posted"
+      ],
+      "hint_vi": "Bạn cập nhật trạng thái thế nào?"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What actions do you take to fix the issue?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'm rolling back",
+        "We're scaling up",
+        "I'm deploying a hotfix",
+        "Let's restart the pods"
+      ],
+      "hint_vi": "Bạn thực hiện hành động gì để sửa?"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "When do you escalate?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I need to escalate",
+        "Can someone from the database team help?",
+        "We need to involve",
+        "This is beyond my scope"
+      ],
+      "hint_vi": "Khi nào bạn leo thang?"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What do you do after resolving the incident?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Let's write a postmortem",
+        "The timeline of events is",
+        "The root cause was",
+        "The action items are"
+      ],
+      "hint_vi": "Sau khi giải quyết xong bạn làm gì?"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Handling a production alert with your team",
+      "title_vi": "Xử lý cảnh báo production với team",
+      "turns": [
+        {
+          "role": "Manager",
+          "text": "Hey, I see PagerDuty is firing. What's going on?",
+          "translation_vi": "Này, tôi thấy PagerDuty đang kích hoạt. Chuyện gì vậy?",
+          "audio": "",
+          "phrases": [
+            {"text": "Hey, I see PagerDuty is firing.", "audio": "", "audio_slow": ""},
+            {"text": "What's going on?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I see the alert. I'm looking at it now.",
+          "translation_vi": "Tôi thấy cảnh báo. Tôi đang xem nó.",
+          "audio": "",
+          "phrases": [
+            {"text": "I see the alert.", "audio": "", "audio_slow": ""},
+            {"text": "I'm looking at it now.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "What's the impact?",
+          "translation_vi": "Tác động thế nào?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "It's affecting the payment API. About 30 percent of users are impacted.",
+          "translation_vi": "Nó ảnh hưởng đến payment API. Khoảng 30% người dùng bị ảnh hưởng.",
+          "audio": "",
+          "phrases": [
+            {"text": "It's affecting the payment API.", "audio": "", "audio_slow": ""},
+            {"text": "About 30 percent of users are impacted.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "That's critical. What's the status?",
+          "translation_vi": "Nghiêm trọng đấy. Trạng thái thế nào?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Current status: still investigating. The root cause seems to be a connection pool issue.",
+          "translation_vi": "Trạng thái hiện tại: vẫn đang điều tra. Nguyên nhân dường như là vấn đề connection pool.",
+          "audio": "",
+          "phrases": [
+            {"text": "Current status: still investigating.", "audio": "", "audio_slow": ""},
+            {"text": "The root cause seems to be a connection pool issue.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "ETA for fix?",
+          "translation_vi": "Dự kiến sửa xong khi nào?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "ETA for fix is approximately 30 minutes. I'm scaling up the service now.",
+          "translation_vi": "Dự kiến sửa xong khoảng 30 phút. Tôi đang scale up service.",
+          "audio": "",
+          "phrases": [
+            {"text": "ETA for fix is approximately 30 minutes.", "audio": "", "audio_slow": ""},
+            {"text": "I'm scaling up the service now.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "Keep me posted.",
+          "translation_vi": "Cập nhật cho tôi nhé.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Will do. I'll update the status page as well.",
+          "translation_vi": "Vâng. Tôi cũng sẽ cập nhật trang trạng thái.",
+          "audio": "",
+          "phrases": [
+            {"text": "Will do.", "audio": "", "audio_slow": ""},
+            {"text": "I'll update the status page as well.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Escalating and coordinating the fix",
+      "title_vi": "Leo thang và phối hợp sửa lỗi",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "I need to escalate this. Can someone from the database team help?",
+          "translation_vi": "Tôi cần leo thang. Có ai từ team database giúp không?",
+          "audio": "",
+          "phrases": [
+            {"text": "I need to escalate this.", "audio": "", "audio_slow": ""},
+            {"text": "Can someone from the database team help?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I'm here. What's the issue?",
+          "translation_vi": "Tôi đây. Vấn đề là gì?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "We're seeing errors in the embedding service logs. The root cause seems to be a connection pool exhaustion.",
+          "translation_vi": "Chúng tôi thấy lỗi trong log của embedding service. Nguyên nhân dường như là cạn kiệt connection pool.",
+          "audio": "",
+          "phrases": [
+            {"text": "We're seeing errors in the embedding service logs.", "audio": "", "audio_slow": ""},
+            {"text": "The root cause seems to be a connection pool exhaustion.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I see. Let's restart the pods first.",
+          "translation_vi": "Tôi hiểu. Hãy restart các pod trước.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm restarting them now. Also, I'm deploying a hotfix to increase the pool size.",
+          "translation_vi": "Tôi đang restart chúng. Tôi cũng đang deploy hotfix để tăng kích thước pool.",
+          "audio": "",
+          "phrases": [
+            {"text": "I'm restarting them now.", "audio": "", "audio_slow": ""},
+            {"text": "Also, I'm deploying a hotfix to increase the pool size.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Good. The fix is being tested in staging.",
+          "translation_vi": "Tốt. Bản sửa đang được kiểm tra trên staging.",
+          "audio": "",
+          "phrases": [
+            {"text": "Good.", "audio": "", "audio_slow": ""},
+            {"text": "The fix is being tested in staging.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "The incident is resolved. Services are back to normal.",
+          "translation_vi": "Sự cố đã được giải quyết. Các dịch vụ đã trở lại bình thường.",
+          "audio": "",
+          "phrases": [
+            {"text": "The incident is resolved.", "audio": "", "audio_slow": ""},
+            {"text": "Services are back to normal.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Great work. Let's write a postmortem later.",
+          "translation_vi": "Làm tốt lắm. Sau này hãy viết postmortem.",
+          "audio": "",
+          "phrases": [
+            {"text": "Great work.", "audio": "", "audio_slow": ""},
+            {"text": "Let's write a postmortem later.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1197 @@
+{
+  "meta": {
+    "id": "ai-engineering-discussion",
+    "title": "AI Engineering Discussion",
+    "title_vi": "Thảo luận AI Engineering",
+    "description": "Discuss RAG pipeline design, embedding/vector DB choices, agent workflows, evaluation results, and prompt engineering trade-offs.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "ai-engineering",
+    "tags": [
+      "rag",
+      "llm",
+      "agent",
+      "mcp",
+      "embedding"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "kick-off",
+      "label": "Kick Off",
+      "label_vi": "Bắt đầu"
+    },
+    {
+      "id": "rag-design",
+      "label": "RAG Design",
+      "label_vi": "Thiết kế RAG"
+    },
+    {
+      "id": "embedding-vector-db",
+      "label": "Embedding & Vector DB",
+      "label_vi": "Embedding & Vector DB"
+    },
+    {
+      "id": "agent-workflow",
+      "label": "Agent Workflow",
+      "label_vi": "Agent Workflow"
+    },
+    {
+      "id": "evaluation",
+      "label": "Evaluation",
+      "label_vi": "Đánh giá"
+    },
+    {
+      "id": "trade-offs",
+      "label": "Trade-offs",
+      "label_vi": "Đánh đổi"
+    },
+    {
+      "id": "wrap-up",
+      "label": "Wrap Up",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "kick-off-01",
+      "node_id": "kick-off",
+      "text": "Let's talk about...",
+      "example": "Let's talk about the RAG pipeline design.",
+      "translation_vi": "Hãy nói về thiết kế RAG pipeline.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f5278115be7a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_84c067a5f2b1.mp3",
+      "phrases": [
+        {
+          "text": "Let's talk about",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c59fe3561292.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9e6893430f81.mp3"
+        },
+        {
+          "text": "the RAG pipeline design.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30b57f381e94.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4c2e18eb7e9e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kick-off-02",
+      "node_id": "kick-off",
+      "text": "First, let's discuss...",
+      "example": "First, let's discuss the embedding strategy.",
+      "translation_vi": "Đầu tiên, hãy thảo luận về chiến lược embedding.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b79a41d1f1cb.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3e622c178569.mp3",
+      "phrases": [
+        {
+          "text": "First, let's discuss",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8f97d809c365.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f6c31b92ea89.mp3"
+        },
+        {
+          "text": "the embedding strategy.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d202e4f8e776.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c7f0b7b34785.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kick-off-03",
+      "node_id": "kick-off",
+      "text": "We need to decide on...",
+      "example": "We need to decide on the vector database.",
+      "translation_vi": "Chúng ta cần quyết định về vector database.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_14ce65176940.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_23480d70abf4.mp3",
+      "phrases": [
+        {
+          "text": "We need to decide on",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dcdfe58edc87.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5e5e8447f267.mp3"
+        },
+        {
+          "text": "the vector database.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_95db2777b9e7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0043e44e65a9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kick-off-04",
+      "node_id": "kick-off",
+      "text": "Has everyone reviewed...?",
+      "example": "Has everyone reviewed the evaluation results?",
+      "translation_vi": "Mọi người đã xem kết quả đánh giá chưa?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71f4cb279e6a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4a9c8e13c04e.mp3",
+      "phrases": [
+        {
+          "text": "Has everyone reviewed",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a4226f490f55.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_932326093bdf.mp3"
+        },
+        {
+          "text": "the evaluation results?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7148cda30e64.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0011969eb8b7.mp3"
+        }
+      ]
+    },
+    {
+      "id": "kick-off-05",
+      "node_id": "kick-off",
+      "text": "Let's start with...",
+      "example": "Let's start with the retrieval component.",
+      "translation_vi": "Hãy bắt đầu với thành phần retrieval.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cea90ea2ce20.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_24c756ac6d07.mp3",
+      "phrases": [
+        {
+          "text": "Let's start with",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06644f3d6c2c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5203b7ce10b0.mp3"
+        },
+        {
+          "text": "the retrieval component.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0cb950a398b1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_24b21d5c73bf.mp3"
+        }
+      ]
+    },
+    {
+      "id": "rag-design-01",
+      "node_id": "rag-design",
+      "text": "I think we should use...",
+      "example": "I think we should use a hybrid search approach.",
+      "translation_vi": "Tôi nghĩ chúng ta nên dùng hybrid search.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d7f0a12e696b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f4cbeb34fa5a.mp3",
+      "phrases": [
+        {
+          "text": "I think we should use",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4cfcd853301.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1b251f6419d3.mp3"
+        },
+        {
+          "text": "a hybrid search approach.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_37955c788051.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce078801c5a1.mp3"
+        }
+      ]
+    },
+    {
+      "id": "rag-design-02",
+      "node_id": "rag-design",
+      "text": "The chunk size matters because...",
+      "example": "The chunk size matters because it affects retrieval quality.",
+      "translation_vi": "Kích thước chunk quan trọng vì nó ảnh hưởng đến chất lượng retrieval.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_041e4451696b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a53bc7a7927a.mp3",
+      "phrases": [
+        {
+          "text": "The chunk size matters",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ddcdf78c8262.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_13420cfd473b.mp3"
+        },
+        {
+          "text": "because it affects retrieval quality.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1211accaab1f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7619b65c724c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "rag-design-03",
+      "node_id": "rag-design",
+      "text": "We could try...",
+      "example": "We could try re-ranking the top results.",
+      "translation_vi": "Chúng ta có thể thử re-rank các kết quả hàng đầu.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f927979310a1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_319eae572492.mp3",
+      "phrases": [
+        {
+          "text": "We could try",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1e56471c6a46.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_88cc57467076.mp3"
+        },
+        {
+          "text": "re-ranking the top results.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f99f730f0cdd.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aae8c7435838.mp3"
+        }
+      ]
+    },
+    {
+      "id": "rag-design-04",
+      "node_id": "rag-design",
+      "text": "What about...?",
+      "example": "What about using a multi-query retriever?",
+      "translation_vi": "Còn dùng multi-query retriever thì sao?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4537a115a28a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3c0e3d8e735b.mp3",
+      "phrases": [
+        {
+          "text": "What about",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0d880f5b6dd1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9c1d65852a8f.mp3"
+        },
+        {
+          "text": "using a multi-query retriever?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67b4a976ef5a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_23360fa1a985.mp3"
+        }
+      ]
+    },
+    {
+      "id": "rag-design-05",
+      "node_id": "rag-design",
+      "text": "I'm concerned about...",
+      "example": "I'm concerned about latency with a large index.",
+      "translation_vi": "Tôi lo ngại về độ trễ với index lớn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ef5138cbab7.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f187ea123376.mp3",
+      "phrases": [
+        {
+          "text": "I'm concerned about",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6924ef6f7cc9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b8a79e1abf8f.mp3"
+        },
+        {
+          "text": "latency with a large index.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_48bcd8d434a8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a1cc0af95d8c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "embedding-vector-db-01",
+      "node_id": "embedding-vector-db",
+      "text": "Which embedding model...?",
+      "example": "Which embedding model are you considering?",
+      "translation_vi": "Bạn đang cân nhắc model embedding nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6c603d82e90d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ddc81ffc7da6.mp3",
+      "phrases": [
+        {
+          "text": "Which embedding model",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_04bbc1a3a7bd.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6ffccaabc264.mp3"
+        },
+        {
+          "text": "are you considering?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b59790e7f5a3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_487f0d3b3de1.mp3"
+        }
+      ]
+    },
+    {
+      "id": "embedding-vector-db-02",
+      "node_id": "embedding-vector-db",
+      "text": "I'd recommend...",
+      "example": "I'd recommend using OpenAI's text-embedding-3-small.",
+      "translation_vi": "Tôi khuyên dùng OpenAI text-embedding-3-small.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_49d7a9075c31.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2311ac7bbb4d.mp3",
+      "phrases": [
+        {
+          "text": "I'd recommend using",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d3cc2d701fe.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_58a8b3fc1e5f.mp3"
+        },
+        {
+          "text": "OpenAI's text-embedding-3-small.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7209ce540dab.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_62a5e790cbbd.mp3"
+        }
+      ]
+    },
+    {
+      "id": "embedding-vector-db-03",
+      "node_id": "embedding-vector-db",
+      "text": "We need a vector DB that supports...",
+      "example": "We need a vector DB that supports filtering and hybrid search.",
+      "translation_vi": "Chúng ta cần vector DB hỗ trợ filtering và hybrid search.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c5963b2ff73.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_88b71a1821c0.mp3",
+      "phrases": [
+        {
+          "text": "We need a vector DB",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_17ff5576f7d1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a32b8c92dd28.mp3"
+        },
+        {
+          "text": "that supports filtering",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4e82e3a9678.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ede6d6e00413.mp3"
+        },
+        {
+          "text": "and hybrid search.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67774f15ba58.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3a9b78106be1.mp3"
+        }
+      ]
+    },
+    {
+      "id": "embedding-vector-db-04",
+      "node_id": "embedding-vector-db",
+      "text": "Pinecone is good for...",
+      "example": "Pinecone is good for high-scale production use.",
+      "translation_vi": "Pinecone tốt cho production với scale lớn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a8382069226.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_52812543ca12.mp3",
+      "phrases": [
+        {
+          "text": "Pinecone is good for",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_40e66558d23b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aeb18043efe9.mp3"
+        },
+        {
+          "text": "high-scale production use.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef9fc8341265.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4fbb7c812ab0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "embedding-vector-db-05",
+      "node_id": "embedding-vector-db",
+      "text": "We could also use...",
+      "example": "We could also use Qdrant or Weaviate.",
+      "translation_vi": "Chúng ta cũng có thể dùng Qdrant hoặc Weaviate.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a5151cea41c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_17583a717fcc.mp3",
+      "phrases": [
+        {
+          "text": "We could also use",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e34a22555408.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e04a6a8df677.mp3"
+        },
+        {
+          "text": "Qdrant or Weaviate.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc1e5a61b1a0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_452d803fb1c5.mp3"
+        }
+      ]
+    },
+    {
+      "id": "agent-workflow-01",
+      "node_id": "agent-workflow",
+      "text": "For the agent, we'll need...",
+      "example": "For the agent, we'll need a tool-use framework.",
+      "translation_vi": "Cho agent, chúng ta cần một framework dùng tool.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3d5d003c04fe.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f6639d4e6547.mp3",
+      "phrases": [
+        {
+          "text": "For the agent,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7c887355f933.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a79b16b9596d.mp3"
+        },
+        {
+          "text": "we'll need a tool-use framework.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_da7bbcd13909.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c04ff9deb64.mp3"
+        }
+      ]
+    },
+    {
+      "id": "agent-workflow-02",
+      "node_id": "agent-workflow",
+      "text": "We should implement...",
+      "example": "We should implement a retrieval-augmented generation step.",
+      "translation_vi": "Chúng ta nên implement bước RAG.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f12cb0325b14.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cee730e3cc7d.mp3",
+      "phrases": [
+        {
+          "text": "We should implement",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4ffbc4f9c4b9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dd89d4b11fb1.mp3"
+        },
+        {
+          "text": "a retrieval-augmented generation step.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0193696a341e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_83d022b628a2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "agent-workflow-03",
+      "node_id": "agent-workflow",
+      "text": "The agent needs to handle...",
+      "example": "The agent needs to handle multi-turn conversations.",
+      "translation_vi": "Agent cần xử lý hội thoại nhiều lượt.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ea9e55056d0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_62623fc2b2b3.mp3",
+      "phrases": [
+        {
+          "text": "The agent needs to handle",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c83de6dd6e03.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6da4c51b8d39.mp3"
+        },
+        {
+          "text": "multi-turn conversations.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_45fbdab8b1f7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_38ccc7fa8c41.mp3"
+        }
+      ]
+    },
+    {
+      "id": "agent-workflow-04",
+      "node_id": "agent-workflow",
+      "text": "Let's use MCP for...",
+      "example": "Let's use MCP for the model context protocol.",
+      "translation_vi": "Hãy dùng MCP cho giao thức ngữ cảnh model.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_491a83ac4c1c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_11a71f58d068.mp3",
+      "phrases": [
+        {
+          "text": "Let's use MCP for",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_de6baeb58df1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_84d24369ff6c.mp3"
+        },
+        {
+          "text": "the model context protocol.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8de0ba5e5090.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cf99ded4a7cf.mp3"
+        }
+      ]
+    },
+    {
+      "id": "agent-workflow-05",
+      "node_id": "agent-workflow",
+      "text": "I'm worried about...",
+      "example": "I'm worried about the token limit in long chains.",
+      "translation_vi": "Tôi lo về giới hạn token trong chuỗi dài.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_79e472d75686.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_15652397ece9.mp3",
+      "phrases": [
+        {
+          "text": "I'm worried about",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_40900cfe7dde.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_208b58b217a9.mp3"
+        },
+        {
+          "text": "the token limit in long chains.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2ad57732b049.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4a8910f80148.mp3"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-01",
+      "node_id": "evaluation",
+      "text": "How are we measuring...?",
+      "example": "How are we measuring retrieval accuracy?",
+      "translation_vi": "Chúng ta đo độ chính xác retrieval thế nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1757c79a4a0b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9f660e56efac.mp3",
+      "phrases": [
+        {
+          "text": "How are we measuring",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_29c79890810e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c4ca195b06a.mp3"
+        },
+        {
+          "text": "retrieval accuracy?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab9962a7a955.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a8057d721cd3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-02",
+      "node_id": "evaluation",
+      "text": "We should set up...",
+      "example": "We should set up a prompt evaluation pipeline.",
+      "translation_vi": "Chúng ta nên thiết lập pipeline đánh giá prompt.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c37bde2fc4c1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1851ab7baa10.mp3",
+      "phrases": [
+        {
+          "text": "We should set up",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_97d6fe7f9c1f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d0500d50d76a.mp3"
+        },
+        {
+          "text": "a prompt evaluation pipeline.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_02a8389a72ff.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4e2482e4b1a2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-03",
+      "node_id": "evaluation",
+      "text": "The results show...",
+      "example": "The results show improved recall with chunk overlap.",
+      "translation_vi": "Kết quả cho thấy recall cải thiện với chunk overlap.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6493f0e51e5a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_76494e804853.mp3",
+      "phrases": [
+        {
+          "text": "The results show",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5ed1ede7d095.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c458129d993f.mp3"
+        },
+        {
+          "text": "improved recall",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d2616b638153.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_693df404fa0b.mp3"
+        },
+        {
+          "text": "with chunk overlap.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_63d5e2a806f6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e1890957f862.mp3"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-04",
+      "node_id": "evaluation",
+      "text": "We need to benchmark...",
+      "example": "We need to benchmark latency and throughput.",
+      "translation_vi": "Chúng ta cần benchmark độ trễ và thông lượng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_700d88b803f2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e859089a240f.mp3",
+      "phrases": [
+        {
+          "text": "We need to benchmark",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4aa3c1f0e497.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_31f09c0cf756.mp3"
+        },
+        {
+          "text": "latency and throughput.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ff8d331ea297.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6a87c997e946.mp3"
+        }
+      ]
+    },
+    {
+      "id": "evaluation-05",
+      "node_id": "evaluation",
+      "text": "Let's compare...",
+      "example": "Let's compare different embedding models.",
+      "translation_vi": "Hãy so sánh các embedding model khác nhau.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c675753417a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_480bcc6d29a6.mp3",
+      "phrases": [
+        {
+          "text": "Let's compare",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6d2695c51e09.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_87e8e2137464.mp3"
+        },
+        {
+          "text": "different embedding models.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1714768dcaca.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e50c28935f29.mp3"
+        }
+      ]
+    },
+    {
+      "id": "trade-offs-01",
+      "node_id": "trade-offs",
+      "text": "The trade-off is...",
+      "example": "The trade-off is between speed and accuracy.",
+      "translation_vi": "Sự đánh đổi là giữa tốc độ và độ chính xác.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_68bc6622668c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d15577cbc46f.mp3",
+      "phrases": [
+        {
+          "text": "The trade-off is",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1c53d5302e62.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_15ca5bacf700.mp3"
+        },
+        {
+          "text": "between speed and accuracy.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_373dfa0d5ccb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6866f628294a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "trade-offs-02",
+      "node_id": "trade-offs",
+      "text": "If we use a larger model...",
+      "example": "If we use a larger model, latency increases.",
+      "translation_vi": "Nếu dùng model lớn hơn, độ trễ tăng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ead70b9b52a2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_588ebf66ad06.mp3",
+      "phrases": [
+        {
+          "text": "If we use a larger model,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aee71225786d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4cf091749725.mp3"
+        },
+        {
+          "text": "latency increases.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed96b39498ac.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c9bcdc13ab49.mp3"
+        }
+      ]
+    },
+    {
+      "id": "trade-offs-03",
+      "node_id": "trade-offs",
+      "text": "Smaller chunks mean...",
+      "example": "Smaller chunks mean more context is needed.",
+      "translation_vi": "Chunk nhỏ hơn nghĩa là cần thêm ngữ cảnh.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_152189c4e154.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ed73984dd8bc.mp3",
+      "phrases": [
+        {
+          "text": "Smaller chunks mean",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bc58f3c4c8ac.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_13ab42cbe5c1.mp3"
+        },
+        {
+          "text": "more context is needed.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d39324ffddac.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cf2b32463fed.mp3"
+        }
+      ]
+    },
+    {
+      "id": "trade-offs-04",
+      "node_id": "trade-offs",
+      "text": "We could sacrifice...",
+      "example": "We could sacrifice some accuracy for lower cost.",
+      "translation_vi": "Chúng ta có thể hy sinh độ chính xác để giảm chi phí.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc0f2b00a6f3.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3bbe8067fbf5.mp3",
+      "phrases": [
+        {
+          "text": "We could sacrifice",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7ad091e38d5c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8f229a78de95.mp3"
+        },
+        {
+          "text": "some accuracy",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1d6951c8ba0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b9c818ac0eed.mp3"
+        },
+        {
+          "text": "for lower cost.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3252988f5575.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_004f60b21e41.mp3"
+        }
+      ]
+    },
+    {
+      "id": "trade-offs-05",
+      "node_id": "trade-offs",
+      "text": "I prefer...",
+      "example": "I prefer a simpler pipeline for faster iteration.",
+      "translation_vi": "Tôi thích pipeline đơn giản hơn để lặp nhanh.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ecb51aa23b52.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0947253d0f19.mp3",
+      "phrases": [
+        {
+          "text": "I prefer",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5a79f1297669.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_962e91343cf8.mp3"
+        },
+        {
+          "text": "a simpler pipeline",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3a3d67a93b90.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aa536626e03d.mp3"
+        },
+        {
+          "text": "for faster iteration.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_390aac874181.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_44ca3cc815f0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-01",
+      "node_id": "wrap-up",
+      "text": "To summarize...",
+      "example": "To summarize, we'll use hybrid search and OpenAI embeddings.",
+      "translation_vi": "Tóm lại, chúng ta sẽ dùng hybrid search và OpenAI embeddings.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4d8da1623852.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ec88ff63e3c2.mp3",
+      "phrases": [
+        {
+          "text": "To summarize,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_79fe966039d3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e5794d3d53d2.mp3"
+        },
+        {
+          "text": "we'll use hybrid search",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cedbb61040b0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4ec12cc8cb62.mp3"
+        },
+        {
+          "text": "and OpenAI embeddings.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_56f13030a1e5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4fe48eaad0b5.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-02",
+      "node_id": "wrap-up",
+      "text": "Let's agree on...",
+      "example": "Let's agree on the next steps.",
+      "translation_vi": "Hãy thống nhất các bước tiếp theo.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c7b9a94c30ad.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b9493b1d1514.mp3",
+      "phrases": [
+        {
+          "text": "Let's agree on",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b2eee603d262.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3e2e994b35b1.mp3"
+        },
+        {
+          "text": "the next steps.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5aaca6078c98.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_24753abe66d1.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-03",
+      "node_id": "wrap-up",
+      "text": "I'll take ownership of...",
+      "example": "I'll take ownership of the embedding service integration.",
+      "translation_vi": "Tôi sẽ phụ trách tích hợp embedding service.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_780ec2cd940b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0291b2844695.mp3",
+      "phrases": [
+        {
+          "text": "I'll take ownership of",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0af29203782c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2180bcf65ca5.mp3"
+        },
+        {
+          "text": "the embedding service integration.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1537112a729d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8ada7f56754b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-04",
+      "node_id": "wrap-up",
+      "text": "Let's circle back...",
+      "example": "Let's circle back after the evaluation.",
+      "translation_vi": "Hãy họp lại sau khi đánh giá.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5dc9622dbe9b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ed203d98e605.mp3",
+      "phrases": [
+        {
+          "text": "Let's circle back",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2e3133756405.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fd4c09f3be7b.mp3"
+        },
+        {
+          "text": "after the evaluation.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b236f4546ca5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_df17d9f7f9a0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-05",
+      "node_id": "wrap-up",
+      "text": "Good discussion, everyone.",
+      "example": "Good discussion, everyone. Let's move to implementation.",
+      "translation_vi": "Thảo luận tốt. Chuyển sang triển khai nhé.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_55e07653c3f5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_acf241178792.mp3",
+      "phrases": [
+        {
+          "text": "Good discussion, everyone.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e197dbdcebd.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b1eedc9b2d48.mp3"
+        },
+        {
+          "text": "Let's move to implementation.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4317918c2eae.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7da66cb2fe3b.mp3"
+        }
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What RAG design approach did you discuss?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_51794720ffc6.mp3",
+      "accepted_patterns": [
+        "I think we should use",
+        "We could try",
+        "What about"
+      ],
+      "hint_vi": "Nói về phương pháp RAG đã thảo luận"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "Which embedding model was recommended?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_360544e86977.mp3",
+      "accepted_patterns": [
+        "I'd recommend using",
+        "We could also use"
+      ],
+      "hint_vi": "Nói về embedding model được đề xuất"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What vector DB options were considered?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b1cfed6278a.mp3",
+      "accepted_patterns": [
+        "Pinecone is good for",
+        "We could also use"
+      ],
+      "hint_vi": "Nói về các vector DB đã cân nhắc"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What agent workflow features did you discuss?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4332f667400f.mp3",
+      "accepted_patterns": [
+        "For the agent, we'll need",
+        "We should implement",
+        "The agent needs to handle"
+      ],
+      "hint_vi": "Nói về tính năng agent workflow"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "How will you evaluate the system?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0a80f4adad93.mp3",
+      "accepted_patterns": [
+        "How are we measuring",
+        "We should set up",
+        "We need to benchmark"
+      ],
+      "hint_vi": "Nói về phương pháp đánh giá"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What trade-offs were discussed?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0e650d1884c3.mp3",
+      "accepted_patterns": [
+        "The trade-off is",
+        "If we use a larger model",
+        "Smaller chunks mean"
+      ],
+      "hint_vi": "Nói về các đánh đổi"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Discussing RAG design with a colleague",
+      "title_vi": "Thảo luận thiết kế RAG với đồng nghiệp",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Let's talk about the RAG pipeline design.",
+          "translation_vi": "Hãy nói về thiết kế RAG pipeline.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f5278115be7a.mp3",
+          "phrases": [
+            {
+              "text": "Let's talk about",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c59fe3561292.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9e6893430f81.mp3"
+            },
+            {
+              "text": "the RAG pipeline design.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30b57f381e94.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4c2e18eb7e9e.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Sure. I think we should use a hybrid search approach.",
+          "translation_vi": "Ừ. Tôi nghĩ chúng ta nên dùng hybrid search.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cdd5e5cdef07.mp3",
+          "phrases": [
+            {
+              "text": "Sure. I think we should use",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1db569a84c7a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3f26c81a7217.mp3"
+            },
+            {
+              "text": "a hybrid search approach.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_60b6afb35ba0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_40292fbb8830.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "What about using a multi-query retriever?",
+          "translation_vi": "Còn dùng multi-query retriever thì sao?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4537a115a28a.mp3",
+          "phrases": [
+            {
+              "text": "What about",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0d880f5b6dd1.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9c1d65852a8f.mp3"
+            },
+            {
+              "text": "using a multi-query retriever?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67b4a976ef5a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_23360fa1a985.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "That could work, but it increases latency.",
+          "translation_vi": "Cũng được, nhưng nó tăng độ trễ.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_05ccb09e5d28.mp3",
+          "phrases": [
+            {
+              "text": "That could work,",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a206b012d3e8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_666967ec3733.mp3"
+            },
+            {
+              "text": "but it increases latency.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7fc10f5fa181.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_92cef3b11920.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm concerned about latency with a large index.",
+          "translation_vi": "Tôi lo về độ trễ với index lớn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ef5138cbab7.mp3",
+          "phrases": [
+            {
+              "text": "I'm concerned about",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6924ef6f7cc9.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b8a79e1abf8f.mp3"
+            },
+            {
+              "text": "latency with a large index.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_48bcd8d434a8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a1cc0af95d8c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "We could re-rank the top results to improve accuracy.",
+          "translation_vi": "Chúng ta có thể re-rank kết quả hàng đầu để cải thiện độ chính xác.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_83fb0d1be381.mp3",
+          "phrases": [
+            {
+              "text": "We could re-rank",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c3239ec6d853.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b86186818611.mp3"
+            },
+            {
+              "text": "the top results",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_38c2b87f737a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d771f85e2877.mp3"
+            },
+            {
+              "text": "to improve accuracy.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e88bacebd070.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d9c4a5667087.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Good idea. Let's also consider the chunk size.",
+          "translation_vi": "Ý hay. Cũng cân nhắc kích thước chunk nữa.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_daff6693d189.mp3",
+          "phrases": [
+            {
+              "text": "Good idea.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_60f47e2ba681.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cf00aaf9d830.mp3"
+            },
+            {
+              "text": "Let's also consider the chunk size.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_122fc0bbac0c.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_64b76a59d9bd.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Agreed. Smaller chunks mean more context is needed.",
+          "translation_vi": "Đồng ý. Chunk nhỏ hơn nghĩa là cần thêm ngữ cảnh.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_830fbc3b3441.mp3",
+          "phrases": [
+            {
+              "text": "Agreed. Smaller chunks mean",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f8926f04283.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c2a60b7fd0ca.mp3"
+            },
+            {
+              "text": "more context is needed.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7ab07b036c39.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_04a287b0ca39.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Evaluating embedding models and vector DB",
+      "title_vi": "Đánh giá embedding models và vector DB",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Which embedding model are you considering?",
+          "translation_vi": "Bạn đang cân nhắc model embedding nào?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6c603d82e90d.mp3",
+          "phrases": [
+            {
+              "text": "Which embedding model",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_04bbc1a3a7bd.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6ffccaabc264.mp3"
+            },
+            {
+              "text": "are you considering?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b59790e7f5a3.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_487f0d3b3de1.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I'd recommend using OpenAI's text-embedding-3-small.",
+          "translation_vi": "Tôi khuyên dùng OpenAI text-embedding-3-small.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4cbe15adca76.mp3",
+          "phrases": [
+            {
+              "text": "I'd recommend using",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_91cf92372611.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_04a2875f9c28.mp3"
+            },
+            {
+              "text": "OpenAI's text-embedding-3-small.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_434ae5767ae2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f7eb8b7b3b3f.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "What about cost? It might be expensive at scale.",
+          "translation_vi": "Còn chi phí thì sao? Có thể đắt khi scale lớn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6c8863c894e8.mp3",
+          "phrases": [
+            {
+              "text": "What about cost?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3871bfe137b3.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_84ffff2ee7d7.mp3"
+            },
+            {
+              "text": "It might be expensive at scale.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f7864c7df3e8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5cdefcb1c5ef.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "We could also use an open-source model like BGE.",
+          "translation_vi": "Chúng ta cũng có thể dùng open-source như BGE.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e564ce78687.mp3",
+          "phrases": [
+            {
+              "text": "We could also use",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6625b49a2b1a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1619f5047d8b.mp3"
+            },
+            {
+              "text": "an open-source model like BGE.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5e9bb9e62b0e.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3c541d5af802.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "We need a vector DB that supports filtering and hybrid search.",
+          "translation_vi": "Chúng ta cần vector DB hỗ trợ filtering và hybrid search.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c5963b2ff73.mp3",
+          "phrases": [
+            {
+              "text": "We need a vector DB",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_17ff5576f7d1.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a32b8c92dd28.mp3"
+            },
+            {
+              "text": "that supports filtering",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4e82e3a9678.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ede6d6e00413.mp3"
+            },
+            {
+              "text": "and hybrid search.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67774f15ba58.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3a9b78106be1.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Pinecone is good for high-scale production use.",
+          "translation_vi": "Pinecone tốt cho production với scale lớn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_917c7f09d885.mp3",
+          "phrases": [
+            {
+              "text": "Pinecone is good for",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d823bcf1d4ae.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b9e1459dcb65.mp3"
+            },
+            {
+              "text": "high-scale production use.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed478702f91e.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8aa2b7f6c2ae.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "We could also use Qdrant or Weaviate.",
+          "translation_vi": "Chúng ta cũng có thể dùng Qdrant hoặc Weaviate.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a5151cea41c.mp3",
+          "phrases": [
+            {
+              "text": "We could also use",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e34a22555408.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e04a6a8df677.mp3"
+            },
+            {
+              "text": "Qdrant or Weaviate.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc1e5a61b1a0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_452d803fb1c5.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Let's benchmark them first before deciding.",
+          "translation_vi": "Hãy benchmark trước khi quyết định.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06353f92ce68.mp3",
+          "phrases": [
+            {
+              "text": "Let's benchmark them first",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_af6e80c9d8e4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2d22b77283e3.mp3"
+            },
+            {
+              "text": "before deciding.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_58a7bb00b35a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2d1cc4769ed6.mp3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

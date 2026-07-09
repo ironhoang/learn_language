@@ -1,0 +1,1417 @@
+{
+  "meta": {
+    "id": "hr-interview",
+    "title": "HR Interview",
+    "title_vi": "Phỏng vấn HR",
+    "description": "Practice answering common HR interview questions: strengths, weaknesses, motivation, salary expectations, and culture fit.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "career",
+    "tags": [
+      "interview",
+      "hr",
+      "career"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "opening",
+      "label": "Opening",
+      "label_vi": "Mở đầu"
+    },
+    {
+      "id": "self-introduction",
+      "label": "Self-Introduction",
+      "label_vi": "Tự giới thiệu"
+    },
+    {
+      "id": "strengths-weaknesses",
+      "label": "Strengths & Weaknesses",
+      "label_vi": "Điểm mạnh & điểm yếu"
+    },
+    {
+      "id": "leaving-job",
+      "label": "Leaving Current Job",
+      "label_vi": "Lý do nghỉ việc"
+    },
+    {
+      "id": "salary",
+      "label": "Salary Expectations",
+      "label_vi": "Mức lương kỳ vọng"
+    },
+    {
+      "id": "culture-fit",
+      "label": "Culture Fit",
+      "label_vi": "Phù hợp văn hóa"
+    },
+    {
+      "id": "questions-for-interviewer",
+      "label": "Questions for Interviewer",
+      "label_vi": "Câu hỏi cho người phỏng vấn"
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "opening-01",
+      "node_id": "opening",
+      "text": "Hello, nice to meet you.",
+      "example": "Hello, nice to meet you. I'm excited to be here.",
+      "translation_vi": "Xin chào, rất vui được gặp bạn. Tôi rất hào hứng khi có mặt ở đây.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_caa3ac1b1741.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f514f21af4ae.mp3",
+      "phrases": [
+        {
+          "text": "Hello, nice to meet you.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4542968b7b41.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a21a9c398290.mp3"
+        },
+        {
+          "text": "I'm excited to be here.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b536ecaf4ac2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9aba8f6bed40.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-02",
+      "node_id": "opening",
+      "text": "Thank you for having me.",
+      "example": "Thank you for having me today.",
+      "translation_vi": "Cảm ơn vì đã mời tôi đến hôm nay.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e21b7ca1f504.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_97d534467d47.mp3",
+      "phrases": [
+        {
+          "text": "Thank you for having me",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2cba38ac9941.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5a39d6f67586.mp3"
+        },
+        {
+          "text": "today.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9b94217241db.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2fcdd9790d86.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-03",
+      "node_id": "opening",
+      "text": "I'm ready to get started.",
+      "example": "I'm ready to get started whenever you are.",
+      "translation_vi": "Tôi sẵn sàng bắt đầu khi bạn muốn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b6e15a8e3cd.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_174c279cb3dd.mp3",
+      "phrases": [
+        {
+          "text": "I'm ready to get started",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c28fad7b2b19.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ebb9414fc00d.mp3"
+        },
+        {
+          "text": "whenever you are.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b1ebc348195c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_48a0a7316860.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-04",
+      "node_id": "opening",
+      "text": "Please make yourself comfortable.",
+      "example": "Please make yourself comfortable. Can I get you some water?",
+      "translation_vi": "Xin hãy thoải mái. Tôi lấy cho bạn chút nước nhé?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e41cdc2c1c9.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fb317db64c92.mp3",
+      "phrases": [
+        {
+          "text": "Please make yourself comfortable.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd4f7f4382b1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_32e371588037.mp3"
+        },
+        {
+          "text": "Can I get you some water?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d6be7aba5c28.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_15d42f4d8051.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-05",
+      "node_id": "opening",
+      "text": "Let's begin, shall we?",
+      "example": "Let's begin, shall we? I'll start with a few general questions.",
+      "translation_vi": "Chúng ta bắt đầu nhé? Tôi sẽ bắt đầu với vài câu hỏi chung.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e39614aae75a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a560ffb7ff9.mp3",
+      "phrases": [
+        {
+          "text": "Let's begin, shall we?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ce7ce9780c75.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7e4c5946a10c.mp3"
+        },
+        {
+          "text": "I'll start with a few general questions.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e14d2cf74b4b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bbf31eb6104b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "self-introduction-01",
+      "node_id": "self-introduction",
+      "text": "I'm a software engineer with...",
+      "example": "I'm a software engineer with five years of experience.",
+      "translation_vi": "Tôi là kỹ sư phần mềm với 5 năm kinh nghiệm.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67e0ba55ecd8.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b6eee7529292.mp3",
+      "phrases": [
+        {
+          "text": "I'm a software engineer",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8420b7fe9a22.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c7673a11dbab.mp3"
+        },
+        {
+          "text": "with five years of experience.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_90a14f40c6aa.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_964f9f486167.mp3"
+        }
+      ]
+    },
+    {
+      "id": "self-introduction-02",
+      "node_id": "self-introduction",
+      "text": "My background is in...",
+      "example": "My background is in backend development and AI systems.",
+      "translation_vi": "Nền tảng của tôi là phát triển backend và hệ thống AI.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b0832f1967ed.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_11b495884588.mp3",
+      "phrases": [
+        {
+          "text": "My background is in",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c41604236405.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f50adc3aacf9.mp3"
+        },
+        {
+          "text": "backend development and AI systems.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d53a9b97800f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_69ef634a34bf.mp3"
+        }
+      ]
+    },
+    {
+      "id": "self-introduction-03",
+      "node_id": "self-introduction",
+      "text": "I'm passionate about...",
+      "example": "I'm passionate about building scalable machine learning pipelines.",
+      "translation_vi": "Tôi đam mê xây dựng các pipeline machine learning có khả năng mở rộng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2dd09796b18a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5bad5065d2e6.mp3",
+      "phrases": [
+        {
+          "text": "I'm passionate about",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8cb9037e6d55.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aa05f2170dbc.mp3"
+        },
+        {
+          "text": "building scalable machine learning pipelines.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0b0dea39f3a6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_302946f9a331.mp3"
+        }
+      ]
+    },
+    {
+      "id": "self-introduction-04",
+      "node_id": "self-introduction",
+      "text": "I've worked extensively with...",
+      "example": "I've worked extensively with Python, Docker, and AWS.",
+      "translation_vi": "Tôi đã làm việc nhiều với Python, Docker và AWS.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7618c2647c79.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_865eb30dc19e.mp3",
+      "phrases": [
+        {
+          "text": "I've worked extensively with",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9172e1e79bf8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c86f35233e79.mp3"
+        },
+        {
+          "text": "Python, Docker, and AWS.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b45ffa0bc2e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d9a9159eced2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "self-introduction-05",
+      "node_id": "self-introduction",
+      "text": "In my current role, I...",
+      "example": "In my current role, I lead the data engineering team.",
+      "translation_vi": "Trong vai trò hiện tại, tôi dẫn dắt đội kỹ thuật dữ liệu.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c62b89656120.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ff4c618eefd5.mp3",
+      "phrases": [
+        {
+          "text": "In my current role,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_04ffbf0a05ab.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d7d66865e269.mp3"
+        },
+        {
+          "text": "I lead the data engineering team.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7bfea1a97a3d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5e1da6093e76.mp3"
+        }
+      ]
+    },
+    {
+      "id": "self-introduction-06",
+      "node_id": "self-introduction",
+      "text": "I'm looking for a role where...",
+      "example": "I'm looking for a role where I can contribute to impactful AI products.",
+      "translation_vi": "Tôi tìm kiếm một vai trò nơi tôi có thể đóng góp vào các sản phẩm AI có tác động.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a5f301d46ea3.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_95903dba9c3d.mp3",
+      "phrases": [
+        {
+          "text": "I'm looking for a role where",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd936cc7be28.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9177e6f067be.mp3"
+        },
+        {
+          "text": "I can contribute to impactful AI products.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_53af4bd45317.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_138d6d943ec2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-01",
+      "node_id": "strengths-weaknesses",
+      "text": "One of my strengths is...",
+      "example": "One of my strengths is problem-solving under pressure.",
+      "translation_vi": "Một trong những điểm mạnh của tôi là giải quyết vấn đề dưới áp lực.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3cd1b1118600.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ccda69c3d133.mp3",
+      "phrases": [
+        {
+          "text": "One of my strengths is",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed34642a976f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8fb11f55c50e.mp3"
+        },
+        {
+          "text": "problem-solving under pressure.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fe9679a6d361.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0e3d599ff19b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-02",
+      "node_id": "strengths-weaknesses",
+      "text": "I'm good at...",
+      "example": "I'm good at communicating complex technical ideas to non-technical stakeholders.",
+      "translation_vi": "Tôi giỏi truyền đạt các ý tưởng kỹ thuật phức tạp cho các bên liên quan không chuyên.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b517e8323c0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8767768fcd4b.mp3",
+      "phrases": [
+        {
+          "text": "I'm good at",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e6f72865643.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6fc0f3c73831.mp3"
+        },
+        {
+          "text": "communicating complex technical ideas",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ad70b20cfe31.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9e9dae3ab930.mp3"
+        },
+        {
+          "text": "to non-technical stakeholders.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_067ecbfe5759.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3bab6cce335.mp3"
+        }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-03",
+      "node_id": "strengths-weaknesses",
+      "text": "A weakness I'm working on is...",
+      "example": "A weakness I'm working on is public speaking, so I've joined a Toastmasters club.",
+      "translation_vi": "Một điểm yếu tôi đang khắc phục là nói trước đám đông, nên tôi đã tham gia câu lạc bộ Toastmasters.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_213d50530f13.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9bcef24cad60.mp3",
+      "phrases": [
+        {
+          "text": "A weakness I'm working on is",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd94b869780a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_33b0141cf1a2.mp3"
+        },
+        {
+          "text": "public speaking,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c47244a8780.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6e169bc7f819.mp3"
+        },
+        {
+          "text": "so I've joined a Toastmasters club.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1983caeb2a2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b5b0fbfebf52.mp3"
+        }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-04",
+      "node_id": "strengths-weaknesses",
+      "text": "I sometimes struggle with...",
+      "example": "I sometimes struggle with delegating tasks, but I'm learning to trust my team more.",
+      "translation_vi": "Đôi khi tôi gặp khó khăn trong việc phân công nhiệm vụ, nhưng tôi đang học cách tin tưởng đội nhóm hơn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b3dabfeda138.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a7c2eca7fdf4.mp3",
+      "phrases": [
+        {
+          "text": "I sometimes struggle with",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aac57444ed7c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b33f54dc8465.mp3"
+        },
+        {
+          "text": "delegating tasks,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_74a8dba9f157.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_be302a570c56.mp3"
+        },
+        {
+          "text": "but I'm learning to trust my team more.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_10364b565dba.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bcf10add44a3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses-05",
+      "node_id": "strengths-weaknesses",
+      "text": "I've received positive feedback on...",
+      "example": "I've received positive feedback on my ability to mentor junior engineers.",
+      "translation_vi": "Tôi nhận được phản hồi tích cực về khả năng hướng dẫn các kỹ sư junior.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_625e3d0ee346.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2a7f3bec01b3.mp3",
+      "phrases": [
+        {
+          "text": "I've received positive feedback on",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d2bf269815c8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cfd711984d4b.mp3"
+        },
+        {
+          "text": "my ability to mentor junior engineers.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0a6e5a52e9d7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_40d5eb555a18.mp3"
+        }
+      ]
+    },
+    {
+      "id": "leaving-job-01",
+      "node_id": "leaving-job",
+      "text": "I'm looking for new challenges.",
+      "example": "I'm looking for new challenges that align with my career goals.",
+      "translation_vi": "Tôi đang tìm kiếm những thử thách mới phù hợp với mục tiêu nghề nghiệp của mình.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_092535415214.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b35aa245f910.mp3",
+      "phrases": [
+        {
+          "text": "I'm looking for new challenges",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6c408c7eef3a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3c916aa53aea.mp3"
+        },
+        {
+          "text": "that align with my career goals.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_618b5c7cdf84.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0df211510b1e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "leaving-job-02",
+      "node_id": "leaving-job",
+      "text": "I feel I've grown as much as I can in my current role.",
+      "example": "I feel I've grown as much as I can in my current role, so I'm ready for something new.",
+      "translation_vi": "Tôi cảm thấy mình đã phát triển hết mức trong vai trò hiện tại, nên tôi sẵn sàng cho điều gì đó mới.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2da676366c33.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e42674410b98.mp3",
+      "phrases": [
+        {
+          "text": "I feel I've grown as much as I can",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e653c89dc5a4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8df933340fd3.mp3"
+        },
+        {
+          "text": "in my current role,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3e8cc8aa9c57.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a12698752cf.mp3"
+        },
+        {
+          "text": "so I'm ready for something new.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8defb21a6f7d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_491d3dc75d5a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "leaving-job-03",
+      "node_id": "leaving-job",
+      "text": "I'm interested in...",
+      "example": "I'm interested in the AI domain, which my current company doesn't focus on.",
+      "translation_vi": "Tôi quan tâm đến lĩnh vực AI, mà công ty hiện tại không tập trung vào.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b506af4fe96.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3aafebe931ee.mp3",
+      "phrases": [
+        {
+          "text": "I'm interested in the AI domain,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_753913bd1f85.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2faf4b5a581b.mp3"
+        },
+        {
+          "text": "which my current company doesn't focus on.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_785fa8695135.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_58d655f3a663.mp3"
+        }
+      ]
+    },
+    {
+      "id": "leaving-job-04",
+      "node_id": "leaving-job",
+      "text": "I'm leaving because...",
+      "example": "I'm leaving because I want to work on more impactful projects.",
+      "translation_vi": "Tôi rời đi vì muốn làm việc trên các dự án có tác động hơn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7f88f15a9f02.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a7191c7a3ced.mp3",
+      "phrases": [
+        {
+          "text": "I'm leaving because",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_de95f2e441ee.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_926017d968eb.mp3"
+        },
+        {
+          "text": "I want to work on more impactful projects.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac70dadc1542.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d69cf99809c9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "leaving-job-05",
+      "node_id": "leaving-job",
+      "text": "It's a mutual decision to part ways.",
+      "example": "It's a mutual decision to part ways due to restructuring.",
+      "translation_vi": "Đó là quyết định chung do tái cấu trúc.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_03698e8d7e9a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cc4d362d61e1.mp3",
+      "phrases": [
+        {
+          "text": "It's a mutual decision",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e2161d6638f8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5cc0c864f438.mp3"
+        },
+        {
+          "text": "to part ways",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_159e137015c7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6adeb50e717d.mp3"
+        },
+        {
+          "text": "due to restructuring.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_77964d9c07a0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_367e8c76e43d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "salary-01",
+      "node_id": "salary",
+      "text": "Based on my research...",
+      "example": "Based on my research, the market rate for this role is between 80k and 100k.",
+      "translation_vi": "Dựa trên nghiên cứu của tôi, mức lương thị trường cho vị trí này khoảng 80k đến 100k.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f2aebadeab72.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2f5b1ca093df.mp3",
+      "phrases": [
+        {
+          "text": "Based on my research,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f8d22cd1594f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aeefa8376493.mp3"
+        },
+        {
+          "text": "the market rate for this role",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_131bbf89b351.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_967ac3b16d29.mp3"
+        },
+        {
+          "text": "is between 80k and 100k.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a4ba34012d4a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_846f2110649c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "salary-02",
+      "node_id": "salary",
+      "text": "I'm expecting a salary in the range of...",
+      "example": "I'm expecting a salary in the range of 90k to 110k.",
+      "translation_vi": "Tôi mong đợi mức lương trong khoảng 90k đến 110k.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_430c8214f6f6.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6ee53dacb380.mp3",
+      "phrases": [
+        {
+          "text": "I'm expecting a salary",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0cfd106b36bb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_31e01b1c3bda.mp3"
+        },
+        {
+          "text": "in the range of 90k to 110k.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0766440a4a7b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4e00914e6a6b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "salary-03",
+      "node_id": "salary",
+      "text": "I'm open to negotiation.",
+      "example": "I'm open to negotiation based on the total compensation package.",
+      "translation_vi": "Tôi sẵn sàng thương lượng dựa trên tổng gói đãi ngộ.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8ce2be66bb24.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_94eb1549bbbf.mp3",
+      "phrases": [
+        {
+          "text": "I'm open to negotiation",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef82e2cb557a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a03b46c29cac.mp3"
+        },
+        {
+          "text": "based on the total compensation package.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ca0e4730de6e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7e4a81dd2f6e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "salary-04",
+      "node_id": "salary",
+      "text": "My current salary is...",
+      "example": "My current salary is around 85k, but I'm looking for growth.",
+      "translation_vi": "Mức lương hiện tại của tôi khoảng 85k, nhưng tôi đang tìm kiếm sự phát triển.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fb7072ff09e8.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_afa06945ae88.mp3",
+      "phrases": [
+        {
+          "text": "My current salary is around 85k,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_abcf8efb11f9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cbcf332e9391.mp3"
+        },
+        {
+          "text": "but I'm looking for growth.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b862c4354d90.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4e937d9d5823.mp3"
+        }
+      ]
+    },
+    {
+      "id": "salary-05",
+      "node_id": "salary",
+      "text": "Could you share the salary band for this role?",
+      "example": "Could you share the salary band for this role?",
+      "translation_vi": "Bạn có thể chia sẻ khung lương cho vị trí này không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6f6b5c4e2e13.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b68536198170.mp3",
+      "phrases": [
+        {
+          "text": "Could you share the salary band",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f3d7b7b263ad.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f5a1ca7f9aa5.mp3"
+        },
+        {
+          "text": "for this role?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23a301244e65.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_09b8125bc12e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "culture-fit-01",
+      "node_id": "culture-fit",
+      "text": "I value collaboration and transparency.",
+      "example": "I value collaboration and transparency in a team.",
+      "translation_vi": "Tôi coi trọng sự hợp tác và minh bạch trong đội nhóm.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b1fc5ceeb261.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8192d9d97751.mp3",
+      "phrases": [
+        {
+          "text": "I value collaboration",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2ec7f1e863b1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e27da6c36438.mp3"
+        },
+        {
+          "text": "and transparency in a team.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_79e40fa3490d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9e1fc6bd7c73.mp3"
+        }
+      ]
+    },
+    {
+      "id": "culture-fit-02",
+      "node_id": "culture-fit",
+      "text": "I thrive in an environment where...",
+      "example": "I thrive in an environment where I'm given ownership and autonomy.",
+      "translation_vi": "Tôi phát triển tốt trong môi trường nơi tôi được giao quyền sở hữu và tự chủ.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_68368edb5451.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fcb740b3f727.mp3",
+      "phrases": [
+        {
+          "text": "I thrive in an environment where",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3a8e69de415e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e7f1147cfebb.mp3"
+        },
+        {
+          "text": "I'm given ownership and autonomy.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_531e22763250.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_21dd329ec019.mp3"
+        }
+      ]
+    },
+    {
+      "id": "culture-fit-03",
+      "node_id": "culture-fit",
+      "text": "I prefer a flat hierarchy with open communication.",
+      "example": "I prefer a flat hierarchy with open communication across teams.",
+      "translation_vi": "Tôi thích cấu trúc phẳng với sự giao tiếp cởi mở giữa các nhóm.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3bd818c2b1e7.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4888f33ec38f.mp3",
+      "phrases": [
+        {
+          "text": "I prefer a flat hierarchy",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f3546e7af4f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1974ace36db4.mp3"
+        },
+        {
+          "text": "with open communication across teams.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3692d23c7beb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9f6d4c8990c8.mp3"
+        }
+      ]
+    },
+    {
+      "id": "culture-fit-04",
+      "node_id": "culture-fit",
+      "text": "What is the team culture like here?",
+      "example": "What is the team culture like here? How often do you have retrospectives?",
+      "translation_vi": "Văn hóa nhóm ở đây thế nào? Bao lâu các bạn tổ chức retrospective?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5728108995cd.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3d3e1253ba2.mp3",
+      "phrases": [
+        {
+          "text": "What is the team culture like here?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a02b8557b60f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b040b5bb256a.mp3"
+        },
+        {
+          "text": "How often do you have retrospectives?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b4d297450265.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8a38f4b42ba0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "culture-fit-05",
+      "node_id": "culture-fit",
+      "text": "I'm looking for a company that supports...",
+      "example": "I'm looking for a company that supports continuous learning and growth.",
+      "translation_vi": "Tôi tìm kiếm một công ty hỗ trợ học tập liên tục và phát triển.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2c2657efd787.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_787891c214d2.mp3",
+      "phrases": [
+        {
+          "text": "I'm looking for a company that supports",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e292339a89ab.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_09178736d485.mp3"
+        },
+        {
+          "text": "continuous learning and growth.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06d4771234af.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b8f52e203abf.mp3"
+        }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-01",
+      "node_id": "questions-for-interviewer",
+      "text": "What does success look like in this role?",
+      "example": "What does success look like in this role in the first six months?",
+      "translation_vi": "Thành công trong vai trò này trông như thế nào trong sáu tháng đầu?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d09d39df4108.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a9e50e02cb2f.mp3",
+      "phrases": [
+        {
+          "text": "What does success look like",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4f77b7b1fc08.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ef1a9dc980b2.mp3"
+        },
+        {
+          "text": "in this role",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac34b6cd6cd0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1469d3273a62.mp3"
+        },
+        {
+          "text": "in the first six months?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f4a0c3500ed.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6af08ea3cb45.mp3"
+        }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-02",
+      "node_id": "questions-for-interviewer",
+      "text": "Can you tell me about the team?",
+      "example": "Can you tell me about the team I'd be working with?",
+      "translation_vi": "Bạn có thể cho tôi biết về đội nhóm tôi sẽ làm việc cùng không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_88617fe0eb36.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ca7b28b1d2de.mp3",
+      "phrases": [
+        {
+          "text": "Can you tell me about the team",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dca6b8483028.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fc6e243fecbf.mp3"
+        },
+        {
+          "text": "I'd be working with?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_464fabe630d2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2a9badcdef02.mp3"
+        }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-03",
+      "node_id": "questions-for-interviewer",
+      "text": "What are the next steps in the process?",
+      "example": "What are the next steps in the interview process?",
+      "translation_vi": "Các bước tiếp theo trong quy trình phỏng vấn là gì?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ae9d23f87c5b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b048e3bfb875.mp3",
+      "phrases": [
+        {
+          "text": "What are the next steps",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0ef06e4b0ddf.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7908480c19d7.mp3"
+        },
+        {
+          "text": "in the interview process?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b1d3e3ea7c15.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8ed545f08b8a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-04",
+      "node_id": "questions-for-interviewer",
+      "text": "How does the company approach professional development?",
+      "example": "How does the company approach professional development and training?",
+      "translation_vi": "Công ty tiếp cận phát triển chuyên môn và đào tạo như thế nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3edb0a5c80a6.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e88bb0854331.mp3",
+      "phrases": [
+        {
+          "text": "How does the company approach",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd8ded4a4981.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bdb07fa0c00a.mp3"
+        },
+        {
+          "text": "professional development and training?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee5de2f7ef68.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_eb543fa3eb6e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "questions-for-interviewer-05",
+      "node_id": "questions-for-interviewer",
+      "text": "Is there anything else you'd like to know about me?",
+      "example": "Is there anything else you'd like to know about me?",
+      "translation_vi": "Còn điều gì bạn muốn biết thêm về tôi không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8f7394a43bdc.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c8662436649.mp3",
+      "phrases": [
+        {
+          "text": "Is there anything else",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dee7edc9bfef.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a5031ab79153.mp3"
+        },
+        {
+          "text": "you'd like to know about me?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bb83c9f0bdbe.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f5417bc83509.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-01",
+      "node_id": "closing",
+      "text": "Thank you for your time.",
+      "example": "Thank you for your time and the opportunity to interview.",
+      "translation_vi": "Cảm ơn bạn đã dành thời gian và cơ hội phỏng vấn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4912dc1fecaf.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c0ae0ecb86a6.mp3",
+      "phrases": [
+        {
+          "text": "Thank you for your time",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d626a430d215.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6debcc5be7d8.mp3"
+        },
+        {
+          "text": "and the opportunity to interview.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_34e95a0d6a84.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_581a951058a0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-02",
+      "node_id": "closing",
+      "text": "I look forward to hearing from you.",
+      "example": "I look forward to hearing from you regarding the next steps.",
+      "translation_vi": "Tôi mong chờ tin tức từ bạn về các bước tiếp theo.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b54915e9a5b6.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7bc9cdfd8f88.mp3",
+      "phrases": [
+        {
+          "text": "I look forward to hearing from you",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_05c11a6df4e1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e69e29187cc5.mp3"
+        },
+        {
+          "text": "regarding the next steps.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_07080e209c0b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4d5718b0faee.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-03",
+      "node_id": "closing",
+      "text": "It was great meeting you.",
+      "example": "It was great meeting you and learning more about the role.",
+      "translation_vi": "Thật tuyệt khi gặp bạn và tìm hiểu thêm về vị trí này.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_729e63e1fa5f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_20862754ea2f.mp3",
+      "phrases": [
+        {
+          "text": "It was great meeting you",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b7fe38c7b559.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3b653387bf8.mp3"
+        },
+        {
+          "text": "and learning more about the role.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_204417696ad6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_595347a97e7c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-04",
+      "node_id": "closing",
+      "text": "I'll send a follow-up email.",
+      "example": "I'll send a follow-up email with my references.",
+      "translation_vi": "Tôi sẽ gửi email tiếp theo với thông tin người tham khảo.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_55bec25d35fc.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ca38b531d234.mp3",
+      "phrases": [
+        {
+          "text": "I'll send a follow-up email",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7009f78f07de.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4603d0d82a7d.mp3"
+        },
+        {
+          "text": "with my references.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c9bb75701c86.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_73908c01ba49.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-05",
+      "node_id": "closing",
+      "text": "Have a great day.",
+      "example": "Have a great day. I hope to hear from you soon.",
+      "translation_vi": "Chúc bạn một ngày tốt lành. Hy vọng sớm nhận được tin từ bạn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36a22f9d257c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bf9bed398303.mp3",
+      "phrases": [
+        {
+          "text": "Have a great day.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8b9a36eee95a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7b7ac1729ed1.mp3"
+        },
+        {
+          "text": "I hope to hear from you soon.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_069581209900.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8aea51b0c018.mp3"
+        }
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "Tell me about yourself.",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a1c291c14fd.mp3",
+      "accepted_patterns": [
+        "I'm a software engineer with",
+        "My background is in",
+        "I'm passionate about",
+        "I've worked extensively with",
+        "In my current role"
+      ],
+      "hint_vi": "Giới thiệu bản thân, kinh nghiệm và đam mê"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "What are your strengths?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f63c65b4401f.mp3",
+      "accepted_patterns": [
+        "One of my strengths is",
+        "I'm good at",
+        "I've received positive feedback on"
+      ],
+      "hint_vi": "Nói về điểm mạnh của bạn"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What are your weaknesses?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b65165bca315.mp3",
+      "accepted_patterns": [
+        "A weakness I'm working on is",
+        "I sometimes struggle with"
+      ],
+      "hint_vi": "Nói về điểm yếu và cách khắc phục"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "Why are you leaving your current job?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f9f59f67b003.mp3",
+      "accepted_patterns": [
+        "I'm looking for new challenges",
+        "I feel I've grown as much as I can",
+        "I'm interested in",
+        "I'm leaving because",
+        "It's a mutual decision"
+      ],
+      "hint_vi": "Nêu lý do rời công ty hiện tại"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "What are your salary expectations?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b29d10e34e4.mp3",
+      "accepted_patterns": [
+        "Based on my research",
+        "I'm expecting a salary in the range of",
+        "I'm open to negotiation",
+        "My current salary is"
+      ],
+      "hint_vi": "Đề cập mức lương kỳ vọng"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What kind of company culture do you prefer?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_51b8b5ec77c8.mp3",
+      "accepted_patterns": [
+        "I value collaboration and transparency",
+        "I thrive in an environment where",
+        "I prefer a flat hierarchy",
+        "I'm looking for a company that supports"
+      ],
+      "hint_vi": "Nói về văn hóa công ty bạn thích"
+    },
+    {
+      "id": "recall-07",
+      "prompt": "Do you have any questions for me?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_63df1de853f8.mp3",
+      "accepted_patterns": [
+        "What does success look like",
+        "Can you tell me about the team",
+        "What are the next steps",
+        "How does the company approach professional development",
+        "Is there anything else"
+      ],
+      "hint_vi": "Đặt câu hỏi cho người phỏng vấn"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "HR Interview with a Manager",
+      "title_vi": "Phỏng vấn HR với quản lý",
+      "turns": [
+        {
+          "role": "Interviewer",
+          "text": "Hello, nice to meet you. Please have a seat.",
+          "translation_vi": "Xin chào, rất vui được gặp bạn. Mời bạn ngồi.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_908f2e5506e4.mp3",
+          "phrases": [
+            {
+              "text": "Hello, nice to meet you.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f2ddf6587bec.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_17497d870b7f.mp3"
+            },
+            {
+              "text": "Please have a seat.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f1023130a1a4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_db8d54e73789.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thank you. I'm excited to be here.",
+          "translation_vi": "Cảm ơn. Tôi rất hào hứng khi có mặt ở đây.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f16de2cc6eac.mp3",
+          "phrases": [
+            {
+              "text": "Thank you.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_73357d3238e9.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_56d95dc335c1.mp3"
+            },
+            {
+              "text": "I'm excited to be here.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b536ecaf4ac2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9aba8f6bed40.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Great. Let's start with a quick introduction. Tell me about yourself.",
+          "translation_vi": "Tuyệt. Hãy bắt đầu với phần giới thiệu nhanh. Hãy kể về bản thân bạn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_995c76eb8e29.mp3",
+          "phrases": [
+            {
+              "text": "Great. Let's start with a quick introduction.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4f23753155d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c2f89e2e0916.mp3"
+            },
+            {
+              "text": "Tell me about yourself.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6d67dbc2f69a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ff84ca3294d0.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm a software engineer with five years of experience in backend development and AI systems.",
+          "translation_vi": "Tôi là kỹ sư phần mềm với 5 năm kinh nghiệm trong phát triển backend và hệ thống AI.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1d86a75ea45d.mp3",
+          "phrases": [
+            {
+              "text": "I'm a software engineer",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8420b7fe9a22.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c7673a11dbab.mp3"
+            },
+            {
+              "text": "with five years of experience",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_773c0fefce2a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e8282f49e85c.mp3"
+            },
+            {
+              "text": "in backend development and AI systems.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_52816adcaefd.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_955b3f603993.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "That sounds interesting. What do you consider your greatest strength?",
+          "translation_vi": "Nghe thú vị đấy. Bạn coi đâu là điểm mạnh nhất của mình?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e5bfa4a03603.mp3",
+          "phrases": [
+            {
+              "text": "That sounds interesting.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eccc592bbad7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8aeed652b136.mp3"
+            },
+            {
+              "text": "What do you consider your greatest strength?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aa88c88b9017.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_13dcf269b2ca.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "One of my strengths is problem-solving under pressure. I've handled many production incidents calmly.",
+          "translation_vi": "Một điểm mạnh là giải quyết vấn đề dưới áp lực. Tôi đã xử lý nhiều sự cố sản xuất một cách bình tĩnh.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cc7e317b3efd.mp3",
+          "phrases": [
+            {
+              "text": "One of my strengths is problem-solving under pressure.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3cd1b1118600.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ccda69c3d133.mp3"
+            },
+            {
+              "text": "I've handled many production incidents calmly.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d47c0338e0f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5ecd4e147e43.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "And a weakness you're working on?",
+          "translation_vi": "Và một điểm yếu bạn đang khắc phục?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0f57db0ee198.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "A weakness I'm working on is public speaking. I've joined a Toastmasters club to improve.",
+          "translation_vi": "Một điểm yếu tôi đang khắc phục là nói trước đám đông. Tôi đã tham gia câu lạc bộ Toastmasters để cải thiện.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_113336626cc4.mp3",
+          "phrases": [
+            {
+              "text": "A weakness I'm working on is public speaking.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_54c15ad4f77e.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d55bd473698.mp3"
+            },
+            {
+              "text": "I've joined a Toastmasters club to improve.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fb6d852e8775.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3d78edd6fcd.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Good to hear. Why are you leaving your current job?",
+          "translation_vi": "Tốt. Tại sao bạn rời công việc hiện tại?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_62073b858fbc.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm looking for new challenges that align with my career goals, especially in the AI domain.",
+          "translation_vi": "Tôi tìm kiếm thử thách mới phù hợp với mục tiêu nghề nghiệp, đặc biệt là trong lĩnh vực AI.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b8ae68c7111e.mp3",
+          "phrases": [
+            {
+              "text": "I'm looking for new challenges",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6c408c7eef3a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3c916aa53aea.mp3"
+            },
+            {
+              "text": "that align with my career goals,",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b78ffc0c3ba.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f1b72716ebe4.mp3"
+            },
+            {
+              "text": "especially in the AI domain.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c2b460cd670f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_80312090ddce.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Discussing Salary and Culture Fit",
+      "title_vi": "Thảo luận về lương và văn hóa",
+      "turns": [
+        {
+          "role": "Interviewer",
+          "text": "Let's talk about salary expectations. What are you looking for?",
+          "translation_vi": "Hãy nói về kỳ vọng lương. Bạn mong đợi mức nào?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_90bc7e33973f.mp3",
+          "phrases": [
+            {
+              "text": "Let's talk about salary expectations.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1b717f7adcb4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_254749db7144.mp3"
+            },
+            {
+              "text": "What are you looking for?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_917625dd8607.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b9cd3a3e12fd.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Based on my research, the market rate for this role is between 80k and 100k. I'm expecting around 95k.",
+          "translation_vi": "Dựa trên nghiên cứu, mức thị trường cho vị trí này là 80k đến 100k. Tôi mong đợi khoảng 95k.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a383b4baeba7.mp3",
+          "phrases": [
+            {
+              "text": "Based on my research,",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f8d22cd1594f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aeefa8376493.mp3"
+            },
+            {
+              "text": "the market rate for this role",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_131bbf89b351.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_967ac3b16d29.mp3"
+            },
+            {
+              "text": "is between 80k and 100k.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a4ba34012d4a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_846f2110649c.mp3"
+            },
+            {
+              "text": "I'm expecting around 95k.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0beaca80b5a0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6b8adeffe1ca.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "That's within our range. How about company culture? What do you value?",
+          "translation_vi": "Mức đó nằm trong khoảng của chúng tôi. Còn văn hóa công ty thì sao? Bạn coi trọng điều gì?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ae831bf249a4.mp3",
+          "phrases": [
+            {
+              "text": "That's within our range.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_507c415a3121.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_918e17476186.mp3"
+            },
+            {
+              "text": "How about company culture?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_db7f8b248cd2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cf3179910dd1.mp3"
+            },
+            {
+              "text": "What do you value?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80a2b8588031.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3798a4e4fc50.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I value collaboration and transparency. I thrive in an environment where I'm given ownership.",
+          "translation_vi": "Tôi coi trọng sự hợp tác và minh bạch. Tôi phát triển tốt trong môi trường được giao quyền sở hữu.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fbcca0213bb7.mp3",
+          "phrases": [
+            {
+              "text": "I value collaboration and transparency.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_14bad7b00b7a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b78907ab7c12.mp3"
+            },
+            {
+              "text": "I thrive in an environment where I'm given ownership.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23a328e9282f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8eb6aa7d9821.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Great. Do you have any questions for me?",
+          "translation_vi": "Tuyệt. Bạn có câu hỏi nào cho tôi không?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d172ac8a14cd.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "Yes, what does success look like in this role in the first six months?",
+          "translation_vi": "Có, thành công trong vai trò này trong sáu tháng đầu trông như thế nào?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a1d12db4ce27.mp3",
+          "phrases": [
+            {
+              "text": "Yes, what does success look like",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_91f3d9a93f68.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b8a617c31e0f.mp3"
+            },
+            {
+              "text": "in this role",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac34b6cd6cd0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1469d3273a62.mp3"
+            },
+            {
+              "text": "in the first six months?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f4a0c3500ed.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6af08ea3cb45.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Good question. I'd expect you to be fully ramped and leading your first project.",
+          "translation_vi": "Câu hỏi hay. Tôi mong bạn sẽ hoàn toàn thích nghi và dẫn dắt dự án đầu tiên.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67c6c9d67a47.mp3",
+          "phrases": [
+            {
+              "text": "Good question.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b4a9a1ccc54b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7cc27ec7e1ce.mp3"
+            },
+            {
+              "text": "I'd expect you to be fully ramped",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aea2dcfe0488.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3244475ddf4f.mp3"
+            },
+            {
+              "text": "and leading your first project.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6aca1930cae4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_88808d262574.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thank you. I'm excited about the opportunity.",
+          "translation_vi": "Cảm ơn. Tôi rất hào hứng với cơ hội này.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f5ef4ca6010e.mp3",
+          "phrases": [
+            {
+              "text": "Thank you.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_73357d3238e9.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_56d95dc335c1.mp3"
+            },
+            {
+              "text": "I'm excited about the opportunity.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_610cf0582f25.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_10b790558f9d.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Interviewer",
+          "text": "Great. We'll be in touch soon. Have a great day.",
+          "translation_vi": "Tuyệt. Chúng tôi sẽ liên lạc sớm. Chúc bạn một ngày tốt lành.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5bbd2affc1b7.mp3",
+          "phrases": [
+            {
+              "text": "Great. We'll be in touch soon.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_17b4e02b7da8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_11546c867a1b.mp3"
+            },
+            {
+              "text": "Have a great day.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80c85eb832f4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ffe966375194.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thank you, you too. I look forward to hearing from you.",
+          "translation_vi": "Cảm ơn, bạn cũng vậy. Tôi mong chờ tin từ bạn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d1f0ee3a664.mp3",
+          "phrases": [
+            {
+              "text": "Thank you, you too.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c6510719ae6d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1ab225b7ea79.mp3"
+            },
+            {
+              "text": "I look forward to hearing from you.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_083cee73667b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4f23a4d13ee2.mp3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

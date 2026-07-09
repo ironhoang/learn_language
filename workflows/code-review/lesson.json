@@ -1,0 +1,1125 @@
+{
+  "meta": {
+    "id": "code-review",
+    "title": "Code Review",
+    "title_vi": "Review code",
+    "description": "Review a teammate's pull request: understand the change, ask questions, request changes, and approve.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "engineering",
+    "tags": [
+      "code-review",
+      "pull-request",
+      "feedback"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "open-pr",
+      "label": "Open Pull Request",
+      "label_vi": "Mở pull request"
+    },
+    {
+      "id": "understand-change",
+      "label": "Understand the Change",
+      "label_vi": "Hiểu thay đổi"
+    },
+    {
+      "id": "ask-clarify",
+      "label": "Ask Clarifying Questions",
+      "label_vi": "Đặt câu hỏi làm rõ"
+    },
+    {
+      "id": "suggest-improvement",
+      "label": "Suggest Improvements",
+      "label_vi": "Đề xuất cải thiện"
+    },
+    {
+      "id": "request-changes",
+      "label": "Request Changes",
+      "label_vi": "Yêu cầu thay đổi"
+    },
+    {
+      "id": "approve-merge",
+      "label": "Approve and Merge",
+      "label_vi": "Phê duyệt và merge"
+    },
+    {
+      "id": "wrap-up",
+      "label": "Wrap Up",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "open-pr-01",
+      "node_id": "open-pr",
+      "text": "Can you review my PR?",
+      "example": "Can you review my PR when you have a moment?",
+      "translation_vi": "Bạn review PR của tôi khi rảnh được không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_90a00653110d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6d9f23fa1299.mp3",
+      "phrases": [
+        {
+          "text": "Can you review my PR",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_483166001735.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9b8e55d71013.mp3"
+        },
+        {
+          "text": "when you have a moment?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06544ac3e55d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_010d7c59d805.mp3"
+        }
+      ]
+    },
+    {
+      "id": "open-pr-02",
+      "node_id": "open-pr",
+      "text": "I've opened a PR for...",
+      "example": "I've opened a PR for the new authentication flow.",
+      "translation_vi": "Tôi đã mở PR cho luồng xác thực mới.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eac908dedb24.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6a7a370b3c85.mp3",
+      "phrases": [
+        {
+          "text": "I've opened a PR",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5a0a9d302e48.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_56f8bc511919.mp3"
+        },
+        {
+          "text": "for the new authentication flow.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac1e07592b22.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3f2fa81740ac.mp3"
+        }
+      ]
+    },
+    {
+      "id": "open-pr-03",
+      "node_id": "open-pr",
+      "text": "Could you take a look at...?",
+      "example": "Could you take a look at the refactored module?",
+      "translation_vi": "Bạn xem giúp module đã refactor được không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cee5e0935439.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_555c44c4048b.mp3",
+      "phrases": [
+        {
+          "text": "Could you take a look",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_83103a6a6c86.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8a760a993381.mp3"
+        },
+        {
+          "text": "at the refactored module?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_59d13ca49add.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_90365aafb127.mp3"
+        }
+      ]
+    },
+    {
+      "id": "open-pr-04",
+      "node_id": "open-pr",
+      "text": "I just pushed a PR for...",
+      "example": "I just pushed a PR for the data migration script.",
+      "translation_vi": "Tôi vừa push PR cho script migrate dữ liệu.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a4d6fe9b26a8.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a3ff06fed4be.mp3",
+      "phrases": [
+        {
+          "text": "I just pushed a PR",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_96eefd769d0f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ec255e028379.mp3"
+        },
+        {
+          "text": "for the data migration script.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e76a91b7f62a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_421e62e3d9e0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "open-pr-05",
+      "node_id": "open-pr",
+      "text": "This PR addresses...",
+      "example": "This PR addresses the issue with token expiration.",
+      "translation_vi": "PR này giải quyết vấn đề hết hạn token.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_16a7e65cda2e.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c4870c70e4f6.mp3",
+      "phrases": [
+        {
+          "text": "This PR addresses",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a637add2f1a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_25a950442e57.mp3"
+        },
+        {
+          "text": "the issue with token expiration.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_14005db764f8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b5f8e27d0183.mp3"
+        }
+      ]
+    },
+    {
+      "id": "understand-change-01",
+      "node_id": "understand-change",
+      "text": "Let me read through the changes.",
+      "example": "Let me read through the changes first.",
+      "translation_vi": "Để tôi đọc qua các thay đổi trước.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_04be037d1309.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1948eccf4be5.mp3",
+      "phrases": [
+        {
+          "text": "Let me read through",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a3a5d3fad78d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4fef5e534cfd.mp3"
+        },
+        {
+          "text": "the changes first.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ebda89241309.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b63239f172c9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "understand-change-02",
+      "node_id": "understand-change",
+      "text": "I see you modified...",
+      "example": "I see you modified the error handling logic.",
+      "translation_vi": "Tôi thấy bạn đã sửa logic xử lý lỗi.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4721c1fc80da.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c650a69de55.mp3",
+      "phrases": [
+        {
+          "text": "I see you modified",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_93eef62ca774.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce1ff858884a.mp3"
+        },
+        {
+          "text": "the error handling logic.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e83022b4971.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d83b11b716ed.mp3"
+        }
+      ]
+    },
+    {
+      "id": "understand-change-03",
+      "node_id": "understand-change",
+      "text": "What does this function do?",
+      "example": "What does this new utility function do exactly?",
+      "translation_vi": "Hàm tiện ích mới này làm gì vậy?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_606371b71bb2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2890de8d4a1b.mp3",
+      "phrases": [
+        {
+          "text": "What does this new utility function",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d94ba5c2bd8b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ced1e880e645.mp3"
+        },
+        {
+          "text": "do exactly?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_372860007585.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a7562bf24ed4.mp3"
+        }
+      ]
+    },
+    {
+      "id": "understand-change-04",
+      "node_id": "understand-change",
+      "text": "I'm not sure I understand...",
+      "example": "I'm not sure I understand the caching strategy here.",
+      "translation_vi": "Tôi không chắc hiểu chiến lược cache ở đây.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ce5150b6127c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_35d259afee3a.mp3",
+      "phrases": [
+        {
+          "text": "I'm not sure I understand",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_44ed787ffefb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_255865d88db8.mp3"
+        },
+        {
+          "text": "the caching strategy here.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_76323654174a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5416dbfc4022.mp3"
+        }
+      ]
+    },
+    {
+      "id": "understand-change-05",
+      "node_id": "understand-change",
+      "text": "Why did you choose...?",
+      "example": "Why did you choose a hash map over a list?",
+      "translation_vi": "Tại sao bạn chọn hash map thay vì list?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9fbcec481136.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_32d8438fdfbe.mp3",
+      "phrases": [
+        {
+          "text": "Why did you choose",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_320933ddf541.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6e56fc828036.mp3"
+        },
+        {
+          "text": "a hash map over a list?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a75219fdfe26.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_80c91ee73274.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-clarify-01",
+      "node_id": "ask-clarify",
+      "text": "Could you explain...?",
+      "example": "Could you explain this part more?",
+      "translation_vi": "Bạn giải thích phần này thêm được không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_976d76338d61.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2a00d8071f99.mp3",
+      "phrases": [
+        {
+          "text": "Could you explain",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d6adf745eaba.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5d2e634ba14e.mp3"
+        },
+        {
+          "text": "this part more?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_41385bf49e36.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_22aa6dda563e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-clarify-02",
+      "node_id": "ask-clarify",
+      "text": "I'm curious about...",
+      "example": "I'm curious about the decision to use async here.",
+      "translation_vi": "Tôi tò mò về quyết định dùng async ở đây.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1a58a0679770.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3e78385ad94.mp3",
+      "phrases": [
+        {
+          "text": "I'm curious about",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b494e7a4e1f1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_90b9a9f45346.mp3"
+        },
+        {
+          "text": "the decision to use async here.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c947525b58de.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_25cb3d319fd5.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-clarify-03",
+      "node_id": "ask-clarify",
+      "text": "What was your reasoning behind...?",
+      "example": "What was your reasoning behind the batch size?",
+      "translation_vi": "Lý do bạn chọn kích thước batch là gì?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fdb703e8bb19.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_294790240089.mp3",
+      "phrases": [
+        {
+          "text": "What was your reasoning",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3bd95ac6d98c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fc56d4bf24d1.mp3"
+        },
+        {
+          "text": "behind the batch size?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_45b7c8af85f5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_af615d3802d4.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-clarify-04",
+      "node_id": "ask-clarify",
+      "text": "Did you consider...?",
+      "example": "Did you consider using a queue instead?",
+      "translation_vi": "Bạn có cân nhắc dùng queue thay vì không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_003e985febd9.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a506e1fb8171.mp3",
+      "phrases": [
+        {
+          "text": "Did you consider",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e3e12212007.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f9e5c87b4f28.mp3"
+        },
+        {
+          "text": "using a queue instead?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_09355405f140.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_97f201d038d6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-clarify-05",
+      "node_id": "ask-clarify",
+      "text": "How does this handle...?",
+      "example": "How does this handle concurrent requests?",
+      "translation_vi": "Cái này xử lý concurrent request thế nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_af8da2c0b1e5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2b06d74a0c6a.mp3",
+      "phrases": [
+        {
+          "text": "How does this handle",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b755160bfeb9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_66140819ce33.mp3"
+        },
+        {
+          "text": "concurrent requests?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bdf7977b9377.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cd754d07d411.mp3"
+        }
+      ]
+    },
+    {
+      "id": "suggest-improvement-01",
+      "node_id": "suggest-improvement",
+      "text": "You might want to...",
+      "example": "You might want to add a null check here.",
+      "translation_vi": "Bạn có thể thêm null check ở đây.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a280d1203642.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_18751e06f353.mp3",
+      "phrases": [
+        {
+          "text": "You might want to",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f34e63ec39b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_707480f61f75.mp3"
+        },
+        {
+          "text": "add a null check here.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dedab9e95194.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2e41c8f679e3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "suggest-improvement-02",
+      "node_id": "suggest-improvement",
+      "text": "How about...?",
+      "example": "How about extracting this into a separate method?",
+      "translation_vi": "Hay là tách cái này thành một method riêng?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_940ef8e74fb7.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9c38e05219e5.mp3",
+      "phrases": [
+        {
+          "text": "How about extracting",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b19e54a6d25e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_66fe0ecb39b5.mp3"
+        },
+        {
+          "text": "this into a separate method?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b6cac8cd6098.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0828719ca244.mp3"
+        }
+      ]
+    },
+    {
+      "id": "suggest-improvement-03",
+      "node_id": "suggest-improvement",
+      "text": "A cleaner approach would be...",
+      "example": "A cleaner approach would be to use a switch statement.",
+      "translation_vi": "Cách sạch hơn là dùng switch statement.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1f3e85beea04.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cc89d502ed99.mp3",
+      "phrases": [
+        {
+          "text": "A cleaner approach",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_922aa3473db3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_821f836bdee8.mp3"
+        },
+        {
+          "text": "would be to use a switch statement.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b2dffe64bc9e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8c1df70822db.mp3"
+        }
+      ]
+    },
+    {
+      "id": "suggest-improvement-04",
+      "node_id": "suggest-improvement",
+      "text": "Consider adding...",
+      "example": "Consider adding unit tests for the new module.",
+      "translation_vi": "Cân nhắc thêm unit test cho module mới.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b56bff9df6a1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_59231aa0905a.mp3",
+      "phrases": [
+        {
+          "text": "Consider adding",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_472202183cc0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_33c82bddf0ed.mp3"
+        },
+        {
+          "text": "unit tests for the new module.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2659092eae11.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a49908d6f43a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "suggest-improvement-05",
+      "node_id": "suggest-improvement",
+      "text": "I think we could improve...",
+      "example": "I think we could improve the error messages here.",
+      "translation_vi": "Tôi nghĩ chúng ta có thể cải thiện thông báo lỗi ở đây.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1b5dce83aa4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5f26e8942db7.mp3",
+      "phrases": [
+        {
+          "text": "I think we could improve",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a92cf8c55619.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f788e9950a4a.mp3"
+        },
+        {
+          "text": "the error messages here.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b748ee35ef37.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ed2573b91e0d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "request-changes-01",
+      "node_id": "request-changes",
+      "text": "We need to fix...",
+      "example": "We need to fix the memory leak before merging.",
+      "translation_vi": "Chúng ta cần sửa lỗi rò rỉ bộ nhớ trước khi merge.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bda5128ef29f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_81b4535e2f4b.mp3",
+      "phrases": [
+        {
+          "text": "We need to fix",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c276d5c52cb0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_607c809a3360.mp3"
+        },
+        {
+          "text": "the memory leak before merging.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bc8b7fe80065.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e3cfe02d59e6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "request-changes-02",
+      "node_id": "request-changes",
+      "text": "This won't work because...",
+      "example": "This won't work because it misses edge cases.",
+      "translation_vi": "Cái này không chạy được vì thiếu các trường hợp đặc biệt.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2262b940aa85.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f1454a110fa5.mp3",
+      "phrases": [
+        {
+          "text": "This won't work",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2deb4b19ab13.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b934eae85e8a.mp3"
+        },
+        {
+          "text": "because it misses edge cases.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0571977d4c47.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9b18c8c283f6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "request-changes-03",
+      "node_id": "request-changes",
+      "text": "Could you update...?",
+      "example": "Could you update the variable name for clarity?",
+      "translation_vi": "Bạn cập nhật tên biến cho rõ nghĩa được không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4e3be8d4ba26.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_59254b1e19dc.mp3",
+      "phrases": [
+        {
+          "text": "Could you update",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b18a04d0def.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_14c8745e7e62.mp3"
+        },
+        {
+          "text": "the variable name for clarity?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_993212f5242c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_87ce44590419.mp3"
+        }
+      ]
+    },
+    {
+      "id": "request-changes-04",
+      "node_id": "request-changes",
+      "text": "Please remove...",
+      "example": "Please remove the commented-out code.",
+      "translation_vi": "Hãy xóa code đã comment đi.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ffded44c98ee.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_19ba5fc02885.mp3",
+      "phrases": [
+        {
+          "text": "Please remove",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d70e241bddfa.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3757a5726032.mp3"
+        },
+        {
+          "text": "the commented-out code.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9fe4e966ba5e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b1ea04131acd.mp3"
+        }
+      ]
+    },
+    {
+      "id": "request-changes-05",
+      "node_id": "request-changes",
+      "text": "I think we should refactor...",
+      "example": "I think we should refactor this into smaller functions.",
+      "translation_vi": "Tôi nghĩ chúng ta nên refactor cái này thành các hàm nhỏ hơn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e2d9a26beabd.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_56cd908cf01f.mp3",
+      "phrases": [
+        {
+          "text": "I think we should refactor",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3270c0c1c4e4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bf1220d4e5f6.mp3"
+        },
+        {
+          "text": "this into smaller functions.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6c0b596c8b37.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7a71f7e7e41d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "approve-merge-01",
+      "node_id": "approve-merge",
+      "text": "Looks good to me.",
+      "example": "Looks good to me. I'll approve it.",
+      "translation_vi": "Trông ổn với tôi. Tôi sẽ approve.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5eb0b4e12a54.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e9dacd59ca8f.mp3",
+      "phrases": [
+        {
+          "text": "Looks good to me.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b8a3e1f53ba.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2197dab142ad.mp3"
+        },
+        {
+          "text": "I'll approve it.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f730496feb43.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c6fa1bac70b7.mp3"
+        }
+      ]
+    },
+    {
+      "id": "approve-merge-02",
+      "node_id": "approve-merge",
+      "text": "Approved.",
+      "example": "Approved. Nice work on the refactor!",
+      "translation_vi": "Đã approve. Làm tốt lắm với bản refactor!",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_970c5f22d8ab.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9dd92dee2533.mp3",
+      "phrases": [
+        {
+          "text": "Approved.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4c5cc682005.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5581b1b47457.mp3"
+        },
+        {
+          "text": "Nice work on the refactor!",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_81ac2f6ca471.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7248d263852c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "approve-merge-03",
+      "node_id": "approve-merge",
+      "text": "This looks ready to merge.",
+      "example": "This looks ready to merge. Go ahead.",
+      "translation_vi": "Cái này có vẻ sẵn sàng để merge. Cứ làm đi.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f33f2d85673b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e52af32eebb5.mp3",
+      "phrases": [
+        {
+          "text": "This looks ready to merge.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f1eb8fe16ebb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2b100f6b3416.mp3"
+        },
+        {
+          "text": "Go ahead.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1ccacf63c5d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5797a6cb1310.mp3"
+        }
+      ]
+    },
+    {
+      "id": "approve-merge-04",
+      "node_id": "approve-merge",
+      "text": "I'm happy with the changes.",
+      "example": "I'm happy with the changes. Merging now.",
+      "translation_vi": "Tôi hài lòng với các thay đổi. Merge ngay.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_38577ae47a27.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2243517e561a.mp3",
+      "phrases": [
+        {
+          "text": "I'm happy with the changes.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4067271f4be5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f78937688cb3.mp3"
+        },
+        {
+          "text": "Merging now.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_217715cbdd92.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7cc060ea4ec8.mp3"
+        }
+      ]
+    },
+    {
+      "id": "approve-merge-05",
+      "node_id": "approve-merge",
+      "text": "Great, I'll merge it.",
+      "example": "Great, I'll merge it after the CI passes.",
+      "translation_vi": "Tuyệt, tôi sẽ merge sau khi CI chạy xong.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_11bac3e0e4ce.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2a8bc8e66b12.mp3",
+      "phrases": [
+        {
+          "text": "Great, I'll merge it",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6315f83f8257.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7f8551fe6cf1.mp3"
+        },
+        {
+          "text": "after the CI passes.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4dd257e67e0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ec1ca059cf2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-01",
+      "node_id": "wrap-up",
+      "text": "Thanks for the review!",
+      "example": "Thanks for the review! I'll address the comments.",
+      "translation_vi": "Cảm ơn đã review! Tôi sẽ xử lý các góp ý.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_75ed94d15bcd.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4c3feb5fcef7.mp3",
+      "phrases": [
+        {
+          "text": "Thanks for the review!",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d01555fbd9b8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce685f45ab32.mp3"
+        },
+        {
+          "text": "I'll address the comments.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f9e05fb279e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6484c8cc0abb.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-02",
+      "node_id": "wrap-up",
+      "text": "I'll make the changes and push again.",
+      "example": "I'll make the changes and push again.",
+      "translation_vi": "Tôi sẽ sửa và push lại.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bf63551820cb.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_07ae494b10ef.mp3",
+      "phrases": [
+        {
+          "text": "I'll make the changes",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd499803b5d1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7f9edb5a89a0.mp3"
+        },
+        {
+          "text": "and push again.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a64a9bd844c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_62286f9f6a25.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-03",
+      "node_id": "wrap-up",
+      "text": "Let me know if you need anything else.",
+      "example": "Let me know if you need anything else.",
+      "translation_vi": "Cho tôi biết nếu bạn cần gì thêm.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9b7e34309ded.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_49a8aa18d76d.mp3",
+      "phrases": [
+        {
+          "text": "Let me know",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b6e76295dc8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5011d1094393.mp3"
+        },
+        {
+          "text": "if you need anything else.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c31750f874ca.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a19374354d5.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-04",
+      "node_id": "wrap-up",
+      "text": "Happy to help.",
+      "example": "Happy to help. Let's sync after you push.",
+      "translation_vi": "Sẵn lòng giúp. Sau khi bạn push thì mình sync lại nhé.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_84bc49d05b35.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e4a21593d697.mp3",
+      "phrases": [
+        {
+          "text": "Happy to help.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_399a3fb11f5f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_300e945e0302.mp3"
+        },
+        {
+          "text": "Let's sync after you push.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b2b50175465a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b727e53dc54b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-05",
+      "node_id": "wrap-up",
+      "text": "Great teamwork!",
+      "example": "Great teamwork! The PR is merged now.",
+      "translation_vi": "Làm việc nhóm tuyệt vời! PR đã được merge rồi.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c136b54733bc.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1980722b23e1.mp3",
+      "phrases": [
+        {
+          "text": "Great teamwork!",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_28a73d661d6c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f396187758f4.mp3"
+        },
+        {
+          "text": "The PR is merged now.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee35bfcd3d2d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_625e2b039bfe.mp3"
+        }
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What is this PR about?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0266b7aba5e4.mp3",
+      "accepted_patterns": [
+        "This PR addresses",
+        "I've opened a PR for",
+        "I just pushed a PR for"
+      ],
+      "hint_vi": "Nói về mục đích của PR"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "Can you explain this part?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a1b7681f751.mp3",
+      "accepted_patterns": [
+        "Could you explain",
+        "I'm curious about",
+        "What was your reasoning behind"
+      ],
+      "hint_vi": "Hỏi làm rõ một phần trong code"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "Any suggestions for improvement?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_520a48a77fbb.mp3",
+      "accepted_patterns": [
+        "You might want to",
+        "How about",
+        "A cleaner approach would be",
+        "Consider adding",
+        "I think we could improve"
+      ],
+      "hint_vi": "Đề xuất cải thiện"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What needs to be fixed?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5fe5f8b7bd38.mp3",
+      "accepted_patterns": [
+        "We need to fix",
+        "This won't work because",
+        "Could you update",
+        "Please remove",
+        "I think we should refactor"
+      ],
+      "hint_vi": "Yêu cầu thay đổi cần thiết"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "Do you approve the PR?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9a76561fff6c.mp3",
+      "accepted_patterns": [
+        "Looks good to me",
+        "Approved",
+        "This looks ready to merge",
+        "I'm happy with the changes",
+        "Great, I'll merge it"
+      ],
+      "hint_vi": "Phê duyệt hoặc từ chối"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What will you do after the review?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_91315e401b2e.mp3",
+      "accepted_patterns": [
+        "Thanks for the review",
+        "I'll make the changes and push again",
+        "Let me know if you need anything else",
+        "Happy to help"
+      ],
+      "hint_vi": "Nói về bước tiếp theo"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Reviewing a PR with a colleague",
+      "title_vi": "Review PR với đồng nghiệp",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Hi, can you review my PR?",
+          "translation_vi": "Chào, bạn review PR của tôi được không?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f82aabd59862.mp3",
+          "phrases": [
+            {
+              "text": "Hi, can you review my PR?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f82aabd59862.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c264826202a2.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Sure, let me take a look.",
+          "translation_vi": "Được, để tôi xem qua.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ba304c18fd7d.mp3",
+          "phrases": [
+            {
+              "text": "Sure, let me take a look.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ba304c18fd7d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8db93f2f5a2d.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I see you modified the auth service. What does this new function do?",
+          "translation_vi": "Tôi thấy bạn sửa auth service. Hàm mới này làm gì?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b7aa3ecd4a87.mp3",
+          "phrases": [
+            {
+              "text": "I see you modified the auth service.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_68b8f566ea64.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_59713cb75d76.mp3"
+            },
+            {
+              "text": "What does this new function do?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_25ef8426f811.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0c50224578e4.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "It handles token refresh logic. I extracted it for reusability.",
+          "translation_vi": "Nó xử lý logic refresh token. Tôi tách ra để dùng lại.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1e44d21802d4.mp3",
+          "phrases": [
+            {
+              "text": "It handles token refresh logic.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c403a215ac6.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c8b67c741f23.mp3"
+            },
+            {
+              "text": "I extracted it for reusability.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a2464e8e082.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_03acf9b9d28f.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "You might want to add a null check for the token parameter.",
+          "translation_vi": "Bạn có thể thêm null check cho tham số token.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_21dce0fc4bd6.mp3",
+          "phrases": [
+            {
+              "text": "You might want to add a null check",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd07f44b2e41.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f0f0ff828e8e.mp3"
+            },
+            {
+              "text": "for the token parameter.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_acb98fbab33a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1410eb2f06a0.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Good point. I'll add that and push again.",
+          "translation_vi": "Đúng vậy. Tôi sẽ thêm và push lại.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6826d4039123.mp3",
+          "phrases": [
+            {
+              "text": "Good point.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_870bc89f24b0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7b0998c90218.mp3"
+            },
+            {
+              "text": "I'll add that and push again.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ee76cc46b627.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6415bbbc6277.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Looks good to me. I'll approve after you push.",
+          "translation_vi": "Trông ổn rồi. Tôi sẽ approve sau khi bạn push.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df139c0b2ee2.mp3",
+          "phrases": [
+            {
+              "text": "Looks good to me.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_108848fffc2f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_691ee80c88e4.mp3"
+            },
+            {
+              "text": "I'll approve after you push.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dfeb058c3448.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e0960a38c238.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Thanks a lot!",
+          "translation_vi": "Cảm ơn nhiều!",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0015ad4361fd.mp3"
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Requesting changes on a PR",
+      "title_vi": "Yêu cầu thay đổi trên PR",
+      "turns": [
+        {
+          "role": "Tech Lead",
+          "text": "I've reviewed your PR. There are a few issues.",
+          "translation_vi": "Tôi đã review PR của bạn. Có vài vấn đề.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec23e25f8454.mp3",
+          "phrases": [
+            {
+              "text": "I've reviewed your PR.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_54c55ae51b52.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9466e633f36d.mp3"
+            },
+            {
+              "text": "There are a few issues.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd7ab31a8b11.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aa4c3bc8793b.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Okay, what needs to be fixed?",
+          "translation_vi": "Vâng, cần sửa gì ạ?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e6e053891ec6.mp3",
+          "phrases": [
+            {
+              "text": "Okay, what needs to be fixed?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e6e053891ec6.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d102fe6d542c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "We need to fix the memory leak in the caching layer.",
+          "translation_vi": "Chúng ta cần sửa lỗi rò rỉ bộ nhớ ở tầng cache.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd8027017779.mp3",
+          "phrases": [
+            {
+              "text": "We need to fix the memory leak",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b01a6a279171.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b6cef7cb6196.mp3"
+            },
+            {
+              "text": "in the caching layer.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_619e4e189f4d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d69c3f4bf544.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I see. I'll look into it.",
+          "translation_vi": "Tôi hiểu. Tôi sẽ xem xét.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_50fa1a1593fb.mp3",
+          "phrases": [
+            {
+              "text": "I see.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1b223abb1a12.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_525c670b310f.mp3"
+            },
+            {
+              "text": "I'll look into it.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80fe52d615fd.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3e44e8fb3b19.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Also, please remove the commented-out code in the utils file.",
+          "translation_vi": "Với lại, hãy xóa code đã comment trong file utils.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dee6def24878.mp3",
+          "phrases": [
+            {
+              "text": "Also, please remove",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d4ec16b12924.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d3276214d32d.mp3"
+            },
+            {
+              "text": "the commented-out code in the utils file.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_36ef277ad705.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ecc04dbc53d0.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sure, I'll clean that up.",
+          "translation_vi": "Vâng, tôi sẽ dọn dẹp.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_268ff2e362a2.mp3",
+          "phrases": [
+            {
+              "text": "Sure, I'll clean that up.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_268ff2e362a2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c2a306c2a49a.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Great. Let me know when you've pushed the changes.",
+          "translation_vi": "Tốt. Cho tôi biết khi bạn push thay đổi nhé.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_76ef3d14f7ec.mp3",
+          "phrases": [
+            {
+              "text": "Great.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e501d24310cc.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fc9f2441d68e.mp3"
+            },
+            {
+              "text": "Let me know when you've pushed the changes.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_113bbe11f27e.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_379750e1547e.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Will do. Thanks!",
+          "translation_vi": "Vâng. Cảm ơn!",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e8ac00cf184.mp3"
+        }
+      ]
+    }
+  ]
+}

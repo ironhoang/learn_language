@@ -1,0 +1,755 @@
+{
+  "meta": {
+    "id": "ai-engineering-discussion",
+    "title": "AI Engineering Discussion",
+    "title_vi": "Thảo luận AI Engineering",
+    "description": "Discuss RAG pipeline design, embedding/vector DB choices, agent workflows, evaluation results, and prompt engineering trade-offs.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "ai-engineering",
+    "tags": ["rag", "llm", "agent", "mcp", "embedding"]
+  },
+  "nodes": [
+    {
+      "id": "kick-off",
+      "label": "Kick Off",
+      "label_vi": "Bắt đầu"
+    },
+    {
+      "id": "rag-design",
+      "label": "RAG Design",
+      "label_vi": "Thiết kế RAG"
+    },
+    {
+      "id": "embedding-vector-db",
+      "label": "Embedding & Vector DB",
+      "label_vi": "Embedding & Vector DB"
+    },
+    {
+      "id": "agent-workflow",
+      "label": "Agent Workflow",
+      "label_vi": "Agent Workflow"
+    },
+    {
+      "id": "evaluation",
+      "label": "Evaluation",
+      "label_vi": "Đánh giá"
+    },
+    {
+      "id": "trade-offs",
+      "label": "Trade-offs",
+      "label_vi": "Đánh đổi"
+    },
+    {
+      "id": "wrap-up",
+      "label": "Wrap Up",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "kick-off-01",
+      "node_id": "kick-off",
+      "text": "Let's talk about...",
+      "example": "Let's talk about the RAG pipeline design.",
+      "translation_vi": "Hãy nói về thiết kế RAG pipeline.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's talk about", "audio": "", "audio_slow": ""},
+        {"text": "the RAG pipeline design.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "kick-off-02",
+      "node_id": "kick-off",
+      "text": "First, let's discuss...",
+      "example": "First, let's discuss the embedding strategy.",
+      "translation_vi": "Đầu tiên, hãy thảo luận về chiến lược embedding.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "First, let's discuss", "audio": "", "audio_slow": ""},
+        {"text": "the embedding strategy.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "kick-off-03",
+      "node_id": "kick-off",
+      "text": "We need to decide on...",
+      "example": "We need to decide on the vector database.",
+      "translation_vi": "Chúng ta cần quyết định về vector database.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need to decide on", "audio": "", "audio_slow": ""},
+        {"text": "the vector database.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "kick-off-04",
+      "node_id": "kick-off",
+      "text": "Has everyone reviewed...?",
+      "example": "Has everyone reviewed the evaluation results?",
+      "translation_vi": "Mọi người đã xem kết quả đánh giá chưa?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Has everyone reviewed", "audio": "", "audio_slow": ""},
+        {"text": "the evaluation results?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "kick-off-05",
+      "node_id": "kick-off",
+      "text": "Let's start with...",
+      "example": "Let's start with the retrieval component.",
+      "translation_vi": "Hãy bắt đầu với thành phần retrieval.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's start with", "audio": "", "audio_slow": ""},
+        {"text": "the retrieval component.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "rag-design-01",
+      "node_id": "rag-design",
+      "text": "I think we should use...",
+      "example": "I think we should use a hybrid search approach.",
+      "translation_vi": "Tôi nghĩ chúng ta nên dùng hybrid search.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I think we should use", "audio": "", "audio_slow": ""},
+        {"text": "a hybrid search approach.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "rag-design-02",
+      "node_id": "rag-design",
+      "text": "The chunk size matters because...",
+      "example": "The chunk size matters because it affects retrieval quality.",
+      "translation_vi": "Kích thước chunk quan trọng vì nó ảnh hưởng đến chất lượng retrieval.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The chunk size matters", "audio": "", "audio_slow": ""},
+        {"text": "because it affects retrieval quality.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "rag-design-03",
+      "node_id": "rag-design",
+      "text": "We could try...",
+      "example": "We could try re-ranking the top results.",
+      "translation_vi": "Chúng ta có thể thử re-rank các kết quả hàng đầu.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We could try", "audio": "", "audio_slow": ""},
+        {"text": "re-ranking the top results.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "rag-design-04",
+      "node_id": "rag-design",
+      "text": "What about...?",
+      "example": "What about using a multi-query retriever?",
+      "translation_vi": "Còn dùng multi-query retriever thì sao?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What about", "audio": "", "audio_slow": ""},
+        {"text": "using a multi-query retriever?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "rag-design-05",
+      "node_id": "rag-design",
+      "text": "I'm concerned about...",
+      "example": "I'm concerned about latency with a large index.",
+      "translation_vi": "Tôi lo ngại về độ trễ với index lớn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm concerned about", "audio": "", "audio_slow": ""},
+        {"text": "latency with a large index.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "embedding-vector-db-01",
+      "node_id": "embedding-vector-db",
+      "text": "Which embedding model...?",
+      "example": "Which embedding model are you considering?",
+      "translation_vi": "Bạn đang cân nhắc model embedding nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Which embedding model", "audio": "", "audio_slow": ""},
+        {"text": "are you considering?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "embedding-vector-db-02",
+      "node_id": "embedding-vector-db",
+      "text": "I'd recommend...",
+      "example": "I'd recommend using OpenAI's text-embedding-3-small.",
+      "translation_vi": "Tôi khuyên dùng OpenAI text-embedding-3-small.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'd recommend using", "audio": "", "audio_slow": ""},
+        {"text": "OpenAI's text-embedding-3-small.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "embedding-vector-db-03",
+      "node_id": "embedding-vector-db",
+      "text": "We need a vector DB that supports...",
+      "example": "We need a vector DB that supports filtering and hybrid search.",
+      "translation_vi": "Chúng ta cần vector DB hỗ trợ filtering và hybrid search.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need a vector DB", "audio": "", "audio_slow": ""},
+        {"text": "that supports filtering", "audio": "", "audio_slow": ""},
+        {"text": "and hybrid search.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "embedding-vector-db-04",
+      "node_id": "embedding-vector-db",
+      "text": "Pinecone is good for...",
+      "example": "Pinecone is good for high-scale production use.",
+      "translation_vi": "Pinecone tốt cho production với scale lớn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Pinecone is good for", "audio": "", "audio_slow": ""},
+        {"text": "high-scale production use.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "embedding-vector-db-05",
+      "node_id": "embedding-vector-db",
+      "text": "We could also use...",
+      "example": "We could also use Qdrant or Weaviate.",
+      "translation_vi": "Chúng ta cũng có thể dùng Qdrant hoặc Weaviate.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We could also use", "audio": "", "audio_slow": ""},
+        {"text": "Qdrant or Weaviate.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "agent-workflow-01",
+      "node_id": "agent-workflow",
+      "text": "For the agent, we'll need...",
+      "example": "For the agent, we'll need a tool-use framework.",
+      "translation_vi": "Cho agent, chúng ta cần một framework dùng tool.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "For the agent,", "audio": "", "audio_slow": ""},
+        {"text": "we'll need a tool-use framework.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "agent-workflow-02",
+      "node_id": "agent-workflow",
+      "text": "We should implement...",
+      "example": "We should implement a retrieval-augmented generation step.",
+      "translation_vi": "Chúng ta nên implement bước RAG.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We should implement", "audio": "", "audio_slow": ""},
+        {"text": "a retrieval-augmented generation step.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "agent-workflow-03",
+      "node_id": "agent-workflow",
+      "text": "The agent needs to handle...",
+      "example": "The agent needs to handle multi-turn conversations.",
+      "translation_vi": "Agent cần xử lý hội thoại nhiều lượt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The agent needs to handle", "audio": "", "audio_slow": ""},
+        {"text": "multi-turn conversations.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "agent-workflow-04",
+      "node_id": "agent-workflow",
+      "text": "Let's use MCP for...",
+      "example": "Let's use MCP for the model context protocol.",
+      "translation_vi": "Hãy dùng MCP cho giao thức ngữ cảnh model.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's use MCP for", "audio": "", "audio_slow": ""},
+        {"text": "the model context protocol.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "agent-workflow-05",
+      "node_id": "agent-workflow",
+      "text": "I'm worried about...",
+      "example": "I'm worried about the token limit in long chains.",
+      "translation_vi": "Tôi lo về giới hạn token trong chuỗi dài.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm worried about", "audio": "", "audio_slow": ""},
+        {"text": "the token limit in long chains.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "evaluation-01",
+      "node_id": "evaluation",
+      "text": "How are we measuring...?",
+      "example": "How are we measuring retrieval accuracy?",
+      "translation_vi": "Chúng ta đo độ chính xác retrieval thế nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How are we measuring", "audio": "", "audio_slow": ""},
+        {"text": "retrieval accuracy?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "evaluation-02",
+      "node_id": "evaluation",
+      "text": "We should set up...",
+      "example": "We should set up a prompt evaluation pipeline.",
+      "translation_vi": "Chúng ta nên thiết lập pipeline đánh giá prompt.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We should set up", "audio": "", "audio_slow": ""},
+        {"text": "a prompt evaluation pipeline.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "evaluation-03",
+      "node_id": "evaluation",
+      "text": "The results show...",
+      "example": "The results show improved recall with chunk overlap.",
+      "translation_vi": "Kết quả cho thấy recall cải thiện với chunk overlap.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The results show", "audio": "", "audio_slow": ""},
+        {"text": "improved recall", "audio": "", "audio_slow": ""},
+        {"text": "with chunk overlap.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "evaluation-04",
+      "node_id": "evaluation",
+      "text": "We need to benchmark...",
+      "example": "We need to benchmark latency and throughput.",
+      "translation_vi": "Chúng ta cần benchmark độ trễ và thông lượng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need to benchmark", "audio": "", "audio_slow": ""},
+        {"text": "latency and throughput.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "evaluation-05",
+      "node_id": "evaluation",
+      "text": "Let's compare...",
+      "example": "Let's compare different embedding models.",
+      "translation_vi": "Hãy so sánh các embedding model khác nhau.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's compare", "audio": "", "audio_slow": ""},
+        {"text": "different embedding models.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "trade-offs-01",
+      "node_id": "trade-offs",
+      "text": "The trade-off is...",
+      "example": "The trade-off is between speed and accuracy.",
+      "translation_vi": "Sự đánh đổi là giữa tốc độ và độ chính xác.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The trade-off is", "audio": "", "audio_slow": ""},
+        {"text": "between speed and accuracy.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "trade-offs-02",
+      "node_id": "trade-offs",
+      "text": "If we use a larger model...",
+      "example": "If we use a larger model, latency increases.",
+      "translation_vi": "Nếu dùng model lớn hơn, độ trễ tăng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "If we use a larger model,", "audio": "", "audio_slow": ""},
+        {"text": "latency increases.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "trade-offs-03",
+      "node_id": "trade-offs",
+      "text": "Smaller chunks mean...",
+      "example": "Smaller chunks mean more context is needed.",
+      "translation_vi": "Chunk nhỏ hơn nghĩa là cần thêm ngữ cảnh.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Smaller chunks mean", "audio": "", "audio_slow": ""},
+        {"text": "more context is needed.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "trade-offs-04",
+      "node_id": "trade-offs",
+      "text": "We could sacrifice...",
+      "example": "We could sacrifice some accuracy for lower cost.",
+      "translation_vi": "Chúng ta có thể hy sinh độ chính xác để giảm chi phí.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We could sacrifice", "audio": "", "audio_slow": ""},
+        {"text": "some accuracy", "audio": "", "audio_slow": ""},
+        {"text": "for lower cost.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "trade-offs-05",
+      "node_id": "trade-offs",
+      "text": "I prefer...",
+      "example": "I prefer a simpler pipeline for faster iteration.",
+      "translation_vi": "Tôi thích pipeline đơn giản hơn để lặp nhanh.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I prefer", "audio": "", "audio_slow": ""},
+        {"text": "a simpler pipeline", "audio": "", "audio_slow": ""},
+        {"text": "for faster iteration.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-01",
+      "node_id": "wrap-up",
+      "text": "To summarize...",
+      "example": "To summarize, we'll use hybrid search and OpenAI embeddings.",
+      "translation_vi": "Tóm lại, chúng ta sẽ dùng hybrid search và OpenAI embeddings.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "To summarize,", "audio": "", "audio_slow": ""},
+        {"text": "we'll use hybrid search", "audio": "", "audio_slow": ""},
+        {"text": "and OpenAI embeddings.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-02",
+      "node_id": "wrap-up",
+      "text": "Let's agree on...",
+      "example": "Let's agree on the next steps.",
+      "translation_vi": "Hãy thống nhất các bước tiếp theo.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's agree on", "audio": "", "audio_slow": ""},
+        {"text": "the next steps.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-03",
+      "node_id": "wrap-up",
+      "text": "I'll take ownership of...",
+      "example": "I'll take ownership of the embedding service integration.",
+      "translation_vi": "Tôi sẽ phụ trách tích hợp embedding service.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll take ownership of", "audio": "", "audio_slow": ""},
+        {"text": "the embedding service integration.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-04",
+      "node_id": "wrap-up",
+      "text": "Let's circle back...",
+      "example": "Let's circle back after the evaluation.",
+      "translation_vi": "Hãy họp lại sau khi đánh giá.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's circle back", "audio": "", "audio_slow": ""},
+        {"text": "after the evaluation.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "wrap-up-05",
+      "node_id": "wrap-up",
+      "text": "Good discussion, everyone.",
+      "example": "Good discussion, everyone. Let's move to implementation.",
+      "translation_vi": "Thảo luận tốt. Chuyển sang triển khai nhé.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Good discussion, everyone.", "audio": "", "audio_slow": ""},
+        {"text": "Let's move to implementation.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What RAG design approach did you discuss?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I think we should use",
+        "We could try",
+        "What about"
+      ],
+      "hint_vi": "Nói về phương pháp RAG đã thảo luận"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "Which embedding model was recommended?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'd recommend using",
+        "We could also use"
+      ],
+      "hint_vi": "Nói về embedding model được đề xuất"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What vector DB options were considered?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Pinecone is good for",
+        "We could also use"
+      ],
+      "hint_vi": "Nói về các vector DB đã cân nhắc"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What agent workflow features did you discuss?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "For the agent, we'll need",
+        "We should implement",
+        "The agent needs to handle"
+      ],
+      "hint_vi": "Nói về tính năng agent workflow"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "How will you evaluate the system?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "How are we measuring",
+        "We should set up",
+        "We need to benchmark"
+      ],
+      "hint_vi": "Nói về phương pháp đánh giá"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What trade-offs were discussed?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "The trade-off is",
+        "If we use a larger model",
+        "Smaller chunks mean"
+      ],
+      "hint_vi": "Nói về các đánh đổi"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Discussing RAG design with a colleague",
+      "title_vi": "Thảo luận thiết kế RAG với đồng nghiệp",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Let's talk about the RAG pipeline design.",
+          "translation_vi": "Hãy nói về thiết kế RAG pipeline.",
+          "audio": "",
+          "phrases": [
+            {"text": "Let's talk about", "audio": "", "audio_slow": ""},
+            {"text": "the RAG pipeline design.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Sure. I think we should use a hybrid search approach.",
+          "translation_vi": "Ừ. Tôi nghĩ chúng ta nên dùng hybrid search.",
+          "audio": "",
+          "phrases": [
+            {"text": "Sure. I think we should use", "audio": "", "audio_slow": ""},
+            {"text": "a hybrid search approach.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "What about using a multi-query retriever?",
+          "translation_vi": "Còn dùng multi-query retriever thì sao?",
+          "audio": "",
+          "phrases": [
+            {"text": "What about", "audio": "", "audio_slow": ""},
+            {"text": "using a multi-query retriever?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "That could work, but it increases latency.",
+          "translation_vi": "Cũng được, nhưng nó tăng độ trễ.",
+          "audio": "",
+          "phrases": [
+            {"text": "That could work,", "audio": "", "audio_slow": ""},
+            {"text": "but it increases latency.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'm concerned about latency with a large index.",
+          "translation_vi": "Tôi lo về độ trễ với index lớn.",
+          "audio": "",
+          "phrases": [
+            {"text": "I'm concerned about", "audio": "", "audio_slow": ""},
+            {"text": "latency with a large index.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "We could re-rank the top results to improve accuracy.",
+          "translation_vi": "Chúng ta có thể re-rank kết quả hàng đầu để cải thiện độ chính xác.",
+          "audio": "",
+          "phrases": [
+            {"text": "We could re-rank", "audio": "", "audio_slow": ""},
+            {"text": "the top results", "audio": "", "audio_slow": ""},
+            {"text": "to improve accuracy.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Good idea. Let's also consider the chunk size.",
+          "translation_vi": "Ý hay. Cũng cân nhắc kích thước chunk nữa.",
+          "audio": "",
+          "phrases": [
+            {"text": "Good idea.", "audio": "", "audio_slow": ""},
+            {"text": "Let's also consider the chunk size.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Agreed. Smaller chunks mean more context is needed.",
+          "translation_vi": "Đồng ý. Chunk nhỏ hơn nghĩa là cần thêm ngữ cảnh.",
+          "audio": "",
+          "phrases": [
+            {"text": "Agreed. Smaller chunks mean", "audio": "", "audio_slow": ""},
+            {"text": "more context is needed.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Evaluating embedding models and vector DB",
+      "title_vi": "Đánh giá embedding models và vector DB",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Which embedding model are you considering?",
+          "translation_vi": "Bạn đang cân nhắc model embedding nào?",
+          "audio": "",
+          "phrases": [
+            {"text": "Which embedding model", "audio": "", "audio_slow": ""},
+            {"text": "are you considering?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I'd recommend using OpenAI's text-embedding-3-small.",
+          "translation_vi": "Tôi khuyên dùng OpenAI text-embedding-3-small.",
+          "audio": "",
+          "phrases": [
+            {"text": "I'd recommend using", "audio": "", "audio_slow": ""},
+            {"text": "OpenAI's text-embedding-3-small.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "What about cost? It might be expensive at scale.",
+          "translation_vi": "Còn chi phí thì sao? Có thể đắt khi scale lớn.",
+          "audio": "",
+          "phrases": [
+            {"text": "What about cost?", "audio": "", "audio_slow": ""},
+            {"text": "It might be expensive at scale.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "We could also use an open-source model like BGE.",
+          "translation_vi": "Chúng ta cũng có thể dùng open-source như BGE.",
+          "audio": "",
+          "phrases": [
+            {"text": "We could also use", "audio": "", "audio_slow": ""},
+            {"text": "an open-source model like BGE.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "We need a vector DB that supports filtering and hybrid search.",
+          "translation_vi": "Chúng ta cần vector DB hỗ trợ filtering và hybrid search.",
+          "audio": "",
+          "phrases": [
+            {"text": "We need a vector DB", "audio": "", "audio_slow": ""},
+            {"text": "that supports filtering", "audio": "", "audio_slow": ""},
+            {"text": "and hybrid search.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Pinecone is good for high-scale production use.",
+          "translation_vi": "Pinecone tốt cho production với scale lớn.",
+          "audio": "",
+          "phrases": [
+            {"text": "Pinecone is good for", "audio": "", "audio_slow": ""},
+            {"text": "high-scale production use.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "We could also use Qdrant or Weaviate.",
+          "translation_vi": "Chúng ta cũng có thể dùng Qdrant hoặc Weaviate.",
+          "audio": "",
+          "phrases": [
+            {"text": "We could also use", "audio": "", "audio_slow": ""},
+            {"text": "Qdrant or Weaviate.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Let's benchmark them first before deciding.",
+          "translation_vi": "Hãy benchmark trước khi quyết định.",
+          "audio": "",
+          "phrases": [
+            {"text": "Let's benchmark them first", "audio": "", "audio_slow": ""},
+            {"text": "before deciding.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    }
+  ]
+}
