@@ -57,18 +57,18 @@
       "text": "I see the alert.",
       "example": "I see the alert. PagerDuty just fired.",
       "translation_vi": "Tôi thấy cảnh báo. PagerDuty vừa kích hoạt.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5eaea7bd07a8.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a3c5f5085cc2.mp3",
       "phrases": [
         {
           "text": "I see the alert.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6268a7f193ad.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_89c780e1ae0d.mp3"
         },
         {
           "text": "PagerDuty just fired.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a0dc020a5d60.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_650904ee1c47.mp3"
         }
       ]
     },
@@ -78,18 +78,18 @@
       "text": "I'm looking at it now.",
       "example": "I'm looking at it now. Give me a moment.",
       "translation_vi": "Tôi đang xem nó. Chờ một chút.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e2998ea753fe.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_97b799494a42.mp3",
       "phrases": [
         {
           "text": "I'm looking at it now.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a73e9400d56f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fe5799799bce.mp3"
         },
         {
           "text": "Give me a moment.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c92829cbb0ec.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_97472c2f4803.mp3"
         }
       ]
     },
@@ -99,18 +99,18 @@
       "text": "Acknowledging the incident.",
       "example": "Acknowledging the incident in Opsgenie now.",
       "translation_vi": "Tôi đang xác nhận sự cố trong Opsgenie.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bec355244dd2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b46f7df74724.mp3",
       "phrases": [
         {
           "text": "Acknowledging the incident",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b4e253244112.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7e8bd6a51d11.mp3"
         },
         {
           "text": "in Opsgenie now.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fea69ee12516.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ca494ec01cf7.mp3"
         }
       ]
     },
@@ -120,18 +120,18 @@
       "text": "I'm on it.",
       "example": "I'm on it. I'll start investigating.",
       "translation_vi": "Tôi xử lý đây. Tôi sẽ bắt đầu điều tra.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a81c2f19aa8f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4bfd6adb2c8b.mp3",
       "phrases": [
         {
           "text": "I'm on it.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4213d311508e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c43be2835600.mp3"
         },
         {
           "text": "I'll start investigating.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_27812450bd0f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4cf027c49d43.mp3"
         }
       ]
     },
@@ -141,18 +141,18 @@
       "text": "Let me check the dashboard.",
       "example": "Let me check the dashboard for more details.",
       "translation_vi": "Để tôi kiểm tra dashboard để biết thêm chi tiết.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2c73dbce3340.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d2e426213adf.mp3",
       "phrases": [
         {
           "text": "Let me check the dashboard",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_73591290b883.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_34dcfccf7f2d.mp3"
         },
         {
           "text": "for more details.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_85d4dc8efe3f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_23466332b5a4.mp3"
         }
       ]
     },
@@ -162,18 +162,18 @@
       "text": "It's affecting...",
       "example": "It's affecting the payment API. Users can't complete transactions.",
       "translation_vi": "Nó ảnh hưởng đến payment API. Người dùng không thể hoàn tất giao dịch.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7903149c6057.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_55086ca1c5cb.mp3",
       "phrases": [
         {
           "text": "It's affecting the payment API.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d67bdd95aeeb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6a5d614cd09f.mp3"
         },
         {
           "text": "Users can't complete transactions.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e567917b27df.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_09030c3ada26.mp3"
         }
       ]
     },
@@ -183,18 +183,18 @@
       "text": "About X percent of users are impacted.",
       "example": "About 30 percent of users are impacted right now.",
       "translation_vi": "Khoảng 30% người dùng đang bị ảnh hưởng.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_73148a051ac0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bc1e3e81840e.mp3",
       "phrases": [
         {
           "text": "About 30 percent of users",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0544238a8e29.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6c7193a33948.mp3"
         },
         {
           "text": "are impacted right now.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_072f7725654c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_58c19d81f851.mp3"
         }
       ]
     },
@@ -204,18 +204,18 @@
       "text": "It's a critical issue.",
       "example": "It's a critical issue. We need to fix it ASAP.",
       "translation_vi": "Đây là vấn đề nghiêm trọng. Chúng ta cần sửa gấp.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2504c5e63bcc.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b374e6daa4d3.mp3",
       "phrases": [
         {
           "text": "It's a critical issue.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_484950f6b113.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ac1b340f741c.mp3"
         },
         {
           "text": "We need to fix it ASAP.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c1df45573dcd.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_36c41a130e08.mp3"
         }
       ]
     },
@@ -225,18 +225,18 @@
       "text": "The root cause seems to be...",
       "example": "The root cause seems to be a database connection pool exhaustion.",
       "translation_vi": "Nguyên nhân gốc dường như là cạn kiệt connection pool database.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_194e3a336e6f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_296329b7cc6f.mp3",
       "phrases": [
         {
           "text": "The root cause seems to be",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_38f974a766ce.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f1e5e0ec11f3.mp3"
         },
         {
           "text": "a database connection pool exhaustion.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f82b7dec4e27.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1919a2fb1628.mp3"
         }
       ]
     },
@@ -246,18 +246,18 @@
       "text": "We're seeing errors in...",
       "example": "We're seeing errors in the embedding service logs.",
       "translation_vi": "Chúng tôi thấy lỗi trong log của embedding service.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_649edb457787.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5e45b08354af.mp3",
       "phrases": [
         {
           "text": "We're seeing errors",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80b2a5c58c44.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f96c92aae4bb.mp3"
         },
         {
           "text": "in the embedding service logs.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_33c3d5b239a4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a0015a6afce2.mp3"
         }
       ]
     },
@@ -267,18 +267,18 @@
       "text": "Current status: still investigating.",
       "example": "Current status: still investigating the root cause.",
       "translation_vi": "Trạng thái hiện tại: vẫn đang điều tra nguyên nhân.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_734504896910.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0be3302788f4.mp3",
       "phrases": [
         {
           "text": "Current status:",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_82b7a0cca8eb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_18b55a62efc0.mp3"
         },
         {
           "text": "still investigating the root cause.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30976a5594e9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e22f4a141e34.mp3"
         }
       ]
     },
@@ -288,18 +288,18 @@
       "text": "We've identified the issue.",
       "example": "We've identified the issue. It's a misconfigured load balancer.",
       "translation_vi": "Chúng tôi đã xác định vấn đề. Đó là load balancer cấu hình sai.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_03dcdef7a199.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9ec63817268d.mp3",
       "phrases": [
         {
           "text": "We've identified the issue.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_978b85caeb50.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e672d2a41fb6.mp3"
         },
         {
           "text": "It's a misconfigured load balancer.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b931f7917651.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d0252c01d7b.mp3"
         }
       ]
     },
@@ -309,18 +309,18 @@
       "text": "ETA for fix is...",
       "example": "ETA for fix is approximately 30 minutes.",
       "translation_vi": "Thời gian dự kiến sửa xong là khoảng 30 phút.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9d362789cfb0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5b651bfc0801.mp3",
       "phrases": [
         {
           "text": "ETA for fix is",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c93581616f58.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6bf73bd75fc2.mp3"
         },
         {
           "text": "approximately 30 minutes.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df5877f392fa.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5749dc5822e3.mp3"
         }
       ]
     },
@@ -330,18 +330,18 @@
       "text": "We'll keep you posted.",
       "example": "We'll keep you posted every 15 minutes.",
       "translation_vi": "Chúng tôi sẽ cập nhật cho bạn mỗi 15 phút.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3adb73095fe5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c8612f0228f.mp3",
       "phrases": [
         {
           "text": "We'll keep you posted",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_514d8726aaf5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_70692a1c81e5.mp3"
         },
         {
           "text": "every 15 minutes.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b39d641273e7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aafa2af40520.mp3"
         }
       ]
     },
@@ -351,18 +351,18 @@
       "text": "Status page has been updated.",
       "example": "Status page has been updated with the incident details.",
       "translation_vi": "Trạng thái trang đã được cập nhật với chi tiết sự cố.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aba464336dc7.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_94249d4d9bea.mp3",
       "phrases": [
         {
           "text": "Status page has been updated",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_21fd29e1ba86.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5d71b64c05f0.mp3"
         },
         {
           "text": "with the incident details.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8dca0b5af831.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b0bb841c4fce.mp3"
         }
       ]
     },
@@ -372,23 +372,23 @@
       "text": "I'm rolling back the last deployment.",
       "example": "I'm rolling back the last deployment to the previous version.",
       "translation_vi": "Tôi đang rollback bản deploy cuối về phiên bản trước.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aa982eb1af26.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7104140f9b89.mp3",
       "phrases": [
         {
           "text": "I'm rolling back",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e4654d9d59a9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d9f09feae242.mp3"
         },
         {
           "text": "the last deployment",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_57c7c340bd93.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c9c0107e40c6.mp3"
         },
         {
           "text": "to the previous version.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aa01f4547e6a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ccbb9252e83.mp3"
         }
       ]
     },
@@ -398,18 +398,18 @@
       "text": "We're scaling up the service.",
       "example": "We're scaling up the service to handle the load.",
       "translation_vi": "Chúng tôi đang scale up service để xử lý tải.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c02d1830848a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_485ac8feb84a.mp3",
       "phrases": [
         {
           "text": "We're scaling up the service",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b5ca30b11d9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_884f7516613b.mp3"
         },
         {
           "text": "to handle the load.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a10d42cb3e70.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b79e4d64f0a4.mp3"
         }
       ]
     },
@@ -419,18 +419,18 @@
       "text": "I'm deploying a hotfix.",
       "example": "I'm deploying a hotfix for the null pointer exception.",
       "translation_vi": "Tôi đang deploy bản hotfix cho lỗi null pointer.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_20952e20e14d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5560fd42b2bf.mp3",
       "phrases": [
         {
           "text": "I'm deploying a hotfix",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f330ec653120.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e30a49a2f783.mp3"
         },
         {
           "text": "for the null pointer exception.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0e43802b61a3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1afe9da8f980.mp3"
         }
       ]
     },
@@ -440,18 +440,18 @@
       "text": "Let's restart the pods.",
       "example": "Let's restart the pods in the cluster.",
       "translation_vi": "Hãy restart các pod trong cluster.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30276d0eaec7.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c36337ea8e2b.mp3",
       "phrases": [
         {
           "text": "Let's restart the pods",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d7783f0598f9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ffc94d5177ab.mp3"
         },
         {
           "text": "in the cluster.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d6311c05da5a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3211635757cf.mp3"
         }
       ]
     },
@@ -461,18 +461,18 @@
       "text": "The fix is being tested.",
       "example": "The fix is being tested in staging.",
       "translation_vi": "Bản sửa đang được kiểm tra trên staging.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b1daa6927da4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c3c749384604.mp3",
       "phrases": [
         {
           "text": "The fix is being tested",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a3139fc32d69.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2eddfe19ea59.mp3"
         },
         {
           "text": "in staging.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cb3a27225fcd.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ae8926532d9c.mp3"
         }
       ]
     },
@@ -482,18 +482,18 @@
       "text": "I need to escalate this.",
       "example": "I need to escalate this to the senior engineer.",
       "translation_vi": "Tôi cần leo thang việc này lên senior engineer.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f2da8050dc46.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fefa2016b0dd.mp3",
       "phrases": [
         {
           "text": "I need to escalate this",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_92d62cde1555.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7ed02d3d9930.mp3"
         },
         {
           "text": "to the senior engineer.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9227b30e755b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_46159dbdb26d.mp3"
         }
       ]
     },
@@ -503,18 +503,18 @@
       "text": "Can someone from the database team help?",
       "example": "Can someone from the database team help with this query?",
       "translation_vi": "Có ai từ team database giúp với câu truy vấn này không?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_83eadb198534.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d0fc434827b0.mp3",
       "phrases": [
         {
           "text": "Can someone from the database team",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_18a56d9ecfeb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e741e414d309.mp3"
         },
         {
           "text": "help with this query?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_49de1dfd67ec.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_500493e1df07.mp3"
         }
       ]
     },
@@ -524,23 +524,23 @@
       "text": "We need to involve the platform team.",
       "example": "We need to involve the platform team for the infrastructure issue.",
       "translation_vi": "Chúng ta cần huy động platform team cho vấn đề hạ tầng.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_399fed6cb51f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6ade03027d62.mp3",
       "phrases": [
         {
           "text": "We need to involve",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3e6cd83d45cd.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f8bd73593916.mp3"
         },
         {
           "text": "the platform team",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e9f5a1a308de.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_19e486739475.mp3"
         },
         {
           "text": "for the infrastructure issue.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b813c2ddb35.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1d452ab4ce1d.mp3"
         }
       ]
     },
@@ -550,23 +550,23 @@
       "text": "I'm paging the on-call lead.",
       "example": "I'm paging the on-call lead for approval.",
       "translation_vi": "Tôi đang page on-call lead để xin phê duyệt.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1981892e841a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_64916078ab00.mp3",
       "phrases": [
         {
           "text": "I'm paging",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2c9ab5197400.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6200aa2f1e51.mp3"
         },
         {
           "text": "the on-call lead",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3c80ad27d0a3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_411e42bcf3ab.mp3"
         },
         {
           "text": "for approval.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e699130a70a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4349def586d6.mp3"
         }
       ]
     },
@@ -576,18 +576,18 @@
       "text": "This is beyond my scope.",
       "example": "This is beyond my scope. I need help from the SRE team.",
       "translation_vi": "Việc này ngoài khả năng của tôi. Tôi cần sự giúp đỡ từ SRE team.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_35c54add9b0d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5ba2ac9e6d59.mp3",
       "phrases": [
         {
           "text": "This is beyond my scope.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6eca008d7405.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f6af837672ce.mp3"
         },
         {
           "text": "I need help from the SRE team.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_38a38b6bbc0b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fac8095d7bbf.mp3"
         }
       ]
     },
@@ -597,18 +597,18 @@
       "text": "The incident is resolved.",
       "example": "The incident is resolved. Services are back to normal.",
       "translation_vi": "Sự cố đã được giải quyết. Các dịch vụ đã trở lại bình thường.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_95eb4e18d732.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_36c8e660a948.mp3",
       "phrases": [
         {
           "text": "The incident is resolved.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_49848fc56fdb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d7cf6cc6ed00.mp3"
         },
         {
           "text": "Services are back to normal.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cc85402a41c2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_83dc187bad71.mp3"
         }
       ]
     },
@@ -618,18 +618,18 @@
       "text": "All systems are green.",
       "example": "All systems are green. No more alerts.",
       "translation_vi": "Tất cả hệ thống đều xanh. Không còn cảnh báo nào.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_afd735aa8a34.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f5df30b69758.mp3",
       "phrases": [
         {
           "text": "All systems are green.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_99da9b504f6f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7a4f938d325b.mp3"
         },
         {
           "text": "No more alerts.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_70b0a56f2dd1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ad07df6241c.mp3"
         }
       ]
     },
@@ -639,18 +639,18 @@
       "text": "I'm closing the incident.",
       "example": "I'm closing the incident in the tracker.",
       "translation_vi": "Tôi đang đóng sự cố trong tracker.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0982981b1ed9.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b12dc493d68a.mp3",
       "phrases": [
         {
           "text": "I'm closing the incident",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2e737b2decb2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_774c1209b279.mp3"
         },
         {
           "text": "in the tracker.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec991f93f22b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6c4f7dee6f2a.mp3"
         }
       ]
     },
@@ -660,18 +660,18 @@
       "text": "The fix has been verified.",
       "example": "The fix has been verified by the QA team.",
       "translation_vi": "Bản sửa đã được QA team xác nhận.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_97a5afcbae5f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_46de52d24bde.mp3",
       "phrases": [
         {
           "text": "The fix has been verified",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_16882003a671.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1c054ba27da9.mp3"
         },
         {
           "text": "by the QA team.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_986ce5c1d7fc.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_af80eca8e678.mp3"
         }
       ]
     },
@@ -681,18 +681,18 @@
       "text": "Thanks for the help, everyone.",
       "example": "Thanks for the help, everyone. Great teamwork.",
       "translation_vi": "Cảm ơn mọi người đã giúp đỡ. Làm việc nhóm tuyệt vời.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_44e74175384b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bdfc26a6633d.mp3",
       "phrases": [
         {
           "text": "Thanks for the help, everyone.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ca4e20b5b72.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_21282819e5d1.mp3"
         },
         {
           "text": "Great teamwork.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec546c98c5bf.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5b881350afe1.mp3"
         }
       ]
     },
@@ -702,18 +702,18 @@
       "text": "Let's write a postmortem.",
       "example": "Let's write a postmortem for this incident.",
       "translation_vi": "Hãy viết postmortem cho sự cố này.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e5f0eddda63.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8059e90a1881.mp3",
       "phrases": [
         {
           "text": "Let's write a postmortem",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fdd3ab0e59d9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b83ef355b44c.mp3"
         },
         {
           "text": "for this incident.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_04b1eabcce2b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bcb18ea06687.mp3"
         }
       ]
     },
@@ -723,18 +723,18 @@
       "text": "The timeline of events is...",
       "example": "The timeline of events is documented in the incident log.",
       "translation_vi": "Dòng thời gian các sự kiện đã được ghi lại trong nhật ký sự cố.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5ee441ac4278.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ef96b09d7af2.mp3",
       "phrases": [
         {
           "text": "The timeline of events",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e7f1b420e2a2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8f7d248e386e.mp3"
         },
         {
           "text": "is documented in the incident log.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f688aa64d341.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ab604eba127.mp3"
         }
       ]
     },
@@ -744,18 +744,18 @@
       "text": "The root cause was...",
       "example": "The root cause was a missing timeout configuration.",
       "translation_vi": "Nguyên nhân gốc là thiếu cấu hình timeout.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_262aaa7485f4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_338b20b18e5f.mp3",
       "phrases": [
         {
           "text": "The root cause was",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_285afb840162.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_862bcdaca1a7.mp3"
         },
         {
           "text": "a missing timeout configuration.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c02ceceb46c8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9affccbb86ba.mp3"
         }
       ]
     },
@@ -765,18 +765,18 @@
       "text": "The action items are...",
       "example": "The action items are: add monitoring and increase timeout.",
       "translation_vi": "Các mục hành động là: thêm giám sát và tăng timeout.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_49c01741e97f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce635d0d7456.mp3",
       "phrases": [
         {
           "text": "The action items are:",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef3898cc03df.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_215e15d5f6f6.mp3"
         },
         {
           "text": "add monitoring and increase timeout.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_662b5ab99603.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3eb8c3525ed1.mp3"
         }
       ]
     },
@@ -786,18 +786,18 @@
       "text": "We should automate the rollback.",
       "example": "We should automate the rollback process to reduce MTTR.",
       "translation_vi": "Chúng ta nên tự động hóa quy trình rollback để giảm MTTR.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_52b003e5bd0b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a88c15f0b4b4.mp3",
       "phrases": [
         {
           "text": "We should automate the rollback process",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ef3ed907154d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3256c573a89b.mp3"
         },
         {
           "text": "to reduce MTTR.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f7846fe52d80.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_473954fc87c1.mp3"
         }
       ]
     },
@@ -807,18 +807,18 @@
       "text": "Let's schedule a review meeting.",
       "example": "Let's schedule a review meeting to discuss the findings.",
       "translation_vi": "Hãy lên lịch một cuộc họp review để thảo luận về những phát hiện.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6234c311a4d0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a3f3387eb0c7.mp3",
       "phrases": [
         {
           "text": "Let's schedule a review meeting",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_356b7c10bed0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0042d1b73e97.mp3"
         },
         {
           "text": "to discuss the findings.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e50652b11e39.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b89e28eb21b7.mp3"
         }
       ]
     }
@@ -827,7 +827,7 @@
     {
       "id": "recall-01",
       "prompt": "What do you do when you see the alert?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9a2c7e0bf341.mp3",
       "accepted_patterns": [
         "I acknowledge the incident",
         "I see the alert",
@@ -839,7 +839,7 @@
     {
       "id": "recall-02",
       "prompt": "How do you assess the impact?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_123bd023aa2d.mp3",
       "accepted_patterns": [
         "It's affecting",
         "About X percent of users are impacted",
@@ -851,7 +851,7 @@
     {
       "id": "recall-03",
       "prompt": "How do you communicate the status?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9535a27cddef.mp3",
       "accepted_patterns": [
         "Current status: still investigating",
         "We've identified the issue",
@@ -863,7 +863,7 @@
     {
       "id": "recall-04",
       "prompt": "What actions do you take to fix the issue?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_08eda5ee4fa8.mp3",
       "accepted_patterns": [
         "I'm rolling back",
         "We're scaling up",
@@ -875,7 +875,7 @@
     {
       "id": "recall-05",
       "prompt": "When do you escalate?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_915fe1b719bc.mp3",
       "accepted_patterns": [
         "I need to escalate",
         "Can someone from the database team help?",
@@ -887,7 +887,7 @@
     {
       "id": "recall-06",
       "prompt": "What do you do after resolving the incident?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e53be5fceb2b.mp3",
       "accepted_patterns": [
         "Let's write a postmortem",
         "The timeline of events is",
@@ -907,17 +907,17 @@
           "role": "Manager",
           "text": "Hey, I see PagerDuty is firing. What's going on?",
           "translation_vi": "Này, tôi thấy PagerDuty đang kích hoạt. Chuyện gì vậy?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_17c4c85d9d66.mp3",
           "phrases": [
             {
               "text": "Hey, I see PagerDuty is firing.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6ff02ba026fd.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fab3c06b3f7f.mp3"
             },
             {
               "text": "What's going on?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_858222d459f6.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_de3c396b5188.mp3"
             }
           ]
         },
@@ -925,17 +925,17 @@
           "role": "Engineer",
           "text": "I see the alert. I'm looking at it now.",
           "translation_vi": "Tôi thấy cảnh báo. Tôi đang xem nó.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9cde7f9f1162.mp3",
           "phrases": [
             {
               "text": "I see the alert.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6268a7f193ad.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_89c780e1ae0d.mp3"
             },
             {
               "text": "I'm looking at it now.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a73e9400d56f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fe5799799bce.mp3"
             }
           ]
         },
@@ -943,23 +943,23 @@
           "role": "Manager",
           "text": "What's the impact?",
           "translation_vi": "Tác động thế nào?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9bb50af31c10.mp3"
         },
         {
           "role": "Engineer",
           "text": "It's affecting the payment API. About 30 percent of users are impacted.",
           "translation_vi": "Nó ảnh hưởng đến payment API. Khoảng 30% người dùng bị ảnh hưởng.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_54cd5bb617b3.mp3",
           "phrases": [
             {
               "text": "It's affecting the payment API.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d67bdd95aeeb.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6a5d614cd09f.mp3"
             },
             {
               "text": "About 30 percent of users are impacted.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_994376f2a43d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_613688ad6b8d.mp3"
             }
           ]
         },
@@ -967,23 +967,23 @@
           "role": "Manager",
           "text": "That's critical. What's the status?",
           "translation_vi": "Nghiêm trọng đấy. Trạng thái thế nào?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_76397d8256ed.mp3"
         },
         {
           "role": "Engineer",
           "text": "Current status: still investigating. The root cause seems to be a connection pool issue.",
           "translation_vi": "Trạng thái hiện tại: vẫn đang điều tra. Nguyên nhân dường như là vấn đề connection pool.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2255de98876f.mp3",
           "phrases": [
             {
               "text": "Current status: still investigating.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d0eac5849f72.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_886a327d426d.mp3"
             },
             {
               "text": "The root cause seems to be a connection pool issue.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d35a407f26cd.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2e677bea03df.mp3"
             }
           ]
         },
@@ -991,23 +991,23 @@
           "role": "Manager",
           "text": "ETA for fix?",
           "translation_vi": "Dự kiến sửa xong khi nào?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9891418da924.mp3"
         },
         {
           "role": "Engineer",
           "text": "ETA for fix is approximately 30 minutes. I'm scaling up the service now.",
           "translation_vi": "Dự kiến sửa xong khoảng 30 phút. Tôi đang scale up service.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6412416577a2.mp3",
           "phrases": [
             {
               "text": "ETA for fix is approximately 30 minutes.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9d362789cfb0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5b651bfc0801.mp3"
             },
             {
               "text": "I'm scaling up the service now.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d71bfc041c42.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d86271e4ad50.mp3"
             }
           ]
         },
@@ -1015,23 +1015,23 @@
           "role": "Manager",
           "text": "Keep me posted.",
           "translation_vi": "Cập nhật cho tôi nhé.",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d9e7394364a.mp3"
         },
         {
           "role": "Engineer",
           "text": "Will do. I'll update the status page as well.",
           "translation_vi": "Vâng. Tôi cũng sẽ cập nhật trang trạng thái.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0e96fe88ace4.mp3",
           "phrases": [
             {
               "text": "Will do.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c2e6ba37ea0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6a2c25be5183.mp3"
             },
             {
               "text": "I'll update the status page as well.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f67f506db42b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0fedbeee0b6a.mp3"
             }
           ]
         }
@@ -1046,17 +1046,17 @@
           "role": "Engineer",
           "text": "I need to escalate this. Can someone from the database team help?",
           "translation_vi": "Tôi cần leo thang. Có ai từ team database giúp không?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4e4b27ae55bc.mp3",
           "phrases": [
             {
               "text": "I need to escalate this.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7557cf53eeb8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b911908d8d14.mp3"
             },
             {
               "text": "Can someone from the database team help?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_34736557dad8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_027d63348acc.mp3"
             }
           ]
         },
@@ -1064,23 +1064,23 @@
           "role": "Tech Lead",
           "text": "I'm here. What's the issue?",
           "translation_vi": "Tôi đây. Vấn đề là gì?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a83fadc4d7e7.mp3"
         },
         {
           "role": "Engineer",
           "text": "We're seeing errors in the embedding service logs. The root cause seems to be a connection pool exhaustion.",
           "translation_vi": "Chúng tôi thấy lỗi trong log của embedding service. Nguyên nhân dường như là cạn kiệt connection pool.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_22c021189719.mp3",
           "phrases": [
             {
               "text": "We're seeing errors in the embedding service logs.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_649edb457787.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5e45b08354af.mp3"
             },
             {
               "text": "The root cause seems to be a connection pool exhaustion.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2170e05df4a7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8837614b6200.mp3"
             }
           ]
         },
@@ -1088,23 +1088,23 @@
           "role": "Tech Lead",
           "text": "I see. Let's restart the pods first.",
           "translation_vi": "Tôi hiểu. Hãy restart các pod trước.",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_94c64e85e272.mp3"
         },
         {
           "role": "Engineer",
           "text": "I'm restarting them now. Also, I'm deploying a hotfix to increase the pool size.",
           "translation_vi": "Tôi đang restart chúng. Tôi cũng đang deploy hotfix để tăng kích thước pool.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f78851fecf97.mp3",
           "phrases": [
             {
               "text": "I'm restarting them now.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_94255df47ed4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_10cd9ea8cec7.mp3"
             },
             {
               "text": "Also, I'm deploying a hotfix to increase the pool size.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0517a49f7674.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_749a6d0eb458.mp3"
             }
           ]
         },
@@ -1112,17 +1112,17 @@
           "role": "Tech Lead",
           "text": "Good. The fix is being tested in staging.",
           "translation_vi": "Tốt. Bản sửa đang được kiểm tra trên staging.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_95bee5f2ec1e.mp3",
           "phrases": [
             {
               "text": "Good.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fd70d4239041.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_12b6d8f83307.mp3"
             },
             {
               "text": "The fix is being tested in staging.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c7a222b625e8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3984184158ba.mp3"
             }
           ]
         },
@@ -1130,17 +1130,17 @@
           "role": "Engineer",
           "text": "The incident is resolved. Services are back to normal.",
           "translation_vi": "Sự cố đã được giải quyết. Các dịch vụ đã trở lại bình thường.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_95eb4e18d732.mp3",
           "phrases": [
             {
               "text": "The incident is resolved.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_49848fc56fdb.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d7cf6cc6ed00.mp3"
             },
             {
               "text": "Services are back to normal.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cc85402a41c2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_83dc187bad71.mp3"
             }
           ]
         },
@@ -1148,17 +1148,17 @@
           "role": "Tech Lead",
           "text": "Great work. Let's write a postmortem later.",
           "translation_vi": "Làm tốt lắm. Sau này hãy viết postmortem.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a21fbe1f536.mp3",
           "phrases": [
             {
               "text": "Great work.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d529db94e156.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3aaf3fedbfe4.mp3"
             },
             {
               "text": "Let's write a postmortem later.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f86239ffe175.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_31485b24c352.mp3"
             }
           ]
         }
