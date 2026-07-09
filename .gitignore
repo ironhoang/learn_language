@@ -39,3 +39,6 @@ spec/
 
 # Un-ignore symlink vào sum-tech từ react-app/public
 !react-app/public/sum-tech
+
+# Un-ignore symlink vào workflows từ react-app/public
+!react-app/public/workflows

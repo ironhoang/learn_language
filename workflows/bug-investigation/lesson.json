@@ -52,18 +52,18 @@
       "text": "We got a report about...",
       "example": "We got a report about a crash in the recommendation engine.",
       "translation_vi": "Chúng tôi nhận được báo cáo về một lỗi crash ở recommendation engine.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_54d110b50b54.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_93043ca1f42f.mp3",
       "phrases": [
         {
           "text": "We got a report about",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fda93ed51f22.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5ef3994c061d.mp3"
         },
         {
           "text": "a crash in the recommendation engine.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_89ae73853d07.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3460d219593.mp3"
         }
       ]
     },
@@ -73,18 +73,18 @@
       "text": "A user reported that...",
       "example": "A user reported that the search results are empty.",
       "translation_vi": "Một người dùng báo cáo rằng kết quả tìm kiếm bị trống.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4078066741ec.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9f60ec804a10.mp3",
       "phrases": [
         {
           "text": "A user reported that",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2d3558487cb6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_07b75fc63560.mp3"
         },
         {
           "text": "the search results are empty.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_155c57949241.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce01ed8c7a36.mp3"
         }
       ]
     },
@@ -94,18 +94,18 @@
       "text": "There's a bug in...",
       "example": "There's a bug in the embedding generation service.",
       "translation_vi": "Có một lỗi trong service tạo embedding.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ad4d3ce5209b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dd3bc550de5c.mp3",
       "phrases": [
         {
           "text": "There's a bug in",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aa2fafed3bd5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6d35e4941d08.mp3"
         },
         {
           "text": "the embedding generation service.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9ba26e8c202f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0f582b093a75.mp3"
         }
       ]
     },
@@ -115,18 +115,18 @@
       "text": "I've been assigned to investigate...",
       "example": "I've been assigned to investigate the latency issue.",
       "translation_vi": "Tôi được giao điều tra vấn đề độ trễ.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e59c967d3216.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d99c07b93615.mp3",
       "phrases": [
         {
           "text": "I've been assigned to investigate",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06c385de812c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_45713f7b92a8.mp3"
         },
         {
           "text": "the latency issue.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a03df5bcbac5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_43c595766f20.mp3"
         }
       ]
     },
@@ -136,18 +136,18 @@
       "text": "The bug seems to affect...",
       "example": "The bug seems to affect the RAG pipeline only.",
       "translation_vi": "Lỗi có vẻ chỉ ảnh hưởng đến RAG pipeline.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_29754be04c37.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6255c9f7f128.mp3",
       "phrases": [
         {
           "text": "The bug seems to affect",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c3c3c794fb8b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b42f301a7026.mp3"
         },
         {
           "text": "the RAG pipeline only.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a3704638dcb6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1fc5c6879269.mp3"
         }
       ]
     },
@@ -157,18 +157,18 @@
       "text": "Can you reproduce it?",
       "example": "Can you reproduce it on your machine?",
       "translation_vi": "Bạn có thể tái hiện nó trên máy của bạn không?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a13e97d825b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_261b292808f3.mp3",
       "phrases": [
         {
           "text": "Can you reproduce it",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d43acc33b42e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fbd1f7b5b64a.mp3"
         },
         {
           "text": "on your machine?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ebfc1e50de1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_33381dae9e9c.mp3"
         }
       ]
     },
@@ -178,18 +178,18 @@
       "text": "Let me try to reproduce it.",
       "example": "Let me try to reproduce it with the same input.",
       "translation_vi": "Để tôi thử tái hiện nó với cùng đầu vào.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_85b0d5726787.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dd18ee0b8677.mp3",
       "phrases": [
         {
           "text": "Let me try to reproduce it",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6b3ecc9169f2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8a8c8be0cb2c.mp3"
         },
         {
           "text": "with the same input.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_108dba8ddd11.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e3559926f1b2.mp3"
         }
       ]
     },
@@ -199,18 +199,18 @@
       "text": "I can reproduce it consistently.",
       "example": "I can reproduce it consistently on staging.",
       "translation_vi": "Tôi có thể tái hiện nó một cách nhất quán trên staging.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cbd5864ffb93.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d7e9b80d879.mp3",
       "phrases": [
         {
           "text": "I can reproduce it consistently",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c59c79d32d0c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_36cd9732ae8f.mp3"
         },
         {
           "text": "on staging.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a1abad48c479.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a575f190bec4.mp3"
         }
       ]
     },
@@ -220,18 +220,18 @@
       "text": "It only happens when...",
       "example": "It only happens when the input exceeds the token limit.",
       "translation_vi": "Nó chỉ xảy ra khi đầu vào vượt quá giới hạn token.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fb37fb21fbf5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9431d6f416b4.mp3",
       "phrases": [
         {
           "text": "It only happens when",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7b0642cfdaa4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_21321af28261.mp3"
         },
         {
           "text": "the input exceeds the token limit.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_10d1401e527e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_32d8bd652735.mp3"
         }
       ]
     },
@@ -241,18 +241,18 @@
       "text": "I cannot reproduce it locally.",
       "example": "I cannot reproduce it locally, only in production.",
       "translation_vi": "Tôi không thể tái hiện nó ở local, chỉ ở production.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_468558765e9d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1a543e4fb461.mp3",
       "phrases": [
         {
           "text": "I cannot reproduce it locally,",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d1be0991786c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ee89c3f308dc.mp3"
         },
         {
           "text": "only in production.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_674b38004bb1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7118a961044f.mp3"
         }
       ]
     },
@@ -262,18 +262,18 @@
       "text": "I've added logging to capture...",
       "example": "I've added logging to capture the error details.",
       "translation_vi": "Tôi đã thêm logging để ghi lại chi tiết lỗi.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_39e2689bd8fd.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ed3d671b4f55.mp3",
       "phrases": [
         {
           "text": "I've added logging",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_928d9752bfb5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_050afa1c1a71.mp3"
         },
         {
           "text": "to capture the error details.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fd936911f7c2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8badb3670984.mp3"
         }
       ]
     },
@@ -283,18 +283,18 @@
       "text": "The bug is intermittent.",
       "example": "The bug is intermittent, so it's hard to pin down.",
       "translation_vi": "Lỗi xảy ra không liên tục, nên khó xác định.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c7373817249.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1d6107a05f07.mp3",
       "phrases": [
         {
           "text": "The bug is intermittent,",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cdda8bede955.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_51ad343b6e36.mp3"
         },
         {
           "text": "so it's hard to pin down.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b9aa48e45ba5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_153810068079.mp3"
         }
       ]
     },
@@ -304,18 +304,18 @@
       "text": "I narrowed it down to...",
       "example": "I narrowed it down to a missing null check.",
       "translation_vi": "Tôi thu hẹp được đến một thiếu kiểm tra null.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4f99c891790c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_01eab32217e7.mp3",
       "phrases": [
         {
           "text": "I narrowed it down to",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f23a5dc3e06a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ad6300a98ce9.mp3"
         },
         {
           "text": "a missing null check.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c2bf85cbe96.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a9687b3af08.mp3"
         }
       ]
     },
@@ -325,18 +325,18 @@
       "text": "The root cause is...",
       "example": "The root cause is a race condition in the cache layer.",
       "translation_vi": "Nguyên nhân gốc là một race condition ở tầng cache.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e30c998d8c74.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e88c64e4e91e.mp3",
       "phrases": [
         {
           "text": "The root cause is",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_98788a0d1886.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4729581d93a0.mp3"
         },
         {
           "text": "a race condition in the cache layer.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ae025f8c87f4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_74f90b137b21.mp3"
         }
       ]
     },
@@ -346,18 +346,18 @@
       "text": "It's caused by...",
       "example": "It's caused by an incorrect index configuration.",
       "translation_vi": "Nó gây ra bởi một cấu hình index không đúng.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b0baf6a7db46.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_86fe460e528d.mp3",
       "phrases": [
         {
           "text": "It's caused by",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d9315a36f177.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dca935908831.mp3"
         },
         {
           "text": "an incorrect index configuration.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2d243f257363.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_22ad27ef2013.mp3"
         }
       ]
     },
@@ -367,18 +367,18 @@
       "text": "After checking the logs, I found...",
       "example": "After checking the logs, I found a timeout error.",
       "translation_vi": "Sau khi kiểm tra log, tôi thấy một lỗi timeout.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_289bca22db06.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_05033479e119.mp3",
       "phrases": [
         {
           "text": "After checking the logs,",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_431436d11010.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e9f4ba281d5b.mp3"
         },
         {
           "text": "I found a timeout error.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_41c6af6ec9f5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_35889539369b.mp3"
         }
       ]
     },
@@ -388,18 +388,18 @@
       "text": "It looks like a regression from...",
       "example": "It looks like a regression from the last deployment.",
       "translation_vi": "Có vẻ là một hồi quy từ lần deploy trước.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a6f90b9e63f0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bcd7e48a4d6d.mp3",
       "phrases": [
         {
           "text": "It looks like a regression",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f2dd22ba0014.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e6b0fc61d7ea.mp3"
         },
         {
           "text": "from the last deployment.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_51a748053942.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4b0715e90b1e.mp3"
         }
       ]
     },
@@ -409,18 +409,18 @@
       "text": "I suspect the issue is in...",
       "example": "I suspect the issue is in the query builder.",
       "translation_vi": "Tôi nghi ngờ vấn đề nằm ở query builder.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_23bcf209598d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a56abbbaf989.mp3",
       "phrases": [
         {
           "text": "I suspect the issue is in",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1c135ef3112.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b655abca0a57.mp3"
         },
         {
           "text": "the query builder.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c0beef5a9053.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_01280ac0ec66.mp3"
         }
       ]
     },
@@ -430,18 +430,18 @@
       "text": "Here's what I found so far.",
       "example": "Here's what I found so far about the crash.",
       "translation_vi": "Đây là những gì tôi tìm thấy cho đến nay về lỗi crash.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fa0c1c91d230.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_997798489632.mp3",
       "phrases": [
         {
           "text": "Here's what I found so far",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_84e307f3d878.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2b1f4b7804fd.mp3"
         },
         {
           "text": "about the crash.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_59cd074c420c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_02c5c99e1198.mp3"
         }
       ]
     },
@@ -451,18 +451,18 @@
       "text": "The bug triggers when...",
       "example": "The bug triggers when the vector store returns an empty set.",
       "translation_vi": "Lỗi kích hoạt khi vector store trả về tập rỗng.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_833d6ff51e86.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a1af33f98ff.mp3",
       "phrases": [
         {
           "text": "The bug triggers when",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6f7af1007890.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_146540666021.mp3"
         },
         {
           "text": "the vector store returns an empty set.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bfbabe4b8bb1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_01c8a39e8b26.mp3"
         }
       ]
     },
@@ -472,18 +472,18 @@
       "text": "The error message is...",
       "example": "The error message is 'Index out of bounds'.",
       "translation_vi": "Thông báo lỗi là 'Index out of bounds'.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a81bfeb8a518.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_107765845a54.mp3",
       "phrases": [
         {
           "text": "The error message is",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1b6364355408.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1d6e8fa57744.mp3"
         },
         {
           "text": "'Index out of bounds'.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_490442406af6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_783fdff38cb3.mp3"
         }
       ]
     },
@@ -493,18 +493,18 @@
       "text": "I've traced it to line...",
       "example": "I've traced it to line 42 in the inference module.",
       "translation_vi": "Tôi đã lần ra nó đến dòng 42 trong module inference.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_40a532b85ba4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_25e9318fa55a.mp3",
       "phrases": [
         {
           "text": "I've traced it to line 42",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ea363bb5f164.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4db7070952a2.mp3"
         },
         {
           "text": "in the inference module.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2b54b0c73a1f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d1ca27d20d27.mp3"
         }
       ]
     },
@@ -514,18 +514,18 @@
       "text": "This is happening because...",
       "example": "This is happening because the service doesn't handle empty responses.",
       "translation_vi": "Điều này xảy ra vì service không xử lý response rỗng.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6007eaeefe0b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f4082938c78f.mp3",
       "phrases": [
         {
           "text": "This is happening because",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8af57ead6cae.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_13b7b8f35b0e.mp3"
         },
         {
           "text": "the service doesn't handle empty responses.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3086a61e36dc.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7f4c2ce620a9.mp3"
         }
       ]
     },
@@ -535,18 +535,18 @@
       "text": "Let me walk you through the steps.",
       "example": "Let me walk you through the steps to reproduce.",
       "translation_vi": "Để tôi hướng dẫn bạn các bước tái hiện.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_04ecb087379a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dc89e70afc50.mp3",
       "phrases": [
         {
           "text": "Let me walk you through",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4de7d571ae1c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_435abef71208.mp3"
         },
         {
           "text": "the steps to reproduce.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fa2d19369cf8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0bbe637e2b96.mp3"
         }
       ]
     },
@@ -556,18 +556,18 @@
       "text": "I suggest we...",
       "example": "I suggest we add a null check before processing.",
       "translation_vi": "Tôi đề xuất chúng ta thêm kiểm tra null trước khi xử lý.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_39bd3aa322cf.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_58288954b28c.mp3",
       "phrases": [
         {
           "text": "I suggest we",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ede8cbdfabce.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_409dc8432b0b.mp3"
         },
         {
           "text": "add a null check before processing.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a5e22c239963.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_37d1b9155d9f.mp3"
         }
       ]
     },
@@ -577,18 +577,18 @@
       "text": "My proposed fix is...",
       "example": "My proposed fix is to increase the timeout.",
       "translation_vi": "Bản sửa tôi đề xuất là tăng timeout.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f32fca56721a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ea1fc4a93337.mp3",
       "phrases": [
         {
           "text": "My proposed fix is",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e0daa7aa6b2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3cb5bb8e289d.mp3"
         },
         {
           "text": "to increase the timeout.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c08e68438442.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5f5522016faa.mp3"
         }
       ]
     },
@@ -598,18 +598,18 @@
       "text": "We should handle the edge case where...",
       "example": "We should handle the edge case where the input is malformed.",
       "translation_vi": "Chúng ta nên xử lý trường hợp biên khi đầu vào bị sai định dạng.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1ea39aa577df.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_04e7bfc7d426.mp3",
       "phrases": [
         {
           "text": "We should handle the edge case",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_92930eff9b68.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0327fb03ccce.mp3"
         },
         {
           "text": "where the input is malformed.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_341b72dbeb81.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ad2c8f2c992e.mp3"
         }
       ]
     },
@@ -619,18 +619,18 @@
       "text": "The simplest fix is to...",
       "example": "The simplest fix is to revert the last commit.",
       "translation_vi": "Cách sửa đơn giản nhất là revert commit cuối.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f17de2be1e38.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7955d41b7b93.mp3",
       "phrases": [
         {
           "text": "The simplest fix is",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_279f79a1e8b6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a68847692af1.mp3"
         },
         {
           "text": "to revert the last commit.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_46296b073a3e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c9b404e90d4c.mp3"
         }
       ]
     },
@@ -640,18 +640,18 @@
       "text": "I'll create a pull request with the fix.",
       "example": "I'll create a pull request with the fix for review.",
       "translation_vi": "Tôi sẽ tạo một pull request với bản sửa để review.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b695b7ca4096.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_da43cb07764a.mp3",
       "phrases": [
         {
           "text": "I'll create a pull request",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2820b6194c99.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9cd23129683f.mp3"
         },
         {
           "text": "with the fix for review.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8d5f7b4b2a76.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e5750d98cd5e.mp3"
         }
       ]
     },
@@ -661,18 +661,18 @@
       "text": "Let's add a unit test for this case.",
       "example": "Let's add a unit test for this edge case.",
       "translation_vi": "Hãy thêm một unit test cho trường hợp biên này.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ead290a2cfb3.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ed6cfbf0ba72.mp3",
       "phrases": [
         {
           "text": "Let's add a unit test",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1fe71055a729.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_309c338ec465.mp3"
         },
         {
           "text": "for this edge case.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_52ca14ec623c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ec3e5e9402f.mp3"
         }
       ]
     },
@@ -682,18 +682,18 @@
       "text": "The fix works on my end.",
       "example": "The fix works on my end. I tested it thoroughly.",
       "translation_vi": "Bản sửa hoạt động tốt ở phía tôi. Tôi đã test kỹ.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_be7cb86e5885.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_05c938eb6933.mp3",
       "phrases": [
         {
           "text": "The fix works on my end.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6a910052da3b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0d20347be720.mp3"
         },
         {
           "text": "I tested it thoroughly.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd69aa27979a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_605e607dc059.mp3"
         }
       ]
     },
@@ -703,18 +703,18 @@
       "text": "Can someone review my changes?",
       "example": "Can someone review my changes before we deploy?",
       "translation_vi": "Ai đó review thay đổi của tôi trước khi deploy được không?",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_653e0d95874d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_60b9d99c82e7.mp3",
       "phrases": [
         {
           "text": "Can someone review my changes",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2bc11bf5fd76.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f1490d910614.mp3"
         },
         {
           "text": "before we deploy?",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_38462bca2db7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d1c80ff5a3c5.mp3"
         }
       ]
     },
@@ -724,18 +724,18 @@
       "text": "We should deploy this to staging first.",
       "example": "We should deploy this to staging first to verify.",
       "translation_vi": "Chúng ta nên deploy lên staging trước để xác minh.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4705990e2ab1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dd2fd1a7f0c4.mp3",
       "phrases": [
         {
           "text": "We should deploy this to staging first",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e7fda018c95f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_502dbf6c0682.mp3"
         },
         {
           "text": "to verify.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7ff253d168c8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0846627a7daf.mp3"
         }
       ]
     },
@@ -745,18 +745,18 @@
       "text": "I'll monitor it after deployment.",
       "example": "I'll monitor it after deployment to make sure it's stable.",
       "translation_vi": "Tôi sẽ theo dõi nó sau khi deploy để đảm bảo ổn định.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_388a612fa2d9.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_316f258fc50f.mp3",
       "phrases": [
         {
           "text": "I'll monitor it after deployment",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_22b74ca541d3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6d9ae1d816ad.mp3"
         },
         {
           "text": "to make sure it's stable.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_dd75f3a8a87f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e5d7176eac14.mp3"
         }
       ]
     },
@@ -766,18 +766,18 @@
       "text": "Thanks for the help, everyone.",
       "example": "Thanks for the help, everyone. The bug is resolved.",
       "translation_vi": "Cảm ơn mọi người đã giúp đỡ. Lỗi đã được giải quyết.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b77daa9803c0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dc84d8dcf314.mp3",
       "phrases": [
         {
           "text": "Thanks for the help, everyone.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ca4e20b5b72.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_21282819e5d1.mp3"
         },
         {
           "text": "The bug is resolved.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f8b63d6d8eb2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_71217dbb0dca.mp3"
         }
       ]
     },
@@ -787,18 +787,18 @@
       "text": "Let's close the ticket.",
       "example": "Let's close the ticket and update the documentation.",
       "translation_vi": "Hãy đóng ticket và cập nhật tài liệu.",
-      "audio": "",
-      "audio_slow": "",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e70a76c5f975.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_68a9544ac73e.mp3",
       "phrases": [
         {
           "text": "Let's close the ticket",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_428ad386f77c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce4003688901.mp3"
         },
         {
           "text": "and update the documentation.",
-          "audio": "",
-          "audio_slow": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2fb09b19af21.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c50e780282f2.mp3"
         }
       ]
     }
@@ -807,7 +807,7 @@
     {
       "id": "recall-01",
       "prompt": "What bug are you investigating?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ae8eabd647f1.mp3",
       "accepted_patterns": [
         "We got a report about",
         "A user reported that",
@@ -819,7 +819,7 @@
     {
       "id": "recall-02",
       "prompt": "Can you reproduce it?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_95b46c47b905.mp3",
       "accepted_patterns": [
         "Let me try to reproduce it",
         "I can reproduce it consistently",
@@ -832,7 +832,7 @@
     {
       "id": "recall-03",
       "prompt": "What is the root cause?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d2a3d9d30f84.mp3",
       "accepted_patterns": [
         "I narrowed it down to",
         "The root cause is",
@@ -846,7 +846,7 @@
     {
       "id": "recall-04",
       "prompt": "Explain your findings.",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cb1e5f53893e.mp3",
       "accepted_patterns": [
         "Here's what I found so far",
         "The bug triggers when",
@@ -860,7 +860,7 @@
     {
       "id": "recall-05",
       "prompt": "What's your proposed fix?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e11435db189.mp3",
       "accepted_patterns": [
         "I suggest we",
         "My proposed fix is",
@@ -874,7 +874,7 @@
     {
       "id": "recall-06",
       "prompt": "How do you confirm the fix?",
-      "prompt_audio": "",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_051be8e08c44.mp3",
       "accepted_patterns": [
         "The fix works on my end",
         "Can someone review my changes",
@@ -896,17 +896,17 @@
           "role": "Tech Lead",
           "text": "Did you find anything on the crash bug?",
           "translation_vi": "Bạn tìm thấy gì về lỗi crash chưa?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d7eb59cb6d4.mp3",
           "phrases": [
             {
               "text": "Did you find anything",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e0fe1edf39ec.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1e7a8eb6d5c2.mp3"
             },
             {
               "text": "on the crash bug?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e5f9025cf2e.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_83c4cfe56d74.mp3"
             }
           ]
         },
@@ -914,17 +914,17 @@
           "role": "Engineer",
           "text": "Yes, I was able to reproduce it consistently.",
           "translation_vi": "Có, tôi đã tái hiện nó một cách nhất quán.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f570658a636a.mp3",
           "phrases": [
             {
               "text": "Yes, I was able to reproduce it",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e30e62bff25f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fe6e233e77cf.mp3"
             },
             {
               "text": "consistently.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a319fc07b498.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_728786380c50.mp3"
             }
           ]
         },
@@ -932,23 +932,23 @@
           "role": "Tech Lead",
           "text": "What's the root cause?",
           "translation_vi": "Nguyên nhân gốc là gì?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e33dcb758b6b.mp3"
         },
         {
           "role": "Engineer",
           "text": "It's caused by a missing null check in the inference module.",
           "translation_vi": "Nó gây ra bởi thiếu kiểm tra null trong module inference.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cc7df15ab35d.mp3",
           "phrases": [
             {
               "text": "It's caused by a missing null check",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_38c61dc04696.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9d974017e411.mp3"
             },
             {
               "text": "in the inference module.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2b54b0c73a1f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d1ca27d20d27.mp3"
             }
           ]
         },
@@ -956,23 +956,23 @@
           "role": "Tech Lead",
           "text": "That makes sense. What's your proposed fix?",
           "translation_vi": "Hợp lý. Bạn đề xuất sửa thế nào?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_669a78c9e042.mp3"
         },
         {
           "role": "Engineer",
           "text": "I suggest we add a null check and a unit test for that edge case.",
           "translation_vi": "Tôi đề xuất thêm kiểm tra null và unit test cho trường hợp biên đó.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cb4957f54f39.mp3",
           "phrases": [
             {
               "text": "I suggest we add a null check",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b596bb5d8dc8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9ac407913263.mp3"
             },
             {
               "text": "and a unit test for that edge case.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_22d54315ef7b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7bb9c6c63321.mp3"
             }
           ]
         },
@@ -980,23 +980,23 @@
           "role": "Tech Lead",
           "text": "Sounds good. Go ahead and create a PR.",
           "translation_vi": "Tốt. Hãy tạo một PR đi.",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e6de88207aa.mp3"
         },
         {
           "role": "Engineer",
           "text": "Will do. I'll also deploy it to staging first.",
           "translation_vi": "Sẽ làm ngay. Tôi cũng sẽ deploy lên staging trước.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_79f6c635d427.mp3",
           "phrases": [
             {
               "text": "Will do.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c2e6ba37ea0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6a2c25be5183.mp3"
             },
             {
               "text": "I'll also deploy it to staging first.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1d745702433.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f6713b637f01.mp3"
             }
           ]
         }
@@ -1011,17 +1011,17 @@
           "role": "Engineer",
           "text": "Hey, can you help me look at this bug?",
           "translation_vi": "Này, bạn giúp tôi xem lỗi này được không?",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b57faacd7e0.mp3",
           "phrases": [
             {
               "text": "Hey, can you help me",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_45e51dc6acd6.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5f99c07848aa.mp3"
             },
             {
               "text": "look at this bug?",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71320645b39f.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6839b2bab782.mp3"
             }
           ]
         },
@@ -1029,23 +1029,23 @@
           "role": "Colleague",
           "text": "Sure, what's the issue?",
           "translation_vi": "Được, vấn đề gì vậy?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f061d9d31f12.mp3"
         },
         {
           "role": "Engineer",
           "text": "The search results are empty when the query is too long.",
           "translation_vi": "Kết quả tìm kiếm bị trống khi truy vấn quá dài.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6d983cb3776f.mp3",
           "phrases": [
             {
               "text": "The search results are empty",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b7df719cf326.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c0eb1538e20f.mp3"
             },
             {
               "text": "when the query is too long.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5afb8441a5a3.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_15910eab2caa.mp3"
             }
           ]
         },
@@ -1053,23 +1053,23 @@
           "role": "Colleague",
           "text": "Have you checked the token limit?",
           "translation_vi": "Bạn đã kiểm tra giới hạn token chưa?",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a1cc8a8e11b8.mp3"
         },
         {
           "role": "Engineer",
           "text": "Yes, it seems to be a bug in the truncation logic.",
           "translation_vi": "Rồi, có vẻ là lỗi trong logic cắt ngắn.",
-          "audio": "",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a9fa09a2240c.mp3",
           "phrases": [
             {
               "text": "Yes, it seems to be a bug",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8abd88d78992.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_58d70ab89646.mp3"
             },
             {
               "text": "in the truncation logic.",
-              "audio": "",
-              "audio_slow": ""
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c0fc3f455204.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b3563adcb33d.mp3"
             }
           ]
         },
@@ -1077,13 +1077,13 @@
           "role": "Colleague",
           "text": "Let me take a look at the code with you.",
           "translation_vi": "Để tôi cùng xem code với bạn.",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7332d01321e3.mp3"
         },
         {
           "role": "Engineer",
           "text": "Thanks, I appreciate it.",
           "translation_vi": "Cảm ơn, tôi rất trân trọng.",
-          "audio": ""
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f243eaefd6bd.mp3"
         }
       ]
     }
