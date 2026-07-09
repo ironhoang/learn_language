@@ -42,3 +42,7 @@ spec/
 
 # Un-ignore symlink vào workflows từ react-app/public
 !react-app/public/workflows
+
+# Re-ignore settings.local.json — chứa path máy cá nhân (username, home dir),
+# KHÔNG được push lên GitHub. Rule này phải nằm SAU dòng "!*.json" ở trên để override.
+.claude/settings.local.json
