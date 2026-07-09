@@ -19,7 +19,7 @@ npm i -g vercel
 ### Deploy từ folder local (không cần GitHub)
 
 ```bash
-cd /Users/nexusfrontiertech/projects/tools/learn-en-ch
+cd /path/to/learn-en-ch
 vercel
 ```
 
@@ -175,7 +175,7 @@ Script tự động:
 ### Bước 1 — Cài Python dependencies
 
 ```bash
-cd /Users/nexusfrontiertech/projects/tools/learn-en-ch
+cd /path/to/learn-en-ch
 
 # Tạo virtual environment (khuyến nghị)
 python3 -m venv .venv
