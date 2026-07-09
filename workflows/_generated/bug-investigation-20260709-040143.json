@@ -1,0 +1,735 @@
+{
+  "meta": {
+    "id": "bug-investigation",
+    "title": "Bug Investigation",
+    "title_vi": "Điều tra bug",
+    "description": "Investigate a reported bug: reproduce, narrow down root cause, explain findings, propose a fix.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "engineering",
+    "tags": ["debugging", "bug", "root-cause"]
+  },
+  "nodes": [
+    {
+      "id": "receive-report",
+      "label": "Receive Bug Report",
+      "label_vi": "Nhận báo cáo lỗi"
+    },
+    {
+      "id": "reproduce",
+      "label": "Reproduce the Bug",
+      "label_vi": "Tái hiện lỗi"
+    },
+    {
+      "id": "narrow-down",
+      "label": "Narrow Down Root Cause",
+      "label_vi": "Thu hẹp nguyên nhân gốc"
+    },
+    {
+      "id": "explain-findings",
+      "label": "Explain Findings",
+      "label_vi": "Giải thích phát hiện"
+    },
+    {
+      "id": "propose-fix",
+      "label": "Propose a Fix",
+      "label_vi": "Đề xuất sửa lỗi"
+    },
+    {
+      "id": "confirm-fix",
+      "label": "Confirm and Wrap Up",
+      "label_vi": "Xác nhận và kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "receive-report-01",
+      "node_id": "receive-report",
+      "text": "We got a report about...",
+      "example": "We got a report about a crash in the recommendation engine.",
+      "translation_vi": "Chúng tôi nhận được báo cáo về một lỗi crash ở recommendation engine.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We got a report about", "audio": "", "audio_slow": ""},
+        {"text": "a crash in the recommendation engine.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "receive-report-02",
+      "node_id": "receive-report",
+      "text": "A user reported that...",
+      "example": "A user reported that the search results are empty.",
+      "translation_vi": "Một người dùng báo cáo rằng kết quả tìm kiếm bị trống.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "A user reported that", "audio": "", "audio_slow": ""},
+        {"text": "the search results are empty.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "receive-report-03",
+      "node_id": "receive-report",
+      "text": "There's a bug in...",
+      "example": "There's a bug in the embedding generation service.",
+      "translation_vi": "Có một lỗi trong service tạo embedding.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "There's a bug in", "audio": "", "audio_slow": ""},
+        {"text": "the embedding generation service.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "receive-report-04",
+      "node_id": "receive-report",
+      "text": "I've been assigned to investigate...",
+      "example": "I've been assigned to investigate the latency issue.",
+      "translation_vi": "Tôi được giao điều tra vấn đề độ trễ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I've been assigned to investigate", "audio": "", "audio_slow": ""},
+        {"text": "the latency issue.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "receive-report-05",
+      "node_id": "receive-report",
+      "text": "The bug seems to affect...",
+      "example": "The bug seems to affect the RAG pipeline only.",
+      "translation_vi": "Lỗi có vẻ chỉ ảnh hưởng đến RAG pipeline.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The bug seems to affect", "audio": "", "audio_slow": ""},
+        {"text": "the RAG pipeline only.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "receive-report-06",
+      "node_id": "receive-report",
+      "text": "Can you reproduce it?",
+      "example": "Can you reproduce it on your machine?",
+      "translation_vi": "Bạn có thể tái hiện nó trên máy của bạn không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Can you reproduce it", "audio": "", "audio_slow": ""},
+        {"text": "on your machine?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "reproduce-01",
+      "node_id": "reproduce",
+      "text": "Let me try to reproduce it.",
+      "example": "Let me try to reproduce it with the same input.",
+      "translation_vi": "Để tôi thử tái hiện nó với cùng đầu vào.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me try to reproduce it", "audio": "", "audio_slow": ""},
+        {"text": "with the same input.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "reproduce-02",
+      "node_id": "reproduce",
+      "text": "I can reproduce it consistently.",
+      "example": "I can reproduce it consistently on staging.",
+      "translation_vi": "Tôi có thể tái hiện nó một cách nhất quán trên staging.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I can reproduce it consistently", "audio": "", "audio_slow": ""},
+        {"text": "on staging.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "reproduce-03",
+      "node_id": "reproduce",
+      "text": "It only happens when...",
+      "example": "It only happens when the input exceeds the token limit.",
+      "translation_vi": "Nó chỉ xảy ra khi đầu vào vượt quá giới hạn token.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "It only happens when", "audio": "", "audio_slow": ""},
+        {"text": "the input exceeds the token limit.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "reproduce-04",
+      "node_id": "reproduce",
+      "text": "I cannot reproduce it locally.",
+      "example": "I cannot reproduce it locally, only in production.",
+      "translation_vi": "Tôi không thể tái hiện nó ở local, chỉ ở production.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I cannot reproduce it locally,", "audio": "", "audio_slow": ""},
+        {"text": "only in production.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "reproduce-05",
+      "node_id": "reproduce",
+      "text": "I've added logging to capture...",
+      "example": "I've added logging to capture the error details.",
+      "translation_vi": "Tôi đã thêm logging để ghi lại chi tiết lỗi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I've added logging", "audio": "", "audio_slow": ""},
+        {"text": "to capture the error details.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "reproduce-06",
+      "node_id": "reproduce",
+      "text": "The bug is intermittent.",
+      "example": "The bug is intermittent, so it's hard to pin down.",
+      "translation_vi": "Lỗi xảy ra không liên tục, nên khó xác định.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The bug is intermittent,", "audio": "", "audio_slow": ""},
+        {"text": "so it's hard to pin down.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "narrow-down-01",
+      "node_id": "narrow-down",
+      "text": "I narrowed it down to...",
+      "example": "I narrowed it down to a missing null check.",
+      "translation_vi": "Tôi thu hẹp được đến một thiếu kiểm tra null.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I narrowed it down to", "audio": "", "audio_slow": ""},
+        {"text": "a missing null check.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "narrow-down-02",
+      "node_id": "narrow-down",
+      "text": "The root cause is...",
+      "example": "The root cause is a race condition in the cache layer.",
+      "translation_vi": "Nguyên nhân gốc là một race condition ở tầng cache.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The root cause is", "audio": "", "audio_slow": ""},
+        {"text": "a race condition in the cache layer.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "narrow-down-03",
+      "node_id": "narrow-down",
+      "text": "It's caused by...",
+      "example": "It's caused by an incorrect index configuration.",
+      "translation_vi": "Nó gây ra bởi một cấu hình index không đúng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "It's caused by", "audio": "", "audio_slow": ""},
+        {"text": "an incorrect index configuration.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "narrow-down-04",
+      "node_id": "narrow-down",
+      "text": "After checking the logs, I found...",
+      "example": "After checking the logs, I found a timeout error.",
+      "translation_vi": "Sau khi kiểm tra log, tôi thấy một lỗi timeout.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "After checking the logs,", "audio": "", "audio_slow": ""},
+        {"text": "I found a timeout error.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "narrow-down-05",
+      "node_id": "narrow-down",
+      "text": "It looks like a regression from...",
+      "example": "It looks like a regression from the last deployment.",
+      "translation_vi": "Có vẻ là một hồi quy từ lần deploy trước.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "It looks like a regression", "audio": "", "audio_slow": ""},
+        {"text": "from the last deployment.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "narrow-down-06",
+      "node_id": "narrow-down",
+      "text": "I suspect the issue is in...",
+      "example": "I suspect the issue is in the query builder.",
+      "translation_vi": "Tôi nghi ngờ vấn đề nằm ở query builder.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I suspect the issue is in", "audio": "", "audio_slow": ""},
+        {"text": "the query builder.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-findings-01",
+      "node_id": "explain-findings",
+      "text": "Here's what I found so far.",
+      "example": "Here's what I found so far about the crash.",
+      "translation_vi": "Đây là những gì tôi tìm thấy cho đến nay về lỗi crash.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Here's what I found so far", "audio": "", "audio_slow": ""},
+        {"text": "about the crash.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-findings-02",
+      "node_id": "explain-findings",
+      "text": "The bug triggers when...",
+      "example": "The bug triggers when the vector store returns an empty set.",
+      "translation_vi": "Lỗi kích hoạt khi vector store trả về tập rỗng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The bug triggers when", "audio": "", "audio_slow": ""},
+        {"text": "the vector store returns an empty set.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-findings-03",
+      "node_id": "explain-findings",
+      "text": "The error message is...",
+      "example": "The error message is 'Index out of bounds'.",
+      "translation_vi": "Thông báo lỗi là 'Index out of bounds'.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The error message is", "audio": "", "audio_slow": ""},
+        {"text": "'Index out of bounds'.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-findings-04",
+      "node_id": "explain-findings",
+      "text": "I've traced it to line...",
+      "example": "I've traced it to line 42 in the inference module.",
+      "translation_vi": "Tôi đã lần ra nó đến dòng 42 trong module inference.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I've traced it to line 42", "audio": "", "audio_slow": ""},
+        {"text": "in the inference module.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-findings-05",
+      "node_id": "explain-findings",
+      "text": "This is happening because...",
+      "example": "This is happening because the service doesn't handle empty responses.",
+      "translation_vi": "Điều này xảy ra vì service không xử lý response rỗng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This is happening because", "audio": "", "audio_slow": ""},
+        {"text": "the service doesn't handle empty responses.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "explain-findings-06",
+      "node_id": "explain-findings",
+      "text": "Let me walk you through the steps.",
+      "example": "Let me walk you through the steps to reproduce.",
+      "translation_vi": "Để tôi hướng dẫn bạn các bước tái hiện.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me walk you through", "audio": "", "audio_slow": ""},
+        {"text": "the steps to reproduce.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-fix-01",
+      "node_id": "propose-fix",
+      "text": "I suggest we...",
+      "example": "I suggest we add a null check before processing.",
+      "translation_vi": "Tôi đề xuất chúng ta thêm kiểm tra null trước khi xử lý.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I suggest we", "audio": "", "audio_slow": ""},
+        {"text": "add a null check before processing.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-fix-02",
+      "node_id": "propose-fix",
+      "text": "My proposed fix is...",
+      "example": "My proposed fix is to increase the timeout.",
+      "translation_vi": "Bản sửa tôi đề xuất là tăng timeout.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "My proposed fix is", "audio": "", "audio_slow": ""},
+        {"text": "to increase the timeout.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-fix-03",
+      "node_id": "propose-fix",
+      "text": "We should handle the edge case where...",
+      "example": "We should handle the edge case where the input is malformed.",
+      "translation_vi": "Chúng ta nên xử lý trường hợp biên khi đầu vào bị sai định dạng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We should handle the edge case", "audio": "", "audio_slow": ""},
+        {"text": "where the input is malformed.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-fix-04",
+      "node_id": "propose-fix",
+      "text": "The simplest fix is to...",
+      "example": "The simplest fix is to revert the last commit.",
+      "translation_vi": "Cách sửa đơn giản nhất là revert commit cuối.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The simplest fix is", "audio": "", "audio_slow": ""},
+        {"text": "to revert the last commit.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-fix-05",
+      "node_id": "propose-fix",
+      "text": "I'll create a pull request with the fix.",
+      "example": "I'll create a pull request with the fix for review.",
+      "translation_vi": "Tôi sẽ tạo một pull request với bản sửa để review.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll create a pull request", "audio": "", "audio_slow": ""},
+        {"text": "with the fix for review.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "propose-fix-06",
+      "node_id": "propose-fix",
+      "text": "Let's add a unit test for this case.",
+      "example": "Let's add a unit test for this edge case.",
+      "translation_vi": "Hãy thêm một unit test cho trường hợp biên này.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's add a unit test", "audio": "", "audio_slow": ""},
+        {"text": "for this edge case.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "confirm-fix-01",
+      "node_id": "confirm-fix",
+      "text": "The fix works on my end.",
+      "example": "The fix works on my end. I tested it thoroughly.",
+      "translation_vi": "Bản sửa hoạt động tốt ở phía tôi. Tôi đã test kỹ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The fix works on my end.", "audio": "", "audio_slow": ""},
+        {"text": "I tested it thoroughly.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "confirm-fix-02",
+      "node_id": "confirm-fix",
+      "text": "Can someone review my changes?",
+      "example": "Can someone review my changes before we deploy?",
+      "translation_vi": "Ai đó review thay đổi của tôi trước khi deploy được không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Can someone review my changes", "audio": "", "audio_slow": ""},
+        {"text": "before we deploy?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "confirm-fix-03",
+      "node_id": "confirm-fix",
+      "text": "We should deploy this to staging first.",
+      "example": "We should deploy this to staging first to verify.",
+      "translation_vi": "Chúng ta nên deploy lên staging trước để xác minh.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We should deploy this to staging first", "audio": "", "audio_slow": ""},
+        {"text": "to verify.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "confirm-fix-04",
+      "node_id": "confirm-fix",
+      "text": "I'll monitor it after deployment.",
+      "example": "I'll monitor it after deployment to make sure it's stable.",
+      "translation_vi": "Tôi sẽ theo dõi nó sau khi deploy để đảm bảo ổn định.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll monitor it after deployment", "audio": "", "audio_slow": ""},
+        {"text": "to make sure it's stable.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "confirm-fix-05",
+      "node_id": "confirm-fix",
+      "text": "Thanks for the help, everyone.",
+      "example": "Thanks for the help, everyone. The bug is resolved.",
+      "translation_vi": "Cảm ơn mọi người đã giúp đỡ. Lỗi đã được giải quyết.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thanks for the help, everyone.", "audio": "", "audio_slow": ""},
+        {"text": "The bug is resolved.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "confirm-fix-06",
+      "node_id": "confirm-fix",
+      "text": "Let's close the ticket.",
+      "example": "Let's close the ticket and update the documentation.",
+      "translation_vi": "Hãy đóng ticket và cập nhật tài liệu.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's close the ticket", "audio": "", "audio_slow": ""},
+        {"text": "and update the documentation.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What bug are you investigating?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "We got a report about",
+        "A user reported that",
+        "There's a bug in",
+        "I've been assigned to investigate"
+      ],
+      "hint_vi": "Mô tả lỗi bạn đang điều tra"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "Can you reproduce it?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Let me try to reproduce it",
+        "I can reproduce it consistently",
+        "It only happens when",
+        "I cannot reproduce it locally",
+        "The bug is intermittent"
+      ],
+      "hint_vi": "Nói về khả năng tái hiện lỗi"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What is the root cause?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I narrowed it down to",
+        "The root cause is",
+        "It's caused by",
+        "After checking the logs, I found",
+        "It looks like a regression from",
+        "I suspect the issue is in"
+      ],
+      "hint_vi": "Nêu nguyên nhân gốc rễ"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "Explain your findings.",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Here's what I found so far",
+        "The bug triggers when",
+        "The error message is",
+        "I've traced it to line",
+        "This is happening because",
+        "Let me walk you through the steps"
+      ],
+      "hint_vi": "Giải thích những gì bạn phát hiện"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "What's your proposed fix?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I suggest we",
+        "My proposed fix is",
+        "We should handle the edge case",
+        "The simplest fix is",
+        "I'll create a pull request with the fix",
+        "Let's add a unit test for this case"
+      ],
+      "hint_vi": "Đề xuất cách sửa lỗi"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "How do you confirm the fix?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "The fix works on my end",
+        "Can someone review my changes",
+        "We should deploy this to staging first",
+        "I'll monitor it after deployment",
+        "Thanks for the help, everyone",
+        "Let's close the ticket"
+      ],
+      "hint_vi": "Nói về các bước xác nhận và kết thúc"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Reporting findings to the Tech Lead",
+      "title_vi": "Báo cáo phát hiện cho Tech Lead",
+      "turns": [
+        {
+          "role": "Tech Lead",
+          "text": "Did you find anything on the crash bug?",
+          "translation_vi": "Bạn tìm thấy gì về lỗi crash chưa?",
+          "audio": "",
+          "phrases": [
+            {"text": "Did you find anything", "audio": "", "audio_slow": ""},
+            {"text": "on the crash bug?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Yes, I was able to reproduce it consistently.",
+          "translation_vi": "Có, tôi đã tái hiện nó một cách nhất quán.",
+          "audio": "",
+          "phrases": [
+            {"text": "Yes, I was able to reproduce it", "audio": "", "audio_slow": ""},
+            {"text": "consistently.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "What's the root cause?",
+          "translation_vi": "Nguyên nhân gốc là gì?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "It's caused by a missing null check in the inference module.",
+          "translation_vi": "Nó gây ra bởi thiếu kiểm tra null trong module inference.",
+          "audio": "",
+          "phrases": [
+            {"text": "It's caused by a missing null check", "audio": "", "audio_slow": ""},
+            {"text": "in the inference module.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "That makes sense. What's your proposed fix?",
+          "translation_vi": "Hợp lý. Bạn đề xuất sửa thế nào?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I suggest we add a null check and a unit test for that edge case.",
+          "translation_vi": "Tôi đề xuất thêm kiểm tra null và unit test cho trường hợp biên đó.",
+          "audio": "",
+          "phrases": [
+            {"text": "I suggest we add a null check", "audio": "", "audio_slow": ""},
+            {"text": "and a unit test for that edge case.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Sounds good. Go ahead and create a PR.",
+          "translation_vi": "Tốt. Hãy tạo một PR đi.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Will do. I'll also deploy it to staging first.",
+          "translation_vi": "Sẽ làm ngay. Tôi cũng sẽ deploy lên staging trước.",
+          "audio": "",
+          "phrases": [
+            {"text": "Will do.", "audio": "", "audio_slow": ""},
+            {"text": "I'll also deploy it to staging first.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Pair debugging with a colleague",
+      "title_vi": "Cùng đồng nghiệp debug",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Hey, can you help me look at this bug?",
+          "translation_vi": "Này, bạn giúp tôi xem lỗi này được không?",
+          "audio": "",
+          "phrases": [
+            {"text": "Hey, can you help me", "audio": "", "audio_slow": ""},
+            {"text": "look at this bug?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Sure, what's the issue?",
+          "translation_vi": "Được, vấn đề gì vậy?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "The search results are empty when the query is too long.",
+          "translation_vi": "Kết quả tìm kiếm bị trống khi truy vấn quá dài.",
+          "audio": "",
+          "phrases": [
+            {"text": "The search results are empty", "audio": "", "audio_slow": ""},
+            {"text": "when the query is too long.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Have you checked the token limit?",
+          "translation_vi": "Bạn đã kiểm tra giới hạn token chưa?",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Yes, it seems to be a bug in the truncation logic.",
+          "translation_vi": "Rồi, có vẻ là lỗi trong logic cắt ngắn.",
+          "audio": "",
+          "phrases": [
+            {"text": "Yes, it seems to be a bug", "audio": "", "audio_slow": ""},
+            {"text": "in the truncation logic.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Colleague",
+          "text": "Let me take a look at the code with you.",
+          "translation_vi": "Để tôi cùng xem code với bạn.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Thanks, I appreciate it.",
+          "translation_vi": "Cảm ơn, tôi rất trân trọng.",
+          "audio": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1140 @@
+{
+  "meta": {
+    "id": "sprint-planning",
+    "title": "Sprint Planning",
+    "title_vi": "Họp lập kế hoạch sprint",
+    "description": "Plan the upcoming sprint: review backlog items, estimate effort, discuss capacity, and commit to deliverables.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "team-communication",
+    "tags": [
+      "sprint",
+      "agile",
+      "planning",
+      "estimation"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "opening",
+      "label": "Opening",
+      "label_vi": "Mở đầu"
+    },
+    {
+      "id": "backlog-review",
+      "label": "Backlog Review",
+      "label_vi": "Xem lại backlog"
+    },
+    {
+      "id": "estimation",
+      "label": "Estimation",
+      "label_vi": "Ước lượng"
+    },
+    {
+      "id": "capacity",
+      "label": "Capacity Check",
+      "label_vi": "Kiểm tra năng lực"
+    },
+    {
+      "id": "commitment",
+      "label": "Commitment",
+      "label_vi": "Cam kết"
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "opening-01",
+      "node_id": "opening",
+      "text": "Let's start the sprint planning.",
+      "example": "Let's start the sprint planning for this iteration.",
+      "translation_vi": "Bắt đầu họp lập kế hoạch sprint cho đợt này.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ebfdd75df567.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fb7b3e87edf1.mp3",
+      "phrases": [
+        {
+          "text": "Let's start",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bd0e1704fb63.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4466089b6c4d.mp3"
+        },
+        {
+          "text": "the sprint planning",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a23c8a20ec6.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a9f6fdebd587.mp3"
+        },
+        {
+          "text": "for this iteration.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c7323dc0b220.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4e9f97a59729.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-02",
+      "node_id": "opening",
+      "text": "We have a lot to cover today.",
+      "example": "We have a lot to cover today, so let's stay focused.",
+      "translation_vi": "Hôm nay có nhiều việc cần bàn, nên hãy tập trung nhé.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fc187e2ed065.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7117f5044455.mp3",
+      "phrases": [
+        {
+          "text": "We have a lot to cover today,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8d466cf579d9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8fc967bf1c68.mp3"
+        },
+        {
+          "text": "so let's stay focused.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aa4c03c04cba.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cd5d7d173b19.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-03",
+      "node_id": "opening",
+      "text": "First, let's review the backlog.",
+      "example": "First, let's review the top priority items.",
+      "translation_vi": "Đầu tiên, hãy xem xét các mục ưu tiên cao nhất.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e102bdc1e5e6.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9879035eb7e2.mp3",
+      "phrases": [
+        {
+          "text": "First, let's review",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_34f6b3710afd.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_89fd5b3f0231.mp3"
+        },
+        {
+          "text": "the top priority items.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_28b995bcfa7a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_10905d680521.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-04",
+      "node_id": "opening",
+      "text": "Who is the product owner today?",
+      "example": "Who is the product owner presenting today?",
+      "translation_vi": "Hôm nay ai là product owner trình bày?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5380f3608429.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e432d4469aeb.mp3",
+      "phrases": [
+        {
+          "text": "Who is the product owner",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a8861a117ca.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7df9976a4c04.mp3"
+        },
+        {
+          "text": "presenting today?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_944dd26bc833.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_79c4fa441ad0.mp3"
+        }
+      ]
+    },
+    {
+      "id": "opening-05",
+      "node_id": "opening",
+      "text": "I'll facilitate the session.",
+      "example": "I'll facilitate the session. Let's go around the room.",
+      "translation_vi": "Tôi sẽ điều phối buổi họp. Mọi người lần lượt phát biểu nhé.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1a71944cbc2b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_37aec2a709a2.mp3",
+      "phrases": [
+        {
+          "text": "I'll facilitate the session.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ffd0774cb1a0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_db2837b9b285.mp3"
+        },
+        {
+          "text": "Let's go around the room.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e811f60473da.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9f267acb534c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "backlog-review-01",
+      "node_id": "backlog-review",
+      "text": "This is the top priority story.",
+      "example": "This is the top priority story for the customer.",
+      "translation_vi": "Đây là story ưu tiên cao nhất cho khách hàng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_301c48f69c6e.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d8aacea6fd16.mp3",
+      "phrases": [
+        {
+          "text": "This is the top priority story",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f410241ff445.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2992adb4ab05.mp3"
+        },
+        {
+          "text": "for the customer.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0b12798b6f17.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_38e184eaf915.mp3"
+        }
+      ]
+    },
+    {
+      "id": "backlog-review-02",
+      "node_id": "backlog-review",
+      "text": "Can you explain the requirements?",
+      "example": "Can you explain the requirements for this feature?",
+      "translation_vi": "Bạn giải thích yêu cầu cho tính năng này được không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_591cd8a4e959.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7ce020c7a4f3.mp3",
+      "phrases": [
+        {
+          "text": "Can you explain",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac50d747b188.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_531fb4cd7eda.mp3"
+        },
+        {
+          "text": "the requirements",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec519863661b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_53e47274276e.mp3"
+        },
+        {
+          "text": "for this feature?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_27832b5c4d1c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8ef5e72e38b3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "backlog-review-03",
+      "node_id": "backlog-review",
+      "text": "What is the acceptance criteria?",
+      "example": "What is the acceptance criteria for the RAG pipeline?",
+      "translation_vi": "Tiêu chí chấp nhận cho RAG pipeline là gì?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d67d0651ca0b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cf7547fcb266.mp3",
+      "phrases": [
+        {
+          "text": "What is the acceptance criteria",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1042a173533.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1a7663b15222.mp3"
+        },
+        {
+          "text": "for the RAG pipeline?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed9910e447f0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ab4650846301.mp3"
+        }
+      ]
+    },
+    {
+      "id": "backlog-review-04",
+      "node_id": "backlog-review",
+      "text": "Let's break this down into tasks.",
+      "example": "Let's break this story down into smaller tasks.",
+      "translation_vi": "Hãy chia nhỏ story này thành các task nhỏ hơn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a913ede1d87c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_44697d7560dc.mp3",
+      "phrases": [
+        {
+          "text": "Let's break this story down",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_75051cd8ea1d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c9d73049bdf6.mp3"
+        },
+        {
+          "text": "into smaller tasks.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_497af35ffaf7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1605532b4b65.mp3"
+        }
+      ]
+    },
+    {
+      "id": "backlog-review-05",
+      "node_id": "backlog-review",
+      "text": "Are there any dependencies?",
+      "example": "Are there any dependencies on the embedding service?",
+      "translation_vi": "Có phụ thuộc nào vào embedding service không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_948b95d2fac0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8153c45d6247.mp3",
+      "phrases": [
+        {
+          "text": "Are there any dependencies",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_81e6a3edad18.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9879fa021036.mp3"
+        },
+        {
+          "text": "on the embedding service?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b2a3854d1166.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e35ed7c8b445.mp3"
+        }
+      ]
+    },
+    {
+      "id": "estimation-01",
+      "node_id": "estimation",
+      "text": "How many story points is this?",
+      "example": "How many story points is this feature?",
+      "translation_vi": "Tính năng này bao nhiêu story points?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac943aee2581.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3d5190ea7830.mp3",
+      "phrases": [
+        {
+          "text": "How many story points",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ba7e43864a07.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_59ff3ec627d8.mp3"
+        },
+        {
+          "text": "is this feature?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_472354139cbc.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b26222a41966.mp3"
+        }
+      ]
+    },
+    {
+      "id": "estimation-02",
+      "node_id": "estimation",
+      "text": "I'd estimate it at...",
+      "example": "I'd estimate it at five story points.",
+      "translation_vi": "Tôi ước lượng khoảng 5 story points.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f6202ca9ee2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_61a8bad7ba4d.mp3",
+      "phrases": [
+        {
+          "text": "I'd estimate it at",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b59486964581.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_071d2562808b.mp3"
+        },
+        {
+          "text": "five story points.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0bf7789d550c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c67c97bc8b22.mp3"
+        }
+      ]
+    },
+    {
+      "id": "estimation-03",
+      "node_id": "estimation",
+      "text": "I think it's more complex.",
+      "example": "I think it's more complex than that. Maybe eight points.",
+      "translation_vi": "Tôi nghĩ nó phức tạp hơn thế. Có thể 8 points.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7169bf4c71f0.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_23bc31326a0c.mp3",
+      "phrases": [
+        {
+          "text": "I think it's more complex than that.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6f8899794b06.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_797a7e2619d3.mp3"
+        },
+        {
+          "text": "Maybe eight points.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c451d4a3d7a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_819e4dd2d7cd.mp3"
+        }
+      ]
+    },
+    {
+      "id": "estimation-04",
+      "node_id": "estimation",
+      "text": "Let's take the average.",
+      "example": "Let's take the average of all estimates.",
+      "translation_vi": "Hãy lấy trung bình các ước lượng.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ab9efce1de7a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8bcd48797363.mp3",
+      "phrases": [
+        {
+          "text": "Let's take the average",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80e80b493244.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_89cb8a7814be.mp3"
+        },
+        {
+          "text": "of all estimates.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_237c02bc3522.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a7a2e1ea757c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "estimation-05",
+      "node_id": "estimation",
+      "text": "I'm not sure about this one.",
+      "example": "I'm not sure about this one. Can we discuss it more?",
+      "translation_vi": "Tôi không chắc về cái này. Chúng ta bàn thêm được không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9b8ee952e45b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b0addd800c66.mp3",
+      "phrases": [
+        {
+          "text": "I'm not sure about this one.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_646b64f79829.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d3e86330bae1.mp3"
+        },
+        {
+          "text": "Can we discuss it more?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2b4f16183f29.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1a83d204573e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "capacity-01",
+      "node_id": "capacity",
+      "text": "What is our team's velocity?",
+      "example": "What is our team's velocity this sprint?",
+      "translation_vi": "Vận tốc của team sprint này là bao nhiêu?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_449678bc2839.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2c17edbb9362.mp3",
+      "phrases": [
+        {
+          "text": "What is our team's velocity",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ce111d297d64.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_187e927128db.mp3"
+        },
+        {
+          "text": "this sprint?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7f3a02b00679.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1c813b70036c.mp3"
+        }
+      ]
+    },
+    {
+      "id": "capacity-02",
+      "node_id": "capacity",
+      "text": "We have enough capacity for...",
+      "example": "We have enough capacity for about thirty points.",
+      "translation_vi": "Chúng ta có đủ năng lực cho khoảng 30 points.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb00bac467ac.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bb877f0101a5.mp3",
+      "phrases": [
+        {
+          "text": "We have enough capacity",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2549dc110e0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_284738e8319d.mp3"
+        },
+        {
+          "text": "for about thirty points.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5c23a4e75c3b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5fe01655867a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "capacity-03",
+      "node_id": "capacity",
+      "text": "Some of us are on leave.",
+      "example": "Some of us are on leave next week, so capacity is lower.",
+      "translation_vi": "Một số người nghỉ phép tuần sau, nên năng lực thấp hơn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eeb6c8f95da1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6b9bd5fea575.mp3",
+      "phrases": [
+        {
+          "text": "Some of us are on leave next week,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4708ec82c1d4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_677b9d854133.mp3"
+        },
+        {
+          "text": "so capacity is lower.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_56cc411fb41b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e997289b3485.mp3"
+        }
+      ]
+    },
+    {
+      "id": "capacity-04",
+      "node_id": "capacity",
+      "text": "We need to budget for tech debt.",
+      "example": "We need to budget for tech debt and code reviews.",
+      "translation_vi": "Chúng ta cần dành ngân sách cho nợ kỹ thuật và code review.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06075d02fa7c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_77022ba5f8fc.mp3",
+      "phrases": [
+        {
+          "text": "We need to budget",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_429d0c1d7d70.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4dacb9617815.mp3"
+        },
+        {
+          "text": "for tech debt",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b6e8c18db9d0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce025f698397.mp3"
+        },
+        {
+          "text": "and code reviews.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a36a9b5c20a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4257e006cd62.mp3"
+        }
+      ]
+    },
+    {
+      "id": "capacity-05",
+      "node_id": "capacity",
+      "text": "I can take on one more item.",
+      "example": "I can take on one more item if needed.",
+      "translation_vi": "Tôi có thể nhận thêm một mục nếu cần.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f08fca9dbc4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fff20f4212c9.mp3",
+      "phrases": [
+        {
+          "text": "I can take on one more item",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8fe9528e228e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ce5c69ed1f19.mp3"
+        },
+        {
+          "text": "if needed.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_806be9c1318c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f218a6d2db62.mp3"
+        }
+      ]
+    },
+    {
+      "id": "commitment-01",
+      "node_id": "commitment",
+      "text": "So we commit to these stories.",
+      "example": "So we commit to these five stories for the sprint.",
+      "translation_vi": "Vậy chúng ta cam kết 5 story này cho sprint.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_348bcae94ba2.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_164be6995a14.mp3",
+      "phrases": [
+        {
+          "text": "So we commit to these five stories",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec10410d643d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_61980d9d45a7.mp3"
+        },
+        {
+          "text": "for the sprint.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_09ca3db495de.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a8e98966295d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "commitment-02",
+      "node_id": "commitment",
+      "text": "Is everyone comfortable with this?",
+      "example": "Is everyone comfortable with this commitment?",
+      "translation_vi": "Mọi người có thoải mái với cam kết này không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e248fc8f7c1d.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c350073bfebc.mp3",
+      "phrases": [
+        {
+          "text": "Is everyone comfortable",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a14c30e4f72a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2bba10eca302.mp3"
+        },
+        {
+          "text": "with this commitment?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c544916095b9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_05d4d91e347b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "commitment-03",
+      "node_id": "commitment",
+      "text": "We should set a stretch goal.",
+      "example": "We should set a stretch goal for the agent workflow.",
+      "translation_vi": "Chúng ta nên đặt một mục tiêu mở rộng cho agent workflow.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f0a2d2c920c3.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f2518bf73c86.mp3",
+      "phrases": [
+        {
+          "text": "We should set a stretch goal",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_607844060ac0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a801f7effe53.mp3"
+        },
+        {
+          "text": "for the agent workflow.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e10b3da4e388.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fb02f43fcf6a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "commitment-04",
+      "node_id": "commitment",
+      "text": "I'll own the RAG pipeline task.",
+      "example": "I'll own the RAG pipeline task and the evaluation.",
+      "translation_vi": "Tôi sẽ chịu trách nhiệm task RAG pipeline và đánh giá.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ba825d218d6a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ec855bf7f4c7.mp3",
+      "phrases": [
+        {
+          "text": "I'll own the RAG pipeline task",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_06a23f6036b1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ba000900c89d.mp3"
+        },
+        {
+          "text": "and the evaluation.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_125811f2e8f7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_606206247dd3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "commitment-05",
+      "node_id": "commitment",
+      "text": "Let's assign the remaining items.",
+      "example": "Let's assign the remaining items to team members.",
+      "translation_vi": "Hãy phân công các mục còn lại cho thành viên.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_133441408038.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_08f5588d7c31.mp3",
+      "phrases": [
+        {
+          "text": "Let's assign the remaining items",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b162a55b78f7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_33cd049fb8f0.mp3"
+        },
+        {
+          "text": "to team members.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f21c5827468a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_692660e06412.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-01",
+      "node_id": "closing",
+      "text": "Great, the plan looks solid.",
+      "example": "Great, the plan looks solid. Let's proceed.",
+      "translation_vi": "Tuyệt, kế hoạch có vẻ chắc chắn. Tiến hành thôi.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cdfd51e1ad95.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c9898b0d52df.mp3",
+      "phrases": [
+        {
+          "text": "Great, the plan looks solid.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_284e565ac95c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8ab984850a2c.mp3"
+        },
+        {
+          "text": "Let's proceed.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_feafd8aced96.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ef8d3534d684.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-02",
+      "node_id": "closing",
+      "text": "I'll update the board after this.",
+      "example": "I'll update the board after this meeting.",
+      "translation_vi": "Sau họp tôi sẽ cập nhật board.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c4995710b00.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5ab24b75acee.mp3",
+      "phrases": [
+        {
+          "text": "I'll update the board",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_71c13383ec32.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_de1890442df1.mp3"
+        },
+        {
+          "text": "after this meeting.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0cd2343679af.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bfbf2717ff07.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-03",
+      "node_id": "closing",
+      "text": "Any questions before we wrap up?",
+      "example": "Any questions before we wrap up the planning?",
+      "translation_vi": "Có câu hỏi nào trước khi kết thúc không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_91efb79006be.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_22fa4b79550f.mp3",
+      "phrases": [
+        {
+          "text": "Any questions",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0fc671e457b5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e2fad53cc8e7.mp3"
+        },
+        {
+          "text": "before we wrap up the planning?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d1070aae4ed1.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0e5965ea7de1.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-04",
+      "node_id": "closing",
+      "text": "Good luck with the sprint.",
+      "example": "Good luck with the sprint, everyone!",
+      "translation_vi": "Chúc mọi người sprint thành công!",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_45ede5b979a3.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e7f1f3b9b15c.mp3",
+      "phrases": [
+        {
+          "text": "Good luck with the sprint,",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df48e9203891.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7daed799b819.mp3"
+        },
+        {
+          "text": "everyone!",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e1a42b4f4379.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6cc2f978c6cd.mp3"
+        }
+      ]
+    },
+    {
+      "id": "closing-05",
+      "node_id": "closing",
+      "text": "Let's check in at the daily standup.",
+      "example": "Let's check in at the daily standup to track progress.",
+      "translation_vi": "Hãy cập nhật trong daily standup để theo dõi tiến độ.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_729264b12714.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_58d7eb7bd03e.mp3",
+      "phrases": [
+        {
+          "text": "Let's check in at the daily standup",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_59b79221d89f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2efc2d810c29.mp3"
+        },
+        {
+          "text": "to track progress.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a046ab3e5dab.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5bd43f6fdd2e.mp3"
+        }
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What is the first item in the backlog?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_94b5ee11b1b6.mp3",
+      "accepted_patterns": [
+        "The first item is",
+        "This is the top priority story",
+        "We have"
+      ],
+      "hint_vi": "Nói về mục đầu tiên trong backlog"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "How many story points does this task need?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1e28b1c046cb.mp3",
+      "accepted_patterns": [
+        "I'd estimate it at",
+        "I think it's",
+        "It's about",
+        "Maybe"
+      ],
+      "hint_vi": "Đưa ra ước lượng story points"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What is our capacity for this sprint?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1b977369ad32.mp3",
+      "accepted_patterns": [
+        "We have enough capacity for",
+        "Our velocity is",
+        "Some of us are on leave",
+        "We can take on"
+      ],
+      "hint_vi": "Nói về năng lực của team"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What do we commit to deliver?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_deb67cefe913.mp3",
+      "accepted_patterns": [
+        "We commit to",
+        "We will deliver",
+        "I'll own",
+        "We'll focus on"
+      ],
+      "hint_vi": "Nêu cam kết của team"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "Any concerns about the plan?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b2aec50979f.mp3",
+      "accepted_patterns": [
+        "I'm not sure about",
+        "Is everyone comfortable with",
+        "We should discuss",
+        "No concerns"
+      ],
+      "hint_vi": "Nói về bất kỳ lo ngại nào"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What are your next steps after this meeting?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_86a76bb07436.mp3",
+      "accepted_patterns": [
+        "I'll update the board",
+        "I'll start working on",
+        "I'll prepare",
+        "I'll follow up with"
+      ],
+      "hint_vi": "Nói về việc bạn sẽ làm sau họp"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Planning the sprint with the team",
+      "title_vi": "Lập kế hoạch sprint với team",
+      "turns": [
+        {
+          "role": "Manager",
+          "text": "Let's start the sprint planning.",
+          "translation_vi": "Bắt đầu họp lập kế hoạch sprint.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b48148160bfe.mp3",
+          "phrases": [
+            {
+              "text": "Let's start",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_45d5da5aa3f5.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c8e75bfcb94f.mp3"
+            },
+            {
+              "text": "the sprint planning.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ec57290edaeb.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6a8ecfb45f2f.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'll take notes.",
+          "translation_vi": "Tôi sẽ ghi chép.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_01f6a98d814e.mp3"
+        },
+        {
+          "role": "Manager",
+          "text": "First, let's look at the top priority story.",
+          "translation_vi": "Đầu tiên, hãy xem story ưu tiên cao nhất.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8cb9eb5833a9.mp3",
+          "phrases": [
+            {
+              "text": "First, let's look at",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1358b852b8b7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_2cefca500088.mp3"
+            },
+            {
+              "text": "the top priority story.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4fbd8006ad49.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_72dd54951d5f.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "This is the RAG pipeline improvement.",
+          "translation_vi": "Đây là cải tiến RAG pipeline.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_838b61c31985.mp3",
+          "phrases": [
+            {
+              "text": "This is",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5e39413fdf81.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d8f7fbf12ac1.mp3"
+            },
+            {
+              "text": "the RAG pipeline improvement.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4288c736dd90.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bf53604bdd7e.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "How many story points do you think?",
+          "translation_vi": "Bạn nghĩ bao nhiêu story points?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3ca9bfc7dd30.mp3",
+          "phrases": [
+            {
+              "text": "How many story points",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_79f6ae3bc1f7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b97d0d3a2184.mp3"
+            },
+            {
+              "text": "do you think?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9f5fa109ccf7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aec0c4ced97c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'd estimate it at eight points.",
+          "translation_vi": "Tôi ước lượng 8 points.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d427298ff7f.mp3",
+          "phrases": [
+            {
+              "text": "I'd estimate it at",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b59486964581.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_071d2562808b.mp3"
+            },
+            {
+              "text": "eight points.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_73b384f634a3.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_139e94bc1e9c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I think it's more like five.",
+          "translation_vi": "Tôi nghĩ chỉ khoảng 5 thôi.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_992dad307fef.mp3",
+          "phrases": [
+            {
+              "text": "I think it's more like five.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_992dad307fef.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_70589f4087af.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "Let's take the average: six point five.",
+          "translation_vi": "Lấy trung bình: 6.5.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5e853d24432c.mp3",
+          "phrases": [
+            {
+              "text": "Let's take the average:",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_89706611e714.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fb92f4badaff.mp3"
+            },
+            {
+              "text": "six point five.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_85ff051dfa75.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_34ee1bfccf27.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sounds fair. Our velocity is thirty points.",
+          "translation_vi": "Hợp lý. Vận tốc của team là 30 points.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_156a4a632252.mp3",
+          "phrases": [
+            {
+              "text": "Sounds fair.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aad69e1dfdec.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7bf48eb1b018.mp3"
+            },
+            {
+              "text": "Our velocity is thirty points.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a4690a36a211.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a0456bd023b2.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "Then we can commit to four stories.",
+          "translation_vi": "Vậy chúng ta có thể cam kết 4 stories.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9726557ba280.mp3",
+          "phrases": [
+            {
+              "text": "Then we can commit to",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_994ea630c079.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0e2ab08baf9c.mp3"
+            },
+            {
+              "text": "four stories.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fe9048e494cb.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c0e7f8f73970.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'll own the pipeline task.",
+          "translation_vi": "Tôi sẽ chịu trách nhiệm task pipeline.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2a009317076.mp3"
+        },
+        {
+          "role": "Manager",
+          "text": "Great. Let's update the board.",
+          "translation_vi": "Tuyệt. Cập nhật board thôi.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5cc3a424dfc2.mp3",
+          "phrases": [
+            {
+              "text": "Great.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e501d24310cc.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fc9f2441d68e.mp3"
+            },
+            {
+              "text": "Let's update the board.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0b5188f3f283.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_107a7c8bf8f6.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Discussing capacity and assignments",
+      "title_vi": "Thảo luận về năng lực và phân công",
+      "turns": [
+        {
+          "role": "Manager",
+          "text": "We have five team members this sprint.",
+          "translation_vi": "Sprint này team có 5 thành viên.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_22fc6b18f465.mp3",
+          "phrases": [
+            {
+              "text": "We have five team members",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5a7960ebd9ad.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1aa5dd5cf944.mp3"
+            },
+            {
+              "text": "this sprint.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7ef43dc10626.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a27689ecd72.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "But two are on leave for three days.",
+          "translation_vi": "Nhưng hai người nghỉ phép 3 ngày.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cdc39e61cc65.mp3",
+          "phrases": [
+            {
+              "text": "But two are on leave",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6ed60f96c9b7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_42fd17d5029c.mp3"
+            },
+            {
+              "text": "for three days.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4e5e2fd59572.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_59c9afda13ff.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "So our effective capacity is lower.",
+          "translation_vi": "Vậy năng lực thực tế thấp hơn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e5dad76a2ddd.mp3",
+          "phrases": [
+            {
+              "text": "So our effective capacity",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_617891487cc2.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_45c81fc70bc2.mp3"
+            },
+            {
+              "text": "is lower.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c4a6dc173559.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9fdb83e06ce6.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "We can take on about twenty points.",
+          "translation_vi": "Chúng ta có thể nhận khoảng 20 points.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1805f917cbbd.mp3",
+          "phrases": [
+            {
+              "text": "We can take on",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_30fb3fe9e142.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e0d559dbdfbc.mp3"
+            },
+            {
+              "text": "about twenty points.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4e3405878c7b.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6de7abd831da.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "I also want to reserve some for tech debt.",
+          "translation_vi": "Tôi cũng muốn dành một ít cho nợ kỹ thuật.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5067a7bd28ac.mp3",
+          "phrases": [
+            {
+              "text": "I also want to reserve some",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1bff4f72c415.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a73b1794d673.mp3"
+            },
+            {
+              "text": "for tech debt.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_711959c2e6ec.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d1c7fca3d8a3.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Good idea. Let's allocate five points.",
+          "translation_vi": "Ý kiến hay. Dành 5 points nhé.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_72ee47b94d05.mp3",
+          "phrases": [
+            {
+              "text": "Good idea.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_60f47e2ba681.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_cf00aaf9d830.mp3"
+            },
+            {
+              "text": "Let's allocate five points.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_522dffa0299e.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_32c18aa4a0b0.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "Then we have fifteen for new features.",
+          "translation_vi": "Vậy còn 15 cho tính năng mới.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b166c918088f.mp3",
+          "phrases": [
+            {
+              "text": "Then we have fifteen",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5514527ad2d4.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_48fc8619c0e4.mp3"
+            },
+            {
+              "text": "for new features.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c9fbfc85f9dc.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_450f6944852f.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'll take the authentication story.",
+          "translation_vi": "Tôi sẽ nhận story xác thực.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4141413c961d.mp3",
+          "phrases": [
+            {
+              "text": "I'll take",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e453377cf4b7.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fabe4568eddb.mp3"
+            },
+            {
+              "text": "the authentication story.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ddd10a06c437.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e40847d78c6c.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "And I'll handle the deployment.",
+          "translation_vi": "Còn tôi xử lý deployment.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5dcd581719fa.mp3"
+        },
+        {
+          "role": "Manager",
+          "text": "Perfect. Let's close the planning.",
+          "translation_vi": "Hoàn hảo. Kết thúc buổi lập kế hoạch.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7e1d4e3d1a55.mp3",
+          "phrases": [
+            {
+              "text": "Perfect.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bb7f2330557d.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_be328f330f3d.mp3"
+            },
+            {
+              "text": "Let's close the planning.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_97e32776bb5a.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_629f067dbc31.mp3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

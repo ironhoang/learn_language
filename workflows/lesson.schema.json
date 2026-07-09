@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workflow Lesson",
+  "description": "Schema cho lesson.json của module English Workflow for AI Engineers. Audio fields để trống khi viết content — scripts/generate_audio_workflow.py sẽ điền URL sau khi TTS + upload R2. Audio của chunk được TTS từ field `example` (câu hoàn chỉnh), không phải từ `text` (pattern có dấu ...). Câu dài (>~5 từ) phải được chia nhỏ thành `phrases` — mỗi phrase có audio riêng — vì người học khó nói liền một câu dài; audio full-sentence vẫn giữ để luyện nối câu.",
+  "type": "object",
+  "required": ["meta", "nodes", "chunks", "recall", "conversations"],
+  "additionalProperties": false,
+  "$defs": {
+    "phrases": {
+      "type": "array",
+      "minItems": 1,
+      "description": "example (hoặc turn.text) chia thành các cụm ngắn, dễ nói (2–5 từ/cụm), theo đúng thứ tự trong câu. Nối các phrase[].text lại (giữ khoảng trắng) phải tái tạo lại đúng câu gốc — không thêm/bớt từ, không diễn giải lại.",
+      "items": {
+        "type": "object",
+        "required": ["text"],
+        "additionalProperties": false,
+        "properties": {
+          "text": { "type": "string" },
+          "audio": { "type": "string", "description": "Script audio điền." },
+          "audio_slow": { "type": "string", "description": "Script audio điền." }
+        }
+      }
+    }
+  },
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["id", "title", "title_vi", "description", "difficulty", "duration_minutes", "category", "tags"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Trùng tên thư mục, vd: daily-standup" },
+        "title": { "type": "string" },
+        "title_vi": { "type": "string" },
+        "description": { "type": "string" },
+        "difficulty": { "enum": ["beginner", "intermediate", "advanced"] },
+        "duration_minutes": { "type": "integer", "minimum": 1 },
+        "category": { "enum": ["team-communication", "engineering", "ai-engineering", "career"] },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 2,
+      "description": "Các bước của workflow theo thứ tự, vd: Greeting → Current Task → ... → End",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "label_vi"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "label": { "type": "string" },
+          "label_vi": { "type": "string" }
+        }
+      }
+    },
+    "chunks": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Mỗi chunk gắn với 1 node qua node_id. Mục tiêu 4–6 chunks/node.",
+      "items": {
+        "type": "object",
+        "required": ["id", "node_id", "text", "example", "translation_vi", "phrases"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "node_id": { "type": "string", "description": "Phải tồn tại trong nodes[].id" },
+          "text": { "type": "string", "description": "Pattern tái sử dụng, vd: \"I'm working on...\"" },
+          "example": { "type": "string", "description": "Câu hoàn chỉnh dùng để TTS + shadowing, vd: \"I'm working on the authentication service.\"" },
+          "translation_vi": { "type": "string" },
+          "audio": { "type": "string", "description": "URL audio của example (nguyên câu), tốc độ thường. Script audio điền." },
+          "audio_slow": { "type": "string", "description": "URL audio của example (nguyên câu), tốc độ chậm. Script audio điền." },
+          "phrases": { "$ref": "#/$defs/phrases" }
+        }
+      }
+    },
+    "recall": {
+      "type": "array",
+      "description": "Active recall: phát câu hỏi → user tự trả lời → đối chiếu accepted_patterns.",
+      "items": {
+        "type": "object",
+        "required": ["id", "prompt", "accepted_patterns"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "prompt": { "type": "string", "description": "Câu hỏi, vd: \"What are you working on?\"" },
+          "prompt_audio": { "type": "string", "description": "Script audio điền." },
+          "accepted_patterns": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" },
+            "description": "Các cách mở đầu câu trả lời hợp lệ, vd: [\"I'm working on\", \"I'm implementing\"]"
+          },
+          "hint_vi": { "type": "string", "description": "Gợi ý tiếng Việt (optional)" }
+        }
+      }
+    },
+    "conversations": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Mini hội thoại 6–10 lượt. Role Engineer là vai user sẽ role-play.",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "turns"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string" },
+          "title_vi": { "type": "string" },
+          "turns": {
+            "type": "array",
+            "minItems": 4,
+            "items": {
+              "type": "object",
+              "required": ["role", "text"],
+              "additionalProperties": false,
+              "properties": {
+                "role": { "enum": ["Manager", "Engineer", "Tech Lead", "HR", "Customer", "CTO", "Interviewer", "Colleague"] },
+                "text": { "type": "string" },
+                "translation_vi": { "type": "string" },
+                "audio": { "type": "string", "description": "URL audio nguyên câu. Script audio điền. Giọng khác nhau theo role." },
+                "phrases": { "$ref": "#/$defs/phrases", "description": "Chỉ cần khi text dài (>~5 từ). Optional cho turn ngắn." }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

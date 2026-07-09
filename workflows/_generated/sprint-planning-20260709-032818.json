@@ -1,0 +1,735 @@
+{
+  "meta": {
+    "id": "sprint-planning",
+    "title": "Sprint Planning",
+    "title_vi": "Họp lập kế hoạch sprint",
+    "description": "Plan the upcoming sprint: review backlog items, estimate effort, discuss capacity, and commit to deliverables.",
+    "difficulty": "intermediate",
+    "duration_minutes": 15,
+    "category": "team-communication",
+    "tags": ["sprint", "agile", "planning", "estimation"]
+  },
+  "nodes": [
+    {
+      "id": "opening",
+      "label": "Opening",
+      "label_vi": "Mở đầu"
+    },
+    {
+      "id": "backlog-review",
+      "label": "Backlog Review",
+      "label_vi": "Xem lại backlog"
+    },
+    {
+      "id": "estimation",
+      "label": "Estimation",
+      "label_vi": "Ước lượng"
+    },
+    {
+      "id": "capacity",
+      "label": "Capacity Check",
+      "label_vi": "Kiểm tra năng lực"
+    },
+    {
+      "id": "commitment",
+      "label": "Commitment",
+      "label_vi": "Cam kết"
+    },
+    {
+      "id": "closing",
+      "label": "Closing",
+      "label_vi": "Kết thúc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "opening-01",
+      "node_id": "opening",
+      "text": "Let's start the sprint planning.",
+      "example": "Let's start the sprint planning for this iteration.",
+      "translation_vi": "Bắt đầu họp lập kế hoạch sprint cho đợt này.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's start", "audio": "", "audio_slow": ""},
+        {"text": "the sprint planning", "audio": "", "audio_slow": ""},
+        {"text": "for this iteration.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "opening-02",
+      "node_id": "opening",
+      "text": "We have a lot to cover today.",
+      "example": "We have a lot to cover today, so let's stay focused.",
+      "translation_vi": "Hôm nay có nhiều việc cần bàn, nên hãy tập trung nhé.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We have a lot to cover today,", "audio": "", "audio_slow": ""},
+        {"text": "so let's stay focused.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "opening-03",
+      "node_id": "opening",
+      "text": "First, let's review the backlog.",
+      "example": "First, let's review the top priority items.",
+      "translation_vi": "Đầu tiên, hãy xem xét các mục ưu tiên cao nhất.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "First, let's review", "audio": "", "audio_slow": ""},
+        {"text": "the top priority items.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "opening-04",
+      "node_id": "opening",
+      "text": "Who is the product owner today?",
+      "example": "Who is the product owner presenting today?",
+      "translation_vi": "Hôm nay ai là product owner trình bày?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Who is the product owner", "audio": "", "audio_slow": ""},
+        {"text": "presenting today?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "opening-05",
+      "node_id": "opening",
+      "text": "I'll facilitate the session.",
+      "example": "I'll facilitate the session. Let's go around the room.",
+      "translation_vi": "Tôi sẽ điều phối buổi họp. Mọi người lần lượt phát biểu nhé.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll facilitate the session.", "audio": "", "audio_slow": ""},
+        {"text": "Let's go around the room.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "backlog-review-01",
+      "node_id": "backlog-review",
+      "text": "This is the top priority story.",
+      "example": "This is the top priority story for the customer.",
+      "translation_vi": "Đây là story ưu tiên cao nhất cho khách hàng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "This is the top priority story", "audio": "", "audio_slow": ""},
+        {"text": "for the customer.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "backlog-review-02",
+      "node_id": "backlog-review",
+      "text": "Can you explain the requirements?",
+      "example": "Can you explain the requirements for this feature?",
+      "translation_vi": "Bạn giải thích yêu cầu cho tính năng này được không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Can you explain", "audio": "", "audio_slow": ""},
+        {"text": "the requirements", "audio": "", "audio_slow": ""},
+        {"text": "for this feature?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "backlog-review-03",
+      "node_id": "backlog-review",
+      "text": "What is the acceptance criteria?",
+      "example": "What is the acceptance criteria for the RAG pipeline?",
+      "translation_vi": "Tiêu chí chấp nhận cho RAG pipeline là gì?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What is the acceptance criteria", "audio": "", "audio_slow": ""},
+        {"text": "for the RAG pipeline?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "backlog-review-04",
+      "node_id": "backlog-review",
+      "text": "Let's break this down into tasks.",
+      "example": "Let's break this story down into smaller tasks.",
+      "translation_vi": "Hãy chia nhỏ story này thành các task nhỏ hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's break this story down", "audio": "", "audio_slow": ""},
+        {"text": "into smaller tasks.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "backlog-review-05",
+      "node_id": "backlog-review",
+      "text": "Are there any dependencies?",
+      "example": "Are there any dependencies on the embedding service?",
+      "translation_vi": "Có phụ thuộc nào vào embedding service không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Are there any dependencies", "audio": "", "audio_slow": ""},
+        {"text": "on the embedding service?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "estimation-01",
+      "node_id": "estimation",
+      "text": "How many story points is this?",
+      "example": "How many story points is this feature?",
+      "translation_vi": "Tính năng này bao nhiêu story points?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How many story points", "audio": "", "audio_slow": ""},
+        {"text": "is this feature?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "estimation-02",
+      "node_id": "estimation",
+      "text": "I'd estimate it at...",
+      "example": "I'd estimate it at five story points.",
+      "translation_vi": "Tôi ước lượng khoảng 5 story points.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'd estimate it at", "audio": "", "audio_slow": ""},
+        {"text": "five story points.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "estimation-03",
+      "node_id": "estimation",
+      "text": "I think it's more complex.",
+      "example": "I think it's more complex than that. Maybe eight points.",
+      "translation_vi": "Tôi nghĩ nó phức tạp hơn thế. Có thể 8 points.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I think it's more complex than that.", "audio": "", "audio_slow": ""},
+        {"text": "Maybe eight points.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "estimation-04",
+      "node_id": "estimation",
+      "text": "Let's take the average.",
+      "example": "Let's take the average of all estimates.",
+      "translation_vi": "Hãy lấy trung bình các ước lượng.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's take the average", "audio": "", "audio_slow": ""},
+        {"text": "of all estimates.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "estimation-05",
+      "node_id": "estimation",
+      "text": "I'm not sure about this one.",
+      "example": "I'm not sure about this one. Can we discuss it more?",
+      "translation_vi": "Tôi không chắc về cái này. Chúng ta bàn thêm được không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm not sure about this one.", "audio": "", "audio_slow": ""},
+        {"text": "Can we discuss it more?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "capacity-01",
+      "node_id": "capacity",
+      "text": "What is our team's velocity?",
+      "example": "What is our team's velocity this sprint?",
+      "translation_vi": "Vận tốc của team sprint này là bao nhiêu?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What is our team's velocity", "audio": "", "audio_slow": ""},
+        {"text": "this sprint?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "capacity-02",
+      "node_id": "capacity",
+      "text": "We have enough capacity for...",
+      "example": "We have enough capacity for about thirty points.",
+      "translation_vi": "Chúng ta có đủ năng lực cho khoảng 30 points.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We have enough capacity", "audio": "", "audio_slow": ""},
+        {"text": "for about thirty points.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "capacity-03",
+      "node_id": "capacity",
+      "text": "Some of us are on leave.",
+      "example": "Some of us are on leave next week, so capacity is lower.",
+      "translation_vi": "Một số người nghỉ phép tuần sau, nên năng lực thấp hơn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Some of us are on leave next week,", "audio": "", "audio_slow": ""},
+        {"text": "so capacity is lower.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "capacity-04",
+      "node_id": "capacity",
+      "text": "We need to budget for tech debt.",
+      "example": "We need to budget for tech debt and code reviews.",
+      "translation_vi": "Chúng ta cần dành ngân sách cho nợ kỹ thuật và code review.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We need to budget", "audio": "", "audio_slow": ""},
+        {"text": "for tech debt", "audio": "", "audio_slow": ""},
+        {"text": "and code reviews.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "capacity-05",
+      "node_id": "capacity",
+      "text": "I can take on one more item.",
+      "example": "I can take on one more item if needed.",
+      "translation_vi": "Tôi có thể nhận thêm một mục nếu cần.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I can take on one more item", "audio": "", "audio_slow": ""},
+        {"text": "if needed.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "commitment-01",
+      "node_id": "commitment",
+      "text": "So we commit to these stories.",
+      "example": "So we commit to these five stories for the sprint.",
+      "translation_vi": "Vậy chúng ta cam kết 5 story này cho sprint.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "So we commit to these five stories", "audio": "", "audio_slow": ""},
+        {"text": "for the sprint.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "commitment-02",
+      "node_id": "commitment",
+      "text": "Is everyone comfortable with this?",
+      "example": "Is everyone comfortable with this commitment?",
+      "translation_vi": "Mọi người có thoải mái với cam kết này không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Is everyone comfortable", "audio": "", "audio_slow": ""},
+        {"text": "with this commitment?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "commitment-03",
+      "node_id": "commitment",
+      "text": "We should set a stretch goal.",
+      "example": "We should set a stretch goal for the agent workflow.",
+      "translation_vi": "Chúng ta nên đặt một mục tiêu mở rộng cho agent workflow.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "We should set a stretch goal", "audio": "", "audio_slow": ""},
+        {"text": "for the agent workflow.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "commitment-04",
+      "node_id": "commitment",
+      "text": "I'll own the RAG pipeline task.",
+      "example": "I'll own the RAG pipeline task and the evaluation.",
+      "translation_vi": "Tôi sẽ chịu trách nhiệm task RAG pipeline và đánh giá.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll own the RAG pipeline task", "audio": "", "audio_slow": ""},
+        {"text": "and the evaluation.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "commitment-05",
+      "node_id": "commitment",
+      "text": "Let's assign the remaining items.",
+      "example": "Let's assign the remaining items to team members.",
+      "translation_vi": "Hãy phân công các mục còn lại cho thành viên.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's assign the remaining items", "audio": "", "audio_slow": ""},
+        {"text": "to team members.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "closing-01",
+      "node_id": "closing",
+      "text": "Great, the plan looks solid.",
+      "example": "Great, the plan looks solid. Let's proceed.",
+      "translation_vi": "Tuyệt, kế hoạch có vẻ chắc chắn. Tiến hành thôi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Great, the plan looks solid.", "audio": "", "audio_slow": ""},
+        {"text": "Let's proceed.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "closing-02",
+      "node_id": "closing",
+      "text": "I'll update the board after this.",
+      "example": "I'll update the board after this meeting.",
+      "translation_vi": "Sau họp tôi sẽ cập nhật board.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll update the board", "audio": "", "audio_slow": ""},
+        {"text": "after this meeting.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "closing-03",
+      "node_id": "closing",
+      "text": "Any questions before we wrap up?",
+      "example": "Any questions before we wrap up the planning?",
+      "translation_vi": "Có câu hỏi nào trước khi kết thúc không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Any questions", "audio": "", "audio_slow": ""},
+        {"text": "before we wrap up the planning?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "closing-04",
+      "node_id": "closing",
+      "text": "Good luck with the sprint.",
+      "example": "Good luck with the sprint, everyone!",
+      "translation_vi": "Chúc mọi người sprint thành công!",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Good luck with the sprint,", "audio": "", "audio_slow": ""},
+        {"text": "everyone!", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "closing-05",
+      "node_id": "closing",
+      "text": "Let's check in at the daily standup.",
+      "example": "Let's check in at the daily standup to track progress.",
+      "translation_vi": "Hãy cập nhật trong daily standup để theo dõi tiến độ.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let's check in at the daily standup", "audio": "", "audio_slow": ""},
+        {"text": "to track progress.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "What is the first item in the backlog?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "The first item is",
+        "This is the top priority story",
+        "We have"
+      ],
+      "hint_vi": "Nói về mục đầu tiên trong backlog"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "How many story points does this task need?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'd estimate it at",
+        "I think it's",
+        "It's about",
+        "Maybe"
+      ],
+      "hint_vi": "Đưa ra ước lượng story points"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "What is our capacity for this sprint?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "We have enough capacity for",
+        "Our velocity is",
+        "Some of us are on leave",
+        "We can take on"
+      ],
+      "hint_vi": "Nói về năng lực của team"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "What do we commit to deliver?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "We commit to",
+        "We will deliver",
+        "I'll own",
+        "We'll focus on"
+      ],
+      "hint_vi": "Nêu cam kết của team"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "Any concerns about the plan?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'm not sure about",
+        "Is everyone comfortable with",
+        "We should discuss",
+        "No concerns"
+      ],
+      "hint_vi": "Nói về bất kỳ lo ngại nào"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "What are your next steps after this meeting?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'll update the board",
+        "I'll start working on",
+        "I'll prepare",
+        "I'll follow up with"
+      ],
+      "hint_vi": "Nói về việc bạn sẽ làm sau họp"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Planning the sprint with the team",
+      "title_vi": "Lập kế hoạch sprint với team",
+      "turns": [
+        {
+          "role": "Manager",
+          "text": "Let's start the sprint planning.",
+          "translation_vi": "Bắt đầu họp lập kế hoạch sprint.",
+          "audio": "",
+          "phrases": [
+            {"text": "Let's start", "audio": "", "audio_slow": ""},
+            {"text": "the sprint planning.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'll take notes.",
+          "translation_vi": "Tôi sẽ ghi chép.",
+          "audio": ""
+        },
+        {
+          "role": "Manager",
+          "text": "First, let's look at the top priority story.",
+          "translation_vi": "Đầu tiên, hãy xem story ưu tiên cao nhất.",
+          "audio": "",
+          "phrases": [
+            {"text": "First, let's look at", "audio": "", "audio_slow": ""},
+            {"text": "the top priority story.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "This is the RAG pipeline improvement.",
+          "translation_vi": "Đây là cải tiến RAG pipeline.",
+          "audio": "",
+          "phrases": [
+            {"text": "This is", "audio": "", "audio_slow": ""},
+            {"text": "the RAG pipeline improvement.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "How many story points do you think?",
+          "translation_vi": "Bạn nghĩ bao nhiêu story points?",
+          "audio": "",
+          "phrases": [
+            {"text": "How many story points", "audio": "", "audio_slow": ""},
+            {"text": "do you think?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'd estimate it at eight points.",
+          "translation_vi": "Tôi ước lượng 8 points.",
+          "audio": "",
+          "phrases": [
+            {"text": "I'd estimate it at", "audio": "", "audio_slow": ""},
+            {"text": "eight points.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I think it's more like five.",
+          "translation_vi": "Tôi nghĩ chỉ khoảng 5 thôi.",
+          "audio": "",
+          "phrases": [
+            {"text": "I think it's more like five.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "Let's take the average: six point five.",
+          "translation_vi": "Lấy trung bình: 6.5.",
+          "audio": "",
+          "phrases": [
+            {"text": "Let's take the average:", "audio": "", "audio_slow": ""},
+            {"text": "six point five.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Sounds fair. Our velocity is thirty points.",
+          "translation_vi": "Hợp lý. Vận tốc của team là 30 points.",
+          "audio": "",
+          "phrases": [
+            {"text": "Sounds fair.", "audio": "", "audio_slow": ""},
+            {"text": "Our velocity is thirty points.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "Then we can commit to four stories.",
+          "translation_vi": "Vậy chúng ta có thể cam kết 4 stories.",
+          "audio": "",
+          "phrases": [
+            {"text": "Then we can commit to", "audio": "", "audio_slow": ""},
+            {"text": "four stories.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'll own the pipeline task.",
+          "translation_vi": "Tôi sẽ chịu trách nhiệm task pipeline.",
+          "audio": ""
+        },
+        {
+          "role": "Manager",
+          "text": "Great. Let's update the board.",
+          "translation_vi": "Tuyệt. Cập nhật board thôi.",
+          "audio": "",
+          "phrases": [
+            {"text": "Great.", "audio": "", "audio_slow": ""},
+            {"text": "Let's update the board.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conv-02",
+      "title": "Discussing capacity and assignments",
+      "title_vi": "Thảo luận về năng lực và phân công",
+      "turns": [
+        {
+          "role": "Manager",
+          "text": "We have five team members this sprint.",
+          "translation_vi": "Sprint này team có 5 thành viên.",
+          "audio": "",
+          "phrases": [
+            {"text": "We have five team members", "audio": "", "audio_slow": ""},
+            {"text": "this sprint.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "But two are on leave for three days.",
+          "translation_vi": "Nhưng hai người nghỉ phép 3 ngày.",
+          "audio": "",
+          "phrases": [
+            {"text": "But two are on leave", "audio": "", "audio_slow": ""},
+            {"text": "for three days.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "So our effective capacity is lower.",
+          "translation_vi": "Vậy năng lực thực tế thấp hơn.",
+          "audio": "",
+          "phrases": [
+            {"text": "So our effective capacity", "audio": "", "audio_slow": ""},
+            {"text": "is lower.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "We can take on about twenty points.",
+          "translation_vi": "Chúng ta có thể nhận khoảng 20 points.",
+          "audio": "",
+          "phrases": [
+            {"text": "We can take on", "audio": "", "audio_slow": ""},
+            {"text": "about twenty points.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "I also want to reserve some for tech debt.",
+          "translation_vi": "Tôi cũng muốn dành một ít cho nợ kỹ thuật.",
+          "audio": "",
+          "phrases": [
+            {"text": "I also want to reserve some", "audio": "", "audio_slow": ""},
+            {"text": "for tech debt.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "Good idea. Let's allocate five points.",
+          "translation_vi": "Ý kiến hay. Dành 5 points nhé.",
+          "audio": "",
+          "phrases": [
+            {"text": "Good idea.", "audio": "", "audio_slow": ""},
+            {"text": "Let's allocate five points.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Manager",
+          "text": "Then we have fifteen for new features.",
+          "translation_vi": "Vậy còn 15 cho tính năng mới.",
+          "audio": "",
+          "phrases": [
+            {"text": "Then we have fifteen", "audio": "", "audio_slow": ""},
+            {"text": "for new features.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Engineer",
+          "text": "I'll take the authentication story.",
+          "translation_vi": "Tôi sẽ nhận story xác thực.",
+          "audio": "",
+          "phrases": [
+            {"text": "I'll take", "audio": "", "audio_slow": ""},
+            {"text": "the authentication story.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "And I'll handle the deployment.",
+          "translation_vi": "Còn tôi xử lý deployment.",
+          "audio": ""
+        },
+        {
+          "role": "Manager",
+          "text": "Perfect. Let's close the planning.",
+          "translation_vi": "Hoàn hảo. Kết thúc buổi lập kế hoạch.",
+          "audio": "",
+          "phrases": [
+            {"text": "Perfect.", "audio": "", "audio_slow": ""},
+            {"text": "Let's close the planning.", "audio": "", "audio_slow": ""}
+          ]
+        }
+      ]
+    }
+  ]
+}

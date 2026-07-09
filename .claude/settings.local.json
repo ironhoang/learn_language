@@ -24,7 +24,21 @@
       "Bash(python scripts/generate_audio_tech.py 01_python_core.html --dry-run)",
       "Bash(.venv/bin/python *)",
       "Bash(ln -s ../../sum-tech /Users/nexusfrontiertech/projects/tools/learn-en-ch/react-app/public/sum-tech)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(node --check /Users/nexusfrontiertech/projects/tools/learn-en-ch/workflows/shared/lesson.js)",
+      "Bash(npx --yes playwright --version)",
+      "Read(//Users/nexusfrontiertech/Library/Caches/ms-playwright/**)",
+      "Bash(npx playwright *)",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-nexusfrontiertech-projects-tools-learn-en-ch/958794ee-5e92-44a5-acf9-469939f6df59/scratchpad)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"check now: %{http_code}\\\\n\" http://localhost:8850/workflows/daily-standup/index.html)",
+      "Bash(echo \"exit code: $?\")",
+      "Bash(curl -s http://localhost:8850/workflows/daily-standup/index.html)",
+      "Bash(curl -s -o /dev/null -w \"progress.js: %{http_code}\\\\n\" http://localhost:8850/workflows/shared/progress.js)",
+      "Bash(curl -s -o /dev/null -w \"lesson.js: %{http_code}\\\\n\" http://localhost:8850/workflows/shared/lesson.js)",
+      "Bash(curl -sI http://localhost:8850/workflows/daily-standup/index.html)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }

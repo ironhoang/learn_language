@@ -1,0 +1,58 @@
+{
+  "sprint-planning": {
+    "title": "Sprint Planning",
+    "title_vi": "Họp lập kế hoạch sprint",
+    "category": "team-communication",
+    "tags": ["sprint", "agile", "planning", "estimation"],
+    "hint": "A team planning the next sprint: reviewing the backlog, estimating story points, discussing capacity, committing to what will be delivered."
+  },
+  "code-review": {
+    "title": "Code Review",
+    "title_vi": "Review code",
+    "category": "engineering",
+    "tags": ["code-review", "pull-request", "feedback"],
+    "hint": "An engineer reviewing a teammate's pull request: understanding the change, asking clarifying questions, requesting changes constructively, approving."
+  },
+  "bug-investigation": {
+    "title": "Bug Investigation",
+    "title_vi": "Điều tra bug",
+    "category": "engineering",
+    "tags": ["debugging", "bug", "root-cause"],
+    "hint": "An engineer investigating a reported bug: reproducing it, narrowing down the root cause, explaining findings to the team, proposing a fix."
+  },
+  "production-incident": {
+    "title": "Production Incident",
+    "title_vi": "Sự cố production",
+    "category": "engineering",
+    "tags": ["incident", "oncall", "outage"],
+    "hint": "An on-call engineer handling a production incident: acknowledging the alert, assessing impact, communicating status updates, coordinating a fix, writing a postmortem."
+  },
+  "architecture-discussion": {
+    "title": "Architecture Discussion",
+    "title_vi": "Thảo luận kiến trúc",
+    "category": "engineering",
+    "tags": ["architecture", "system-design", "trade-off"],
+    "hint": "Engineers discussing a system design decision: proposing an approach, weighing trade-offs, pushing back with concerns, reaching a decision."
+  },
+  "ai-engineering-discussion": {
+    "title": "AI Engineering Discussion",
+    "title_vi": "Thảo luận AI Engineering",
+    "category": "ai-engineering",
+    "tags": ["rag", "llm", "agent", "mcp", "embedding"],
+    "hint": "AI engineers discussing an LLM system: RAG pipeline design, embedding/vector DB choices, agent workflows, evaluation results, prompt engineering trade-offs."
+  },
+  "technical-interview": {
+    "title": "Technical Interview",
+    "title_vi": "Phỏng vấn kỹ thuật",
+    "category": "career",
+    "tags": ["interview", "technical", "career"],
+    "hint": "A candidate in a technical interview: explaining past projects, walking through problem-solving out loud, answering follow-up questions, asking the interviewer questions."
+  },
+  "hr-interview": {
+    "title": "HR Interview",
+    "title_vi": "Phỏng vấn HR",
+    "category": "career",
+    "tags": ["interview", "hr", "career"],
+    "hint": "A candidate in an HR/behavioral interview: talking about strengths and weaknesses, why they're leaving their current job, salary expectations, culture-fit questions."
+  }
+}
