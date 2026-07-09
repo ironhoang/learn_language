@@ -8,11 +8,16 @@
 
 # Re-ignore các thư mục không cần thiết
 .venv/
-audio/
+/audio/
 __pycache__/
 node_modules/
 .DS_Store
 spec/
+
+# content-pipeline (shorts video factory) — track source code, ignore artifacts
+content-pipeline/.venv/
+content-pipeline/cache/
+content-pipeline/output/
 
 # Un-ignore HTML files
 !*.html
@@ -33,6 +38,11 @@ spec/
 
 # Un-ignore chính file này
 !.gitignore
+
+# Un-ignore content-pipeline Python source (unlike scripts/, this is tracked)
+!content-pipeline/**/*.py
+!content-pipeline/**/requirements.txt
+!content-pipeline/.env.example
 
 # Un-ignore Vercel config
 !vercel.json
