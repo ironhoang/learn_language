@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "oneOf": [
+      {
+        "required": ["word", "start", "end"],
+        "properties": {
+          "word": { "type": "string" },
+          "start": { "type": "number" },
+          "end": { "type": "number" },
+          "sentence_end": { "type": "boolean" }
+        }
+      },
+      {
+        "required": ["sentence", "start", "end"],
+        "properties": {
+          "sentence": { "type": "string" },
+          "start": { "type": "number" },
+          "end": { "type": "number" }
+        }
+      }
+    ]
+  }
+}

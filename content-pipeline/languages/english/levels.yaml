@@ -1,0 +1,27 @@
+A1:
+  name: Beginner
+  description: "Very basic phrases and everyday expressions, simple present tense, greetings and immediate needs. Roughly 500 word vocabulary."
+A2:
+  name: Elementary
+  description: "Simple sentences about familiar topics (work, shopping, routine), present and simple past tense. Roughly 1000 word vocabulary."
+B1:
+  name: Intermediate
+  description: "Connected text on familiar topics, opinions and plans, most common tenses. Roughly 2000 word vocabulary."
+B2:
+  name: Upper Intermediate
+  description: "Clear, detailed text on a wide range of subjects, fluent spontaneous interaction with native speakers."
+C1:
+  name: Advanced
+  description: "Complex text, implicit meaning, flexible and effective language use for social, academic, and professional purposes."
+C2:
+  name: Proficient
+  description: "Near-native fluency, precise and nuanced expression in virtually any context."
+TOEIC 300:
+  name: TOEIC 300 (Basic workplace English)
+  description: "Very basic workplace vocabulary and simple sentence structures — greetings, simple instructions."
+TOEIC 600:
+  name: TOEIC 600 (Intermediate workplace English)
+  description: "Comfortable with routine workplace communication — meetings, emails, phone calls."
+TOEIC 900:
+  name: TOEIC 900 (Advanced workplace English)
+  description: "Near-fluent professional communication, nuanced business and negotiation language."

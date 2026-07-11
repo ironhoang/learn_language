@@ -1,0 +1,18 @@
+HSK1:
+  name: HSK 1
+  description: "Roughly 150 word vocabulary — basic greetings, numbers, and simple present-tense statements."
+HSK2:
+  name: HSK 2
+  description: "Roughly 300 word vocabulary — simple daily conversations (ordering food, shopping, directions) with basic sentence connectors."
+HSK3:
+  name: HSK 3
+  description: "Roughly 600 word vocabulary — can handle basic daily, academic, and work topics."
+HSK4:
+  name: HSK 4
+  description: "Roughly 1200 word vocabulary — can discuss a wide range of topics fluently."
+HSK5:
+  name: HSK 5
+  description: "Roughly 2500 word vocabulary — can read newspapers/magazines and give full presentations."
+HSK6:
+  name: HSK 6
+  description: "Roughly 5000+ word vocabulary — near-native comprehension of written and spoken Chinese."

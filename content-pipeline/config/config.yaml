@@ -1,0 +1,23 @@
+language: english
+level: A2
+topic: Daily Standup
+duration: 120
+
+llm: deepseek
+tts: edge
+voice: male
+
+tts_rate:
+  chinese: "-25%"  # 0.75x speed — Chinese speech reads noticeably faster than English at the same neural voice
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  background: gradient
+  font_size: 60
+  subtitle_mode: scroll  # "scroll" (constant-speed, from center) or "static" (fixed, no animation) — scroll needed so long transcripts aren't cut off past the screen edge
+
+upload:
+  tiktok: false
+  youtube: false

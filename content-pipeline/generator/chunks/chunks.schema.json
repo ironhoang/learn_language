@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["chunks", "keywords", "reusable_expressions", "sentence_patterns"],
+  "properties": {
+    "chunks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sentence", "parts"],
+        "properties": {
+          "sentence": { "type": "string", "minLength": 1 },
+          "parts": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "keywords": { "type": "array", "items": { "type": "string" } },
+    "reusable_expressions": { "type": "array", "items": { "type": "string" } },
+    "sentence_patterns": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}
