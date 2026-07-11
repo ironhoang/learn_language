@@ -1,0 +1,37 @@
+{
+  "title_zh": "小乌龟和兔子",
+  "title_vi": "Rùa nhỏ và thỏ",
+  "paragraphs": [
+    {
+      "sentences": [
+        {"zh": "有一天，兔子和乌龟说：“我们来比赛跑步吧。”", "vi": "Một ngày nọ, thỏ nói với rùa: “Chúng ta hãy thi chạy nhé.”"},
+        {"zh": "兔子说：“我跑得很快，你跑得很慢。”", "vi": "Thỏ nói: “Tôi chạy rất nhanh, bạn chạy rất chậm.”"},
+        {"zh": "乌龟说：“好，我们试试看。”", "vi": "Rùa nói: “Được, chúng ta thử xem.”"}
+      ]
+    },
+    {
+      "sentences": [
+        {"zh": "比赛开始了，兔子跑得很快。", "vi": "Cuộc đua bắt đầu, thỏ chạy rất nhanh."},
+        {"zh": "兔子看到乌龟在后面，就停下来休息。", "vi": "Thỏ thấy rùa ở phía sau, liền dừng lại nghỉ."},
+        {"zh": "兔子想：“我睡一会儿也没关系。”", "vi": "Thỏ nghĩ: “Tôi ngủ một lát cũng chẳng sao.”"},
+        {"zh": "很快，兔子就睡着了。", "vi": "Chẳng mấy chốc, thỏ đã ngủ say."}
+      ]
+    },
+    {
+      "sentences": [
+        {"zh": "乌龟跑得很慢，但是它没有停下来。", "vi": "Rùa chạy rất chậm, nhưng nó không dừng lại."},
+        {"zh": "乌龟一步一步地向前走。", "vi": "Rùa từng bước từng bước đi về phía trước."},
+        {"zh": "它走到兔子睡觉的地方，没有叫醒兔子。", "vi": "Nó đi đến chỗ thỏ đang ngủ, không đánh thức thỏ."},
+        {"zh": "乌龟继续向前走。", "vi": "Rùa tiếp tục đi về phía trước."}
+      ]
+    },
+    {
+      "sentences": [
+        {"zh": "兔子醒来后，看到乌龟快到终点了。", "vi": "Sau khi thỏ tỉnh dậy, thấy rùa sắp đến đích."},
+        {"zh": "兔子赶快跑，但是已经晚了。", "vi": "Thỏ vội vàng chạy, nhưng đã muộn."},
+        {"zh": "乌龟赢了比赛。", "vi": "Rùa đã thắng cuộc đua."},
+        {"zh": "这个故事告诉我们：坚持就是胜利。", "vi": "Câu chuyện này cho chúng ta biết: kiên trì là chiến thắng."}
+      ]
+    }
+  ]
+}

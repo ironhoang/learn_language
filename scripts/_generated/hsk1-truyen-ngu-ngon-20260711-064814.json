@@ -1,0 +1,87 @@
+{
+  "title_zh": "龟兔赛跑",
+  "title_vi": "Rùa và thỏ chạy thi",
+  "paragraphs": [
+    {
+      "sentences": [
+        {
+          "zh": "有一天，兔子和乌龟说：“我们来比赛跑步吧。”",
+          "vi": "Một ngày nọ, thỏ nói với rùa: “Chúng ta hãy chạy thi nhé.”",
+          "phrases": ["有一天，", "兔子和乌龟说：", "“我们来比赛", "跑步吧。”"]
+        },
+        {
+          "zh": "兔子说：“我跑得很快，你跑得很慢。”",
+          "vi": "Thỏ nói: “Tôi chạy rất nhanh, bạn chạy rất chậm.”",
+          "phrases": ["兔子说：", "“我跑得很快，", "你跑得很慢。”"]
+        },
+        {
+          "zh": "乌龟说：“好，我们试试看。”",
+          "vi": "Rùa nói: “Được, chúng ta thử xem.”",
+          "phrases": ["乌龟说：", "“好，", "我们试试看。”"]
+        }
+      ]
+    },
+    {
+      "sentences": [
+        {
+          "zh": "比赛开始了，兔子很快跑在前面。",
+          "vi": "Cuộc đua bắt đầu, thỏ chạy rất nhanh ở phía trước.",
+          "phrases": ["比赛开始了，", "兔子很快", "跑在前面。"]
+        },
+        {
+          "zh": "兔子想：“乌龟太慢了，我休息一会儿吧。”",
+          "vi": "Thỏ nghĩ: “Rùa chậm quá, mình nghỉ một lát nhé.”",
+          "phrases": ["兔子想：", "“乌龟太慢了，", "我休息一会儿吧。”"]
+        },
+        {
+          "zh": "于是兔子在路边躺下来睡觉。",
+          "vi": "Thế là thỏ nằm xuống bên đường và ngủ.",
+          "phrases": ["于是", "兔子在路边", "躺下来睡觉。"]
+        }
+      ]
+    },
+    {
+      "sentences": [
+        {
+          "zh": "乌龟一步一步慢慢走，一直不停。",
+          "vi": "Rùa từng bước từng bước đi chậm rãi, không ngừng nghỉ.",
+          "phrases": ["乌龟一步一步", "慢慢走，", "一直不停。"]
+        },
+        {
+          "zh": "它走过兔子身边，看到兔子在睡觉。",
+          "vi": "Nó đi qua bên cạnh thỏ, thấy thỏ đang ngủ.",
+          "phrases": ["它走过", "兔子身边，", "看到兔子在睡觉。"]
+        },
+        {
+          "zh": "乌龟没有停下，继续往前走。",
+          "vi": "Rùa không dừng lại, tiếp tục đi về phía trước.",
+          "phrases": ["乌龟没有停下，", "继续往前走。"]
+        }
+      ]
+    },
+    {
+      "sentences": [
+        {
+          "zh": "兔子醒来，发现乌龟快到终点了。",
+          "vi": "Thỏ tỉnh dậy, phát hiện rùa sắp đến đích.",
+          "phrases": ["兔子醒来，", "发现乌龟", "快到终点了。"]
+        },
+        {
+          "zh": "兔子赶快跑，但是已经晚了。",
+          "vi": "Thỏ vội vàng chạy, nhưng đã muộn rồi.",
+          "phrases": ["兔子赶快跑，", "但是已经晚了。"]
+        },
+        {
+          "zh": "最后，乌龟赢了比赛。",
+          "vi": "Cuối cùng, rùa đã thắng cuộc đua.",
+          "phrases": ["最后，", "乌龟赢了比赛。"]
+        },
+        {
+          "zh": "这个故事告诉我们：不要骄傲，要坚持。",
+          "vi": "Câu chuyện này cho chúng ta biết: đừng kiêu ngạo, hãy kiên trì.",
+          "phrases": ["这个故事告诉我们：", "不要骄傲，", "要坚持。"]
+        }
+      ]
+    }
+  ]
+}

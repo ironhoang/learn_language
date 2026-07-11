@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "id": "hsk1-truyen-ngu-ngon",
+    "topic_vi": "truyện ngụ ngôn",
+    "level": "HSK1",
+    "title_zh": "龟兔赛跑",
+    "title_vi": "Rùa và thỏ chạy thi",
+    "created_at": "2026-07-11T06:48:15Z"
+  },
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "p1-s1",
+          "zh": "有一天，兔子和乌龟说：“我们来比赛跑步吧。”",
+          "pinyin": "yǒu yī tiān ， tù zi hé wū guī shuō ：“ wǒ men lái bǐ sài pǎo bù ba 。”",
+          "vi": "Một ngày nọ, thỏ nói với rùa: “Chúng ta hãy chạy thi nhé.”",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5a31ba69bbfc.mp3",
+          "phrases": [
+            {
+              "id": "p1-s1-ph1",
+              "text": "有一天，",
+              "pinyin": "yǒu yī tiān ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f0e296d4548a.mp3"
+            },
+            {
+              "id": "p1-s1-ph2",
+              "text": "兔子和乌龟说：",
+              "pinyin": "tù zi hé wū guī shuō ：",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_41d780c7639d.mp3"
+            },
+            {
+              "id": "p1-s1-ph3",
+              "text": "“我们来比赛",
+              "pinyin": "“ wǒ men lái bǐ sài",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_cd93cf4793c9.mp3"
+            },
+            {
+              "id": "p1-s1-ph4",
+              "text": "跑步吧。”",
+              "pinyin": "pǎo bù ba 。”",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_14c6f1eb7262.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p1-s2",
+          "zh": "兔子说：“我跑得很快，你跑得很慢。”",
+          "pinyin": "tù zi shuō ：“ wǒ pǎo dé hěn kuài ， nǐ pǎo dé hěn màn 。”",
+          "vi": "Thỏ nói: “Tôi chạy rất nhanh, bạn chạy rất chậm.”",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4a6a3888ea81.mp3",
+          "phrases": [
+            {
+              "id": "p1-s2-ph1",
+              "text": "兔子说：",
+              "pinyin": "tù zi shuō ：",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_01ab62c73072.mp3"
+            },
+            {
+              "id": "p1-s2-ph2",
+              "text": "“我跑得很快，",
+              "pinyin": "“ wǒ pǎo dé hěn kuài ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ae264446dbfa.mp3"
+            },
+            {
+              "id": "p1-s2-ph3",
+              "text": "你跑得很慢。”",
+              "pinyin": "nǐ pǎo dé hěn màn 。”",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f105cf7a7a79.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p1-s3",
+          "zh": "乌龟说：“好，我们试试看。”",
+          "pinyin": "wū guī shuō ：“ hǎo ， wǒ men shì shì kàn 。”",
+          "vi": "Rùa nói: “Được, chúng ta thử xem.”",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_7ae3f34b0752.mp3",
+          "phrases": [
+            {
+              "id": "p1-s3-ph1",
+              "text": "乌龟说：",
+              "pinyin": "wū guī shuō ：",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_534de1b477c9.mp3"
+            },
+            {
+              "id": "p1-s3-ph2",
+              "text": "“好，",
+              "pinyin": "“ hǎo ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5e900a1fee77.mp3"
+            },
+            {
+              "id": "p1-s3-ph3",
+              "text": "我们试试看。”",
+              "pinyin": "wǒ men shì shì kàn 。”",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fc5b22d88fad.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "p2-s1",
+          "zh": "比赛开始了，兔子很快跑在前面。",
+          "pinyin": "bǐ sài kāi shǐ le ， tù zi hěn kuài pǎo zài qián miàn 。",
+          "vi": "Cuộc đua bắt đầu, thỏ chạy rất nhanh ở phía trước.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_371d1d06e06d.mp3",
+          "phrases": [
+            {
+              "id": "p2-s1-ph1",
+              "text": "比赛开始了，",
+              "pinyin": "bǐ sài kāi shǐ le ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b30a14ad23d2.mp3"
+            },
+            {
+              "id": "p2-s1-ph2",
+              "text": "兔子很快",
+              "pinyin": "tù zi hěn kuài",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9e40eef42c66.mp3"
+            },
+            {
+              "id": "p2-s1-ph3",
+              "text": "跑在前面。",
+              "pinyin": "pǎo zài qián miàn 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_33f1f7615794.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p2-s2",
+          "zh": "兔子想：“乌龟太慢了，我休息一会儿吧。”",
+          "pinyin": "tù zi xiǎng ：“ wū guī tài màn le ， wǒ xiū xī yī huì er ba 。”",
+          "vi": "Thỏ nghĩ: “Rùa chậm quá, mình nghỉ một lát nhé.”",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_22de18cb85a3.mp3",
+          "phrases": [
+            {
+              "id": "p2-s2-ph1",
+              "text": "兔子想：",
+              "pinyin": "tù zi xiǎng ：",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_d4f2488b019f.mp3"
+            },
+            {
+              "id": "p2-s2-ph2",
+              "text": "“乌龟太慢了，",
+              "pinyin": "“ wū guī tài màn le ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_f2ca87fe2316.mp3"
+            },
+            {
+              "id": "p2-s2-ph3",
+              "text": "我休息一会儿吧。”",
+              "pinyin": "wǒ xiū xī yī huì er ba 。”",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_6eeb34bf0de9.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p2-s3",
+          "zh": "于是兔子在路边躺下来睡觉。",
+          "pinyin": "yú shì tù zi zài lù biān tǎng xià lái shuì jiào 。",
+          "vi": "Thế là thỏ nằm xuống bên đường và ngủ.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_08a39171db2c.mp3",
+          "phrases": [
+            {
+              "id": "p2-s3-ph1",
+              "text": "于是",
+              "pinyin": "yú shì",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2afdf4c1a879.mp3"
+            },
+            {
+              "id": "p2-s3-ph2",
+              "text": "兔子在路边",
+              "pinyin": "tù zi zài lù biān",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_06a565a40dfc.mp3"
+            },
+            {
+              "id": "p2-s3-ph3",
+              "text": "躺下来睡觉。",
+              "pinyin": "tǎng xià lái shuì jiào 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_007e3a15a1fd.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "p3-s1",
+          "zh": "乌龟一步一步慢慢走，一直不停。",
+          "pinyin": "wū guī yí bù yí bù màn màn zǒu ， yì zhí bù tíng 。",
+          "vi": "Rùa từng bước từng bước đi chậm rãi, không ngừng nghỉ.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_2c1989d73f7d.mp3",
+          "phrases": [
+            {
+              "id": "p3-s1-ph1",
+              "text": "乌龟一步一步",
+              "pinyin": "wū guī yí bù yí bù",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ac99b6e1822e.mp3"
+            },
+            {
+              "id": "p3-s1-ph2",
+              "text": "慢慢走，",
+              "pinyin": "màn màn zǒu ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a112ebfa93e4.mp3"
+            },
+            {
+              "id": "p3-s1-ph3",
+              "text": "一直不停。",
+              "pinyin": "yì zhí bù tíng 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_785f5c8c0bed.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p3-s2",
+          "zh": "它走过兔子身边，看到兔子在睡觉。",
+          "pinyin": "tā zǒu guò tù zi shēn biān ， kàn dào tù zi zài shuì jiào 。",
+          "vi": "Nó đi qua bên cạnh thỏ, thấy thỏ đang ngủ.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_46455f555d80.mp3",
+          "phrases": [
+            {
+              "id": "p3-s2-ph1",
+              "text": "它走过",
+              "pinyin": "tā zǒu guò",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ecaee478e9b0.mp3"
+            },
+            {
+              "id": "p3-s2-ph2",
+              "text": "兔子身边，",
+              "pinyin": "tù zi shēn biān ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_899a996aeb1f.mp3"
+            },
+            {
+              "id": "p3-s2-ph3",
+              "text": "看到兔子在睡觉。",
+              "pinyin": "kàn dào tù zi zài shuì jiào 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_9bc4f3ab8222.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p3-s3",
+          "zh": "乌龟没有停下，继续往前走。",
+          "pinyin": "wū guī méi yǒu tíng xià ， jì xù wǎng qián zǒu 。",
+          "vi": "Rùa không dừng lại, tiếp tục đi về phía trước.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_831bb0cdc573.mp3",
+          "phrases": [
+            {
+              "id": "p3-s3-ph1",
+              "text": "乌龟没有停下，",
+              "pinyin": "wū guī méi yǒu tíng xià ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_c4562c6f2809.mp3"
+            },
+            {
+              "id": "p3-s3-ph2",
+              "text": "继续往前走。",
+              "pinyin": "jì xù wǎng qián zǒu 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_02224db4af57.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "p4-s1",
+          "zh": "兔子醒来，发现乌龟快到终点了。",
+          "pinyin": "tù zi xǐng lái ， fā xiàn wū guī kuài dào zhōng diǎn le 。",
+          "vi": "Thỏ tỉnh dậy, phát hiện rùa sắp đến đích.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b826a7f8fd5c.mp3",
+          "phrases": [
+            {
+              "id": "p4-s1-ph1",
+              "text": "兔子醒来，",
+              "pinyin": "tù zi xǐng lái ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_4a01b4b2bda1.mp3"
+            },
+            {
+              "id": "p4-s1-ph2",
+              "text": "发现乌龟",
+              "pinyin": "fā xiàn wū guī",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b6203bf80a74.mp3"
+            },
+            {
+              "id": "p4-s1-ph3",
+              "text": "快到终点了。",
+              "pinyin": "kuài dào zhōng diǎn le 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_bd0578c18800.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p4-s2",
+          "zh": "兔子赶快跑，但是已经晚了。",
+          "pinyin": "tù zi gǎn kuài pǎo ， dàn shì yǐ jīng wǎn le 。",
+          "vi": "Thỏ vội vàng chạy, nhưng đã muộn rồi.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5fcc33dff33a.mp3",
+          "phrases": [
+            {
+              "id": "p4-s2-ph1",
+              "text": "兔子赶快跑，",
+              "pinyin": "tù zi gǎn kuài pǎo ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_12ee9db834e2.mp3"
+            },
+            {
+              "id": "p4-s2-ph2",
+              "text": "但是已经晚了。",
+              "pinyin": "dàn shì yǐ jīng wǎn le 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_ac00403beda3.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p4-s3",
+          "zh": "最后，乌龟赢了比赛。",
+          "pinyin": "zuì hòu ， wū guī yíng le bǐ sài 。",
+          "vi": "Cuối cùng, rùa đã thắng cuộc đua.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_795fec48cf58.mp3",
+          "phrases": [
+            {
+              "id": "p4-s3-ph1",
+              "text": "最后，",
+              "pinyin": "zuì hòu ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_aaf758a0494d.mp3"
+            },
+            {
+              "id": "p4-s3-ph2",
+              "text": "乌龟赢了比赛。",
+              "pinyin": "wū guī yíng le bǐ sài 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_fc09f69d8207.mp3"
+            }
+          ]
+        },
+        {
+          "id": "p4-s4",
+          "zh": "这个故事告诉我们：不要骄傲，要坚持。",
+          "pinyin": "zhè ge gù shì gào sù wǒ men ： bú yào jiāo ào ， yào jiān chí 。",
+          "vi": "Câu chuyện này cho chúng ta biết: đừng kiêu ngạo, hãy kiên trì.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_b8228e7280b6.mp3",
+          "phrases": [
+            {
+              "id": "p4-s4-ph1",
+              "text": "这个故事告诉我们：",
+              "pinyin": "zhè ge gù shì gào sù wǒ men ：",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_671fda903783.mp3"
+            },
+            {
+              "id": "p4-s4-ph2",
+              "text": "不要骄傲，",
+              "pinyin": "bú yào jiāo ào ，",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_a4bdb13ad7d9.mp3"
+            },
+            {
+              "id": "p4-s4-ph3",
+              "text": "要坚持。",
+              "pinyin": "yào jiān chí 。",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/zh_5dbe9f578f81.mp3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -142,6 +142,20 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Bài đọc tiếng Trung / HSK */}
+        <div>
+          <div className="section-header"><h2>Bài đọc HSK / 中文</h2></div>
+          <div className="set-cards">
+            <Link className="nav-card" to="/zh-lessons">
+              <div className="card-icon">📖</div>
+              <div className="card-type" style={{ color: '#34d399' }}>HSK</div>
+              <div className="card-title">Bài đọc tiếng Trung theo chủ đề</div>
+              <div className="card-desc">Đoạn văn ngắn theo chủ đề tự chọn, đọc từng câu, nghe lặp lại từng câu</div>
+              <div className="card-arrow">Mở →</div>
+            </Link>
+          </div>
+        </div>
+
         {/* Hàn */}
         <div>
           <div className="section-header"><h2>한국어 / Tiếng Hàn</h2></div>
