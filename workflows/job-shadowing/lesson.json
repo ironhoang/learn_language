@@ -1,0 +1,1006 @@
+{
+  "meta": {
+    "id": "job-shadowing",
+    "title": "Job Shadowing",
+    "title_vi": "Theo chân đồng nghiệp",
+    "description": "Shadow a senior engineer: observe their workflow, ask questions, take notes, and debrief at the end.",
+    "difficulty": "intermediate",
+    "duration_minutes": 20,
+    "category": "team-communication",
+    "tags": [
+      "job-shadowing",
+      "onboarding",
+      "mentorship"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "intro",
+      "label": "Introduction",
+      "label_vi": "Giới thiệu"
+    },
+    {
+      "id": "observe-setup",
+      "label": "Observe Setup",
+      "label_vi": "Quan sát thiết lập"
+    },
+    {
+      "id": "ask-questions",
+      "label": "Ask Questions",
+      "label_vi": "Đặt câu hỏi"
+    },
+    {
+      "id": "note-taking",
+      "label": "Note Taking",
+      "label_vi": "Ghi chú"
+    },
+    {
+      "id": "pair-coding",
+      "label": "Pair Coding",
+      "label_vi": "Lập trình cặp"
+    },
+    {
+      "id": "debrief",
+      "label": "Debrief",
+      "label_vi": "Tổng kết"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "intro-01",
+      "node_id": "intro",
+      "text": "Thanks for letting me shadow you today.",
+      "example": "Thanks for letting me shadow you today.",
+      "translation_vi": "Cảm ơn bạn đã cho tôi theo chân hôm nay.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_277a982c9986.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4a5d774871c0.mp3",
+      "phrases": [
+        {
+          "text": "Thanks for letting me",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb116736cdb8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c480baf6d79f.mp3"
+        },
+        {
+          "text": "shadow you today.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_32be462a5c69.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7e89cd53e234.mp3"
+        }
+      ]
+    },
+    {
+      "id": "intro-02",
+      "node_id": "intro",
+      "text": "I'm really looking forward to this.",
+      "example": "I'm really looking forward to this.",
+      "translation_vi": "Tôi rất mong chờ điều này.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e7eebf6533b5.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9d556b02eea3.mp3",
+      "phrases": [
+        {
+          "text": "I'm really looking forward",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac776fda483b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e0c9cef5775e.mp3"
+        },
+        {
+          "text": "to this.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e52952513017.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fd0f09a6fa2d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "intro-03",
+      "node_id": "intro",
+      "text": "Could you walk me through your morning routine?",
+      "example": "Could you walk me through your morning routine?",
+      "translation_vi": "Bạn có thể chỉ cho tôi quy trình buổi sáng của bạn không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_11de11d86fc1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_689f4f159d59.mp3",
+      "phrases": [
+        {
+          "text": "Could you walk me through",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1ff5789c4896.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c09352a43158.mp3"
+        },
+        {
+          "text": "your morning routine?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8a01a14a8bb7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_81130ed9f78d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "intro-04",
+      "node_id": "intro",
+      "text": "I'll try to stay out of your way.",
+      "example": "I'll try to stay out of your way.",
+      "translation_vi": "Tôi sẽ cố gắng không làm phiền bạn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_df83f1e24933.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e62ba59caa6c.mp3",
+      "phrases": [
+        {
+          "text": "I'll try to stay",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1ee58d055305.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7d76f4b5bfe5.mp3"
+        },
+        {
+          "text": "out of your way.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_bc8afb49f314.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_27881f957e2d.mp3"
+        }
+      ]
+    },
+    {
+      "id": "intro-05",
+      "node_id": "intro",
+      "text": "Feel free to ignore me if I ask too many questions.",
+      "example": "Feel free to ignore me if I ask too many questions.",
+      "translation_vi": "Cứ tự nhiên lờ tôi đi nếu tôi hỏi quá nhiều.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5829d4e3c473.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_bb99b402e836.mp3",
+      "phrases": [
+        {
+          "text": "Feel free to ignore me",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7d8bebb2029c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_822680d8b07e.mp3"
+        },
+        {
+          "text": "if I ask too many questions.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_455c0b7cc716.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c038d635ae35.mp3"
+        }
+      ]
+    },
+    {
+      "id": "intro-06",
+      "node_id": "intro",
+      "text": "Let me know if I should take notes on something specific.",
+      "example": "Let me know if I should take notes on something specific.",
+      "translation_vi": "Hãy cho tôi biết nếu tôi nên ghi chú điều gì cụ thể.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e7a7845bcf71.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8dbb3d9ca4b8.mp3",
+      "phrases": [
+        {
+          "text": "Let me know",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b6e76295dc8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5011d1094393.mp3"
+        },
+        {
+          "text": "if I should take notes",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9c8d33ae0f55.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fc4b213ac510.mp3"
+        },
+        {
+          "text": "on something specific.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a3fdcefd4182.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4976cde5dff5.mp3"
+        }
+      ]
+    },
+    {
+      "id": "observe-setup-01",
+      "node_id": "observe-setup",
+      "text": "I see you're opening the terminal first.",
+      "example": "I see you're opening the terminal first.",
+      "translation_vi": "Tôi thấy bạn mở terminal trước.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b900e35801c.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_efc6319e3713.mp3",
+      "phrases": [
+        {
+          "text": "I see you're opening",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7356d6b7e5c2.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3ae4e1f4ae50.mp3"
+        },
+        {
+          "text": "the terminal first.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_985031753a71.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f5fb3bd80032.mp3"
+        }
+      ]
+    },
+    {
+      "id": "observe-setup-02",
+      "node_id": "observe-setup",
+      "text": "Why do you use that particular IDE?",
+      "example": "Why do you use that particular IDE?",
+      "translation_vi": "Tại sao bạn dùng IDE cụ thể đó?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9dd5dda899a4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_31dfe284071e.mp3",
+      "phrases": [
+        {
+          "text": "Why do you use",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0a028b637202.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9e0e478a01a0.mp3"
+        },
+        {
+          "text": "that particular IDE?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4e6bd1d6d2c8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f5466222a079.mp3"
+        }
+      ]
+    },
+    {
+      "id": "observe-setup-03",
+      "node_id": "observe-setup",
+      "text": "Could you show me how you set up your dev environment?",
+      "example": "Could you show me how you set up your dev environment?",
+      "translation_vi": "Bạn có thể chỉ tôi cách bạn thiết lập môi trường phát triển không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9274038bbba1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_73b0d47419c4.mp3",
+      "phrases": [
+        {
+          "text": "Could you show me",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_856dc4ad1afa.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fe38cef2c8b7.mp3"
+        },
+        {
+          "text": "how you set up",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ba72d4a1f191.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_91390e746c53.mp3"
+        },
+        {
+          "text": "your dev environment?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb8896193a75.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5bde718b34e9.mp3"
+        }
+      ]
+    },
+    {
+      "id": "observe-setup-04",
+      "node_id": "observe-setup",
+      "text": "I notice you have a lot of tabs open.",
+      "example": "I notice you have a lot of tabs open.",
+      "translation_vi": "Tôi để ý bạn mở rất nhiều tab.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2a481bd78230.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_40ab7d19e2ee.mp3",
+      "phrases": [
+        {
+          "text": "I notice you have",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3f8b0354967f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_59711951c254.mp3"
+        },
+        {
+          "text": "a lot of tabs open.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_859c57c8899a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3bb49e55ad65.mp3"
+        }
+      ]
+    },
+    {
+      "id": "observe-setup-05",
+      "node_id": "observe-setup",
+      "text": "How do you manage your local Docker containers?",
+      "example": "How do you manage your local Docker containers?",
+      "translation_vi": "Bạn quản lý các container Docker cục bộ như thế nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80fe2e76c4fa.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a092ec668d0f.mp3",
+      "phrases": [
+        {
+          "text": "How do you manage",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_068a01b6df1e.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f041ef33785b.mp3"
+        },
+        {
+          "text": "your local Docker containers?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ac1e4214cc21.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_22a726412455.mp3"
+        }
+      ]
+    },
+    {
+      "id": "observe-setup-06",
+      "node_id": "observe-setup",
+      "text": "Do you always run the tests before starting work?",
+      "example": "Do you always run the tests before starting work?",
+      "translation_vi": "Bạn có luôn chạy test trước khi bắt đầu làm việc không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cee29afec5cc.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d6d4cdb4fb87.mp3",
+      "phrases": [
+        {
+          "text": "Do you always run the tests",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0b60677aaebb.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e7bfff7e0a78.mp3"
+        },
+        {
+          "text": "before starting work?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d386e1d33d14.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4ad970fa27f5.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-questions-01",
+      "node_id": "ask-questions",
+      "text": "Why did you choose this approach over the alternative?",
+      "example": "Why did you choose this approach over the alternative?",
+      "translation_vi": "Tại sao bạn chọn cách tiếp cận này thay vì cách kia?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0701b418d068.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_03fbe487a3d7.mp3",
+      "phrases": [
+        {
+          "text": "Why did you choose this approach",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_64a769f6c077.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_632765c415e7.mp3"
+        },
+        {
+          "text": "over the alternative?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_aefb1dbc4f2b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3aeed2abdbdd.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-questions-02",
+      "node_id": "ask-questions",
+      "text": "What trade-offs did you consider?",
+      "example": "What trade-offs did you consider?",
+      "translation_vi": "Bạn đã cân nhắc những đánh đổi nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_67a014c099d3.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f3062fc61817.mp3",
+      "phrases": [
+        {
+          "text": "What trade-offs",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e70bbe7bbf27.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0c9419f70383.mp3"
+        },
+        {
+          "text": "did you consider?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3fd11b064af4.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_90c2db98a1df.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-questions-03",
+      "node_id": "ask-questions",
+      "text": "How did you debug that issue?",
+      "example": "How did you debug that issue?",
+      "translation_vi": "Bạn đã debug vấn đề đó như thế nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5f869b5e92b4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5261a02a29f5.mp3",
+      "phrases": [
+        {
+          "text": "How did you",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4236cf75405d.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ae03d4d2f6cc.mp3"
+        },
+        {
+          "text": "debug that issue?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5517faf09788.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_121a7cb820fe.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-questions-04",
+      "node_id": "ask-questions",
+      "text": "Could you explain the reasoning behind this refactor?",
+      "example": "Could you explain the reasoning behind this refactor?",
+      "translation_vi": "Bạn có thể giải thích lý do đằng sau việc tái cấu trúc này không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0dae71a56f83.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_07db70f032b0.mp3",
+      "phrases": [
+        {
+          "text": "Could you explain the reasoning",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_ed38122da4b8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fdc4b484def2.mp3"
+        },
+        {
+          "text": "behind this refactor?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7905a3f13405.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b88e3688a242.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-questions-05",
+      "node_id": "ask-questions",
+      "text": "Is this a common pattern in your team?",
+      "example": "Is this a common pattern in your team?",
+      "translation_vi": "Đây có phải là mẫu phổ biến trong nhóm của bạn không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a954c50f2b08.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_dd266eac64e7.mp3",
+      "phrases": [
+        {
+          "text": "Is this a common pattern",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_efdcbf35d517.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c70f51c31e51.mp3"
+        },
+        {
+          "text": "in your team?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4798b558c7f7.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9d0ee17decc3.mp3"
+        }
+      ]
+    },
+    {
+      "id": "ask-questions-06",
+      "node_id": "ask-questions",
+      "text": "What documentation do you usually refer to?",
+      "example": "What documentation do you usually refer to?",
+      "translation_vi": "Bạn thường tham khảo tài liệu nào?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_80eccf0846f1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3281c335ba0c.mp3",
+      "phrases": [
+        {
+          "text": "What documentation",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c8a00919a966.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f4c82b354be5.mp3"
+        },
+        {
+          "text": "do you usually refer to?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a5d214f43de9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_79fcee958c75.mp3"
+        }
+      ]
+    },
+    {
+      "id": "note-taking-01",
+      "node_id": "note-taking",
+      "text": "I'm jotting down some key points.",
+      "example": "I'm jotting down some key points.",
+      "translation_vi": "Tôi đang ghi lại vài điểm chính.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d03433472356.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1f25f1c5a746.mp3",
+      "phrases": [
+        {
+          "text": "I'm jotting down",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f3f944304de3.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9a08454548f9.mp3"
+        },
+        {
+          "text": "some key points.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8e5f098c8b35.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7a7c99faf780.mp3"
+        }
+      ]
+    },
+    {
+      "id": "note-taking-02",
+      "node_id": "note-taking",
+      "text": "Should I note down the exact commands you used?",
+      "example": "Should I note down the exact commands you used?",
+      "translation_vi": "Tôi có nên ghi lại chính xác các lệnh bạn đã dùng không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0fdfcc3bdd82.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_6984b1d45212.mp3",
+      "phrases": [
+        {
+          "text": "Should I note down",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b99d50a15ad0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_aa4e51689120.mp3"
+        },
+        {
+          "text": "the exact commands you used?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1067ac482f25.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d1ef14d8d5a2.mp3"
+        }
+      ]
+    },
+    {
+      "id": "note-taking-03",
+      "node_id": "note-taking",
+      "text": "I'm going to organize my notes later.",
+      "example": "I'm going to organize my notes later.",
+      "translation_vi": "Tôi sẽ sắp xếp ghi chú sau.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5f2404f40bbf.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7cc4225b1a06.mp3",
+      "phrases": [
+        {
+          "text": "I'm going to organize",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f268d181f5fe.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_685024a6f49c.mp3"
+        },
+        {
+          "text": "my notes later.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_44c3abf0b5ef.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_e769fe4bb0b6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "note-taking-04",
+      "node_id": "note-taking",
+      "text": "Could you repeat that? I want to get it right.",
+      "example": "Could you repeat that? I want to get it right.",
+      "translation_vi": "Bạn có thể nhắc lại không? Tôi muốn ghi chính xác.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_683a0f1c239f.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d35361287aca.mp3",
+      "phrases": [
+        {
+          "text": "Could you repeat that?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8c6803482dbf.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a7c907ad07aa.mp3"
+        },
+        {
+          "text": "I want to get it right.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1c86fafd8fb9.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0e21717b6984.mp3"
+        }
+      ]
+    },
+    {
+      "id": "note-taking-05",
+      "node_id": "note-taking",
+      "text": "I'll add that to my personal wiki.",
+      "example": "I'll add that to my personal wiki.",
+      "translation_vi": "Tôi sẽ thêm cái đó vào wiki cá nhân.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3aad3b286239.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3e39d44935e2.mp3",
+      "phrases": [
+        {
+          "text": "I'll add that",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_803130ff773b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_998a4952094d.mp3"
+        },
+        {
+          "text": "to my personal wiki.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cb918317571f.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_352e2c7edb3a.mp3"
+        }
+      ]
+    },
+    {
+      "id": "note-taking-06",
+      "node_id": "note-taking",
+      "text": "Let me take a screenshot for reference.",
+      "example": "Let me take a screenshot for reference.",
+      "translation_vi": "Để tôi chụp màn hình để tham khảo.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5b71ad773860.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5e5e612a78c8.mp3",
+      "phrases": [
+        {
+          "text": "Let me take a screenshot",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2e544ed169e5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_582d29cf436a.mp3"
+        },
+        {
+          "text": "for reference.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_05bc9a0e7cae.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_18248771c436.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pair-coding-01",
+      "node_id": "pair-coding",
+      "text": "Do you mind if I try writing this function?",
+      "example": "Do you mind if I try writing this function?",
+      "translation_vi": "Bạn có phiền không nếu tôi thử viết hàm này?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_288e0b3e5d48.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_63df5f60d9f1.mp3",
+      "phrases": [
+        {
+          "text": "Do you mind",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_c74c5e150fe5.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_eef705b23ca8.mp3"
+        },
+        {
+          "text": "if I try writing this function?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_6e3bdb50d0aa.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_8d8789b43399.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pair-coding-02",
+      "node_id": "pair-coding",
+      "text": "Let me drive for a bit.",
+      "example": "Let me drive for a bit.",
+      "translation_vi": "Để tôi lái một lúc.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_023613c1436a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_42648119da62.mp3",
+      "phrases": [
+        {
+          "text": "Let me drive",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a8be562ecd6c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_057304987c31.mp3"
+        },
+        {
+          "text": "for a bit.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_482ca5007906.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_3e6145cdaf87.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pair-coding-03",
+      "node_id": "pair-coding",
+      "text": "Am I on the right track?",
+      "example": "Am I on the right track?",
+      "translation_vi": "Tôi có đi đúng hướng không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9ed107955518.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f79057483026.mp3",
+      "phrases": [
+        {
+          "text": "Am I on the right track?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9ed107955518.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f79057483026.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pair-coding-04",
+      "node_id": "pair-coding",
+      "text": "What would you do differently?",
+      "example": "What would you do differently?",
+      "translation_vi": "Bạn sẽ làm khác điều gì?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a72906d2e04b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d91d423d70b7.mp3",
+      "phrases": [
+        {
+          "text": "What would you do",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9aaf0316bf0c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a8523d8e0e61.mp3"
+        },
+        {
+          "text": "differently?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_1fc26e049c56.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_433c15e40f4e.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pair-coding-05",
+      "node_id": "pair-coding",
+      "text": "I think I understand the pattern now.",
+      "example": "I think I understand the pattern now.",
+      "translation_vi": "Tôi nghĩ bây giờ tôi hiểu mẫu này rồi.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_adc2fa8ef015.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7228ae73dedf.mp3",
+      "phrases": [
+        {
+          "text": "I think I understand",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_d0868bd78645.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f2d2c7ca31ec.mp3"
+        },
+        {
+          "text": "the pattern now.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_88f4f5eb4aa0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_84466fa9a3fa.mp3"
+        }
+      ]
+    },
+    {
+      "id": "pair-coding-06",
+      "node_id": "pair-coding",
+      "text": "Could you review my code before I commit?",
+      "example": "Could you review my code before I commit?",
+      "translation_vi": "Bạn có thể review code của tôi trước khi tôi commit không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4d7a7c8b1009.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_acad2f806c72.mp3",
+      "phrases": [
+        {
+          "text": "Could you review my code",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5eb258f1ef6c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c56bf7207fda.mp3"
+        },
+        {
+          "text": "before I commit?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a1771590189.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_d2286699e13b.mp3"
+        }
+      ]
+    },
+    {
+      "id": "debrief-01",
+      "node_id": "debrief",
+      "text": "Thanks again for your time.",
+      "example": "Thanks again for your time.",
+      "translation_vi": "Cảm ơn một lần nữa vì thời gian của bạn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f8d461c070a1.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_104b89da7ed4.mp3",
+      "phrases": [
+        {
+          "text": "Thanks again",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_02ac79d65473.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_0fe020b7875b.mp3"
+        },
+        {
+          "text": "for your time.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8601b1ed26f0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a3f546933bb6.mp3"
+        }
+      ]
+    },
+    {
+      "id": "debrief-02",
+      "node_id": "debrief",
+      "text": "I learned a lot about your workflow.",
+      "example": "I learned a lot about your workflow.",
+      "translation_vi": "Tôi đã học được nhiều về quy trình làm việc của bạn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f4fcd02dd744.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7282e5152f2f.mp3",
+      "phrases": [
+        {
+          "text": "I learned a lot",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7c59961b814c.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_55646f2e06b6.mp3"
+        },
+        {
+          "text": "about your workflow.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0a703424f966.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1ea20381f8fe.mp3"
+        }
+      ]
+    },
+    {
+      "id": "debrief-03",
+      "node_id": "debrief",
+      "text": "The most surprising thing was your debugging technique.",
+      "example": "The most surprising thing was your debugging technique.",
+      "translation_vi": "Điều bất ngờ nhất là kỹ thuật debug của bạn.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a99f138f761b.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_fb61ee1dba47.mp3",
+      "phrases": [
+        {
+          "text": "The most surprising thing",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b2c65894de0a.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_4f6a94b8a5e9.mp3"
+        },
+        {
+          "text": "was your debugging technique.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_24958a87159b.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_9ea2050bbb43.mp3"
+        }
+      ]
+    },
+    {
+      "id": "debrief-04",
+      "node_id": "debrief",
+      "text": "I'll start using that shortcut from now on.",
+      "example": "I'll start using that shortcut from now on.",
+      "translation_vi": "Từ giờ tôi sẽ bắt đầu dùng phím tắt đó.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e8fa1730b6d4.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c126966e7677.mp3",
+      "phrases": [
+        {
+          "text": "I'll start using that shortcut",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_2491096dae78.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_916074a9b789.mp3"
+        },
+        {
+          "text": "from now on.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a35b50efe659.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_b71fc64bc017.mp3"
+        }
+      ]
+    },
+    {
+      "id": "debrief-05",
+      "node_id": "debrief",
+      "text": "Do you have any final advice for a newbie?",
+      "example": "Do you have any final advice for a newbie?",
+      "translation_vi": "Bạn có lời khuyên cuối cùng cho người mới không?",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_9e94621eda9a.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_83b3dd4b8b04.mp3",
+      "phrases": [
+        {
+          "text": "Do you have any final advice",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7040b4d00246.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_43c4dab1e7ac.mp3"
+        },
+        {
+          "text": "for a newbie?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e2eb2034b0f0.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_ab227c7be259.mp3"
+        }
+      ]
+    },
+    {
+      "id": "debrief-06",
+      "node_id": "debrief",
+      "text": "Let me know if I can shadow you again sometime.",
+      "example": "Let me know if I can shadow you again sometime.",
+      "translation_vi": "Hãy cho tôi biết nếu tôi có thể theo chân bạn lần khác.",
+      "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a95ccbebc375.mp3",
+      "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_1bd315aff20f.mp3",
+      "phrases": [
+        {
+          "text": "Let me know",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b6e76295dc8.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_5011d1094393.mp3"
+        },
+        {
+          "text": "if I can shadow you again",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_8d327679c400.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a902b72c0cdd.mp3"
+        },
+        {
+          "text": "sometime.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_b7c56f83e712.mp3",
+          "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f2975c6e5259.mp3"
+        }
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "How do you ask to shadow someone?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f8c39eabc64e.mp3",
+      "accepted_patterns": [
+        "Thanks for letting me shadow you",
+        "Could I shadow you today?",
+        "I'm really looking forward to this"
+      ],
+      "hint_vi": "Cách xin phép theo chân đồng nghiệp"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "What do you say when observing their setup?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_63cef5efc40c.mp3",
+      "accepted_patterns": [
+        "I see you're opening",
+        "Why do you use",
+        "Could you show me how",
+        "I notice you have"
+      ],
+      "hint_vi": "Hỏi về thiết lập môi trường"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "How do you ask a technical question?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_18d57e5f15e1.mp3",
+      "accepted_patterns": [
+        "Why did you choose this approach",
+        "What trade-offs did you consider",
+        "How did you debug that issue",
+        "Could you explain the reasoning"
+      ],
+      "hint_vi": "Đặt câu hỏi kỹ thuật"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "How do you manage note-taking?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f46885c5d35c.mp3",
+      "accepted_patterns": [
+        "I'm jotting down",
+        "Should I note down",
+        "I'm going to organize my notes",
+        "Could you repeat that"
+      ],
+      "hint_vi": "Ghi chú trong lúc shadowing"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "How do you offer to code during shadowing?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_46f42d9082e6.mp3",
+      "accepted_patterns": [
+        "Do you mind if I try writing",
+        "Let me drive for a bit",
+        "Am I on the right track",
+        "What would you do differently"
+      ],
+      "hint_vi": "Xin phép thử code"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "How do you wrap up a shadowing session?",
+      "prompt_audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_cd88c66594a4.mp3",
+      "accepted_patterns": [
+        "Thanks again for your time",
+        "I learned a lot",
+        "The most surprising thing was",
+        "Do you have any final advice"
+      ],
+      "hint_vi": "Kết thúc buổi shadowing"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Shadowing a senior engineer",
+      "title_vi": "Theo chân một kỹ sư cao cấp",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Thanks for letting me shadow you today.",
+          "translation_vi": "Cảm ơn bạn đã cho tôi theo chân hôm nay.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_277a982c9986.mp3",
+          "phrases": [
+            {
+              "text": "Thanks for letting me",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_eb116736cdb8.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_c480baf6d79f.mp3"
+            },
+            {
+              "text": "shadow you today.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_32be462a5c69.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_7e89cd53e234.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "No problem. Happy to have you.",
+          "translation_vi": "Không vấn đề gì. Vui khi có bạn.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4a068cd87d02.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "I see you're opening the terminal first. What's your usual workflow?",
+          "translation_vi": "Tôi thấy bạn mở terminal trước. Quy trình thông thường của bạn là gì?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e636cffdbea7.mp3",
+          "phrases": [
+            {
+              "text": "I see you're opening the terminal first.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_4b900e35801c.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_efc6319e3713.mp3"
+            },
+            {
+              "text": "What's your usual workflow?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_5449d06f3096.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_f071d406ba8b.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I always pull the latest code and check for new issues.",
+          "translation_vi": "Tôi luôn kéo code mới nhất và kiểm tra issue mới.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_90eca208b71c.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "Why did you choose this approach for the authentication service?",
+          "translation_vi": "Tại sao bạn chọn cách tiếp cận này cho service xác thực?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_fa1dccc11667.mp3",
+          "phrases": [
+            {
+              "text": "Why did you choose this approach",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_64a769f6c077.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_632765c415e7.mp3"
+            },
+            {
+              "text": "for the authentication service?",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_e15169ccb400.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_04f105d57353.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "It's more maintainable and scales better with our microservices.",
+          "translation_vi": "Nó dễ bảo trì hơn và mở rộng tốt hơn với microservices của chúng ta.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_3b78e8c99ff1.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "Could you show me how you debug that issue?",
+          "translation_vi": "Bạn có thể chỉ tôi cách bạn debug vấn đề đó không?",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0e939b44d68f.mp3"
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Sure. First, I check the logs and then reproduce it locally.",
+          "translation_vi": "Chắc chắn. Đầu tiên, tôi kiểm tra log và tái hiện nó cục bộ.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a17ce1f22f69.mp3"
+        },
+        {
+          "role": "Engineer",
+          "text": "I learned a lot today. Thanks again for your time.",
+          "translation_vi": "Hôm nay tôi học được nhiều. Cảm ơn bạn lần nữa.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_7a1e31821648.mp3",
+          "phrases": [
+            {
+              "text": "I learned a lot today.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_a2690bf176b0.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_a6e066719a2b.mp3"
+            },
+            {
+              "text": "Thanks again for your time.",
+              "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_f8d461c070a1.mp3",
+              "audio_slow": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_slow_104b89da7ed4.mp3"
+            }
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "You're welcome. Let me know if you have more questions later.",
+          "translation_vi": "Không có gì. Hãy cho tôi biết nếu sau này bạn có thêm câu hỏi.",
+          "audio": "https://pub-66ce39e182bd45b2a7eb87242d51f36b.r2.dev/audio/en_0c9228a2739a.mp3"
+        }
+      ]
+    }
+  ]
+}

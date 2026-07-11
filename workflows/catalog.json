@@ -61,5 +61,12 @@
     "category": "team-communication",
     "tags": ["pair-programming", "asking-for-help", "collaboration"],
     "hint": "An engineer asking a teammate for help mid-task and pairing with them: explaining what they're stuck on, sharing screen/context, thinking out loud together, splitting the work."
+  },
+  "job-shadowing": {
+    "title": "Job Shadowing",
+    "title_vi": "Theo chân đồng nghiệp",
+    "category": "team-communication",
+    "tags": ["job-shadowing", "onboarding", "mentorship"],
+    "hint": "A new engineer shadowing a senior colleague for a day: observing their workflow, asking questions about decisions, taking notes, wrapping up with a debrief."
   }
 }

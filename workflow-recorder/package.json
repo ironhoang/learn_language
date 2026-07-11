@@ -1,0 +1,9 @@
+{
+  "name": "workflow-recorder",
+  "private": true,
+  "type": "module",
+  "description": "Records the real workflows/<id>/index.html lesson page (with genuine browser audio) into mp4s, per section — an alternative to content-pipeline's synthetic ASS-overlay rendering.",
+  "dependencies": {
+    "playwright": "1.61.1"
+  }
+}

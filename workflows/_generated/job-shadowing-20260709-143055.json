@@ -1,0 +1,674 @@
+{
+  "meta": {
+    "id": "job-shadowing",
+    "title": "Job Shadowing",
+    "title_vi": "Theo chân đồng nghiệp",
+    "description": "Shadow a senior engineer: observe their workflow, ask questions, take notes, and debrief at the end.",
+    "difficulty": "intermediate",
+    "duration_minutes": 20,
+    "category": "team-communication",
+    "tags": ["job-shadowing", "onboarding", "mentorship"]
+  },
+  "nodes": [
+    {
+      "id": "intro",
+      "label": "Introduction",
+      "label_vi": "Giới thiệu"
+    },
+    {
+      "id": "observe-setup",
+      "label": "Observe Setup",
+      "label_vi": "Quan sát thiết lập"
+    },
+    {
+      "id": "ask-questions",
+      "label": "Ask Questions",
+      "label_vi": "Đặt câu hỏi"
+    },
+    {
+      "id": "note-taking",
+      "label": "Note Taking",
+      "label_vi": "Ghi chú"
+    },
+    {
+      "id": "pair-coding",
+      "label": "Pair Coding",
+      "label_vi": "Lập trình cặp"
+    },
+    {
+      "id": "debrief",
+      "label": "Debrief",
+      "label_vi": "Tổng kết"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "intro-01",
+      "node_id": "intro",
+      "text": "Thanks for letting me shadow you today.",
+      "example": "Thanks for letting me shadow you today.",
+      "translation_vi": "Cảm ơn bạn đã cho tôi theo chân hôm nay.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thanks for letting me", "audio": "", "audio_slow": ""},
+        {"text": "shadow you today.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-02",
+      "node_id": "intro",
+      "text": "I'm really looking forward to this.",
+      "example": "I'm really looking forward to this.",
+      "translation_vi": "Tôi rất mong chờ điều này.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm really looking forward", "audio": "", "audio_slow": ""},
+        {"text": "to this.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-03",
+      "node_id": "intro",
+      "text": "Could you walk me through your morning routine?",
+      "example": "Could you walk me through your morning routine?",
+      "translation_vi": "Bạn có thể chỉ cho tôi quy trình buổi sáng của bạn không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you walk me through", "audio": "", "audio_slow": ""},
+        {"text": "your morning routine?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-04",
+      "node_id": "intro",
+      "text": "I'll try to stay out of your way.",
+      "example": "I'll try to stay out of your way.",
+      "translation_vi": "Tôi sẽ cố gắng không làm phiền bạn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll try to stay", "audio": "", "audio_slow": ""},
+        {"text": "out of your way.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-05",
+      "node_id": "intro",
+      "text": "Feel free to ignore me if I ask too many questions.",
+      "example": "Feel free to ignore me if I ask too many questions.",
+      "translation_vi": "Cứ tự nhiên lờ tôi đi nếu tôi hỏi quá nhiều.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Feel free to ignore me", "audio": "", "audio_slow": ""},
+        {"text": "if I ask too many questions.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "intro-06",
+      "node_id": "intro",
+      "text": "Let me know if I should take notes on something specific.",
+      "example": "Let me know if I should take notes on something specific.",
+      "translation_vi": "Hãy cho tôi biết nếu tôi nên ghi chú điều gì cụ thể.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me know", "audio": "", "audio_slow": ""},
+        {"text": "if I should take notes", "audio": "", "audio_slow": ""},
+        {"text": "on something specific.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "observe-setup-01",
+      "node_id": "observe-setup",
+      "text": "I see you're opening the terminal first.",
+      "example": "I see you're opening the terminal first.",
+      "translation_vi": "Tôi thấy bạn mở terminal trước.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I see you're opening", "audio": "", "audio_slow": ""},
+        {"text": "the terminal first.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "observe-setup-02",
+      "node_id": "observe-setup",
+      "text": "Why do you use that particular IDE?",
+      "example": "Why do you use that particular IDE?",
+      "translation_vi": "Tại sao bạn dùng IDE cụ thể đó?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Why do you use", "audio": "", "audio_slow": ""},
+        {"text": "that particular IDE?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "observe-setup-03",
+      "node_id": "observe-setup",
+      "text": "Could you show me how you set up your dev environment?",
+      "example": "Could you show me how you set up your dev environment?",
+      "translation_vi": "Bạn có thể chỉ tôi cách bạn thiết lập môi trường phát triển không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you show me", "audio": "", "audio_slow": ""},
+        {"text": "how you set up", "audio": "", "audio_slow": ""},
+        {"text": "your dev environment?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "observe-setup-04",
+      "node_id": "observe-setup",
+      "text": "I notice you have a lot of tabs open.",
+      "example": "I notice you have a lot of tabs open.",
+      "translation_vi": "Tôi để ý bạn mở rất nhiều tab.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I notice you have", "audio": "", "audio_slow": ""},
+        {"text": "a lot of tabs open.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "observe-setup-05",
+      "node_id": "observe-setup",
+      "text": "How do you manage your local Docker containers?",
+      "example": "How do you manage your local Docker containers?",
+      "translation_vi": "Bạn quản lý các container Docker cục bộ như thế nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How do you manage", "audio": "", "audio_slow": ""},
+        {"text": "your local Docker containers?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "observe-setup-06",
+      "node_id": "observe-setup",
+      "text": "Do you always run the tests before starting work?",
+      "example": "Do you always run the tests before starting work?",
+      "translation_vi": "Bạn có luôn chạy test trước khi bắt đầu làm việc không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Do you always run the tests", "audio": "", "audio_slow": ""},
+        {"text": "before starting work?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-questions-01",
+      "node_id": "ask-questions",
+      "text": "Why did you choose this approach over the alternative?",
+      "example": "Why did you choose this approach over the alternative?",
+      "translation_vi": "Tại sao bạn chọn cách tiếp cận này thay vì cách kia?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Why did you choose this approach", "audio": "", "audio_slow": ""},
+        {"text": "over the alternative?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-questions-02",
+      "node_id": "ask-questions",
+      "text": "What trade-offs did you consider?",
+      "example": "What trade-offs did you consider?",
+      "translation_vi": "Bạn đã cân nhắc những đánh đổi nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What trade-offs", "audio": "", "audio_slow": ""},
+        {"text": "did you consider?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-questions-03",
+      "node_id": "ask-questions",
+      "text": "How did you debug that issue?",
+      "example": "How did you debug that issue?",
+      "translation_vi": "Bạn đã debug vấn đề đó như thế nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "How did you", "audio": "", "audio_slow": ""},
+        {"text": "debug that issue?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-questions-04",
+      "node_id": "ask-questions",
+      "text": "Could you explain the reasoning behind this refactor?",
+      "example": "Could you explain the reasoning behind this refactor?",
+      "translation_vi": "Bạn có thể giải thích lý do đằng sau việc tái cấu trúc này không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you explain the reasoning", "audio": "", "audio_slow": ""},
+        {"text": "behind this refactor?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-questions-05",
+      "node_id": "ask-questions",
+      "text": "Is this a common pattern in your team?",
+      "example": "Is this a common pattern in your team?",
+      "translation_vi": "Đây có phải là mẫu phổ biến trong nhóm của bạn không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Is this a common pattern", "audio": "", "audio_slow": ""},
+        {"text": "in your team?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "ask-questions-06",
+      "node_id": "ask-questions",
+      "text": "What documentation do you usually refer to?",
+      "example": "What documentation do you usually refer to?",
+      "translation_vi": "Bạn thường tham khảo tài liệu nào?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What documentation", "audio": "", "audio_slow": ""},
+        {"text": "do you usually refer to?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "note-taking-01",
+      "node_id": "note-taking",
+      "text": "I'm jotting down some key points.",
+      "example": "I'm jotting down some key points.",
+      "translation_vi": "Tôi đang ghi lại vài điểm chính.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm jotting down", "audio": "", "audio_slow": ""},
+        {"text": "some key points.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "note-taking-02",
+      "node_id": "note-taking",
+      "text": "Should I note down the exact commands you used?",
+      "example": "Should I note down the exact commands you used?",
+      "translation_vi": "Tôi có nên ghi lại chính xác các lệnh bạn đã dùng không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Should I note down", "audio": "", "audio_slow": ""},
+        {"text": "the exact commands you used?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "note-taking-03",
+      "node_id": "note-taking",
+      "text": "I'm going to organize my notes later.",
+      "example": "I'm going to organize my notes later.",
+      "translation_vi": "Tôi sẽ sắp xếp ghi chú sau.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'm going to organize", "audio": "", "audio_slow": ""},
+        {"text": "my notes later.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "note-taking-04",
+      "node_id": "note-taking",
+      "text": "Could you repeat that? I want to get it right.",
+      "example": "Could you repeat that? I want to get it right.",
+      "translation_vi": "Bạn có thể nhắc lại không? Tôi muốn ghi chính xác.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you repeat that?", "audio": "", "audio_slow": ""},
+        {"text": "I want to get it right.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "note-taking-05",
+      "node_id": "note-taking",
+      "text": "I'll add that to my personal wiki.",
+      "example": "I'll add that to my personal wiki.",
+      "translation_vi": "Tôi sẽ thêm cái đó vào wiki cá nhân.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll add that", "audio": "", "audio_slow": ""},
+        {"text": "to my personal wiki.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "note-taking-06",
+      "node_id": "note-taking",
+      "text": "Let me take a screenshot for reference.",
+      "example": "Let me take a screenshot for reference.",
+      "translation_vi": "Để tôi chụp màn hình để tham khảo.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me take a screenshot", "audio": "", "audio_slow": ""},
+        {"text": "for reference.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pair-coding-01",
+      "node_id": "pair-coding",
+      "text": "Do you mind if I try writing this function?",
+      "example": "Do you mind if I try writing this function?",
+      "translation_vi": "Bạn có phiền không nếu tôi thử viết hàm này?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Do you mind", "audio": "", "audio_slow": ""},
+        {"text": "if I try writing this function?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pair-coding-02",
+      "node_id": "pair-coding",
+      "text": "Let me drive for a bit.",
+      "example": "Let me drive for a bit.",
+      "translation_vi": "Để tôi lái một lúc.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me drive", "audio": "", "audio_slow": ""},
+        {"text": "for a bit.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pair-coding-03",
+      "node_id": "pair-coding",
+      "text": "Am I on the right track?",
+      "example": "Am I on the right track?",
+      "translation_vi": "Tôi có đi đúng hướng không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Am I on the right track?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pair-coding-04",
+      "node_id": "pair-coding",
+      "text": "What would you do differently?",
+      "example": "What would you do differently?",
+      "translation_vi": "Bạn sẽ làm khác điều gì?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "What would you do", "audio": "", "audio_slow": ""},
+        {"text": "differently?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pair-coding-05",
+      "node_id": "pair-coding",
+      "text": "I think I understand the pattern now.",
+      "example": "I think I understand the pattern now.",
+      "translation_vi": "Tôi nghĩ bây giờ tôi hiểu mẫu này rồi.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I think I understand", "audio": "", "audio_slow": ""},
+        {"text": "the pattern now.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "pair-coding-06",
+      "node_id": "pair-coding",
+      "text": "Could you review my code before I commit?",
+      "example": "Could you review my code before I commit?",
+      "translation_vi": "Bạn có thể review code của tôi trước khi tôi commit không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Could you review my code", "audio": "", "audio_slow": ""},
+        {"text": "before I commit?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "debrief-01",
+      "node_id": "debrief",
+      "text": "Thanks again for your time.",
+      "example": "Thanks again for your time.",
+      "translation_vi": "Cảm ơn một lần nữa vì thời gian của bạn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Thanks again", "audio": "", "audio_slow": ""},
+        {"text": "for your time.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "debrief-02",
+      "node_id": "debrief",
+      "text": "I learned a lot about your workflow.",
+      "example": "I learned a lot about your workflow.",
+      "translation_vi": "Tôi đã học được nhiều về quy trình làm việc của bạn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I learned a lot", "audio": "", "audio_slow": ""},
+        {"text": "about your workflow.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "debrief-03",
+      "node_id": "debrief",
+      "text": "The most surprising thing was your debugging technique.",
+      "example": "The most surprising thing was your debugging technique.",
+      "translation_vi": "Điều bất ngờ nhất là kỹ thuật debug của bạn.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "The most surprising thing", "audio": "", "audio_slow": ""},
+        {"text": "was your debugging technique.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "debrief-04",
+      "node_id": "debrief",
+      "text": "I'll start using that shortcut from now on.",
+      "example": "I'll start using that shortcut from now on.",
+      "translation_vi": "Từ giờ tôi sẽ bắt đầu dùng phím tắt đó.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "I'll start using that shortcut", "audio": "", "audio_slow": ""},
+        {"text": "from now on.", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "debrief-05",
+      "node_id": "debrief",
+      "text": "Do you have any final advice for a newbie?",
+      "example": "Do you have any final advice for a newbie?",
+      "translation_vi": "Bạn có lời khuyên cuối cùng cho người mới không?",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Do you have any final advice", "audio": "", "audio_slow": ""},
+        {"text": "for a newbie?", "audio": "", "audio_slow": ""}
+      ]
+    },
+    {
+      "id": "debrief-06",
+      "node_id": "debrief",
+      "text": "Let me know if I can shadow you again sometime.",
+      "example": "Let me know if I can shadow you again sometime.",
+      "translation_vi": "Hãy cho tôi biết nếu tôi có thể theo chân bạn lần khác.",
+      "audio": "",
+      "audio_slow": "",
+      "phrases": [
+        {"text": "Let me know", "audio": "", "audio_slow": ""},
+        {"text": "if I can shadow you again", "audio": "", "audio_slow": ""},
+        {"text": "sometime.", "audio": "", "audio_slow": ""}
+      ]
+    }
+  ],
+  "recall": [
+    {
+      "id": "recall-01",
+      "prompt": "How do you ask to shadow someone?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Thanks for letting me shadow you",
+        "Could I shadow you today?",
+        "I'm really looking forward to this"
+      ],
+      "hint_vi": "Cách xin phép theo chân đồng nghiệp"
+    },
+    {
+      "id": "recall-02",
+      "prompt": "What do you say when observing their setup?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I see you're opening",
+        "Why do you use",
+        "Could you show me how",
+        "I notice you have"
+      ],
+      "hint_vi": "Hỏi về thiết lập môi trường"
+    },
+    {
+      "id": "recall-03",
+      "prompt": "How do you ask a technical question?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Why did you choose this approach",
+        "What trade-offs did you consider",
+        "How did you debug that issue",
+        "Could you explain the reasoning"
+      ],
+      "hint_vi": "Đặt câu hỏi kỹ thuật"
+    },
+    {
+      "id": "recall-04",
+      "prompt": "How do you manage note-taking?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "I'm jotting down",
+        "Should I note down",
+        "I'm going to organize my notes",
+        "Could you repeat that"
+      ],
+      "hint_vi": "Ghi chú trong lúc shadowing"
+    },
+    {
+      "id": "recall-05",
+      "prompt": "How do you offer to code during shadowing?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Do you mind if I try writing",
+        "Let me drive for a bit",
+        "Am I on the right track",
+        "What would you do differently"
+      ],
+      "hint_vi": "Xin phép thử code"
+    },
+    {
+      "id": "recall-06",
+      "prompt": "How do you wrap up a shadowing session?",
+      "prompt_audio": "",
+      "accepted_patterns": [
+        "Thanks again for your time",
+        "I learned a lot",
+        "The most surprising thing was",
+        "Do you have any final advice"
+      ],
+      "hint_vi": "Kết thúc buổi shadowing"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-01",
+      "title": "Shadowing a senior engineer",
+      "title_vi": "Theo chân một kỹ sư cao cấp",
+      "turns": [
+        {
+          "role": "Engineer",
+          "text": "Thanks for letting me shadow you today.",
+          "translation_vi": "Cảm ơn bạn đã cho tôi theo chân hôm nay.",
+          "audio": "",
+          "phrases": [
+            {"text": "Thanks for letting me", "audio": "", "audio_slow": ""},
+            {"text": "shadow you today.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "No problem. Happy to have you.",
+          "translation_vi": "Không vấn đề gì. Vui khi có bạn.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I see you're opening the terminal first. What's your usual workflow?",
+          "translation_vi": "Tôi thấy bạn mở terminal trước. Quy trình thông thường của bạn là gì?",
+          "audio": "",
+          "phrases": [
+            {"text": "I see you're opening the terminal first.", "audio": "", "audio_slow": ""},
+            {"text": "What's your usual workflow?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "I always pull the latest code and check for new issues.",
+          "translation_vi": "Tôi luôn kéo code mới nhất và kiểm tra issue mới.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Why did you choose this approach for the authentication service?",
+          "translation_vi": "Tại sao bạn chọn cách tiếp cận này cho service xác thực?",
+          "audio": "",
+          "phrases": [
+            {"text": "Why did you choose this approach", "audio": "", "audio_slow": ""},
+            {"text": "for the authentication service?", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "It's more maintainable and scales better with our microservices.",
+          "translation_vi": "Nó dễ bảo trì hơn và mở rộng tốt hơn với microservices của chúng ta.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "Could you show me how you debug that issue?",
+          "translation_vi": "Bạn có thể chỉ tôi cách bạn debug vấn đề đó không?",
+          "audio": ""
+        },
+        {
+          "role": "Tech Lead",
+          "text": "Sure. First, I check the logs and then reproduce it locally.",
+          "translation_vi": "Chắc chắn. Đầu tiên, tôi kiểm tra log và tái hiện nó cục bộ.",
+          "audio": ""
+        },
+        {
+          "role": "Engineer",
+          "text": "I learned a lot today. Thanks again for your time.",
+          "translation_vi": "Hôm nay tôi học được nhiều. Cảm ơn bạn lần nữa.",
+          "audio": "",
+          "phrases": [
+            {"text": "I learned a lot today.", "audio": "", "audio_slow": ""},
+            {"text": "Thanks again for your time.", "audio": "", "audio_slow": ""}
+          ]
+        },
+        {
+          "role": "Tech Lead",
+          "text": "You're welcome. Let me know if you have more questions later.",
+          "translation_vi": "Không có gì. Hãy cho tôi biết nếu sau này bạn có thêm câu hỏi.",
+          "audio": ""
+        }
+      ]
+    }
+  ]
+}
